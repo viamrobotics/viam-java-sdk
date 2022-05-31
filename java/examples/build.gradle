@@ -1,0 +1,30 @@
+apply plugin: 'java-library'
+
+ext.pomDisplayName = "Viam Java SDK Examples"
+
+dependencies {
+    implementation project(':java:viam-java-sdk')
+}
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+task runExample1Client(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    mainClass = "com.viam.sdk.java.examples.Example1Client"
+}
+
+task runExample1Server(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    mainClass = "com.viam.sdk.java.examples.Example1Server"
+}
+
+task runExample2Client(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    mainClass = "com.viam.sdk.java.examples.Example2Client"
+}
+
+task runExample3Client(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    mainClass = "com.viam.sdk.java.examples.Example3Client"
+}

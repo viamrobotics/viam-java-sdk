@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'com.viam'
+version '1.0-SNAPSHOT'
+
+subprojects {
+    group = rootProject.group
+    version = rootProject.version
+
+    apply plugin: 'maven-publish'
+
+    buildscript {
+        repositories {
+            google()
+            mavenLocal()
+            mavenCentral()
+        }
+    }
+
+    repositories {
+        google()
+        mavenLocal()
+        mavenCentral()
+    }
+
+    task install(dependsOn: 'publishToMavenLocal')
+}

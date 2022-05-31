@@ -1,0 +1,12 @@
+rootProject.name = 'Viam-SDK'
+
+include ':core:sdk',
+
+        ':java:sdk',
+        ':java:examples'
+
+project(':core:sdk').name = 'viam-core-sdk'
+project(':java:sdk').name = 'viam-java-sdk'
+project(':java:examples').name = 'viam-java-sdk-examples'
+
+

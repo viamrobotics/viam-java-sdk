@@ -1,0 +1,6 @@
+version: v1
+plugins:
+  - name: java
+    out: core/sdk/src/main/gen
+  - name: grpc-java
+    out: core/sdk/src/main/gen
