@@ -3,10 +3,16 @@ rootProject.name = 'Viam-SDK'
 include ':core:sdk',
 
         ':java:sdk',
-        ':java:examples'
+        ':java:examples',
+
+        ':android:sdk',
+        ':android:examples:simple'
 
 project(':core:sdk').name = 'viam-core-sdk'
 project(':java:sdk').name = 'viam-java-sdk'
 project(':java:examples').name = 'viam-java-sdk-examples'
+project(':android:sdk').name = 'viam-android-sdk'
+project(':android:examples:simple').name = 'viam-android-sdk-examples-simple'
 
-
+include ':android:sdk'
+include ':android:examples:simple'
