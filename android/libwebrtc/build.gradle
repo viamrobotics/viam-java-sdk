@@ -1,0 +1,12 @@
+apply plugin: 'maven-publish'
+
+configurations.maybeCreate("default")
+artifacts.add("default", file('libwebrtc.aar'))
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact("libwebrtc.aar")
+        }
+    }
+}

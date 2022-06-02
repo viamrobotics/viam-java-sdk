@@ -1,4 +1,7 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+ext.pomDisplayName = "Viam Android SDK"
 
 buildscript {
     dependencies {
@@ -6,12 +9,12 @@ buildscript {
     }
 }
 
-android {
-    compileSdk 32
 
+android {
+    compileSdkVersion target_api
     defaultConfig {
-        minSdk 21
-        targetSdk 32
+        minSdkVersion min_api
+        targetSdkVersion target_api
     }
 
     compileOptions {
@@ -20,8 +23,18 @@ android {
     }
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+            }
+        }
+    }
+}
+
 dependencies {
     api project(':core:viam-core-sdk')
-    api files('libs/libwebrtc.aar')
+    api project(':android:viam-android-libwebrtc')
     implementation 'io.grpc:grpc-okhttp:1.46.0'
 }

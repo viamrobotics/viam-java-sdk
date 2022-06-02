@@ -4,6 +4,8 @@ ext.pomDisplayName = "Viam Java SDK"
 
 dependencies {
     api project(':core:viam-core-sdk')
+    api 'io.grpc:grpc-protobuf:1.46.0'
+    api 'io.grpc:grpc-stub:1.46.0'
     implementation 'io.grpc:grpc-netty:1.46.0'
     implementation 'dev.onvoid.webrtc:webrtc-java:0.6.0'
     implementation 'dev.onvoid.webrtc:webrtc-java:0.6.0:linux-x86_64'

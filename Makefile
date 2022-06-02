@@ -16,13 +16,8 @@ check-%:
 buf: check-RDK
 	rm -rf core/sdk/src/main/gen
 	cd $(RDK) && buf generate --template $(THIS_DIR)buf.gen.yaml
-	cd $(RDK) && buf generate --template $(THIS_DIR)buf.gen.yaml buf.build/googleapis/googleapis
 	cd $(RDK) && buf generate --template $(THIS_DIR)buf.gen.yaml buf.build/viamrobotics/goutils
 	cd $(RDK) && buf generate --template $(THIS_DIR)buf.gen.yaml buf.build/erdaniels/gostream
-	mv $(RDK)/core/sdk/src/main/gen ./core/sdk/src/main
-	rm -rf core/sdk/src/main/gen/io
-	rm -rf core/sdk/src/main/gen/google
-	ls core/sdk/src/main/gen/com/google | grep -v api | xargs -I {} rm -rf core/sdk/src/main/gen/com/google/{}
 
 setup:
 	sudo curl -o /usr/local/bin/protoc-gen-grpc-java -L ${GRPC_JAVA}

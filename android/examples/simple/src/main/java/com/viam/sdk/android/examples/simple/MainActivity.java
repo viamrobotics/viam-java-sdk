@@ -6,7 +6,6 @@ import com.viam.rdk.proto.api.component.gps.v1.GPSServiceGrpc;
 import com.viam.rdk.proto.api.component.gps.v1.Gps;
 import com.viam.rdk.proto.api.robot.v1.Robot;
 import com.viam.rdk.proto.api.robot.v1.RobotServiceGrpc;
-import com.viam.sdk.core.Channel;
 import com.viam.sdk.core.DialOptions;
 import com.viam.sdk.android.Dialer;
 import com.viam.sdk.core.webrtc.DialWebRTCOptions;
@@ -19,8 +18,6 @@ import proto.stream.v1.StreamServiceGrpc;
 import java.util.logging.Logger;
 
 public class MainActivity extends AppCompatActivity {
-
-    public static String TAG = "MainActivity";
 
     static SurfaceViewRenderer fullscreenRenderer;
 
