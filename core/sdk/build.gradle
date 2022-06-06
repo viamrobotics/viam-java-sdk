@@ -5,7 +5,7 @@ ext.pomDisplayName = "Viam Core SDK"
 dependencies {
     api 'io.grpc:grpc-protobuf:1.46.0'
     api 'io.grpc:grpc-stub:1.46.0'
-    implementation 'javax.annotation:javax.annotation-api:1.3.2'
+    api 'javax.annotation:javax.annotation-api:1.3.2'
     implementation 'org.json:json:20220320'
     implementation 'com.google.api.grpc:proto-google-common-protos:2.8.3'
 }
