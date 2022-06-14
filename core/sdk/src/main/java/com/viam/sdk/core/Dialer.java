@@ -63,6 +63,10 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
         if (opts != null && opts.insecure) {
             channelBuilder = channelBuilder.usePlaintext();
         }
+        if (opts != null && opts.authority != null) {
+            channelBuilder = channelBuilder.overrideAuthority(opts.authority);
+        }
+
         final ManagedChannel channel = channelBuilder.build();
         if (opts == null || opts.credentials == null) {
             return new BasicManagedChannel(channel);
@@ -139,6 +143,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
             optsCopy.externalAuthAddress = opts.webrtcOptions.signalingExternalAuthAddress;
             optsCopy.externalAuthToEntity = opts.webrtcOptions.signalingExternalAuthToEntity;
             optsCopy.externalAuthInsecure = opts.webrtcOptions.signalingExternalAuthInsecure;
+            optsCopy.authority = opts.webrtcOptions.authority;
         }
 
         if (optsCopy.authEntity == null || optsCopy.authEntity.isEmpty()) {
@@ -153,6 +158,9 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
         if (optsCopy.insecure) {
             signalChannelBuilder = signalChannelBuilder.usePlaintext();
         }
+        if (optsCopy.authority != null) {
+            signalChannelBuilder = signalChannelBuilder.overrideAuthority(optsCopy.authority);
+        }
         final ManagedChannel signalingChannel = signalChannelBuilder.build();
         boolean inAsync = false;
         try {
@@ -166,6 +174,9 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                             ManagedChannelBuilder<?> signalChannelBuilder = ManagedChannelBuilder.forTarget(signalingAddress);
                             if (optsCopy.insecure) {
                                 signalChannelBuilder = signalChannelBuilder.usePlaintext();
+                            }
+                            if (optsCopy.authority != null) {
+                                signalChannelBuilder = signalChannelBuilder.overrideAuthority(optsCopy.authority);
                             }
                             final ManagedChannel signalingChannel = signalChannelBuilder.build();
                             try {

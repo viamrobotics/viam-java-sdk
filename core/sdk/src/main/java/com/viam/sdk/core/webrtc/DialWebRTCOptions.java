@@ -27,6 +27,8 @@ public class DialWebRTCOptions {
     public String signalingServerAddress;
     public boolean signalingExternalAuthInsecure;
 
+    public String authority;
+
     public DialWebRTCOptions clone() {
         try {
             return (DialWebRTCOptions) super.clone();
@@ -41,6 +43,7 @@ public class DialWebRTCOptions {
             opts.signalingCredentials = this.signalingCredentials;
             opts.signalingServerAddress = this.signalingServerAddress;
             opts.signalingExternalAuthInsecure = this.signalingExternalAuthInsecure;
+            opts.authority = this.authority;
             return opts;
         }
     }

@@ -12,6 +12,7 @@ public class DialOptions {
     public String externalAuthAddress;
     public String externalAuthToEntity;
     public boolean externalAuthInsecure;
+    public String authority;
 
     public DialOptions clone() {
         try {
@@ -25,6 +26,7 @@ public class DialOptions {
             opts.externalAuthAddress = this.externalAuthAddress;
             opts.externalAuthToEntity = this.externalAuthToEntity;
             opts.externalAuthInsecure = this.externalAuthInsecure;
+            opts.authority = this.authority;
             return opts;
         }
     }
