@@ -89,10 +89,11 @@ public class ClientStream<RequestT, ResponseT> extends io.grpc.ClientCall<Reques
 
     @Override
     public void sendMessage(RequestT message) {
-        if (message == null) {
-            this.writeMessage(false, null);
-        }
         try {
+            if (message == null) {
+                this.writeMessage(false, null);
+                return;
+            }
             final InputStream messageStream = this.methodDescriptor.getRequestMarshaller().stream(message);
             this.writeMessage(false, Bytes.asList(ByteStreams.toByteArray(messageStream)));
         } catch (IOException e) {
