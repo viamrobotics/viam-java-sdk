@@ -1,4 +1,4 @@
-package viam.app.package.v1;
+package viam.app.packages.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -6,37 +6,37 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.39.0)",
-    comments = "Source: app/package/v1/package.proto")
+    comments = "Source: app/packages/v1/packages.proto")
 public final class PackageServiceGrpc {
 
   private PackageServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.app.package.v1.PackageService";
+  public static final String SERVICE_NAME = "viam.app.packages.v1.PackageService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<viam.app.package.v1.PackageOuterClass.CreatePackageRequest,
-      viam.app.package.v1.PackageOuterClass.CreatePackageResponse> getCreatePackageMethod;
+  private static volatile io.grpc.MethodDescriptor<viam.app.packages.v1.Packages.CreatePackageRequest,
+      viam.app.packages.v1.Packages.CreatePackageResponse> getCreatePackageMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "CreatePackage",
-      requestType = viam.app.package.v1.PackageOuterClass.CreatePackageRequest.class,
-      responseType = viam.app.package.v1.PackageOuterClass.CreatePackageResponse.class,
+      requestType = viam.app.packages.v1.Packages.CreatePackageRequest.class,
+      responseType = viam.app.packages.v1.Packages.CreatePackageResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-  public static io.grpc.MethodDescriptor<viam.app.package.v1.PackageOuterClass.CreatePackageRequest,
-      viam.app.package.v1.PackageOuterClass.CreatePackageResponse> getCreatePackageMethod() {
-    io.grpc.MethodDescriptor<viam.app.package.v1.PackageOuterClass.CreatePackageRequest, viam.app.package.v1.PackageOuterClass.CreatePackageResponse> getCreatePackageMethod;
+  public static io.grpc.MethodDescriptor<viam.app.packages.v1.Packages.CreatePackageRequest,
+      viam.app.packages.v1.Packages.CreatePackageResponse> getCreatePackageMethod() {
+    io.grpc.MethodDescriptor<viam.app.packages.v1.Packages.CreatePackageRequest, viam.app.packages.v1.Packages.CreatePackageResponse> getCreatePackageMethod;
     if ((getCreatePackageMethod = PackageServiceGrpc.getCreatePackageMethod) == null) {
       synchronized (PackageServiceGrpc.class) {
         if ((getCreatePackageMethod = PackageServiceGrpc.getCreatePackageMethod) == null) {
           PackageServiceGrpc.getCreatePackageMethod = getCreatePackageMethod =
-              io.grpc.MethodDescriptor.<viam.app.package.v1.PackageOuterClass.CreatePackageRequest, viam.app.package.v1.PackageOuterClass.CreatePackageResponse>newBuilder()
+              io.grpc.MethodDescriptor.<viam.app.packages.v1.Packages.CreatePackageRequest, viam.app.packages.v1.Packages.CreatePackageResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreatePackage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.package.v1.PackageOuterClass.CreatePackageRequest.getDefaultInstance()))
+                  viam.app.packages.v1.Packages.CreatePackageRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.package.v1.PackageOuterClass.CreatePackageResponse.getDefaultInstance()))
+                  viam.app.packages.v1.Packages.CreatePackageResponse.getDefaultInstance()))
               .setSchemaDescriptor(new PackageServiceMethodDescriptorSupplier("CreatePackage"))
               .build();
         }
@@ -45,29 +45,29 @@ public final class PackageServiceGrpc {
     return getCreatePackageMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<viam.app.package.v1.PackageOuterClass.DeletePackageRequest,
-      viam.app.package.v1.PackageOuterClass.DeletePackageResponse> getDeletePackageMethod;
+  private static volatile io.grpc.MethodDescriptor<viam.app.packages.v1.Packages.DeletePackageRequest,
+      viam.app.packages.v1.Packages.DeletePackageResponse> getDeletePackageMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "DeletePackage",
-      requestType = viam.app.package.v1.PackageOuterClass.DeletePackageRequest.class,
-      responseType = viam.app.package.v1.PackageOuterClass.DeletePackageResponse.class,
+      requestType = viam.app.packages.v1.Packages.DeletePackageRequest.class,
+      responseType = viam.app.packages.v1.Packages.DeletePackageResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<viam.app.package.v1.PackageOuterClass.DeletePackageRequest,
-      viam.app.package.v1.PackageOuterClass.DeletePackageResponse> getDeletePackageMethod() {
-    io.grpc.MethodDescriptor<viam.app.package.v1.PackageOuterClass.DeletePackageRequest, viam.app.package.v1.PackageOuterClass.DeletePackageResponse> getDeletePackageMethod;
+  public static io.grpc.MethodDescriptor<viam.app.packages.v1.Packages.DeletePackageRequest,
+      viam.app.packages.v1.Packages.DeletePackageResponse> getDeletePackageMethod() {
+    io.grpc.MethodDescriptor<viam.app.packages.v1.Packages.DeletePackageRequest, viam.app.packages.v1.Packages.DeletePackageResponse> getDeletePackageMethod;
     if ((getDeletePackageMethod = PackageServiceGrpc.getDeletePackageMethod) == null) {
       synchronized (PackageServiceGrpc.class) {
         if ((getDeletePackageMethod = PackageServiceGrpc.getDeletePackageMethod) == null) {
           PackageServiceGrpc.getDeletePackageMethod = getDeletePackageMethod =
-              io.grpc.MethodDescriptor.<viam.app.package.v1.PackageOuterClass.DeletePackageRequest, viam.app.package.v1.PackageOuterClass.DeletePackageResponse>newBuilder()
+              io.grpc.MethodDescriptor.<viam.app.packages.v1.Packages.DeletePackageRequest, viam.app.packages.v1.Packages.DeletePackageResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeletePackage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.package.v1.PackageOuterClass.DeletePackageRequest.getDefaultInstance()))
+                  viam.app.packages.v1.Packages.DeletePackageRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.package.v1.PackageOuterClass.DeletePackageResponse.getDefaultInstance()))
+                  viam.app.packages.v1.Packages.DeletePackageResponse.getDefaultInstance()))
               .setSchemaDescriptor(new PackageServiceMethodDescriptorSupplier("DeletePackage"))
               .build();
         }
@@ -76,29 +76,29 @@ public final class PackageServiceGrpc {
     return getDeletePackageMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<viam.app.package.v1.PackageOuterClass.GetPackageRequest,
-      viam.app.package.v1.PackageOuterClass.GetPackageResponse> getGetPackageMethod;
+  private static volatile io.grpc.MethodDescriptor<viam.app.packages.v1.Packages.GetPackageRequest,
+      viam.app.packages.v1.Packages.GetPackageResponse> getGetPackageMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetPackage",
-      requestType = viam.app.package.v1.PackageOuterClass.GetPackageRequest.class,
-      responseType = viam.app.package.v1.PackageOuterClass.GetPackageResponse.class,
+      requestType = viam.app.packages.v1.Packages.GetPackageRequest.class,
+      responseType = viam.app.packages.v1.Packages.GetPackageResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<viam.app.package.v1.PackageOuterClass.GetPackageRequest,
-      viam.app.package.v1.PackageOuterClass.GetPackageResponse> getGetPackageMethod() {
-    io.grpc.MethodDescriptor<viam.app.package.v1.PackageOuterClass.GetPackageRequest, viam.app.package.v1.PackageOuterClass.GetPackageResponse> getGetPackageMethod;
+  public static io.grpc.MethodDescriptor<viam.app.packages.v1.Packages.GetPackageRequest,
+      viam.app.packages.v1.Packages.GetPackageResponse> getGetPackageMethod() {
+    io.grpc.MethodDescriptor<viam.app.packages.v1.Packages.GetPackageRequest, viam.app.packages.v1.Packages.GetPackageResponse> getGetPackageMethod;
     if ((getGetPackageMethod = PackageServiceGrpc.getGetPackageMethod) == null) {
       synchronized (PackageServiceGrpc.class) {
         if ((getGetPackageMethod = PackageServiceGrpc.getGetPackageMethod) == null) {
           PackageServiceGrpc.getGetPackageMethod = getGetPackageMethod =
-              io.grpc.MethodDescriptor.<viam.app.package.v1.PackageOuterClass.GetPackageRequest, viam.app.package.v1.PackageOuterClass.GetPackageResponse>newBuilder()
+              io.grpc.MethodDescriptor.<viam.app.packages.v1.Packages.GetPackageRequest, viam.app.packages.v1.Packages.GetPackageResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPackage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.package.v1.PackageOuterClass.GetPackageRequest.getDefaultInstance()))
+                  viam.app.packages.v1.Packages.GetPackageRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.package.v1.PackageOuterClass.GetPackageResponse.getDefaultInstance()))
+                  viam.app.packages.v1.Packages.GetPackageResponse.getDefaultInstance()))
               .setSchemaDescriptor(new PackageServiceMethodDescriptorSupplier("GetPackage"))
               .build();
         }
@@ -107,29 +107,29 @@ public final class PackageServiceGrpc {
     return getGetPackageMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<viam.app.package.v1.PackageOuterClass.ListPackagesRequest,
-      viam.app.package.v1.PackageOuterClass.ListPackagesResponse> getListPackagesMethod;
+  private static volatile io.grpc.MethodDescriptor<viam.app.packages.v1.Packages.ListPackagesRequest,
+      viam.app.packages.v1.Packages.ListPackagesResponse> getListPackagesMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "ListPackages",
-      requestType = viam.app.package.v1.PackageOuterClass.ListPackagesRequest.class,
-      responseType = viam.app.package.v1.PackageOuterClass.ListPackagesResponse.class,
+      requestType = viam.app.packages.v1.Packages.ListPackagesRequest.class,
+      responseType = viam.app.packages.v1.Packages.ListPackagesResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<viam.app.package.v1.PackageOuterClass.ListPackagesRequest,
-      viam.app.package.v1.PackageOuterClass.ListPackagesResponse> getListPackagesMethod() {
-    io.grpc.MethodDescriptor<viam.app.package.v1.PackageOuterClass.ListPackagesRequest, viam.app.package.v1.PackageOuterClass.ListPackagesResponse> getListPackagesMethod;
+  public static io.grpc.MethodDescriptor<viam.app.packages.v1.Packages.ListPackagesRequest,
+      viam.app.packages.v1.Packages.ListPackagesResponse> getListPackagesMethod() {
+    io.grpc.MethodDescriptor<viam.app.packages.v1.Packages.ListPackagesRequest, viam.app.packages.v1.Packages.ListPackagesResponse> getListPackagesMethod;
     if ((getListPackagesMethod = PackageServiceGrpc.getListPackagesMethod) == null) {
       synchronized (PackageServiceGrpc.class) {
         if ((getListPackagesMethod = PackageServiceGrpc.getListPackagesMethod) == null) {
           PackageServiceGrpc.getListPackagesMethod = getListPackagesMethod =
-              io.grpc.MethodDescriptor.<viam.app.package.v1.PackageOuterClass.ListPackagesRequest, viam.app.package.v1.PackageOuterClass.ListPackagesResponse>newBuilder()
+              io.grpc.MethodDescriptor.<viam.app.packages.v1.Packages.ListPackagesRequest, viam.app.packages.v1.Packages.ListPackagesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPackages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.package.v1.PackageOuterClass.ListPackagesRequest.getDefaultInstance()))
+                  viam.app.packages.v1.Packages.ListPackagesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.package.v1.PackageOuterClass.ListPackagesResponse.getDefaultInstance()))
+                  viam.app.packages.v1.Packages.ListPackagesResponse.getDefaultInstance()))
               .setSchemaDescriptor(new PackageServiceMethodDescriptorSupplier("ListPackages"))
               .build();
         }
@@ -191,8 +191,8 @@ public final class PackageServiceGrpc {
      * CreatePackage uploads a package to the cloud
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.CreatePackageRequest> createPackage(
-        io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.CreatePackageResponse> responseObserver) {
+    public io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.CreatePackageRequest> createPackage(
+        io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.CreatePackageResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getCreatePackageMethod(), responseObserver);
     }
 
@@ -201,8 +201,8 @@ public final class PackageServiceGrpc {
      * DeletePackage removes the given package versions
      * </pre>
      */
-    public void deletePackage(viam.app.package.v1.PackageOuterClass.DeletePackageRequest request,
-        io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.DeletePackageResponse> responseObserver) {
+    public void deletePackage(viam.app.packages.v1.Packages.DeletePackageRequest request,
+        io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.DeletePackageResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePackageMethod(), responseObserver);
     }
 
@@ -211,8 +211,8 @@ public final class PackageServiceGrpc {
      * // GetPackage returns the URL and metadata for a requested package version
      * </pre>
      */
-    public void getPackage(viam.app.package.v1.PackageOuterClass.GetPackageRequest request,
-        io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.GetPackageResponse> responseObserver) {
+    public void getPackage(viam.app.packages.v1.Packages.GetPackageRequest request,
+        io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.GetPackageResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPackageMethod(), responseObserver);
     }
 
@@ -221,8 +221,8 @@ public final class PackageServiceGrpc {
      * ListPackages get the URLs and metadata for requested packages. Include package name, version, and/or type to filter beyond the required organization_id.
      * </pre>
      */
-    public void listPackages(viam.app.package.v1.PackageOuterClass.ListPackagesRequest request,
-        io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.ListPackagesResponse> responseObserver) {
+    public void listPackages(viam.app.packages.v1.Packages.ListPackagesRequest request,
+        io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.ListPackagesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPackagesMethod(), responseObserver);
     }
 
@@ -232,29 +232,29 @@ public final class PackageServiceGrpc {
             getCreatePackageMethod(),
             io.grpc.stub.ServerCalls.asyncClientStreamingCall(
               new MethodHandlers<
-                viam.app.package.v1.PackageOuterClass.CreatePackageRequest,
-                viam.app.package.v1.PackageOuterClass.CreatePackageResponse>(
+                viam.app.packages.v1.Packages.CreatePackageRequest,
+                viam.app.packages.v1.Packages.CreatePackageResponse>(
                   this, METHODID_CREATE_PACKAGE)))
           .addMethod(
             getDeletePackageMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                viam.app.package.v1.PackageOuterClass.DeletePackageRequest,
-                viam.app.package.v1.PackageOuterClass.DeletePackageResponse>(
+                viam.app.packages.v1.Packages.DeletePackageRequest,
+                viam.app.packages.v1.Packages.DeletePackageResponse>(
                   this, METHODID_DELETE_PACKAGE)))
           .addMethod(
             getGetPackageMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                viam.app.package.v1.PackageOuterClass.GetPackageRequest,
-                viam.app.package.v1.PackageOuterClass.GetPackageResponse>(
+                viam.app.packages.v1.Packages.GetPackageRequest,
+                viam.app.packages.v1.Packages.GetPackageResponse>(
                   this, METHODID_GET_PACKAGE)))
           .addMethod(
             getListPackagesMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                viam.app.package.v1.PackageOuterClass.ListPackagesRequest,
-                viam.app.package.v1.PackageOuterClass.ListPackagesResponse>(
+                viam.app.packages.v1.Packages.ListPackagesRequest,
+                viam.app.packages.v1.Packages.ListPackagesResponse>(
                   this, METHODID_LIST_PACKAGES)))
           .build();
     }
@@ -279,8 +279,8 @@ public final class PackageServiceGrpc {
      * CreatePackage uploads a package to the cloud
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.CreatePackageRequest> createPackage(
-        io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.CreatePackageResponse> responseObserver) {
+    public io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.CreatePackageRequest> createPackage(
+        io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.CreatePackageResponse> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getCreatePackageMethod(), getCallOptions()), responseObserver);
     }
@@ -290,8 +290,8 @@ public final class PackageServiceGrpc {
      * DeletePackage removes the given package versions
      * </pre>
      */
-    public void deletePackage(viam.app.package.v1.PackageOuterClass.DeletePackageRequest request,
-        io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.DeletePackageResponse> responseObserver) {
+    public void deletePackage(viam.app.packages.v1.Packages.DeletePackageRequest request,
+        io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.DeletePackageResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeletePackageMethod(), getCallOptions()), request, responseObserver);
     }
@@ -301,8 +301,8 @@ public final class PackageServiceGrpc {
      * // GetPackage returns the URL and metadata for a requested package version
      * </pre>
      */
-    public void getPackage(viam.app.package.v1.PackageOuterClass.GetPackageRequest request,
-        io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.GetPackageResponse> responseObserver) {
+    public void getPackage(viam.app.packages.v1.Packages.GetPackageRequest request,
+        io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.GetPackageResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPackageMethod(), getCallOptions()), request, responseObserver);
     }
@@ -312,8 +312,8 @@ public final class PackageServiceGrpc {
      * ListPackages get the URLs and metadata for requested packages. Include package name, version, and/or type to filter beyond the required organization_id.
      * </pre>
      */
-    public void listPackages(viam.app.package.v1.PackageOuterClass.ListPackagesRequest request,
-        io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.ListPackagesResponse> responseObserver) {
+    public void listPackages(viam.app.packages.v1.Packages.ListPackagesRequest request,
+        io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.ListPackagesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListPackagesMethod(), getCallOptions()), request, responseObserver);
     }
@@ -338,7 +338,7 @@ public final class PackageServiceGrpc {
      * DeletePackage removes the given package versions
      * </pre>
      */
-    public viam.app.package.v1.PackageOuterClass.DeletePackageResponse deletePackage(viam.app.package.v1.PackageOuterClass.DeletePackageRequest request) {
+    public viam.app.packages.v1.Packages.DeletePackageResponse deletePackage(viam.app.packages.v1.Packages.DeletePackageRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeletePackageMethod(), getCallOptions(), request);
     }
@@ -348,7 +348,7 @@ public final class PackageServiceGrpc {
      * // GetPackage returns the URL and metadata for a requested package version
      * </pre>
      */
-    public viam.app.package.v1.PackageOuterClass.GetPackageResponse getPackage(viam.app.package.v1.PackageOuterClass.GetPackageRequest request) {
+    public viam.app.packages.v1.Packages.GetPackageResponse getPackage(viam.app.packages.v1.Packages.GetPackageRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPackageMethod(), getCallOptions(), request);
     }
@@ -358,7 +358,7 @@ public final class PackageServiceGrpc {
      * ListPackages get the URLs and metadata for requested packages. Include package name, version, and/or type to filter beyond the required organization_id.
      * </pre>
      */
-    public viam.app.package.v1.PackageOuterClass.ListPackagesResponse listPackages(viam.app.package.v1.PackageOuterClass.ListPackagesRequest request) {
+    public viam.app.packages.v1.Packages.ListPackagesResponse listPackages(viam.app.packages.v1.Packages.ListPackagesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListPackagesMethod(), getCallOptions(), request);
     }
@@ -383,8 +383,8 @@ public final class PackageServiceGrpc {
      * DeletePackage removes the given package versions
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<viam.app.package.v1.PackageOuterClass.DeletePackageResponse> deletePackage(
-        viam.app.package.v1.PackageOuterClass.DeletePackageRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.packages.v1.Packages.DeletePackageResponse> deletePackage(
+        viam.app.packages.v1.Packages.DeletePackageRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeletePackageMethod(), getCallOptions()), request);
     }
@@ -394,8 +394,8 @@ public final class PackageServiceGrpc {
      * // GetPackage returns the URL and metadata for a requested package version
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<viam.app.package.v1.PackageOuterClass.GetPackageResponse> getPackage(
-        viam.app.package.v1.PackageOuterClass.GetPackageRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.packages.v1.Packages.GetPackageResponse> getPackage(
+        viam.app.packages.v1.Packages.GetPackageRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPackageMethod(), getCallOptions()), request);
     }
@@ -405,8 +405,8 @@ public final class PackageServiceGrpc {
      * ListPackages get the URLs and metadata for requested packages. Include package name, version, and/or type to filter beyond the required organization_id.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<viam.app.package.v1.PackageOuterClass.ListPackagesResponse> listPackages(
-        viam.app.package.v1.PackageOuterClass.ListPackagesRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.packages.v1.Packages.ListPackagesResponse> listPackages(
+        viam.app.packages.v1.Packages.ListPackagesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListPackagesMethod(), getCallOptions()), request);
     }
@@ -435,16 +435,16 @@ public final class PackageServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_DELETE_PACKAGE:
-          serviceImpl.deletePackage((viam.app.package.v1.PackageOuterClass.DeletePackageRequest) request,
-              (io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.DeletePackageResponse>) responseObserver);
+          serviceImpl.deletePackage((viam.app.packages.v1.Packages.DeletePackageRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.DeletePackageResponse>) responseObserver);
           break;
         case METHODID_GET_PACKAGE:
-          serviceImpl.getPackage((viam.app.package.v1.PackageOuterClass.GetPackageRequest) request,
-              (io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.GetPackageResponse>) responseObserver);
+          serviceImpl.getPackage((viam.app.packages.v1.Packages.GetPackageRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.GetPackageResponse>) responseObserver);
           break;
         case METHODID_LIST_PACKAGES:
-          serviceImpl.listPackages((viam.app.package.v1.PackageOuterClass.ListPackagesRequest) request,
-              (io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.ListPackagesResponse>) responseObserver);
+          serviceImpl.listPackages((viam.app.packages.v1.Packages.ListPackagesRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.ListPackagesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -458,7 +458,7 @@ public final class PackageServiceGrpc {
       switch (methodId) {
         case METHODID_CREATE_PACKAGE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.createPackage(
-              (io.grpc.stub.StreamObserver<viam.app.package.v1.PackageOuterClass.CreatePackageResponse>) responseObserver);
+              (io.grpc.stub.StreamObserver<viam.app.packages.v1.Packages.CreatePackageResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -471,7 +471,7 @@ public final class PackageServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.app.package.v1.PackageOuterClass.getDescriptor();
+      return viam.app.packages.v1.Packages.getDescriptor();
     }
 
     @java.lang.Override
