@@ -8,16 +8,11 @@ else
 $(error unknown platform $(PLATFORM))
 endif
 
-THIS_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
-
-check-%:
-	@: $(if $(value $*),,$(error $* is undefined))
-
-buf: check-RDK
+buf:
 	rm -rf core/sdk/src/main/gen
-	cd $(RDK) && buf generate --template $(THIS_DIR)buf.gen.yaml
-	cd $(RDK) && buf generate --template $(THIS_DIR)buf.gen.yaml buf.build/viamrobotics/goutils
-	cd $(RDK) && buf generate --template $(THIS_DIR)buf.gen.yaml buf.build/erdaniels/gostream
+	buf generate --template buf.gen.yaml buf.build/viamrobotics/api
+	buf generate --template buf.gen.yaml buf.build/viamrobotics/goutils
+	buf generate --template buf.gen.yaml buf.build/erdaniels/gostream
 
 setup:
 	sudo curl -o /usr/local/bin/protoc-gen-grpc-java -L ${GRPC_JAVA}
