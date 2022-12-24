@@ -9055,6 +9055,27 @@ public final class Robot {
      * @return The log.
      */
     boolean getLog();
+
+    /**
+     * <code>int32 stop_signal = 7 [json_name = "stopSignal"];</code>
+     * @return The stopSignal.
+     */
+    int getStopSignal();
+
+    /**
+     * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+     * @return Whether the stopTimeout field is set.
+     */
+    boolean hasStopTimeout();
+    /**
+     * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+     * @return The stopTimeout.
+     */
+    com.google.protobuf.Duration getStopTimeout();
+    /**
+     * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getStopTimeoutOrBuilder();
   }
   /**
    * <pre>
@@ -9275,6 +9296,43 @@ public final class Robot {
       return log_;
     }
 
+    public static final int STOP_SIGNAL_FIELD_NUMBER = 7;
+    private int stopSignal_;
+    /**
+     * <code>int32 stop_signal = 7 [json_name = "stopSignal"];</code>
+     * @return The stopSignal.
+     */
+    @java.lang.Override
+    public int getStopSignal() {
+      return stopSignal_;
+    }
+
+    public static final int STOP_TIMEOUT_FIELD_NUMBER = 8;
+    private com.google.protobuf.Duration stopTimeout_;
+    /**
+     * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+     * @return Whether the stopTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasStopTimeout() {
+      return stopTimeout_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+     * @return The stopTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getStopTimeout() {
+      return stopTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : stopTimeout_;
+    }
+    /**
+     * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getStopTimeoutOrBuilder() {
+      return getStopTimeout();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9306,6 +9364,12 @@ public final class Robot {
       }
       if (log_ != false) {
         output.writeBool(6, log_);
+      }
+      if (stopSignal_ != 0) {
+        output.writeInt32(7, stopSignal_);
+      }
+      if (stopTimeout_ != null) {
+        output.writeMessage(8, getStopTimeout());
       }
       getUnknownFields().writeTo(output);
     }
@@ -9341,6 +9405,14 @@ public final class Robot {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, log_);
       }
+      if (stopSignal_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, stopSignal_);
+      }
+      if (stopTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getStopTimeout());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9368,6 +9440,13 @@ public final class Robot {
           != other.getOneShot()) return false;
       if (getLog()
           != other.getLog()) return false;
+      if (getStopSignal()
+          != other.getStopSignal()) return false;
+      if (hasStopTimeout() != other.hasStopTimeout()) return false;
+      if (hasStopTimeout()) {
+        if (!getStopTimeout()
+            .equals(other.getStopTimeout())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -9395,6 +9474,12 @@ public final class Robot {
       hash = (37 * hash) + LOG_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getLog());
+      hash = (37 * hash) + STOP_SIGNAL_FIELD_NUMBER;
+      hash = (53 * hash) + getStopSignal();
+      if (hasStopTimeout()) {
+        hash = (37 * hash) + STOP_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getStopTimeout().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9539,6 +9624,14 @@ public final class Robot {
 
         log_ = false;
 
+        stopSignal_ = 0;
+
+        if (stopTimeoutBuilder_ == null) {
+          stopTimeout_ = null;
+        } else {
+          stopTimeout_ = null;
+          stopTimeoutBuilder_ = null;
+        }
         return this;
       }
 
@@ -9576,6 +9669,12 @@ public final class Robot {
         result.cwd_ = cwd_;
         result.oneShot_ = oneShot_;
         result.log_ = log_;
+        result.stopSignal_ = stopSignal_;
+        if (stopTimeoutBuilder_ == null) {
+          result.stopTimeout_ = stopTimeout_;
+        } else {
+          result.stopTimeout_ = stopTimeoutBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -9652,6 +9751,12 @@ public final class Robot {
         if (other.getLog() != false) {
           setLog(other.getLog());
         }
+        if (other.getStopSignal() != 0) {
+          setStopSignal(other.getStopSignal());
+        }
+        if (other.hasStopTimeout()) {
+          mergeStopTimeout(other.getStopTimeout());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -9709,6 +9814,18 @@ public final class Robot {
 
                 break;
               } // case 48
+              case 56: {
+                stopSignal_ = input.readInt32();
+
+                break;
+              } // case 56
+              case 66: {
+                input.readMessage(
+                    getStopTimeoutFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 66
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -10124,6 +10241,156 @@ public final class Robot {
         log_ = false;
         onChanged();
         return this;
+      }
+
+      private int stopSignal_ ;
+      /**
+       * <code>int32 stop_signal = 7 [json_name = "stopSignal"];</code>
+       * @return The stopSignal.
+       */
+      @java.lang.Override
+      public int getStopSignal() {
+        return stopSignal_;
+      }
+      /**
+       * <code>int32 stop_signal = 7 [json_name = "stopSignal"];</code>
+       * @param value The stopSignal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStopSignal(int value) {
+        
+        stopSignal_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 stop_signal = 7 [json_name = "stopSignal"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStopSignal() {
+        
+        stopSignal_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration stopTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> stopTimeoutBuilder_;
+      /**
+       * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+       * @return Whether the stopTimeout field is set.
+       */
+      public boolean hasStopTimeout() {
+        return stopTimeoutBuilder_ != null || stopTimeout_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+       * @return The stopTimeout.
+       */
+      public com.google.protobuf.Duration getStopTimeout() {
+        if (stopTimeoutBuilder_ == null) {
+          return stopTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : stopTimeout_;
+        } else {
+          return stopTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+       */
+      public Builder setStopTimeout(com.google.protobuf.Duration value) {
+        if (stopTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stopTimeout_ = value;
+          onChanged();
+        } else {
+          stopTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+       */
+      public Builder setStopTimeout(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (stopTimeoutBuilder_ == null) {
+          stopTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          stopTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+       */
+      public Builder mergeStopTimeout(com.google.protobuf.Duration value) {
+        if (stopTimeoutBuilder_ == null) {
+          if (stopTimeout_ != null) {
+            stopTimeout_ =
+              com.google.protobuf.Duration.newBuilder(stopTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            stopTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          stopTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+       */
+      public Builder clearStopTimeout() {
+        if (stopTimeoutBuilder_ == null) {
+          stopTimeout_ = null;
+          onChanged();
+        } else {
+          stopTimeout_ = null;
+          stopTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getStopTimeoutBuilder() {
+        
+        onChanged();
+        return getStopTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getStopTimeoutOrBuilder() {
+        if (stopTimeoutBuilder_ != null) {
+          return stopTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return stopTimeout_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : stopTimeout_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration stop_timeout = 8 [json_name = "stopTimeout"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getStopTimeoutFieldBuilder() {
+        if (stopTimeoutBuilder_ == null) {
+          stopTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getStopTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          stopTimeout_ = null;
+        }
+        return stopTimeoutBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -35243,115 +35510,118 @@ public final class Robot {
       "gle.protobuf.StructR\nattributes\022\020\n\003api\030\t" +
       " \001(\tR\003api\"i\n\032ResourceLevelServiceConfig\022" +
       "\022\n\004type\030\001 \001(\tR\004type\0227\n\nattributes\030\002 \001(\0132" +
-      "\027.google.protobuf.StructR\nattributes\"\206\001\n" +
+      "\027.google.protobuf.StructR\nattributes\"\345\001\n" +
       "\rProcessConfig\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002" +
       " \001(\tR\004name\022\022\n\004args\030\003 \003(\tR\004args\022\020\n\003cwd\030\004 " +
       "\001(\tR\003cwd\022\031\n\010one_shot\030\005 \001(\010R\007oneShot\022\020\n\003l" +
-      "og\030\006 \001(\010R\003log\"\303\001\n\rServiceConfig\022\022\n\004name\030" +
-      "\001 \001(\tR\004name\022\034\n\tnamespace\030\002 \001(\tR\tnamespac" +
-      "e\022\022\n\004type\030\003 \001(\tR\004type\0227\n\nattributes\030\004 \001(" +
-      "\0132\027.google.protobuf.StructR\nattributes\022\035" +
-      "\n\ndepends_on\030\005 \003(\tR\tdependsOn\022\024\n\005model\030\006" +
-      " \001(\tR\005model\"\214\001\n\rNetworkConfig\022\022\n\004fqdn\030\001 " +
-      "\001(\tR\004fqdn\022!\n\014bind_address\030\002 \001(\tR\013bindAdd" +
-      "ress\022\"\n\rtls_cert_file\030\003 \001(\tR\013tlsCertFile" +
-      "\022 \n\014tls_key_file\030\004 \001(\tR\ntlsKeyFile\"t\n\nAu" +
-      "thConfig\022:\n\010handlers\030\001 \003(\0132\036.viam.app.v1" +
-      ".AuthHandlerConfigR\010handlers\022*\n\021tls_auth" +
-      "_entities\030\002 \003(\tR\017tlsAuthEntities\"7\n\010JWKS" +
-      "File\022+\n\004json\030\001 \001(\0132\027.google.protobuf.Str" +
-      "uctR\004json\"s\n\031AuthHandlerWebOauthConfig\022+" +
-      "\n\021allowed_audiences\030\001 \003(\tR\020allowedAudien" +
-      "ces\022)\n\004jwks\030\002 \001(\0132\025.viam.app.v1.JWKSFile" +
-      "R\004jwks\"\342\001\n\021AuthHandlerConfig\0220\n\004type\030\001 \001" +
-      "(\0162\034.viam.app.v1.CredentialsTypeR\004type\022/" +
-      "\n\006config\030\005 \001(\0132\027.google.protobuf.StructR" +
-      "\006config\022U\n\020web_oauth_config\030\006 \001(\0132&.viam" +
-      ".app.v1.AuthHandlerWebOauthConfigH\000R\016web" +
-      "OauthConfig\210\001\001B\023\n\021_web_oauth_config\"\315\001\n\005" +
-      "Frame\022\026\n\006parent\030\001 \001(\tR\006parent\022:\n\013transla" +
-      "tion\030\002 \001(\0132\030.viam.app.v1.TranslationR\013tr" +
-      "anslation\022:\n\013orientation\030\003 \001(\0132\030.viam.ap" +
-      "p.v1.OrientationR\013orientation\0224\n\010geometr" +
-      "y\030\004 \001(\0132\030.viam.common.v1.GeometryR\010geome" +
-      "try\"7\n\013Translation\022\014\n\001x\030\001 \001(\001R\001x\022\014\n\001y\030\002 " +
-      "\001(\001R\001y\022\014\n\001z\030\003 \001(\001R\001z\"\320\007\n\013Orientation\022O\n\016" +
-      "no_orientation\030\001 \001(\0132&.viam.app.v1.Orien" +
-      "tation.NoOrientationH\000R\rnoOrientation\022Z\n" +
-      "\016vector_radians\030\002 \001(\01321.viam.app.v1.Orie" +
-      "ntation.OrientationVectorRadiansH\000R\rvect" +
-      "orRadians\022Z\n\016vector_degrees\030\003 \001(\01321.viam" +
-      ".app.v1.Orientation.OrientationVectorDeg" +
-      "reesH\000R\rvectorDegrees\022I\n\014euler_angles\030\004 " +
-      "\001(\0132$.viam.app.v1.Orientation.EulerAngle" +
-      "sH\000R\013eulerAngles\022F\n\013axis_angles\030\005 \001(\0132#." +
-      "viam.app.v1.Orientation.AxisAnglesH\000R\nax" +
-      "isAngles\022E\n\nquaternion\030\006 \001(\0132#.viam.app." +
-      "v1.Orientation.QuaternionH\000R\nquaternion\032" +
-      "\017\n\rNoOrientation\032j\n\030OrientationVectorRad" +
-      "ians\022$\n\005theta\030\001 \001(\001B\016\232\204\236\003\tjson:\"th\"R\005the" +
-      "ta\022\014\n\001x\030\002 \001(\001R\001x\022\014\n\001y\030\003 \001(\001R\001y\022\014\n\001z\030\004 \001(" +
-      "\001R\001z\032j\n\030OrientationVectorDegrees\022$\n\005thet" +
-      "a\030\001 \001(\001B\016\232\204\236\003\tjson:\"th\"R\005theta\022\014\n\001x\030\002 \001(" +
-      "\001R\001x\022\014\n\001y\030\003 \001(\001R\001y\022\014\n\001z\030\004 \001(\001R\001z\032I\n\013Eule" +
-      "rAngles\022\022\n\004roll\030\001 \001(\001R\004roll\022\024\n\005pitch\030\002 \001" +
-      "(\001R\005pitch\022\020\n\003yaw\030\003 \001(\001R\003yaw\032\\\n\nAxisAngle" +
-      "s\022$\n\005theta\030\001 \001(\001B\016\232\204\236\003\tjson:\"th\"R\005theta\022" +
-      "\014\n\001x\030\002 \001(\001R\001x\022\014\n\001y\030\003 \001(\001R\001y\022\014\n\001z\030\004 \001(\001R\001" +
-      "z\032D\n\nQuaternion\022\014\n\001w\030\001 \001(\001R\001w\022\014\n\001x\030\002 \001(\001" +
-      "R\001x\022\014\n\001y\030\003 \001(\001R\001y\022\014\n\001z\030\004 \001(\001R\001zB\006\n\004type\"" +
-      "\365\003\n\014RemoteConfig\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\007" +
-      "address\030\002 \001(\tR\007address\022(\n\005frame\030\003 \001(\0132\022." +
-      "viam.app.v1.FrameR\005frame\022+\n\004auth\030\004 \001(\0132\027" +
-      ".viam.app.v1.RemoteAuthR\004auth\022\035\n\nmanaged" +
-      "_by\030\005 \001(\tR\tmanagedBy\022\032\n\010insecure\030\006 \001(\010R\010" +
-      "insecure\022U\n\031connection_check_interval\030\007 " +
-      "\001(\0132\031.google.protobuf.DurationR\027connecti" +
-      "onCheckInterval\022H\n\022reconnect_interval\030\010 " +
-      "\001(\0132\031.google.protobuf.DurationR\021reconnec" +
-      "tInterval\022l\n\017service_configs\030\t \003(\0132\'.via" +
-      "m.app.v1.ResourceLevelServiceConfigB\032\232\204\236" +
-      "\003\025json:\"service_config\"R\016serviceConfigs\022" +
-      "\026\n\006secret\030\n \001(\tR\006secret\"\306\001\n\nRemoteAuth\022E" +
-      "\n\013credentials\030\001 \001(\0132#.viam.app.v1.Remote" +
-      "Auth.CredentialsR\013credentials\022\026\n\006entity\030" +
-      "\002 \001(\tR\006entity\032Y\n\013Credentials\0220\n\004type\030\001 \001" +
-      "(\0162\034.viam.app.v1.CredentialsTypeR\004type\022\030" +
-      "\n\007payload\030\002 \001(\tR\007payload\"~\n\tAgentInfo\022\022\n" +
-      "\004host\030\001 \001(\tR\004host\022\016\n\002os\030\002 \001(\tR\002os\022\020\n\003ips" +
-      "\030\003 \003(\tR\003ips\022\030\n\007version\030\004 \001(\tR\007version\022!\n" +
-      "\014git_revision\030\005 \001(\tR\013gitRevision\"j\n\rConf" +
-      "igRequest\022\016\n\002id\030\001 \001(\tR\002id\022:\n\nagent_info\030" +
-      "\002 \001(\0132\026.viam.app.v1.AgentInfoH\000R\tagentIn" +
-      "fo\210\001\001B\r\n\013_agent_info\"B\n\016ConfigResponse\0220" +
-      "\n\006config\030\001 \001(\0132\030.viam.app.v1.RobotConfig" +
-      "R\006config\"$\n\022CertificateRequest\022\016\n\002id\030\001 \001" +
-      "(\tR\002id\"v\n\023CertificateResponse\022\016\n\002id\030\001 \001(" +
-      "\tR\002id\022\'\n\017tls_certificate\030\002 \001(\tR\016tlsCerti" +
-      "ficate\022&\n\017tls_private_key\030\003 \001(\tR\rtlsPriv" +
-      "ateKey\"G\n\nLogRequest\022\016\n\002id\030\001 \001(\tR\002id\022)\n\004" +
-      "logs\030\002 \003(\0132\025.viam.app.v1.LogEntryR\004logs\"" +
-      "\r\n\013LogResponse\"%\n\023NeedsRestartRequest\022\016\n" +
-      "\002id\030\001 \001(\tR\002id\"\232\001\n\024NeedsRestartResponse\022\016" +
-      "\n\002id\030\001 \001(\tR\002id\022!\n\014must_restart\030\002 \001(\010R\013mu" +
-      "stRestart\022O\n\026restart_check_interval\030\003 \001(" +
-      "\0132\031.google.protobuf.DurationR\024restartChe" +
-      "ckInterval\"6\n\014ModuleConfig\022\022\n\004name\030\001 \001(\t" +
-      "R\004name\022\022\n\004path\030\002 \001(\tR\004path*\337\001\n\017Credentia" +
-      "lsType\022 \n\034CREDENTIALS_TYPE_UNSPECIFIED\020\000" +
-      "\022\035\n\031CREDENTIALS_TYPE_INTERNAL\020\001\022\034\n\030CREDE" +
-      "NTIALS_TYPE_API_KEY\020\002\022!\n\035CREDENTIALS_TYP" +
-      "E_ROBOT_SECRET\020\003\022*\n&CREDENTIALS_TYPE_ROB" +
-      "OT_LOCATION_SECRET\020\004\022\036\n\032CREDENTIALS_TYPE" +
-      "_WEB_OAUTH\020\0052\262\002\n\014RobotService\022A\n\006Config\022" +
-      "\032.viam.app.v1.ConfigRequest\032\033.viam.app.v" +
-      "1.ConfigResponse\022P\n\013Certificate\022\037.viam.a" +
-      "pp.v1.CertificateRequest\032 .viam.app.v1.C" +
-      "ertificateResponse\0228\n\003Log\022\027.viam.app.v1." +
-      "LogRequest\032\030.viam.app.v1.LogResponse\022S\n\014" +
-      "NeedsRestart\022 .viam.app.v1.NeedsRestartR" +
-      "equest\032!.viam.app.v1.NeedsRestartRespons" +
-      "eB\030Z\026go.viam.com/api/app/v1b\006proto3"
+      "og\030\006 \001(\010R\003log\022\037\n\013stop_signal\030\007 \001(\005R\nstop" +
+      "Signal\022<\n\014stop_timeout\030\010 \001(\0132\031.google.pr" +
+      "otobuf.DurationR\013stopTimeout\"\303\001\n\rService" +
+      "Config\022\022\n\004name\030\001 \001(\tR\004name\022\034\n\tnamespace\030" +
+      "\002 \001(\tR\tnamespace\022\022\n\004type\030\003 \001(\tR\004type\0227\n\n" +
+      "attributes\030\004 \001(\0132\027.google.protobuf.Struc" +
+      "tR\nattributes\022\035\n\ndepends_on\030\005 \003(\tR\tdepen" +
+      "dsOn\022\024\n\005model\030\006 \001(\tR\005model\"\214\001\n\rNetworkCo" +
+      "nfig\022\022\n\004fqdn\030\001 \001(\tR\004fqdn\022!\n\014bind_address" +
+      "\030\002 \001(\tR\013bindAddress\022\"\n\rtls_cert_file\030\003 \001" +
+      "(\tR\013tlsCertFile\022 \n\014tls_key_file\030\004 \001(\tR\nt" +
+      "lsKeyFile\"t\n\nAuthConfig\022:\n\010handlers\030\001 \003(" +
+      "\0132\036.viam.app.v1.AuthHandlerConfigR\010handl" +
+      "ers\022*\n\021tls_auth_entities\030\002 \003(\tR\017tlsAuthE" +
+      "ntities\"7\n\010JWKSFile\022+\n\004json\030\001 \001(\0132\027.goog" +
+      "le.protobuf.StructR\004json\"s\n\031AuthHandlerW" +
+      "ebOauthConfig\022+\n\021allowed_audiences\030\001 \003(\t" +
+      "R\020allowedAudiences\022)\n\004jwks\030\002 \001(\0132\025.viam." +
+      "app.v1.JWKSFileR\004jwks\"\342\001\n\021AuthHandlerCon" +
+      "fig\0220\n\004type\030\001 \001(\0162\034.viam.app.v1.Credenti" +
+      "alsTypeR\004type\022/\n\006config\030\005 \001(\0132\027.google.p" +
+      "rotobuf.StructR\006config\022U\n\020web_oauth_conf" +
+      "ig\030\006 \001(\0132&.viam.app.v1.AuthHandlerWebOau" +
+      "thConfigH\000R\016webOauthConfig\210\001\001B\023\n\021_web_oa" +
+      "uth_config\"\315\001\n\005Frame\022\026\n\006parent\030\001 \001(\tR\006pa" +
+      "rent\022:\n\013translation\030\002 \001(\0132\030.viam.app.v1." +
+      "TranslationR\013translation\022:\n\013orientation\030" +
+      "\003 \001(\0132\030.viam.app.v1.OrientationR\013orienta" +
+      "tion\0224\n\010geometry\030\004 \001(\0132\030.viam.common.v1." +
+      "GeometryR\010geometry\"7\n\013Translation\022\014\n\001x\030\001" +
+      " \001(\001R\001x\022\014\n\001y\030\002 \001(\001R\001y\022\014\n\001z\030\003 \001(\001R\001z\"\320\007\n\013" +
+      "Orientation\022O\n\016no_orientation\030\001 \001(\0132&.vi" +
+      "am.app.v1.Orientation.NoOrientationH\000R\rn" +
+      "oOrientation\022Z\n\016vector_radians\030\002 \001(\01321.v" +
+      "iam.app.v1.Orientation.OrientationVector" +
+      "RadiansH\000R\rvectorRadians\022Z\n\016vector_degre" +
+      "es\030\003 \001(\01321.viam.app.v1.Orientation.Orien" +
+      "tationVectorDegreesH\000R\rvectorDegrees\022I\n\014" +
+      "euler_angles\030\004 \001(\0132$.viam.app.v1.Orienta" +
+      "tion.EulerAnglesH\000R\013eulerAngles\022F\n\013axis_" +
+      "angles\030\005 \001(\0132#.viam.app.v1.Orientation.A" +
+      "xisAnglesH\000R\naxisAngles\022E\n\nquaternion\030\006 " +
+      "\001(\0132#.viam.app.v1.Orientation.Quaternion" +
+      "H\000R\nquaternion\032\017\n\rNoOrientation\032j\n\030Orien" +
+      "tationVectorRadians\022$\n\005theta\030\001 \001(\001B\016\232\204\236\003" +
+      "\tjson:\"th\"R\005theta\022\014\n\001x\030\002 \001(\001R\001x\022\014\n\001y\030\003 \001" +
+      "(\001R\001y\022\014\n\001z\030\004 \001(\001R\001z\032j\n\030OrientationVector" +
+      "Degrees\022$\n\005theta\030\001 \001(\001B\016\232\204\236\003\tjson:\"th\"R\005" +
+      "theta\022\014\n\001x\030\002 \001(\001R\001x\022\014\n\001y\030\003 \001(\001R\001y\022\014\n\001z\030\004" +
+      " \001(\001R\001z\032I\n\013EulerAngles\022\022\n\004roll\030\001 \001(\001R\004ro" +
+      "ll\022\024\n\005pitch\030\002 \001(\001R\005pitch\022\020\n\003yaw\030\003 \001(\001R\003y" +
+      "aw\032\\\n\nAxisAngles\022$\n\005theta\030\001 \001(\001B\016\232\204\236\003\tjs" +
+      "on:\"th\"R\005theta\022\014\n\001x\030\002 \001(\001R\001x\022\014\n\001y\030\003 \001(\001R" +
+      "\001y\022\014\n\001z\030\004 \001(\001R\001z\032D\n\nQuaternion\022\014\n\001w\030\001 \001(" +
+      "\001R\001w\022\014\n\001x\030\002 \001(\001R\001x\022\014\n\001y\030\003 \001(\001R\001y\022\014\n\001z\030\004 " +
+      "\001(\001R\001zB\006\n\004type\"\365\003\n\014RemoteConfig\022\022\n\004name\030" +
+      "\001 \001(\tR\004name\022\030\n\007address\030\002 \001(\tR\007address\022(\n" +
+      "\005frame\030\003 \001(\0132\022.viam.app.v1.FrameR\005frame\022" +
+      "+\n\004auth\030\004 \001(\0132\027.viam.app.v1.RemoteAuthR\004" +
+      "auth\022\035\n\nmanaged_by\030\005 \001(\tR\tmanagedBy\022\032\n\010i" +
+      "nsecure\030\006 \001(\010R\010insecure\022U\n\031connection_ch" +
+      "eck_interval\030\007 \001(\0132\031.google.protobuf.Dur" +
+      "ationR\027connectionCheckInterval\022H\n\022reconn" +
+      "ect_interval\030\010 \001(\0132\031.google.protobuf.Dur" +
+      "ationR\021reconnectInterval\022l\n\017service_conf" +
+      "igs\030\t \003(\0132\'.viam.app.v1.ResourceLevelSer" +
+      "viceConfigB\032\232\204\236\003\025json:\"service_config\"R\016" +
+      "serviceConfigs\022\026\n\006secret\030\n \001(\tR\006secret\"\306" +
+      "\001\n\nRemoteAuth\022E\n\013credentials\030\001 \001(\0132#.via" +
+      "m.app.v1.RemoteAuth.CredentialsR\013credent" +
+      "ials\022\026\n\006entity\030\002 \001(\tR\006entity\032Y\n\013Credenti" +
+      "als\0220\n\004type\030\001 \001(\0162\034.viam.app.v1.Credenti" +
+      "alsTypeR\004type\022\030\n\007payload\030\002 \001(\tR\007payload\"" +
+      "~\n\tAgentInfo\022\022\n\004host\030\001 \001(\tR\004host\022\016\n\002os\030\002" +
+      " \001(\tR\002os\022\020\n\003ips\030\003 \003(\tR\003ips\022\030\n\007version\030\004 " +
+      "\001(\tR\007version\022!\n\014git_revision\030\005 \001(\tR\013gitR" +
+      "evision\"j\n\rConfigRequest\022\016\n\002id\030\001 \001(\tR\002id" +
+      "\022:\n\nagent_info\030\002 \001(\0132\026.viam.app.v1.Agent" +
+      "InfoH\000R\tagentInfo\210\001\001B\r\n\013_agent_info\"B\n\016C" +
+      "onfigResponse\0220\n\006config\030\001 \001(\0132\030.viam.app" +
+      ".v1.RobotConfigR\006config\"$\n\022CertificateRe" +
+      "quest\022\016\n\002id\030\001 \001(\tR\002id\"v\n\023CertificateResp" +
+      "onse\022\016\n\002id\030\001 \001(\tR\002id\022\'\n\017tls_certificate\030" +
+      "\002 \001(\tR\016tlsCertificate\022&\n\017tls_private_key" +
+      "\030\003 \001(\tR\rtlsPrivateKey\"G\n\nLogRequest\022\016\n\002i" +
+      "d\030\001 \001(\tR\002id\022)\n\004logs\030\002 \003(\0132\025.viam.app.v1." +
+      "LogEntryR\004logs\"\r\n\013LogResponse\"%\n\023NeedsRe" +
+      "startRequest\022\016\n\002id\030\001 \001(\tR\002id\"\232\001\n\024NeedsRe" +
+      "startResponse\022\016\n\002id\030\001 \001(\tR\002id\022!\n\014must_re" +
+      "start\030\002 \001(\010R\013mustRestart\022O\n\026restart_chec" +
+      "k_interval\030\003 \001(\0132\031.google.protobuf.Durat" +
+      "ionR\024restartCheckInterval\"6\n\014ModuleConfi" +
+      "g\022\022\n\004name\030\001 \001(\tR\004name\022\022\n\004path\030\002 \001(\tR\004pat" +
+      "h*\337\001\n\017CredentialsType\022 \n\034CREDENTIALS_TYP" +
+      "E_UNSPECIFIED\020\000\022\035\n\031CREDENTIALS_TYPE_INTE" +
+      "RNAL\020\001\022\034\n\030CREDENTIALS_TYPE_API_KEY\020\002\022!\n\035" +
+      "CREDENTIALS_TYPE_ROBOT_SECRET\020\003\022*\n&CREDE" +
+      "NTIALS_TYPE_ROBOT_LOCATION_SECRET\020\004\022\036\n\032C" +
+      "REDENTIALS_TYPE_WEB_OAUTH\020\0052\262\002\n\014RobotSer" +
+      "vice\022A\n\006Config\022\032.viam.app.v1.ConfigReque" +
+      "st\032\033.viam.app.v1.ConfigResponse\022P\n\013Certi" +
+      "ficate\022\037.viam.app.v1.CertificateRequest\032" +
+      " .viam.app.v1.CertificateResponse\0228\n\003Log" +
+      "\022\027.viam.app.v1.LogRequest\032\030.viam.app.v1." +
+      "LogResponse\022S\n\014NeedsRestart\022 .viam.app.v" +
+      "1.NeedsRestartRequest\032!.viam.app.v1.Need" +
+      "sRestartResponseB\030Z\026go.viam.com/api/app/" +
+      "v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -35397,7 +35667,7 @@ public final class Robot {
     internal_static_viam_app_v1_ProcessConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_v1_ProcessConfig_descriptor,
-        new java.lang.String[] { "Id", "Name", "Args", "Cwd", "OneShot", "Log", });
+        new java.lang.String[] { "Id", "Name", "Args", "Cwd", "OneShot", "Log", "StopSignal", "StopTimeout", });
     internal_static_viam_app_v1_ServiceConfig_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_viam_app_v1_ServiceConfig_fieldAccessorTable = new

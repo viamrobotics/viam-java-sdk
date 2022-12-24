@@ -5,8 +5,9 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.39.0)",
+    value = "by gRPC proto compiler (version 1.51.1)",
     comments = "Source: proto/rpc/examples/fileupload/v1/fileupload.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class FileUploadServiceGrpc {
 
   private FileUploadServiceGrpc() {}

@@ -1,9 +1,9 @@
 PLATFORM=$(shell uname -s | tr '[:upper:]' '[:lower:]')
 
 ifeq ($(PLATFORM),darwin)
-	GRPC_JAVA="https://repo1.maven.org/maven2/io/grpc/protoc-gen-grpc-java/1.39.0/protoc-gen-grpc-java-1.39.0-osx-x86_64.exe"
+	GRPC_JAVA="https://repo1.maven.org/maven2/io/grpc/protoc-gen-grpc-java/1.51.1/protoc-gen-grpc-java-1.51.1-osx-x86_64.exe"
 else ifeq ($(PLATFORM),linux)
-	GRPC_JAVA="https://repo1.maven.org/maven2/io/grpc/protoc-gen-grpc-java/1.39.0/protoc-gen-grpc-java-1.39.0-linux-x86_64.exe"
+	GRPC_JAVA="https://repo1.maven.org/maven2/io/grpc/protoc-gen-grpc-java/1.51.1/protoc-gen-grpc-java-1.51.1-linux-x86_64.exe"
 else
 $(error unknown platform $(PLATFORM))
 endif

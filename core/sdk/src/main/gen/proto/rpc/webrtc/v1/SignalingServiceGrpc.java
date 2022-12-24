@@ -9,8 +9,9 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.39.0)",
+    value = "by gRPC proto compiler (version 1.51.1)",
     comments = "Source: proto/rpc/webrtc/v1/signaling.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class SignalingServiceGrpc {
 
   private SignalingServiceGrpc() {}
