@@ -19,7 +19,7 @@ setup:
 	sudo chmod +x /usr/local/bin/protoc-gen-grpc-java
 
 run_client:
-	./gradlew runClient --args="localhost:8080"
+	./gradlew runExample1Client --args="localhost:8080"
 
 run_server:
-	./gradlew runServer --args="8080"
+	./gradlew runExample1Server --args="8080"

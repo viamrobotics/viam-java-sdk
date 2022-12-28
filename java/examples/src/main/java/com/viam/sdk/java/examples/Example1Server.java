@@ -1,8 +1,8 @@
 package com.viam.sdk.java.examples;
 
-import com.viam.rdk.proto.api.common.v1.Common;
-import com.viam.rdk.proto.api.robot.v1.Robot;
-import com.viam.rdk.proto.api.robot.v1.RobotServiceGrpc;
+import com.viam.common.v1.Common;
+import com.viam.robot.v1.Robot;
+import com.viam.robot.v1.RobotServiceGrpc;
 import io.grpc.ServerBuilder;
 
 import java.io.IOException;
