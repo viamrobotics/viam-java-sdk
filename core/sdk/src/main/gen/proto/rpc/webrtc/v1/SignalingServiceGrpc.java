@@ -9,8 +9,9 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.39.0)",
+    value = "by gRPC proto compiler (version 1.51.1)",
     comments = "Source: proto/rpc/webrtc/v1/signaling.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class SignalingServiceGrpc {
 
   private SignalingServiceGrpc() {}
@@ -199,6 +200,11 @@ public final class SignalingServiceGrpc {
      * Call makes an offer to a client that it expects an answer to. The host
      * of the client in question should be identified in the rpc-host metadata
      * field.
+     * Note: Based on how this is a server streaming responnse to the caller,
+     * we do not have a good way of knowing if the caller has disappeared.
+     * Depending on answerer timeouts and concurrency limits, this can result in
+     * hangs on the answerer waiting for a connection to establish, which in turn
+     * can result in the caller waiting for an answerer to be listening.
      * </pre>
      */
     public void call(proto.rpc.webrtc.v1.Signaling.CallRequest request,
@@ -300,6 +306,11 @@ public final class SignalingServiceGrpc {
      * Call makes an offer to a client that it expects an answer to. The host
      * of the client in question should be identified in the rpc-host metadata
      * field.
+     * Note: Based on how this is a server streaming responnse to the caller,
+     * we do not have a good way of knowing if the caller has disappeared.
+     * Depending on answerer timeouts and concurrency limits, this can result in
+     * hangs on the answerer waiting for a connection to establish, which in turn
+     * can result in the caller waiting for an answerer to be listening.
      * </pre>
      */
     public void call(proto.rpc.webrtc.v1.Signaling.CallRequest request,
@@ -372,6 +383,11 @@ public final class SignalingServiceGrpc {
      * Call makes an offer to a client that it expects an answer to. The host
      * of the client in question should be identified in the rpc-host metadata
      * field.
+     * Note: Based on how this is a server streaming responnse to the caller,
+     * we do not have a good way of knowing if the caller has disappeared.
+     * Depending on answerer timeouts and concurrency limits, this can result in
+     * hangs on the answerer waiting for a connection to establish, which in turn
+     * can result in the caller waiting for an answerer to be listening.
      * </pre>
      */
     public java.util.Iterator<proto.rpc.webrtc.v1.Signaling.CallResponse> call(

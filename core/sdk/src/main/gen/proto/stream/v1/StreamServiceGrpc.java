@@ -6,12 +6,13 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * <pre>
  * A StreamService is used to coordinate with a WebRTC the listing,
  * addition, and removal of registered video streams.
- * TODO(erd): support removal
+ * TODO(https://github.com/viamrobotics/rdk/issues/509): support removal
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.39.0)",
+    value = "by gRPC proto compiler (version 1.51.1)",
     comments = "Source: proto/stream/v1/stream.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class StreamServiceGrpc {
 
   private StreamServiceGrpc() {}
@@ -81,6 +82,37 @@ public final class StreamServiceGrpc {
     return getAddStreamMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<proto.stream.v1.Stream.RemoveStreamRequest,
+      proto.stream.v1.Stream.RemoveStreamResponse> getRemoveStreamMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveStream",
+      requestType = proto.stream.v1.Stream.RemoveStreamRequest.class,
+      responseType = proto.stream.v1.Stream.RemoveStreamResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<proto.stream.v1.Stream.RemoveStreamRequest,
+      proto.stream.v1.Stream.RemoveStreamResponse> getRemoveStreamMethod() {
+    io.grpc.MethodDescriptor<proto.stream.v1.Stream.RemoveStreamRequest, proto.stream.v1.Stream.RemoveStreamResponse> getRemoveStreamMethod;
+    if ((getRemoveStreamMethod = StreamServiceGrpc.getRemoveStreamMethod) == null) {
+      synchronized (StreamServiceGrpc.class) {
+        if ((getRemoveStreamMethod = StreamServiceGrpc.getRemoveStreamMethod) == null) {
+          StreamServiceGrpc.getRemoveStreamMethod = getRemoveStreamMethod =
+              io.grpc.MethodDescriptor.<proto.stream.v1.Stream.RemoveStreamRequest, proto.stream.v1.Stream.RemoveStreamResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveStream"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.stream.v1.Stream.RemoveStreamRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.stream.v1.Stream.RemoveStreamResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new StreamServiceMethodDescriptorSupplier("RemoveStream"))
+              .build();
+        }
+      }
+    }
+    return getRemoveStreamMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -129,7 +161,7 @@ public final class StreamServiceGrpc {
    * <pre>
    * A StreamService is used to coordinate with a WebRTC the listing,
    * addition, and removal of registered video streams.
-   * TODO(erd): support removal
+   * TODO(https://github.com/viamrobotics/rdk/issues/509): support removal
    * </pre>
    */
   public static abstract class StreamServiceImplBase implements io.grpc.BindableService {
@@ -154,6 +186,18 @@ public final class StreamServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddStreamMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * RemoveStream requests a particular stream be removed. If the calling client
+     * is the last to be receiving the stream, it will attempt to be stopped to
+     * conserve resources.
+     * </pre>
+     */
+    public void removeStream(proto.stream.v1.Stream.RemoveStreamRequest request,
+        io.grpc.stub.StreamObserver<proto.stream.v1.Stream.RemoveStreamResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveStreamMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -170,6 +214,13 @@ public final class StreamServiceGrpc {
                 proto.stream.v1.Stream.AddStreamRequest,
                 proto.stream.v1.Stream.AddStreamResponse>(
                   this, METHODID_ADD_STREAM)))
+          .addMethod(
+            getRemoveStreamMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                proto.stream.v1.Stream.RemoveStreamRequest,
+                proto.stream.v1.Stream.RemoveStreamResponse>(
+                  this, METHODID_REMOVE_STREAM)))
           .build();
     }
   }
@@ -178,7 +229,7 @@ public final class StreamServiceGrpc {
    * <pre>
    * A StreamService is used to coordinate with a WebRTC the listing,
    * addition, and removal of registered video streams.
-   * TODO(erd): support removal
+   * TODO(https://github.com/viamrobotics/rdk/issues/509): support removal
    * </pre>
    */
   public static final class StreamServiceStub extends io.grpc.stub.AbstractAsyncStub<StreamServiceStub> {
@@ -214,13 +265,26 @@ public final class StreamServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddStreamMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * RemoveStream requests a particular stream be removed. If the calling client
+     * is the last to be receiving the stream, it will attempt to be stopped to
+     * conserve resources.
+     * </pre>
+     */
+    public void removeStream(proto.stream.v1.Stream.RemoveStreamRequest request,
+        io.grpc.stub.StreamObserver<proto.stream.v1.Stream.RemoveStreamResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveStreamMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
    * <pre>
    * A StreamService is used to coordinate with a WebRTC the listing,
    * addition, and removal of registered video streams.
-   * TODO(erd): support removal
+   * TODO(https://github.com/viamrobotics/rdk/issues/509): support removal
    * </pre>
    */
   public static final class StreamServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<StreamServiceBlockingStub> {
@@ -254,13 +318,25 @@ public final class StreamServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddStreamMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * RemoveStream requests a particular stream be removed. If the calling client
+     * is the last to be receiving the stream, it will attempt to be stopped to
+     * conserve resources.
+     * </pre>
+     */
+    public proto.stream.v1.Stream.RemoveStreamResponse removeStream(proto.stream.v1.Stream.RemoveStreamRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveStreamMethod(), getCallOptions(), request);
+    }
   }
 
   /**
    * <pre>
    * A StreamService is used to coordinate with a WebRTC the listing,
    * addition, and removal of registered video streams.
-   * TODO(erd): support removal
+   * TODO(https://github.com/viamrobotics/rdk/issues/509): support removal
    * </pre>
    */
   public static final class StreamServiceFutureStub extends io.grpc.stub.AbstractFutureStub<StreamServiceFutureStub> {
@@ -296,10 +372,24 @@ public final class StreamServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddStreamMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * RemoveStream requests a particular stream be removed. If the calling client
+     * is the last to be receiving the stream, it will attempt to be stopped to
+     * conserve resources.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<proto.stream.v1.Stream.RemoveStreamResponse> removeStream(
+        proto.stream.v1.Stream.RemoveStreamRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveStreamMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_STREAMS = 0;
   private static final int METHODID_ADD_STREAM = 1;
+  private static final int METHODID_REMOVE_STREAM = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -325,6 +415,10 @@ public final class StreamServiceGrpc {
         case METHODID_ADD_STREAM:
           serviceImpl.addStream((proto.stream.v1.Stream.AddStreamRequest) request,
               (io.grpc.stub.StreamObserver<proto.stream.v1.Stream.AddStreamResponse>) responseObserver);
+          break;
+        case METHODID_REMOVE_STREAM:
+          serviceImpl.removeStream((proto.stream.v1.Stream.RemoveStreamRequest) request,
+              (io.grpc.stub.StreamObserver<proto.stream.v1.Stream.RemoveStreamResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -389,6 +483,7 @@ public final class StreamServiceGrpc {
               .setSchemaDescriptor(new StreamServiceFileDescriptorSupplier())
               .addMethod(getListStreamsMethod())
               .addMethod(getAddStreamMethod())
+              .addMethod(getRemoveStreamMethod())
               .build();
         }
       }

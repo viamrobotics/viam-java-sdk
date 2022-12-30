@@ -110,67 +110,6 @@ public final class Signaling {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ICECandidate(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              candidate_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              sdpMid_ = s;
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000002;
-              sdpmLineIndex_ = input.readUInt32();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              usernameFragment_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_ICECandidate_descriptor;
@@ -360,7 +299,7 @@ public final class Signaling {
       if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, usernameFragment_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -382,7 +321,7 @@ public final class Signaling {
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, usernameFragment_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -414,7 +353,7 @@ public final class Signaling {
         if (!getUsernameFragment()
             .equals(other.getUsernameFragment())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -439,7 +378,7 @@ public final class Signaling {
         hash = (37 * hash) + USERNAME_FRAGMENT_FIELD_NUMBER;
         hash = (53 * hash) + getUsernameFragment().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -561,18 +500,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.ICECandidate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -692,7 +626,7 @@ public final class Signaling {
           usernameFragment_ = other.usernameFragment_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -707,17 +641,50 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.ICECandidate parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                candidate_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                sdpMid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 18
+              case 24: {
+                sdpmLineIndex_ = input.readUInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 24
+              case 34: {
+                usernameFragment_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.ICECandidate) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1035,7 +1002,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ICECandidate(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1114,54 +1092,6 @@ public final class Signaling {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private CallRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sdp_ = s;
-              break;
-            }
-            case 16: {
-
-              disableTrickle_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -1251,7 +1181,7 @@ public final class Signaling {
       if (disableTrickle_ != false) {
         output.writeBool(2, disableTrickle_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1267,7 +1197,7 @@ public final class Signaling {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, disableTrickle_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1286,7 +1216,7 @@ public final class Signaling {
           .equals(other.getSdp())) return false;
       if (getDisableTrickle()
           != other.getDisableTrickle()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1302,7 +1232,7 @@ public final class Signaling {
       hash = (37 * hash) + DISABLE_TRICKLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDisableTrickle());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1423,18 +1353,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.CallRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1526,7 +1451,7 @@ public final class Signaling {
         if (other.getDisableTrickle() != false) {
           setDisableTrickle(other.getDisableTrickle());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1541,17 +1466,40 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.CallRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sdp_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 16: {
+                disableTrickle_ = input.readBool();
+
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.CallRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1712,7 +1660,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CallRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1780,49 +1739,6 @@ public final class Signaling {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private CallResponseInitStage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sdp_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -1892,7 +1808,7 @@ public final class Signaling {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sdp_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sdp_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1904,7 +1820,7 @@ public final class Signaling {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sdp_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sdp_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1921,7 +1837,7 @@ public final class Signaling {
 
       if (!getSdp()
           .equals(other.getSdp())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1934,7 +1850,7 @@ public final class Signaling {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SDP_FIELD_NUMBER;
       hash = (53 * hash) + getSdp().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2056,18 +1972,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2153,7 +2064,7 @@ public final class Signaling {
           sdp_ = other.sdp_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2168,17 +2079,35 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sdp_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.CallResponseInitStage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -2290,7 +2219,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CallResponseInitStage(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2361,56 +2301,6 @@ public final class Signaling {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CallResponseUpdateStage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder subBuilder = null;
-              if (candidate_ != null) {
-                subBuilder = candidate_.toBuilder();
-              }
-              candidate_ = input.readMessage(proto.rpc.webrtc.v1.Signaling.ICECandidate.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(candidate_);
-                candidate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponseUpdateStage_descriptor;
@@ -2467,7 +2357,7 @@ public final class Signaling {
       if (candidate_ != null) {
         output.writeMessage(1, getCandidate());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2480,7 +2370,7 @@ public final class Signaling {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCandidate());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2500,7 +2390,7 @@ public final class Signaling {
         if (!getCandidate()
             .equals(other.getCandidate())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2515,7 +2405,7 @@ public final class Signaling {
         hash = (37 * hash) + CANDIDATE_FIELD_NUMBER;
         hash = (53 * hash) + getCandidate().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2637,18 +2527,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2741,7 +2626,7 @@ public final class Signaling {
         if (other.hasCandidate()) {
           mergeCandidate(other.getCandidate());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2756,17 +2641,37 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCandidateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -2921,7 +2826,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CallResponseUpdateStage(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3020,77 +2936,6 @@ public final class Signaling {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private CallResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
-              break;
-            }
-            case 18: {
-              proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.Builder subBuilder = null;
-              if (stageCase_ == 2) {
-                subBuilder = ((proto.rpc.webrtc.v1.Signaling.CallResponseInitStage) stage_).toBuilder();
-              }
-              stage_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Signaling.CallResponseInitStage) stage_);
-                stage_ = subBuilder.buildPartial();
-              }
-              stageCase_ = 2;
-              break;
-            }
-            case 26: {
-              proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.Builder subBuilder = null;
-              if (stageCase_ == 3) {
-                subBuilder = ((proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) stage_).toBuilder();
-              }
-              stage_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) stage_);
-                stage_ = subBuilder.buildPartial();
-              }
-              stageCase_ = 3;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -3269,7 +3114,7 @@ public final class Signaling {
       if (stageCase_ == 3) {
         output.writeMessage(3, (proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) stage_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3289,7 +3134,7 @@ public final class Signaling {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) stage_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3319,7 +3164,7 @@ public final class Signaling {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3344,7 +3189,7 @@ public final class Signaling {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3465,24 +3310,25 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.CallResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         uuid_ = "";
 
+        if (initBuilder_ != null) {
+          initBuilder_.clear();
+        }
+        if (updateBuilder_ != null) {
+          updateBuilder_.clear();
+        }
         stageCase_ = 0;
         stage_ = null;
         return this;
@@ -3592,7 +3438,7 @@ public final class Signaling {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3607,17 +3453,49 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.CallResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                uuid_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getInitFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                stageCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getUpdateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                stageCase_ = 3;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.CallResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int stageCase_ = 0;
@@ -3786,8 +3664,9 @@ public final class Signaling {
         } else {
           if (stageCase_ == 2) {
             initBuilder_.mergeFrom(value);
+          } else {
+            initBuilder_.setMessage(value);
           }
-          initBuilder_.setMessage(value);
         }
         stageCase_ = 2;
         return this;
@@ -3927,8 +3806,9 @@ public final class Signaling {
         } else {
           if (stageCase_ == 3) {
             updateBuilder_.mergeFrom(value);
+          } else {
+            updateBuilder_.setMessage(value);
           }
-          updateBuilder_.setMessage(value);
         }
         stageCase_ = 3;
         return this;
@@ -4026,7 +3906,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CallResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4136,82 +4027,6 @@ public final class Signaling {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private CallUpdateRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
-              break;
-            }
-            case 18: {
-              proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder subBuilder = null;
-              if (updateCase_ == 2) {
-                subBuilder = ((proto.rpc.webrtc.v1.Signaling.ICECandidate) update_).toBuilder();
-              }
-              update_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Signaling.ICECandidate.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Signaling.ICECandidate) update_);
-                update_ = subBuilder.buildPartial();
-              }
-              updateCase_ = 2;
-              break;
-            }
-            case 24: {
-              update_ = input.readBool();
-              updateCase_ = 3;
-              break;
-            }
-            case 34: {
-              com.google.rpc.Status.Builder subBuilder = null;
-              if (updateCase_ == 4) {
-                subBuilder = ((com.google.rpc.Status) update_).toBuilder();
-              }
-              update_ =
-                  input.readMessage(com.google.rpc.Status.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.google.rpc.Status) update_);
-                update_ = subBuilder.buildPartial();
-              }
-              updateCase_ = 4;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -4417,7 +4232,7 @@ public final class Signaling {
       if (updateCase_ == 4) {
         output.writeMessage(4, (com.google.rpc.Status) update_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4442,7 +4257,7 @@ public final class Signaling {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (com.google.rpc.Status) update_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4476,7 +4291,7 @@ public final class Signaling {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4506,7 +4321,7 @@ public final class Signaling {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4627,24 +4442,25 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.CallUpdateRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         uuid_ = "";
 
+        if (candidateBuilder_ != null) {
+          candidateBuilder_.clear();
+        }
+        if (errorBuilder_ != null) {
+          errorBuilder_.clear();
+        }
         updateCase_ = 0;
         update_ = null;
         return this;
@@ -4761,7 +4577,7 @@ public final class Signaling {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4776,17 +4592,54 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.CallUpdateRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                uuid_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getCandidateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                updateCase_ = 2;
+                break;
+              } // case 18
+              case 24: {
+                update_ = input.readBool();
+                updateCase_ = 3;
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getErrorFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                updateCase_ = 4;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.CallUpdateRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int updateCase_ = 0;
@@ -4955,8 +4808,9 @@ public final class Signaling {
         } else {
           if (updateCase_ == 2) {
             candidateBuilder_.mergeFrom(value);
+          } else {
+            candidateBuilder_.setMessage(value);
           }
-          candidateBuilder_.setMessage(value);
         }
         updateCase_ = 2;
         return this;
@@ -5137,8 +4991,9 @@ public final class Signaling {
         } else {
           if (updateCase_ == 4) {
             errorBuilder_.mergeFrom(value);
+          } else {
+            errorBuilder_.setMessage(value);
           }
-          errorBuilder_.setMessage(value);
         }
         updateCase_ = 4;
         return this;
@@ -5236,7 +5091,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CallUpdateRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -5291,43 +5157,6 @@ public final class Signaling {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private CallUpdateResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallUpdateResponse_descriptor;
@@ -5355,7 +5184,7 @@ public final class Signaling {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -5364,7 +5193,7 @@ public final class Signaling {
       if (size != -1) return size;
 
       size = 0;
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -5379,7 +5208,7 @@ public final class Signaling {
       }
       proto.rpc.webrtc.v1.Signaling.CallUpdateResponse other = (proto.rpc.webrtc.v1.Signaling.CallUpdateResponse) obj;
 
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -5390,7 +5219,7 @@ public final class Signaling {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -5511,18 +5340,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.CallUpdateResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5601,7 +5425,7 @@ public final class Signaling {
 
       public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.CallUpdateResponse other) {
         if (other == proto.rpc.webrtc.v1.Signaling.CallUpdateResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -5616,17 +5440,30 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.CallUpdateResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.CallUpdateResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       @java.lang.Override
@@ -5662,7 +5499,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CallUpdateResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -5768,68 +5616,6 @@ public final class Signaling {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private ICEServer(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                urls_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              urls_.add(s);
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              username_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              credential_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          urls_ = urls_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -5978,7 +5764,7 @@ public final class Signaling {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(credential_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, credential_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -6001,7 +5787,7 @@ public final class Signaling {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(credential_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, credential_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -6022,7 +5808,7 @@ public final class Signaling {
           .equals(other.getUsername())) return false;
       if (!getCredential()
           .equals(other.getCredential())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -6041,7 +5827,7 @@ public final class Signaling {
       hash = (53 * hash) + getUsername().hashCode();
       hash = (37 * hash) + CREDENTIAL_FIELD_NUMBER;
       hash = (53 * hash) + getCredential().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -6162,18 +5948,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.ICEServer.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6284,7 +6065,7 @@ public final class Signaling {
           credential_ = other.credential_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -6299,17 +6080,46 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.ICEServer parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureUrlsIsMutable();
+                urls_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                username_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                credential_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.ICEServer) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -6608,7 +6418,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ICEServer(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -6699,61 +6520,6 @@ public final class Signaling {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private WebRTCConfig(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                additionalIceServers_ = new java.util.ArrayList<proto.rpc.webrtc.v1.Signaling.ICEServer>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              additionalIceServers_.add(
-                  input.readMessage(proto.rpc.webrtc.v1.Signaling.ICEServer.parser(), extensionRegistry));
-              break;
-            }
-            case 16: {
-
-              disableTrickle_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          additionalIceServers_ = java.util.Collections.unmodifiableList(additionalIceServers_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_WebRTCConfig_descriptor;
@@ -6843,7 +6609,7 @@ public final class Signaling {
       if (disableTrickle_ != false) {
         output.writeBool(2, disableTrickle_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -6860,7 +6626,7 @@ public final class Signaling {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, disableTrickle_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -6879,7 +6645,7 @@ public final class Signaling {
           .equals(other.getAdditionalIceServersList())) return false;
       if (getDisableTrickle()
           != other.getDisableTrickle()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -6897,7 +6663,7 @@ public final class Signaling {
       hash = (37 * hash) + DISABLE_TRICKLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getDisableTrickle());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7018,29 +6784,24 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.WebRTCConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAdditionalIceServersFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (additionalIceServersBuilder_ == null) {
           additionalIceServers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          additionalIceServers_ = null;
           additionalIceServersBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         disableTrickle_ = false;
 
         return this;
@@ -7157,7 +6918,7 @@ public final class Signaling {
         if (other.getDisableTrickle() != false) {
           setDisableTrickle(other.getDisableTrickle());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -7172,17 +6933,48 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.WebRTCConfig parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                proto.rpc.webrtc.v1.Signaling.ICEServer m =
+                    input.readMessage(
+                        proto.rpc.webrtc.v1.Signaling.ICEServer.parser(),
+                        extensionRegistry);
+                if (additionalIceServersBuilder_ == null) {
+                  ensureAdditionalIceServersIsMutable();
+                  additionalIceServers_.add(m);
+                } else {
+                  additionalIceServersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 16: {
+                disableTrickle_ = input.readBool();
+
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.WebRTCConfig) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -7505,7 +7297,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new WebRTCConfig(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -7555,6 +7358,21 @@ public final class Signaling {
      * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
      */
     proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder getOptionalConfigOrBuilder();
+
+    /**
+     * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+     * @return Whether the deadline field is set.
+     */
+    boolean hasDeadline();
+    /**
+     * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+     * @return The deadline.
+     */
+    com.google.protobuf.Timestamp getDeadline();
+    /**
+     * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDeadlineOrBuilder();
   }
   /**
    * <pre>
@@ -7589,62 +7407,6 @@ public final class Signaling {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AnswerRequestInitStage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sdp_ = s;
-              break;
-            }
-            case 18: {
-              proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder subBuilder = null;
-              if (optionalConfig_ != null) {
-                subBuilder = optionalConfig_.toBuilder();
-              }
-              optionalConfig_ = input.readMessage(proto.rpc.webrtc.v1.Signaling.WebRTCConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(optionalConfig_);
-                optionalConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestInitStage_descriptor;
@@ -7658,6 +7420,7 @@ public final class Signaling {
               proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.class, proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.Builder.class);
     }
 
+    private int bitField0_;
     public static final int SDP_FIELD_NUMBER = 1;
     private volatile java.lang.Object sdp_;
     /**
@@ -7722,6 +7485,32 @@ public final class Signaling {
       return getOptionalConfig();
     }
 
+    public static final int DEADLINE_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp deadline_;
+    /**
+     * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+     * @return Whether the deadline field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeadline() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+     * @return The deadline.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDeadline() {
+      return deadline_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deadline_;
+    }
+    /**
+     * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getDeadlineOrBuilder() {
+      return deadline_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deadline_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7742,7 +7531,10 @@ public final class Signaling {
       if (optionalConfig_ != null) {
         output.writeMessage(2, getOptionalConfig());
       }
-      unknownFields.writeTo(output);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(3, getDeadline());
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -7758,7 +7550,11 @@ public final class Signaling {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getOptionalConfig());
       }
-      size += unknownFields.getSerializedSize();
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDeadline());
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -7780,7 +7576,12 @@ public final class Signaling {
         if (!getOptionalConfig()
             .equals(other.getOptionalConfig())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (hasDeadline() != other.hasDeadline()) return false;
+      if (hasDeadline()) {
+        if (!getDeadline()
+            .equals(other.getDeadline())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -7797,7 +7598,11 @@ public final class Signaling {
         hash = (37 * hash) + OPTIONAL_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getOptionalConfig().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      if (hasDeadline()) {
+        hash = (37 * hash) + DEADLINE_FIELD_NUMBER;
+        hash = (53 * hash) + getDeadline().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7930,6 +7735,7 @@ public final class Signaling {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getDeadlineFieldBuilder();
         }
       }
       @java.lang.Override
@@ -7943,6 +7749,12 @@ public final class Signaling {
           optionalConfig_ = null;
           optionalConfigBuilder_ = null;
         }
+        if (deadlineBuilder_ == null) {
+          deadline_ = null;
+        } else {
+          deadlineBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -7969,12 +7781,23 @@ public final class Signaling {
       @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage buildPartial() {
         proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage result = new proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.sdp_ = sdp_;
         if (optionalConfigBuilder_ == null) {
           result.optionalConfig_ = optionalConfig_;
         } else {
           result.optionalConfig_ = optionalConfigBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          if (deadlineBuilder_ == null) {
+            result.deadline_ = deadline_;
+          } else {
+            result.deadline_ = deadlineBuilder_.build();
+          }
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -8030,7 +7853,10 @@ public final class Signaling {
         if (other.hasOptionalConfig()) {
           mergeOptionalConfig(other.getOptionalConfig());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (other.hasDeadline()) {
+          mergeDeadline(other.getDeadline());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -8045,19 +7871,52 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sdp_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getOptionalConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDeadlineFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object sdp_ = "";
       /**
@@ -8253,6 +8112,126 @@ public final class Signaling {
         }
         return optionalConfigBuilder_;
       }
+
+      private com.google.protobuf.Timestamp deadline_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deadlineBuilder_;
+      /**
+       * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+       * @return Whether the deadline field is set.
+       */
+      public boolean hasDeadline() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+       * @return The deadline.
+       */
+      public com.google.protobuf.Timestamp getDeadline() {
+        if (deadlineBuilder_ == null) {
+          return deadline_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deadline_;
+        } else {
+          return deadlineBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+       */
+      public Builder setDeadline(com.google.protobuf.Timestamp value) {
+        if (deadlineBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deadline_ = value;
+          onChanged();
+        } else {
+          deadlineBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+       */
+      public Builder setDeadline(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (deadlineBuilder_ == null) {
+          deadline_ = builderForValue.build();
+          onChanged();
+        } else {
+          deadlineBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+       */
+      public Builder mergeDeadline(com.google.protobuf.Timestamp value) {
+        if (deadlineBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+              deadline_ != null &&
+              deadline_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            deadline_ =
+              com.google.protobuf.Timestamp.newBuilder(deadline_).mergeFrom(value).buildPartial();
+          } else {
+            deadline_ = value;
+          }
+          onChanged();
+        } else {
+          deadlineBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+       */
+      public Builder clearDeadline() {
+        if (deadlineBuilder_ == null) {
+          deadline_ = null;
+          onChanged();
+        } else {
+          deadlineBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDeadlineBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDeadlineFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDeadlineOrBuilder() {
+        if (deadlineBuilder_ != null) {
+          return deadlineBuilder_.getMessageOrBuilder();
+        } else {
+          return deadline_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : deadline_;
+        }
+      }
+      /**
+       * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDeadlineFieldBuilder() {
+        if (deadlineBuilder_ == null) {
+          deadlineBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDeadline(),
+                  getParentForChildren(),
+                  isClean());
+          deadline_ = null;
+        }
+        return deadlineBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8286,7 +8265,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AnswerRequestInitStage(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -8357,56 +8347,6 @@ public final class Signaling {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AnswerRequestUpdateStage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder subBuilder = null;
-              if (candidate_ != null) {
-                subBuilder = candidate_.toBuilder();
-              }
-              candidate_ = input.readMessage(proto.rpc.webrtc.v1.Signaling.ICECandidate.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(candidate_);
-                candidate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestUpdateStage_descriptor;
@@ -8463,7 +8403,7 @@ public final class Signaling {
       if (candidate_ != null) {
         output.writeMessage(1, getCandidate());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -8476,7 +8416,7 @@ public final class Signaling {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCandidate());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -8496,7 +8436,7 @@ public final class Signaling {
         if (!getCandidate()
             .equals(other.getCandidate())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -8511,7 +8451,7 @@ public final class Signaling {
         hash = (37 * hash) + CANDIDATE_FIELD_NUMBER;
         hash = (53 * hash) + getCandidate().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -8633,18 +8573,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8737,7 +8672,7 @@ public final class Signaling {
         if (other.hasCandidate()) {
           mergeCandidate(other.getCandidate());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -8752,17 +8687,37 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCandidateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -8917,7 +8872,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AnswerRequestUpdateStage(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -8972,43 +8938,6 @@ public final class Signaling {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AnswerRequestDoneStage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestDoneStage_descriptor;
@@ -9036,7 +8965,7 @@ public final class Signaling {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -9045,7 +8974,7 @@ public final class Signaling {
       if (size != -1) return size;
 
       size = 0;
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -9060,7 +8989,7 @@ public final class Signaling {
       }
       proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage other = (proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) obj;
 
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -9071,7 +9000,7 @@ public final class Signaling {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -9192,18 +9121,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9282,7 +9206,7 @@ public final class Signaling {
 
       public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage other) {
         if (other == proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -9297,17 +9221,30 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       @java.lang.Override
@@ -9343,7 +9280,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AnswerRequestDoneStage(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -9413,56 +9361,6 @@ public final class Signaling {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AnswerRequestErrorStage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.rpc.Status.Builder subBuilder = null;
-              if (status_ != null) {
-                subBuilder = status_.toBuilder();
-              }
-              status_ = input.readMessage(com.google.rpc.Status.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(status_);
-                status_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestErrorStage_descriptor;
@@ -9519,7 +9417,7 @@ public final class Signaling {
       if (status_ != null) {
         output.writeMessage(1, getStatus());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -9532,7 +9430,7 @@ public final class Signaling {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStatus());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -9552,7 +9450,7 @@ public final class Signaling {
         if (!getStatus()
             .equals(other.getStatus())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -9567,7 +9465,7 @@ public final class Signaling {
         hash = (37 * hash) + STATUS_FIELD_NUMBER;
         hash = (53 * hash) + getStatus().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -9688,18 +9586,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9792,7 +9685,7 @@ public final class Signaling {
         if (other.hasStatus()) {
           mergeStatus(other.getStatus());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -9807,17 +9700,37 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getStatusFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -9972,7 +9885,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AnswerRequestErrorStage(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -10126,105 +10050,6 @@ public final class Signaling {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private AnswerRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
-              break;
-            }
-            case 18: {
-              proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.Builder subBuilder = null;
-              if (stageCase_ == 2) {
-                subBuilder = ((proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage) stage_).toBuilder();
-              }
-              stage_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage) stage_);
-                stage_ = subBuilder.buildPartial();
-              }
-              stageCase_ = 2;
-              break;
-            }
-            case 26: {
-              proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.Builder subBuilder = null;
-              if (stageCase_ == 3) {
-                subBuilder = ((proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage) stage_).toBuilder();
-              }
-              stage_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage) stage_);
-                stage_ = subBuilder.buildPartial();
-              }
-              stageCase_ = 3;
-              break;
-            }
-            case 34: {
-              proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.Builder subBuilder = null;
-              if (stageCase_ == 4) {
-                subBuilder = ((proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) stage_).toBuilder();
-              }
-              stage_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) stage_);
-                stage_ = subBuilder.buildPartial();
-              }
-              stageCase_ = 4;
-              break;
-            }
-            case 42: {
-              proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.Builder subBuilder = null;
-              if (stageCase_ == 5) {
-                subBuilder = ((proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) stage_).toBuilder();
-              }
-              stage_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) stage_);
-                stage_ = subBuilder.buildPartial();
-              }
-              stageCase_ = 5;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -10499,7 +10324,7 @@ public final class Signaling {
       if (stageCase_ == 5) {
         output.writeMessage(5, (proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) stage_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -10527,7 +10352,7 @@ public final class Signaling {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, (proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) stage_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -10565,7 +10390,7 @@ public final class Signaling {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -10598,7 +10423,7 @@ public final class Signaling {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -10720,24 +10545,31 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         uuid_ = "";
 
+        if (initBuilder_ != null) {
+          initBuilder_.clear();
+        }
+        if (updateBuilder_ != null) {
+          updateBuilder_.clear();
+        }
+        if (doneBuilder_ != null) {
+          doneBuilder_.clear();
+        }
+        if (errorBuilder_ != null) {
+          errorBuilder_.clear();
+        }
         stageCase_ = 0;
         stage_ = null;
         return this;
@@ -10869,7 +10701,7 @@ public final class Signaling {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -10884,17 +10716,63 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                uuid_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getInitFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                stageCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getUpdateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                stageCase_ = 3;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getDoneFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                stageCase_ = 4;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getErrorFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                stageCase_ = 5;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.AnswerRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int stageCase_ = 0;
@@ -11063,8 +10941,9 @@ public final class Signaling {
         } else {
           if (stageCase_ == 2) {
             initBuilder_.mergeFrom(value);
+          } else {
+            initBuilder_.setMessage(value);
           }
-          initBuilder_.setMessage(value);
         }
         stageCase_ = 2;
         return this;
@@ -11204,8 +11083,9 @@ public final class Signaling {
         } else {
           if (stageCase_ == 3) {
             updateBuilder_.mergeFrom(value);
+          } else {
+            updateBuilder_.setMessage(value);
           }
-          updateBuilder_.setMessage(value);
         }
         stageCase_ = 3;
         return this;
@@ -11365,8 +11245,9 @@ public final class Signaling {
         } else {
           if (stageCase_ == 4) {
             doneBuilder_.mergeFrom(value);
+          } else {
+            doneBuilder_.setMessage(value);
           }
-          doneBuilder_.setMessage(value);
         }
         stageCase_ = 4;
         return this;
@@ -11542,8 +11423,9 @@ public final class Signaling {
         } else {
           if (stageCase_ == 5) {
             errorBuilder_.mergeFrom(value);
+          } else {
+            errorBuilder_.setMessage(value);
           }
-          errorBuilder_.setMessage(value);
         }
         stageCase_ = 5;
         return this;
@@ -11657,7 +11539,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AnswerRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -11725,49 +11618,6 @@ public final class Signaling {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private AnswerResponseInitStage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sdp_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -11837,7 +11687,7 @@ public final class Signaling {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sdp_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sdp_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -11849,7 +11699,7 @@ public final class Signaling {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sdp_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sdp_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -11866,7 +11716,7 @@ public final class Signaling {
 
       if (!getSdp()
           .equals(other.getSdp())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -11879,7 +11729,7 @@ public final class Signaling {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + SDP_FIELD_NUMBER;
       hash = (53 * hash) + getSdp().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -12001,18 +11851,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12098,7 +11943,7 @@ public final class Signaling {
           sdp_ = other.sdp_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -12113,17 +11958,35 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                sdp_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -12235,7 +12098,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AnswerResponseInitStage(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -12306,56 +12180,6 @@ public final class Signaling {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AnswerResponseUpdateStage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder subBuilder = null;
-              if (candidate_ != null) {
-                subBuilder = candidate_.toBuilder();
-              }
-              candidate_ = input.readMessage(proto.rpc.webrtc.v1.Signaling.ICECandidate.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(candidate_);
-                candidate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseUpdateStage_descriptor;
@@ -12412,7 +12236,7 @@ public final class Signaling {
       if (candidate_ != null) {
         output.writeMessage(1, getCandidate());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -12425,7 +12249,7 @@ public final class Signaling {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getCandidate());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -12445,7 +12269,7 @@ public final class Signaling {
         if (!getCandidate()
             .equals(other.getCandidate())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -12460,7 +12284,7 @@ public final class Signaling {
         hash = (37 * hash) + CANDIDATE_FIELD_NUMBER;
         hash = (53 * hash) + getCandidate().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -12582,18 +12406,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -12686,7 +12505,7 @@ public final class Signaling {
         if (other.hasCandidate()) {
           mergeCandidate(other.getCandidate());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -12701,17 +12520,37 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getCandidateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -12866,7 +12705,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AnswerResponseUpdateStage(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -12921,43 +12771,6 @@ public final class Signaling {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AnswerResponseDoneStage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseDoneStage_descriptor;
@@ -12985,7 +12798,7 @@ public final class Signaling {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -12994,7 +12807,7 @@ public final class Signaling {
       if (size != -1) return size;
 
       size = 0;
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -13009,7 +12822,7 @@ public final class Signaling {
       }
       proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage other = (proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) obj;
 
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -13020,7 +12833,7 @@ public final class Signaling {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -13141,18 +12954,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -13231,7 +13039,7 @@ public final class Signaling {
 
       public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage other) {
         if (other == proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -13246,17 +13054,30 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       @java.lang.Override
@@ -13292,7 +13113,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AnswerResponseDoneStage(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -13362,56 +13194,6 @@ public final class Signaling {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AnswerResponseErrorStage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.rpc.Status.Builder subBuilder = null;
-              if (status_ != null) {
-                subBuilder = status_.toBuilder();
-              }
-              status_ = input.readMessage(com.google.rpc.Status.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(status_);
-                status_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseErrorStage_descriptor;
@@ -13468,7 +13250,7 @@ public final class Signaling {
       if (status_ != null) {
         output.writeMessage(1, getStatus());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -13481,7 +13263,7 @@ public final class Signaling {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getStatus());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -13501,7 +13283,7 @@ public final class Signaling {
         if (!getStatus()
             .equals(other.getStatus())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -13516,7 +13298,7 @@ public final class Signaling {
         hash = (37 * hash) + STATUS_FIELD_NUMBER;
         hash = (53 * hash) + getStatus().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -13637,18 +13419,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -13741,7 +13518,7 @@ public final class Signaling {
         if (other.hasStatus()) {
           mergeStatus(other.getStatus());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -13756,17 +13533,37 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getStatusFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -13921,7 +13718,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AnswerResponseErrorStage(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -14074,105 +13882,6 @@ public final class Signaling {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private AnswerResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
-              break;
-            }
-            case 18: {
-              proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.Builder subBuilder = null;
-              if (stageCase_ == 2) {
-                subBuilder = ((proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage) stage_).toBuilder();
-              }
-              stage_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage) stage_);
-                stage_ = subBuilder.buildPartial();
-              }
-              stageCase_ = 2;
-              break;
-            }
-            case 26: {
-              proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.Builder subBuilder = null;
-              if (stageCase_ == 3) {
-                subBuilder = ((proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage) stage_).toBuilder();
-              }
-              stage_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage) stage_);
-                stage_ = subBuilder.buildPartial();
-              }
-              stageCase_ = 3;
-              break;
-            }
-            case 34: {
-              proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.Builder subBuilder = null;
-              if (stageCase_ == 4) {
-                subBuilder = ((proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) stage_).toBuilder();
-              }
-              stage_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) stage_);
-                stage_ = subBuilder.buildPartial();
-              }
-              stageCase_ = 4;
-              break;
-            }
-            case 42: {
-              proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.Builder subBuilder = null;
-              if (stageCase_ == 5) {
-                subBuilder = ((proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) stage_).toBuilder();
-              }
-              stage_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) stage_);
-                stage_ = subBuilder.buildPartial();
-              }
-              stageCase_ = 5;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -14447,7 +14156,7 @@ public final class Signaling {
       if (stageCase_ == 5) {
         output.writeMessage(5, (proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) stage_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -14475,7 +14184,7 @@ public final class Signaling {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, (proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) stage_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -14513,7 +14222,7 @@ public final class Signaling {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -14546,7 +14255,7 @@ public final class Signaling {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -14667,24 +14376,31 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         uuid_ = "";
 
+        if (initBuilder_ != null) {
+          initBuilder_.clear();
+        }
+        if (updateBuilder_ != null) {
+          updateBuilder_.clear();
+        }
+        if (doneBuilder_ != null) {
+          doneBuilder_.clear();
+        }
+        if (errorBuilder_ != null) {
+          errorBuilder_.clear();
+        }
         stageCase_ = 0;
         stage_ = null;
         return this;
@@ -14816,7 +14532,7 @@ public final class Signaling {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -14831,17 +14547,63 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                uuid_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getInitFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                stageCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getUpdateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                stageCase_ = 3;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getDoneFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                stageCase_ = 4;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getErrorFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                stageCase_ = 5;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.AnswerResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int stageCase_ = 0;
@@ -15010,8 +14772,9 @@ public final class Signaling {
         } else {
           if (stageCase_ == 2) {
             initBuilder_.mergeFrom(value);
+          } else {
+            initBuilder_.setMessage(value);
           }
-          initBuilder_.setMessage(value);
         }
         stageCase_ = 2;
         return this;
@@ -15151,8 +14914,9 @@ public final class Signaling {
         } else {
           if (stageCase_ == 3) {
             updateBuilder_.mergeFrom(value);
+          } else {
+            updateBuilder_.setMessage(value);
           }
-          updateBuilder_.setMessage(value);
         }
         stageCase_ = 3;
         return this;
@@ -15312,8 +15076,9 @@ public final class Signaling {
         } else {
           if (stageCase_ == 4) {
             doneBuilder_.mergeFrom(value);
+          } else {
+            doneBuilder_.setMessage(value);
           }
-          doneBuilder_.setMessage(value);
         }
         stageCase_ = 4;
         return this;
@@ -15489,8 +15254,9 @@ public final class Signaling {
         } else {
           if (stageCase_ == 5) {
             errorBuilder_.mergeFrom(value);
+          } else {
+            errorBuilder_.setMessage(value);
           }
-          errorBuilder_.setMessage(value);
         }
         stageCase_ = 5;
         return this;
@@ -15604,7 +15370,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AnswerResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -15660,43 +15437,6 @@ public final class Signaling {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private OptionalWebRTCConfigRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigRequest_descriptor;
@@ -15724,7 +15464,7 @@ public final class Signaling {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -15733,7 +15473,7 @@ public final class Signaling {
       if (size != -1) return size;
 
       size = 0;
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -15748,7 +15488,7 @@ public final class Signaling {
       }
       proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest other = (proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest) obj;
 
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -15759,7 +15499,7 @@ public final class Signaling {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -15881,18 +15621,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -15971,7 +15706,7 @@ public final class Signaling {
 
       public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest other) {
         if (other == proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -15986,17 +15721,30 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       @java.lang.Override
@@ -16032,7 +15780,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new OptionalWebRTCConfigRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -16103,56 +15862,6 @@ public final class Signaling {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private OptionalWebRTCConfigResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder subBuilder = null;
-              if (config_ != null) {
-                subBuilder = config_.toBuilder();
-              }
-              config_ = input.readMessage(proto.rpc.webrtc.v1.Signaling.WebRTCConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(config_);
-                config_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigResponse_descriptor;
@@ -16209,7 +15918,7 @@ public final class Signaling {
       if (config_ != null) {
         output.writeMessage(1, getConfig());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -16222,7 +15931,7 @@ public final class Signaling {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getConfig());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -16242,7 +15951,7 @@ public final class Signaling {
         if (!getConfig()
             .equals(other.getConfig())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -16257,7 +15966,7 @@ public final class Signaling {
         hash = (37 * hash) + CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getConfig().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -16379,18 +16088,13 @@ public final class Signaling {
 
       // Construct using proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -16483,7 +16187,7 @@ public final class Signaling {
         if (other.hasConfig()) {
           mergeConfig(other.getConfig());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -16498,17 +16202,37 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -16663,7 +16387,18 @@ public final class Signaling {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new OptionalWebRTCConfigResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -16799,86 +16534,90 @@ public final class Signaling {
     java.lang.String[] descriptorData = {
       "\n#proto/rpc/webrtc/v1/signaling.proto\022\023p" +
       "roto.rpc.webrtc.v1\032\034google/api/annotatio" +
-      "ns.proto\032\027google/rpc/status.proto\"\337\001\n\014IC" +
-      "ECandidate\022\034\n\tcandidate\030\001 \001(\tR\tcandidate" +
-      "\022\034\n\007sdp_mid\030\002 \001(\tH\000R\006sdpMid\210\001\001\022+\n\017sdpm_l" +
-      "ine_index\030\003 \001(\rH\001R\rsdpmLineIndex\210\001\001\0220\n\021u" +
-      "sername_fragment\030\004 \001(\tH\002R\020usernameFragme" +
-      "nt\210\001\001B\n\n\010_sdp_midB\022\n\020_sdpm_line_indexB\024\n" +
-      "\022_username_fragment\"H\n\013CallRequest\022\020\n\003sd" +
-      "p\030\001 \001(\tR\003sdp\022\'\n\017disable_trickle\030\002 \001(\010R\016d" +
-      "isableTrickle\")\n\025CallResponseInitStage\022\020" +
-      "\n\003sdp\030\001 \001(\tR\003sdp\"Z\n\027CallResponseUpdateSt" +
-      "age\022?\n\tcandidate\030\001 \001(\0132!.proto.rpc.webrt" +
-      "c.v1.ICECandidateR\tcandidate\"\265\001\n\014CallRes" +
-      "ponse\022\022\n\004uuid\030\001 \001(\tR\004uuid\022@\n\004init\030\002 \001(\0132" +
-      "*.proto.rpc.webrtc.v1.CallResponseInitSt" +
-      "ageH\000R\004init\022F\n\006update\030\003 \001(\0132,.proto.rpc." +
-      "webrtc.v1.CallResponseUpdateStageH\000R\006upd" +
-      "ateB\007\n\005stage\"\266\001\n\021CallUpdateRequest\022\022\n\004uu" +
-      "id\030\001 \001(\tR\004uuid\022A\n\tcandidate\030\002 \001(\0132!.prot" +
-      "o.rpc.webrtc.v1.ICECandidateH\000R\tcandidat" +
-      "e\022\024\n\004done\030\003 \001(\010H\000R\004done\022*\n\005error\030\004 \001(\0132\022" +
-      ".google.rpc.StatusH\000R\005errorB\010\n\006update\"\024\n" +
-      "\022CallUpdateResponse\"[\n\tICEServer\022\022\n\004urls" +
-      "\030\001 \003(\tR\004urls\022\032\n\010username\030\002 \001(\tR\010username" +
-      "\022\036\n\ncredential\030\003 \001(\tR\ncredential\"\215\001\n\014Web" +
-      "RTCConfig\022T\n\026additional_ice_servers\030\001 \003(" +
-      "\0132\036.proto.rpc.webrtc.v1.ICEServerR\024addit" +
-      "ionalIceServers\022\'\n\017disable_trickle\030\002 \001(\010" +
-      "R\016disableTrickle\"v\n\026AnswerRequestInitSta" +
-      "ge\022\020\n\003sdp\030\001 \001(\tR\003sdp\022J\n\017optional_config\030" +
-      "\002 \001(\0132!.proto.rpc.webrtc.v1.WebRTCConfig" +
-      "R\016optionalConfig\"[\n\030AnswerRequestUpdateS" +
-      "tage\022?\n\tcandidate\030\001 \001(\0132!.proto.rpc.webr" +
-      "tc.v1.ICECandidateR\tcandidate\"\030\n\026AnswerR" +
-      "equestDoneStage\"E\n\027AnswerRequestErrorSta" +
-      "ge\022*\n\006status\030\001 \001(\0132\022.google.rpc.StatusR\006" +
-      "status\"\301\002\n\rAnswerRequest\022\022\n\004uuid\030\001 \001(\tR\004" +
-      "uuid\022A\n\004init\030\002 \001(\0132+.proto.rpc.webrtc.v1" +
-      ".AnswerRequestInitStageH\000R\004init\022G\n\006updat" +
-      "e\030\003 \001(\0132-.proto.rpc.webrtc.v1.AnswerRequ" +
-      "estUpdateStageH\000R\006update\022A\n\004done\030\004 \001(\0132+" +
-      ".proto.rpc.webrtc.v1.AnswerRequestDoneSt" +
-      "ageH\000R\004done\022D\n\005error\030\005 \001(\0132,.proto.rpc.w" +
-      "ebrtc.v1.AnswerRequestErrorStageH\000R\005erro" +
-      "rB\007\n\005stage\"+\n\027AnswerResponseInitStage\022\020\n" +
-      "\003sdp\030\001 \001(\tR\003sdp\"\\\n\031AnswerResponseUpdateS" +
-      "tage\022?\n\tcandidate\030\001 \001(\0132!.proto.rpc.webr" +
-      "tc.v1.ICECandidateR\tcandidate\"\031\n\027AnswerR" +
-      "esponseDoneStage\"F\n\030AnswerResponseErrorS" +
-      "tage\022*\n\006status\030\001 \001(\0132\022.google.rpc.Status" +
-      "R\006status\"\306\002\n\016AnswerResponse\022\022\n\004uuid\030\001 \001(" +
-      "\tR\004uuid\022B\n\004init\030\002 \001(\0132,.proto.rpc.webrtc" +
-      ".v1.AnswerResponseInitStageH\000R\004init\022H\n\006u" +
-      "pdate\030\003 \001(\0132..proto.rpc.webrtc.v1.Answer" +
-      "ResponseUpdateStageH\000R\006update\022B\n\004done\030\004 " +
-      "\001(\0132,.proto.rpc.webrtc.v1.AnswerResponse" +
-      "DoneStageH\000R\004done\022E\n\005error\030\005 \001(\0132-.proto" +
-      ".rpc.webrtc.v1.AnswerResponseErrorStageH" +
-      "\000R\005errorB\007\n\005stage\"\035\n\033OptionalWebRTCConfi" +
-      "gRequest\"Y\n\034OptionalWebRTCConfigResponse" +
-      "\0229\n\006config\030\001 \001(\0132!.proto.rpc.webrtc.v1.W" +
-      "ebRTCConfigR\006config2\206\004\n\020SignalingService" +
-      "\022j\n\004Call\022 .proto.rpc.webrtc.v1.CallReque" +
-      "st\032!.proto.rpc.webrtc.v1.CallResponse\"\033\202" +
-      "\323\344\223\002\025\"\023/rpc/webrtc/v1/call0\001\022\201\001\n\nCallUpd" +
-      "ate\022&.proto.rpc.webrtc.v1.CallUpdateRequ" +
-      "est\032\'.proto.rpc.webrtc.v1.CallUpdateResp" +
-      "onse\"\"\202\323\344\223\002\034\032\032/rpc/webrtc/v1/call_update" +
-      "\022U\n\006Answer\022#.proto.rpc.webrtc.v1.AnswerR" +
-      "esponse\032\".proto.rpc.webrtc.v1.AnswerRequ" +
-      "est(\0010\001\022\252\001\n\024OptionalWebRTCConfig\0220.proto" +
-      ".rpc.webrtc.v1.OptionalWebRTCConfigReque" +
-      "st\0321.proto.rpc.webrtc.v1.OptionalWebRTCC" +
-      "onfigResponse\"-\202\323\344\223\002\'\022%/rpc/webrtc/v1/op" +
-      "tional_webrtc_configB\'Z%go.viam.com/util" +
-      "s/proto/rpc/webrtc/v1b\006proto3"
+      "ns.proto\032\037google/protobuf/timestamp.prot" +
+      "o\032\027google/rpc/status.proto\"\337\001\n\014ICECandid" +
+      "ate\022\034\n\tcandidate\030\001 \001(\tR\tcandidate\022\034\n\007sdp" +
+      "_mid\030\002 \001(\tH\000R\006sdpMid\210\001\001\022+\n\017sdpm_line_ind" +
+      "ex\030\003 \001(\rH\001R\rsdpmLineIndex\210\001\001\0220\n\021username" +
+      "_fragment\030\004 \001(\tH\002R\020usernameFragment\210\001\001B\n" +
+      "\n\010_sdp_midB\022\n\020_sdpm_line_indexB\024\n\022_usern" +
+      "ame_fragment\"H\n\013CallRequest\022\020\n\003sdp\030\001 \001(\t" +
+      "R\003sdp\022\'\n\017disable_trickle\030\002 \001(\010R\016disableT" +
+      "rickle\")\n\025CallResponseInitStage\022\020\n\003sdp\030\001" +
+      " \001(\tR\003sdp\"Z\n\027CallResponseUpdateStage\022?\n\t" +
+      "candidate\030\001 \001(\0132!.proto.rpc.webrtc.v1.IC" +
+      "ECandidateR\tcandidate\"\265\001\n\014CallResponse\022\022" +
+      "\n\004uuid\030\001 \001(\tR\004uuid\022@\n\004init\030\002 \001(\0132*.proto" +
+      ".rpc.webrtc.v1.CallResponseInitStageH\000R\004" +
+      "init\022F\n\006update\030\003 \001(\0132,.proto.rpc.webrtc." +
+      "v1.CallResponseUpdateStageH\000R\006updateB\007\n\005" +
+      "stage\"\266\001\n\021CallUpdateRequest\022\022\n\004uuid\030\001 \001(" +
+      "\tR\004uuid\022A\n\tcandidate\030\002 \001(\0132!.proto.rpc.w" +
+      "ebrtc.v1.ICECandidateH\000R\tcandidate\022\024\n\004do" +
+      "ne\030\003 \001(\010H\000R\004done\022*\n\005error\030\004 \001(\0132\022.google" +
+      ".rpc.StatusH\000R\005errorB\010\n\006update\"\024\n\022CallUp" +
+      "dateResponse\"[\n\tICEServer\022\022\n\004urls\030\001 \003(\tR" +
+      "\004urls\022\032\n\010username\030\002 \001(\tR\010username\022\036\n\ncre" +
+      "dential\030\003 \001(\tR\ncredential\"\215\001\n\014WebRTCConf" +
+      "ig\022T\n\026additional_ice_servers\030\001 \003(\0132\036.pro" +
+      "to.rpc.webrtc.v1.ICEServerR\024additionalIc" +
+      "eServers\022\'\n\017disable_trickle\030\002 \001(\010R\016disab" +
+      "leTrickle\"\300\001\n\026AnswerRequestInitStage\022\020\n\003" +
+      "sdp\030\001 \001(\tR\003sdp\022J\n\017optional_config\030\002 \001(\0132" +
+      "!.proto.rpc.webrtc.v1.WebRTCConfigR\016opti" +
+      "onalConfig\022;\n\010deadline\030\003 \001(\0132\032.google.pr" +
+      "otobuf.TimestampH\000R\010deadline\210\001\001B\013\n\t_dead" +
+      "line\"[\n\030AnswerRequestUpdateStage\022?\n\tcand" +
+      "idate\030\001 \001(\0132!.proto.rpc.webrtc.v1.ICECan" +
+      "didateR\tcandidate\"\030\n\026AnswerRequestDoneSt" +
+      "age\"E\n\027AnswerRequestErrorStage\022*\n\006status" +
+      "\030\001 \001(\0132\022.google.rpc.StatusR\006status\"\301\002\n\rA" +
+      "nswerRequest\022\022\n\004uuid\030\001 \001(\tR\004uuid\022A\n\004init" +
+      "\030\002 \001(\0132+.proto.rpc.webrtc.v1.AnswerReque" +
+      "stInitStageH\000R\004init\022G\n\006update\030\003 \001(\0132-.pr" +
+      "oto.rpc.webrtc.v1.AnswerRequestUpdateSta" +
+      "geH\000R\006update\022A\n\004done\030\004 \001(\0132+.proto.rpc.w" +
+      "ebrtc.v1.AnswerRequestDoneStageH\000R\004done\022" +
+      "D\n\005error\030\005 \001(\0132,.proto.rpc.webrtc.v1.Ans" +
+      "werRequestErrorStageH\000R\005errorB\007\n\005stage\"+" +
+      "\n\027AnswerResponseInitStage\022\020\n\003sdp\030\001 \001(\tR\003" +
+      "sdp\"\\\n\031AnswerResponseUpdateStage\022?\n\tcand" +
+      "idate\030\001 \001(\0132!.proto.rpc.webrtc.v1.ICECan" +
+      "didateR\tcandidate\"\031\n\027AnswerResponseDoneS" +
+      "tage\"F\n\030AnswerResponseErrorStage\022*\n\006stat" +
+      "us\030\001 \001(\0132\022.google.rpc.StatusR\006status\"\306\002\n" +
+      "\016AnswerResponse\022\022\n\004uuid\030\001 \001(\tR\004uuid\022B\n\004i" +
+      "nit\030\002 \001(\0132,.proto.rpc.webrtc.v1.AnswerRe" +
+      "sponseInitStageH\000R\004init\022H\n\006update\030\003 \001(\0132" +
+      "..proto.rpc.webrtc.v1.AnswerResponseUpda" +
+      "teStageH\000R\006update\022B\n\004done\030\004 \001(\0132,.proto." +
+      "rpc.webrtc.v1.AnswerResponseDoneStageH\000R" +
+      "\004done\022E\n\005error\030\005 \001(\0132-.proto.rpc.webrtc." +
+      "v1.AnswerResponseErrorStageH\000R\005errorB\007\n\005" +
+      "stage\"\035\n\033OptionalWebRTCConfigRequest\"Y\n\034" +
+      "OptionalWebRTCConfigResponse\0229\n\006config\030\001" +
+      " \001(\0132!.proto.rpc.webrtc.v1.WebRTCConfigR" +
+      "\006config2\206\004\n\020SignalingService\022j\n\004Call\022 .p" +
+      "roto.rpc.webrtc.v1.CallRequest\032!.proto.r" +
+      "pc.webrtc.v1.CallResponse\"\033\202\323\344\223\002\025\"\023/rpc/" +
+      "webrtc/v1/call0\001\022\201\001\n\nCallUpdate\022&.proto." +
+      "rpc.webrtc.v1.CallUpdateRequest\032\'.proto." +
+      "rpc.webrtc.v1.CallUpdateResponse\"\"\202\323\344\223\002\034" +
+      "\032\032/rpc/webrtc/v1/call_update\022U\n\006Answer\022#" +
+      ".proto.rpc.webrtc.v1.AnswerResponse\032\".pr" +
+      "oto.rpc.webrtc.v1.AnswerRequest(\0010\001\022\252\001\n\024" +
+      "OptionalWebRTCConfig\0220.proto.rpc.webrtc." +
+      "v1.OptionalWebRTCConfigRequest\0321.proto.r" +
+      "pc.webrtc.v1.OptionalWebRTCConfigRespons" +
+      "e\"-\202\323\344\223\002\'\022%/rpc/webrtc/v1/optional_webrt" +
+      "c_configB\'Z%go.viam.com/utils/proto/rpc/" +
+      "webrtc/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
         });
     internal_static_proto_rpc_webrtc_v1_ICECandidate_descriptor =
@@ -16940,7 +16679,7 @@ public final class Signaling {
     internal_static_proto_rpc_webrtc_v1_AnswerRequestInitStage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_rpc_webrtc_v1_AnswerRequestInitStage_descriptor,
-        new java.lang.String[] { "Sdp", "OptionalConfig", });
+        new java.lang.String[] { "Sdp", "OptionalConfig", "Deadline", "Deadline", });
     internal_static_proto_rpc_webrtc_v1_AnswerRequestUpdateStage_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_proto_rpc_webrtc_v1_AnswerRequestUpdateStage_fieldAccessorTable = new
@@ -17013,6 +16752,7 @@ public final class Signaling {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
   }
 

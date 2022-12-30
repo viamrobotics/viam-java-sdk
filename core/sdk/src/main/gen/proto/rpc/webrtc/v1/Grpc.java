@@ -63,53 +63,6 @@ public final class Grpc {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PacketMessage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-
-              data_ = input.readBytes();
-              break;
-            }
-            case 16: {
-
-              eom_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_PacketMessage_descriptor;
@@ -165,7 +118,7 @@ public final class Grpc {
       if (eom_ != false) {
         output.writeBool(2, eom_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -182,7 +135,7 @@ public final class Grpc {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, eom_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -201,7 +154,7 @@ public final class Grpc {
           .equals(other.getData())) return false;
       if (getEom()
           != other.getEom()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -217,7 +170,7 @@ public final class Grpc {
       hash = (37 * hash) + EOM_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getEom());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -339,18 +292,13 @@ public final class Grpc {
 
       // Construct using proto.rpc.webrtc.v1.Grpc.PacketMessage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -441,7 +389,7 @@ public final class Grpc {
         if (other.getEom() != false) {
           setEom(other.getEom());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -456,17 +404,40 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Grpc.PacketMessage parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                data_ = input.readBytes();
+
+                break;
+              } // case 10
+              case 16: {
+                eom_ = input.readBool();
+
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Grpc.PacketMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -567,7 +538,18 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PacketMessage(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -629,48 +611,6 @@ public final class Grpc {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Stream(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              id_ = input.readUInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Stream_descriptor;
@@ -712,7 +652,7 @@ public final class Grpc {
       if (id_ != 0L) {
         output.writeUInt64(1, id_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -725,7 +665,7 @@ public final class Grpc {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(1, id_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -742,7 +682,7 @@ public final class Grpc {
 
       if (getId()
           != other.getId()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -756,7 +696,7 @@ public final class Grpc {
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getId());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -878,18 +818,13 @@ public final class Grpc {
 
       // Construct using proto.rpc.webrtc.v1.Grpc.Stream.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -974,7 +909,7 @@ public final class Grpc {
         if (other.getId() != 0L) {
           setId(other.getId());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -989,17 +924,35 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Grpc.Stream parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Grpc.Stream) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1066,7 +1019,18 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Stream(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1135,6 +1099,17 @@ public final class Grpc {
      */
     proto.rpc.webrtc.v1.Grpc.RequestMessageOrBuilder getMessageOrBuilder();
 
+    /**
+     * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
+     * @return Whether the rstStream field is set.
+     */
+    boolean hasRstStream();
+    /**
+     * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
+     * @return The rstStream.
+     */
+    boolean getRstStream();
+
     public proto.rpc.webrtc.v1.Grpc.Request.TypeCase getTypeCase();
   }
   /**
@@ -1171,84 +1146,6 @@ public final class Grpc {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Request(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              proto.rpc.webrtc.v1.Grpc.Stream.Builder subBuilder = null;
-              if (stream_ != null) {
-                subBuilder = stream_.toBuilder();
-              }
-              stream_ = input.readMessage(proto.rpc.webrtc.v1.Grpc.Stream.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(stream_);
-                stream_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              proto.rpc.webrtc.v1.Grpc.RequestHeaders.Builder subBuilder = null;
-              if (typeCase_ == 2) {
-                subBuilder = ((proto.rpc.webrtc.v1.Grpc.RequestHeaders) type_).toBuilder();
-              }
-              type_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Grpc.RequestHeaders.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Grpc.RequestHeaders) type_);
-                type_ = subBuilder.buildPartial();
-              }
-              typeCase_ = 2;
-              break;
-            }
-            case 26: {
-              proto.rpc.webrtc.v1.Grpc.RequestMessage.Builder subBuilder = null;
-              if (typeCase_ == 3) {
-                subBuilder = ((proto.rpc.webrtc.v1.Grpc.RequestMessage) type_).toBuilder();
-              }
-              type_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Grpc.RequestMessage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Grpc.RequestMessage) type_);
-                type_ = subBuilder.buildPartial();
-              }
-              typeCase_ = 3;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Request_descriptor;
@@ -1269,6 +1166,7 @@ public final class Grpc {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       HEADERS(2),
       MESSAGE(3),
+      RST_STREAM(4),
       TYPE_NOT_SET(0);
       private final int value;
       private TypeCase(int value) {
@@ -1288,6 +1186,7 @@ public final class Grpc {
         switch (value) {
           case 2: return HEADERS;
           case 3: return MESSAGE;
+          case 4: return RST_STREAM;
           case 0: return TYPE_NOT_SET;
           default: return null;
         }
@@ -1391,6 +1290,27 @@ public final class Grpc {
       return proto.rpc.webrtc.v1.Grpc.RequestMessage.getDefaultInstance();
     }
 
+    public static final int RST_STREAM_FIELD_NUMBER = 4;
+    /**
+     * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
+     * @return Whether the rstStream field is set.
+     */
+    @java.lang.Override
+    public boolean hasRstStream() {
+      return typeCase_ == 4;
+    }
+    /**
+     * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
+     * @return The rstStream.
+     */
+    @java.lang.Override
+    public boolean getRstStream() {
+      if (typeCase_ == 4) {
+        return (java.lang.Boolean) type_;
+      }
+      return false;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1414,7 +1334,11 @@ public final class Grpc {
       if (typeCase_ == 3) {
         output.writeMessage(3, (proto.rpc.webrtc.v1.Grpc.RequestMessage) type_);
       }
-      unknownFields.writeTo(output);
+      if (typeCase_ == 4) {
+        output.writeBool(
+            4, (boolean)((java.lang.Boolean) type_));
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1435,7 +1359,12 @@ public final class Grpc {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (proto.rpc.webrtc.v1.Grpc.RequestMessage) type_);
       }
-      size += unknownFields.getSerializedSize();
+      if (typeCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              4, (boolean)((java.lang.Boolean) type_));
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1465,10 +1394,14 @@ public final class Grpc {
           if (!getMessage()
               .equals(other.getMessage())) return false;
           break;
+        case 4:
+          if (getRstStream()
+              != other.getRstStream()) return false;
+          break;
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1492,10 +1425,15 @@ public final class Grpc {
           hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
           hash = (53 * hash) + getMessage().hashCode();
           break;
+        case 4:
+          hash = (37 * hash) + RST_STREAM_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getRstStream());
+          break;
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1619,18 +1557,13 @@ public final class Grpc {
 
       // Construct using proto.rpc.webrtc.v1.Grpc.Request.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1640,6 +1573,12 @@ public final class Grpc {
         } else {
           stream_ = null;
           streamBuilder_ = null;
+        }
+        if (headersBuilder_ != null) {
+          headersBuilder_.clear();
+        }
+        if (messageBuilder_ != null) {
+          messageBuilder_.clear();
         }
         typeCase_ = 0;
         type_ = null;
@@ -1687,6 +1626,9 @@ public final class Grpc {
           } else {
             result.type_ = messageBuilder_.build();
           }
+        }
+        if (typeCase_ == 4) {
+          result.type_ = type_;
         }
         result.typeCase_ = typeCase_;
         onBuilt();
@@ -1749,11 +1691,15 @@ public final class Grpc {
             mergeMessage(other.getMessage());
             break;
           }
+          case RST_STREAM: {
+            setRstStream(other.getRstStream());
+            break;
+          }
           case TYPE_NOT_SET: {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1768,17 +1714,56 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Grpc.Request parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getStreamFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getHeadersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                typeCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getMessageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                typeCase_ = 3;
+                break;
+              } // case 26
+              case 32: {
+                type_ = input.readBool();
+                typeCase_ = 4;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Grpc.Request) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int typeCase_ = 0;
@@ -1990,8 +1975,9 @@ public final class Grpc {
         } else {
           if (typeCase_ == 2) {
             headersBuilder_.mergeFrom(value);
+          } else {
+            headersBuilder_.setMessage(value);
           }
-          headersBuilder_.setMessage(value);
         }
         typeCase_ = 2;
         return this;
@@ -2131,8 +2117,9 @@ public final class Grpc {
         } else {
           if (typeCase_ == 3) {
             messageBuilder_.mergeFrom(value);
+          } else {
+            messageBuilder_.setMessage(value);
           }
-          messageBuilder_.setMessage(value);
         }
         typeCase_ = 3;
         return this;
@@ -2197,6 +2184,47 @@ public final class Grpc {
         onChanged();;
         return messageBuilder_;
       }
+
+      /**
+       * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
+       * @return Whether the rstStream field is set.
+       */
+      public boolean hasRstStream() {
+        return typeCase_ == 4;
+      }
+      /**
+       * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
+       * @return The rstStream.
+       */
+      public boolean getRstStream() {
+        if (typeCase_ == 4) {
+          return (java.lang.Boolean) type_;
+        }
+        return false;
+      }
+      /**
+       * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
+       * @param value The rstStream to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRstStream(boolean value) {
+        typeCase_ = 4;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool rst_stream = 4 [json_name = "rstStream"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRstStream() {
+        if (typeCase_ == 4) {
+          typeCase_ = 0;
+          type_ = null;
+          onChanged();
+        }
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2230,7 +2258,18 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Request(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2327,75 +2366,6 @@ public final class Grpc {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private RequestHeaders(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              method_ = s;
-              break;
-            }
-            case 18: {
-              proto.rpc.webrtc.v1.Grpc.Metadata.Builder subBuilder = null;
-              if (metadata_ != null) {
-                subBuilder = metadata_.toBuilder();
-              }
-              metadata_ = input.readMessage(proto.rpc.webrtc.v1.Grpc.Metadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(metadata_);
-                metadata_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 26: {
-              com.google.protobuf.Duration.Builder subBuilder = null;
-              if (timeout_ != null) {
-                subBuilder = timeout_.toBuilder();
-              }
-              timeout_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(timeout_);
-                timeout_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -2523,7 +2493,7 @@ public final class Grpc {
       if (timeout_ != null) {
         output.writeMessage(3, getTimeout());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2543,7 +2513,7 @@ public final class Grpc {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getTimeout());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2570,7 +2540,7 @@ public final class Grpc {
         if (!getTimeout()
             .equals(other.getTimeout())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2591,7 +2561,7 @@ public final class Grpc {
         hash = (37 * hash) + TIMEOUT_FIELD_NUMBER;
         hash = (53 * hash) + getTimeout().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2712,18 +2682,13 @@ public final class Grpc {
 
       // Construct using proto.rpc.webrtc.v1.Grpc.RequestHeaders.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2837,7 +2802,7 @@ public final class Grpc {
         if (other.hasTimeout()) {
           mergeTimeout(other.getTimeout());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2852,17 +2817,49 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Grpc.RequestHeaders parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                method_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getTimeoutFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Grpc.RequestHeaders) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -3212,7 +3209,18 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RequestHeaders(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3294,66 +3302,6 @@ public final class Grpc {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private RequestMessage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              hasMessage_ = input.readBool();
-              break;
-            }
-            case 18: {
-              proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder subBuilder = null;
-              if (packetMessage_ != null) {
-                subBuilder = packetMessage_.toBuilder();
-              }
-              packetMessage_ = input.readMessage(proto.rpc.webrtc.v1.Grpc.PacketMessage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(packetMessage_);
-                packetMessage_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 24: {
-
-              eos_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -3439,7 +3387,7 @@ public final class Grpc {
       if (eos_ != false) {
         output.writeBool(3, eos_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3460,7 +3408,7 @@ public final class Grpc {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, eos_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3484,7 +3432,7 @@ public final class Grpc {
       }
       if (getEos()
           != other.getEos()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3505,7 +3453,7 @@ public final class Grpc {
       hash = (37 * hash) + EOS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getEos());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3627,18 +3575,13 @@ public final class Grpc {
 
       // Construct using proto.rpc.webrtc.v1.Grpc.RequestMessage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3743,7 +3686,7 @@ public final class Grpc {
         if (other.getEos() != false) {
           setEos(other.getEos());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3758,17 +3701,47 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Grpc.RequestMessage parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                hasMessage_ = input.readBool();
+
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getPacketMessageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              case 24: {
+                eos_ = input.readBool();
+
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Grpc.RequestMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -3985,7 +3958,18 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RequestMessage(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4104,98 +4088,6 @@ public final class Grpc {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private Response(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              proto.rpc.webrtc.v1.Grpc.Stream.Builder subBuilder = null;
-              if (stream_ != null) {
-                subBuilder = stream_.toBuilder();
-              }
-              stream_ = input.readMessage(proto.rpc.webrtc.v1.Grpc.Stream.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(stream_);
-                stream_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              proto.rpc.webrtc.v1.Grpc.ResponseHeaders.Builder subBuilder = null;
-              if (typeCase_ == 2) {
-                subBuilder = ((proto.rpc.webrtc.v1.Grpc.ResponseHeaders) type_).toBuilder();
-              }
-              type_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Grpc.ResponseHeaders.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Grpc.ResponseHeaders) type_);
-                type_ = subBuilder.buildPartial();
-              }
-              typeCase_ = 2;
-              break;
-            }
-            case 26: {
-              proto.rpc.webrtc.v1.Grpc.ResponseMessage.Builder subBuilder = null;
-              if (typeCase_ == 3) {
-                subBuilder = ((proto.rpc.webrtc.v1.Grpc.ResponseMessage) type_).toBuilder();
-              }
-              type_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Grpc.ResponseMessage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Grpc.ResponseMessage) type_);
-                type_ = subBuilder.buildPartial();
-              }
-              typeCase_ = 3;
-              break;
-            }
-            case 34: {
-              proto.rpc.webrtc.v1.Grpc.ResponseTrailers.Builder subBuilder = null;
-              if (typeCase_ == 4) {
-                subBuilder = ((proto.rpc.webrtc.v1.Grpc.ResponseTrailers) type_).toBuilder();
-              }
-              type_ =
-                  input.readMessage(proto.rpc.webrtc.v1.Grpc.ResponseTrailers.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((proto.rpc.webrtc.v1.Grpc.ResponseTrailers) type_);
-                type_ = subBuilder.buildPartial();
-              }
-              typeCase_ = 4;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -4398,7 +4290,7 @@ public final class Grpc {
       if (typeCase_ == 4) {
         output.writeMessage(4, (proto.rpc.webrtc.v1.Grpc.ResponseTrailers) type_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4423,7 +4315,7 @@ public final class Grpc {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (proto.rpc.webrtc.v1.Grpc.ResponseTrailers) type_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4460,7 +4352,7 @@ public final class Grpc {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4491,7 +4383,7 @@ public final class Grpc {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4615,18 +4507,13 @@ public final class Grpc {
 
       // Construct using proto.rpc.webrtc.v1.Grpc.Response.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4636,6 +4523,15 @@ public final class Grpc {
         } else {
           stream_ = null;
           streamBuilder_ = null;
+        }
+        if (headersBuilder_ != null) {
+          headersBuilder_.clear();
+        }
+        if (messageBuilder_ != null) {
+          messageBuilder_.clear();
+        }
+        if (trailersBuilder_ != null) {
+          trailersBuilder_.clear();
         }
         typeCase_ = 0;
         type_ = null;
@@ -4760,7 +4656,7 @@ public final class Grpc {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4775,17 +4671,58 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Grpc.Response parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getStreamFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getHeadersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                typeCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getMessageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                typeCase_ = 3;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getTrailersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                typeCase_ = 4;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Grpc.Response) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int typeCase_ = 0;
@@ -4997,8 +4934,9 @@ public final class Grpc {
         } else {
           if (typeCase_ == 2) {
             headersBuilder_.mergeFrom(value);
+          } else {
+            headersBuilder_.setMessage(value);
           }
-          headersBuilder_.setMessage(value);
         }
         typeCase_ = 2;
         return this;
@@ -5138,8 +5076,9 @@ public final class Grpc {
         } else {
           if (typeCase_ == 3) {
             messageBuilder_.mergeFrom(value);
+          } else {
+            messageBuilder_.setMessage(value);
           }
-          messageBuilder_.setMessage(value);
         }
         typeCase_ = 3;
         return this;
@@ -5279,8 +5218,9 @@ public final class Grpc {
         } else {
           if (typeCase_ == 4) {
             trailersBuilder_.mergeFrom(value);
+          } else {
+            trailersBuilder_.setMessage(value);
           }
-          trailersBuilder_.setMessage(value);
         }
         typeCase_ = 4;
         return this;
@@ -5378,7 +5318,18 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Response(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -5449,56 +5400,6 @@ public final class Grpc {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ResponseHeaders(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              proto.rpc.webrtc.v1.Grpc.Metadata.Builder subBuilder = null;
-              if (metadata_ != null) {
-                subBuilder = metadata_.toBuilder();
-              }
-              metadata_ = input.readMessage(proto.rpc.webrtc.v1.Grpc.Metadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(metadata_);
-                metadata_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseHeaders_descriptor;
@@ -5555,7 +5456,7 @@ public final class Grpc {
       if (metadata_ != null) {
         output.writeMessage(1, getMetadata());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -5568,7 +5469,7 @@ public final class Grpc {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getMetadata());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -5588,7 +5489,7 @@ public final class Grpc {
         if (!getMetadata()
             .equals(other.getMetadata())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -5603,7 +5504,7 @@ public final class Grpc {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getMetadata().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -5725,18 +5626,13 @@ public final class Grpc {
 
       // Construct using proto.rpc.webrtc.v1.Grpc.ResponseHeaders.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5829,7 +5725,7 @@ public final class Grpc {
         if (other.hasMetadata()) {
           mergeMetadata(other.getMetadata());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -5844,17 +5740,37 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Grpc.ResponseHeaders parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Grpc.ResponseHeaders) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -6009,7 +5925,18 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ResponseHeaders(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -6079,56 +6006,6 @@ public final class Grpc {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ResponseMessage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              proto.rpc.webrtc.v1.Grpc.PacketMessage.Builder subBuilder = null;
-              if (packetMessage_ != null) {
-                subBuilder = packetMessage_.toBuilder();
-              }
-              packetMessage_ = input.readMessage(proto.rpc.webrtc.v1.Grpc.PacketMessage.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(packetMessage_);
-                packetMessage_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_ResponseMessage_descriptor;
@@ -6185,7 +6062,7 @@ public final class Grpc {
       if (packetMessage_ != null) {
         output.writeMessage(1, getPacketMessage());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -6198,7 +6075,7 @@ public final class Grpc {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getPacketMessage());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -6218,7 +6095,7 @@ public final class Grpc {
         if (!getPacketMessage()
             .equals(other.getPacketMessage())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -6233,7 +6110,7 @@ public final class Grpc {
         hash = (37 * hash) + PACKET_MESSAGE_FIELD_NUMBER;
         hash = (53 * hash) + getPacketMessage().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -6354,18 +6231,13 @@ public final class Grpc {
 
       // Construct using proto.rpc.webrtc.v1.Grpc.ResponseMessage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6458,7 +6330,7 @@ public final class Grpc {
         if (other.hasPacketMessage()) {
           mergePacketMessage(other.getPacketMessage());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -6473,17 +6345,37 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Grpc.ResponseMessage parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPacketMessageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Grpc.ResponseMessage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -6638,7 +6530,18 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ResponseMessage(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -6722,69 +6625,6 @@ public final class Grpc {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private ResponseTrailers(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.rpc.Status.Builder subBuilder = null;
-              if (status_ != null) {
-                subBuilder = status_.toBuilder();
-              }
-              status_ = input.readMessage(com.google.rpc.Status.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(status_);
-                status_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              proto.rpc.webrtc.v1.Grpc.Metadata.Builder subBuilder = null;
-              if (metadata_ != null) {
-                subBuilder = metadata_.toBuilder();
-              }
-              metadata_ = input.readMessage(proto.rpc.webrtc.v1.Grpc.Metadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(metadata_);
-                metadata_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -6871,7 +6711,7 @@ public final class Grpc {
       if (metadata_ != null) {
         output.writeMessage(2, getMetadata());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -6888,7 +6728,7 @@ public final class Grpc {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getMetadata());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -6913,7 +6753,7 @@ public final class Grpc {
         if (!getMetadata()
             .equals(other.getMetadata())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -6932,7 +6772,7 @@ public final class Grpc {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getMetadata().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7053,18 +6893,13 @@ public final class Grpc {
 
       // Construct using proto.rpc.webrtc.v1.Grpc.ResponseTrailers.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7171,7 +7006,7 @@ public final class Grpc {
         if (other.hasMetadata()) {
           mergeMetadata(other.getMetadata());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -7186,17 +7021,44 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Grpc.ResponseTrailers parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getStatusFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Grpc.ResponseTrailers) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -7470,7 +7332,18 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ResponseTrailers(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -7551,56 +7424,6 @@ public final class Grpc {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Strings(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                values_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              values_.add(s);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          values_ = values_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return proto.rpc.webrtc.v1.Grpc.internal_static_proto_rpc_webrtc_v1_Strings_descriptor;
@@ -7666,7 +7489,7 @@ public final class Grpc {
       for (int i = 0; i < values_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, values_.getRaw(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -7683,7 +7506,7 @@ public final class Grpc {
         size += dataSize;
         size += 1 * getValuesList().size();
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -7700,7 +7523,7 @@ public final class Grpc {
 
       if (!getValuesList()
           .equals(other.getValuesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -7715,7 +7538,7 @@ public final class Grpc {
         hash = (37 * hash) + VALUES_FIELD_NUMBER;
         hash = (53 * hash) + getValuesList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7836,18 +7659,13 @@ public final class Grpc {
 
       // Construct using proto.rpc.webrtc.v1.Grpc.Strings.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7944,7 +7762,7 @@ public final class Grpc {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -7959,17 +7777,36 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Grpc.Strings parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureValuesIsMutable();
+                values_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Grpc.Strings) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -8116,7 +7953,18 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Strings(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -8164,9 +8012,11 @@ public final class Grpc {
      * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
      */
 
-    proto.rpc.webrtc.v1.Grpc.Strings getMdOrDefault(
+    /* nullable */
+proto.rpc.webrtc.v1.Grpc.Strings getMdOrDefault(
         java.lang.String key,
-        proto.rpc.webrtc.v1.Grpc.Strings defaultValue);
+        /* nullable */
+proto.rpc.webrtc.v1.Grpc.Strings defaultValue);
     /**
      * <code>map&lt;string, .proto.rpc.webrtc.v1.Strings&gt; md = 1 [json_name = "md"];</code>
      */
@@ -8205,57 +8055,6 @@ public final class Grpc {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private Metadata(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                md_ = com.google.protobuf.MapField.newMapField(
-                    MdDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings>
-              md__ = input.readMessage(
-                  MdDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              md_.getMutableMap().put(
-                  md__.getKey(), md__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -8383,7 +8182,7 @@ public final class Grpc {
           internalGetMd(),
           MdDefaultEntryHolder.defaultEntry,
           1);
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -8402,7 +8201,7 @@ public final class Grpc {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, md__);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -8419,7 +8218,7 @@ public final class Grpc {
 
       if (!internalGetMd().equals(
           other.internalGetMd())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -8434,7 +8233,7 @@ public final class Grpc {
         hash = (37 * hash) + MD_FIELD_NUMBER;
         hash = (53 * hash) + internalGetMd().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -8578,18 +8377,13 @@ public final class Grpc {
 
       // Construct using proto.rpc.webrtc.v1.Grpc.Metadata.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8674,7 +8468,7 @@ public final class Grpc {
         if (other == proto.rpc.webrtc.v1.Grpc.Metadata.getDefaultInstance()) return this;
         internalGetMutableMd().mergeFrom(
             other.internalGetMd());
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -8689,17 +8483,38 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.rpc.webrtc.v1.Grpc.Metadata parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.MapEntry<java.lang.String, proto.rpc.webrtc.v1.Grpc.Strings>
+                md__ = input.readMessage(
+                    MdDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMd().getMutableMap().put(
+                    md__.getKey(), md__.getValue());
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.rpc.webrtc.v1.Grpc.Metadata) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -8867,7 +8682,18 @@ public final class Grpc {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Metadata(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -8960,40 +8786,41 @@ public final class Grpc {
       "rpc.webrtc.v1\032\036google/protobuf/duration." +
       "proto\032\027google/rpc/status.proto\"5\n\rPacket" +
       "Message\022\022\n\004data\030\001 \001(\014R\004data\022\020\n\003eom\030\002 \001(\010" +
-      "R\003eom\"\030\n\006Stream\022\016\n\002id\030\001 \001(\004R\002id\"\310\001\n\007Requ" +
+      "R\003eom\"\030\n\006Stream\022\016\n\002id\030\001 \001(\004R\002id\"\351\001\n\007Requ" +
       "est\0223\n\006stream\030\001 \001(\0132\033.proto.rpc.webrtc.v" +
       "1.StreamR\006stream\022?\n\007headers\030\002 \001(\0132#.prot" +
       "o.rpc.webrtc.v1.RequestHeadersH\000R\007header" +
       "s\022?\n\007message\030\003 \001(\0132#.proto.rpc.webrtc.v1" +
-      ".RequestMessageH\000R\007messageB\006\n\004type\"\230\001\n\016R" +
-      "equestHeaders\022\026\n\006method\030\001 \001(\tR\006method\0229\n" +
-      "\010metadata\030\002 \001(\0132\035.proto.rpc.webrtc.v1.Me" +
-      "tadataR\010metadata\0223\n\007timeout\030\003 \001(\0132\031.goog" +
-      "le.protobuf.DurationR\007timeout\"\216\001\n\016Reques" +
-      "tMessage\022\037\n\013has_message\030\001 \001(\010R\nhasMessag" +
-      "e\022I\n\016packet_message\030\002 \001(\0132\".proto.rpc.we" +
-      "brtc.v1.PacketMessageR\rpacketMessage\022\020\n\003" +
-      "eos\030\003 \001(\010R\003eos\"\220\002\n\010Response\0223\n\006stream\030\001 " +
-      "\001(\0132\033.proto.rpc.webrtc.v1.StreamR\006stream" +
-      "\022@\n\007headers\030\002 \001(\0132$.proto.rpc.webrtc.v1." +
-      "ResponseHeadersH\000R\007headers\022@\n\007message\030\003 " +
-      "\001(\0132$.proto.rpc.webrtc.v1.ResponseMessag" +
-      "eH\000R\007message\022C\n\010trailers\030\004 \001(\0132%.proto.r" +
-      "pc.webrtc.v1.ResponseTrailersH\000R\010trailer" +
-      "sB\006\n\004type\"L\n\017ResponseHeaders\0229\n\010metadata" +
-      "\030\001 \001(\0132\035.proto.rpc.webrtc.v1.MetadataR\010m" +
-      "etadata\"\\\n\017ResponseMessage\022I\n\016packet_mes" +
-      "sage\030\001 \001(\0132\".proto.rpc.webrtc.v1.PacketM" +
-      "essageR\rpacketMessage\"y\n\020ResponseTrailer" +
-      "s\022*\n\006status\030\001 \001(\0132\022.google.rpc.StatusR\006s" +
-      "tatus\0229\n\010metadata\030\002 \001(\0132\035.proto.rpc.webr" +
-      "tc.v1.MetadataR\010metadata\"!\n\007Strings\022\026\n\006v" +
-      "alues\030\001 \003(\tR\006values\"\226\001\n\010Metadata\0225\n\002md\030\001" +
-      " \003(\0132%.proto.rpc.webrtc.v1.Metadata.MdEn" +
-      "tryR\002md\032S\n\007MdEntry\022\020\n\003key\030\001 \001(\tR\003key\0222\n\005" +
-      "value\030\002 \001(\0132\034.proto.rpc.webrtc.v1.String" +
-      "sR\005value:\0028\001B\'Z%go.viam.com/utils/proto/" +
-      "rpc/webrtc/v1b\006proto3"
+      ".RequestMessageH\000R\007message\022\037\n\nrst_stream" +
+      "\030\004 \001(\010H\000R\trstStreamB\006\n\004type\"\230\001\n\016RequestH" +
+      "eaders\022\026\n\006method\030\001 \001(\tR\006method\0229\n\010metada" +
+      "ta\030\002 \001(\0132\035.proto.rpc.webrtc.v1.MetadataR" +
+      "\010metadata\0223\n\007timeout\030\003 \001(\0132\031.google.prot" +
+      "obuf.DurationR\007timeout\"\216\001\n\016RequestMessag" +
+      "e\022\037\n\013has_message\030\001 \001(\010R\nhasMessage\022I\n\016pa" +
+      "cket_message\030\002 \001(\0132\".proto.rpc.webrtc.v1" +
+      ".PacketMessageR\rpacketMessage\022\020\n\003eos\030\003 \001" +
+      "(\010R\003eos\"\220\002\n\010Response\0223\n\006stream\030\001 \001(\0132\033.p" +
+      "roto.rpc.webrtc.v1.StreamR\006stream\022@\n\007hea" +
+      "ders\030\002 \001(\0132$.proto.rpc.webrtc.v1.Respons" +
+      "eHeadersH\000R\007headers\022@\n\007message\030\003 \001(\0132$.p" +
+      "roto.rpc.webrtc.v1.ResponseMessageH\000R\007me" +
+      "ssage\022C\n\010trailers\030\004 \001(\0132%.proto.rpc.webr" +
+      "tc.v1.ResponseTrailersH\000R\010trailersB\006\n\004ty" +
+      "pe\"L\n\017ResponseHeaders\0229\n\010metadata\030\001 \001(\0132" +
+      "\035.proto.rpc.webrtc.v1.MetadataR\010metadata" +
+      "\"\\\n\017ResponseMessage\022I\n\016packet_message\030\001 " +
+      "\001(\0132\".proto.rpc.webrtc.v1.PacketMessageR" +
+      "\rpacketMessage\"y\n\020ResponseTrailers\022*\n\006st" +
+      "atus\030\001 \001(\0132\022.google.rpc.StatusR\006status\0229" +
+      "\n\010metadata\030\002 \001(\0132\035.proto.rpc.webrtc.v1.M" +
+      "etadataR\010metadata\"!\n\007Strings\022\026\n\006values\030\001" +
+      " \003(\tR\006values\"\226\001\n\010Metadata\0225\n\002md\030\001 \003(\0132%." +
+      "proto.rpc.webrtc.v1.Metadata.MdEntryR\002md" +
+      "\032S\n\007MdEntry\022\020\n\003key\030\001 \001(\tR\003key\0222\n\005value\030\002" +
+      " \001(\0132\034.proto.rpc.webrtc.v1.StringsR\005valu" +
+      "e:\0028\001B\'Z%go.viam.com/utils/proto/rpc/web" +
+      "rtc/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9018,7 +8845,7 @@ public final class Grpc {
     internal_static_proto_rpc_webrtc_v1_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_rpc_webrtc_v1_Request_descriptor,
-        new java.lang.String[] { "Stream", "Headers", "Message", "Type", });
+        new java.lang.String[] { "Stream", "Headers", "Message", "RstStream", "Type", });
     internal_static_proto_rpc_webrtc_v1_RequestHeaders_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_proto_rpc_webrtc_v1_RequestHeaders_fieldAccessorTable = new

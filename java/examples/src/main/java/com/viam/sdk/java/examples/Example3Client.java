@@ -1,9 +1,9 @@
 package com.viam.sdk.java.examples;
 
-import com.viam.rdk.proto.api.component.gps.v1.GPSServiceGrpc;
-import com.viam.rdk.proto.api.component.gps.v1.Gps;
-import com.viam.rdk.proto.api.robot.v1.Robot;
-import com.viam.rdk.proto.api.robot.v1.RobotServiceGrpc;
+import com.viam.component.movementsensor.v1.Movementsensor;
+import com.viam.component.movementsensor.v1.MovementSensorServiceGrpc;
+import com.viam.robot.v1.Robot;
+import com.viam.robot.v1.RobotServiceGrpc;
 import com.viam.sdk.core.Channel;
 import com.viam.sdk.core.DialOptions;
 import com.viam.sdk.java.Dialer;
@@ -31,9 +31,9 @@ public class Example3Client {
         final Robot.ResourceNamesResponse resp = robotClient.resourceNames(Robot.ResourceNamesRequest.newBuilder().build());
         logger.info(resp.toString());
 
-        final GPSServiceGrpc.GPSServiceBlockingStub gpsClient = GPSServiceGrpc.newBlockingStub(chan).withCallCredentials(chan.getCallCredentials().get());
-        final Gps.ReadLocationResponse gpsResp = gpsClient.readLocation(Gps.ReadLocationRequest.newBuilder().setName("gps1").build());
-        logger.info(gpsResp.getCoordinate().toString());
+        final MovementSensorServiceGrpc.MovementSensorServiceBlockingStub msClient = MovementSensorServiceGrpc.newBlockingStub(chan);
+        final Movementsensor.GetPositionResponse msResp = msClient.getPosition(Movementsensor.GetPositionRequest.newBuilder().setName("gps1").build());
+        logger.info(msResp.getCoordinate().toString());
 
         chan.close();
         dialer.close();
