@@ -4,11 +4,19 @@ ext.pomDisplayName = "Viam Java SDK"
 
 dependencies {
     api project(':core:viam-core-sdk')
-    implementation 'io.grpc:grpc-netty:1.51.0'
-    implementation 'dev.onvoid.webrtc:webrtc-java:0.7.0'
-    implementation 'dev.onvoid.webrtc:webrtc-java:0.7.0:linux-x86_64'
-    implementation 'dev.onvoid.webrtc:webrtc-java:0.7.0:macos-x86_64'
+    runtimeOnly 'io.grpc:grpc-netty-shaded:1.61.1'
+    implementation "dev.onvoid.webrtc:webrtc-java:0.8.0"
+    // NOTE(erd): can only use one (os,arch) pair of these at a time unless we do a more specific build time
+    // declaration based on arch
+//    implementation group: "dev.onvoid.webrtc", name: "webrtc-java", version: "0.8.0", classifier: "windows-x86_64"
+//    implementation group: "dev.onvoid.webrtc", name: "webrtc-java", version: "0.8.0", classifier: "macos-x86_64"
+    implementation group: "dev.onvoid.webrtc", name: "webrtc-java", version: "0.8.0", classifier: "macos-aarch64"
+    implementation group: "dev.onvoid.webrtc", name: "webrtc-java", version: "0.8.0", classifier: "linux-x86_64"
+//    implementation group: "dev.onvoid.webrtc", name: "webrtc-java", version: "0.8.0", classifier: "linux-aarch64"
+//    implementation group: "dev.onvoid.webrtc", name: "webrtc-java", version: "0.8.0", classifier: "linux-aarch32"
 }
 
-sourceCompatibility = JavaVersion.VERSION_11
-targetCompatibility = JavaVersion.VERSION_11
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}

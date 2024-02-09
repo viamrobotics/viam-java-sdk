@@ -22,8 +22,8 @@ subprojects {
     }
 
     ext {
-        min_api = 24
-        target_api = 31
+        min_api = 29
+        target_api = 34
     }
 
     def pomConfig = {
@@ -68,14 +68,14 @@ subprojects {
                 exclude '**/index.html', '**/*.kt', '**/test*/**'
             }
 
-            task sourcesJar(type: Jar) {
+            tasks.register('sourcesJar', Jar) {
                 from sourceSets.main.allJava
-                classifier 'sources'
+                archiveClassifier = 'sources'
             }
 
-            task javadocJar(type: Jar) {
+            tasks.register('javadocJar', Jar) {
                 from javadoc
-                classifier 'javadoc'
+                archiveClassifier = 'javadoc'
             }
 
             publishing {
@@ -97,5 +97,7 @@ subprojects {
         }
     }
 
-    task install(dependsOn: 'publishToMavenLocal')
+    tasks.register("install") {
+        dependsOn 'publishToMavenLocal'
+    }
 }

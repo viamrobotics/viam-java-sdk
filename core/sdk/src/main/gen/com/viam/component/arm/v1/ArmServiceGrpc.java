@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: component/arm/v1/arm.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ArmServiceGrpc {
 
   private ArmServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.component.arm.v1.ArmService";
+  public static final java.lang.String SERVICE_NAME = "viam.component.arm.v1.ArmService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.component.arm.v1.Arm.GetEndPositionRequest,
@@ -204,6 +204,99 @@ public final class ArmServiceGrpc {
     return getIsMovingMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = ArmServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (ArmServiceGrpc.class) {
+        if ((getDoCommandMethod = ArmServiceGrpc.getDoCommandMethod) == null) {
+          ArmServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ArmServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetKinematicsRequest,
+      com.viam.common.v1.Common.GetKinematicsResponse> getGetKinematicsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetKinematics",
+      requestType = com.viam.common.v1.Common.GetKinematicsRequest.class,
+      responseType = com.viam.common.v1.Common.GetKinematicsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetKinematicsRequest,
+      com.viam.common.v1.Common.GetKinematicsResponse> getGetKinematicsMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetKinematicsRequest, com.viam.common.v1.Common.GetKinematicsResponse> getGetKinematicsMethod;
+    if ((getGetKinematicsMethod = ArmServiceGrpc.getGetKinematicsMethod) == null) {
+      synchronized (ArmServiceGrpc.class) {
+        if ((getGetKinematicsMethod = ArmServiceGrpc.getGetKinematicsMethod) == null) {
+          ArmServiceGrpc.getGetKinematicsMethod = getGetKinematicsMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetKinematicsRequest, com.viam.common.v1.Common.GetKinematicsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetKinematics"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetKinematicsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetKinematicsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ArmServiceMethodDescriptorSupplier("GetKinematics"))
+              .build();
+        }
+      }
+    }
+    return getGetKinematicsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGeometries",
+      requestType = com.viam.common.v1.Common.GetGeometriesRequest.class,
+      responseType = com.viam.common.v1.Common.GetGeometriesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+    if ((getGetGeometriesMethod = ArmServiceGrpc.getGetGeometriesMethod) == null) {
+      synchronized (ArmServiceGrpc.class) {
+        if ((getGetGeometriesMethod = ArmServiceGrpc.getGetGeometriesMethod) == null) {
+          ArmServiceGrpc.getGetGeometriesMethod = getGetGeometriesMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeometries"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ArmServiceMethodDescriptorSupplier("GetGeometries"))
+              .build();
+        }
+      }
+    }
+    return getGetGeometriesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -253,14 +346,14 @@ public final class ArmServiceGrpc {
    * An ArmService services all arms associated with a robot
    * </pre>
    */
-  public static abstract class ArmServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * GetEndPosition gets the current position the end of the robot's arm expressed as X,Y,Z,ox,oy,oz,theta
      * </pre>
      */
-    public void getEndPosition(com.viam.component.arm.v1.Arm.GetEndPositionRequest request,
+    default void getEndPosition(com.viam.component.arm.v1.Arm.GetEndPositionRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.GetEndPositionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEndPositionMethod(), responseObserver);
     }
@@ -271,7 +364,7 @@ public final class ArmServiceGrpc {
      * This will block until done or a new operation cancels this one
      * </pre>
      */
-    public void moveToPosition(com.viam.component.arm.v1.Arm.MoveToPositionRequest request,
+    default void moveToPosition(com.viam.component.arm.v1.Arm.MoveToPositionRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.MoveToPositionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveToPositionMethod(), responseObserver);
     }
@@ -281,7 +374,7 @@ public final class ArmServiceGrpc {
      * GetJointPositions lists the joint positions (in degrees) of every joint on a robot
      * </pre>
      */
-    public void getJointPositions(com.viam.component.arm.v1.Arm.GetJointPositionsRequest request,
+    default void getJointPositions(com.viam.component.arm.v1.Arm.GetJointPositionsRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.GetJointPositionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetJointPositionsMethod(), responseObserver);
     }
@@ -292,7 +385,7 @@ public final class ArmServiceGrpc {
      * This will block until done or a new operation cancels this one
      * </pre>
      */
-    public void moveToJointPositions(com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest request,
+    default void moveToJointPositions(com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveToJointPositionsMethod(), responseObserver);
     }
@@ -302,7 +395,7 @@ public final class ArmServiceGrpc {
      * Stop stops a robot's arm
      * </pre>
      */
-    public void stop(com.viam.component.arm.v1.Arm.StopRequest request,
+    default void stop(com.viam.component.arm.v1.Arm.StopRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.StopResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
     }
@@ -312,65 +405,64 @@ public final class ArmServiceGrpc {
      * IsMoving reports if a component is in motion
      * </pre>
      */
-    public void isMoving(com.viam.component.arm.v1.Arm.IsMovingRequest request,
+    default void isMoving(com.viam.component.arm.v1.Arm.IsMovingRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.IsMovingResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIsMovingMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetEndPositionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.arm.v1.Arm.GetEndPositionRequest,
-                com.viam.component.arm.v1.Arm.GetEndPositionResponse>(
-                  this, METHODID_GET_END_POSITION)))
-          .addMethod(
-            getMoveToPositionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.arm.v1.Arm.MoveToPositionRequest,
-                com.viam.component.arm.v1.Arm.MoveToPositionResponse>(
-                  this, METHODID_MOVE_TO_POSITION)))
-          .addMethod(
-            getGetJointPositionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.arm.v1.Arm.GetJointPositionsRequest,
-                com.viam.component.arm.v1.Arm.GetJointPositionsResponse>(
-                  this, METHODID_GET_JOINT_POSITIONS)))
-          .addMethod(
-            getMoveToJointPositionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest,
-                com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse>(
-                  this, METHODID_MOVE_TO_JOINT_POSITIONS)))
-          .addMethod(
-            getStopMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.arm.v1.Arm.StopRequest,
-                com.viam.component.arm.v1.Arm.StopResponse>(
-                  this, METHODID_STOP)))
-          .addMethod(
-            getIsMovingMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.arm.v1.Arm.IsMovingRequest,
-                com.viam.component.arm.v1.Arm.IsMovingResponse>(
-                  this, METHODID_IS_MOVING)))
-          .build();
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetKinematics returns the kinematics file for the component
+     * </pre>
+     */
+    default void getKinematics(com.viam.common.v1.Common.GetKinematicsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetKinematicsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetKinematicsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    default void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGeometriesMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service ArmService.
    * <pre>
    * An ArmService services all arms associated with a robot
    * </pre>
    */
-  public static final class ArmServiceStub extends io.grpc.stub.AbstractAsyncStub<ArmServiceStub> {
+  public static abstract class ArmServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ArmServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ArmService.
+   * <pre>
+   * An ArmService services all arms associated with a robot
+   * </pre>
+   */
+  public static final class ArmServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ArmServiceStub> {
     private ArmServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -449,14 +541,49 @@ public final class ArmServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getIsMovingMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetKinematics returns the kinematics file for the component
+     * </pre>
+     */
+    public void getKinematics(com.viam.common.v1.Common.GetKinematicsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetKinematicsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetKinematicsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ArmService.
    * <pre>
    * An ArmService services all arms associated with a robot
    * </pre>
    */
-  public static final class ArmServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ArmServiceBlockingStub> {
+  public static final class ArmServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ArmServiceBlockingStub> {
     private ArmServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -529,14 +656,46 @@ public final class ArmServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getIsMovingMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetKinematics returns the kinematics file for the component
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetKinematicsResponse getKinematics(com.viam.common.v1.Common.GetKinematicsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetKinematicsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ArmService.
    * <pre>
    * An ArmService services all arms associated with a robot
    * </pre>
    */
-  public static final class ArmServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ArmServiceFutureStub> {
+  public static final class ArmServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ArmServiceFutureStub> {
     private ArmServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -615,6 +774,39 @@ public final class ArmServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getIsMovingMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetKinematics returns the kinematics file for the component
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetKinematicsResponse> getKinematics(
+        com.viam.common.v1.Common.GetKinematicsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetKinematicsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetGeometriesResponse> getGeometries(
+        com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_END_POSITION = 0;
@@ -623,16 +815,19 @@ public final class ArmServiceGrpc {
   private static final int METHODID_MOVE_TO_JOINT_POSITIONS = 3;
   private static final int METHODID_STOP = 4;
   private static final int METHODID_IS_MOVING = 5;
+  private static final int METHODID_DO_COMMAND = 6;
+  private static final int METHODID_GET_KINEMATICS = 7;
+  private static final int METHODID_GET_GEOMETRIES = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ArmServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ArmServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -665,6 +860,18 @@ public final class ArmServiceGrpc {
           serviceImpl.isMoving((com.viam.component.arm.v1.Arm.IsMovingRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.arm.v1.Arm.IsMovingResponse>) responseObserver);
           break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_KINEMATICS:
+          serviceImpl.getKinematics((com.viam.common.v1.Common.GetKinematicsRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetKinematicsResponse>) responseObserver);
+          break;
+        case METHODID_GET_GEOMETRIES:
+          serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -679,6 +886,74 @@ public final class ArmServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetEndPositionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.arm.v1.Arm.GetEndPositionRequest,
+              com.viam.component.arm.v1.Arm.GetEndPositionResponse>(
+                service, METHODID_GET_END_POSITION)))
+        .addMethod(
+          getMoveToPositionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.arm.v1.Arm.MoveToPositionRequest,
+              com.viam.component.arm.v1.Arm.MoveToPositionResponse>(
+                service, METHODID_MOVE_TO_POSITION)))
+        .addMethod(
+          getGetJointPositionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.arm.v1.Arm.GetJointPositionsRequest,
+              com.viam.component.arm.v1.Arm.GetJointPositionsResponse>(
+                service, METHODID_GET_JOINT_POSITIONS)))
+        .addMethod(
+          getMoveToJointPositionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest,
+              com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse>(
+                service, METHODID_MOVE_TO_JOINT_POSITIONS)))
+        .addMethod(
+          getStopMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.arm.v1.Arm.StopRequest,
+              com.viam.component.arm.v1.Arm.StopResponse>(
+                service, METHODID_STOP)))
+        .addMethod(
+          getIsMovingMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.arm.v1.Arm.IsMovingRequest,
+              com.viam.component.arm.v1.Arm.IsMovingResponse>(
+                service, METHODID_IS_MOVING)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .addMethod(
+          getGetKinematicsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetKinematicsRequest,
+              com.viam.common.v1.Common.GetKinematicsResponse>(
+                service, METHODID_GET_KINEMATICS)))
+        .addMethod(
+          getGetGeometriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetGeometriesRequest,
+              com.viam.common.v1.Common.GetGeometriesResponse>(
+                service, METHODID_GET_GEOMETRIES)))
+        .build();
   }
 
   private static abstract class ArmServiceBaseDescriptorSupplier
@@ -704,9 +979,9 @@ public final class ArmServiceGrpc {
   private static final class ArmServiceMethodDescriptorSupplier
       extends ArmServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ArmServiceMethodDescriptorSupplier(String methodName) {
+    ArmServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -732,6 +1007,9 @@ public final class ArmServiceGrpc {
               .addMethod(getMoveToJointPositionsMethod())
               .addMethod(getStopMethod())
               .addMethod(getIsMovingMethod())
+              .addMethod(getDoCommandMethod())
+              .addMethod(getGetKinematicsMethod())
+              .addMethod(getGetGeometriesMethod())
               .build();
         }
       }

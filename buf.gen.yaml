@@ -1,6 +1,6 @@
 version: v1
 plugins:
-  - name: java
+  - plugin: buf.build/protocolbuffers/java:v25.2
     out: core/sdk/src/main/gen
-  - name: grpc-java
+  - plugin: buf.build/grpc/java:v1.61.1
     out: core/sdk/src/main/gen

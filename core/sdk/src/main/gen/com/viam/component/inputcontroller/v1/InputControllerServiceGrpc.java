@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: component/inputcontroller/v1/input_controller.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class InputControllerServiceGrpc {
 
   private InputControllerServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.component.inputcontroller.v1.InputControllerService";
+  public static final java.lang.String SERVICE_NAME = "viam.component.inputcontroller.v1.InputControllerService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.component.inputcontroller.v1.InputController.GetControlsRequest,
@@ -142,6 +142,68 @@ public final class InputControllerServiceGrpc {
     return getTriggerEventMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = InputControllerServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (InputControllerServiceGrpc.class) {
+        if ((getDoCommandMethod = InputControllerServiceGrpc.getDoCommandMethod) == null) {
+          InputControllerServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new InputControllerServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGeometries",
+      requestType = com.viam.common.v1.Common.GetGeometriesRequest.class,
+      responseType = com.viam.common.v1.Common.GetGeometriesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+    if ((getGetGeometriesMethod = InputControllerServiceGrpc.getGetGeometriesMethod) == null) {
+      synchronized (InputControllerServiceGrpc.class) {
+        if ((getGetGeometriesMethod = InputControllerServiceGrpc.getGetGeometriesMethod) == null) {
+          InputControllerServiceGrpc.getGetGeometriesMethod = getGetGeometriesMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeometries"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new InputControllerServiceMethodDescriptorSupplier("GetGeometries"))
+              .build();
+        }
+      }
+    }
+    return getGetGeometriesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -191,14 +253,14 @@ public final class InputControllerServiceGrpc {
    * InputControllerService servicestains all input controller associated with a robot
    * </pre>
    */
-  public static abstract class InputControllerServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * GetControls returns a list of GetControls provided by the Controller
      * </pre>
      */
-    public void getControls(com.viam.component.inputcontroller.v1.InputController.GetControlsRequest request,
+    default void getControls(com.viam.component.inputcontroller.v1.InputController.GetControlsRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.inputcontroller.v1.InputController.GetControlsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetControlsMethod(), responseObserver);
     }
@@ -208,7 +270,7 @@ public final class InputControllerServiceGrpc {
      * GetEvents returns a list of events representing the last event on each control of a give Input Controller
      * </pre>
      */
-    public void getEvents(com.viam.component.inputcontroller.v1.InputController.GetEventsRequest request,
+    default void getEvents(com.viam.component.inputcontroller.v1.InputController.GetEventsRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.inputcontroller.v1.InputController.GetEventsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEventsMethod(), responseObserver);
     }
@@ -218,7 +280,7 @@ public final class InputControllerServiceGrpc {
      * StreamEvents starts a stream of InputControllerEvents for the given controls (buttons/axes) on a robot's input controller
      * </pre>
      */
-    public void streamEvents(com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest request,
+    default void streamEvents(com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStreamEventsMethod(), responseObserver);
     }
@@ -229,51 +291,54 @@ public final class InputControllerServiceGrpc {
      * like button presses or axis movements
      * </pre>
      */
-    public void triggerEvent(com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest request,
+    default void triggerEvent(com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTriggerEventMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetControlsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.inputcontroller.v1.InputController.GetControlsRequest,
-                com.viam.component.inputcontroller.v1.InputController.GetControlsResponse>(
-                  this, METHODID_GET_CONTROLS)))
-          .addMethod(
-            getGetEventsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.inputcontroller.v1.InputController.GetEventsRequest,
-                com.viam.component.inputcontroller.v1.InputController.GetEventsResponse>(
-                  this, METHODID_GET_EVENTS)))
-          .addMethod(
-            getStreamEventsMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest,
-                com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse>(
-                  this, METHODID_STREAM_EVENTS)))
-          .addMethod(
-            getTriggerEventMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest,
-                com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse>(
-                  this, METHODID_TRIGGER_EVENT)))
-          .build();
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    default void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGeometriesMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service InputControllerService.
    * <pre>
    * InputControllerService servicestains all input controller associated with a robot
    * </pre>
    */
-  public static final class InputControllerServiceStub extends io.grpc.stub.AbstractAsyncStub<InputControllerServiceStub> {
+  public static abstract class InputControllerServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return InputControllerServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service InputControllerService.
+   * <pre>
+   * InputControllerService servicestains all input controller associated with a robot
+   * </pre>
+   */
+  public static final class InputControllerServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<InputControllerServiceStub> {
     private InputControllerServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -329,14 +394,38 @@ public final class InputControllerServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getTriggerEventMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service InputControllerService.
    * <pre>
    * InputControllerService servicestains all input controller associated with a robot
    * </pre>
    */
-  public static final class InputControllerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<InputControllerServiceBlockingStub> {
+  public static final class InputControllerServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<InputControllerServiceBlockingStub> {
     private InputControllerServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -389,14 +478,36 @@ public final class InputControllerServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTriggerEventMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service InputControllerService.
    * <pre>
    * InputControllerService servicestains all input controller associated with a robot
    * </pre>
    */
-  public static final class InputControllerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<InputControllerServiceFutureStub> {
+  public static final class InputControllerServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<InputControllerServiceFutureStub> {
     private InputControllerServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -441,22 +552,46 @@ public final class InputControllerServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getTriggerEventMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetGeometriesResponse> getGeometries(
+        com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_CONTROLS = 0;
   private static final int METHODID_GET_EVENTS = 1;
   private static final int METHODID_STREAM_EVENTS = 2;
   private static final int METHODID_TRIGGER_EVENT = 3;
+  private static final int METHODID_DO_COMMAND = 4;
+  private static final int METHODID_GET_GEOMETRIES = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final InputControllerServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(InputControllerServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -481,6 +616,14 @@ public final class InputControllerServiceGrpc {
           serviceImpl.triggerEvent((com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse>) responseObserver);
           break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_GEOMETRIES:
+          serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -495,6 +638,53 @@ public final class InputControllerServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetControlsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.inputcontroller.v1.InputController.GetControlsRequest,
+              com.viam.component.inputcontroller.v1.InputController.GetControlsResponse>(
+                service, METHODID_GET_CONTROLS)))
+        .addMethod(
+          getGetEventsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.inputcontroller.v1.InputController.GetEventsRequest,
+              com.viam.component.inputcontroller.v1.InputController.GetEventsResponse>(
+                service, METHODID_GET_EVENTS)))
+        .addMethod(
+          getStreamEventsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest,
+              com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse>(
+                service, METHODID_STREAM_EVENTS)))
+        .addMethod(
+          getTriggerEventMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest,
+              com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse>(
+                service, METHODID_TRIGGER_EVENT)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .addMethod(
+          getGetGeometriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetGeometriesRequest,
+              com.viam.common.v1.Common.GetGeometriesResponse>(
+                service, METHODID_GET_GEOMETRIES)))
+        .build();
   }
 
   private static abstract class InputControllerServiceBaseDescriptorSupplier
@@ -520,9 +710,9 @@ public final class InputControllerServiceGrpc {
   private static final class InputControllerServiceMethodDescriptorSupplier
       extends InputControllerServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    InputControllerServiceMethodDescriptorSupplier(String methodName) {
+    InputControllerServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -546,6 +736,8 @@ public final class InputControllerServiceGrpc {
               .addMethod(getGetEventsMethod())
               .addMethod(getStreamEventsMethod())
               .addMethod(getTriggerEventMethod())
+              .addMethod(getDoCommandMethod())
+              .addMethod(getGetGeometriesMethod())
               .build();
         }
       }

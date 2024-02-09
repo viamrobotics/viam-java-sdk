@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: module/v1/module.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ModuleServiceGrpc {
 
   private ModuleServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.module.v1.ModuleService";
+  public static final java.lang.String SERVICE_NAME = "viam.module.v1.ModuleService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<viam.module.v1.Module.AddResourceRequest,
@@ -142,6 +142,37 @@ public final class ModuleServiceGrpc {
     return getReadyMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.module.v1.Module.ValidateConfigRequest,
+      viam.module.v1.Module.ValidateConfigResponse> getValidateConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ValidateConfig",
+      requestType = viam.module.v1.Module.ValidateConfigRequest.class,
+      responseType = viam.module.v1.Module.ValidateConfigResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.module.v1.Module.ValidateConfigRequest,
+      viam.module.v1.Module.ValidateConfigResponse> getValidateConfigMethod() {
+    io.grpc.MethodDescriptor<viam.module.v1.Module.ValidateConfigRequest, viam.module.v1.Module.ValidateConfigResponse> getValidateConfigMethod;
+    if ((getValidateConfigMethod = ModuleServiceGrpc.getValidateConfigMethod) == null) {
+      synchronized (ModuleServiceGrpc.class) {
+        if ((getValidateConfigMethod = ModuleServiceGrpc.getValidateConfigMethod) == null) {
+          ModuleServiceGrpc.getValidateConfigMethod = getValidateConfigMethod =
+              io.grpc.MethodDescriptor.<viam.module.v1.Module.ValidateConfigRequest, viam.module.v1.Module.ValidateConfigResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ValidateConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.module.v1.Module.ValidateConfigRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.module.v1.Module.ValidateConfigResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ModuleServiceMethodDescriptorSupplier("ValidateConfig"))
+              .build();
+        }
+      }
+    }
+    return getValidateConfigMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -191,14 +222,14 @@ public final class ModuleServiceGrpc {
    * ModuleService deals with modular resource registration
    * </pre>
    */
-  public static abstract class ModuleServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * AddResource tells a module about a new resource to handle
      * </pre>
      */
-    public void addResource(viam.module.v1.Module.AddResourceRequest request,
+    default void addResource(viam.module.v1.Module.AddResourceRequest request,
         io.grpc.stub.StreamObserver<viam.module.v1.Module.AddResourceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddResourceMethod(), responseObserver);
     }
@@ -208,7 +239,7 @@ public final class ModuleServiceGrpc {
      * ReconfigureResource tells a module to reconfigure an existing resource
      * </pre>
      */
-    public void reconfigureResource(viam.module.v1.Module.ReconfigureResourceRequest request,
+    default void reconfigureResource(viam.module.v1.Module.ReconfigureResourceRequest request,
         io.grpc.stub.StreamObserver<viam.module.v1.Module.ReconfigureResourceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReconfigureResourceMethod(), responseObserver);
     }
@@ -218,7 +249,7 @@ public final class ModuleServiceGrpc {
      * RemoveResource tells a module to close/stop a component/service and remove it
      * </pre>
      */
-    public void removeResource(viam.module.v1.Module.RemoveResourceRequest request,
+    default void removeResource(viam.module.v1.Module.RemoveResourceRequest request,
         io.grpc.stub.StreamObserver<viam.module.v1.Module.RemoveResourceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveResourceMethod(), responseObserver);
     }
@@ -228,51 +259,45 @@ public final class ModuleServiceGrpc {
      * Ready determines if the server is started and ready to recieve resource configurations.
      * </pre>
      */
-    public void ready(viam.module.v1.Module.ReadyRequest request,
+    default void ready(viam.module.v1.Module.ReadyRequest request,
         io.grpc.stub.StreamObserver<viam.module.v1.Module.ReadyResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReadyMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getAddResourceMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.module.v1.Module.AddResourceRequest,
-                viam.module.v1.Module.AddResourceResponse>(
-                  this, METHODID_ADD_RESOURCE)))
-          .addMethod(
-            getReconfigureResourceMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.module.v1.Module.ReconfigureResourceRequest,
-                viam.module.v1.Module.ReconfigureResourceResponse>(
-                  this, METHODID_RECONFIGURE_RESOURCE)))
-          .addMethod(
-            getRemoveResourceMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.module.v1.Module.RemoveResourceRequest,
-                viam.module.v1.Module.RemoveResourceResponse>(
-                  this, METHODID_REMOVE_RESOURCE)))
-          .addMethod(
-            getReadyMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.module.v1.Module.ReadyRequest,
-                viam.module.v1.Module.ReadyResponse>(
-                  this, METHODID_READY)))
-          .build();
+    /**
+     * <pre>
+     * ValidateConfig determines whether the given config is valid and registers/returns implicit
+     * dependencies.
+     * </pre>
+     */
+    default void validateConfig(viam.module.v1.Module.ValidateConfigRequest request,
+        io.grpc.stub.StreamObserver<viam.module.v1.Module.ValidateConfigResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getValidateConfigMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service ModuleService.
    * <pre>
    * ModuleService deals with modular resource registration
    * </pre>
    */
-  public static final class ModuleServiceStub extends io.grpc.stub.AbstractAsyncStub<ModuleServiceStub> {
+  public static abstract class ModuleServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ModuleServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ModuleService.
+   * <pre>
+   * ModuleService deals with modular resource registration
+   * </pre>
+   */
+  public static final class ModuleServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ModuleServiceStub> {
     private ModuleServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -327,14 +352,28 @@ public final class ModuleServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getReadyMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * ValidateConfig determines whether the given config is valid and registers/returns implicit
+     * dependencies.
+     * </pre>
+     */
+    public void validateConfig(viam.module.v1.Module.ValidateConfigRequest request,
+        io.grpc.stub.StreamObserver<viam.module.v1.Module.ValidateConfigResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getValidateConfigMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ModuleService.
    * <pre>
    * ModuleService deals with modular resource registration
    * </pre>
    */
-  public static final class ModuleServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ModuleServiceBlockingStub> {
+  public static final class ModuleServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ModuleServiceBlockingStub> {
     private ModuleServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -385,14 +424,27 @@ public final class ModuleServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getReadyMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * ValidateConfig determines whether the given config is valid and registers/returns implicit
+     * dependencies.
+     * </pre>
+     */
+    public viam.module.v1.Module.ValidateConfigResponse validateConfig(viam.module.v1.Module.ValidateConfigRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getValidateConfigMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ModuleService.
    * <pre>
    * ModuleService deals with modular resource registration
    * </pre>
    */
-  public static final class ModuleServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ModuleServiceFutureStub> {
+  public static final class ModuleServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ModuleServiceFutureStub> {
     private ModuleServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -447,22 +499,35 @@ public final class ModuleServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getReadyMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * ValidateConfig determines whether the given config is valid and registers/returns implicit
+     * dependencies.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.module.v1.Module.ValidateConfigResponse> validateConfig(
+        viam.module.v1.Module.ValidateConfigRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getValidateConfigMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_ADD_RESOURCE = 0;
   private static final int METHODID_RECONFIGURE_RESOURCE = 1;
   private static final int METHODID_REMOVE_RESOURCE = 2;
   private static final int METHODID_READY = 3;
+  private static final int METHODID_VALIDATE_CONFIG = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ModuleServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ModuleServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -487,6 +552,10 @@ public final class ModuleServiceGrpc {
           serviceImpl.ready((viam.module.v1.Module.ReadyRequest) request,
               (io.grpc.stub.StreamObserver<viam.module.v1.Module.ReadyResponse>) responseObserver);
           break;
+        case METHODID_VALIDATE_CONFIG:
+          serviceImpl.validateConfig((viam.module.v1.Module.ValidateConfigRequest) request,
+              (io.grpc.stub.StreamObserver<viam.module.v1.Module.ValidateConfigResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -501,6 +570,46 @@ public final class ModuleServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getAddResourceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.module.v1.Module.AddResourceRequest,
+              viam.module.v1.Module.AddResourceResponse>(
+                service, METHODID_ADD_RESOURCE)))
+        .addMethod(
+          getReconfigureResourceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.module.v1.Module.ReconfigureResourceRequest,
+              viam.module.v1.Module.ReconfigureResourceResponse>(
+                service, METHODID_RECONFIGURE_RESOURCE)))
+        .addMethod(
+          getRemoveResourceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.module.v1.Module.RemoveResourceRequest,
+              viam.module.v1.Module.RemoveResourceResponse>(
+                service, METHODID_REMOVE_RESOURCE)))
+        .addMethod(
+          getReadyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.module.v1.Module.ReadyRequest,
+              viam.module.v1.Module.ReadyResponse>(
+                service, METHODID_READY)))
+        .addMethod(
+          getValidateConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.module.v1.Module.ValidateConfigRequest,
+              viam.module.v1.Module.ValidateConfigResponse>(
+                service, METHODID_VALIDATE_CONFIG)))
+        .build();
   }
 
   private static abstract class ModuleServiceBaseDescriptorSupplier
@@ -526,9 +635,9 @@ public final class ModuleServiceGrpc {
   private static final class ModuleServiceMethodDescriptorSupplier
       extends ModuleServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ModuleServiceMethodDescriptorSupplier(String methodName) {
+    ModuleServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -552,6 +661,7 @@ public final class ModuleServiceGrpc {
               .addMethod(getReconfigureResourceMethod())
               .addMethod(getRemoveResourceMethod())
               .addMethod(getReadyMethod())
+              .addMethod(getValidateConfigMethod())
               .build();
         }
       }

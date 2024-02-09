@@ -1,13 +1,12 @@
 package com.viam.sdk.core;
 
+import proto.rpc.v1.Auth.Credentials;
 import com.viam.sdk.core.webrtc.DialWebRTCOptions;
-
-import proto.rpc.v1.Auth;
 
 public class DialOptions {
     public boolean insecure;
     public String authEntity;
-    public Auth.Credentials credentials;
+    public Credentials credentials;
     public DialWebRTCOptions webrtcOptions;
     public String externalAuthAddress;
     public String externalAuthToEntity;

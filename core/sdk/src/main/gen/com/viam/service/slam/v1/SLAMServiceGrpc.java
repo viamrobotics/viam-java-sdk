@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: service/slam/v1/slam.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SLAMServiceGrpc {
 
   private SLAMServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.service.slam.v1.SLAMService";
+  public static final java.lang.String SERVICE_NAME = "viam.service.slam.v1.SLAMService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.service.slam.v1.Slam.GetPositionRequest,
@@ -49,35 +49,128 @@ public final class SLAMServiceGrpc {
     return getGetPositionMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.viam.service.slam.v1.Slam.GetMapRequest,
-      com.viam.service.slam.v1.Slam.GetMapResponse> getGetMapMethod;
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.slam.v1.Slam.GetPointCloudMapRequest,
+      com.viam.service.slam.v1.Slam.GetPointCloudMapResponse> getGetPointCloudMapMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetMap",
-      requestType = com.viam.service.slam.v1.Slam.GetMapRequest.class,
-      responseType = com.viam.service.slam.v1.Slam.GetMapResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.service.slam.v1.Slam.GetMapRequest,
-      com.viam.service.slam.v1.Slam.GetMapResponse> getGetMapMethod() {
-    io.grpc.MethodDescriptor<com.viam.service.slam.v1.Slam.GetMapRequest, com.viam.service.slam.v1.Slam.GetMapResponse> getGetMapMethod;
-    if ((getGetMapMethod = SLAMServiceGrpc.getGetMapMethod) == null) {
+      fullMethodName = SERVICE_NAME + '/' + "GetPointCloudMap",
+      requestType = com.viam.service.slam.v1.Slam.GetPointCloudMapRequest.class,
+      responseType = com.viam.service.slam.v1.Slam.GetPointCloudMapResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.viam.service.slam.v1.Slam.GetPointCloudMapRequest,
+      com.viam.service.slam.v1.Slam.GetPointCloudMapResponse> getGetPointCloudMapMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.slam.v1.Slam.GetPointCloudMapRequest, com.viam.service.slam.v1.Slam.GetPointCloudMapResponse> getGetPointCloudMapMethod;
+    if ((getGetPointCloudMapMethod = SLAMServiceGrpc.getGetPointCloudMapMethod) == null) {
       synchronized (SLAMServiceGrpc.class) {
-        if ((getGetMapMethod = SLAMServiceGrpc.getGetMapMethod) == null) {
-          SLAMServiceGrpc.getGetMapMethod = getGetMapMethod =
-              io.grpc.MethodDescriptor.<com.viam.service.slam.v1.Slam.GetMapRequest, com.viam.service.slam.v1.Slam.GetMapResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMap"))
+        if ((getGetPointCloudMapMethod = SLAMServiceGrpc.getGetPointCloudMapMethod) == null) {
+          SLAMServiceGrpc.getGetPointCloudMapMethod = getGetPointCloudMapMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.slam.v1.Slam.GetPointCloudMapRequest, com.viam.service.slam.v1.Slam.GetPointCloudMapResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPointCloudMap"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.slam.v1.Slam.GetMapRequest.getDefaultInstance()))
+                  com.viam.service.slam.v1.Slam.GetPointCloudMapRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.slam.v1.Slam.GetMapResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new SLAMServiceMethodDescriptorSupplier("GetMap"))
+                  com.viam.service.slam.v1.Slam.GetPointCloudMapResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SLAMServiceMethodDescriptorSupplier("GetPointCloudMap"))
               .build();
         }
       }
     }
-    return getGetMapMethod;
+    return getGetPointCloudMapMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.slam.v1.Slam.GetInternalStateRequest,
+      com.viam.service.slam.v1.Slam.GetInternalStateResponse> getGetInternalStateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetInternalState",
+      requestType = com.viam.service.slam.v1.Slam.GetInternalStateRequest.class,
+      responseType = com.viam.service.slam.v1.Slam.GetInternalStateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.viam.service.slam.v1.Slam.GetInternalStateRequest,
+      com.viam.service.slam.v1.Slam.GetInternalStateResponse> getGetInternalStateMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.slam.v1.Slam.GetInternalStateRequest, com.viam.service.slam.v1.Slam.GetInternalStateResponse> getGetInternalStateMethod;
+    if ((getGetInternalStateMethod = SLAMServiceGrpc.getGetInternalStateMethod) == null) {
+      synchronized (SLAMServiceGrpc.class) {
+        if ((getGetInternalStateMethod = SLAMServiceGrpc.getGetInternalStateMethod) == null) {
+          SLAMServiceGrpc.getGetInternalStateMethod = getGetInternalStateMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.slam.v1.Slam.GetInternalStateRequest, com.viam.service.slam.v1.Slam.GetInternalStateResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetInternalState"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.service.slam.v1.Slam.GetInternalStateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.service.slam.v1.Slam.GetInternalStateResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SLAMServiceMethodDescriptorSupplier("GetInternalState"))
+              .build();
+        }
+      }
+    }
+    return getGetInternalStateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.slam.v1.Slam.GetPropertiesRequest,
+      com.viam.service.slam.v1.Slam.GetPropertiesResponse> getGetPropertiesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetProperties",
+      requestType = com.viam.service.slam.v1.Slam.GetPropertiesRequest.class,
+      responseType = com.viam.service.slam.v1.Slam.GetPropertiesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.service.slam.v1.Slam.GetPropertiesRequest,
+      com.viam.service.slam.v1.Slam.GetPropertiesResponse> getGetPropertiesMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.slam.v1.Slam.GetPropertiesRequest, com.viam.service.slam.v1.Slam.GetPropertiesResponse> getGetPropertiesMethod;
+    if ((getGetPropertiesMethod = SLAMServiceGrpc.getGetPropertiesMethod) == null) {
+      synchronized (SLAMServiceGrpc.class) {
+        if ((getGetPropertiesMethod = SLAMServiceGrpc.getGetPropertiesMethod) == null) {
+          SLAMServiceGrpc.getGetPropertiesMethod = getGetPropertiesMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.slam.v1.Slam.GetPropertiesRequest, com.viam.service.slam.v1.Slam.GetPropertiesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProperties"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.service.slam.v1.Slam.GetPropertiesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.service.slam.v1.Slam.GetPropertiesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SLAMServiceMethodDescriptorSupplier("GetProperties"))
+              .build();
+        }
+      }
+    }
+    return getGetPropertiesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = SLAMServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (SLAMServiceGrpc.class) {
+        if ((getDoCommandMethod = SLAMServiceGrpc.getDoCommandMethod) == null) {
+          SLAMServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SLAMServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
   }
 
   /**
@@ -129,56 +222,87 @@ public final class SLAMServiceGrpc {
    * A SlamService declares the gRPC contract for a slam service
    * </pre>
    */
-  public static abstract class SLAMServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * GetPosition returns the current estimated position of the robot with
-     * respect to the "origin" of the map.
+     * respect to a returned component reference.
      * </pre>
      */
-    public void getPosition(com.viam.service.slam.v1.Slam.GetPositionRequest request,
+    default void getPosition(com.viam.service.slam.v1.Slam.GetPositionRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetPositionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPositionMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * GetMap returns the latest map image or point cloud generated by the
-     * SLAM library
+     * GetPointCloudMap returns the latest pointcloud map available where XY is the ground
+     * plane and positive Z is up, following the Right Hand Rule.
      * </pre>
      */
-    public void getMap(com.viam.service.slam.v1.Slam.GetMapRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetMapResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMapMethod(), responseObserver);
+    default void getPointCloudMap(com.viam.service.slam.v1.Slam.GetPointCloudMapRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetPointCloudMapResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPointCloudMapMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetPositionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.slam.v1.Slam.GetPositionRequest,
-                com.viam.service.slam.v1.Slam.GetPositionResponse>(
-                  this, METHODID_GET_POSITION)))
-          .addMethod(
-            getGetMapMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.slam.v1.Slam.GetMapRequest,
-                com.viam.service.slam.v1.Slam.GetMapResponse>(
-                  this, METHODID_GET_MAP)))
-          .build();
+    /**
+     * <pre>
+     * GetInternalState returns the internal map as defined by the specified slam
+     * algorithm required to continue mapping/localizing.
+     * This endpoint is not intended for end users.
+     * </pre>
+     */
+    default void getInternalState(com.viam.service.slam.v1.Slam.GetInternalStateRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetInternalStateResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInternalStateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns properties of the current slam service including mapping_mode
+     * and cloud_slam, where mapping_mode is the type of mapping/localizing being performed
+     * and cloud_slam is a boolean representing if this SLAM service is being run in the cloud.
+     * </pre>
+     */
+    default void getProperties(com.viam.service.slam.v1.Slam.GetPropertiesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetPropertiesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPropertiesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands.
+     * </pre>
+     */
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service SLAMService.
    * <pre>
    * A SlamService declares the gRPC contract for a slam service
    * </pre>
    */
-  public static final class SLAMServiceStub extends io.grpc.stub.AbstractAsyncStub<SLAMServiceStub> {
+  public static abstract class SLAMServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return SLAMServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service SLAMService.
+   * <pre>
+   * A SlamService declares the gRPC contract for a slam service
+   * </pre>
+   */
+  public static final class SLAMServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<SLAMServiceStub> {
     private SLAMServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -193,7 +317,7 @@ public final class SLAMServiceGrpc {
     /**
      * <pre>
      * GetPosition returns the current estimated position of the robot with
-     * respect to the "origin" of the map.
+     * respect to a returned component reference.
      * </pre>
      */
     public void getPosition(com.viam.service.slam.v1.Slam.GetPositionRequest request,
@@ -204,23 +328,62 @@ public final class SLAMServiceGrpc {
 
     /**
      * <pre>
-     * GetMap returns the latest map image or point cloud generated by the
-     * SLAM library
+     * GetPointCloudMap returns the latest pointcloud map available where XY is the ground
+     * plane and positive Z is up, following the Right Hand Rule.
      * </pre>
      */
-    public void getMap(com.viam.service.slam.v1.Slam.GetMapRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetMapResponse> responseObserver) {
+    public void getPointCloudMap(com.viam.service.slam.v1.Slam.GetPointCloudMapRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetPointCloudMapResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getGetPointCloudMapMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetInternalState returns the internal map as defined by the specified slam
+     * algorithm required to continue mapping/localizing.
+     * This endpoint is not intended for end users.
+     * </pre>
+     */
+    public void getInternalState(com.viam.service.slam.v1.Slam.GetInternalStateRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetInternalStateResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getGetInternalStateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns properties of the current slam service including mapping_mode
+     * and cloud_slam, where mapping_mode is the type of mapping/localizing being performed
+     * and cloud_slam is a boolean representing if this SLAM service is being run in the cloud.
+     * </pre>
+     */
+    public void getProperties(com.viam.service.slam.v1.Slam.GetPropertiesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetPropertiesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetMapMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetPropertiesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands.
+     * </pre>
+     */
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service SLAMService.
    * <pre>
    * A SlamService declares the gRPC contract for a slam service
    * </pre>
    */
-  public static final class SLAMServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SLAMServiceBlockingStub> {
+  public static final class SLAMServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<SLAMServiceBlockingStub> {
     private SLAMServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -235,7 +398,7 @@ public final class SLAMServiceGrpc {
     /**
      * <pre>
      * GetPosition returns the current estimated position of the robot with
-     * respect to the "origin" of the map.
+     * respect to a returned component reference.
      * </pre>
      */
     public com.viam.service.slam.v1.Slam.GetPositionResponse getPosition(com.viam.service.slam.v1.Slam.GetPositionRequest request) {
@@ -245,22 +408,60 @@ public final class SLAMServiceGrpc {
 
     /**
      * <pre>
-     * GetMap returns the latest map image or point cloud generated by the
-     * SLAM library
+     * GetPointCloudMap returns the latest pointcloud map available where XY is the ground
+     * plane and positive Z is up, following the Right Hand Rule.
      * </pre>
      */
-    public com.viam.service.slam.v1.Slam.GetMapResponse getMap(com.viam.service.slam.v1.Slam.GetMapRequest request) {
+    public java.util.Iterator<com.viam.service.slam.v1.Slam.GetPointCloudMapResponse> getPointCloudMap(
+        com.viam.service.slam.v1.Slam.GetPointCloudMapRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getGetPointCloudMapMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetInternalState returns the internal map as defined by the specified slam
+     * algorithm required to continue mapping/localizing.
+     * This endpoint is not intended for end users.
+     * </pre>
+     */
+    public java.util.Iterator<com.viam.service.slam.v1.Slam.GetInternalStateResponse> getInternalState(
+        com.viam.service.slam.v1.Slam.GetInternalStateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getGetInternalStateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns properties of the current slam service including mapping_mode
+     * and cloud_slam, where mapping_mode is the type of mapping/localizing being performed
+     * and cloud_slam is a boolean representing if this SLAM service is being run in the cloud.
+     * </pre>
+     */
+    public com.viam.service.slam.v1.Slam.GetPropertiesResponse getProperties(com.viam.service.slam.v1.Slam.GetPropertiesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetMapMethod(), getCallOptions(), request);
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands.
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service SLAMService.
    * <pre>
    * A SlamService declares the gRPC contract for a slam service
    * </pre>
    */
-  public static final class SLAMServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SLAMServiceFutureStub> {
+  public static final class SLAMServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<SLAMServiceFutureStub> {
     private SLAMServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -275,7 +476,7 @@ public final class SLAMServiceGrpc {
     /**
      * <pre>
      * GetPosition returns the current estimated position of the robot with
-     * respect to the "origin" of the map.
+     * respect to a returned component reference.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.viam.service.slam.v1.Slam.GetPositionResponse> getPosition(
@@ -286,29 +487,44 @@ public final class SLAMServiceGrpc {
 
     /**
      * <pre>
-     * GetMap returns the latest map image or point cloud generated by the
-     * SLAM library
+     * GetProperties returns properties of the current slam service including mapping_mode
+     * and cloud_slam, where mapping_mode is the type of mapping/localizing being performed
+     * and cloud_slam is a boolean representing if this SLAM service is being run in the cloud.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.slam.v1.Slam.GetMapResponse> getMap(
-        com.viam.service.slam.v1.Slam.GetMapRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.slam.v1.Slam.GetPropertiesResponse> getProperties(
+        com.viam.service.slam.v1.Slam.GetPropertiesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetMapMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetPropertiesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_GET_POSITION = 0;
-  private static final int METHODID_GET_MAP = 1;
+  private static final int METHODID_GET_POINT_CLOUD_MAP = 1;
+  private static final int METHODID_GET_INTERNAL_STATE = 2;
+  private static final int METHODID_GET_PROPERTIES = 3;
+  private static final int METHODID_DO_COMMAND = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SLAMServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SLAMServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -321,9 +537,21 @@ public final class SLAMServiceGrpc {
           serviceImpl.getPosition((com.viam.service.slam.v1.Slam.GetPositionRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetPositionResponse>) responseObserver);
           break;
-        case METHODID_GET_MAP:
-          serviceImpl.getMap((com.viam.service.slam.v1.Slam.GetMapRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetMapResponse>) responseObserver);
+        case METHODID_GET_POINT_CLOUD_MAP:
+          serviceImpl.getPointCloudMap((com.viam.service.slam.v1.Slam.GetPointCloudMapRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetPointCloudMapResponse>) responseObserver);
+          break;
+        case METHODID_GET_INTERNAL_STATE:
+          serviceImpl.getInternalState((com.viam.service.slam.v1.Slam.GetInternalStateRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetInternalStateResponse>) responseObserver);
+          break;
+        case METHODID_GET_PROPERTIES:
+          serviceImpl.getProperties((com.viam.service.slam.v1.Slam.GetPropertiesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.service.slam.v1.Slam.GetPropertiesResponse>) responseObserver);
+          break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -339,6 +567,46 @@ public final class SLAMServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetPositionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.slam.v1.Slam.GetPositionRequest,
+              com.viam.service.slam.v1.Slam.GetPositionResponse>(
+                service, METHODID_GET_POSITION)))
+        .addMethod(
+          getGetPointCloudMapMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.viam.service.slam.v1.Slam.GetPointCloudMapRequest,
+              com.viam.service.slam.v1.Slam.GetPointCloudMapResponse>(
+                service, METHODID_GET_POINT_CLOUD_MAP)))
+        .addMethod(
+          getGetInternalStateMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.viam.service.slam.v1.Slam.GetInternalStateRequest,
+              com.viam.service.slam.v1.Slam.GetInternalStateResponse>(
+                service, METHODID_GET_INTERNAL_STATE)))
+        .addMethod(
+          getGetPropertiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.slam.v1.Slam.GetPropertiesRequest,
+              com.viam.service.slam.v1.Slam.GetPropertiesResponse>(
+                service, METHODID_GET_PROPERTIES)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .build();
   }
 
   private static abstract class SLAMServiceBaseDescriptorSupplier
@@ -364,9 +632,9 @@ public final class SLAMServiceGrpc {
   private static final class SLAMServiceMethodDescriptorSupplier
       extends SLAMServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    SLAMServiceMethodDescriptorSupplier(String methodName) {
+    SLAMServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -387,7 +655,10 @@ public final class SLAMServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SLAMServiceFileDescriptorSupplier())
               .addMethod(getGetPositionMethod())
-              .addMethod(getGetMapMethod())
+              .addMethod(getGetPointCloudMapMethod())
+              .addMethod(getGetInternalStateMethod())
+              .addMethod(getGetPropertiesMethod())
+              .addMethod(getDoCommandMethod())
               .build();
         }
       }

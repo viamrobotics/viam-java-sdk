@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: app/v1/robot.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class RobotServiceGrpc {
 
   private RobotServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.app.v1.RobotService";
+  public static final java.lang.String SERVICE_NAME = "viam.app.v1.RobotService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<viam.app.v1.Robot.ConfigRequest,
@@ -191,14 +191,14 @@ public final class RobotServiceGrpc {
    * RobotService is used by robots to retrieve configs, report logs, etc...
    * </pre>
    */
-  public static abstract class RobotServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * Config requests the current robot config
      * </pre>
      */
-    public void config(viam.app.v1.Robot.ConfigRequest request,
+    default void config(viam.app.v1.Robot.ConfigRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.Robot.ConfigResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getConfigMethod(), responseObserver);
     }
@@ -208,7 +208,7 @@ public final class RobotServiceGrpc {
      * Certificate requests the current robot certificate
      * </pre>
      */
-    public void certificate(viam.app.v1.Robot.CertificateRequest request,
+    default void certificate(viam.app.v1.Robot.CertificateRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.Robot.CertificateResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCertificateMethod(), responseObserver);
     }
@@ -218,7 +218,7 @@ public final class RobotServiceGrpc {
      * Log insert log entries associated with the robot. Allows up to 1000 entries to be added in one request.
      * </pre>
      */
-    public void log(viam.app.v1.Robot.LogRequest request,
+    default void log(viam.app.v1.Robot.LogRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.Robot.LogResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLogMethod(), responseObserver);
     }
@@ -228,51 +228,34 @@ public final class RobotServiceGrpc {
      * NeedsRestart returns if the robot should restart and the interval it should check to restart.
      * </pre>
      */
-    public void needsRestart(viam.app.v1.Robot.NeedsRestartRequest request,
+    default void needsRestart(viam.app.v1.Robot.NeedsRestartRequest request,
         io.grpc.stub.StreamObserver<viam.app.v1.Robot.NeedsRestartResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getNeedsRestartMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.v1.Robot.ConfigRequest,
-                viam.app.v1.Robot.ConfigResponse>(
-                  this, METHODID_CONFIG)))
-          .addMethod(
-            getCertificateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.v1.Robot.CertificateRequest,
-                viam.app.v1.Robot.CertificateResponse>(
-                  this, METHODID_CERTIFICATE)))
-          .addMethod(
-            getLogMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.v1.Robot.LogRequest,
-                viam.app.v1.Robot.LogResponse>(
-                  this, METHODID_LOG)))
-          .addMethod(
-            getNeedsRestartMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.v1.Robot.NeedsRestartRequest,
-                viam.app.v1.Robot.NeedsRestartResponse>(
-                  this, METHODID_NEEDS_RESTART)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service RobotService.
    * <pre>
    * RobotService is used by robots to retrieve configs, report logs, etc...
    * </pre>
    */
-  public static final class RobotServiceStub extends io.grpc.stub.AbstractAsyncStub<RobotServiceStub> {
+  public static abstract class RobotServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return RobotServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service RobotService.
+   * <pre>
+   * RobotService is used by robots to retrieve configs, report logs, etc...
+   * </pre>
+   */
+  public static final class RobotServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<RobotServiceStub> {
     private RobotServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -330,11 +313,13 @@ public final class RobotServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service RobotService.
    * <pre>
    * RobotService is used by robots to retrieve configs, report logs, etc...
    * </pre>
    */
-  public static final class RobotServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<RobotServiceBlockingStub> {
+  public static final class RobotServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<RobotServiceBlockingStub> {
     private RobotServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -388,11 +373,13 @@ public final class RobotServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service RobotService.
    * <pre>
    * RobotService is used by robots to retrieve configs, report logs, etc...
    * </pre>
    */
-  public static final class RobotServiceFutureStub extends io.grpc.stub.AbstractFutureStub<RobotServiceFutureStub> {
+  public static final class RobotServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<RobotServiceFutureStub> {
     private RobotServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -459,10 +446,10 @@ public final class RobotServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final RobotServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(RobotServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -503,6 +490,39 @@ public final class RobotServiceGrpc {
     }
   }
 
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.Robot.ConfigRequest,
+              viam.app.v1.Robot.ConfigResponse>(
+                service, METHODID_CONFIG)))
+        .addMethod(
+          getCertificateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.Robot.CertificateRequest,
+              viam.app.v1.Robot.CertificateResponse>(
+                service, METHODID_CERTIFICATE)))
+        .addMethod(
+          getLogMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.Robot.LogRequest,
+              viam.app.v1.Robot.LogResponse>(
+                service, METHODID_LOG)))
+        .addMethod(
+          getNeedsRestartMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.Robot.NeedsRestartRequest,
+              viam.app.v1.Robot.NeedsRestartResponse>(
+                service, METHODID_NEEDS_RESTART)))
+        .build();
+  }
+
   private static abstract class RobotServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     RobotServiceBaseDescriptorSupplier() {}
@@ -526,9 +546,9 @@ public final class RobotServiceGrpc {
   private static final class RobotServiceMethodDescriptorSupplier
       extends RobotServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    RobotServiceMethodDescriptorSupplier(String methodName) {
+    RobotServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

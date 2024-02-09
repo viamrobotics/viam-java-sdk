@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: proto/rpc/examples/echo/v1/echo.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class EchoServiceGrpc {
 
   private EchoServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "proto.rpc.examples.echo.v1.EchoService";
+  public static final java.lang.String SERVICE_NAME = "proto.rpc.examples.echo.v1.EchoService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<proto.rpc.examples.echo.v1.Echo.EchoRequest,
@@ -154,59 +154,46 @@ public final class EchoServiceGrpc {
 
   /**
    */
-  public static abstract class EchoServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void echo(proto.rpc.examples.echo.v1.Echo.EchoRequest request,
+    default void echo(proto.rpc.examples.echo.v1.Echo.EchoRequest request,
         io.grpc.stub.StreamObserver<proto.rpc.examples.echo.v1.Echo.EchoResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEchoMethod(), responseObserver);
     }
 
     /**
      */
-    public void echoMultiple(proto.rpc.examples.echo.v1.Echo.EchoMultipleRequest request,
+    default void echoMultiple(proto.rpc.examples.echo.v1.Echo.EchoMultipleRequest request,
         io.grpc.stub.StreamObserver<proto.rpc.examples.echo.v1.Echo.EchoMultipleResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEchoMultipleMethod(), responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<proto.rpc.examples.echo.v1.Echo.EchoBiDiRequest> echoBiDi(
+    default io.grpc.stub.StreamObserver<proto.rpc.examples.echo.v1.Echo.EchoBiDiRequest> echoBiDi(
         io.grpc.stub.StreamObserver<proto.rpc.examples.echo.v1.Echo.EchoBiDiResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getEchoBiDiMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getEchoMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                proto.rpc.examples.echo.v1.Echo.EchoRequest,
-                proto.rpc.examples.echo.v1.Echo.EchoResponse>(
-                  this, METHODID_ECHO)))
-          .addMethod(
-            getEchoMultipleMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                proto.rpc.examples.echo.v1.Echo.EchoMultipleRequest,
-                proto.rpc.examples.echo.v1.Echo.EchoMultipleResponse>(
-                  this, METHODID_ECHO_MULTIPLE)))
-          .addMethod(
-            getEchoBiDiMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                proto.rpc.examples.echo.v1.Echo.EchoBiDiRequest,
-                proto.rpc.examples.echo.v1.Echo.EchoBiDiResponse>(
-                  this, METHODID_ECHO_BI_DI)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service EchoService.
    */
-  public static final class EchoServiceStub extends io.grpc.stub.AbstractAsyncStub<EchoServiceStub> {
+  public static abstract class EchoServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return EchoServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service EchoService.
+   */
+  public static final class EchoServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<EchoServiceStub> {
     private EchoServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -244,8 +231,10 @@ public final class EchoServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service EchoService.
    */
-  public static final class EchoServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<EchoServiceBlockingStub> {
+  public static final class EchoServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<EchoServiceBlockingStub> {
     private EchoServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -274,8 +263,10 @@ public final class EchoServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service EchoService.
    */
-  public static final class EchoServiceFutureStub extends io.grpc.stub.AbstractFutureStub<EchoServiceFutureStub> {
+  public static final class EchoServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<EchoServiceFutureStub> {
     private EchoServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -305,10 +296,10 @@ public final class EchoServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final EchoServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(EchoServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -344,6 +335,32 @@ public final class EchoServiceGrpc {
     }
   }
 
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getEchoMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.rpc.examples.echo.v1.Echo.EchoRequest,
+              proto.rpc.examples.echo.v1.Echo.EchoResponse>(
+                service, METHODID_ECHO)))
+        .addMethod(
+          getEchoMultipleMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              proto.rpc.examples.echo.v1.Echo.EchoMultipleRequest,
+              proto.rpc.examples.echo.v1.Echo.EchoMultipleResponse>(
+                service, METHODID_ECHO_MULTIPLE)))
+        .addMethod(
+          getEchoBiDiMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              proto.rpc.examples.echo.v1.Echo.EchoBiDiRequest,
+              proto.rpc.examples.echo.v1.Echo.EchoBiDiResponse>(
+                service, METHODID_ECHO_BI_DI)))
+        .build();
+  }
+
   private static abstract class EchoServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     EchoServiceBaseDescriptorSupplier() {}
@@ -367,9 +384,9 @@ public final class EchoServiceGrpc {
   private static final class EchoServiceMethodDescriptorSupplier
       extends EchoServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    EchoServiceMethodDescriptorSupplier(String methodName) {
+    EchoServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

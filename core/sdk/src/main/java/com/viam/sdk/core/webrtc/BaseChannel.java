@@ -65,11 +65,6 @@ public class BaseChannel implements DataChannel.Observer {
     }
 
     @Override
-    public void onBufferedAmountChange(long previousAmount) {
-
-    }
-
-    @Override
     public void onStateChange() {
         switch (this.rpcConn.dataChannel.state()) {
             case CONNECTING:

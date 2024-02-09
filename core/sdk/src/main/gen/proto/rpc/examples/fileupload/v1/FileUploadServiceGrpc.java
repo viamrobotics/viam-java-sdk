@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: proto/rpc/examples/fileupload/v1/fileupload.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class FileUploadServiceGrpc {
 
   private FileUploadServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "proto.rpc.examples.fileupload.v1.FileUploadService";
+  public static final java.lang.String SERVICE_NAME = "proto.rpc.examples.fileupload.v1.FileUploadService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest,
@@ -92,7 +92,7 @@ public final class FileUploadServiceGrpc {
 
   /**
    */
-  public static abstract class FileUploadServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -100,27 +100,28 @@ public final class FileUploadServiceGrpc {
      * we use a streaming response but only expect one response.
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest> uploadFile(
+    default io.grpc.stub.StreamObserver<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest> uploadFile(
         io.grpc.stub.StreamObserver<proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getUploadFileMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getUploadFileMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest,
-                proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse>(
-                  this, METHODID_UPLOAD_FILE)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service FileUploadService.
    */
-  public static final class FileUploadServiceStub extends io.grpc.stub.AbstractAsyncStub<FileUploadServiceStub> {
+  public static abstract class FileUploadServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return FileUploadServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service FileUploadService.
+   */
+  public static final class FileUploadServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<FileUploadServiceStub> {
     private FileUploadServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -146,8 +147,10 @@ public final class FileUploadServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service FileUploadService.
    */
-  public static final class FileUploadServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<FileUploadServiceBlockingStub> {
+  public static final class FileUploadServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<FileUploadServiceBlockingStub> {
     private FileUploadServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -161,8 +164,10 @@ public final class FileUploadServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service FileUploadService.
    */
-  public static final class FileUploadServiceFutureStub extends io.grpc.stub.AbstractFutureStub<FileUploadServiceFutureStub> {
+  public static final class FileUploadServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<FileUploadServiceFutureStub> {
     private FileUploadServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -182,10 +187,10 @@ public final class FileUploadServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final FileUploadServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(FileUploadServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -213,6 +218,18 @@ public final class FileUploadServiceGrpc {
     }
   }
 
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getUploadFileMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              proto.rpc.examples.fileupload.v1.Fileupload.UploadFileRequest,
+              proto.rpc.examples.fileupload.v1.Fileupload.UploadFileResponse>(
+                service, METHODID_UPLOAD_FILE)))
+        .build();
+  }
+
   private static abstract class FileUploadServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     FileUploadServiceBaseDescriptorSupplier() {}
@@ -236,9 +253,9 @@ public final class FileUploadServiceGrpc {
   private static final class FileUploadServiceMethodDescriptorSupplier
       extends FileUploadServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    FileUploadServiceMethodDescriptorSupplier(String methodName) {
+    FileUploadServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

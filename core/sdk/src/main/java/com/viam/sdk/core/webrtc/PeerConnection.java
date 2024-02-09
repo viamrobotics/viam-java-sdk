@@ -22,7 +22,7 @@ public interface PeerConnection {
     void close();
 
     class RTCConfiguration {
-        public List<ICEServer> iceServers;
+        public final List<ICEServer> iceServers;
         public BundlePolicy bundlePolicy;
         public SDPSemantics sdpSemantics;
 

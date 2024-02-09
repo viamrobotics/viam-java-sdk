@@ -1,18 +1,19 @@
 package com.viam.sdk.java.examples;
 
-import com.viam.component.movementsensor.v1.Movementsensor;
 import com.viam.component.movementsensor.v1.MovementSensorServiceGrpc;
+import com.viam.component.movementsensor.v1.Movementsensor;
 import com.viam.robot.v1.Robot;
 import com.viam.robot.v1.RobotServiceGrpc;
 import com.viam.sdk.core.DialOptions;
 import com.viam.sdk.core.webrtc.DialWebRTCOptions;
 import com.viam.sdk.java.Dialer;
-import proto.rpc.v1.Auth;
-import proto.stream.v1.Stream;
-import proto.stream.v1.StreamServiceGrpc;
 
 import java.util.concurrent.ExecutionException;
 import java.util.logging.Logger;
+
+import proto.rpc.v1.Auth;
+import proto.stream.v1.Stream;
+import proto.stream.v1.StreamServiceGrpc;
 
 // Connects to an authenticated server over WebRTC.
 public class Example2Client {

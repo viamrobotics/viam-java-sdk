@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: robot/v1/robot.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class RobotServiceGrpc {
 
   private RobotServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.robot.v1.RobotService";
+  public static final java.lang.String SERVICE_NAME = "viam.robot.v1.RobotService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetOperationsRequest,
@@ -297,6 +297,37 @@ public final class RobotServiceGrpc {
     return getTransformPoseMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPCDRequest,
+      com.viam.robot.v1.Robot.TransformPCDResponse> getTransformPCDMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TransformPCD",
+      requestType = com.viam.robot.v1.Robot.TransformPCDRequest.class,
+      responseType = com.viam.robot.v1.Robot.TransformPCDResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPCDRequest,
+      com.viam.robot.v1.Robot.TransformPCDResponse> getTransformPCDMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.TransformPCDRequest, com.viam.robot.v1.Robot.TransformPCDResponse> getTransformPCDMethod;
+    if ((getTransformPCDMethod = RobotServiceGrpc.getTransformPCDMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getTransformPCDMethod = RobotServiceGrpc.getTransformPCDMethod) == null) {
+          RobotServiceGrpc.getTransformPCDMethod = getTransformPCDMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.TransformPCDRequest, com.viam.robot.v1.Robot.TransformPCDResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TransformPCD"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.robot.v1.Robot.TransformPCDRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.robot.v1.Robot.TransformPCDResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("TransformPCD"))
+              .build();
+        }
+      }
+    }
+    return getTransformPCDMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetStatusRequest,
       com.viam.robot.v1.Robot.GetStatusResponse> getGetStatusMethod;
 
@@ -452,6 +483,37 @@ public final class RobotServiceGrpc {
     return getSendSessionHeartbeatMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.LogRequest,
+      com.viam.robot.v1.Robot.LogResponse> getLogMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Log",
+      requestType = com.viam.robot.v1.Robot.LogRequest.class,
+      responseType = com.viam.robot.v1.Robot.LogResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.LogRequest,
+      com.viam.robot.v1.Robot.LogResponse> getLogMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.LogRequest, com.viam.robot.v1.Robot.LogResponse> getLogMethod;
+    if ((getLogMethod = RobotServiceGrpc.getLogMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getLogMethod = RobotServiceGrpc.getLogMethod) == null) {
+          RobotServiceGrpc.getLogMethod = getLogMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.LogRequest, com.viam.robot.v1.Robot.LogResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Log"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.robot.v1.Robot.LogRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.robot.v1.Robot.LogResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("Log"))
+              .build();
+        }
+      }
+    }
+    return getLogMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -501,18 +563,18 @@ public final class RobotServiceGrpc {
    * A RobotService encompasses all functionality of some robot comprised of parts, local and remote.
    * </pre>
    */
-  public static abstract class RobotServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void getOperations(com.viam.robot.v1.Robot.GetOperationsRequest request,
+    default void getOperations(com.viam.robot.v1.Robot.GetOperationsRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetOperationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOperationsMethod(), responseObserver);
     }
 
     /**
      */
-    public void getSessions(com.viam.robot.v1.Robot.GetSessionsRequest request,
+    default void getSessions(com.viam.robot.v1.Robot.GetSessionsRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetSessionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSessionsMethod(), responseObserver);
     }
@@ -522,7 +584,7 @@ public final class RobotServiceGrpc {
      * ResourceNames returns the list of all resources.
      * </pre>
      */
-    public void resourceNames(com.viam.robot.v1.Robot.ResourceNamesRequest request,
+    default void resourceNames(com.viam.robot.v1.Robot.ResourceNamesRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.ResourceNamesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResourceNamesMethod(), responseObserver);
     }
@@ -532,21 +594,21 @@ public final class RobotServiceGrpc {
      * ResourceRPCSubtypes returns the list of all resource types.
      * </pre>
      */
-    public void resourceRPCSubtypes(com.viam.robot.v1.Robot.ResourceRPCSubtypesRequest request,
+    default void resourceRPCSubtypes(com.viam.robot.v1.Robot.ResourceRPCSubtypesRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.ResourceRPCSubtypesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResourceRPCSubtypesMethod(), responseObserver);
     }
 
     /**
      */
-    public void cancelOperation(com.viam.robot.v1.Robot.CancelOperationRequest request,
+    default void cancelOperation(com.viam.robot.v1.Robot.CancelOperationRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.CancelOperationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCancelOperationMethod(), responseObserver);
     }
 
     /**
      */
-    public void blockForOperation(com.viam.robot.v1.Robot.BlockForOperationRequest request,
+    default void blockForOperation(com.viam.robot.v1.Robot.BlockForOperationRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.BlockForOperationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBlockForOperationMethod(), responseObserver);
     }
@@ -556,23 +618,30 @@ public final class RobotServiceGrpc {
      * DiscoverComponents returns the list of discovered component configurations.
      * </pre>
      */
-    public void discoverComponents(com.viam.robot.v1.Robot.DiscoverComponentsRequest request,
+    default void discoverComponents(com.viam.robot.v1.Robot.DiscoverComponentsRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.DiscoverComponentsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDiscoverComponentsMethod(), responseObserver);
     }
 
     /**
      */
-    public void frameSystemConfig(com.viam.robot.v1.Robot.FrameSystemConfigRequest request,
+    default void frameSystemConfig(com.viam.robot.v1.Robot.FrameSystemConfigRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.FrameSystemConfigResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFrameSystemConfigMethod(), responseObserver);
     }
 
     /**
      */
-    public void transformPose(com.viam.robot.v1.Robot.TransformPoseRequest request,
+    default void transformPose(com.viam.robot.v1.Robot.TransformPoseRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPoseResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransformPoseMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPCDResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransformPCDMethod(), responseObserver);
     }
 
     /**
@@ -580,7 +649,7 @@ public final class RobotServiceGrpc {
      * GetStatus returns the list of all statuses requested. An empty request signifies all resources.
      * </pre>
      */
-    public void getStatus(com.viam.robot.v1.Robot.GetStatusRequest request,
+    default void getStatus(com.viam.robot.v1.Robot.GetStatusRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetStatusResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStatusMethod(), responseObserver);
     }
@@ -590,7 +659,7 @@ public final class RobotServiceGrpc {
      * StreamStatus periodically sends the status of all statuses requested. An empty request signifies all resources.
      * </pre>
      */
-    public void streamStatus(com.viam.robot.v1.Robot.StreamStatusRequest request,
+    default void streamStatus(com.viam.robot.v1.Robot.StreamStatusRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.StreamStatusResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStreamStatusMethod(), responseObserver);
     }
@@ -600,7 +669,7 @@ public final class RobotServiceGrpc {
      * StopAll will stop all current and outstanding operations for the robot and stops all actuators and movement
      * </pre>
      */
-    public void stopAll(com.viam.robot.v1.Robot.StopAllRequest request,
+    default void stopAll(com.viam.robot.v1.Robot.StopAllRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.StopAllResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopAllMethod(), responseObserver);
     }
@@ -612,7 +681,7 @@ public final class RobotServiceGrpc {
      * the last caller on the resource, will be stopped.
      * </pre>
      */
-    public void startSession(com.viam.robot.v1.Robot.StartSessionRequest request,
+    default void startSession(com.viam.robot.v1.Robot.StartSessionRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.StartSessionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStartSessionMethod(), responseObserver);
     }
@@ -623,121 +692,44 @@ public final class RobotServiceGrpc {
      * SESSION_EXPIRED error will be returned.
      * </pre>
      */
-    public void sendSessionHeartbeat(com.viam.robot.v1.Robot.SendSessionHeartbeatRequest request,
+    default void sendSessionHeartbeat(com.viam.robot.v1.Robot.SendSessionHeartbeatRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.SendSessionHeartbeatResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendSessionHeartbeatMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetOperationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.GetOperationsRequest,
-                com.viam.robot.v1.Robot.GetOperationsResponse>(
-                  this, METHODID_GET_OPERATIONS)))
-          .addMethod(
-            getGetSessionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.GetSessionsRequest,
-                com.viam.robot.v1.Robot.GetSessionsResponse>(
-                  this, METHODID_GET_SESSIONS)))
-          .addMethod(
-            getResourceNamesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.ResourceNamesRequest,
-                com.viam.robot.v1.Robot.ResourceNamesResponse>(
-                  this, METHODID_RESOURCE_NAMES)))
-          .addMethod(
-            getResourceRPCSubtypesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.ResourceRPCSubtypesRequest,
-                com.viam.robot.v1.Robot.ResourceRPCSubtypesResponse>(
-                  this, METHODID_RESOURCE_RPCSUBTYPES)))
-          .addMethod(
-            getCancelOperationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.CancelOperationRequest,
-                com.viam.robot.v1.Robot.CancelOperationResponse>(
-                  this, METHODID_CANCEL_OPERATION)))
-          .addMethod(
-            getBlockForOperationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.BlockForOperationRequest,
-                com.viam.robot.v1.Robot.BlockForOperationResponse>(
-                  this, METHODID_BLOCK_FOR_OPERATION)))
-          .addMethod(
-            getDiscoverComponentsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.DiscoverComponentsRequest,
-                com.viam.robot.v1.Robot.DiscoverComponentsResponse>(
-                  this, METHODID_DISCOVER_COMPONENTS)))
-          .addMethod(
-            getFrameSystemConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.FrameSystemConfigRequest,
-                com.viam.robot.v1.Robot.FrameSystemConfigResponse>(
-                  this, METHODID_FRAME_SYSTEM_CONFIG)))
-          .addMethod(
-            getTransformPoseMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.TransformPoseRequest,
-                com.viam.robot.v1.Robot.TransformPoseResponse>(
-                  this, METHODID_TRANSFORM_POSE)))
-          .addMethod(
-            getGetStatusMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.GetStatusRequest,
-                com.viam.robot.v1.Robot.GetStatusResponse>(
-                  this, METHODID_GET_STATUS)))
-          .addMethod(
-            getStreamStatusMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.StreamStatusRequest,
-                com.viam.robot.v1.Robot.StreamStatusResponse>(
-                  this, METHODID_STREAM_STATUS)))
-          .addMethod(
-            getStopAllMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.StopAllRequest,
-                com.viam.robot.v1.Robot.StopAllResponse>(
-                  this, METHODID_STOP_ALL)))
-          .addMethod(
-            getStartSessionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.StartSessionRequest,
-                com.viam.robot.v1.Robot.StartSessionResponse>(
-                  this, METHODID_START_SESSION)))
-          .addMethod(
-            getSendSessionHeartbeatMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.robot.v1.Robot.SendSessionHeartbeatRequest,
-                com.viam.robot.v1.Robot.SendSessionHeartbeatResponse>(
-                  this, METHODID_SEND_SESSION_HEARTBEAT)))
-          .build();
+    /**
+     * <pre>
+     * Log sends logs to be logged by this robot. Currently used for module logging.
+     * </pre>
+     */
+    default void log(com.viam.robot.v1.Robot.LogRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.LogResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLogMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service RobotService.
    * <pre>
    * A RobotService encompasses all functionality of some robot comprised of parts, local and remote.
    * </pre>
    */
-  public static final class RobotServiceStub extends io.grpc.stub.AbstractAsyncStub<RobotServiceStub> {
+  public static abstract class RobotServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return RobotServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service RobotService.
+   * <pre>
+   * A RobotService encompasses all functionality of some robot comprised of parts, local and remote.
+   * </pre>
+   */
+  public static final class RobotServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<RobotServiceStub> {
     private RobotServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -831,6 +823,14 @@ public final class RobotServiceGrpc {
     }
 
     /**
+     */
+    public void transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPCDResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTransformPCDMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      * <pre>
      * GetStatus returns the list of all statuses requested. An empty request signifies all resources.
      * </pre>
@@ -887,14 +887,27 @@ public final class RobotServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSendSessionHeartbeatMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Log sends logs to be logged by this robot. Currently used for module logging.
+     * </pre>
+     */
+    public void log(com.viam.robot.v1.Robot.LogRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.LogResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getLogMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service RobotService.
    * <pre>
    * A RobotService encompasses all functionality of some robot comprised of parts, local and remote.
    * </pre>
    */
-  public static final class RobotServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<RobotServiceBlockingStub> {
+  public static final class RobotServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<RobotServiceBlockingStub> {
     private RobotServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -979,6 +992,13 @@ public final class RobotServiceGrpc {
     }
 
     /**
+     */
+    public com.viam.robot.v1.Robot.TransformPCDResponse transformPCD(com.viam.robot.v1.Robot.TransformPCDRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTransformPCDMethod(), getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * GetStatus returns the list of all statuses requested. An empty request signifies all resources.
      * </pre>
@@ -1031,14 +1051,26 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSendSessionHeartbeatMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Log sends logs to be logged by this robot. Currently used for module logging.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.LogResponse log(com.viam.robot.v1.Robot.LogRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getLogMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service RobotService.
    * <pre>
    * A RobotService encompasses all functionality of some robot comprised of parts, local and remote.
    * </pre>
    */
-  public static final class RobotServiceFutureStub extends io.grpc.stub.AbstractFutureStub<RobotServiceFutureStub> {
+  public static final class RobotServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<RobotServiceFutureStub> {
     private RobotServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1132,6 +1164,14 @@ public final class RobotServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.TransformPCDResponse> transformPCD(
+        com.viam.robot.v1.Robot.TransformPCDRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTransformPCDMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * GetStatus returns the list of all statuses requested. An empty request signifies all resources.
      * </pre>
@@ -1177,6 +1217,17 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSendSessionHeartbeatMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Log sends logs to be logged by this robot. Currently used for module logging.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.LogResponse> log(
+        com.viam.robot.v1.Robot.LogRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getLogMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_OPERATIONS = 0;
@@ -1188,21 +1239,23 @@ public final class RobotServiceGrpc {
   private static final int METHODID_DISCOVER_COMPONENTS = 6;
   private static final int METHODID_FRAME_SYSTEM_CONFIG = 7;
   private static final int METHODID_TRANSFORM_POSE = 8;
-  private static final int METHODID_GET_STATUS = 9;
-  private static final int METHODID_STREAM_STATUS = 10;
-  private static final int METHODID_STOP_ALL = 11;
-  private static final int METHODID_START_SESSION = 12;
-  private static final int METHODID_SEND_SESSION_HEARTBEAT = 13;
+  private static final int METHODID_TRANSFORM_PCD = 9;
+  private static final int METHODID_GET_STATUS = 10;
+  private static final int METHODID_STREAM_STATUS = 11;
+  private static final int METHODID_STOP_ALL = 12;
+  private static final int METHODID_START_SESSION = 13;
+  private static final int METHODID_SEND_SESSION_HEARTBEAT = 14;
+  private static final int METHODID_LOG = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final RobotServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(RobotServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1247,6 +1300,10 @@ public final class RobotServiceGrpc {
           serviceImpl.transformPose((com.viam.robot.v1.Robot.TransformPoseRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPoseResponse>) responseObserver);
           break;
+        case METHODID_TRANSFORM_PCD:
+          serviceImpl.transformPCD((com.viam.robot.v1.Robot.TransformPCDRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.TransformPCDResponse>) responseObserver);
+          break;
         case METHODID_GET_STATUS:
           serviceImpl.getStatus((com.viam.robot.v1.Robot.GetStatusRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetStatusResponse>) responseObserver);
@@ -1267,6 +1324,10 @@ public final class RobotServiceGrpc {
           serviceImpl.sendSessionHeartbeat((com.viam.robot.v1.Robot.SendSessionHeartbeatRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.SendSessionHeartbeatResponse>) responseObserver);
           break;
+        case METHODID_LOG:
+          serviceImpl.log((com.viam.robot.v1.Robot.LogRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.LogResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -1281,6 +1342,123 @@ public final class RobotServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetOperationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.GetOperationsRequest,
+              com.viam.robot.v1.Robot.GetOperationsResponse>(
+                service, METHODID_GET_OPERATIONS)))
+        .addMethod(
+          getGetSessionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.GetSessionsRequest,
+              com.viam.robot.v1.Robot.GetSessionsResponse>(
+                service, METHODID_GET_SESSIONS)))
+        .addMethod(
+          getResourceNamesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.ResourceNamesRequest,
+              com.viam.robot.v1.Robot.ResourceNamesResponse>(
+                service, METHODID_RESOURCE_NAMES)))
+        .addMethod(
+          getResourceRPCSubtypesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.ResourceRPCSubtypesRequest,
+              com.viam.robot.v1.Robot.ResourceRPCSubtypesResponse>(
+                service, METHODID_RESOURCE_RPCSUBTYPES)))
+        .addMethod(
+          getCancelOperationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.CancelOperationRequest,
+              com.viam.robot.v1.Robot.CancelOperationResponse>(
+                service, METHODID_CANCEL_OPERATION)))
+        .addMethod(
+          getBlockForOperationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.BlockForOperationRequest,
+              com.viam.robot.v1.Robot.BlockForOperationResponse>(
+                service, METHODID_BLOCK_FOR_OPERATION)))
+        .addMethod(
+          getDiscoverComponentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.DiscoverComponentsRequest,
+              com.viam.robot.v1.Robot.DiscoverComponentsResponse>(
+                service, METHODID_DISCOVER_COMPONENTS)))
+        .addMethod(
+          getFrameSystemConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.FrameSystemConfigRequest,
+              com.viam.robot.v1.Robot.FrameSystemConfigResponse>(
+                service, METHODID_FRAME_SYSTEM_CONFIG)))
+        .addMethod(
+          getTransformPoseMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.TransformPoseRequest,
+              com.viam.robot.v1.Robot.TransformPoseResponse>(
+                service, METHODID_TRANSFORM_POSE)))
+        .addMethod(
+          getTransformPCDMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.TransformPCDRequest,
+              com.viam.robot.v1.Robot.TransformPCDResponse>(
+                service, METHODID_TRANSFORM_PCD)))
+        .addMethod(
+          getGetStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.GetStatusRequest,
+              com.viam.robot.v1.Robot.GetStatusResponse>(
+                service, METHODID_GET_STATUS)))
+        .addMethod(
+          getStreamStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.StreamStatusRequest,
+              com.viam.robot.v1.Robot.StreamStatusResponse>(
+                service, METHODID_STREAM_STATUS)))
+        .addMethod(
+          getStopAllMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.StopAllRequest,
+              com.viam.robot.v1.Robot.StopAllResponse>(
+                service, METHODID_STOP_ALL)))
+        .addMethod(
+          getStartSessionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.StartSessionRequest,
+              com.viam.robot.v1.Robot.StartSessionResponse>(
+                service, METHODID_START_SESSION)))
+        .addMethod(
+          getSendSessionHeartbeatMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.SendSessionHeartbeatRequest,
+              com.viam.robot.v1.Robot.SendSessionHeartbeatResponse>(
+                service, METHODID_SEND_SESSION_HEARTBEAT)))
+        .addMethod(
+          getLogMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.LogRequest,
+              com.viam.robot.v1.Robot.LogResponse>(
+                service, METHODID_LOG)))
+        .build();
   }
 
   private static abstract class RobotServiceBaseDescriptorSupplier
@@ -1306,9 +1484,9 @@ public final class RobotServiceGrpc {
   private static final class RobotServiceMethodDescriptorSupplier
       extends RobotServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    RobotServiceMethodDescriptorSupplier(String methodName) {
+    RobotServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -1337,11 +1515,13 @@ public final class RobotServiceGrpc {
               .addMethod(getDiscoverComponentsMethod())
               .addMethod(getFrameSystemConfigMethod())
               .addMethod(getTransformPoseMethod())
+              .addMethod(getTransformPCDMethod())
               .addMethod(getGetStatusMethod())
               .addMethod(getStreamStatusMethod())
               .addMethod(getStopAllMethod())
               .addMethod(getStartSessionMethod())
               .addMethod(getSendSessionHeartbeatMethod())
+              .addMethod(getLogMethod())
               .build();
         }
       }

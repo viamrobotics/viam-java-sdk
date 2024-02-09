@@ -10,14 +10,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: proto/rpc/v1/auth.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AuthServiceGrpc {
 
   private AuthServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "proto.rpc.v1.AuthService";
+  public static final java.lang.String SERVICE_NAME = "proto.rpc.v1.AuthService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<proto.rpc.v1.Auth.AuthenticateRequest,
@@ -102,41 +102,49 @@ public final class AuthServiceGrpc {
    * other services that a gRPC server has to offer.
    * </pre>
    */
-  public static abstract class AuthServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
-     * Authenticate attempts to authenticate the caller. The resulting
-     * response contains an access token that should be used for future
-     * requests.
+     * Authenticate attempts to authenticate the caller claiming to be
+     * the given entity. The resulting response contains an access token
+     * with the subject as the entity and the audience/issuer as the
+     * provider of this service. This token should be used for all future
+     * RPC requests.
      * </pre>
      */
-    public void authenticate(proto.rpc.v1.Auth.AuthenticateRequest request,
+    default void authenticate(proto.rpc.v1.Auth.AuthenticateRequest request,
         io.grpc.stub.StreamObserver<proto.rpc.v1.Auth.AuthenticateResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAuthenticateMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getAuthenticateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                proto.rpc.v1.Auth.AuthenticateRequest,
-                proto.rpc.v1.Auth.AuthenticateResponse>(
-                  this, METHODID_AUTHENTICATE)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AuthService.
    * <pre>
    * An AuthService is intended to be used as a means to perform application level
    * authentication. Its sole Authenticate method should be used prior to any
    * other services that a gRPC server has to offer.
    * </pre>
    */
-  public static final class AuthServiceStub extends io.grpc.stub.AbstractAsyncStub<AuthServiceStub> {
+  public static abstract class AuthServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AuthServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AuthService.
+   * <pre>
+   * An AuthService is intended to be used as a means to perform application level
+   * authentication. Its sole Authenticate method should be used prior to any
+   * other services that a gRPC server has to offer.
+   * </pre>
+   */
+  public static final class AuthServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AuthServiceStub> {
     private AuthServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -150,9 +158,11 @@ public final class AuthServiceGrpc {
 
     /**
      * <pre>
-     * Authenticate attempts to authenticate the caller. The resulting
-     * response contains an access token that should be used for future
-     * requests.
+     * Authenticate attempts to authenticate the caller claiming to be
+     * the given entity. The resulting response contains an access token
+     * with the subject as the entity and the audience/issuer as the
+     * provider of this service. This token should be used for all future
+     * RPC requests.
      * </pre>
      */
     public void authenticate(proto.rpc.v1.Auth.AuthenticateRequest request,
@@ -163,13 +173,15 @@ public final class AuthServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AuthService.
    * <pre>
    * An AuthService is intended to be used as a means to perform application level
    * authentication. Its sole Authenticate method should be used prior to any
    * other services that a gRPC server has to offer.
    * </pre>
    */
-  public static final class AuthServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AuthServiceBlockingStub> {
+  public static final class AuthServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AuthServiceBlockingStub> {
     private AuthServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -183,9 +195,11 @@ public final class AuthServiceGrpc {
 
     /**
      * <pre>
-     * Authenticate attempts to authenticate the caller. The resulting
-     * response contains an access token that should be used for future
-     * requests.
+     * Authenticate attempts to authenticate the caller claiming to be
+     * the given entity. The resulting response contains an access token
+     * with the subject as the entity and the audience/issuer as the
+     * provider of this service. This token should be used for all future
+     * RPC requests.
      * </pre>
      */
     public proto.rpc.v1.Auth.AuthenticateResponse authenticate(proto.rpc.v1.Auth.AuthenticateRequest request) {
@@ -195,13 +209,15 @@ public final class AuthServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AuthService.
    * <pre>
    * An AuthService is intended to be used as a means to perform application level
    * authentication. Its sole Authenticate method should be used prior to any
    * other services that a gRPC server has to offer.
    * </pre>
    */
-  public static final class AuthServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AuthServiceFutureStub> {
+  public static final class AuthServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AuthServiceFutureStub> {
     private AuthServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -215,9 +231,11 @@ public final class AuthServiceGrpc {
 
     /**
      * <pre>
-     * Authenticate attempts to authenticate the caller. The resulting
-     * response contains an access token that should be used for future
-     * requests.
+     * Authenticate attempts to authenticate the caller claiming to be
+     * the given entity. The resulting response contains an access token
+     * with the subject as the entity and the audience/issuer as the
+     * provider of this service. This token should be used for all future
+     * RPC requests.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<proto.rpc.v1.Auth.AuthenticateResponse> authenticate(
@@ -234,10 +252,10 @@ public final class AuthServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AuthServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AuthServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -266,6 +284,18 @@ public final class AuthServiceGrpc {
     }
   }
 
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getAuthenticateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.rpc.v1.Auth.AuthenticateRequest,
+              proto.rpc.v1.Auth.AuthenticateResponse>(
+                service, METHODID_AUTHENTICATE)))
+        .build();
+  }
+
   private static abstract class AuthServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     AuthServiceBaseDescriptorSupplier() {}
@@ -289,9 +319,9 @@ public final class AuthServiceGrpc {
   private static final class AuthServiceMethodDescriptorSupplier
       extends AuthServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    AuthServiceMethodDescriptorSupplier(String methodName) {
+    AuthServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

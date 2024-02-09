@@ -8,45 +8,107 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: component/sensor/v1/sensor.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SensorServiceGrpc {
 
   private SensorServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.component.sensor.v1.SensorService";
+  public static final java.lang.String SERVICE_NAME = "viam.component.sensor.v1.SensorService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.viam.component.sensor.v1.Sensor.GetReadingsRequest,
-      com.viam.component.sensor.v1.Sensor.GetReadingsResponse> getGetReadingsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetReadingsRequest,
+      com.viam.common.v1.Common.GetReadingsResponse> getGetReadingsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetReadings",
-      requestType = com.viam.component.sensor.v1.Sensor.GetReadingsRequest.class,
-      responseType = com.viam.component.sensor.v1.Sensor.GetReadingsResponse.class,
+      requestType = com.viam.common.v1.Common.GetReadingsRequest.class,
+      responseType = com.viam.common.v1.Common.GetReadingsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.component.sensor.v1.Sensor.GetReadingsRequest,
-      com.viam.component.sensor.v1.Sensor.GetReadingsResponse> getGetReadingsMethod() {
-    io.grpc.MethodDescriptor<com.viam.component.sensor.v1.Sensor.GetReadingsRequest, com.viam.component.sensor.v1.Sensor.GetReadingsResponse> getGetReadingsMethod;
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetReadingsRequest,
+      com.viam.common.v1.Common.GetReadingsResponse> getGetReadingsMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetReadingsRequest, com.viam.common.v1.Common.GetReadingsResponse> getGetReadingsMethod;
     if ((getGetReadingsMethod = SensorServiceGrpc.getGetReadingsMethod) == null) {
       synchronized (SensorServiceGrpc.class) {
         if ((getGetReadingsMethod = SensorServiceGrpc.getGetReadingsMethod) == null) {
           SensorServiceGrpc.getGetReadingsMethod = getGetReadingsMethod =
-              io.grpc.MethodDescriptor.<com.viam.component.sensor.v1.Sensor.GetReadingsRequest, com.viam.component.sensor.v1.Sensor.GetReadingsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetReadingsRequest, com.viam.common.v1.Common.GetReadingsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetReadings"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.component.sensor.v1.Sensor.GetReadingsRequest.getDefaultInstance()))
+                  com.viam.common.v1.Common.GetReadingsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.component.sensor.v1.Sensor.GetReadingsResponse.getDefaultInstance()))
+                  com.viam.common.v1.Common.GetReadingsResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SensorServiceMethodDescriptorSupplier("GetReadings"))
               .build();
         }
       }
     }
     return getGetReadingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = SensorServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (SensorServiceGrpc.class) {
+        if ((getDoCommandMethod = SensorServiceGrpc.getDoCommandMethod) == null) {
+          SensorServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SensorServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGeometries",
+      requestType = com.viam.common.v1.Common.GetGeometriesRequest.class,
+      responseType = com.viam.common.v1.Common.GetGeometriesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+    if ((getGetGeometriesMethod = SensorServiceGrpc.getGetGeometriesMethod) == null) {
+      synchronized (SensorServiceGrpc.class) {
+        if ((getGetGeometriesMethod = SensorServiceGrpc.getGetGeometriesMethod) == null) {
+          SensorServiceGrpc.getGetGeometriesMethod = getGetGeometriesMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeometries"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SensorServiceMethodDescriptorSupplier("GetGeometries"))
+              .build();
+        }
+      }
+    }
+    return getGetGeometriesMethod;
   }
 
   /**
@@ -98,37 +160,61 @@ public final class SensorServiceGrpc {
    * SensorService services all generic sensors associated with a robot
    * </pre>
    */
-  public static abstract class SensorServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * GetReadings returns the readings of a sensor of the underlying robot.
      * </pre>
      */
-    public void getReadings(com.viam.component.sensor.v1.Sensor.GetReadingsRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.sensor.v1.Sensor.GetReadingsResponse> responseObserver) {
+    default void getReadings(com.viam.common.v1.Common.GetReadingsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetReadingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetReadingsMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetReadingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.sensor.v1.Sensor.GetReadingsRequest,
-                com.viam.component.sensor.v1.Sensor.GetReadingsResponse>(
-                  this, METHODID_GET_READINGS)))
-          .build();
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    default void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGeometriesMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service SensorService.
    * <pre>
    * SensorService services all generic sensors associated with a robot
    * </pre>
    */
-  public static final class SensorServiceStub extends io.grpc.stub.AbstractAsyncStub<SensorServiceStub> {
+  public static abstract class SensorServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return SensorServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service SensorService.
+   * <pre>
+   * SensorService services all generic sensors associated with a robot
+   * </pre>
+   */
+  public static final class SensorServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<SensorServiceStub> {
     private SensorServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -145,19 +231,43 @@ public final class SensorServiceGrpc {
      * GetReadings returns the readings of a sensor of the underlying robot.
      * </pre>
      */
-    public void getReadings(com.viam.component.sensor.v1.Sensor.GetReadingsRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.sensor.v1.Sensor.GetReadingsResponse> responseObserver) {
+    public void getReadings(com.viam.common.v1.Common.GetReadingsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetReadingsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetReadingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service SensorService.
    * <pre>
    * SensorService services all generic sensors associated with a robot
    * </pre>
    */
-  public static final class SensorServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SensorServiceBlockingStub> {
+  public static final class SensorServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<SensorServiceBlockingStub> {
     private SensorServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -174,18 +284,40 @@ public final class SensorServiceGrpc {
      * GetReadings returns the readings of a sensor of the underlying robot.
      * </pre>
      */
-    public com.viam.component.sensor.v1.Sensor.GetReadingsResponse getReadings(com.viam.component.sensor.v1.Sensor.GetReadingsRequest request) {
+    public com.viam.common.v1.Common.GetReadingsResponse getReadings(com.viam.common.v1.Common.GetReadingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetReadingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service SensorService.
    * <pre>
    * SensorService services all generic sensors associated with a robot
    * </pre>
    */
-  public static final class SensorServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SensorServiceFutureStub> {
+  public static final class SensorServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<SensorServiceFutureStub> {
     private SensorServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -202,24 +334,48 @@ public final class SensorServiceGrpc {
      * GetReadings returns the readings of a sensor of the underlying robot.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.sensor.v1.Sensor.GetReadingsResponse> getReadings(
-        com.viam.component.sensor.v1.Sensor.GetReadingsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetReadingsResponse> getReadings(
+        com.viam.common.v1.Common.GetReadingsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetReadingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetGeometriesResponse> getGeometries(
+        com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_GET_READINGS = 0;
+  private static final int METHODID_DO_COMMAND = 1;
+  private static final int METHODID_GET_GEOMETRIES = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SensorServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SensorServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -229,8 +385,16 @@ public final class SensorServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_READINGS:
-          serviceImpl.getReadings((com.viam.component.sensor.v1.Sensor.GetReadingsRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.component.sensor.v1.Sensor.GetReadingsResponse>) responseObserver);
+          serviceImpl.getReadings((com.viam.common.v1.Common.GetReadingsRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetReadingsResponse>) responseObserver);
+          break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_GEOMETRIES:
+          serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -246,6 +410,32 @@ public final class SensorServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetReadingsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetReadingsRequest,
+              com.viam.common.v1.Common.GetReadingsResponse>(
+                service, METHODID_GET_READINGS)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .addMethod(
+          getGetGeometriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetGeometriesRequest,
+              com.viam.common.v1.Common.GetGeometriesResponse>(
+                service, METHODID_GET_GEOMETRIES)))
+        .build();
   }
 
   private static abstract class SensorServiceBaseDescriptorSupplier
@@ -271,9 +461,9 @@ public final class SensorServiceGrpc {
   private static final class SensorServiceMethodDescriptorSupplier
       extends SensorServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    SensorServiceMethodDescriptorSupplier(String methodName) {
+    SensorServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -294,6 +484,8 @@ public final class SensorServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new SensorServiceFileDescriptorSupplier())
               .addMethod(getGetReadingsMethod())
+              .addMethod(getDoCommandMethod())
+              .addMethod(getGetGeometriesMethod())
               .build();
         }
       }

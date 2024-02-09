@@ -6,12 +6,10 @@ include ':core:sdk',
         ':java:examples',
 
         ':android:sdk',
-        ':android:libwebrtc',
         ':android:examples:simple'
 
 project(':core:sdk').name = 'viam-core-sdk'
 project(':java:sdk').name = 'viam-java-sdk'
 project(':java:examples').name = 'viam-java-sdk-examples'
 project(':android:sdk').name = 'viam-android-sdk'
-project(':android:libwebrtc').name = 'viam-android-libwebrtc'
 project(':android:examples:simple').name = 'viam-android-sdk-examples-simple'

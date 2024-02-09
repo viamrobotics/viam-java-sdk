@@ -36,9 +36,12 @@ import io.grpc.ManagedChannelBuilder;
 import io.grpc.Metadata;
 import io.grpc.stub.MetadataUtils;
 import proto.rpc.v1.Auth;
+import proto.rpc.v1.Auth.AuthenticateRequest;
 import proto.rpc.v1.AuthServiceGrpc;
 import proto.rpc.webrtc.v1.Signaling;
 import proto.rpc.webrtc.v1.SignalingServiceGrpc;
+
+import javax.annotation.Nonnull;
 
 public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<MediaStreamT>> {
     private final T peerConnectionFactory;
@@ -83,7 +86,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                         channelBuilder = channelBuilder.usePlaintext();
                     }
                     final ManagedChannel channel = channelBuilder.build();
-                    final Auth.AuthenticateRequest.Builder authReqBuilder = Auth.AuthenticateRequest.newBuilder();
+                    final AuthenticateRequest.Builder authReqBuilder = AuthenticateRequest.newBuilder();
                     if (opts.authEntity == null) {
                         authReqBuilder.setEntity(address);
                     } else {
@@ -106,10 +109,6 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                 applier.apply(md);
             }
 
-            @Override
-            public void thisUsesUnstableApi() {
-                // yes I know
-            }
         };
 
         return new BasicManagedChannel(channel, callCreds);
@@ -181,7 +180,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                             final ManagedChannel signalingChannel = signalChannelBuilder.build();
                             try {
                                 final AuthServiceGrpc.AuthServiceBlockingStub authClient = AuthServiceGrpc.newBlockingStub(signalingChannel);
-                                Auth.AuthenticateResponse authResp = authClient.authenticate(Auth.AuthenticateRequest.newBuilder()
+                                Auth.AuthenticateResponse authResp = authClient.authenticate(AuthenticateRequest.newBuilder()
                                         .setEntity(host)
                                         .setCredentials(Auth.Credentials.newBuilder()
                                                 .setType(optsCopy.credentials.getType())
@@ -196,11 +195,6 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                         final Metadata md = new Metadata();
                         md.put(Metadata.Key.of("Authorization", Metadata.ASCII_STRING_MARSHALLER), "Bearer " + accessToken.get());
                         applier.apply(md);
-                    }
-
-                    @Override
-                    public void thisUsesUnstableApi() {
-                        // yes I know
                     }
                 };
             }
@@ -241,7 +235,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                 }
 
                 @Override
-                public void onFailure(final Throwable t) {
+                public void onFailure(@Nonnull final Throwable t) {
                     gotConfig.completeExceptionally(t);
                 }
             }, executor);
@@ -249,7 +243,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
             final CompletableFuture<Void> remoteDescSet = new CompletableFuture<>();
             final SignalingServiceGrpc.SignalingServiceBlockingStub finalSignalingClientBlock = signalingClientBlock;
             AtomicBoolean exchangeDone = new AtomicBoolean(false);
-            AtomicBoolean iceComplete = new AtomicBoolean(false);
+            @SuppressWarnings("WriteOnlyObject") AtomicBoolean iceComplete = new AtomicBoolean(false);
             AtomicReference<String> uuid = new AtomicReference<>("");
 
             // only send once since exchange may end or ICE may end
@@ -262,6 +256,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                     }
                     sentDoneOrError.set(true);
                 }
+                //noinspection ResultOfMethodCallIgnored
                 finalSignalingClientBlock.callUpdate(Signaling.CallUpdateRequest.newBuilder()
                         .setUuid(uuid.get())
                         .setDone(true)
@@ -275,6 +270,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                     }
                     sentDoneOrError.set(true);
                 }
+                //noinspection ResultOfMethodCallIgnored
                 finalSignalingClientBlock.callUpdate(Signaling.CallUpdateRequest.newBuilder()
                         .setUuid(uuid.get())
                         .setError(Status.newBuilder()
@@ -333,6 +329,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                             }
 
                             final Signaling.ICECandidate iProto = iceCandidateToProto(candidate);
+                            //noinspection ResultOfMethodCallIgnored
                             finalSignalingClientBlock.callUpdate(Signaling.CallUpdateRequest.newBuilder()
                                     .setUuid(uuid.get())
                                     .setCandidate(iProto)
@@ -491,7 +488,9 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                                 if (haveInit) {
                                     final String msg = "got init stage more than once";
                                     sendError.apply(msg);
-                                    return CompletableFuture.failedFuture(new Exception(msg));
+                                    final CompletableFuture<Channel> failed = new CompletableFuture<>();
+                                    failed.completeExceptionally(new Exception(msg));
+                                    return failed;
                                 }
 
                                 final Signaling.CallResponseInitStage init = callResp.getInit();
@@ -576,12 +575,16 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                                 if (!haveInit) {
                                     final String msg = "got update stage before init stage";
                                     sendError.apply(msg);
-                                    return CompletableFuture.failedFuture(new Exception(msg));
+                                    final CompletableFuture<Channel> failed = new CompletableFuture<>();
+                                    failed.completeExceptionally(new Exception(msg));
+                                    return failed;
                                 }
                                 if (!callResp.getUuid().equals(uuid.get())) {
                                     final String msg = String.format("uuid mismatch; have=%s want=%s", callResp.getUuid(), uuid);
                                     sendError.apply(msg);
-                                    return CompletableFuture.failedFuture(new Exception(msg));
+                                    final CompletableFuture<Channel> failed = new CompletableFuture<>();
+                                    failed.completeExceptionally(new Exception(msg));
+                                    return failed;
                                 }
                                 final Signaling.CallResponseUpdateStage update = callResp.getUpdate();
                                 final ICECandidate candidate = iceCandidateFromProto(update.getCandidate());
@@ -595,7 +598,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
-                            return (Channel) cc;
+                            return cc;
                         });
                     }).whenComplete((cc, t) -> {
                         synchronized (exchangeMu) {

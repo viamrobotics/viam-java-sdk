@@ -8,140 +8,16 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: service/vision/v1/vision.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class VisionServiceGrpc {
 
   private VisionServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.service.vision.v1.VisionService";
+  public static final java.lang.String SERVICE_NAME = "viam.service.vision.v1.VisionService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetModelParameterSchemaRequest,
-      com.viam.service.vision.v1.Vision.GetModelParameterSchemaResponse> getGetModelParameterSchemaMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetModelParameterSchema",
-      requestType = com.viam.service.vision.v1.Vision.GetModelParameterSchemaRequest.class,
-      responseType = com.viam.service.vision.v1.Vision.GetModelParameterSchemaResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetModelParameterSchemaRequest,
-      com.viam.service.vision.v1.Vision.GetModelParameterSchemaResponse> getGetModelParameterSchemaMethod() {
-    io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetModelParameterSchemaRequest, com.viam.service.vision.v1.Vision.GetModelParameterSchemaResponse> getGetModelParameterSchemaMethod;
-    if ((getGetModelParameterSchemaMethod = VisionServiceGrpc.getGetModelParameterSchemaMethod) == null) {
-      synchronized (VisionServiceGrpc.class) {
-        if ((getGetModelParameterSchemaMethod = VisionServiceGrpc.getGetModelParameterSchemaMethod) == null) {
-          VisionServiceGrpc.getGetModelParameterSchemaMethod = getGetModelParameterSchemaMethod =
-              io.grpc.MethodDescriptor.<com.viam.service.vision.v1.Vision.GetModelParameterSchemaRequest, com.viam.service.vision.v1.Vision.GetModelParameterSchemaResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetModelParameterSchema"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.GetModelParameterSchemaRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.GetModelParameterSchemaResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("GetModelParameterSchema"))
-              .build();
-        }
-      }
-    }
-    return getGetModelParameterSchemaMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetDetectorNamesRequest,
-      com.viam.service.vision.v1.Vision.GetDetectorNamesResponse> getGetDetectorNamesMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetDetectorNames",
-      requestType = com.viam.service.vision.v1.Vision.GetDetectorNamesRequest.class,
-      responseType = com.viam.service.vision.v1.Vision.GetDetectorNamesResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetDetectorNamesRequest,
-      com.viam.service.vision.v1.Vision.GetDetectorNamesResponse> getGetDetectorNamesMethod() {
-    io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetDetectorNamesRequest, com.viam.service.vision.v1.Vision.GetDetectorNamesResponse> getGetDetectorNamesMethod;
-    if ((getGetDetectorNamesMethod = VisionServiceGrpc.getGetDetectorNamesMethod) == null) {
-      synchronized (VisionServiceGrpc.class) {
-        if ((getGetDetectorNamesMethod = VisionServiceGrpc.getGetDetectorNamesMethod) == null) {
-          VisionServiceGrpc.getGetDetectorNamesMethod = getGetDetectorNamesMethod =
-              io.grpc.MethodDescriptor.<com.viam.service.vision.v1.Vision.GetDetectorNamesRequest, com.viam.service.vision.v1.Vision.GetDetectorNamesResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDetectorNames"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.GetDetectorNamesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.GetDetectorNamesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("GetDetectorNames"))
-              .build();
-        }
-      }
-    }
-    return getGetDetectorNamesMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.AddDetectorRequest,
-      com.viam.service.vision.v1.Vision.AddDetectorResponse> getAddDetectorMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AddDetector",
-      requestType = com.viam.service.vision.v1.Vision.AddDetectorRequest.class,
-      responseType = com.viam.service.vision.v1.Vision.AddDetectorResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.AddDetectorRequest,
-      com.viam.service.vision.v1.Vision.AddDetectorResponse> getAddDetectorMethod() {
-    io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.AddDetectorRequest, com.viam.service.vision.v1.Vision.AddDetectorResponse> getAddDetectorMethod;
-    if ((getAddDetectorMethod = VisionServiceGrpc.getAddDetectorMethod) == null) {
-      synchronized (VisionServiceGrpc.class) {
-        if ((getAddDetectorMethod = VisionServiceGrpc.getAddDetectorMethod) == null) {
-          VisionServiceGrpc.getAddDetectorMethod = getAddDetectorMethod =
-              io.grpc.MethodDescriptor.<com.viam.service.vision.v1.Vision.AddDetectorRequest, com.viam.service.vision.v1.Vision.AddDetectorResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddDetector"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.AddDetectorRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.AddDetectorResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("AddDetector"))
-              .build();
-        }
-      }
-    }
-    return getAddDetectorMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.RemoveDetectorRequest,
-      com.viam.service.vision.v1.Vision.RemoveDetectorResponse> getRemoveDetectorMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "RemoveDetector",
-      requestType = com.viam.service.vision.v1.Vision.RemoveDetectorRequest.class,
-      responseType = com.viam.service.vision.v1.Vision.RemoveDetectorResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.RemoveDetectorRequest,
-      com.viam.service.vision.v1.Vision.RemoveDetectorResponse> getRemoveDetectorMethod() {
-    io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.RemoveDetectorRequest, com.viam.service.vision.v1.Vision.RemoveDetectorResponse> getRemoveDetectorMethod;
-    if ((getRemoveDetectorMethod = VisionServiceGrpc.getRemoveDetectorMethod) == null) {
-      synchronized (VisionServiceGrpc.class) {
-        if ((getRemoveDetectorMethod = VisionServiceGrpc.getRemoveDetectorMethod) == null) {
-          VisionServiceGrpc.getRemoveDetectorMethod = getRemoveDetectorMethod =
-              io.grpc.MethodDescriptor.<com.viam.service.vision.v1.Vision.RemoveDetectorRequest, com.viam.service.vision.v1.Vision.RemoveDetectorResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveDetector"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.RemoveDetectorRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.RemoveDetectorResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("RemoveDetector"))
-              .build();
-        }
-      }
-    }
-    return getRemoveDetectorMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest,
       com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse> getGetDetectionsFromCameraMethod;
 
@@ -202,99 +78,6 @@ public final class VisionServiceGrpc {
       }
     }
     return getGetDetectionsMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetClassifierNamesRequest,
-      com.viam.service.vision.v1.Vision.GetClassifierNamesResponse> getGetClassifierNamesMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetClassifierNames",
-      requestType = com.viam.service.vision.v1.Vision.GetClassifierNamesRequest.class,
-      responseType = com.viam.service.vision.v1.Vision.GetClassifierNamesResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetClassifierNamesRequest,
-      com.viam.service.vision.v1.Vision.GetClassifierNamesResponse> getGetClassifierNamesMethod() {
-    io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetClassifierNamesRequest, com.viam.service.vision.v1.Vision.GetClassifierNamesResponse> getGetClassifierNamesMethod;
-    if ((getGetClassifierNamesMethod = VisionServiceGrpc.getGetClassifierNamesMethod) == null) {
-      synchronized (VisionServiceGrpc.class) {
-        if ((getGetClassifierNamesMethod = VisionServiceGrpc.getGetClassifierNamesMethod) == null) {
-          VisionServiceGrpc.getGetClassifierNamesMethod = getGetClassifierNamesMethod =
-              io.grpc.MethodDescriptor.<com.viam.service.vision.v1.Vision.GetClassifierNamesRequest, com.viam.service.vision.v1.Vision.GetClassifierNamesResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetClassifierNames"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.GetClassifierNamesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.GetClassifierNamesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("GetClassifierNames"))
-              .build();
-        }
-      }
-    }
-    return getGetClassifierNamesMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.AddClassifierRequest,
-      com.viam.service.vision.v1.Vision.AddClassifierResponse> getAddClassifierMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AddClassifier",
-      requestType = com.viam.service.vision.v1.Vision.AddClassifierRequest.class,
-      responseType = com.viam.service.vision.v1.Vision.AddClassifierResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.AddClassifierRequest,
-      com.viam.service.vision.v1.Vision.AddClassifierResponse> getAddClassifierMethod() {
-    io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.AddClassifierRequest, com.viam.service.vision.v1.Vision.AddClassifierResponse> getAddClassifierMethod;
-    if ((getAddClassifierMethod = VisionServiceGrpc.getAddClassifierMethod) == null) {
-      synchronized (VisionServiceGrpc.class) {
-        if ((getAddClassifierMethod = VisionServiceGrpc.getAddClassifierMethod) == null) {
-          VisionServiceGrpc.getAddClassifierMethod = getAddClassifierMethod =
-              io.grpc.MethodDescriptor.<com.viam.service.vision.v1.Vision.AddClassifierRequest, com.viam.service.vision.v1.Vision.AddClassifierResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddClassifier"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.AddClassifierRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.AddClassifierResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("AddClassifier"))
-              .build();
-        }
-      }
-    }
-    return getAddClassifierMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.RemoveClassifierRequest,
-      com.viam.service.vision.v1.Vision.RemoveClassifierResponse> getRemoveClassifierMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "RemoveClassifier",
-      requestType = com.viam.service.vision.v1.Vision.RemoveClassifierRequest.class,
-      responseType = com.viam.service.vision.v1.Vision.RemoveClassifierResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.RemoveClassifierRequest,
-      com.viam.service.vision.v1.Vision.RemoveClassifierResponse> getRemoveClassifierMethod() {
-    io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.RemoveClassifierRequest, com.viam.service.vision.v1.Vision.RemoveClassifierResponse> getRemoveClassifierMethod;
-    if ((getRemoveClassifierMethod = VisionServiceGrpc.getRemoveClassifierMethod) == null) {
-      synchronized (VisionServiceGrpc.class) {
-        if ((getRemoveClassifierMethod = VisionServiceGrpc.getRemoveClassifierMethod) == null) {
-          VisionServiceGrpc.getRemoveClassifierMethod = getRemoveClassifierMethod =
-              io.grpc.MethodDescriptor.<com.viam.service.vision.v1.Vision.RemoveClassifierRequest, com.viam.service.vision.v1.Vision.RemoveClassifierResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveClassifier"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.RemoveClassifierRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.RemoveClassifierResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("RemoveClassifier"))
-              .build();
-        }
-      }
-    }
-    return getRemoveClassifierMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest,
@@ -359,99 +142,6 @@ public final class VisionServiceGrpc {
     return getGetClassificationsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetSegmenterNamesRequest,
-      com.viam.service.vision.v1.Vision.GetSegmenterNamesResponse> getGetSegmenterNamesMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetSegmenterNames",
-      requestType = com.viam.service.vision.v1.Vision.GetSegmenterNamesRequest.class,
-      responseType = com.viam.service.vision.v1.Vision.GetSegmenterNamesResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetSegmenterNamesRequest,
-      com.viam.service.vision.v1.Vision.GetSegmenterNamesResponse> getGetSegmenterNamesMethod() {
-    io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetSegmenterNamesRequest, com.viam.service.vision.v1.Vision.GetSegmenterNamesResponse> getGetSegmenterNamesMethod;
-    if ((getGetSegmenterNamesMethod = VisionServiceGrpc.getGetSegmenterNamesMethod) == null) {
-      synchronized (VisionServiceGrpc.class) {
-        if ((getGetSegmenterNamesMethod = VisionServiceGrpc.getGetSegmenterNamesMethod) == null) {
-          VisionServiceGrpc.getGetSegmenterNamesMethod = getGetSegmenterNamesMethod =
-              io.grpc.MethodDescriptor.<com.viam.service.vision.v1.Vision.GetSegmenterNamesRequest, com.viam.service.vision.v1.Vision.GetSegmenterNamesResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSegmenterNames"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.GetSegmenterNamesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.GetSegmenterNamesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("GetSegmenterNames"))
-              .build();
-        }
-      }
-    }
-    return getGetSegmenterNamesMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.AddSegmenterRequest,
-      com.viam.service.vision.v1.Vision.AddSegmenterResponse> getAddSegmenterMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AddSegmenter",
-      requestType = com.viam.service.vision.v1.Vision.AddSegmenterRequest.class,
-      responseType = com.viam.service.vision.v1.Vision.AddSegmenterResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.AddSegmenterRequest,
-      com.viam.service.vision.v1.Vision.AddSegmenterResponse> getAddSegmenterMethod() {
-    io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.AddSegmenterRequest, com.viam.service.vision.v1.Vision.AddSegmenterResponse> getAddSegmenterMethod;
-    if ((getAddSegmenterMethod = VisionServiceGrpc.getAddSegmenterMethod) == null) {
-      synchronized (VisionServiceGrpc.class) {
-        if ((getAddSegmenterMethod = VisionServiceGrpc.getAddSegmenterMethod) == null) {
-          VisionServiceGrpc.getAddSegmenterMethod = getAddSegmenterMethod =
-              io.grpc.MethodDescriptor.<com.viam.service.vision.v1.Vision.AddSegmenterRequest, com.viam.service.vision.v1.Vision.AddSegmenterResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddSegmenter"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.AddSegmenterRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.AddSegmenterResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("AddSegmenter"))
-              .build();
-        }
-      }
-    }
-    return getAddSegmenterMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.RemoveSegmenterRequest,
-      com.viam.service.vision.v1.Vision.RemoveSegmenterResponse> getRemoveSegmenterMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "RemoveSegmenter",
-      requestType = com.viam.service.vision.v1.Vision.RemoveSegmenterRequest.class,
-      responseType = com.viam.service.vision.v1.Vision.RemoveSegmenterResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.RemoveSegmenterRequest,
-      com.viam.service.vision.v1.Vision.RemoveSegmenterResponse> getRemoveSegmenterMethod() {
-    io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.RemoveSegmenterRequest, com.viam.service.vision.v1.Vision.RemoveSegmenterResponse> getRemoveSegmenterMethod;
-    if ((getRemoveSegmenterMethod = VisionServiceGrpc.getRemoveSegmenterMethod) == null) {
-      synchronized (VisionServiceGrpc.class) {
-        if ((getRemoveSegmenterMethod = VisionServiceGrpc.getRemoveSegmenterMethod) == null) {
-          VisionServiceGrpc.getRemoveSegmenterMethod = getRemoveSegmenterMethod =
-              io.grpc.MethodDescriptor.<com.viam.service.vision.v1.Vision.RemoveSegmenterRequest, com.viam.service.vision.v1.Vision.RemoveSegmenterResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveSegmenter"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.RemoveSegmenterRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.vision.v1.Vision.RemoveSegmenterResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("RemoveSegmenter"))
-              .build();
-        }
-      }
-    }
-    return getRemoveSegmenterMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest,
       com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse> getGetObjectPointCloudsMethod;
 
@@ -481,6 +171,37 @@ public final class VisionServiceGrpc {
       }
     }
     return getGetObjectPointCloudsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = VisionServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (VisionServiceGrpc.class) {
+        if ((getDoCommandMethod = VisionServiceGrpc.getDoCommandMethod) == null) {
+          VisionServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VisionServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
   }
 
   /**
@@ -532,54 +253,14 @@ public final class VisionServiceGrpc {
    * VisionService declares the gRPC contract for a vision service
    * </pre>
    */
-  public static abstract class VisionServiceImplBase implements io.grpc.BindableService {
-
-    /**
-     * <pre>
-     * GetModelParameterSchema takes the model name and returns the parameters needed to add one to the vision registry.
-     * </pre>
-     */
-    public void getModelParameterSchema(com.viam.service.vision.v1.Vision.GetModelParameterSchemaRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetModelParameterSchemaResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetModelParameterSchemaMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * GetDetectorNames returns the list of detectors in the registry.
-     * </pre>
-     */
-    public void getDetectorNames(com.viam.service.vision.v1.Vision.GetDetectorNamesRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetDetectorNamesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDetectorNamesMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * AddDetector adds a new detector to the registry.
-     * </pre>
-     */
-    public void addDetector(com.viam.service.vision.v1.Vision.AddDetectorRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.AddDetectorResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddDetectorMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * RemoveDetector removes a detector from the registry.
-     * </pre>
-     */
-    public void removeDetector(com.viam.service.vision.v1.Vision.RemoveDetectorRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.RemoveDetectorResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveDetectorMethod(), responseObserver);
-    }
+  public interface AsyncService {
 
     /**
      * <pre>
      * GetDetectionsFromCamera will return a list of detections in the next image given a camera and a detector
      * </pre>
      */
-    public void getDetectionsFromCamera(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest request,
+    default void getDetectionsFromCamera(com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDetectionsFromCameraMethod(), responseObserver);
     }
@@ -589,39 +270,9 @@ public final class VisionServiceGrpc {
      * GetDetections will return a list of detections in the next image given the image bytes and a detector
      * </pre>
      */
-    public void getDetections(com.viam.service.vision.v1.Vision.GetDetectionsRequest request,
+    default void getDetections(com.viam.service.vision.v1.Vision.GetDetectionsRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetDetectionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDetectionsMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * GetClassifierNames returns the list of classifiers in the registry.
-     * </pre>
-     */
-    public void getClassifierNames(com.viam.service.vision.v1.Vision.GetClassifierNamesRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetClassifierNamesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetClassifierNamesMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * AddClassifier adds a new classifier to the registry.
-     * </pre>
-     */
-    public void addClassifier(com.viam.service.vision.v1.Vision.AddClassifierRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.AddClassifierResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddClassifierMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * RemoveClassifier adds a new classifier to the registry.
-     * </pre>
-     */
-    public void removeClassifier(com.viam.service.vision.v1.Vision.RemoveClassifierRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.RemoveClassifierResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveClassifierMethod(), responseObserver);
     }
 
     /**
@@ -629,7 +280,7 @@ public final class VisionServiceGrpc {
      * GetClassificationsFromCamera will return a list of classifications in the next image given a camera and a classifier
      * </pre>
      */
-    public void getClassificationsFromCamera(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest request,
+    default void getClassificationsFromCamera(com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetClassificationsFromCameraMethod(), responseObserver);
     }
@@ -639,39 +290,9 @@ public final class VisionServiceGrpc {
      * GetClassifications will return a list of classifications in the next image given the image bytes and a classifier
      * </pre>
      */
-    public void getClassifications(com.viam.service.vision.v1.Vision.GetClassificationsRequest request,
+    default void getClassifications(com.viam.service.vision.v1.Vision.GetClassificationsRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetClassificationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetClassificationsMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * GetSegmenterNames returns the list of segmenters in the registry.
-     * </pre>
-     */
-    public void getSegmenterNames(com.viam.service.vision.v1.Vision.GetSegmenterNamesRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetSegmenterNamesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSegmenterNamesMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * AddSegmenter adds a new segmenter to the registry.
-     * </pre>
-     */
-    public void addSegmenter(com.viam.service.vision.v1.Vision.AddSegmenterRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.AddSegmenterResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddSegmenterMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * RemoveSegmenter removes a segmenter from the registry.
-     * </pre>
-     */
-    public void removeSegmenter(com.viam.service.vision.v1.Vision.RemoveSegmenterRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.RemoveSegmenterResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveSegmenterMethod(), responseObserver);
     }
 
     /**
@@ -681,128 +302,44 @@ public final class VisionServiceGrpc {
      * A specific MIME type can be requested but may not necessarily be the same one returned.
      * </pre>
      */
-    public void getObjectPointClouds(com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest request,
+    default void getObjectPointClouds(com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetObjectPointCloudsMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetModelParameterSchemaMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.GetModelParameterSchemaRequest,
-                com.viam.service.vision.v1.Vision.GetModelParameterSchemaResponse>(
-                  this, METHODID_GET_MODEL_PARAMETER_SCHEMA)))
-          .addMethod(
-            getGetDetectorNamesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.GetDetectorNamesRequest,
-                com.viam.service.vision.v1.Vision.GetDetectorNamesResponse>(
-                  this, METHODID_GET_DETECTOR_NAMES)))
-          .addMethod(
-            getAddDetectorMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.AddDetectorRequest,
-                com.viam.service.vision.v1.Vision.AddDetectorResponse>(
-                  this, METHODID_ADD_DETECTOR)))
-          .addMethod(
-            getRemoveDetectorMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.RemoveDetectorRequest,
-                com.viam.service.vision.v1.Vision.RemoveDetectorResponse>(
-                  this, METHODID_REMOVE_DETECTOR)))
-          .addMethod(
-            getGetDetectionsFromCameraMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest,
-                com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse>(
-                  this, METHODID_GET_DETECTIONS_FROM_CAMERA)))
-          .addMethod(
-            getGetDetectionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.GetDetectionsRequest,
-                com.viam.service.vision.v1.Vision.GetDetectionsResponse>(
-                  this, METHODID_GET_DETECTIONS)))
-          .addMethod(
-            getGetClassifierNamesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.GetClassifierNamesRequest,
-                com.viam.service.vision.v1.Vision.GetClassifierNamesResponse>(
-                  this, METHODID_GET_CLASSIFIER_NAMES)))
-          .addMethod(
-            getAddClassifierMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.AddClassifierRequest,
-                com.viam.service.vision.v1.Vision.AddClassifierResponse>(
-                  this, METHODID_ADD_CLASSIFIER)))
-          .addMethod(
-            getRemoveClassifierMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.RemoveClassifierRequest,
-                com.viam.service.vision.v1.Vision.RemoveClassifierResponse>(
-                  this, METHODID_REMOVE_CLASSIFIER)))
-          .addMethod(
-            getGetClassificationsFromCameraMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest,
-                com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse>(
-                  this, METHODID_GET_CLASSIFICATIONS_FROM_CAMERA)))
-          .addMethod(
-            getGetClassificationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.GetClassificationsRequest,
-                com.viam.service.vision.v1.Vision.GetClassificationsResponse>(
-                  this, METHODID_GET_CLASSIFICATIONS)))
-          .addMethod(
-            getGetSegmenterNamesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.GetSegmenterNamesRequest,
-                com.viam.service.vision.v1.Vision.GetSegmenterNamesResponse>(
-                  this, METHODID_GET_SEGMENTER_NAMES)))
-          .addMethod(
-            getAddSegmenterMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.AddSegmenterRequest,
-                com.viam.service.vision.v1.Vision.AddSegmenterResponse>(
-                  this, METHODID_ADD_SEGMENTER)))
-          .addMethod(
-            getRemoveSegmenterMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.RemoveSegmenterRequest,
-                com.viam.service.vision.v1.Vision.RemoveSegmenterResponse>(
-                  this, METHODID_REMOVE_SEGMENTER)))
-          .addMethod(
-            getGetObjectPointCloudsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest,
-                com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse>(
-                  this, METHODID_GET_OBJECT_POINT_CLOUDS)))
-          .build();
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service VisionService.
    * <pre>
    * VisionService declares the gRPC contract for a vision service
    * </pre>
    */
-  public static final class VisionServiceStub extends io.grpc.stub.AbstractAsyncStub<VisionServiceStub> {
+  public static abstract class VisionServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return VisionServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service VisionService.
+   * <pre>
+   * VisionService declares the gRPC contract for a vision service
+   * </pre>
+   */
+  public static final class VisionServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<VisionServiceStub> {
     private VisionServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -812,50 +349,6 @@ public final class VisionServiceGrpc {
     protected VisionServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VisionServiceStub(channel, callOptions);
-    }
-
-    /**
-     * <pre>
-     * GetModelParameterSchema takes the model name and returns the parameters needed to add one to the vision registry.
-     * </pre>
-     */
-    public void getModelParameterSchema(com.viam.service.vision.v1.Vision.GetModelParameterSchemaRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetModelParameterSchemaResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetModelParameterSchemaMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * GetDetectorNames returns the list of detectors in the registry.
-     * </pre>
-     */
-    public void getDetectorNames(com.viam.service.vision.v1.Vision.GetDetectorNamesRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetDetectorNamesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetDetectorNamesMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * AddDetector adds a new detector to the registry.
-     * </pre>
-     */
-    public void addDetector(com.viam.service.vision.v1.Vision.AddDetectorRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.AddDetectorResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getAddDetectorMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * RemoveDetector removes a detector from the registry.
-     * </pre>
-     */
-    public void removeDetector(com.viam.service.vision.v1.Vision.RemoveDetectorRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.RemoveDetectorResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getRemoveDetectorMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -882,39 +375,6 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetClassifierNames returns the list of classifiers in the registry.
-     * </pre>
-     */
-    public void getClassifierNames(com.viam.service.vision.v1.Vision.GetClassifierNamesRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetClassifierNamesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetClassifierNamesMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * AddClassifier adds a new classifier to the registry.
-     * </pre>
-     */
-    public void addClassifier(com.viam.service.vision.v1.Vision.AddClassifierRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.AddClassifierResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getAddClassifierMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * RemoveClassifier adds a new classifier to the registry.
-     * </pre>
-     */
-    public void removeClassifier(com.viam.service.vision.v1.Vision.RemoveClassifierRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.RemoveClassifierResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getRemoveClassifierMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * GetClassificationsFromCamera will return a list of classifications in the next image given a camera and a classifier
      * </pre>
      */
@@ -937,39 +397,6 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetSegmenterNames returns the list of segmenters in the registry.
-     * </pre>
-     */
-    public void getSegmenterNames(com.viam.service.vision.v1.Vision.GetSegmenterNamesRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetSegmenterNamesResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetSegmenterNamesMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * AddSegmenter adds a new segmenter to the registry.
-     * </pre>
-     */
-    public void addSegmenter(com.viam.service.vision.v1.Vision.AddSegmenterRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.AddSegmenterResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getAddSegmenterMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * RemoveSegmenter removes a segmenter from the registry.
-     * </pre>
-     */
-    public void removeSegmenter(com.viam.service.vision.v1.Vision.RemoveSegmenterRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.RemoveSegmenterResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getRemoveSegmenterMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
      * GetObjectPointClouds returns all the found objects in a pointcloud from a camera of the underlying robot,
      * as well as the 3-vector center of each of the found objects.
      * A specific MIME type can be requested but may not necessarily be the same one returned.
@@ -980,14 +407,27 @@ public final class VisionServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetObjectPointCloudsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service VisionService.
    * <pre>
    * VisionService declares the gRPC contract for a vision service
    * </pre>
    */
-  public static final class VisionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<VisionServiceBlockingStub> {
+  public static final class VisionServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<VisionServiceBlockingStub> {
     private VisionServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -997,46 +437,6 @@ public final class VisionServiceGrpc {
     protected VisionServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VisionServiceBlockingStub(channel, callOptions);
-    }
-
-    /**
-     * <pre>
-     * GetModelParameterSchema takes the model name and returns the parameters needed to add one to the vision registry.
-     * </pre>
-     */
-    public com.viam.service.vision.v1.Vision.GetModelParameterSchemaResponse getModelParameterSchema(com.viam.service.vision.v1.Vision.GetModelParameterSchemaRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetModelParameterSchemaMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * GetDetectorNames returns the list of detectors in the registry.
-     * </pre>
-     */
-    public com.viam.service.vision.v1.Vision.GetDetectorNamesResponse getDetectorNames(com.viam.service.vision.v1.Vision.GetDetectorNamesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetDetectorNamesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * AddDetector adds a new detector to the registry.
-     * </pre>
-     */
-    public com.viam.service.vision.v1.Vision.AddDetectorResponse addDetector(com.viam.service.vision.v1.Vision.AddDetectorRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getAddDetectorMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * RemoveDetector removes a detector from the registry.
-     * </pre>
-     */
-    public com.viam.service.vision.v1.Vision.RemoveDetectorResponse removeDetector(com.viam.service.vision.v1.Vision.RemoveDetectorRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getRemoveDetectorMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1061,36 +461,6 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetClassifierNames returns the list of classifiers in the registry.
-     * </pre>
-     */
-    public com.viam.service.vision.v1.Vision.GetClassifierNamesResponse getClassifierNames(com.viam.service.vision.v1.Vision.GetClassifierNamesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetClassifierNamesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * AddClassifier adds a new classifier to the registry.
-     * </pre>
-     */
-    public com.viam.service.vision.v1.Vision.AddClassifierResponse addClassifier(com.viam.service.vision.v1.Vision.AddClassifierRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getAddClassifierMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * RemoveClassifier adds a new classifier to the registry.
-     * </pre>
-     */
-    public com.viam.service.vision.v1.Vision.RemoveClassifierResponse removeClassifier(com.viam.service.vision.v1.Vision.RemoveClassifierRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getRemoveClassifierMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * GetClassificationsFromCamera will return a list of classifications in the next image given a camera and a classifier
      * </pre>
      */
@@ -1111,36 +481,6 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetSegmenterNames returns the list of segmenters in the registry.
-     * </pre>
-     */
-    public com.viam.service.vision.v1.Vision.GetSegmenterNamesResponse getSegmenterNames(com.viam.service.vision.v1.Vision.GetSegmenterNamesRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetSegmenterNamesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * AddSegmenter adds a new segmenter to the registry.
-     * </pre>
-     */
-    public com.viam.service.vision.v1.Vision.AddSegmenterResponse addSegmenter(com.viam.service.vision.v1.Vision.AddSegmenterRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getAddSegmenterMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * RemoveSegmenter removes a segmenter from the registry.
-     * </pre>
-     */
-    public com.viam.service.vision.v1.Vision.RemoveSegmenterResponse removeSegmenter(com.viam.service.vision.v1.Vision.RemoveSegmenterRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getRemoveSegmenterMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * GetObjectPointClouds returns all the found objects in a pointcloud from a camera of the underlying robot,
      * as well as the 3-vector center of each of the found objects.
      * A specific MIME type can be requested but may not necessarily be the same one returned.
@@ -1150,14 +490,26 @@ public final class VisionServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetObjectPointCloudsMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service VisionService.
    * <pre>
    * VisionService declares the gRPC contract for a vision service
    * </pre>
    */
-  public static final class VisionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<VisionServiceFutureStub> {
+  public static final class VisionServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<VisionServiceFutureStub> {
     private VisionServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1167,50 +519,6 @@ public final class VisionServiceGrpc {
     protected VisionServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new VisionServiceFutureStub(channel, callOptions);
-    }
-
-    /**
-     * <pre>
-     * GetModelParameterSchema takes the model name and returns the parameters needed to add one to the vision registry.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.GetModelParameterSchemaResponse> getModelParameterSchema(
-        com.viam.service.vision.v1.Vision.GetModelParameterSchemaRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetModelParameterSchemaMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * GetDetectorNames returns the list of detectors in the registry.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.GetDetectorNamesResponse> getDetectorNames(
-        com.viam.service.vision.v1.Vision.GetDetectorNamesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetDetectorNamesMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * AddDetector adds a new detector to the registry.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.AddDetectorResponse> addDetector(
-        com.viam.service.vision.v1.Vision.AddDetectorRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getAddDetectorMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * RemoveDetector removes a detector from the registry.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.RemoveDetectorResponse> removeDetector(
-        com.viam.service.vision.v1.Vision.RemoveDetectorRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getRemoveDetectorMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1237,39 +545,6 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetClassifierNames returns the list of classifiers in the registry.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.GetClassifierNamesResponse> getClassifierNames(
-        com.viam.service.vision.v1.Vision.GetClassifierNamesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetClassifierNamesMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * AddClassifier adds a new classifier to the registry.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.AddClassifierResponse> addClassifier(
-        com.viam.service.vision.v1.Vision.AddClassifierRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getAddClassifierMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * RemoveClassifier adds a new classifier to the registry.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.RemoveClassifierResponse> removeClassifier(
-        com.viam.service.vision.v1.Vision.RemoveClassifierRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getRemoveClassifierMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * GetClassificationsFromCamera will return a list of classifications in the next image given a camera and a classifier
      * </pre>
      */
@@ -1292,39 +567,6 @@ public final class VisionServiceGrpc {
 
     /**
      * <pre>
-     * GetSegmenterNames returns the list of segmenters in the registry.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.GetSegmenterNamesResponse> getSegmenterNames(
-        com.viam.service.vision.v1.Vision.GetSegmenterNamesRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetSegmenterNamesMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * AddSegmenter adds a new segmenter to the registry.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.AddSegmenterResponse> addSegmenter(
-        com.viam.service.vision.v1.Vision.AddSegmenterRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getAddSegmenterMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * RemoveSegmenter removes a segmenter from the registry.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.vision.v1.Vision.RemoveSegmenterResponse> removeSegmenter(
-        com.viam.service.vision.v1.Vision.RemoveSegmenterRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getRemoveSegmenterMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * GetObjectPointClouds returns all the found objects in a pointcloud from a camera of the underlying robot,
      * as well as the 3-vector center of each of the found objects.
      * A specific MIME type can be requested but may not necessarily be the same one returned.
@@ -1335,33 +577,35 @@ public final class VisionServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetObjectPointCloudsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
   }
 
-  private static final int METHODID_GET_MODEL_PARAMETER_SCHEMA = 0;
-  private static final int METHODID_GET_DETECTOR_NAMES = 1;
-  private static final int METHODID_ADD_DETECTOR = 2;
-  private static final int METHODID_REMOVE_DETECTOR = 3;
-  private static final int METHODID_GET_DETECTIONS_FROM_CAMERA = 4;
-  private static final int METHODID_GET_DETECTIONS = 5;
-  private static final int METHODID_GET_CLASSIFIER_NAMES = 6;
-  private static final int METHODID_ADD_CLASSIFIER = 7;
-  private static final int METHODID_REMOVE_CLASSIFIER = 8;
-  private static final int METHODID_GET_CLASSIFICATIONS_FROM_CAMERA = 9;
-  private static final int METHODID_GET_CLASSIFICATIONS = 10;
-  private static final int METHODID_GET_SEGMENTER_NAMES = 11;
-  private static final int METHODID_ADD_SEGMENTER = 12;
-  private static final int METHODID_REMOVE_SEGMENTER = 13;
-  private static final int METHODID_GET_OBJECT_POINT_CLOUDS = 14;
+  private static final int METHODID_GET_DETECTIONS_FROM_CAMERA = 0;
+  private static final int METHODID_GET_DETECTIONS = 1;
+  private static final int METHODID_GET_CLASSIFICATIONS_FROM_CAMERA = 2;
+  private static final int METHODID_GET_CLASSIFICATIONS = 3;
+  private static final int METHODID_GET_OBJECT_POINT_CLOUDS = 4;
+  private static final int METHODID_DO_COMMAND = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final VisionServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(VisionServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1370,22 +614,6 @@ public final class VisionServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_GET_MODEL_PARAMETER_SCHEMA:
-          serviceImpl.getModelParameterSchema((com.viam.service.vision.v1.Vision.GetModelParameterSchemaRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetModelParameterSchemaResponse>) responseObserver);
-          break;
-        case METHODID_GET_DETECTOR_NAMES:
-          serviceImpl.getDetectorNames((com.viam.service.vision.v1.Vision.GetDetectorNamesRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetDetectorNamesResponse>) responseObserver);
-          break;
-        case METHODID_ADD_DETECTOR:
-          serviceImpl.addDetector((com.viam.service.vision.v1.Vision.AddDetectorRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.AddDetectorResponse>) responseObserver);
-          break;
-        case METHODID_REMOVE_DETECTOR:
-          serviceImpl.removeDetector((com.viam.service.vision.v1.Vision.RemoveDetectorRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.RemoveDetectorResponse>) responseObserver);
-          break;
         case METHODID_GET_DETECTIONS_FROM_CAMERA:
           serviceImpl.getDetectionsFromCamera((com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse>) responseObserver);
@@ -1393,18 +621,6 @@ public final class VisionServiceGrpc {
         case METHODID_GET_DETECTIONS:
           serviceImpl.getDetections((com.viam.service.vision.v1.Vision.GetDetectionsRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetDetectionsResponse>) responseObserver);
-          break;
-        case METHODID_GET_CLASSIFIER_NAMES:
-          serviceImpl.getClassifierNames((com.viam.service.vision.v1.Vision.GetClassifierNamesRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetClassifierNamesResponse>) responseObserver);
-          break;
-        case METHODID_ADD_CLASSIFIER:
-          serviceImpl.addClassifier((com.viam.service.vision.v1.Vision.AddClassifierRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.AddClassifierResponse>) responseObserver);
-          break;
-        case METHODID_REMOVE_CLASSIFIER:
-          serviceImpl.removeClassifier((com.viam.service.vision.v1.Vision.RemoveClassifierRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.RemoveClassifierResponse>) responseObserver);
           break;
         case METHODID_GET_CLASSIFICATIONS_FROM_CAMERA:
           serviceImpl.getClassificationsFromCamera((com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest) request,
@@ -1414,21 +630,13 @@ public final class VisionServiceGrpc {
           serviceImpl.getClassifications((com.viam.service.vision.v1.Vision.GetClassificationsRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetClassificationsResponse>) responseObserver);
           break;
-        case METHODID_GET_SEGMENTER_NAMES:
-          serviceImpl.getSegmenterNames((com.viam.service.vision.v1.Vision.GetSegmenterNamesRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetSegmenterNamesResponse>) responseObserver);
-          break;
-        case METHODID_ADD_SEGMENTER:
-          serviceImpl.addSegmenter((com.viam.service.vision.v1.Vision.AddSegmenterRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.AddSegmenterResponse>) responseObserver);
-          break;
-        case METHODID_REMOVE_SEGMENTER:
-          serviceImpl.removeSegmenter((com.viam.service.vision.v1.Vision.RemoveSegmenterRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.RemoveSegmenterResponse>) responseObserver);
-          break;
         case METHODID_GET_OBJECT_POINT_CLOUDS:
           serviceImpl.getObjectPointClouds((com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse>) responseObserver);
+          break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1444,6 +652,53 @@ public final class VisionServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetDetectionsFromCameraMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.vision.v1.Vision.GetDetectionsFromCameraRequest,
+              com.viam.service.vision.v1.Vision.GetDetectionsFromCameraResponse>(
+                service, METHODID_GET_DETECTIONS_FROM_CAMERA)))
+        .addMethod(
+          getGetDetectionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.vision.v1.Vision.GetDetectionsRequest,
+              com.viam.service.vision.v1.Vision.GetDetectionsResponse>(
+                service, METHODID_GET_DETECTIONS)))
+        .addMethod(
+          getGetClassificationsFromCameraMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.vision.v1.Vision.GetClassificationsFromCameraRequest,
+              com.viam.service.vision.v1.Vision.GetClassificationsFromCameraResponse>(
+                service, METHODID_GET_CLASSIFICATIONS_FROM_CAMERA)))
+        .addMethod(
+          getGetClassificationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.vision.v1.Vision.GetClassificationsRequest,
+              com.viam.service.vision.v1.Vision.GetClassificationsResponse>(
+                service, METHODID_GET_CLASSIFICATIONS)))
+        .addMethod(
+          getGetObjectPointCloudsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.vision.v1.Vision.GetObjectPointCloudsRequest,
+              com.viam.service.vision.v1.Vision.GetObjectPointCloudsResponse>(
+                service, METHODID_GET_OBJECT_POINT_CLOUDS)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .build();
   }
 
   private static abstract class VisionServiceBaseDescriptorSupplier
@@ -1469,9 +724,9 @@ public final class VisionServiceGrpc {
   private static final class VisionServiceMethodDescriptorSupplier
       extends VisionServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    VisionServiceMethodDescriptorSupplier(String methodName) {
+    VisionServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -1491,21 +746,12 @@ public final class VisionServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new VisionServiceFileDescriptorSupplier())
-              .addMethod(getGetModelParameterSchemaMethod())
-              .addMethod(getGetDetectorNamesMethod())
-              .addMethod(getAddDetectorMethod())
-              .addMethod(getRemoveDetectorMethod())
               .addMethod(getGetDetectionsFromCameraMethod())
               .addMethod(getGetDetectionsMethod())
-              .addMethod(getGetClassifierNamesMethod())
-              .addMethod(getAddClassifierMethod())
-              .addMethod(getRemoveClassifierMethod())
               .addMethod(getGetClassificationsFromCameraMethod())
               .addMethod(getGetClassificationsMethod())
-              .addMethod(getGetSegmenterNamesMethod())
-              .addMethod(getAddSegmenterMethod())
-              .addMethod(getRemoveSegmenterMethod())
               .addMethod(getGetObjectPointCloudsMethod())
+              .addMethod(getDoCommandMethod())
               .build();
         }
       }

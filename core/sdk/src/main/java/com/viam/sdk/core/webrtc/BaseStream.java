@@ -14,7 +14,7 @@ import proto.rpc.webrtc.v1.Grpc;
 public class BaseStream {
 
     // MaxMessageSize is the maximum size a gRPC message can be.
-    public static long MaxMessageSize = 1 << 25;
+    public static final long MaxMessageSize = 1 << 25;
 
     protected final Grpc.Stream stream;
     private final Function<Long, Void> onDone;
@@ -62,5 +62,9 @@ public class BaseStream {
             return Optional.of(allData);
         }
         return Optional.empty();
+    }
+
+    protected Exception getCloseError() {
+        return err;
     }
 }

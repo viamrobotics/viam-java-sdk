@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: proto/rpc/examples/echoresource/v1/echoresource.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class EchoResourceServiceGrpc {
 
   private EchoResourceServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "proto.rpc.examples.echoresource.v1.EchoResourceService";
+  public static final java.lang.String SERVICE_NAME = "proto.rpc.examples.echoresource.v1.EchoResourceService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceRequest,
@@ -154,59 +154,46 @@ public final class EchoResourceServiceGrpc {
 
   /**
    */
-  public static abstract class EchoResourceServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void echoResource(proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceRequest request,
+    default void echoResource(proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceRequest request,
         io.grpc.stub.StreamObserver<proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEchoResourceMethod(), responseObserver);
     }
 
     /**
      */
-    public void echoResourceMultiple(proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceMultipleRequest request,
+    default void echoResourceMultiple(proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceMultipleRequest request,
         io.grpc.stub.StreamObserver<proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceMultipleResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEchoResourceMultipleMethod(), responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceBiDiRequest> echoResourceBiDi(
+    default io.grpc.stub.StreamObserver<proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceBiDiRequest> echoResourceBiDi(
         io.grpc.stub.StreamObserver<proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceBiDiResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getEchoResourceBiDiMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getEchoResourceMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceRequest,
-                proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceResponse>(
-                  this, METHODID_ECHO_RESOURCE)))
-          .addMethod(
-            getEchoResourceMultipleMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceMultipleRequest,
-                proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceMultipleResponse>(
-                  this, METHODID_ECHO_RESOURCE_MULTIPLE)))
-          .addMethod(
-            getEchoResourceBiDiMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceBiDiRequest,
-                proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceBiDiResponse>(
-                  this, METHODID_ECHO_RESOURCE_BI_DI)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service EchoResourceService.
    */
-  public static final class EchoResourceServiceStub extends io.grpc.stub.AbstractAsyncStub<EchoResourceServiceStub> {
+  public static abstract class EchoResourceServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return EchoResourceServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service EchoResourceService.
+   */
+  public static final class EchoResourceServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<EchoResourceServiceStub> {
     private EchoResourceServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -244,8 +231,10 @@ public final class EchoResourceServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service EchoResourceService.
    */
-  public static final class EchoResourceServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<EchoResourceServiceBlockingStub> {
+  public static final class EchoResourceServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<EchoResourceServiceBlockingStub> {
     private EchoResourceServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -274,8 +263,10 @@ public final class EchoResourceServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service EchoResourceService.
    */
-  public static final class EchoResourceServiceFutureStub extends io.grpc.stub.AbstractFutureStub<EchoResourceServiceFutureStub> {
+  public static final class EchoResourceServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<EchoResourceServiceFutureStub> {
     private EchoResourceServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -305,10 +296,10 @@ public final class EchoResourceServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final EchoResourceServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(EchoResourceServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -344,6 +335,32 @@ public final class EchoResourceServiceGrpc {
     }
   }
 
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getEchoResourceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceRequest,
+              proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceResponse>(
+                service, METHODID_ECHO_RESOURCE)))
+        .addMethod(
+          getEchoResourceMultipleMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceMultipleRequest,
+              proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceMultipleResponse>(
+                service, METHODID_ECHO_RESOURCE_MULTIPLE)))
+        .addMethod(
+          getEchoResourceBiDiMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceBiDiRequest,
+              proto.rpc.examples.echoresource.v1.Echoresource.EchoResourceBiDiResponse>(
+                service, METHODID_ECHO_RESOURCE_BI_DI)))
+        .build();
+  }
+
   private static abstract class EchoResourceServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     EchoResourceServiceBaseDescriptorSupplier() {}
@@ -367,9 +384,9 @@ public final class EchoResourceServiceGrpc {
   private static final class EchoResourceServiceMethodDescriptorSupplier
       extends EchoResourceServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    EchoResourceServiceMethodDescriptorSupplier(String methodName) {
+    EchoResourceServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

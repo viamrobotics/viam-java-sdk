@@ -4,49 +4,80 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * GenericService services all generic commands associated with a robot
+ * GenericService services all generic components associated with a robot
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: component/generic/v1/generic.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class GenericServiceGrpc {
 
   private GenericServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.component.generic.v1.GenericService";
+  public static final java.lang.String SERVICE_NAME = "viam.component.generic.v1.GenericService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.viam.component.generic.v1.Generic.DoCommandRequest,
-      com.viam.component.generic.v1.Generic.DoCommandResponse> getDoCommandMethod;
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "DoCommand",
-      requestType = com.viam.component.generic.v1.Generic.DoCommandRequest.class,
-      responseType = com.viam.component.generic.v1.Generic.DoCommandResponse.class,
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.component.generic.v1.Generic.DoCommandRequest,
-      com.viam.component.generic.v1.Generic.DoCommandResponse> getDoCommandMethod() {
-    io.grpc.MethodDescriptor<com.viam.component.generic.v1.Generic.DoCommandRequest, com.viam.component.generic.v1.Generic.DoCommandResponse> getDoCommandMethod;
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
     if ((getDoCommandMethod = GenericServiceGrpc.getDoCommandMethod) == null) {
       synchronized (GenericServiceGrpc.class) {
         if ((getDoCommandMethod = GenericServiceGrpc.getDoCommandMethod) == null) {
           GenericServiceGrpc.getDoCommandMethod = getDoCommandMethod =
-              io.grpc.MethodDescriptor.<com.viam.component.generic.v1.Generic.DoCommandRequest, com.viam.component.generic.v1.Generic.DoCommandResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.component.generic.v1.Generic.DoCommandRequest.getDefaultInstance()))
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.component.generic.v1.Generic.DoCommandResponse.getDefaultInstance()))
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
               .setSchemaDescriptor(new GenericServiceMethodDescriptorSupplier("DoCommand"))
               .build();
         }
       }
     }
     return getDoCommandMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGeometries",
+      requestType = com.viam.common.v1.Common.GetGeometriesRequest.class,
+      responseType = com.viam.common.v1.Common.GetGeometriesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+    if ((getGetGeometriesMethod = GenericServiceGrpc.getGetGeometriesMethod) == null) {
+      synchronized (GenericServiceGrpc.class) {
+        if ((getGetGeometriesMethod = GenericServiceGrpc.getGetGeometriesMethod) == null) {
+          GenericServiceGrpc.getGetGeometriesMethod = getGetGeometriesMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeometries"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new GenericServiceMethodDescriptorSupplier("GetGeometries"))
+              .build();
+        }
+      }
+    }
+    return getGetGeometriesMethod;
   }
 
   /**
@@ -95,40 +126,54 @@ public final class GenericServiceGrpc {
 
   /**
    * <pre>
-   * GenericService services all generic commands associated with a robot
+   * GenericService services all generic components associated with a robot
    * </pre>
    */
-  public static abstract class GenericServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
-     * DoCommand sends/recieves arbitrary commands
+     * DoCommand sends/receives arbitrary commands
      * </pre>
      */
-    public void doCommand(com.viam.component.generic.v1.Generic.DoCommandRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.generic.v1.Generic.DoCommandResponse> responseObserver) {
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getDoCommandMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.generic.v1.Generic.DoCommandRequest,
-                com.viam.component.generic.v1.Generic.DoCommandResponse>(
-                  this, METHODID_DO_COMMAND)))
-          .build();
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    default void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGeometriesMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service GenericService.
    * <pre>
-   * GenericService services all generic commands associated with a robot
+   * GenericService services all generic components associated with a robot
    * </pre>
    */
-  public static final class GenericServiceStub extends io.grpc.stub.AbstractAsyncStub<GenericServiceStub> {
+  public static abstract class GenericServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return GenericServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service GenericService.
+   * <pre>
+   * GenericService services all generic components associated with a robot
+   * </pre>
+   */
+  public static final class GenericServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<GenericServiceStub> {
     private GenericServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -142,22 +187,35 @@ public final class GenericServiceGrpc {
 
     /**
      * <pre>
-     * DoCommand sends/recieves arbitrary commands
+     * DoCommand sends/receives arbitrary commands
      * </pre>
      */
-    public void doCommand(com.viam.component.generic.v1.Generic.DoCommandRequest request,
-        io.grpc.stub.StreamObserver<com.viam.component.generic.v1.Generic.DoCommandResponse> responseObserver) {
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service GenericService.
    * <pre>
-   * GenericService services all generic commands associated with a robot
+   * GenericService services all generic components associated with a robot
    * </pre>
    */
-  public static final class GenericServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<GenericServiceBlockingStub> {
+  public static final class GenericServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<GenericServiceBlockingStub> {
     private GenericServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -171,21 +229,33 @@ public final class GenericServiceGrpc {
 
     /**
      * <pre>
-     * DoCommand sends/recieves arbitrary commands
+     * DoCommand sends/receives arbitrary commands
      * </pre>
      */
-    public com.viam.component.generic.v1.Generic.DoCommandResponse doCommand(com.viam.component.generic.v1.Generic.DoCommandRequest request) {
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
     }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service GenericService.
    * <pre>
-   * GenericService services all generic commands associated with a robot
+   * GenericService services all generic components associated with a robot
    * </pre>
    */
-  public static final class GenericServiceFutureStub extends io.grpc.stub.AbstractFutureStub<GenericServiceFutureStub> {
+  public static final class GenericServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<GenericServiceFutureStub> {
     private GenericServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -199,27 +269,39 @@ public final class GenericServiceGrpc {
 
     /**
      * <pre>
-     * DoCommand sends/recieves arbitrary commands
+     * DoCommand sends/receives arbitrary commands
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.generic.v1.Generic.DoCommandResponse> doCommand(
-        com.viam.component.generic.v1.Generic.DoCommandRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetGeometriesResponse> getGeometries(
+        com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_DO_COMMAND = 0;
+  private static final int METHODID_GET_GEOMETRIES = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final GenericServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(GenericServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -229,8 +311,12 @@ public final class GenericServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_DO_COMMAND:
-          serviceImpl.doCommand((com.viam.component.generic.v1.Generic.DoCommandRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.component.generic.v1.Generic.DoCommandResponse>) responseObserver);
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_GEOMETRIES:
+          serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -246,6 +332,25 @@ public final class GenericServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .addMethod(
+          getGetGeometriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetGeometriesRequest,
+              com.viam.common.v1.Common.GetGeometriesResponse>(
+                service, METHODID_GET_GEOMETRIES)))
+        .build();
   }
 
   private static abstract class GenericServiceBaseDescriptorSupplier
@@ -271,9 +376,9 @@ public final class GenericServiceGrpc {
   private static final class GenericServiceMethodDescriptorSupplier
       extends GenericServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    GenericServiceMethodDescriptorSupplier(String methodName) {
+    GenericServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -294,6 +399,7 @@ public final class GenericServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GenericServiceFileDescriptorSupplier())
               .addMethod(getDoCommandMethod())
+              .addMethod(getGetGeometriesMethod())
               .build();
         }
       }

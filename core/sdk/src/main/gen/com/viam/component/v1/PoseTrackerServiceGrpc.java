@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: component/posetracker/v1/pose_tracker.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class PoseTrackerServiceGrpc {
 
   private PoseTrackerServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.component.posetracker.v1.PoseTrackerService";
+  public static final java.lang.String SERVICE_NAME = "viam.component.posetracker.v1.PoseTrackerService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.component.v1.PoseTracker.GetPosesRequest,
@@ -47,6 +47,68 @@ public final class PoseTrackerServiceGrpc {
       }
     }
     return getGetPosesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = PoseTrackerServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (PoseTrackerServiceGrpc.class) {
+        if ((getDoCommandMethod = PoseTrackerServiceGrpc.getDoCommandMethod) == null) {
+          PoseTrackerServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new PoseTrackerServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGeometries",
+      requestType = com.viam.common.v1.Common.GetGeometriesRequest.class,
+      responseType = com.viam.common.v1.Common.GetGeometriesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+    if ((getGetGeometriesMethod = PoseTrackerServiceGrpc.getGetGeometriesMethod) == null) {
+      synchronized (PoseTrackerServiceGrpc.class) {
+        if ((getGetGeometriesMethod = PoseTrackerServiceGrpc.getGetGeometriesMethod) == null) {
+          PoseTrackerServiceGrpc.getGetGeometriesMethod = getGetGeometriesMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeometries"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new PoseTrackerServiceMethodDescriptorSupplier("GetGeometries"))
+              .build();
+        }
+      }
+    }
+    return getGetGeometriesMethod;
   }
 
   /**
@@ -98,37 +160,61 @@ public final class PoseTrackerServiceGrpc {
    * A PoseTrackerService maintains all pose trackers associated with a robot
    * </pre>
    */
-  public static abstract class PoseTrackerServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * GetPoses returns the current pose of each body tracked by the pose tracker
      * </pre>
      */
-    public void getPoses(com.viam.component.v1.PoseTracker.GetPosesRequest request,
+    default void getPoses(com.viam.component.v1.PoseTracker.GetPosesRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.v1.PoseTracker.GetPosesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPosesMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetPosesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.v1.PoseTracker.GetPosesRequest,
-                com.viam.component.v1.PoseTracker.GetPosesResponse>(
-                  this, METHODID_GET_POSES)))
-          .build();
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    default void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGeometriesMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service PoseTrackerService.
    * <pre>
    * A PoseTrackerService maintains all pose trackers associated with a robot
    * </pre>
    */
-  public static final class PoseTrackerServiceStub extends io.grpc.stub.AbstractAsyncStub<PoseTrackerServiceStub> {
+  public static abstract class PoseTrackerServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return PoseTrackerServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service PoseTrackerService.
+   * <pre>
+   * A PoseTrackerService maintains all pose trackers associated with a robot
+   * </pre>
+   */
+  public static final class PoseTrackerServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<PoseTrackerServiceStub> {
     private PoseTrackerServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -150,14 +236,38 @@ public final class PoseTrackerServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPosesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service PoseTrackerService.
    * <pre>
    * A PoseTrackerService maintains all pose trackers associated with a robot
    * </pre>
    */
-  public static final class PoseTrackerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<PoseTrackerServiceBlockingStub> {
+  public static final class PoseTrackerServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<PoseTrackerServiceBlockingStub> {
     private PoseTrackerServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -178,14 +288,36 @@ public final class PoseTrackerServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPosesMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service PoseTrackerService.
    * <pre>
    * A PoseTrackerService maintains all pose trackers associated with a robot
    * </pre>
    */
-  public static final class PoseTrackerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<PoseTrackerServiceFutureStub> {
+  public static final class PoseTrackerServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<PoseTrackerServiceFutureStub> {
     private PoseTrackerServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -207,19 +339,43 @@ public final class PoseTrackerServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPosesMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetGeometriesResponse> getGeometries(
+        com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_POSES = 0;
+  private static final int METHODID_DO_COMMAND = 1;
+  private static final int METHODID_GET_GEOMETRIES = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final PoseTrackerServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(PoseTrackerServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -231,6 +387,14 @@ public final class PoseTrackerServiceGrpc {
         case METHODID_GET_POSES:
           serviceImpl.getPoses((com.viam.component.v1.PoseTracker.GetPosesRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.v1.PoseTracker.GetPosesResponse>) responseObserver);
+          break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_GEOMETRIES:
+          serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -246,6 +410,32 @@ public final class PoseTrackerServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetPosesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.v1.PoseTracker.GetPosesRequest,
+              com.viam.component.v1.PoseTracker.GetPosesResponse>(
+                service, METHODID_GET_POSES)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .addMethod(
+          getGetGeometriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetGeometriesRequest,
+              com.viam.common.v1.Common.GetGeometriesResponse>(
+                service, METHODID_GET_GEOMETRIES)))
+        .build();
   }
 
   private static abstract class PoseTrackerServiceBaseDescriptorSupplier
@@ -271,9 +461,9 @@ public final class PoseTrackerServiceGrpc {
   private static final class PoseTrackerServiceMethodDescriptorSupplier
       extends PoseTrackerServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    PoseTrackerServiceMethodDescriptorSupplier(String methodName) {
+    PoseTrackerServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -294,6 +484,8 @@ public final class PoseTrackerServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new PoseTrackerServiceFileDescriptorSupplier())
               .addMethod(getGetPosesMethod())
+              .addMethod(getDoCommandMethod())
+              .addMethod(getGetGeometriesMethod())
               .build();
         }
       }

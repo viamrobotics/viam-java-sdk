@@ -5,17 +5,18 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * A SensorsService services keeps track of all sensors associated with a robot
+ * This service is deprecated
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: service/sensors/v1/sensors.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SensorsServiceGrpc {
 
   private SensorsServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.service.sensors.v1.SensorsService";
+  public static final java.lang.String SERVICE_NAME = "viam.service.sensors.v1.SensorsService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.service.sensors.v1.Sensors.GetSensorsRequest,
@@ -80,6 +81,37 @@ public final class SensorsServiceGrpc {
     return getGetReadingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = SensorsServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (SensorsServiceGrpc.class) {
+        if ((getDoCommandMethod = SensorsServiceGrpc.getDoCommandMethod) == null) {
+          SensorsServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SensorsServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -127,16 +159,18 @@ public final class SensorsServiceGrpc {
   /**
    * <pre>
    * A SensorsService services keeps track of all sensors associated with a robot
+   * This service is deprecated
    * </pre>
    */
-  public static abstract class SensorsServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * GetSensors returns the list of all sensors.
      * </pre>
      */
-    public void getSensors(com.viam.service.sensors.v1.Sensors.GetSensorsRequest request,
+    @java.lang.Deprecated
+    default void getSensors(com.viam.service.sensors.v1.Sensors.GetSensorsRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.sensors.v1.Sensors.GetSensorsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSensorsMethod(), responseObserver);
     }
@@ -146,37 +180,48 @@ public final class SensorsServiceGrpc {
      * GetReadings returns the list of readings for all sensors specified.
      * </pre>
      */
-    public void getReadings(com.viam.service.sensors.v1.Sensors.GetReadingsRequest request,
+    @java.lang.Deprecated
+    default void getReadings(com.viam.service.sensors.v1.Sensors.GetReadingsRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.sensors.v1.Sensors.GetReadingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetReadingsMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetSensorsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.sensors.v1.Sensors.GetSensorsRequest,
-                com.viam.service.sensors.v1.Sensors.GetSensorsResponse>(
-                  this, METHODID_GET_SENSORS)))
-          .addMethod(
-            getGetReadingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.sensors.v1.Sensors.GetReadingsRequest,
-                com.viam.service.sensors.v1.Sensors.GetReadingsResponse>(
-                  this, METHODID_GET_READINGS)))
-          .build();
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    @java.lang.Deprecated
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service SensorsService.
    * <pre>
    * A SensorsService services keeps track of all sensors associated with a robot
+   * This service is deprecated
    * </pre>
    */
-  public static final class SensorsServiceStub extends io.grpc.stub.AbstractAsyncStub<SensorsServiceStub> {
+  public static abstract class SensorsServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return SensorsServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service SensorsService.
+   * <pre>
+   * A SensorsService services keeps track of all sensors associated with a robot
+   * This service is deprecated
+   * </pre>
+   */
+  public static final class SensorsServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<SensorsServiceStub> {
     private SensorsServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -193,6 +238,7 @@ public final class SensorsServiceGrpc {
      * GetSensors returns the list of all sensors.
      * </pre>
      */
+    @java.lang.Deprecated
     public void getSensors(com.viam.service.sensors.v1.Sensors.GetSensorsRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.sensors.v1.Sensors.GetSensorsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -204,19 +250,35 @@ public final class SensorsServiceGrpc {
      * GetReadings returns the list of readings for all sensors specified.
      * </pre>
      */
+    @java.lang.Deprecated
     public void getReadings(com.viam.service.sensors.v1.Sensors.GetReadingsRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.sensors.v1.Sensors.GetReadingsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetReadingsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service SensorsService.
    * <pre>
    * A SensorsService services keeps track of all sensors associated with a robot
+   * This service is deprecated
    * </pre>
    */
-  public static final class SensorsServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SensorsServiceBlockingStub> {
+  public static final class SensorsServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<SensorsServiceBlockingStub> {
     private SensorsServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -233,6 +295,7 @@ public final class SensorsServiceGrpc {
      * GetSensors returns the list of all sensors.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.viam.service.sensors.v1.Sensors.GetSensorsResponse getSensors(com.viam.service.sensors.v1.Sensors.GetSensorsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSensorsMethod(), getCallOptions(), request);
@@ -243,18 +306,33 @@ public final class SensorsServiceGrpc {
      * GetReadings returns the list of readings for all sensors specified.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.viam.service.sensors.v1.Sensors.GetReadingsResponse getReadings(com.viam.service.sensors.v1.Sensors.GetReadingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetReadingsMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service SensorsService.
    * <pre>
    * A SensorsService services keeps track of all sensors associated with a robot
+   * This service is deprecated
    * </pre>
    */
-  public static final class SensorsServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SensorsServiceFutureStub> {
+  public static final class SensorsServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<SensorsServiceFutureStub> {
     private SensorsServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -271,6 +349,7 @@ public final class SensorsServiceGrpc {
      * GetSensors returns the list of all sensors.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.viam.service.sensors.v1.Sensors.GetSensorsResponse> getSensors(
         com.viam.service.sensors.v1.Sensors.GetSensorsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -282,25 +361,39 @@ public final class SensorsServiceGrpc {
      * GetReadings returns the list of readings for all sensors specified.
      * </pre>
      */
+    @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.viam.service.sensors.v1.Sensors.GetReadingsResponse> getReadings(
         com.viam.service.sensors.v1.Sensors.GetReadingsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetReadingsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    @java.lang.Deprecated
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_SENSORS = 0;
   private static final int METHODID_GET_READINGS = 1;
+  private static final int METHODID_DO_COMMAND = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SensorsServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SensorsServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -317,6 +410,10 @@ public final class SensorsServiceGrpc {
           serviceImpl.getReadings((com.viam.service.sensors.v1.Sensors.GetReadingsRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.service.sensors.v1.Sensors.GetReadingsResponse>) responseObserver);
           break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -331,6 +428,32 @@ public final class SensorsServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetSensorsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.sensors.v1.Sensors.GetSensorsRequest,
+              com.viam.service.sensors.v1.Sensors.GetSensorsResponse>(
+                service, METHODID_GET_SENSORS)))
+        .addMethod(
+          getGetReadingsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.sensors.v1.Sensors.GetReadingsRequest,
+              com.viam.service.sensors.v1.Sensors.GetReadingsResponse>(
+                service, METHODID_GET_READINGS)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .build();
   }
 
   private static abstract class SensorsServiceBaseDescriptorSupplier
@@ -356,9 +479,9 @@ public final class SensorsServiceGrpc {
   private static final class SensorsServiceMethodDescriptorSupplier
       extends SensorsServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    SensorsServiceMethodDescriptorSupplier(String methodName) {
+    SensorsServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -380,6 +503,7 @@ public final class SensorsServiceGrpc {
               .setSchemaDescriptor(new SensorsServiceFileDescriptorSupplier())
               .addMethod(getGetSensorsMethod())
               .addMethod(getGetReadingsMethod())
+              .addMethod(getDoCommandMethod())
               .build();
         }
       }
