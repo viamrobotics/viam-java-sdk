@@ -139,6 +139,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
         optsCopy.webrtcOptions.signalingServerAddress = signalingAddress;
         if (opts.webrtcOptions != null) {
             optsCopy.credentials = opts.webrtcOptions.signalingCredentials;
+            optsCopy.authEntity = opts.webrtcOptions.signalingAuthEntity;
             optsCopy.externalAuthAddress = opts.webrtcOptions.signalingExternalAuthAddress;
             optsCopy.externalAuthToEntity = opts.webrtcOptions.signalingExternalAuthToEntity;
             optsCopy.externalAuthInsecure = opts.webrtcOptions.signalingExternalAuthInsecure;
@@ -181,7 +182,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                             try {
                                 final AuthServiceGrpc.AuthServiceBlockingStub authClient = AuthServiceGrpc.newBlockingStub(signalingChannel);
                                 Auth.AuthenticateResponse authResp = authClient.authenticate(AuthenticateRequest.newBuilder()
-                                        .setEntity(host)
+                                        .setEntity(optsCopy.authEntity)
                                         .setCredentials(Auth.Credentials.newBuilder()
                                                 .setType(optsCopy.credentials.getType())
                                                 .setPayload(optsCopy.credentials.getPayload()))
