@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: component/movementsensor/v1/movementsensor.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MovementSensorServiceGrpc {
 
   private MovementSensorServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.component.movementsensor.v1.MovementSensorService";
+  public static final java.lang.String SERVICE_NAME = "viam.component.movementsensor.v1.MovementSensorService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest,
@@ -232,6 +232,130 @@ public final class MovementSensorServiceGrpc {
     return getGetAccuracyMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest,
+      com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse> getGetLinearAccelerationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetLinearAcceleration",
+      requestType = com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest.class,
+      responseType = com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest,
+      com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse> getGetLinearAccelerationMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest, com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse> getGetLinearAccelerationMethod;
+    if ((getGetLinearAccelerationMethod = MovementSensorServiceGrpc.getGetLinearAccelerationMethod) == null) {
+      synchronized (MovementSensorServiceGrpc.class) {
+        if ((getGetLinearAccelerationMethod = MovementSensorServiceGrpc.getGetLinearAccelerationMethod) == null) {
+          MovementSensorServiceGrpc.getGetLinearAccelerationMethod = getGetLinearAccelerationMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest, com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLinearAcceleration"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("GetLinearAcceleration"))
+              .build();
+        }
+      }
+    }
+    return getGetLinearAccelerationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = MovementSensorServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (MovementSensorServiceGrpc.class) {
+        if ((getDoCommandMethod = MovementSensorServiceGrpc.getDoCommandMethod) == null) {
+          MovementSensorServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGeometries",
+      requestType = com.viam.common.v1.Common.GetGeometriesRequest.class,
+      responseType = com.viam.common.v1.Common.GetGeometriesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+    if ((getGetGeometriesMethod = MovementSensorServiceGrpc.getGetGeometriesMethod) == null) {
+      synchronized (MovementSensorServiceGrpc.class) {
+        if ((getGetGeometriesMethod = MovementSensorServiceGrpc.getGetGeometriesMethod) == null) {
+          MovementSensorServiceGrpc.getGetGeometriesMethod = getGetGeometriesMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeometries"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("GetGeometries"))
+              .build();
+        }
+      }
+    }
+    return getGetGeometriesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetReadingsRequest,
+      com.viam.common.v1.Common.GetReadingsResponse> getGetReadingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetReadings",
+      requestType = com.viam.common.v1.Common.GetReadingsRequest.class,
+      responseType = com.viam.common.v1.Common.GetReadingsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetReadingsRequest,
+      com.viam.common.v1.Common.GetReadingsResponse> getGetReadingsMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetReadingsRequest, com.viam.common.v1.Common.GetReadingsResponse> getGetReadingsMethod;
+    if ((getGetReadingsMethod = MovementSensorServiceGrpc.getGetReadingsMethod) == null) {
+      synchronized (MovementSensorServiceGrpc.class) {
+        if ((getGetReadingsMethod = MovementSensorServiceGrpc.getGetReadingsMethod) == null) {
+          MovementSensorServiceGrpc.getGetReadingsMethod = getGetReadingsMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetReadingsRequest, com.viam.common.v1.Common.GetReadingsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetReadings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetReadingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetReadingsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("GetReadings"))
+              .build();
+        }
+      }
+    }
+    return getGetReadingsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -278,115 +402,108 @@ public final class MovementSensorServiceGrpc {
 
   /**
    */
-  public static abstract class MovementSensorServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void getLinearVelocity(com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest request,
+    default void getLinearVelocity(com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLinearVelocityMethod(), responseObserver);
     }
 
     /**
      */
-    public void getAngularVelocity(com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest request,
+    default void getAngularVelocity(com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAngularVelocityMethod(), responseObserver);
     }
 
     /**
      */
-    public void getCompassHeading(com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest request,
+    default void getCompassHeading(com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCompassHeadingMethod(), responseObserver);
     }
 
     /**
      */
-    public void getOrientation(com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest request,
+    default void getOrientation(com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrientationMethod(), responseObserver);
     }
 
     /**
      */
-    public void getPosition(com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest request,
+    default void getPosition(com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPositionMethod(), responseObserver);
     }
 
     /**
      */
-    public void getProperties(com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest request,
+    default void getProperties(com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPropertiesMethod(), responseObserver);
     }
 
     /**
      */
-    public void getAccuracy(com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest request,
+    default void getAccuracy(com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAccuracyMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetLinearVelocityMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest,
-                com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse>(
-                  this, METHODID_GET_LINEAR_VELOCITY)))
-          .addMethod(
-            getGetAngularVelocityMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest,
-                com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse>(
-                  this, METHODID_GET_ANGULAR_VELOCITY)))
-          .addMethod(
-            getGetCompassHeadingMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest,
-                com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse>(
-                  this, METHODID_GET_COMPASS_HEADING)))
-          .addMethod(
-            getGetOrientationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest,
-                com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse>(
-                  this, METHODID_GET_ORIENTATION)))
-          .addMethod(
-            getGetPositionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest,
-                com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse>(
-                  this, METHODID_GET_POSITION)))
-          .addMethod(
-            getGetPropertiesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest,
-                com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse>(
-                  this, METHODID_GET_PROPERTIES)))
-          .addMethod(
-            getGetAccuracyMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest,
-                com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse>(
-                  this, METHODID_GET_ACCURACY)))
-          .build();
+    /**
+     */
+    default void getLinearAcceleration(com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLinearAccelerationMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    default void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGeometriesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetReadings returns the readings of a sensor of the underlying robot.
+     * </pre>
+     */
+    default void getReadings(com.viam.common.v1.Common.GetReadingsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetReadingsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetReadingsMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service MovementSensorService.
    */
-  public static final class MovementSensorServiceStub extends io.grpc.stub.AbstractAsyncStub<MovementSensorServiceStub> {
+  public static abstract class MovementSensorServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return MovementSensorServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service MovementSensorService.
+   */
+  public static final class MovementSensorServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<MovementSensorServiceStub> {
     private MovementSensorServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -453,11 +570,51 @@ public final class MovementSensorServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAccuracyMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getLinearAcceleration(com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetLinearAccelerationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetReadings returns the readings of a sensor of the underlying robot.
+     * </pre>
+     */
+    public void getReadings(com.viam.common.v1.Common.GetReadingsRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetReadingsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetReadingsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service MovementSensorService.
    */
-  public static final class MovementSensorServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<MovementSensorServiceBlockingStub> {
+  public static final class MovementSensorServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<MovementSensorServiceBlockingStub> {
     private MovementSensorServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -517,11 +674,47 @@ public final class MovementSensorServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAccuracyMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse getLinearAcceleration(com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetLinearAccelerationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetReadings returns the readings of a sensor of the underlying robot.
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetReadingsResponse getReadings(com.viam.common.v1.Common.GetReadingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetReadingsMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service MovementSensorService.
    */
-  public static final class MovementSensorServiceFutureStub extends io.grpc.stub.AbstractFutureStub<MovementSensorServiceFutureStub> {
+  public static final class MovementSensorServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<MovementSensorServiceFutureStub> {
     private MovementSensorServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -588,6 +781,44 @@ public final class MovementSensorServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAccuracyMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse> getLinearAcceleration(
+        com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetLinearAccelerationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetGeometriesResponse> getGeometries(
+        com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetReadings returns the readings of a sensor of the underlying robot.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetReadingsResponse> getReadings(
+        com.viam.common.v1.Common.GetReadingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetReadingsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_LINEAR_VELOCITY = 0;
@@ -597,16 +828,20 @@ public final class MovementSensorServiceGrpc {
   private static final int METHODID_GET_POSITION = 4;
   private static final int METHODID_GET_PROPERTIES = 5;
   private static final int METHODID_GET_ACCURACY = 6;
+  private static final int METHODID_GET_LINEAR_ACCELERATION = 7;
+  private static final int METHODID_DO_COMMAND = 8;
+  private static final int METHODID_GET_GEOMETRIES = 9;
+  private static final int METHODID_GET_READINGS = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final MovementSensorServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(MovementSensorServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -643,6 +878,22 @@ public final class MovementSensorServiceGrpc {
           serviceImpl.getAccuracy((com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse>) responseObserver);
           break;
+        case METHODID_GET_LINEAR_ACCELERATION:
+          serviceImpl.getLinearAcceleration((com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse>) responseObserver);
+          break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_GEOMETRIES:
+          serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse>) responseObserver);
+          break;
+        case METHODID_GET_READINGS:
+          serviceImpl.getReadings((com.viam.common.v1.Common.GetReadingsRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetReadingsResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -657,6 +908,88 @@ public final class MovementSensorServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetLinearVelocityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest,
+              com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse>(
+                service, METHODID_GET_LINEAR_VELOCITY)))
+        .addMethod(
+          getGetAngularVelocityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest,
+              com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse>(
+                service, METHODID_GET_ANGULAR_VELOCITY)))
+        .addMethod(
+          getGetCompassHeadingMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest,
+              com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse>(
+                service, METHODID_GET_COMPASS_HEADING)))
+        .addMethod(
+          getGetOrientationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest,
+              com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse>(
+                service, METHODID_GET_ORIENTATION)))
+        .addMethod(
+          getGetPositionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest,
+              com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse>(
+                service, METHODID_GET_POSITION)))
+        .addMethod(
+          getGetPropertiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest,
+              com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse>(
+                service, METHODID_GET_PROPERTIES)))
+        .addMethod(
+          getGetAccuracyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest,
+              com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse>(
+                service, METHODID_GET_ACCURACY)))
+        .addMethod(
+          getGetLinearAccelerationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest,
+              com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse>(
+                service, METHODID_GET_LINEAR_ACCELERATION)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .addMethod(
+          getGetGeometriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetGeometriesRequest,
+              com.viam.common.v1.Common.GetGeometriesResponse>(
+                service, METHODID_GET_GEOMETRIES)))
+        .addMethod(
+          getGetReadingsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetReadingsRequest,
+              com.viam.common.v1.Common.GetReadingsResponse>(
+                service, METHODID_GET_READINGS)))
+        .build();
   }
 
   private static abstract class MovementSensorServiceBaseDescriptorSupplier
@@ -682,9 +1015,9 @@ public final class MovementSensorServiceGrpc {
   private static final class MovementSensorServiceMethodDescriptorSupplier
       extends MovementSensorServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    MovementSensorServiceMethodDescriptorSupplier(String methodName) {
+    MovementSensorServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -711,6 +1044,10 @@ public final class MovementSensorServiceGrpc {
               .addMethod(getGetPositionMethod())
               .addMethod(getGetPropertiesMethod())
               .addMethod(getGetAccuracyMethod())
+              .addMethod(getGetLinearAccelerationMethod())
+              .addMethod(getDoCommandMethod())
+              .addMethod(getGetGeometriesMethod())
+              .addMethod(getGetReadingsMethod())
               .build();
         }
       }

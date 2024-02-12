@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: component/gripper/v1/gripper.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class GripperServiceGrpc {
 
   private GripperServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.component.gripper.v1.GripperService";
+  public static final java.lang.String SERVICE_NAME = "viam.component.gripper.v1.GripperService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.component.gripper.v1.Gripper.OpenRequest,
@@ -142,6 +142,68 @@ public final class GripperServiceGrpc {
     return getIsMovingMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = GripperServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (GripperServiceGrpc.class) {
+        if ((getDoCommandMethod = GripperServiceGrpc.getDoCommandMethod) == null) {
+          GripperServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new GripperServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGeometries",
+      requestType = com.viam.common.v1.Common.GetGeometriesRequest.class,
+      responseType = com.viam.common.v1.Common.GetGeometriesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+    if ((getGetGeometriesMethod = GripperServiceGrpc.getGetGeometriesMethod) == null) {
+      synchronized (GripperServiceGrpc.class) {
+        if ((getGetGeometriesMethod = GripperServiceGrpc.getGetGeometriesMethod) == null) {
+          GripperServiceGrpc.getGetGeometriesMethod = getGetGeometriesMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeometries"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new GripperServiceMethodDescriptorSupplier("GetGeometries"))
+              .build();
+        }
+      }
+    }
+    return getGetGeometriesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -191,14 +253,14 @@ public final class GripperServiceGrpc {
    * An GripperService services all grippers associated with a robot
    * </pre>
    */
-  public static abstract class GripperServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * Open opens a gripper of the underlying robot.
      * </pre>
      */
-    public void open(com.viam.component.gripper.v1.Gripper.OpenRequest request,
+    default void open(com.viam.component.gripper.v1.Gripper.OpenRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.OpenResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getOpenMethod(), responseObserver);
     }
@@ -208,7 +270,7 @@ public final class GripperServiceGrpc {
      * Grab requests a gripper of the underlying robot to grab.
      * </pre>
      */
-    public void grab(com.viam.component.gripper.v1.Gripper.GrabRequest request,
+    default void grab(com.viam.component.gripper.v1.Gripper.GrabRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.GrabResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGrabMethod(), responseObserver);
     }
@@ -218,7 +280,7 @@ public final class GripperServiceGrpc {
      * Stop stops a robot's gripper
      * </pre>
      */
-    public void stop(com.viam.component.gripper.v1.Gripper.StopRequest request,
+    default void stop(com.viam.component.gripper.v1.Gripper.StopRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.StopResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
     }
@@ -228,51 +290,54 @@ public final class GripperServiceGrpc {
      * IsMoving reports if a component is in motion
      * </pre>
      */
-    public void isMoving(com.viam.component.gripper.v1.Gripper.IsMovingRequest request,
+    default void isMoving(com.viam.component.gripper.v1.Gripper.IsMovingRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.IsMovingResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIsMovingMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getOpenMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.gripper.v1.Gripper.OpenRequest,
-                com.viam.component.gripper.v1.Gripper.OpenResponse>(
-                  this, METHODID_OPEN)))
-          .addMethod(
-            getGrabMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.gripper.v1.Gripper.GrabRequest,
-                com.viam.component.gripper.v1.Gripper.GrabResponse>(
-                  this, METHODID_GRAB)))
-          .addMethod(
-            getStopMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.gripper.v1.Gripper.StopRequest,
-                com.viam.component.gripper.v1.Gripper.StopResponse>(
-                  this, METHODID_STOP)))
-          .addMethod(
-            getIsMovingMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.gripper.v1.Gripper.IsMovingRequest,
-                com.viam.component.gripper.v1.Gripper.IsMovingResponse>(
-                  this, METHODID_IS_MOVING)))
-          .build();
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    default void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGeometriesMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service GripperService.
    * <pre>
    * An GripperService services all grippers associated with a robot
    * </pre>
    */
-  public static final class GripperServiceStub extends io.grpc.stub.AbstractAsyncStub<GripperServiceStub> {
+  public static abstract class GripperServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return GripperServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service GripperService.
+   * <pre>
+   * An GripperService services all grippers associated with a robot
+   * </pre>
+   */
+  public static final class GripperServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<GripperServiceStub> {
     private GripperServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -327,14 +392,38 @@ public final class GripperServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getIsMovingMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service GripperService.
    * <pre>
    * An GripperService services all grippers associated with a robot
    * </pre>
    */
-  public static final class GripperServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<GripperServiceBlockingStub> {
+  public static final class GripperServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<GripperServiceBlockingStub> {
     private GripperServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -385,14 +474,36 @@ public final class GripperServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getIsMovingMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service GripperService.
    * <pre>
    * An GripperService services all grippers associated with a robot
    * </pre>
    */
-  public static final class GripperServiceFutureStub extends io.grpc.stub.AbstractFutureStub<GripperServiceFutureStub> {
+  public static final class GripperServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<GripperServiceFutureStub> {
     private GripperServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -447,22 +558,46 @@ public final class GripperServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getIsMovingMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetGeometriesResponse> getGeometries(
+        com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_OPEN = 0;
   private static final int METHODID_GRAB = 1;
   private static final int METHODID_STOP = 2;
   private static final int METHODID_IS_MOVING = 3;
+  private static final int METHODID_DO_COMMAND = 4;
+  private static final int METHODID_GET_GEOMETRIES = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final GripperServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(GripperServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -487,6 +622,14 @@ public final class GripperServiceGrpc {
           serviceImpl.isMoving((com.viam.component.gripper.v1.Gripper.IsMovingRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.gripper.v1.Gripper.IsMovingResponse>) responseObserver);
           break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_GEOMETRIES:
+          serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -501,6 +644,53 @@ public final class GripperServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getOpenMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.gripper.v1.Gripper.OpenRequest,
+              com.viam.component.gripper.v1.Gripper.OpenResponse>(
+                service, METHODID_OPEN)))
+        .addMethod(
+          getGrabMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.gripper.v1.Gripper.GrabRequest,
+              com.viam.component.gripper.v1.Gripper.GrabResponse>(
+                service, METHODID_GRAB)))
+        .addMethod(
+          getStopMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.gripper.v1.Gripper.StopRequest,
+              com.viam.component.gripper.v1.Gripper.StopResponse>(
+                service, METHODID_STOP)))
+        .addMethod(
+          getIsMovingMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.gripper.v1.Gripper.IsMovingRequest,
+              com.viam.component.gripper.v1.Gripper.IsMovingResponse>(
+                service, METHODID_IS_MOVING)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .addMethod(
+          getGetGeometriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetGeometriesRequest,
+              com.viam.common.v1.Common.GetGeometriesResponse>(
+                service, METHODID_GET_GEOMETRIES)))
+        .build();
   }
 
   private static abstract class GripperServiceBaseDescriptorSupplier
@@ -526,9 +716,9 @@ public final class GripperServiceGrpc {
   private static final class GripperServiceMethodDescriptorSupplier
       extends GripperServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    GripperServiceMethodDescriptorSupplier(String methodName) {
+    GripperServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -552,6 +742,8 @@ public final class GripperServiceGrpc {
               .addMethod(getGrabMethod())
               .addMethod(getStopMethod())
               .addMethod(getIsMovingMethod())
+              .addMethod(getDoCommandMethod())
+              .addMethod(getGetGeometriesMethod())
               .build();
         }
       }

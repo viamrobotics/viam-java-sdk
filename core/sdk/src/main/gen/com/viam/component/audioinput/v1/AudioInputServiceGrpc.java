@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: component/audioinput/v1/audioinput.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AudioInputServiceGrpc {
 
   private AudioInputServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.component.audioinput.v1.AudioInputService";
+  public static final java.lang.String SERVICE_NAME = "viam.component.audioinput.v1.AudioInputService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.component.audioinput.v1.Audioinput.ChunksRequest,
@@ -111,6 +111,68 @@ public final class AudioInputServiceGrpc {
     return getRecordMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = AudioInputServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (AudioInputServiceGrpc.class) {
+        if ((getDoCommandMethod = AudioInputServiceGrpc.getDoCommandMethod) == null) {
+          AudioInputServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AudioInputServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGeometries",
+      requestType = com.viam.common.v1.Common.GetGeometriesRequest.class,
+      responseType = com.viam.common.v1.Common.GetGeometriesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+    if ((getGetGeometriesMethod = AudioInputServiceGrpc.getGetGeometriesMethod) == null) {
+      synchronized (AudioInputServiceGrpc.class) {
+        if ((getGetGeometriesMethod = AudioInputServiceGrpc.getGetGeometriesMethod) == null) {
+          AudioInputServiceGrpc.getGetGeometriesMethod = getGetGeometriesMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeometries"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AudioInputServiceMethodDescriptorSupplier("GetGeometries"))
+              .build();
+        }
+      }
+    }
+    return getGetGeometriesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -160,14 +222,14 @@ public final class AudioInputServiceGrpc {
    * An AudioInputService services all audio inputs associated with a robot
    * </pre>
    */
-  public static abstract class AudioInputServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * Chunks returns audio chunks forever from an audio input of the underlying robot.
      * </pre>
      */
-    public void chunks(com.viam.component.audioinput.v1.Audioinput.ChunksRequest request,
+    default void chunks(com.viam.component.audioinput.v1.Audioinput.ChunksRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.audioinput.v1.Audioinput.ChunksResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getChunksMethod(), responseObserver);
     }
@@ -177,7 +239,7 @@ public final class AudioInputServiceGrpc {
      * Properties returns properties of an audio input of the underlying robot.
      * </pre>
      */
-    public void properties(com.viam.component.audioinput.v1.Audioinput.PropertiesRequest request,
+    default void properties(com.viam.component.audioinput.v1.Audioinput.PropertiesRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.audioinput.v1.Audioinput.PropertiesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPropertiesMethod(), responseObserver);
     }
@@ -189,44 +251,54 @@ public final class AudioInputServiceGrpc {
      * be the same one returned each time.
      * </pre>
      */
-    public void record(com.viam.component.audioinput.v1.Audioinput.RecordRequest request,
+    default void record(com.viam.component.audioinput.v1.Audioinput.RecordRequest request,
         io.grpc.stub.StreamObserver<com.google.api.HttpBody> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRecordMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getChunksMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.viam.component.audioinput.v1.Audioinput.ChunksRequest,
-                com.viam.component.audioinput.v1.Audioinput.ChunksResponse>(
-                  this, METHODID_CHUNKS)))
-          .addMethod(
-            getPropertiesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.audioinput.v1.Audioinput.PropertiesRequest,
-                com.viam.component.audioinput.v1.Audioinput.PropertiesResponse>(
-                  this, METHODID_PROPERTIES)))
-          .addMethod(
-            getRecordMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.audioinput.v1.Audioinput.RecordRequest,
-                com.google.api.HttpBody>(
-                  this, METHODID_RECORD)))
-          .build();
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    default void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGeometriesMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service AudioInputService.
    * <pre>
    * An AudioInputService services all audio inputs associated with a robot
    * </pre>
    */
-  public static final class AudioInputServiceStub extends io.grpc.stub.AbstractAsyncStub<AudioInputServiceStub> {
+  public static abstract class AudioInputServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AudioInputServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AudioInputService.
+   * <pre>
+   * An AudioInputService services all audio inputs associated with a robot
+   * </pre>
+   */
+  public static final class AudioInputServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AudioInputServiceStub> {
     private AudioInputServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -272,14 +344,38 @@ public final class AudioInputServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRecordMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AudioInputService.
    * <pre>
    * An AudioInputService services all audio inputs associated with a robot
    * </pre>
    */
-  public static final class AudioInputServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AudioInputServiceBlockingStub> {
+  public static final class AudioInputServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AudioInputServiceBlockingStub> {
     private AudioInputServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -323,14 +419,36 @@ public final class AudioInputServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRecordMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AudioInputService.
    * <pre>
    * An AudioInputService services all audio inputs associated with a robot
    * </pre>
    */
-  public static final class AudioInputServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AudioInputServiceFutureStub> {
+  public static final class AudioInputServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AudioInputServiceFutureStub> {
     private AudioInputServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -365,21 +483,45 @@ public final class AudioInputServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRecordMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetGeometriesResponse> getGeometries(
+        com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CHUNKS = 0;
   private static final int METHODID_PROPERTIES = 1;
   private static final int METHODID_RECORD = 2;
+  private static final int METHODID_DO_COMMAND = 3;
+  private static final int METHODID_GET_GEOMETRIES = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AudioInputServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AudioInputServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -400,6 +542,14 @@ public final class AudioInputServiceGrpc {
           serviceImpl.record((com.viam.component.audioinput.v1.Audioinput.RecordRequest) request,
               (io.grpc.stub.StreamObserver<com.google.api.HttpBody>) responseObserver);
           break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_GEOMETRIES:
+          serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -414,6 +564,46 @@ public final class AudioInputServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getChunksMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.viam.component.audioinput.v1.Audioinput.ChunksRequest,
+              com.viam.component.audioinput.v1.Audioinput.ChunksResponse>(
+                service, METHODID_CHUNKS)))
+        .addMethod(
+          getPropertiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.audioinput.v1.Audioinput.PropertiesRequest,
+              com.viam.component.audioinput.v1.Audioinput.PropertiesResponse>(
+                service, METHODID_PROPERTIES)))
+        .addMethod(
+          getRecordMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.audioinput.v1.Audioinput.RecordRequest,
+              com.google.api.HttpBody>(
+                service, METHODID_RECORD)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .addMethod(
+          getGetGeometriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetGeometriesRequest,
+              com.viam.common.v1.Common.GetGeometriesResponse>(
+                service, METHODID_GET_GEOMETRIES)))
+        .build();
   }
 
   private static abstract class AudioInputServiceBaseDescriptorSupplier
@@ -439,9 +629,9 @@ public final class AudioInputServiceGrpc {
   private static final class AudioInputServiceMethodDescriptorSupplier
       extends AudioInputServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    AudioInputServiceMethodDescriptorSupplier(String methodName) {
+    AudioInputServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -464,6 +654,8 @@ public final class AudioInputServiceGrpc {
               .addMethod(getChunksMethod())
               .addMethod(getPropertiesMethod())
               .addMethod(getRecordMethod())
+              .addMethod(getDoCommandMethod())
+              .addMethod(getGetGeometriesMethod())
               .build();
         }
       }

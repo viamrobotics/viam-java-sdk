@@ -105,6 +105,7 @@ public class PeerConnectionFactory extends com.viam.sdk.core.webrtc.PeerConnecti
         if (rtcConfiguration.sdpSemantics != null) {
             switch (rtcConfiguration.sdpSemantics) {
                 case PLAN_B:
+                    //noinspection deprecation
                     nativeConfig.sdpSemantics = org.webrtc.PeerConnection.SdpSemantics.PLAN_B;
                     break;
                 case UNIFIED_PLAN:

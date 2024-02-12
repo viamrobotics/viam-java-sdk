@@ -23,13 +23,12 @@ public class DataChannel implements com.viam.sdk.core.webrtc.DataChannel {
     }
 
     @Override
-    public boolean send(final Buffer message) {
+    public void send(final Buffer message) {
         try {
             this.nativeDataChannel.send(new RTCDataChannelBuffer(message.data, message.binary));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        return true;
     }
 
     @Override

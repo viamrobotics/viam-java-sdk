@@ -23,7 +23,7 @@ public abstract class PeerConnectionFactory<MediaStreamT> {
             final PeerConnection.Observer<MediaStreamT> peerConnectionObserver,
             final Logger logger
     ) {
-        final PeerConnection.ICEServer iceServer = new PeerConnection.ICEServer("stun:global.stun.twilio.com:3478?transport=udp");
+        final PeerConnection.ICEServer iceServer = new PeerConnection.ICEServer("stun:global.stun.twilio.com:3478");
         if (rtcConfig == null || rtcConfig.iceServers.size() == 0) {
             rtcConfig = new PeerConnection.RTCConfiguration(Collections.singletonList(iceServer));
             rtcConfig.bundlePolicy = PeerConnection.BundlePolicy.MAXCOMPAT;
@@ -52,11 +52,6 @@ public abstract class PeerConnectionFactory<MediaStreamT> {
 
         final RPCPeerConnection rpcConn = new RPCPeerConnection(peerConnection, dataChannel, negChan);
         negChan.registerObserver(new DataChannel.Observer() {
-            @Override
-            public void onBufferedAmountChange(long previousAmount) {
-
-            }
-
             @Override
             public void onStateChange() {
 
@@ -208,6 +203,7 @@ public abstract class PeerConnectionFactory<MediaStreamT> {
             }
         });
 
+        //noinspection ConstantValue
         if (!disableTrickle) {
             return CompletableFuture.completedFuture(rpcConn);
         }

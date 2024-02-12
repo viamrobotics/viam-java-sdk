@@ -5,45 +5,107 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: app/datasync/v1/data_sync.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DataSyncServiceGrpc {
 
   private DataSyncServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.app.datasync.v1.DataSyncService";
+  public static final java.lang.String SERVICE_NAME = "viam.app.datasync.v1.DataSyncService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<viam.app.datasync.v1.DataSync.UploadRequest,
-      viam.app.datasync.v1.DataSync.UploadResponse> getUploadMethod;
+  private static volatile io.grpc.MethodDescriptor<viam.app.datasync.v1.DataSync.DataCaptureUploadRequest,
+      viam.app.datasync.v1.DataSync.DataCaptureUploadResponse> getDataCaptureUploadMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "Upload",
-      requestType = viam.app.datasync.v1.DataSync.UploadRequest.class,
-      responseType = viam.app.datasync.v1.DataSync.UploadResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-  public static io.grpc.MethodDescriptor<viam.app.datasync.v1.DataSync.UploadRequest,
-      viam.app.datasync.v1.DataSync.UploadResponse> getUploadMethod() {
-    io.grpc.MethodDescriptor<viam.app.datasync.v1.DataSync.UploadRequest, viam.app.datasync.v1.DataSync.UploadResponse> getUploadMethod;
-    if ((getUploadMethod = DataSyncServiceGrpc.getUploadMethod) == null) {
+      fullMethodName = SERVICE_NAME + '/' + "DataCaptureUpload",
+      requestType = viam.app.datasync.v1.DataSync.DataCaptureUploadRequest.class,
+      responseType = viam.app.datasync.v1.DataSync.DataCaptureUploadResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.datasync.v1.DataSync.DataCaptureUploadRequest,
+      viam.app.datasync.v1.DataSync.DataCaptureUploadResponse> getDataCaptureUploadMethod() {
+    io.grpc.MethodDescriptor<viam.app.datasync.v1.DataSync.DataCaptureUploadRequest, viam.app.datasync.v1.DataSync.DataCaptureUploadResponse> getDataCaptureUploadMethod;
+    if ((getDataCaptureUploadMethod = DataSyncServiceGrpc.getDataCaptureUploadMethod) == null) {
       synchronized (DataSyncServiceGrpc.class) {
-        if ((getUploadMethod = DataSyncServiceGrpc.getUploadMethod) == null) {
-          DataSyncServiceGrpc.getUploadMethod = getUploadMethod =
-              io.grpc.MethodDescriptor.<viam.app.datasync.v1.DataSync.UploadRequest, viam.app.datasync.v1.DataSync.UploadResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Upload"))
+        if ((getDataCaptureUploadMethod = DataSyncServiceGrpc.getDataCaptureUploadMethod) == null) {
+          DataSyncServiceGrpc.getDataCaptureUploadMethod = getDataCaptureUploadMethod =
+              io.grpc.MethodDescriptor.<viam.app.datasync.v1.DataSync.DataCaptureUploadRequest, viam.app.datasync.v1.DataSync.DataCaptureUploadResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DataCaptureUpload"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.datasync.v1.DataSync.UploadRequest.getDefaultInstance()))
+                  viam.app.datasync.v1.DataSync.DataCaptureUploadRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.datasync.v1.DataSync.UploadResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataSyncServiceMethodDescriptorSupplier("Upload"))
+                  viam.app.datasync.v1.DataSync.DataCaptureUploadResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataSyncServiceMethodDescriptorSupplier("DataCaptureUpload"))
               .build();
         }
       }
     }
-    return getUploadMethod;
+    return getDataCaptureUploadMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.datasync.v1.DataSync.FileUploadRequest,
+      viam.app.datasync.v1.DataSync.FileUploadResponse> getFileUploadMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "FileUpload",
+      requestType = viam.app.datasync.v1.DataSync.FileUploadRequest.class,
+      responseType = viam.app.datasync.v1.DataSync.FileUploadResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<viam.app.datasync.v1.DataSync.FileUploadRequest,
+      viam.app.datasync.v1.DataSync.FileUploadResponse> getFileUploadMethod() {
+    io.grpc.MethodDescriptor<viam.app.datasync.v1.DataSync.FileUploadRequest, viam.app.datasync.v1.DataSync.FileUploadResponse> getFileUploadMethod;
+    if ((getFileUploadMethod = DataSyncServiceGrpc.getFileUploadMethod) == null) {
+      synchronized (DataSyncServiceGrpc.class) {
+        if ((getFileUploadMethod = DataSyncServiceGrpc.getFileUploadMethod) == null) {
+          DataSyncServiceGrpc.getFileUploadMethod = getFileUploadMethod =
+              io.grpc.MethodDescriptor.<viam.app.datasync.v1.DataSync.FileUploadRequest, viam.app.datasync.v1.DataSync.FileUploadResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "FileUpload"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.datasync.v1.DataSync.FileUploadRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.datasync.v1.DataSync.FileUploadResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataSyncServiceMethodDescriptorSupplier("FileUpload"))
+              .build();
+        }
+      }
+    }
+    return getFileUploadMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest,
+      viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse> getStreamingDataCaptureUploadMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StreamingDataCaptureUpload",
+      requestType = viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest.class,
+      responseType = viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest,
+      viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse> getStreamingDataCaptureUploadMethod() {
+    io.grpc.MethodDescriptor<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest, viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse> getStreamingDataCaptureUploadMethod;
+    if ((getStreamingDataCaptureUploadMethod = DataSyncServiceGrpc.getStreamingDataCaptureUploadMethod) == null) {
+      synchronized (DataSyncServiceGrpc.class) {
+        if ((getStreamingDataCaptureUploadMethod = DataSyncServiceGrpc.getStreamingDataCaptureUploadMethod) == null) {
+          DataSyncServiceGrpc.getStreamingDataCaptureUploadMethod = getStreamingDataCaptureUploadMethod =
+              io.grpc.MethodDescriptor.<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest, viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamingDataCaptureUpload"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataSyncServiceMethodDescriptorSupplier("StreamingDataCaptureUpload"))
+              .build();
+        }
+      }
+    }
+    return getStreamingDataCaptureUploadMethod;
   }
 
   /**
@@ -92,31 +154,57 @@ public final class DataSyncServiceGrpc {
 
   /**
    */
-  public static abstract class DataSyncServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
+     * <pre>
+     * DataCaptureUpload uploads the contents and metadata for tabular data.
+     * </pre>
      */
-    public io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.UploadRequest> upload(
-        io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.UploadResponse> responseObserver) {
-      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getUploadMethod(), responseObserver);
+    default void dataCaptureUpload(viam.app.datasync.v1.DataSync.DataCaptureUploadRequest request,
+        io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.DataCaptureUploadResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDataCaptureUploadMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getUploadMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                viam.app.datasync.v1.DataSync.UploadRequest,
-                viam.app.datasync.v1.DataSync.UploadResponse>(
-                  this, METHODID_UPLOAD)))
-          .build();
+    /**
+     * <pre>
+     * FileUpload uploads the contents and metadata for binary (image + file) data,
+     * where the first packet must be the UploadMetadata.
+     * </pre>
+     */
+    default io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.FileUploadRequest> fileUpload(
+        io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.FileUploadResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getFileUploadMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * StreamingDataCaptureUpload uploads the streaming contents and metadata for streaming binary (image + file) data,
+     * where the first packet must be the UploadMetadata.
+     * </pre>
+     */
+    default io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest> streamingDataCaptureUpload(
+        io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamingDataCaptureUploadMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service DataSyncService.
    */
-  public static final class DataSyncServiceStub extends io.grpc.stub.AbstractAsyncStub<DataSyncServiceStub> {
+  public static abstract class DataSyncServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return DataSyncServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service DataSyncService.
+   */
+  public static final class DataSyncServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<DataSyncServiceStub> {
     private DataSyncServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -129,17 +217,46 @@ public final class DataSyncServiceGrpc {
     }
 
     /**
+     * <pre>
+     * DataCaptureUpload uploads the contents and metadata for tabular data.
+     * </pre>
      */
-    public io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.UploadRequest> upload(
-        io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.UploadResponse> responseObserver) {
-      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
-          getChannel().newCall(getUploadMethod(), getCallOptions()), responseObserver);
+    public void dataCaptureUpload(viam.app.datasync.v1.DataSync.DataCaptureUploadRequest request,
+        io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.DataCaptureUploadResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDataCaptureUploadMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * FileUpload uploads the contents and metadata for binary (image + file) data,
+     * where the first packet must be the UploadMetadata.
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.FileUploadRequest> fileUpload(
+        io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.FileUploadResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
+          getChannel().newCall(getFileUploadMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * StreamingDataCaptureUpload uploads the streaming contents and metadata for streaming binary (image + file) data,
+     * where the first packet must be the UploadMetadata.
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest> streamingDataCaptureUpload(
+        io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
+          getChannel().newCall(getStreamingDataCaptureUploadMethod(), getCallOptions()), responseObserver);
     }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service DataSyncService.
    */
-  public static final class DataSyncServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DataSyncServiceBlockingStub> {
+  public static final class DataSyncServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<DataSyncServiceBlockingStub> {
     private DataSyncServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -150,11 +267,23 @@ public final class DataSyncServiceGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DataSyncServiceBlockingStub(channel, callOptions);
     }
+
+    /**
+     * <pre>
+     * DataCaptureUpload uploads the contents and metadata for tabular data.
+     * </pre>
+     */
+    public viam.app.datasync.v1.DataSync.DataCaptureUploadResponse dataCaptureUpload(viam.app.datasync.v1.DataSync.DataCaptureUploadRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDataCaptureUploadMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service DataSyncService.
    */
-  public static final class DataSyncServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DataSyncServiceFutureStub> {
+  public static final class DataSyncServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<DataSyncServiceFutureStub> {
     private DataSyncServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -165,19 +294,32 @@ public final class DataSyncServiceGrpc {
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DataSyncServiceFutureStub(channel, callOptions);
     }
+
+    /**
+     * <pre>
+     * DataCaptureUpload uploads the contents and metadata for tabular data.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.datasync.v1.DataSync.DataCaptureUploadResponse> dataCaptureUpload(
+        viam.app.datasync.v1.DataSync.DataCaptureUploadRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDataCaptureUploadMethod(), getCallOptions()), request);
+    }
   }
 
-  private static final int METHODID_UPLOAD = 0;
+  private static final int METHODID_DATA_CAPTURE_UPLOAD = 0;
+  private static final int METHODID_FILE_UPLOAD = 1;
+  private static final int METHODID_STREAMING_DATA_CAPTURE_UPLOAD = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final DataSyncServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(DataSyncServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -186,6 +328,10 @@ public final class DataSyncServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_DATA_CAPTURE_UPLOAD:
+          serviceImpl.dataCaptureUpload((viam.app.datasync.v1.DataSync.DataCaptureUploadRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.DataCaptureUploadResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -196,13 +342,42 @@ public final class DataSyncServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_UPLOAD:
-          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.upload(
-              (io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.UploadResponse>) responseObserver);
+        case METHODID_FILE_UPLOAD:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.fileUpload(
+              (io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.FileUploadResponse>) responseObserver);
+        case METHODID_STREAMING_DATA_CAPTURE_UPLOAD:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamingDataCaptureUpload(
+              (io.grpc.stub.StreamObserver<viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse>) responseObserver);
         default:
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getDataCaptureUploadMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.datasync.v1.DataSync.DataCaptureUploadRequest,
+              viam.app.datasync.v1.DataSync.DataCaptureUploadResponse>(
+                service, METHODID_DATA_CAPTURE_UPLOAD)))
+        .addMethod(
+          getFileUploadMethod(),
+          io.grpc.stub.ServerCalls.asyncClientStreamingCall(
+            new MethodHandlers<
+              viam.app.datasync.v1.DataSync.FileUploadRequest,
+              viam.app.datasync.v1.DataSync.FileUploadResponse>(
+                service, METHODID_FILE_UPLOAD)))
+        .addMethod(
+          getStreamingDataCaptureUploadMethod(),
+          io.grpc.stub.ServerCalls.asyncClientStreamingCall(
+            new MethodHandlers<
+              viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadRequest,
+              viam.app.datasync.v1.DataSync.StreamingDataCaptureUploadResponse>(
+                service, METHODID_STREAMING_DATA_CAPTURE_UPLOAD)))
+        .build();
   }
 
   private static abstract class DataSyncServiceBaseDescriptorSupplier
@@ -228,9 +403,9 @@ public final class DataSyncServiceGrpc {
   private static final class DataSyncServiceMethodDescriptorSupplier
       extends DataSyncServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    DataSyncServiceMethodDescriptorSupplier(String methodName) {
+    DataSyncServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -250,7 +425,9 @@ public final class DataSyncServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new DataSyncServiceFileDescriptorSupplier())
-              .addMethod(getUploadMethod())
+              .addMethod(getDataCaptureUploadMethod())
+              .addMethod(getFileUploadMethod())
+              .addMethod(getStreamingDataCaptureUploadMethod())
               .build();
         }
       }

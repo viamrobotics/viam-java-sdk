@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: service/motion/v1/motion.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MotionServiceGrpc {
 
   private MotionServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.service.motion.v1.MotionService";
+  public static final java.lang.String SERVICE_NAME = "viam.service.motion.v1.MotionService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.MoveRequest,
@@ -49,35 +49,66 @@ public final class MotionServiceGrpc {
     return getMoveMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.MoveSingleComponentRequest,
-      com.viam.service.motion.v1.Motion.MoveSingleComponentResponse> getMoveSingleComponentMethod;
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.MoveOnMapRequest,
+      com.viam.service.motion.v1.Motion.MoveOnMapResponse> getMoveOnMapMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "MoveSingleComponent",
-      requestType = com.viam.service.motion.v1.Motion.MoveSingleComponentRequest.class,
-      responseType = com.viam.service.motion.v1.Motion.MoveSingleComponentResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "MoveOnMap",
+      requestType = com.viam.service.motion.v1.Motion.MoveOnMapRequest.class,
+      responseType = com.viam.service.motion.v1.Motion.MoveOnMapResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.MoveSingleComponentRequest,
-      com.viam.service.motion.v1.Motion.MoveSingleComponentResponse> getMoveSingleComponentMethod() {
-    io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.MoveSingleComponentRequest, com.viam.service.motion.v1.Motion.MoveSingleComponentResponse> getMoveSingleComponentMethod;
-    if ((getMoveSingleComponentMethod = MotionServiceGrpc.getMoveSingleComponentMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.MoveOnMapRequest,
+      com.viam.service.motion.v1.Motion.MoveOnMapResponse> getMoveOnMapMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.MoveOnMapRequest, com.viam.service.motion.v1.Motion.MoveOnMapResponse> getMoveOnMapMethod;
+    if ((getMoveOnMapMethod = MotionServiceGrpc.getMoveOnMapMethod) == null) {
       synchronized (MotionServiceGrpc.class) {
-        if ((getMoveSingleComponentMethod = MotionServiceGrpc.getMoveSingleComponentMethod) == null) {
-          MotionServiceGrpc.getMoveSingleComponentMethod = getMoveSingleComponentMethod =
-              io.grpc.MethodDescriptor.<com.viam.service.motion.v1.Motion.MoveSingleComponentRequest, com.viam.service.motion.v1.Motion.MoveSingleComponentResponse>newBuilder()
+        if ((getMoveOnMapMethod = MotionServiceGrpc.getMoveOnMapMethod) == null) {
+          MotionServiceGrpc.getMoveOnMapMethod = getMoveOnMapMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.motion.v1.Motion.MoveOnMapRequest, com.viam.service.motion.v1.Motion.MoveOnMapResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MoveSingleComponent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MoveOnMap"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.motion.v1.Motion.MoveSingleComponentRequest.getDefaultInstance()))
+                  com.viam.service.motion.v1.Motion.MoveOnMapRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.viam.service.motion.v1.Motion.MoveSingleComponentResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("MoveSingleComponent"))
+                  com.viam.service.motion.v1.Motion.MoveOnMapResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("MoveOnMap"))
               .build();
         }
       }
     }
-    return getMoveSingleComponentMethod;
+    return getMoveOnMapMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.MoveOnGlobeRequest,
+      com.viam.service.motion.v1.Motion.MoveOnGlobeResponse> getMoveOnGlobeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "MoveOnGlobe",
+      requestType = com.viam.service.motion.v1.Motion.MoveOnGlobeRequest.class,
+      responseType = com.viam.service.motion.v1.Motion.MoveOnGlobeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.MoveOnGlobeRequest,
+      com.viam.service.motion.v1.Motion.MoveOnGlobeResponse> getMoveOnGlobeMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.MoveOnGlobeRequest, com.viam.service.motion.v1.Motion.MoveOnGlobeResponse> getMoveOnGlobeMethod;
+    if ((getMoveOnGlobeMethod = MotionServiceGrpc.getMoveOnGlobeMethod) == null) {
+      synchronized (MotionServiceGrpc.class) {
+        if ((getMoveOnGlobeMethod = MotionServiceGrpc.getMoveOnGlobeMethod) == null) {
+          MotionServiceGrpc.getMoveOnGlobeMethod = getMoveOnGlobeMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.motion.v1.Motion.MoveOnGlobeRequest, com.viam.service.motion.v1.Motion.MoveOnGlobeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MoveOnGlobe"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.service.motion.v1.Motion.MoveOnGlobeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.service.motion.v1.Motion.MoveOnGlobeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("MoveOnGlobe"))
+              .build();
+        }
+      }
+    }
+    return getMoveOnGlobeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.GetPoseRequest,
@@ -109,6 +140,130 @@ public final class MotionServiceGrpc {
       }
     }
     return getGetPoseMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.StopPlanRequest,
+      com.viam.service.motion.v1.Motion.StopPlanResponse> getStopPlanMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StopPlan",
+      requestType = com.viam.service.motion.v1.Motion.StopPlanRequest.class,
+      responseType = com.viam.service.motion.v1.Motion.StopPlanResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.StopPlanRequest,
+      com.viam.service.motion.v1.Motion.StopPlanResponse> getStopPlanMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.StopPlanRequest, com.viam.service.motion.v1.Motion.StopPlanResponse> getStopPlanMethod;
+    if ((getStopPlanMethod = MotionServiceGrpc.getStopPlanMethod) == null) {
+      synchronized (MotionServiceGrpc.class) {
+        if ((getStopPlanMethod = MotionServiceGrpc.getStopPlanMethod) == null) {
+          MotionServiceGrpc.getStopPlanMethod = getStopPlanMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.motion.v1.Motion.StopPlanRequest, com.viam.service.motion.v1.Motion.StopPlanResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StopPlan"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.service.motion.v1.Motion.StopPlanRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.service.motion.v1.Motion.StopPlanResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("StopPlan"))
+              .build();
+        }
+      }
+    }
+    return getStopPlanMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.ListPlanStatusesRequest,
+      com.viam.service.motion.v1.Motion.ListPlanStatusesResponse> getListPlanStatusesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListPlanStatuses",
+      requestType = com.viam.service.motion.v1.Motion.ListPlanStatusesRequest.class,
+      responseType = com.viam.service.motion.v1.Motion.ListPlanStatusesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.ListPlanStatusesRequest,
+      com.viam.service.motion.v1.Motion.ListPlanStatusesResponse> getListPlanStatusesMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.ListPlanStatusesRequest, com.viam.service.motion.v1.Motion.ListPlanStatusesResponse> getListPlanStatusesMethod;
+    if ((getListPlanStatusesMethod = MotionServiceGrpc.getListPlanStatusesMethod) == null) {
+      synchronized (MotionServiceGrpc.class) {
+        if ((getListPlanStatusesMethod = MotionServiceGrpc.getListPlanStatusesMethod) == null) {
+          MotionServiceGrpc.getListPlanStatusesMethod = getListPlanStatusesMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.motion.v1.Motion.ListPlanStatusesRequest, com.viam.service.motion.v1.Motion.ListPlanStatusesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPlanStatuses"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.service.motion.v1.Motion.ListPlanStatusesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.service.motion.v1.Motion.ListPlanStatusesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("ListPlanStatuses"))
+              .build();
+        }
+      }
+    }
+    return getListPlanStatusesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.GetPlanRequest,
+      com.viam.service.motion.v1.Motion.GetPlanResponse> getGetPlanMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPlan",
+      requestType = com.viam.service.motion.v1.Motion.GetPlanRequest.class,
+      responseType = com.viam.service.motion.v1.Motion.GetPlanResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.GetPlanRequest,
+      com.viam.service.motion.v1.Motion.GetPlanResponse> getGetPlanMethod() {
+    io.grpc.MethodDescriptor<com.viam.service.motion.v1.Motion.GetPlanRequest, com.viam.service.motion.v1.Motion.GetPlanResponse> getGetPlanMethod;
+    if ((getGetPlanMethod = MotionServiceGrpc.getGetPlanMethod) == null) {
+      synchronized (MotionServiceGrpc.class) {
+        if ((getGetPlanMethod = MotionServiceGrpc.getGetPlanMethod) == null) {
+          MotionServiceGrpc.getGetPlanMethod = getGetPlanMethod =
+              io.grpc.MethodDescriptor.<com.viam.service.motion.v1.Motion.GetPlanRequest, com.viam.service.motion.v1.Motion.GetPlanResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPlan"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.service.motion.v1.Motion.GetPlanRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.service.motion.v1.Motion.GetPlanResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("GetPlan"))
+              .build();
+        }
+      }
+    }
+    return getGetPlanMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = MotionServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (MotionServiceGrpc.class) {
+        if ((getDoCommandMethod = MotionServiceGrpc.getDoCommandMethod) == null) {
+          MotionServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
   }
 
   /**
@@ -160,62 +315,119 @@ public final class MotionServiceGrpc {
    * A MotionService declares the gRPC contract for a motion service
    * </pre>
    */
-  public static abstract class MotionServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void move(com.viam.service.motion.v1.Motion.MoveRequest request,
+    default void move(com.viam.service.motion.v1.Motion.MoveRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.MoveResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveMethod(), responseObserver);
     }
 
     /**
+     * <pre>
+     * Generate a plan and move a component to a specific pose
+     * with respect to the SLAM map's origin.
+     * May replan to avoid obstacles
+     * </pre>
      */
-    public void moveSingleComponent(com.viam.service.motion.v1.Motion.MoveSingleComponentRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.MoveSingleComponentResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveSingleComponentMethod(), responseObserver);
+    default void moveOnMap(com.viam.service.motion.v1.Motion.MoveOnMapRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.MoveOnMapResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveOnMapMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Generate and begin executing an execution to move a component
+     * to a specific GPS coordinate.
+     * May replan to avoid obstacles &amp; account for location drift.
+     * Creates a new plan upon replanning.
+     * </pre>
+     */
+    default void moveOnGlobe(com.viam.service.motion.v1.Motion.MoveOnGlobeRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.MoveOnGlobeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveOnGlobeMethod(), responseObserver);
     }
 
     /**
      */
-    public void getPose(com.viam.service.motion.v1.Motion.GetPoseRequest request,
+    default void getPose(com.viam.service.motion.v1.Motion.GetPoseRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.GetPoseResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPoseMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMoveMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.motion.v1.Motion.MoveRequest,
-                com.viam.service.motion.v1.Motion.MoveResponse>(
-                  this, METHODID_MOVE)))
-          .addMethod(
-            getMoveSingleComponentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.motion.v1.Motion.MoveSingleComponentRequest,
-                com.viam.service.motion.v1.Motion.MoveSingleComponentResponse>(
-                  this, METHODID_MOVE_SINGLE_COMPONENT)))
-          .addMethod(
-            getGetPoseMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.motion.v1.Motion.GetPoseRequest,
-                com.viam.service.motion.v1.Motion.GetPoseResponse>(
-                  this, METHODID_GET_POSE)))
-          .build();
+    /**
+     * <pre>
+     * Stops a Plan
+     * </pre>
+     */
+    default void stopPlan(com.viam.service.motion.v1.Motion.StopPlanRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.StopPlanResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopPlanMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns the status of plans created by requests to move components
+     * that are executing OR are part of an execution which changed it state
+     * within the a 24HR TTL OR until the robot reinitializes.
+     * This currently only returns plans for MoveOnGlobe and MoveOnMap.
+     * </pre>
+     */
+    default void listPlanStatuses(com.viam.service.motion.v1.Motion.ListPlanStatusesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.ListPlanStatusesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPlanStatusesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns the plan(s) &amp; state history of the most recent execution to move a
+     * component. Returns a result if the last execution is still executing OR
+     * changed state within the last 24 hours AND the robot has not reinitialized.
+     * Plans are never mutated.
+     * Replans always create new plans.
+     * Replans share the execution_id of the previously executing plan.
+     * This currently only returns plans for MoveOnGlobe and MoveOnMap.
+     * </pre>
+     */
+    default void getPlan(com.viam.service.motion.v1.Motion.GetPlanRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.GetPlanResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPlanMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service MotionService.
    * <pre>
    * A MotionService declares the gRPC contract for a motion service
    * </pre>
    */
-  public static final class MotionServiceStub extends io.grpc.stub.AbstractAsyncStub<MotionServiceStub> {
+  public static abstract class MotionServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return MotionServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service MotionService.
+   * <pre>
+   * A MotionService declares the gRPC contract for a motion service
+   * </pre>
+   */
+  public static final class MotionServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<MotionServiceStub> {
     private MotionServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -236,11 +448,30 @@ public final class MotionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Generate a plan and move a component to a specific pose
+     * with respect to the SLAM map's origin.
+     * May replan to avoid obstacles
+     * </pre>
      */
-    public void moveSingleComponent(com.viam.service.motion.v1.Motion.MoveSingleComponentRequest request,
-        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.MoveSingleComponentResponse> responseObserver) {
+    public void moveOnMap(com.viam.service.motion.v1.Motion.MoveOnMapRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.MoveOnMapResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getMoveSingleComponentMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getMoveOnMapMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Generate and begin executing an execution to move a component
+     * to a specific GPS coordinate.
+     * May replan to avoid obstacles &amp; account for location drift.
+     * Creates a new plan upon replanning.
+     * </pre>
+     */
+    public void moveOnGlobe(com.viam.service.motion.v1.Motion.MoveOnGlobeRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.MoveOnGlobeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getMoveOnGlobeMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -250,14 +481,69 @@ public final class MotionServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPoseMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Stops a Plan
+     * </pre>
+     */
+    public void stopPlan(com.viam.service.motion.v1.Motion.StopPlanRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.StopPlanResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getStopPlanMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns the status of plans created by requests to move components
+     * that are executing OR are part of an execution which changed it state
+     * within the a 24HR TTL OR until the robot reinitializes.
+     * This currently only returns plans for MoveOnGlobe and MoveOnMap.
+     * </pre>
+     */
+    public void listPlanStatuses(com.viam.service.motion.v1.Motion.ListPlanStatusesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.ListPlanStatusesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListPlanStatusesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns the plan(s) &amp; state history of the most recent execution to move a
+     * component. Returns a result if the last execution is still executing OR
+     * changed state within the last 24 hours AND the robot has not reinitialized.
+     * Plans are never mutated.
+     * Replans always create new plans.
+     * Replans share the execution_id of the previously executing plan.
+     * This currently only returns plans for MoveOnGlobe and MoveOnMap.
+     * </pre>
+     */
+    public void getPlan(com.viam.service.motion.v1.Motion.GetPlanRequest request,
+        io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.GetPlanResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPlanMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service MotionService.
    * <pre>
    * A MotionService declares the gRPC contract for a motion service
    * </pre>
    */
-  public static final class MotionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<MotionServiceBlockingStub> {
+  public static final class MotionServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<MotionServiceBlockingStub> {
     private MotionServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -277,10 +563,28 @@ public final class MotionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Generate a plan and move a component to a specific pose
+     * with respect to the SLAM map's origin.
+     * May replan to avoid obstacles
+     * </pre>
      */
-    public com.viam.service.motion.v1.Motion.MoveSingleComponentResponse moveSingleComponent(com.viam.service.motion.v1.Motion.MoveSingleComponentRequest request) {
+    public com.viam.service.motion.v1.Motion.MoveOnMapResponse moveOnMap(com.viam.service.motion.v1.Motion.MoveOnMapRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getMoveSingleComponentMethod(), getCallOptions(), request);
+          getChannel(), getMoveOnMapMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Generate and begin executing an execution to move a component
+     * to a specific GPS coordinate.
+     * May replan to avoid obstacles &amp; account for location drift.
+     * Creates a new plan upon replanning.
+     * </pre>
+     */
+    public com.viam.service.motion.v1.Motion.MoveOnGlobeResponse moveOnGlobe(com.viam.service.motion.v1.Motion.MoveOnGlobeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getMoveOnGlobeMethod(), getCallOptions(), request);
     }
 
     /**
@@ -289,14 +593,65 @@ public final class MotionServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPoseMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Stops a Plan
+     * </pre>
+     */
+    public com.viam.service.motion.v1.Motion.StopPlanResponse stopPlan(com.viam.service.motion.v1.Motion.StopPlanRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getStopPlanMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the status of plans created by requests to move components
+     * that are executing OR are part of an execution which changed it state
+     * within the a 24HR TTL OR until the robot reinitializes.
+     * This currently only returns plans for MoveOnGlobe and MoveOnMap.
+     * </pre>
+     */
+    public com.viam.service.motion.v1.Motion.ListPlanStatusesResponse listPlanStatuses(com.viam.service.motion.v1.Motion.ListPlanStatusesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListPlanStatusesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the plan(s) &amp; state history of the most recent execution to move a
+     * component. Returns a result if the last execution is still executing OR
+     * changed state within the last 24 hours AND the robot has not reinitialized.
+     * Plans are never mutated.
+     * Replans always create new plans.
+     * Replans share the execution_id of the previously executing plan.
+     * This currently only returns plans for MoveOnGlobe and MoveOnMap.
+     * </pre>
+     */
+    public com.viam.service.motion.v1.Motion.GetPlanResponse getPlan(com.viam.service.motion.v1.Motion.GetPlanRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPlanMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service MotionService.
    * <pre>
    * A MotionService declares the gRPC contract for a motion service
    * </pre>
    */
-  public static final class MotionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<MotionServiceFutureStub> {
+  public static final class MotionServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<MotionServiceFutureStub> {
     private MotionServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -317,11 +672,30 @@ public final class MotionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Generate a plan and move a component to a specific pose
+     * with respect to the SLAM map's origin.
+     * May replan to avoid obstacles
+     * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.motion.v1.Motion.MoveSingleComponentResponse> moveSingleComponent(
-        com.viam.service.motion.v1.Motion.MoveSingleComponentRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.motion.v1.Motion.MoveOnMapResponse> moveOnMap(
+        com.viam.service.motion.v1.Motion.MoveOnMapRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getMoveSingleComponentMethod(), getCallOptions()), request);
+          getChannel().newCall(getMoveOnMapMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Generate and begin executing an execution to move a component
+     * to a specific GPS coordinate.
+     * May replan to avoid obstacles &amp; account for location drift.
+     * Creates a new plan upon replanning.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.motion.v1.Motion.MoveOnGlobeResponse> moveOnGlobe(
+        com.viam.service.motion.v1.Motion.MoveOnGlobeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getMoveOnGlobeMethod(), getCallOptions()), request);
     }
 
     /**
@@ -331,21 +705,79 @@ public final class MotionServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPoseMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Stops a Plan
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.motion.v1.Motion.StopPlanResponse> stopPlan(
+        com.viam.service.motion.v1.Motion.StopPlanRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getStopPlanMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the status of plans created by requests to move components
+     * that are executing OR are part of an execution which changed it state
+     * within the a 24HR TTL OR until the robot reinitializes.
+     * This currently only returns plans for MoveOnGlobe and MoveOnMap.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.motion.v1.Motion.ListPlanStatusesResponse> listPlanStatuses(
+        com.viam.service.motion.v1.Motion.ListPlanStatusesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListPlanStatusesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the plan(s) &amp; state history of the most recent execution to move a
+     * component. Returns a result if the last execution is still executing OR
+     * changed state within the last 24 hours AND the robot has not reinitialized.
+     * Plans are never mutated.
+     * Replans always create new plans.
+     * Replans share the execution_id of the previously executing plan.
+     * This currently only returns plans for MoveOnGlobe and MoveOnMap.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.service.motion.v1.Motion.GetPlanResponse> getPlan(
+        com.viam.service.motion.v1.Motion.GetPlanRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPlanMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_MOVE = 0;
-  private static final int METHODID_MOVE_SINGLE_COMPONENT = 1;
-  private static final int METHODID_GET_POSE = 2;
+  private static final int METHODID_MOVE_ON_MAP = 1;
+  private static final int METHODID_MOVE_ON_GLOBE = 2;
+  private static final int METHODID_GET_POSE = 3;
+  private static final int METHODID_STOP_PLAN = 4;
+  private static final int METHODID_LIST_PLAN_STATUSES = 5;
+  private static final int METHODID_GET_PLAN = 6;
+  private static final int METHODID_DO_COMMAND = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final MotionServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(MotionServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -358,13 +790,33 @@ public final class MotionServiceGrpc {
           serviceImpl.move((com.viam.service.motion.v1.Motion.MoveRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.MoveResponse>) responseObserver);
           break;
-        case METHODID_MOVE_SINGLE_COMPONENT:
-          serviceImpl.moveSingleComponent((com.viam.service.motion.v1.Motion.MoveSingleComponentRequest) request,
-              (io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.MoveSingleComponentResponse>) responseObserver);
+        case METHODID_MOVE_ON_MAP:
+          serviceImpl.moveOnMap((com.viam.service.motion.v1.Motion.MoveOnMapRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.MoveOnMapResponse>) responseObserver);
+          break;
+        case METHODID_MOVE_ON_GLOBE:
+          serviceImpl.moveOnGlobe((com.viam.service.motion.v1.Motion.MoveOnGlobeRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.MoveOnGlobeResponse>) responseObserver);
           break;
         case METHODID_GET_POSE:
           serviceImpl.getPose((com.viam.service.motion.v1.Motion.GetPoseRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.GetPoseResponse>) responseObserver);
+          break;
+        case METHODID_STOP_PLAN:
+          serviceImpl.stopPlan((com.viam.service.motion.v1.Motion.StopPlanRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.StopPlanResponse>) responseObserver);
+          break;
+        case METHODID_LIST_PLAN_STATUSES:
+          serviceImpl.listPlanStatuses((com.viam.service.motion.v1.Motion.ListPlanStatusesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.ListPlanStatusesResponse>) responseObserver);
+          break;
+        case METHODID_GET_PLAN:
+          serviceImpl.getPlan((com.viam.service.motion.v1.Motion.GetPlanRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.service.motion.v1.Motion.GetPlanResponse>) responseObserver);
+          break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -380,6 +832,67 @@ public final class MotionServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMoveMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.motion.v1.Motion.MoveRequest,
+              com.viam.service.motion.v1.Motion.MoveResponse>(
+                service, METHODID_MOVE)))
+        .addMethod(
+          getMoveOnMapMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.motion.v1.Motion.MoveOnMapRequest,
+              com.viam.service.motion.v1.Motion.MoveOnMapResponse>(
+                service, METHODID_MOVE_ON_MAP)))
+        .addMethod(
+          getMoveOnGlobeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.motion.v1.Motion.MoveOnGlobeRequest,
+              com.viam.service.motion.v1.Motion.MoveOnGlobeResponse>(
+                service, METHODID_MOVE_ON_GLOBE)))
+        .addMethod(
+          getGetPoseMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.motion.v1.Motion.GetPoseRequest,
+              com.viam.service.motion.v1.Motion.GetPoseResponse>(
+                service, METHODID_GET_POSE)))
+        .addMethod(
+          getStopPlanMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.motion.v1.Motion.StopPlanRequest,
+              com.viam.service.motion.v1.Motion.StopPlanResponse>(
+                service, METHODID_STOP_PLAN)))
+        .addMethod(
+          getListPlanStatusesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.motion.v1.Motion.ListPlanStatusesRequest,
+              com.viam.service.motion.v1.Motion.ListPlanStatusesResponse>(
+                service, METHODID_LIST_PLAN_STATUSES)))
+        .addMethod(
+          getGetPlanMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.motion.v1.Motion.GetPlanRequest,
+              com.viam.service.motion.v1.Motion.GetPlanResponse>(
+                service, METHODID_GET_PLAN)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .build();
   }
 
   private static abstract class MotionServiceBaseDescriptorSupplier
@@ -405,9 +918,9 @@ public final class MotionServiceGrpc {
   private static final class MotionServiceMethodDescriptorSupplier
       extends MotionServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    MotionServiceMethodDescriptorSupplier(String methodName) {
+    MotionServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -428,8 +941,13 @@ public final class MotionServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new MotionServiceFileDescriptorSupplier())
               .addMethod(getMoveMethod())
-              .addMethod(getMoveSingleComponentMethod())
+              .addMethod(getMoveOnMapMethod())
+              .addMethod(getMoveOnGlobeMethod())
               .addMethod(getGetPoseMethod())
+              .addMethod(getStopPlanMethod())
+              .addMethod(getListPlanStatusesMethod())
+              .addMethod(getGetPlanMethod())
+              .addMethod(getDoCommandMethod())
               .build();
         }
       }

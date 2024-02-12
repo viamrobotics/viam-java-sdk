@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: service/datamanager/v1/data_manager.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DataManagerServiceGrpc {
 
   private DataManagerServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.service.datamanager.v1.DataManagerService";
+  public static final java.lang.String SERVICE_NAME = "viam.service.datamanager.v1.DataManagerService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.service.datamanager.v1.DataManager.SyncRequest,
@@ -47,6 +47,37 @@ public final class DataManagerServiceGrpc {
       }
     }
     return getSyncMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = DataManagerServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (DataManagerServiceGrpc.class) {
+        if ((getDoCommandMethod = DataManagerServiceGrpc.getDoCommandMethod) == null) {
+          DataManagerServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataManagerServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
   }
 
   /**
@@ -98,37 +129,51 @@ public final class DataManagerServiceGrpc {
    * A DataManagerService service manages data between the robot and the cloud.
    * </pre>
    */
-  public static abstract class DataManagerServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * Sync performs a sync of the non-synced files for the specified service name,
      * </pre>
      */
-    public void sync(com.viam.service.datamanager.v1.DataManager.SyncRequest request,
+    default void sync(com.viam.service.datamanager.v1.DataManager.SyncRequest request,
         io.grpc.stub.StreamObserver<com.viam.service.datamanager.v1.DataManager.SyncResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSyncMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getSyncMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.service.datamanager.v1.DataManager.SyncRequest,
-                com.viam.service.datamanager.v1.DataManager.SyncResponse>(
-                  this, METHODID_SYNC)))
-          .build();
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service DataManagerService.
    * <pre>
    * A DataManagerService service manages data between the robot and the cloud.
    * </pre>
    */
-  public static final class DataManagerServiceStub extends io.grpc.stub.AbstractAsyncStub<DataManagerServiceStub> {
+  public static abstract class DataManagerServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return DataManagerServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service DataManagerService.
+   * <pre>
+   * A DataManagerService service manages data between the robot and the cloud.
+   * </pre>
+   */
+  public static final class DataManagerServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<DataManagerServiceStub> {
     private DataManagerServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -150,14 +195,27 @@ public final class DataManagerServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSyncMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service DataManagerService.
    * <pre>
    * A DataManagerService service manages data between the robot and the cloud.
    * </pre>
    */
-  public static final class DataManagerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DataManagerServiceBlockingStub> {
+  public static final class DataManagerServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<DataManagerServiceBlockingStub> {
     private DataManagerServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -178,14 +236,26 @@ public final class DataManagerServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSyncMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service DataManagerService.
    * <pre>
    * A DataManagerService service manages data between the robot and the cloud.
    * </pre>
    */
-  public static final class DataManagerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DataManagerServiceFutureStub> {
+  public static final class DataManagerServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<DataManagerServiceFutureStub> {
     private DataManagerServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -207,19 +277,31 @@ public final class DataManagerServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSyncMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SYNC = 0;
+  private static final int METHODID_DO_COMMAND = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final DataManagerServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(DataManagerServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -231,6 +313,10 @@ public final class DataManagerServiceGrpc {
         case METHODID_SYNC:
           serviceImpl.sync((com.viam.service.datamanager.v1.DataManager.SyncRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.service.datamanager.v1.DataManager.SyncResponse>) responseObserver);
+          break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -246,6 +332,25 @@ public final class DataManagerServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getSyncMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.service.datamanager.v1.DataManager.SyncRequest,
+              com.viam.service.datamanager.v1.DataManager.SyncResponse>(
+                service, METHODID_SYNC)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .build();
   }
 
   private static abstract class DataManagerServiceBaseDescriptorSupplier
@@ -271,9 +376,9 @@ public final class DataManagerServiceGrpc {
   private static final class DataManagerServiceMethodDescriptorSupplier
       extends DataManagerServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    DataManagerServiceMethodDescriptorSupplier(String methodName) {
+    DataManagerServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -294,6 +399,7 @@ public final class DataManagerServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new DataManagerServiceFileDescriptorSupplier())
               .addMethod(getSyncMethod())
+              .addMethod(getDoCommandMethod())
               .build();
         }
       }

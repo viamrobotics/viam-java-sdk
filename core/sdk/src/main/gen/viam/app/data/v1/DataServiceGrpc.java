@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: app/data/v1/data.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DataServiceGrpc {
 
   private DataServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.app.data.v1.DataService";
+  public static final java.lang.String SERVICE_NAME = "viam.app.data.v1.DataService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.TabularDataByFilterRequest,
@@ -47,6 +47,68 @@ public final class DataServiceGrpc {
       }
     }
     return getTabularDataByFilterMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.TabularDataBySQLRequest,
+      viam.app.data.v1.Data.TabularDataBySQLResponse> getTabularDataBySQLMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TabularDataBySQL",
+      requestType = viam.app.data.v1.Data.TabularDataBySQLRequest.class,
+      responseType = viam.app.data.v1.Data.TabularDataBySQLResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.TabularDataBySQLRequest,
+      viam.app.data.v1.Data.TabularDataBySQLResponse> getTabularDataBySQLMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.TabularDataBySQLRequest, viam.app.data.v1.Data.TabularDataBySQLResponse> getTabularDataBySQLMethod;
+    if ((getTabularDataBySQLMethod = DataServiceGrpc.getTabularDataBySQLMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getTabularDataBySQLMethod = DataServiceGrpc.getTabularDataBySQLMethod) == null) {
+          DataServiceGrpc.getTabularDataBySQLMethod = getTabularDataBySQLMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.TabularDataBySQLRequest, viam.app.data.v1.Data.TabularDataBySQLResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TabularDataBySQL"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.TabularDataBySQLRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.TabularDataBySQLResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("TabularDataBySQL"))
+              .build();
+        }
+      }
+    }
+    return getTabularDataBySQLMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.TabularDataByMQLRequest,
+      viam.app.data.v1.Data.TabularDataByMQLResponse> getTabularDataByMQLMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TabularDataByMQL",
+      requestType = viam.app.data.v1.Data.TabularDataByMQLRequest.class,
+      responseType = viam.app.data.v1.Data.TabularDataByMQLResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.TabularDataByMQLRequest,
+      viam.app.data.v1.Data.TabularDataByMQLResponse> getTabularDataByMQLMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.TabularDataByMQLRequest, viam.app.data.v1.Data.TabularDataByMQLResponse> getTabularDataByMQLMethod;
+    if ((getTabularDataByMQLMethod = DataServiceGrpc.getTabularDataByMQLMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getTabularDataByMQLMethod = DataServiceGrpc.getTabularDataByMQLMethod) == null) {
+          DataServiceGrpc.getTabularDataByMQLMethod = getTabularDataByMQLMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.TabularDataByMQLRequest, viam.app.data.v1.Data.TabularDataByMQLResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TabularDataByMQL"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.TabularDataByMQLRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.TabularDataByMQLResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("TabularDataByMQL"))
+              .build();
+        }
+      }
+    }
+    return getTabularDataByMQLMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.BinaryDataByFilterRequest,
@@ -111,35 +173,35 @@ public final class DataServiceGrpc {
     return getBinaryDataByIDsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteTabularDataByFilterRequest,
-      viam.app.data.v1.Data.DeleteTabularDataByFilterResponse> getDeleteTabularDataByFilterMethod;
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteTabularDataRequest,
+      viam.app.data.v1.Data.DeleteTabularDataResponse> getDeleteTabularDataMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DeleteTabularDataByFilter",
-      requestType = viam.app.data.v1.Data.DeleteTabularDataByFilterRequest.class,
-      responseType = viam.app.data.v1.Data.DeleteTabularDataByFilterResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "DeleteTabularData",
+      requestType = viam.app.data.v1.Data.DeleteTabularDataRequest.class,
+      responseType = viam.app.data.v1.Data.DeleteTabularDataResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteTabularDataByFilterRequest,
-      viam.app.data.v1.Data.DeleteTabularDataByFilterResponse> getDeleteTabularDataByFilterMethod() {
-    io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteTabularDataByFilterRequest, viam.app.data.v1.Data.DeleteTabularDataByFilterResponse> getDeleteTabularDataByFilterMethod;
-    if ((getDeleteTabularDataByFilterMethod = DataServiceGrpc.getDeleteTabularDataByFilterMethod) == null) {
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteTabularDataRequest,
+      viam.app.data.v1.Data.DeleteTabularDataResponse> getDeleteTabularDataMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteTabularDataRequest, viam.app.data.v1.Data.DeleteTabularDataResponse> getDeleteTabularDataMethod;
+    if ((getDeleteTabularDataMethod = DataServiceGrpc.getDeleteTabularDataMethod) == null) {
       synchronized (DataServiceGrpc.class) {
-        if ((getDeleteTabularDataByFilterMethod = DataServiceGrpc.getDeleteTabularDataByFilterMethod) == null) {
-          DataServiceGrpc.getDeleteTabularDataByFilterMethod = getDeleteTabularDataByFilterMethod =
-              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.DeleteTabularDataByFilterRequest, viam.app.data.v1.Data.DeleteTabularDataByFilterResponse>newBuilder()
+        if ((getDeleteTabularDataMethod = DataServiceGrpc.getDeleteTabularDataMethod) == null) {
+          DataServiceGrpc.getDeleteTabularDataMethod = getDeleteTabularDataMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.DeleteTabularDataRequest, viam.app.data.v1.Data.DeleteTabularDataResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteTabularDataByFilter"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteTabularData"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.data.v1.Data.DeleteTabularDataByFilterRequest.getDefaultInstance()))
+                  viam.app.data.v1.Data.DeleteTabularDataRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.data.v1.Data.DeleteTabularDataByFilterResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("DeleteTabularDataByFilter"))
+                  viam.app.data.v1.Data.DeleteTabularDataResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("DeleteTabularData"))
               .build();
         }
       }
     }
-    return getDeleteTabularDataByFilterMethod;
+    return getDeleteTabularDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.DeleteBinaryDataByFilterRequest,
@@ -204,35 +266,35 @@ public final class DataServiceGrpc {
     return getDeleteBinaryDataByIDsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsRequest,
-      viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsResponse> getAddTagsToBinaryDataByFileIDsMethod;
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest,
+      viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse> getAddTagsToBinaryDataByIDsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "AddTagsToBinaryDataByFileIDs",
-      requestType = viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsRequest.class,
-      responseType = viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "AddTagsToBinaryDataByIDs",
+      requestType = viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest.class,
+      responseType = viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsRequest,
-      viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsResponse> getAddTagsToBinaryDataByFileIDsMethod() {
-    io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsRequest, viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsResponse> getAddTagsToBinaryDataByFileIDsMethod;
-    if ((getAddTagsToBinaryDataByFileIDsMethod = DataServiceGrpc.getAddTagsToBinaryDataByFileIDsMethod) == null) {
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest,
+      viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse> getAddTagsToBinaryDataByIDsMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest, viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse> getAddTagsToBinaryDataByIDsMethod;
+    if ((getAddTagsToBinaryDataByIDsMethod = DataServiceGrpc.getAddTagsToBinaryDataByIDsMethod) == null) {
       synchronized (DataServiceGrpc.class) {
-        if ((getAddTagsToBinaryDataByFileIDsMethod = DataServiceGrpc.getAddTagsToBinaryDataByFileIDsMethod) == null) {
-          DataServiceGrpc.getAddTagsToBinaryDataByFileIDsMethod = getAddTagsToBinaryDataByFileIDsMethod =
-              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsRequest, viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsResponse>newBuilder()
+        if ((getAddTagsToBinaryDataByIDsMethod = DataServiceGrpc.getAddTagsToBinaryDataByIDsMethod) == null) {
+          DataServiceGrpc.getAddTagsToBinaryDataByIDsMethod = getAddTagsToBinaryDataByIDsMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest, viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddTagsToBinaryDataByFileIDs"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddTagsToBinaryDataByIDs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsRequest.getDefaultInstance()))
+                  viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("AddTagsToBinaryDataByFileIDs"))
+                  viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("AddTagsToBinaryDataByIDs"))
               .build();
         }
       }
     }
-    return getAddTagsToBinaryDataByFileIDsMethod;
+    return getAddTagsToBinaryDataByIDsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddTagsToBinaryDataByFilterRequest,
@@ -266,35 +328,35 @@ public final class DataServiceGrpc {
     return getAddTagsToBinaryDataByFilterMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsRequest,
-      viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsResponse> getRemoveTagsFromBinaryDataByFileIDsMethod;
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest,
+      viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse> getRemoveTagsFromBinaryDataByIDsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "RemoveTagsFromBinaryDataByFileIDs",
-      requestType = viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsRequest.class,
-      responseType = viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "RemoveTagsFromBinaryDataByIDs",
+      requestType = viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest.class,
+      responseType = viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsRequest,
-      viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsResponse> getRemoveTagsFromBinaryDataByFileIDsMethod() {
-    io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsRequest, viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsResponse> getRemoveTagsFromBinaryDataByFileIDsMethod;
-    if ((getRemoveTagsFromBinaryDataByFileIDsMethod = DataServiceGrpc.getRemoveTagsFromBinaryDataByFileIDsMethod) == null) {
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest,
+      viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse> getRemoveTagsFromBinaryDataByIDsMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest, viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse> getRemoveTagsFromBinaryDataByIDsMethod;
+    if ((getRemoveTagsFromBinaryDataByIDsMethod = DataServiceGrpc.getRemoveTagsFromBinaryDataByIDsMethod) == null) {
       synchronized (DataServiceGrpc.class) {
-        if ((getRemoveTagsFromBinaryDataByFileIDsMethod = DataServiceGrpc.getRemoveTagsFromBinaryDataByFileIDsMethod) == null) {
-          DataServiceGrpc.getRemoveTagsFromBinaryDataByFileIDsMethod = getRemoveTagsFromBinaryDataByFileIDsMethod =
-              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsRequest, viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsResponse>newBuilder()
+        if ((getRemoveTagsFromBinaryDataByIDsMethod = DataServiceGrpc.getRemoveTagsFromBinaryDataByIDsMethod) == null) {
+          DataServiceGrpc.getRemoveTagsFromBinaryDataByIDsMethod = getRemoveTagsFromBinaryDataByIDsMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest, viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveTagsFromBinaryDataByFileIDs"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveTagsFromBinaryDataByIDs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsRequest.getDefaultInstance()))
+                  viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("RemoveTagsFromBinaryDataByFileIDs"))
+                  viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("RemoveTagsFromBinaryDataByIDs"))
               .build();
         }
       }
     }
-    return getRemoveTagsFromBinaryDataByFileIDsMethod;
+    return getRemoveTagsFromBinaryDataByIDsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest,
@@ -359,6 +421,223 @@ public final class DataServiceGrpc {
     return getTagsByFilterMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest,
+      viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse> getAddBoundingBoxToImageByIDMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddBoundingBoxToImageByID",
+      requestType = viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest.class,
+      responseType = viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest,
+      viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse> getAddBoundingBoxToImageByIDMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest, viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse> getAddBoundingBoxToImageByIDMethod;
+    if ((getAddBoundingBoxToImageByIDMethod = DataServiceGrpc.getAddBoundingBoxToImageByIDMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getAddBoundingBoxToImageByIDMethod = DataServiceGrpc.getAddBoundingBoxToImageByIDMethod) == null) {
+          DataServiceGrpc.getAddBoundingBoxToImageByIDMethod = getAddBoundingBoxToImageByIDMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest, viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddBoundingBoxToImageByID"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("AddBoundingBoxToImageByID"))
+              .build();
+        }
+      }
+    }
+    return getAddBoundingBoxToImageByIDMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest,
+      viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse> getRemoveBoundingBoxFromImageByIDMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveBoundingBoxFromImageByID",
+      requestType = viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest.class,
+      responseType = viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest,
+      viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse> getRemoveBoundingBoxFromImageByIDMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest, viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse> getRemoveBoundingBoxFromImageByIDMethod;
+    if ((getRemoveBoundingBoxFromImageByIDMethod = DataServiceGrpc.getRemoveBoundingBoxFromImageByIDMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getRemoveBoundingBoxFromImageByIDMethod = DataServiceGrpc.getRemoveBoundingBoxFromImageByIDMethod) == null) {
+          DataServiceGrpc.getRemoveBoundingBoxFromImageByIDMethod = getRemoveBoundingBoxFromImageByIDMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest, viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveBoundingBoxFromImageByID"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("RemoveBoundingBoxFromImageByID"))
+              .build();
+        }
+      }
+    }
+    return getRemoveBoundingBoxFromImageByIDMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest,
+      viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse> getBoundingBoxLabelsByFilterMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BoundingBoxLabelsByFilter",
+      requestType = viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest.class,
+      responseType = viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest,
+      viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse> getBoundingBoxLabelsByFilterMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest, viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse> getBoundingBoxLabelsByFilterMethod;
+    if ((getBoundingBoxLabelsByFilterMethod = DataServiceGrpc.getBoundingBoxLabelsByFilterMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getBoundingBoxLabelsByFilterMethod = DataServiceGrpc.getBoundingBoxLabelsByFilterMethod) == null) {
+          DataServiceGrpc.getBoundingBoxLabelsByFilterMethod = getBoundingBoxLabelsByFilterMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest, viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BoundingBoxLabelsByFilter"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("BoundingBoxLabelsByFilter"))
+              .build();
+        }
+      }
+    }
+    return getBoundingBoxLabelsByFilterMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetDatabaseConnectionRequest,
+      viam.app.data.v1.Data.GetDatabaseConnectionResponse> getGetDatabaseConnectionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDatabaseConnection",
+      requestType = viam.app.data.v1.Data.GetDatabaseConnectionRequest.class,
+      responseType = viam.app.data.v1.Data.GetDatabaseConnectionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetDatabaseConnectionRequest,
+      viam.app.data.v1.Data.GetDatabaseConnectionResponse> getGetDatabaseConnectionMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.GetDatabaseConnectionRequest, viam.app.data.v1.Data.GetDatabaseConnectionResponse> getGetDatabaseConnectionMethod;
+    if ((getGetDatabaseConnectionMethod = DataServiceGrpc.getGetDatabaseConnectionMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getGetDatabaseConnectionMethod = DataServiceGrpc.getGetDatabaseConnectionMethod) == null) {
+          DataServiceGrpc.getGetDatabaseConnectionMethod = getGetDatabaseConnectionMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.GetDatabaseConnectionRequest, viam.app.data.v1.Data.GetDatabaseConnectionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDatabaseConnection"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.GetDatabaseConnectionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.GetDatabaseConnectionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("GetDatabaseConnection"))
+              .build();
+        }
+      }
+    }
+    return getGetDatabaseConnectionMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.ConfigureDatabaseUserRequest,
+      viam.app.data.v1.Data.ConfigureDatabaseUserResponse> getConfigureDatabaseUserMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ConfigureDatabaseUser",
+      requestType = viam.app.data.v1.Data.ConfigureDatabaseUserRequest.class,
+      responseType = viam.app.data.v1.Data.ConfigureDatabaseUserResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.ConfigureDatabaseUserRequest,
+      viam.app.data.v1.Data.ConfigureDatabaseUserResponse> getConfigureDatabaseUserMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.ConfigureDatabaseUserRequest, viam.app.data.v1.Data.ConfigureDatabaseUserResponse> getConfigureDatabaseUserMethod;
+    if ((getConfigureDatabaseUserMethod = DataServiceGrpc.getConfigureDatabaseUserMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getConfigureDatabaseUserMethod = DataServiceGrpc.getConfigureDatabaseUserMethod) == null) {
+          DataServiceGrpc.getConfigureDatabaseUserMethod = getConfigureDatabaseUserMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.ConfigureDatabaseUserRequest, viam.app.data.v1.Data.ConfigureDatabaseUserResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ConfigureDatabaseUser"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.ConfigureDatabaseUserRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.ConfigureDatabaseUserResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("ConfigureDatabaseUser"))
+              .build();
+        }
+      }
+    }
+    return getConfigureDatabaseUserMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest,
+      viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse> getAddBinaryDataToDatasetByIDsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddBinaryDataToDatasetByIDs",
+      requestType = viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest.class,
+      responseType = viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest,
+      viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse> getAddBinaryDataToDatasetByIDsMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest, viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse> getAddBinaryDataToDatasetByIDsMethod;
+    if ((getAddBinaryDataToDatasetByIDsMethod = DataServiceGrpc.getAddBinaryDataToDatasetByIDsMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getAddBinaryDataToDatasetByIDsMethod = DataServiceGrpc.getAddBinaryDataToDatasetByIDsMethod) == null) {
+          DataServiceGrpc.getAddBinaryDataToDatasetByIDsMethod = getAddBinaryDataToDatasetByIDsMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest, viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddBinaryDataToDatasetByIDs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("AddBinaryDataToDatasetByIDs"))
+              .build();
+        }
+      }
+    }
+    return getAddBinaryDataToDatasetByIDsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest,
+      viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse> getRemoveBinaryDataFromDatasetByIDsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveBinaryDataFromDatasetByIDs",
+      requestType = viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest.class,
+      responseType = viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest,
+      viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse> getRemoveBinaryDataFromDatasetByIDsMethod() {
+    io.grpc.MethodDescriptor<viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest, viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse> getRemoveBinaryDataFromDatasetByIDsMethod;
+    if ((getRemoveBinaryDataFromDatasetByIDsMethod = DataServiceGrpc.getRemoveBinaryDataFromDatasetByIDsMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getRemoveBinaryDataFromDatasetByIDsMethod = DataServiceGrpc.getRemoveBinaryDataFromDatasetByIDsMethod) == null) {
+          DataServiceGrpc.getRemoveBinaryDataFromDatasetByIDsMethod = getRemoveBinaryDataFromDatasetByIDsMethod =
+              io.grpc.MethodDescriptor.<viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest, viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveBinaryDataFromDatasetByIDs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("RemoveBinaryDataFromDatasetByIDs"))
+              .build();
+        }
+      }
+    }
+    return getRemoveBinaryDataFromDatasetByIDsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -408,16 +687,36 @@ public final class DataServiceGrpc {
    * DataService is used to query robot data.
    * </pre>
    */
-  public static abstract class DataServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * TabularDataByFilter queries tabular data and metadata based on given filters.
      * </pre>
      */
-    public void tabularDataByFilter(viam.app.data.v1.Data.TabularDataByFilterRequest request,
+    default void tabularDataByFilter(viam.app.data.v1.Data.TabularDataByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataByFilterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTabularDataByFilterMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TabularDataBySQL queries tabular data with a SQL query.
+     * </pre>
+     */
+    default void tabularDataBySQL(viam.app.data.v1.Data.TabularDataBySQLRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataBySQLResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTabularDataBySQLMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TabularDataByMQL queries tabular data with an MQL (MongoDB Query Language) query.
+     * </pre>
+     */
+    default void tabularDataByMQL(viam.app.data.v1.Data.TabularDataByMQLRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataByMQLResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTabularDataByMQLMethod(), responseObserver);
     }
 
     /**
@@ -425,7 +724,7 @@ public final class DataServiceGrpc {
      * BinaryDataByFilter queries binary data and metadata based on given filters.
      * </pre>
      */
-    public void binaryDataByFilter(viam.app.data.v1.Data.BinaryDataByFilterRequest request,
+    default void binaryDataByFilter(viam.app.data.v1.Data.BinaryDataByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.BinaryDataByFilterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBinaryDataByFilterMethod(), responseObserver);
     }
@@ -435,19 +734,19 @@ public final class DataServiceGrpc {
      * BinaryDataByIDs queries binary data and metadata based on given IDs.
      * </pre>
      */
-    public void binaryDataByIDs(viam.app.data.v1.Data.BinaryDataByIDsRequest request,
+    default void binaryDataByIDs(viam.app.data.v1.Data.BinaryDataByIDsRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.BinaryDataByIDsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBinaryDataByIDsMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * DeleteTabularDataByFilter deletes tabular data based on given filters.
+     * DeleteTabularData deletes tabular data older than a number of days, based on the given organization ID.
      * </pre>
      */
-    public void deleteTabularDataByFilter(viam.app.data.v1.Data.DeleteTabularDataByFilterRequest request,
-        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteTabularDataByFilterResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTabularDataByFilterMethod(), responseObserver);
+    default void deleteTabularData(viam.app.data.v1.Data.DeleteTabularDataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteTabularDataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTabularDataMethod(), responseObserver);
     }
 
     /**
@@ -455,7 +754,7 @@ public final class DataServiceGrpc {
      * DeleteBinaryDataByFilter deletes binary data based on given filters.
      * </pre>
      */
-    public void deleteBinaryDataByFilter(viam.app.data.v1.Data.DeleteBinaryDataByFilterRequest request,
+    default void deleteBinaryDataByFilter(viam.app.data.v1.Data.DeleteBinaryDataByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteBinaryDataByFilterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteBinaryDataByFilterMethod(), responseObserver);
     }
@@ -465,19 +764,19 @@ public final class DataServiceGrpc {
      * DeleteBinaryDataByIDs deletes binary data based on given IDs.
      * </pre>
      */
-    public void deleteBinaryDataByIDs(viam.app.data.v1.Data.DeleteBinaryDataByIDsRequest request,
+    default void deleteBinaryDataByIDs(viam.app.data.v1.Data.DeleteBinaryDataByIDsRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteBinaryDataByIDsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteBinaryDataByIDsMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * AddTagsToBinaryDataByFileIDs adds string tags, unless the tags are already present, to binary data based on given IDs.
+     * AddTagsToBinaryDataByIDs adds string tags, unless the tags are already present, to binary data based on given IDs.
      * </pre>
      */
-    public void addTagsToBinaryDataByFileIDs(viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsRequest request,
-        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddTagsToBinaryDataByFileIDsMethod(), responseObserver);
+    default void addTagsToBinaryDataByIDs(viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddTagsToBinaryDataByIDsMethod(), responseObserver);
     }
 
     /**
@@ -485,19 +784,19 @@ public final class DataServiceGrpc {
      * AddTagsToBinaryDataByFilter adds string tags, unless the tags are already present, to binary data based on the given filter.
      * </pre>
      */
-    public void addTagsToBinaryDataByFilter(viam.app.data.v1.Data.AddTagsToBinaryDataByFilterRequest request,
+    default void addTagsToBinaryDataByFilter(viam.app.data.v1.Data.AddTagsToBinaryDataByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddTagsToBinaryDataByFilterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddTagsToBinaryDataByFilterMethod(), responseObserver);
     }
 
     /**
      * <pre>
-     * RemoveTagsToBinaryDataByFileIDs removes string tags from binary data based on given IDs.
+     * RemoveTagsToBinaryDataByIDs removes string tags from binary data based on given IDs.
      * </pre>
      */
-    public void removeTagsFromBinaryDataByFileIDs(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsRequest request,
-        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveTagsFromBinaryDataByFileIDsMethod(), responseObserver);
+    default void removeTagsFromBinaryDataByIDs(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveTagsFromBinaryDataByIDsMethod(), responseObserver);
     }
 
     /**
@@ -505,7 +804,7 @@ public final class DataServiceGrpc {
      * RemoveTagsToBinaryDataByFilter removes string tags from binary data based on the given filter.
      * </pre>
      */
-    public void removeTagsFromBinaryDataByFilter(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest request,
+    default void removeTagsFromBinaryDataByFilter(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveTagsFromBinaryDataByFilterMethod(), responseObserver);
     }
@@ -515,100 +814,106 @@ public final class DataServiceGrpc {
      * TagsByFilter gets all unique tags from data based on given filter.
      * </pre>
      */
-    public void tagsByFilter(viam.app.data.v1.Data.TagsByFilterRequest request,
+    default void tagsByFilter(viam.app.data.v1.Data.TagsByFilterRequest request,
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TagsByFilterResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTagsByFilterMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getTabularDataByFilterMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.data.v1.Data.TabularDataByFilterRequest,
-                viam.app.data.v1.Data.TabularDataByFilterResponse>(
-                  this, METHODID_TABULAR_DATA_BY_FILTER)))
-          .addMethod(
-            getBinaryDataByFilterMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.data.v1.Data.BinaryDataByFilterRequest,
-                viam.app.data.v1.Data.BinaryDataByFilterResponse>(
-                  this, METHODID_BINARY_DATA_BY_FILTER)))
-          .addMethod(
-            getBinaryDataByIDsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.data.v1.Data.BinaryDataByIDsRequest,
-                viam.app.data.v1.Data.BinaryDataByIDsResponse>(
-                  this, METHODID_BINARY_DATA_BY_IDS)))
-          .addMethod(
-            getDeleteTabularDataByFilterMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.data.v1.Data.DeleteTabularDataByFilterRequest,
-                viam.app.data.v1.Data.DeleteTabularDataByFilterResponse>(
-                  this, METHODID_DELETE_TABULAR_DATA_BY_FILTER)))
-          .addMethod(
-            getDeleteBinaryDataByFilterMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.data.v1.Data.DeleteBinaryDataByFilterRequest,
-                viam.app.data.v1.Data.DeleteBinaryDataByFilterResponse>(
-                  this, METHODID_DELETE_BINARY_DATA_BY_FILTER)))
-          .addMethod(
-            getDeleteBinaryDataByIDsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.data.v1.Data.DeleteBinaryDataByIDsRequest,
-                viam.app.data.v1.Data.DeleteBinaryDataByIDsResponse>(
-                  this, METHODID_DELETE_BINARY_DATA_BY_IDS)))
-          .addMethod(
-            getAddTagsToBinaryDataByFileIDsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsRequest,
-                viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsResponse>(
-                  this, METHODID_ADD_TAGS_TO_BINARY_DATA_BY_FILE_IDS)))
-          .addMethod(
-            getAddTagsToBinaryDataByFilterMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.data.v1.Data.AddTagsToBinaryDataByFilterRequest,
-                viam.app.data.v1.Data.AddTagsToBinaryDataByFilterResponse>(
-                  this, METHODID_ADD_TAGS_TO_BINARY_DATA_BY_FILTER)))
-          .addMethod(
-            getRemoveTagsFromBinaryDataByFileIDsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsRequest,
-                viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsResponse>(
-                  this, METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_FILE_IDS)))
-          .addMethod(
-            getRemoveTagsFromBinaryDataByFilterMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest,
-                viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterResponse>(
-                  this, METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_FILTER)))
-          .addMethod(
-            getTagsByFilterMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                viam.app.data.v1.Data.TagsByFilterRequest,
-                viam.app.data.v1.Data.TagsByFilterResponse>(
-                  this, METHODID_TAGS_BY_FILTER)))
-          .build();
+    /**
+     * <pre>
+     * AddBoundingBoxToImageByID adds a bounding box to an image with the given ID.
+     * </pre>
+     */
+    default void addBoundingBoxToImageByID(viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddBoundingBoxToImageByIDMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveBoundingBoxFromImageByID removes a bounding box from an image with the given ID.
+     * </pre>
+     */
+    default void removeBoundingBoxFromImageByID(viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveBoundingBoxFromImageByIDMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * BoundingBoxLabelsByFilter gets all string labels for bounding boxes from data based on given filter.
+     * </pre>
+     */
+    default void boundingBoxLabelsByFilter(viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBoundingBoxLabelsByFilterMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetDatabaseConnection gets a connection to access a MongoDB Atlas Data Federation instance. It
+     * returns the hostname of the federated database.
+     * </pre>
+     */
+    default void getDatabaseConnection(viam.app.data.v1.Data.GetDatabaseConnectionRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetDatabaseConnectionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDatabaseConnectionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ConfigureDatabaseUser configures a database user for the Viam organization's MongoDB Atlas Data
+     * Federation instance. It can also be used to reset the password of the existing database user.
+     * </pre>
+     */
+    default void configureDatabaseUser(viam.app.data.v1.Data.ConfigureDatabaseUserRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ConfigureDatabaseUserResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getConfigureDatabaseUserMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AddBinaryDataToDatasetByIDs adds the binary data with the given binary IDs to the dataset.
+     * </pre>
+     */
+    default void addBinaryDataToDatasetByIDs(viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddBinaryDataToDatasetByIDsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveBinaryDataFromDatasetByIDs removes the binary data with the given binary IDs from the dataset.
+     * </pre>
+     */
+    default void removeBinaryDataFromDatasetByIDs(viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveBinaryDataFromDatasetByIDsMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service DataService.
    * <pre>
    * DataService is used to query robot data.
    * </pre>
    */
-  public static final class DataServiceStub extends io.grpc.stub.AbstractAsyncStub<DataServiceStub> {
+  public static abstract class DataServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return DataServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service DataService.
+   * <pre>
+   * DataService is used to query robot data.
+   * </pre>
+   */
+  public static final class DataServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<DataServiceStub> {
     private DataServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -629,6 +934,28 @@ public final class DataServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataByFilterResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getTabularDataByFilterMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TabularDataBySQL queries tabular data with a SQL query.
+     * </pre>
+     */
+    public void tabularDataBySQL(viam.app.data.v1.Data.TabularDataBySQLRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataBySQLResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTabularDataBySQLMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * TabularDataByMQL queries tabular data with an MQL (MongoDB Query Language) query.
+     * </pre>
+     */
+    public void tabularDataByMQL(viam.app.data.v1.Data.TabularDataByMQLRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataByMQLResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTabularDataByMQLMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -655,13 +982,13 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
-     * DeleteTabularDataByFilter deletes tabular data based on given filters.
+     * DeleteTabularData deletes tabular data older than a number of days, based on the given organization ID.
      * </pre>
      */
-    public void deleteTabularDataByFilter(viam.app.data.v1.Data.DeleteTabularDataByFilterRequest request,
-        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteTabularDataByFilterResponse> responseObserver) {
+    public void deleteTabularData(viam.app.data.v1.Data.DeleteTabularDataRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteTabularDataResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDeleteTabularDataByFilterMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getDeleteTabularDataMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -688,13 +1015,13 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
-     * AddTagsToBinaryDataByFileIDs adds string tags, unless the tags are already present, to binary data based on given IDs.
+     * AddTagsToBinaryDataByIDs adds string tags, unless the tags are already present, to binary data based on given IDs.
      * </pre>
      */
-    public void addTagsToBinaryDataByFileIDs(viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsRequest request,
-        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsResponse> responseObserver) {
+    public void addTagsToBinaryDataByIDs(viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getAddTagsToBinaryDataByFileIDsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getAddTagsToBinaryDataByIDsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -710,13 +1037,13 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
-     * RemoveTagsToBinaryDataByFileIDs removes string tags from binary data based on given IDs.
+     * RemoveTagsToBinaryDataByIDs removes string tags from binary data based on given IDs.
      * </pre>
      */
-    public void removeTagsFromBinaryDataByFileIDs(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsRequest request,
-        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsResponse> responseObserver) {
+    public void removeTagsFromBinaryDataByIDs(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getRemoveTagsFromBinaryDataByFileIDsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRemoveTagsFromBinaryDataByIDsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -740,14 +1067,95 @@ public final class DataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getTagsByFilterMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * AddBoundingBoxToImageByID adds a bounding box to an image with the given ID.
+     * </pre>
+     */
+    public void addBoundingBoxToImageByID(viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddBoundingBoxToImageByIDMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveBoundingBoxFromImageByID removes a bounding box from an image with the given ID.
+     * </pre>
+     */
+    public void removeBoundingBoxFromImageByID(viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveBoundingBoxFromImageByIDMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * BoundingBoxLabelsByFilter gets all string labels for bounding boxes from data based on given filter.
+     * </pre>
+     */
+    public void boundingBoxLabelsByFilter(viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBoundingBoxLabelsByFilterMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetDatabaseConnection gets a connection to access a MongoDB Atlas Data Federation instance. It
+     * returns the hostname of the federated database.
+     * </pre>
+     */
+    public void getDatabaseConnection(viam.app.data.v1.Data.GetDatabaseConnectionRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetDatabaseConnectionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDatabaseConnectionMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * ConfigureDatabaseUser configures a database user for the Viam organization's MongoDB Atlas Data
+     * Federation instance. It can also be used to reset the password of the existing database user.
+     * </pre>
+     */
+    public void configureDatabaseUser(viam.app.data.v1.Data.ConfigureDatabaseUserRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ConfigureDatabaseUserResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getConfigureDatabaseUserMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * AddBinaryDataToDatasetByIDs adds the binary data with the given binary IDs to the dataset.
+     * </pre>
+     */
+    public void addBinaryDataToDatasetByIDs(viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddBinaryDataToDatasetByIDsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * RemoveBinaryDataFromDatasetByIDs removes the binary data with the given binary IDs from the dataset.
+     * </pre>
+     */
+    public void removeBinaryDataFromDatasetByIDs(viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest request,
+        io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveBinaryDataFromDatasetByIDsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service DataService.
    * <pre>
    * DataService is used to query robot data.
    * </pre>
    */
-  public static final class DataServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DataServiceBlockingStub> {
+  public static final class DataServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<DataServiceBlockingStub> {
     private DataServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -767,6 +1175,26 @@ public final class DataServiceGrpc {
     public viam.app.data.v1.Data.TabularDataByFilterResponse tabularDataByFilter(viam.app.data.v1.Data.TabularDataByFilterRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTabularDataByFilterMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TabularDataBySQL queries tabular data with a SQL query.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.TabularDataBySQLResponse tabularDataBySQL(viam.app.data.v1.Data.TabularDataBySQLRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTabularDataBySQLMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * TabularDataByMQL queries tabular data with an MQL (MongoDB Query Language) query.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.TabularDataByMQLResponse tabularDataByMQL(viam.app.data.v1.Data.TabularDataByMQLRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTabularDataByMQLMethod(), getCallOptions(), request);
     }
 
     /**
@@ -791,12 +1219,12 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
-     * DeleteTabularDataByFilter deletes tabular data based on given filters.
+     * DeleteTabularData deletes tabular data older than a number of days, based on the given organization ID.
      * </pre>
      */
-    public viam.app.data.v1.Data.DeleteTabularDataByFilterResponse deleteTabularDataByFilter(viam.app.data.v1.Data.DeleteTabularDataByFilterRequest request) {
+    public viam.app.data.v1.Data.DeleteTabularDataResponse deleteTabularData(viam.app.data.v1.Data.DeleteTabularDataRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeleteTabularDataByFilterMethod(), getCallOptions(), request);
+          getChannel(), getDeleteTabularDataMethod(), getCallOptions(), request);
     }
 
     /**
@@ -821,12 +1249,12 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
-     * AddTagsToBinaryDataByFileIDs adds string tags, unless the tags are already present, to binary data based on given IDs.
+     * AddTagsToBinaryDataByIDs adds string tags, unless the tags are already present, to binary data based on given IDs.
      * </pre>
      */
-    public viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsResponse addTagsToBinaryDataByFileIDs(viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsRequest request) {
+    public viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse addTagsToBinaryDataByIDs(viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getAddTagsToBinaryDataByFileIDsMethod(), getCallOptions(), request);
+          getChannel(), getAddTagsToBinaryDataByIDsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -841,12 +1269,12 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
-     * RemoveTagsToBinaryDataByFileIDs removes string tags from binary data based on given IDs.
+     * RemoveTagsToBinaryDataByIDs removes string tags from binary data based on given IDs.
      * </pre>
      */
-    public viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsResponse removeTagsFromBinaryDataByFileIDs(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsRequest request) {
+    public viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse removeTagsFromBinaryDataByIDs(viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getRemoveTagsFromBinaryDataByFileIDsMethod(), getCallOptions(), request);
+          getChannel(), getRemoveTagsFromBinaryDataByIDsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -868,14 +1296,88 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTagsByFilterMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * AddBoundingBoxToImageByID adds a bounding box to an image with the given ID.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse addBoundingBoxToImageByID(viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddBoundingBoxToImageByIDMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveBoundingBoxFromImageByID removes a bounding box from an image with the given ID.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse removeBoundingBoxFromImageByID(viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveBoundingBoxFromImageByIDMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * BoundingBoxLabelsByFilter gets all string labels for bounding boxes from data based on given filter.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse boundingBoxLabelsByFilter(viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBoundingBoxLabelsByFilterMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetDatabaseConnection gets a connection to access a MongoDB Atlas Data Federation instance. It
+     * returns the hostname of the federated database.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.GetDatabaseConnectionResponse getDatabaseConnection(viam.app.data.v1.Data.GetDatabaseConnectionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDatabaseConnectionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * ConfigureDatabaseUser configures a database user for the Viam organization's MongoDB Atlas Data
+     * Federation instance. It can also be used to reset the password of the existing database user.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.ConfigureDatabaseUserResponse configureDatabaseUser(viam.app.data.v1.Data.ConfigureDatabaseUserRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getConfigureDatabaseUserMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * AddBinaryDataToDatasetByIDs adds the binary data with the given binary IDs to the dataset.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse addBinaryDataToDatasetByIDs(viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddBinaryDataToDatasetByIDsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveBinaryDataFromDatasetByIDs removes the binary data with the given binary IDs from the dataset.
+     * </pre>
+     */
+    public viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse removeBinaryDataFromDatasetByIDs(viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveBinaryDataFromDatasetByIDsMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service DataService.
    * <pre>
    * DataService is used to query robot data.
    * </pre>
    */
-  public static final class DataServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DataServiceFutureStub> {
+  public static final class DataServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<DataServiceFutureStub> {
     private DataServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -896,6 +1398,28 @@ public final class DataServiceGrpc {
         viam.app.data.v1.Data.TabularDataByFilterRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getTabularDataByFilterMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * TabularDataBySQL queries tabular data with a SQL query.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.TabularDataBySQLResponse> tabularDataBySQL(
+        viam.app.data.v1.Data.TabularDataBySQLRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTabularDataBySQLMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * TabularDataByMQL queries tabular data with an MQL (MongoDB Query Language) query.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.TabularDataByMQLResponse> tabularDataByMQL(
+        viam.app.data.v1.Data.TabularDataByMQLRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTabularDataByMQLMethod(), getCallOptions()), request);
     }
 
     /**
@@ -922,13 +1446,13 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
-     * DeleteTabularDataByFilter deletes tabular data based on given filters.
+     * DeleteTabularData deletes tabular data older than a number of days, based on the given organization ID.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.DeleteTabularDataByFilterResponse> deleteTabularDataByFilter(
-        viam.app.data.v1.Data.DeleteTabularDataByFilterRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.DeleteTabularDataResponse> deleteTabularData(
+        viam.app.data.v1.Data.DeleteTabularDataRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDeleteTabularDataByFilterMethod(), getCallOptions()), request);
+          getChannel().newCall(getDeleteTabularDataMethod(), getCallOptions()), request);
     }
 
     /**
@@ -955,13 +1479,13 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
-     * AddTagsToBinaryDataByFileIDs adds string tags, unless the tags are already present, to binary data based on given IDs.
+     * AddTagsToBinaryDataByIDs adds string tags, unless the tags are already present, to binary data based on given IDs.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsResponse> addTagsToBinaryDataByFileIDs(
-        viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse> addTagsToBinaryDataByIDs(
+        viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getAddTagsToBinaryDataByFileIDsMethod(), getCallOptions()), request);
+          getChannel().newCall(getAddTagsToBinaryDataByIDsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -977,13 +1501,13 @@ public final class DataServiceGrpc {
 
     /**
      * <pre>
-     * RemoveTagsToBinaryDataByFileIDs removes string tags from binary data based on given IDs.
+     * RemoveTagsToBinaryDataByIDs removes string tags from binary data based on given IDs.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsResponse> removeTagsFromBinaryDataByFileIDs(
-        viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse> removeTagsFromBinaryDataByIDs(
+        viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getRemoveTagsFromBinaryDataByFileIDsMethod(), getCallOptions()), request);
+          getChannel().newCall(getRemoveTagsFromBinaryDataByIDsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1007,29 +1531,117 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getTagsByFilterMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * AddBoundingBoxToImageByID adds a bounding box to an image with the given ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse> addBoundingBoxToImageByID(
+        viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddBoundingBoxToImageByIDMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveBoundingBoxFromImageByID removes a bounding box from an image with the given ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse> removeBoundingBoxFromImageByID(
+        viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveBoundingBoxFromImageByIDMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * BoundingBoxLabelsByFilter gets all string labels for bounding boxes from data based on given filter.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse> boundingBoxLabelsByFilter(
+        viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBoundingBoxLabelsByFilterMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetDatabaseConnection gets a connection to access a MongoDB Atlas Data Federation instance. It
+     * returns the hostname of the federated database.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.GetDatabaseConnectionResponse> getDatabaseConnection(
+        viam.app.data.v1.Data.GetDatabaseConnectionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDatabaseConnectionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * ConfigureDatabaseUser configures a database user for the Viam organization's MongoDB Atlas Data
+     * Federation instance. It can also be used to reset the password of the existing database user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.ConfigureDatabaseUserResponse> configureDatabaseUser(
+        viam.app.data.v1.Data.ConfigureDatabaseUserRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getConfigureDatabaseUserMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * AddBinaryDataToDatasetByIDs adds the binary data with the given binary IDs to the dataset.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse> addBinaryDataToDatasetByIDs(
+        viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddBinaryDataToDatasetByIDsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * RemoveBinaryDataFromDatasetByIDs removes the binary data with the given binary IDs from the dataset.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse> removeBinaryDataFromDatasetByIDs(
+        viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveBinaryDataFromDatasetByIDsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TABULAR_DATA_BY_FILTER = 0;
-  private static final int METHODID_BINARY_DATA_BY_FILTER = 1;
-  private static final int METHODID_BINARY_DATA_BY_IDS = 2;
-  private static final int METHODID_DELETE_TABULAR_DATA_BY_FILTER = 3;
-  private static final int METHODID_DELETE_BINARY_DATA_BY_FILTER = 4;
-  private static final int METHODID_DELETE_BINARY_DATA_BY_IDS = 5;
-  private static final int METHODID_ADD_TAGS_TO_BINARY_DATA_BY_FILE_IDS = 6;
-  private static final int METHODID_ADD_TAGS_TO_BINARY_DATA_BY_FILTER = 7;
-  private static final int METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_FILE_IDS = 8;
-  private static final int METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_FILTER = 9;
-  private static final int METHODID_TAGS_BY_FILTER = 10;
+  private static final int METHODID_TABULAR_DATA_BY_SQL = 1;
+  private static final int METHODID_TABULAR_DATA_BY_MQL = 2;
+  private static final int METHODID_BINARY_DATA_BY_FILTER = 3;
+  private static final int METHODID_BINARY_DATA_BY_IDS = 4;
+  private static final int METHODID_DELETE_TABULAR_DATA = 5;
+  private static final int METHODID_DELETE_BINARY_DATA_BY_FILTER = 6;
+  private static final int METHODID_DELETE_BINARY_DATA_BY_IDS = 7;
+  private static final int METHODID_ADD_TAGS_TO_BINARY_DATA_BY_IDS = 8;
+  private static final int METHODID_ADD_TAGS_TO_BINARY_DATA_BY_FILTER = 9;
+  private static final int METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_IDS = 10;
+  private static final int METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_FILTER = 11;
+  private static final int METHODID_TAGS_BY_FILTER = 12;
+  private static final int METHODID_ADD_BOUNDING_BOX_TO_IMAGE_BY_ID = 13;
+  private static final int METHODID_REMOVE_BOUNDING_BOX_FROM_IMAGE_BY_ID = 14;
+  private static final int METHODID_BOUNDING_BOX_LABELS_BY_FILTER = 15;
+  private static final int METHODID_GET_DATABASE_CONNECTION = 16;
+  private static final int METHODID_CONFIGURE_DATABASE_USER = 17;
+  private static final int METHODID_ADD_BINARY_DATA_TO_DATASET_BY_IDS = 18;
+  private static final int METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS = 19;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final DataServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(DataServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1042,6 +1654,14 @@ public final class DataServiceGrpc {
           serviceImpl.tabularDataByFilter((viam.app.data.v1.Data.TabularDataByFilterRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataByFilterResponse>) responseObserver);
           break;
+        case METHODID_TABULAR_DATA_BY_SQL:
+          serviceImpl.tabularDataBySQL((viam.app.data.v1.Data.TabularDataBySQLRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataBySQLResponse>) responseObserver);
+          break;
+        case METHODID_TABULAR_DATA_BY_MQL:
+          serviceImpl.tabularDataByMQL((viam.app.data.v1.Data.TabularDataByMQLRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TabularDataByMQLResponse>) responseObserver);
+          break;
         case METHODID_BINARY_DATA_BY_FILTER:
           serviceImpl.binaryDataByFilter((viam.app.data.v1.Data.BinaryDataByFilterRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.BinaryDataByFilterResponse>) responseObserver);
@@ -1050,9 +1670,9 @@ public final class DataServiceGrpc {
           serviceImpl.binaryDataByIDs((viam.app.data.v1.Data.BinaryDataByIDsRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.BinaryDataByIDsResponse>) responseObserver);
           break;
-        case METHODID_DELETE_TABULAR_DATA_BY_FILTER:
-          serviceImpl.deleteTabularDataByFilter((viam.app.data.v1.Data.DeleteTabularDataByFilterRequest) request,
-              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteTabularDataByFilterResponse>) responseObserver);
+        case METHODID_DELETE_TABULAR_DATA:
+          serviceImpl.deleteTabularData((viam.app.data.v1.Data.DeleteTabularDataRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteTabularDataResponse>) responseObserver);
           break;
         case METHODID_DELETE_BINARY_DATA_BY_FILTER:
           serviceImpl.deleteBinaryDataByFilter((viam.app.data.v1.Data.DeleteBinaryDataByFilterRequest) request,
@@ -1062,17 +1682,17 @@ public final class DataServiceGrpc {
           serviceImpl.deleteBinaryDataByIDs((viam.app.data.v1.Data.DeleteBinaryDataByIDsRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.DeleteBinaryDataByIDsResponse>) responseObserver);
           break;
-        case METHODID_ADD_TAGS_TO_BINARY_DATA_BY_FILE_IDS:
-          serviceImpl.addTagsToBinaryDataByFileIDs((viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsRequest) request,
-              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddTagsToBinaryDataByFileIDsResponse>) responseObserver);
+        case METHODID_ADD_TAGS_TO_BINARY_DATA_BY_IDS:
+          serviceImpl.addTagsToBinaryDataByIDs((viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse>) responseObserver);
           break;
         case METHODID_ADD_TAGS_TO_BINARY_DATA_BY_FILTER:
           serviceImpl.addTagsToBinaryDataByFilter((viam.app.data.v1.Data.AddTagsToBinaryDataByFilterRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddTagsToBinaryDataByFilterResponse>) responseObserver);
           break;
-        case METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_FILE_IDS:
-          serviceImpl.removeTagsFromBinaryDataByFileIDs((viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsRequest) request,
-              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFileIDsResponse>) responseObserver);
+        case METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_IDS:
+          serviceImpl.removeTagsFromBinaryDataByIDs((viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse>) responseObserver);
           break;
         case METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_FILTER:
           serviceImpl.removeTagsFromBinaryDataByFilter((viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest) request,
@@ -1081,6 +1701,34 @@ public final class DataServiceGrpc {
         case METHODID_TAGS_BY_FILTER:
           serviceImpl.tagsByFilter((viam.app.data.v1.Data.TagsByFilterRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.TagsByFilterResponse>) responseObserver);
+          break;
+        case METHODID_ADD_BOUNDING_BOX_TO_IMAGE_BY_ID:
+          serviceImpl.addBoundingBoxToImageByID((viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse>) responseObserver);
+          break;
+        case METHODID_REMOVE_BOUNDING_BOX_FROM_IMAGE_BY_ID:
+          serviceImpl.removeBoundingBoxFromImageByID((viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse>) responseObserver);
+          break;
+        case METHODID_BOUNDING_BOX_LABELS_BY_FILTER:
+          serviceImpl.boundingBoxLabelsByFilter((viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse>) responseObserver);
+          break;
+        case METHODID_GET_DATABASE_CONNECTION:
+          serviceImpl.getDatabaseConnection((viam.app.data.v1.Data.GetDatabaseConnectionRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.GetDatabaseConnectionResponse>) responseObserver);
+          break;
+        case METHODID_CONFIGURE_DATABASE_USER:
+          serviceImpl.configureDatabaseUser((viam.app.data.v1.Data.ConfigureDatabaseUserRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.ConfigureDatabaseUserResponse>) responseObserver);
+          break;
+        case METHODID_ADD_BINARY_DATA_TO_DATASET_BY_IDS:
+          serviceImpl.addBinaryDataToDatasetByIDs((viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse>) responseObserver);
+          break;
+        case METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS:
+          serviceImpl.removeBinaryDataFromDatasetByIDs((viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1096,6 +1744,151 @@ public final class DataServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getTabularDataByFilterMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.TabularDataByFilterRequest,
+              viam.app.data.v1.Data.TabularDataByFilterResponse>(
+                service, METHODID_TABULAR_DATA_BY_FILTER)))
+        .addMethod(
+          getTabularDataBySQLMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.TabularDataBySQLRequest,
+              viam.app.data.v1.Data.TabularDataBySQLResponse>(
+                service, METHODID_TABULAR_DATA_BY_SQL)))
+        .addMethod(
+          getTabularDataByMQLMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.TabularDataByMQLRequest,
+              viam.app.data.v1.Data.TabularDataByMQLResponse>(
+                service, METHODID_TABULAR_DATA_BY_MQL)))
+        .addMethod(
+          getBinaryDataByFilterMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.BinaryDataByFilterRequest,
+              viam.app.data.v1.Data.BinaryDataByFilterResponse>(
+                service, METHODID_BINARY_DATA_BY_FILTER)))
+        .addMethod(
+          getBinaryDataByIDsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.BinaryDataByIDsRequest,
+              viam.app.data.v1.Data.BinaryDataByIDsResponse>(
+                service, METHODID_BINARY_DATA_BY_IDS)))
+        .addMethod(
+          getDeleteTabularDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.DeleteTabularDataRequest,
+              viam.app.data.v1.Data.DeleteTabularDataResponse>(
+                service, METHODID_DELETE_TABULAR_DATA)))
+        .addMethod(
+          getDeleteBinaryDataByFilterMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.DeleteBinaryDataByFilterRequest,
+              viam.app.data.v1.Data.DeleteBinaryDataByFilterResponse>(
+                service, METHODID_DELETE_BINARY_DATA_BY_FILTER)))
+        .addMethod(
+          getDeleteBinaryDataByIDsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.DeleteBinaryDataByIDsRequest,
+              viam.app.data.v1.Data.DeleteBinaryDataByIDsResponse>(
+                service, METHODID_DELETE_BINARY_DATA_BY_IDS)))
+        .addMethod(
+          getAddTagsToBinaryDataByIDsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest,
+              viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse>(
+                service, METHODID_ADD_TAGS_TO_BINARY_DATA_BY_IDS)))
+        .addMethod(
+          getAddTagsToBinaryDataByFilterMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.AddTagsToBinaryDataByFilterRequest,
+              viam.app.data.v1.Data.AddTagsToBinaryDataByFilterResponse>(
+                service, METHODID_ADD_TAGS_TO_BINARY_DATA_BY_FILTER)))
+        .addMethod(
+          getRemoveTagsFromBinaryDataByIDsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest,
+              viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse>(
+                service, METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_IDS)))
+        .addMethod(
+          getRemoveTagsFromBinaryDataByFilterMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest,
+              viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterResponse>(
+                service, METHODID_REMOVE_TAGS_FROM_BINARY_DATA_BY_FILTER)))
+        .addMethod(
+          getTagsByFilterMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.TagsByFilterRequest,
+              viam.app.data.v1.Data.TagsByFilterResponse>(
+                service, METHODID_TAGS_BY_FILTER)))
+        .addMethod(
+          getAddBoundingBoxToImageByIDMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest,
+              viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse>(
+                service, METHODID_ADD_BOUNDING_BOX_TO_IMAGE_BY_ID)))
+        .addMethod(
+          getRemoveBoundingBoxFromImageByIDMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest,
+              viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse>(
+                service, METHODID_REMOVE_BOUNDING_BOX_FROM_IMAGE_BY_ID)))
+        .addMethod(
+          getBoundingBoxLabelsByFilterMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest,
+              viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse>(
+                service, METHODID_BOUNDING_BOX_LABELS_BY_FILTER)))
+        .addMethod(
+          getGetDatabaseConnectionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.GetDatabaseConnectionRequest,
+              viam.app.data.v1.Data.GetDatabaseConnectionResponse>(
+                service, METHODID_GET_DATABASE_CONNECTION)))
+        .addMethod(
+          getConfigureDatabaseUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.ConfigureDatabaseUserRequest,
+              viam.app.data.v1.Data.ConfigureDatabaseUserResponse>(
+                service, METHODID_CONFIGURE_DATABASE_USER)))
+        .addMethod(
+          getAddBinaryDataToDatasetByIDsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest,
+              viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse>(
+                service, METHODID_ADD_BINARY_DATA_TO_DATASET_BY_IDS)))
+        .addMethod(
+          getRemoveBinaryDataFromDatasetByIDsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest,
+              viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse>(
+                service, METHODID_REMOVE_BINARY_DATA_FROM_DATASET_BY_IDS)))
+        .build();
   }
 
   private static abstract class DataServiceBaseDescriptorSupplier
@@ -1121,9 +1914,9 @@ public final class DataServiceGrpc {
   private static final class DataServiceMethodDescriptorSupplier
       extends DataServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    DataServiceMethodDescriptorSupplier(String methodName) {
+    DataServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -1144,16 +1937,25 @@ public final class DataServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new DataServiceFileDescriptorSupplier())
               .addMethod(getTabularDataByFilterMethod())
+              .addMethod(getTabularDataBySQLMethod())
+              .addMethod(getTabularDataByMQLMethod())
               .addMethod(getBinaryDataByFilterMethod())
               .addMethod(getBinaryDataByIDsMethod())
-              .addMethod(getDeleteTabularDataByFilterMethod())
+              .addMethod(getDeleteTabularDataMethod())
               .addMethod(getDeleteBinaryDataByFilterMethod())
               .addMethod(getDeleteBinaryDataByIDsMethod())
-              .addMethod(getAddTagsToBinaryDataByFileIDsMethod())
+              .addMethod(getAddTagsToBinaryDataByIDsMethod())
               .addMethod(getAddTagsToBinaryDataByFilterMethod())
-              .addMethod(getRemoveTagsFromBinaryDataByFileIDsMethod())
+              .addMethod(getRemoveTagsFromBinaryDataByIDsMethod())
               .addMethod(getRemoveTagsFromBinaryDataByFilterMethod())
               .addMethod(getTagsByFilterMethod())
+              .addMethod(getAddBoundingBoxToImageByIDMethod())
+              .addMethod(getRemoveBoundingBoxFromImageByIDMethod())
+              .addMethod(getBoundingBoxLabelsByFilterMethod())
+              .addMethod(getGetDatabaseConnectionMethod())
+              .addMethod(getConfigureDatabaseUserMethod())
+              .addMethod(getAddBinaryDataToDatasetByIDsMethod())
+              .addMethod(getRemoveBinaryDataFromDatasetByIDsMethod())
               .build();
         }
       }

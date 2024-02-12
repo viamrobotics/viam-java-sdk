@@ -19,6 +19,7 @@ import io.grpc.Metadata;
 import io.grpc.MethodDescriptor;
 import io.grpc.Status;
 import proto.rpc.webrtc.v1.Grpc;
+import proto.stream.v1.Stream;
 
 public class ClientStream<RequestT, ResponseT> extends io.grpc.ClientCall<RequestT, ResponseT> {
 
@@ -180,7 +181,8 @@ public class ClientStream<RequestT, ResponseT> extends io.grpc.ClientCall<Reques
 
     private synchronized void processMessage(final Grpc.ResponseMessage msg) {
 		final Optional<List<Byte>> resultOpt = this.baseStream.processPacketMessage(msg.getPacketMessage());
-        if (resultOpt.isEmpty()) {
+        //noinspection SimplifyOptionalCallChains
+        if (!resultOpt.isPresent()) {
             return;
         }
         if (this.numRequests == 0) {
@@ -197,6 +199,7 @@ public class ClientStream<RequestT, ResponseT> extends io.grpc.ClientCall<Reques
         }
     }
 
+    @SuppressWarnings("DefaultLocale")
     private synchronized void processTrailers(Grpc.ResponseTrailers trailers) {
         this.trailersReceived = true;
         final Status status = Status.fromCodeValue(trailers.getStatus().getCode());

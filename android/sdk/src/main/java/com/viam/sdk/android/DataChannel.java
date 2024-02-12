@@ -19,8 +19,8 @@ public class DataChannel implements com.viam.sdk.core.webrtc.DataChannel {
     }
 
     @Override
-    public boolean send(final Buffer message) {
-        return this.nativeDataChannel.send(new org.webrtc.DataChannel.Buffer(message.data, message.binary));
+    public void send(final Buffer message) {
+        this.nativeDataChannel.send(new org.webrtc.DataChannel.Buffer(message.data, message.binary));
     }
 
     @Override
@@ -53,7 +53,6 @@ public class DataChannel implements com.viam.sdk.core.webrtc.DataChannel {
     private static org.webrtc.DataChannel.Observer toNativeDataChannelObserver(final DataChannel.Observer observer) {
         return new org.webrtc.DataChannel.Observer() {
 
-            @Override
             public void onBufferedAmountChange(long previousAmount) {
                 observer.onBufferedAmountChange(previousAmount);
             }

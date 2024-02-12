@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: component/base/v1/base.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class BaseServiceGrpc {
 
   private BaseServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.component.base.v1.BaseService";
+  public static final java.lang.String SERVICE_NAME = "viam.component.base.v1.BaseService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.component.base.v1.Base.MoveStraightRequest,
@@ -201,6 +201,99 @@ public final class BaseServiceGrpc {
     return getIsMovingMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = BaseServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (BaseServiceGrpc.class) {
+        if ((getDoCommandMethod = BaseServiceGrpc.getDoCommandMethod) == null) {
+          BaseServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BaseServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGeometries",
+      requestType = com.viam.common.v1.Common.GetGeometriesRequest.class,
+      responseType = com.viam.common.v1.Common.GetGeometriesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+    if ((getGetGeometriesMethod = BaseServiceGrpc.getGetGeometriesMethod) == null) {
+      synchronized (BaseServiceGrpc.class) {
+        if ((getGetGeometriesMethod = BaseServiceGrpc.getGetGeometriesMethod) == null) {
+          BaseServiceGrpc.getGetGeometriesMethod = getGetGeometriesMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeometries"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BaseServiceMethodDescriptorSupplier("GetGeometries"))
+              .build();
+        }
+      }
+    }
+    return getGetGeometriesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.base.v1.Base.GetPropertiesRequest,
+      com.viam.component.base.v1.Base.GetPropertiesResponse> getGetPropertiesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetProperties",
+      requestType = com.viam.component.base.v1.Base.GetPropertiesRequest.class,
+      responseType = com.viam.component.base.v1.Base.GetPropertiesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.base.v1.Base.GetPropertiesRequest,
+      com.viam.component.base.v1.Base.GetPropertiesResponse> getGetPropertiesMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.base.v1.Base.GetPropertiesRequest, com.viam.component.base.v1.Base.GetPropertiesResponse> getGetPropertiesMethod;
+    if ((getGetPropertiesMethod = BaseServiceGrpc.getGetPropertiesMethod) == null) {
+      synchronized (BaseServiceGrpc.class) {
+        if ((getGetPropertiesMethod = BaseServiceGrpc.getGetPropertiesMethod) == null) {
+          BaseServiceGrpc.getGetPropertiesMethod = getGetPropertiesMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.base.v1.Base.GetPropertiesRequest, com.viam.component.base.v1.Base.GetPropertiesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProperties"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.component.base.v1.Base.GetPropertiesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.component.base.v1.Base.GetPropertiesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BaseServiceMethodDescriptorSupplier("GetProperties"))
+              .build();
+        }
+      }
+    }
+    return getGetPropertiesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -247,7 +340,7 @@ public final class BaseServiceGrpc {
 
   /**
    */
-  public static abstract class BaseServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -256,7 +349,7 @@ public final class BaseServiceGrpc {
      * This method blocks until completed or cancelled
      * </pre>
      */
-    public void moveStraight(com.viam.component.base.v1.Base.MoveStraightRequest request,
+    default void moveStraight(com.viam.component.base.v1.Base.MoveStraightRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.base.v1.Base.MoveStraightResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveStraightMethod(), responseObserver);
     }
@@ -268,7 +361,7 @@ public final class BaseServiceGrpc {
      * This method blocks until completed or cancelled
      * </pre>
      */
-    public void spin(com.viam.component.base.v1.Base.SpinRequest request,
+    default void spin(com.viam.component.base.v1.Base.SpinRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.base.v1.Base.SpinResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSpinMethod(), responseObserver);
     }
@@ -279,7 +372,7 @@ public final class BaseServiceGrpc {
      * -1 -&gt; 1 in terms of power for each direction
      * </pre>
      */
-    public void setPower(com.viam.component.base.v1.Base.SetPowerRequest request,
+    default void setPower(com.viam.component.base.v1.Base.SetPowerRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.base.v1.Base.SetPowerResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetPowerMethod(), responseObserver);
     }
@@ -289,7 +382,7 @@ public final class BaseServiceGrpc {
      * SetVelocity sets the linear and angular velocity of a base
      * </pre>
      */
-    public void setVelocity(com.viam.component.base.v1.Base.SetVelocityRequest request,
+    default void setVelocity(com.viam.component.base.v1.Base.SetVelocityRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.base.v1.Base.SetVelocityResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetVelocityMethod(), responseObserver);
     }
@@ -299,7 +392,7 @@ public final class BaseServiceGrpc {
      * Stop stops a robot's base
      * </pre>
      */
-    public void stop(com.viam.component.base.v1.Base.StopRequest request,
+    default void stop(com.viam.component.base.v1.Base.StopRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.base.v1.Base.StopResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
     }
@@ -309,62 +402,58 @@ public final class BaseServiceGrpc {
      * IsMoving reports if a component is in motion
      * </pre>
      */
-    public void isMoving(com.viam.component.base.v1.Base.IsMovingRequest request,
+    default void isMoving(com.viam.component.base.v1.Base.IsMovingRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.base.v1.Base.IsMovingResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIsMovingMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMoveStraightMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.base.v1.Base.MoveStraightRequest,
-                com.viam.component.base.v1.Base.MoveStraightResponse>(
-                  this, METHODID_MOVE_STRAIGHT)))
-          .addMethod(
-            getSpinMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.base.v1.Base.SpinRequest,
-                com.viam.component.base.v1.Base.SpinResponse>(
-                  this, METHODID_SPIN)))
-          .addMethod(
-            getSetPowerMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.base.v1.Base.SetPowerRequest,
-                com.viam.component.base.v1.Base.SetPowerResponse>(
-                  this, METHODID_SET_POWER)))
-          .addMethod(
-            getSetVelocityMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.base.v1.Base.SetVelocityRequest,
-                com.viam.component.base.v1.Base.SetVelocityResponse>(
-                  this, METHODID_SET_VELOCITY)))
-          .addMethod(
-            getStopMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.base.v1.Base.StopRequest,
-                com.viam.component.base.v1.Base.StopResponse>(
-                  this, METHODID_STOP)))
-          .addMethod(
-            getIsMovingMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.base.v1.Base.IsMovingRequest,
-                com.viam.component.base.v1.Base.IsMovingResponse>(
-                  this, METHODID_IS_MOVING)))
-          .build();
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    default void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGeometriesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the properties of a base in its current configuration
+     * </pre>
+     */
+    default void getProperties(com.viam.component.base.v1.Base.GetPropertiesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.base.v1.Base.GetPropertiesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPropertiesMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service BaseService.
    */
-  public static final class BaseServiceStub extends io.grpc.stub.AbstractAsyncStub<BaseServiceStub> {
+  public static abstract class BaseServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return BaseServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service BaseService.
+   */
+  public static final class BaseServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<BaseServiceStub> {
     private BaseServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -446,11 +535,46 @@ public final class BaseServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getIsMovingMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the properties of a base in its current configuration
+     * </pre>
+     */
+    public void getProperties(com.viam.component.base.v1.Base.GetPropertiesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.base.v1.Base.GetPropertiesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPropertiesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service BaseService.
    */
-  public static final class BaseServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BaseServiceBlockingStub> {
+  public static final class BaseServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<BaseServiceBlockingStub> {
     private BaseServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -526,11 +650,43 @@ public final class BaseServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getIsMovingMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the properties of a base in its current configuration
+     * </pre>
+     */
+    public com.viam.component.base.v1.Base.GetPropertiesResponse getProperties(com.viam.component.base.v1.Base.GetPropertiesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPropertiesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service BaseService.
    */
-  public static final class BaseServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BaseServiceFutureStub> {
+  public static final class BaseServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<BaseServiceFutureStub> {
     private BaseServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -612,6 +768,39 @@ public final class BaseServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getIsMovingMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetGeometriesResponse> getGeometries(
+        com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetProperties returns the properties of a base in its current configuration
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.base.v1.Base.GetPropertiesResponse> getProperties(
+        com.viam.component.base.v1.Base.GetPropertiesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPropertiesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_MOVE_STRAIGHT = 0;
@@ -620,16 +809,19 @@ public final class BaseServiceGrpc {
   private static final int METHODID_SET_VELOCITY = 3;
   private static final int METHODID_STOP = 4;
   private static final int METHODID_IS_MOVING = 5;
+  private static final int METHODID_DO_COMMAND = 6;
+  private static final int METHODID_GET_GEOMETRIES = 7;
+  private static final int METHODID_GET_PROPERTIES = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final BaseServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(BaseServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -662,6 +854,18 @@ public final class BaseServiceGrpc {
           serviceImpl.isMoving((com.viam.component.base.v1.Base.IsMovingRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.base.v1.Base.IsMovingResponse>) responseObserver);
           break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
+        case METHODID_GET_GEOMETRIES:
+          serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse>) responseObserver);
+          break;
+        case METHODID_GET_PROPERTIES:
+          serviceImpl.getProperties((com.viam.component.base.v1.Base.GetPropertiesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.base.v1.Base.GetPropertiesResponse>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -676,6 +880,74 @@ public final class BaseServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMoveStraightMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.base.v1.Base.MoveStraightRequest,
+              com.viam.component.base.v1.Base.MoveStraightResponse>(
+                service, METHODID_MOVE_STRAIGHT)))
+        .addMethod(
+          getSpinMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.base.v1.Base.SpinRequest,
+              com.viam.component.base.v1.Base.SpinResponse>(
+                service, METHODID_SPIN)))
+        .addMethod(
+          getSetPowerMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.base.v1.Base.SetPowerRequest,
+              com.viam.component.base.v1.Base.SetPowerResponse>(
+                service, METHODID_SET_POWER)))
+        .addMethod(
+          getSetVelocityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.base.v1.Base.SetVelocityRequest,
+              com.viam.component.base.v1.Base.SetVelocityResponse>(
+                service, METHODID_SET_VELOCITY)))
+        .addMethod(
+          getStopMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.base.v1.Base.StopRequest,
+              com.viam.component.base.v1.Base.StopResponse>(
+                service, METHODID_STOP)))
+        .addMethod(
+          getIsMovingMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.base.v1.Base.IsMovingRequest,
+              com.viam.component.base.v1.Base.IsMovingResponse>(
+                service, METHODID_IS_MOVING)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .addMethod(
+          getGetGeometriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetGeometriesRequest,
+              com.viam.common.v1.Common.GetGeometriesResponse>(
+                service, METHODID_GET_GEOMETRIES)))
+        .addMethod(
+          getGetPropertiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.base.v1.Base.GetPropertiesRequest,
+              com.viam.component.base.v1.Base.GetPropertiesResponse>(
+                service, METHODID_GET_PROPERTIES)))
+        .build();
   }
 
   private static abstract class BaseServiceBaseDescriptorSupplier
@@ -701,9 +973,9 @@ public final class BaseServiceGrpc {
   private static final class BaseServiceMethodDescriptorSupplier
       extends BaseServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    BaseServiceMethodDescriptorSupplier(String methodName) {
+    BaseServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -729,6 +1001,9 @@ public final class BaseServiceGrpc {
               .addMethod(getSetVelocityMethod())
               .addMethod(getStopMethod())
               .addMethod(getIsMovingMethod())
+              .addMethod(getDoCommandMethod())
+              .addMethod(getGetGeometriesMethod())
+              .addMethod(getGetPropertiesMethod())
               .build();
         }
       }

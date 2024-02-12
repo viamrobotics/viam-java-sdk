@@ -9,14 +9,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: proto/rpc/webrtc/v1/signaling.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SignalingServiceGrpc {
 
   private SignalingServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "proto.rpc.webrtc.v1.SignalingService";
+  public static final java.lang.String SERVICE_NAME = "proto.rpc.webrtc.v1.SignalingService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<proto.rpc.webrtc.v1.Signaling.CallRequest,
@@ -193,7 +193,7 @@ public final class SignalingServiceGrpc {
    * client using the Session Description Protocol (SDP).
    * </pre>
    */
-  public static abstract class SignalingServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -207,7 +207,7 @@ public final class SignalingServiceGrpc {
      * can result in the caller waiting for an answerer to be listening.
      * </pre>
      */
-    public void call(proto.rpc.webrtc.v1.Signaling.CallRequest request,
+    default void call(proto.rpc.webrtc.v1.Signaling.CallRequest request,
         io.grpc.stub.StreamObserver<proto.rpc.webrtc.v1.Signaling.CallResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCallMethod(), responseObserver);
     }
@@ -221,7 +221,7 @@ public final class SignalingServiceGrpc {
      * this should be removed in favor of a bidirectional stream on Call.
      * </pre>
      */
-    public void callUpdate(proto.rpc.webrtc.v1.Signaling.CallUpdateRequest request,
+    default void callUpdate(proto.rpc.webrtc.v1.Signaling.CallUpdateRequest request,
         io.grpc.stub.StreamObserver<proto.rpc.webrtc.v1.Signaling.CallUpdateResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCallUpdateMethod(), responseObserver);
     }
@@ -233,7 +233,7 @@ public final class SignalingServiceGrpc {
      * The host(s) to answer for should be in the rpc-host metadata field.
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<proto.rpc.webrtc.v1.Signaling.AnswerResponse> answer(
+    default io.grpc.stub.StreamObserver<proto.rpc.webrtc.v1.Signaling.AnswerResponse> answer(
         io.grpc.stub.StreamObserver<proto.rpc.webrtc.v1.Signaling.AnswerRequest> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getAnswerMethod(), responseObserver);
     }
@@ -244,52 +244,36 @@ public final class SignalingServiceGrpc {
      * The host to get a config for must be in the rpc-host metadata field.
      * </pre>
      */
-    public void optionalWebRTCConfig(proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest request,
+    default void optionalWebRTCConfig(proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest request,
         io.grpc.stub.StreamObserver<proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getOptionalWebRTCConfigMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getCallMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                proto.rpc.webrtc.v1.Signaling.CallRequest,
-                proto.rpc.webrtc.v1.Signaling.CallResponse>(
-                  this, METHODID_CALL)))
-          .addMethod(
-            getCallUpdateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                proto.rpc.webrtc.v1.Signaling.CallUpdateRequest,
-                proto.rpc.webrtc.v1.Signaling.CallUpdateResponse>(
-                  this, METHODID_CALL_UPDATE)))
-          .addMethod(
-            getAnswerMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                proto.rpc.webrtc.v1.Signaling.AnswerResponse,
-                proto.rpc.webrtc.v1.Signaling.AnswerRequest>(
-                  this, METHODID_ANSWER)))
-          .addMethod(
-            getOptionalWebRTCConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest,
-                proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse>(
-                  this, METHODID_OPTIONAL_WEB_RTCCONFIG)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service SignalingService.
    * <pre>
    * A SignalingService provides the means to have one client "call" another
    * client using the Session Description Protocol (SDP).
    * </pre>
    */
-  public static final class SignalingServiceStub extends io.grpc.stub.AbstractAsyncStub<SignalingServiceStub> {
+  public static abstract class SignalingServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return SignalingServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service SignalingService.
+   * <pre>
+   * A SignalingService provides the means to have one client "call" another
+   * client using the Session Description Protocol (SDP).
+   * </pre>
+   */
+  public static final class SignalingServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<SignalingServiceStub> {
     private SignalingServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -361,12 +345,14 @@ public final class SignalingServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service SignalingService.
    * <pre>
    * A SignalingService provides the means to have one client "call" another
    * client using the Session Description Protocol (SDP).
    * </pre>
    */
-  public static final class SignalingServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SignalingServiceBlockingStub> {
+  public static final class SignalingServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<SignalingServiceBlockingStub> {
     private SignalingServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -423,12 +409,14 @@ public final class SignalingServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service SignalingService.
    * <pre>
    * A SignalingService provides the means to have one client "call" another
    * client using the Session Description Protocol (SDP).
    * </pre>
    */
-  public static final class SignalingServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SignalingServiceFutureStub> {
+  public static final class SignalingServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<SignalingServiceFutureStub> {
     private SignalingServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -478,10 +466,10 @@ public final class SignalingServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SignalingServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SignalingServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -521,6 +509,39 @@ public final class SignalingServiceGrpc {
     }
   }
 
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCallMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              proto.rpc.webrtc.v1.Signaling.CallRequest,
+              proto.rpc.webrtc.v1.Signaling.CallResponse>(
+                service, METHODID_CALL)))
+        .addMethod(
+          getCallUpdateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.rpc.webrtc.v1.Signaling.CallUpdateRequest,
+              proto.rpc.webrtc.v1.Signaling.CallUpdateResponse>(
+                service, METHODID_CALL_UPDATE)))
+        .addMethod(
+          getAnswerMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              proto.rpc.webrtc.v1.Signaling.AnswerResponse,
+              proto.rpc.webrtc.v1.Signaling.AnswerRequest>(
+                service, METHODID_ANSWER)))
+        .addMethod(
+          getOptionalWebRTCConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest,
+              proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse>(
+                service, METHODID_OPTIONAL_WEB_RTCCONFIG)))
+        .build();
+  }
+
   private static abstract class SignalingServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     SignalingServiceBaseDescriptorSupplier() {}
@@ -544,9 +565,9 @@ public final class SignalingServiceGrpc {
   private static final class SignalingServiceMethodDescriptorSupplier
       extends SignalingServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    SignalingServiceMethodDescriptorSupplier(String methodName) {
+    SignalingServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

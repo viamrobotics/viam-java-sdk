@@ -5,7 +5,7 @@ ext.pomDisplayName = "Viam Android SDK"
 
 buildscript {
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.0'
+        classpath 'com.android.tools.build:gradle:8.2.2'
     }
 }
 
@@ -21,20 +21,18 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
-}
 
-afterEvaluate {
     publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-            }
+        singleVariant('release') {
+            withSourcesJar()
         }
     }
+
+    namespace 'com.viam.sdk.android'
 }
 
 dependencies {
     api project(':core:viam-core-sdk')
-    api project(':android:viam-android-libwebrtc')
-    implementation 'io.grpc:grpc-okhttp:1.46.0'
+    api 'org.jitsi:webrtc:118.0.0'
+    implementation 'io.grpc:grpc-okhttp:1.61.0'
 }

@@ -8,7 +8,7 @@ public interface DataChannel {
 
     void unregisterObserver();
 
-    boolean send(final Buffer message);
+    void send(final Buffer message);
 
     void close();
 
@@ -16,9 +16,9 @@ public interface DataChannel {
 
     class Init {
         public boolean ordered = true;
-        public int maxRetransmitTimeMs = -1;
-        public int maxRetransmits = -1;
-        public String protocol = "";
+        public final int maxRetransmitTimeMs = -1;
+        public final int maxRetransmits = -1;
+        public final String protocol = "";
         public boolean negotiated;
         public int id = -1;
 
@@ -27,7 +27,9 @@ public interface DataChannel {
     }
 
     interface Observer {
-        void onBufferedAmountChange(long previousAmount);
+        default void onBufferedAmountChange(long previousAmount) {
+
+        }
         void onStateChange();
         void onMessage(final Buffer message);
     }

@@ -14,11 +14,12 @@ import io.grpc.CallOptions;
 import io.grpc.ClientCall;
 import io.grpc.MethodDescriptor;
 import proto.rpc.webrtc.v1.Grpc;
+import proto.stream.v1.Stream;
 
 public class ClientChannel extends Channel {
 
     // MaxStreamCount is the max number of streams a channel can have.
-    public static int MaxStreamCount = 256;
+    public static final int MaxStreamCount = 256;
 
     protected final RPCPeerConnection rpcConn;
     private long streamIDCounter = 0;

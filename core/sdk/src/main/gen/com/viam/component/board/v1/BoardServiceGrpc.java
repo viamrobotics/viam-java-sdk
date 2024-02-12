@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: component/board/v1/board.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class BoardServiceGrpc {
 
   private BoardServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.component.board.v1.BoardService";
+  public static final java.lang.String SERVICE_NAME = "viam.component.board.v1.BoardService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.StatusRequest,
@@ -235,6 +235,37 @@ public final class BoardServiceGrpc {
     return getSetPWMFrequencyMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DoCommand",
+      requestType = com.viam.common.v1.Common.DoCommandRequest.class,
+      responseType = com.viam.common.v1.Common.DoCommandResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest,
+      com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse> getDoCommandMethod;
+    if ((getDoCommandMethod = BoardServiceGrpc.getDoCommandMethod) == null) {
+      synchronized (BoardServiceGrpc.class) {
+        if ((getDoCommandMethod = BoardServiceGrpc.getDoCommandMethod) == null) {
+          BoardServiceGrpc.getDoCommandMethod = getDoCommandMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.DoCommandRequest, com.viam.common.v1.Common.DoCommandResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("DoCommand"))
+              .build();
+        }
+      }
+    }
+    return getDoCommandMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.ReadAnalogReaderRequest,
       com.viam.component.board.v1.Board.ReadAnalogReaderResponse> getReadAnalogReaderMethod;
 
@@ -266,6 +297,37 @@ public final class BoardServiceGrpc {
     return getReadAnalogReaderMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.WriteAnalogRequest,
+      com.viam.component.board.v1.Board.WriteAnalogResponse> getWriteAnalogMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "WriteAnalog",
+      requestType = com.viam.component.board.v1.Board.WriteAnalogRequest.class,
+      responseType = com.viam.component.board.v1.Board.WriteAnalogResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.WriteAnalogRequest,
+      com.viam.component.board.v1.Board.WriteAnalogResponse> getWriteAnalogMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.WriteAnalogRequest, com.viam.component.board.v1.Board.WriteAnalogResponse> getWriteAnalogMethod;
+    if ((getWriteAnalogMethod = BoardServiceGrpc.getWriteAnalogMethod) == null) {
+      synchronized (BoardServiceGrpc.class) {
+        if ((getWriteAnalogMethod = BoardServiceGrpc.getWriteAnalogMethod) == null) {
+          BoardServiceGrpc.getWriteAnalogMethod = getWriteAnalogMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.board.v1.Board.WriteAnalogRequest, com.viam.component.board.v1.Board.WriteAnalogResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "WriteAnalog"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.component.board.v1.Board.WriteAnalogRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.component.board.v1.Board.WriteAnalogResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("WriteAnalog"))
+              .build();
+        }
+      }
+    }
+    return getWriteAnalogMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.GetDigitalInterruptValueRequest,
       com.viam.component.board.v1.Board.GetDigitalInterruptValueResponse> getGetDigitalInterruptValueMethod;
 
@@ -295,6 +357,68 @@ public final class BoardServiceGrpc {
       }
     }
     return getGetDigitalInterruptValueMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.SetPowerModeRequest,
+      com.viam.component.board.v1.Board.SetPowerModeResponse> getSetPowerModeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetPowerMode",
+      requestType = com.viam.component.board.v1.Board.SetPowerModeRequest.class,
+      responseType = com.viam.component.board.v1.Board.SetPowerModeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.SetPowerModeRequest,
+      com.viam.component.board.v1.Board.SetPowerModeResponse> getSetPowerModeMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.SetPowerModeRequest, com.viam.component.board.v1.Board.SetPowerModeResponse> getSetPowerModeMethod;
+    if ((getSetPowerModeMethod = BoardServiceGrpc.getSetPowerModeMethod) == null) {
+      synchronized (BoardServiceGrpc.class) {
+        if ((getSetPowerModeMethod = BoardServiceGrpc.getSetPowerModeMethod) == null) {
+          BoardServiceGrpc.getSetPowerModeMethod = getSetPowerModeMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.board.v1.Board.SetPowerModeRequest, com.viam.component.board.v1.Board.SetPowerModeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetPowerMode"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.component.board.v1.Board.SetPowerModeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.component.board.v1.Board.SetPowerModeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("SetPowerMode"))
+              .build();
+        }
+      }
+    }
+    return getSetPowerModeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetGeometries",
+      requestType = com.viam.common.v1.Common.GetGeometriesRequest.class,
+      responseType = com.viam.common.v1.Common.GetGeometriesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest,
+      com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod() {
+    io.grpc.MethodDescriptor<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse> getGetGeometriesMethod;
+    if ((getGetGeometriesMethod = BoardServiceGrpc.getGetGeometriesMethod) == null) {
+      synchronized (BoardServiceGrpc.class) {
+        if ((getGetGeometriesMethod = BoardServiceGrpc.getGetGeometriesMethod) == null) {
+          BoardServiceGrpc.getGetGeometriesMethod = getGetGeometriesMethod =
+              io.grpc.MethodDescriptor.<com.viam.common.v1.Common.GetGeometriesRequest, com.viam.common.v1.Common.GetGeometriesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeometries"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.common.v1.Common.GetGeometriesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("GetGeometries"))
+              .build();
+        }
+      }
+    }
+    return getGetGeometriesMethod;
   }
 
   /**
@@ -346,18 +470,18 @@ public final class BoardServiceGrpc {
    * BoardService services all Boards associated with a robot
    * </pre>
    */
-  public static abstract class BoardServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void status(com.viam.component.board.v1.Board.StatusRequest request,
+    default void status(com.viam.component.board.v1.Board.StatusRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.StatusResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStatusMethod(), responseObserver);
     }
 
     /**
      */
-    public void setGPIO(com.viam.component.board.v1.Board.SetGPIORequest request,
+    default void setGPIO(com.viam.component.board.v1.Board.SetGPIORequest request,
         io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.SetGPIOResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetGPIOMethod(), responseObserver);
     }
@@ -367,7 +491,7 @@ public final class BoardServiceGrpc {
      * GetGPIO gets the high/low state of the given pin of a board of the underlying robot.
      * </pre>
      */
-    public void getGPIO(com.viam.component.board.v1.Board.GetGPIORequest request,
+    default void getGPIO(com.viam.component.board.v1.Board.GetGPIORequest request,
         io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.GetGPIOResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGPIOMethod(), responseObserver);
     }
@@ -377,7 +501,7 @@ public final class BoardServiceGrpc {
      * PWM gets the duty cycle of the given pin of a board of the underlying robot.
      * </pre>
      */
-    public void pWM(com.viam.component.board.v1.Board.PWMRequest request,
+    default void pWM(com.viam.component.board.v1.Board.PWMRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.PWMResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPWMMethod(), responseObserver);
     }
@@ -387,7 +511,7 @@ public final class BoardServiceGrpc {
      * SetPWM sets the given pin of a board of the underlying robot to the given duty cycle.
      * </pre>
      */
-    public void setPWM(com.viam.component.board.v1.Board.SetPWMRequest request,
+    default void setPWM(com.viam.component.board.v1.Board.SetPWMRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.SetPWMResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetPWMMethod(), responseObserver);
     }
@@ -397,7 +521,7 @@ public final class BoardServiceGrpc {
      * PWMFrequency gets the PWM frequency of the given pin of a board of the underlying robot.
      * </pre>
      */
-    public void pWMFrequency(com.viam.component.board.v1.Board.PWMFrequencyRequest request,
+    default void pWMFrequency(com.viam.component.board.v1.Board.PWMFrequencyRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.PWMFrequencyResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPWMFrequencyMethod(), responseObserver);
     }
@@ -407,9 +531,19 @@ public final class BoardServiceGrpc {
      * SetPWMFrequency sets the given pin of a board of the underlying robot to the given PWM frequency. 0 will use the board's default PWM frequency.
      * </pre>
      */
-    public void setPWMFrequency(com.viam.component.board.v1.Board.SetPWMFrequencyRequest request,
+    default void setPWMFrequency(com.viam.component.board.v1.Board.SetPWMFrequencyRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.SetPWMFrequencyResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetPWMFrequencyMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    default void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDoCommandMethod(), responseObserver);
     }
 
     /**
@@ -417,9 +551,19 @@ public final class BoardServiceGrpc {
      * ReadAnalogReader reads off the current value of an analog reader of a board of the underlying robot.
      * </pre>
      */
-    public void readAnalogReader(com.viam.component.board.v1.Board.ReadAnalogReaderRequest request,
+    default void readAnalogReader(com.viam.component.board.v1.Board.ReadAnalogReaderRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.ReadAnalogReaderResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReadAnalogReaderMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * WriteAnalog writes the value to the analog writer of the board.
+     * </pre>
+     */
+    default void writeAnalog(com.viam.component.board.v1.Board.WriteAnalogRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.WriteAnalogResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getWriteAnalogMethod(), responseObserver);
     }
 
     /**
@@ -427,86 +571,54 @@ public final class BoardServiceGrpc {
      * GetDigitalInterruptValue returns the current value of the interrupt which is based on the type of interrupt.
      * </pre>
      */
-    public void getDigitalInterruptValue(com.viam.component.board.v1.Board.GetDigitalInterruptValueRequest request,
+    default void getDigitalInterruptValue(com.viam.component.board.v1.Board.GetDigitalInterruptValueRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.GetDigitalInterruptValueResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDigitalInterruptValueMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getStatusMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.board.v1.Board.StatusRequest,
-                com.viam.component.board.v1.Board.StatusResponse>(
-                  this, METHODID_STATUS)))
-          .addMethod(
-            getSetGPIOMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.board.v1.Board.SetGPIORequest,
-                com.viam.component.board.v1.Board.SetGPIOResponse>(
-                  this, METHODID_SET_GPIO)))
-          .addMethod(
-            getGetGPIOMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.board.v1.Board.GetGPIORequest,
-                com.viam.component.board.v1.Board.GetGPIOResponse>(
-                  this, METHODID_GET_GPIO)))
-          .addMethod(
-            getPWMMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.board.v1.Board.PWMRequest,
-                com.viam.component.board.v1.Board.PWMResponse>(
-                  this, METHODID_PWM)))
-          .addMethod(
-            getSetPWMMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.board.v1.Board.SetPWMRequest,
-                com.viam.component.board.v1.Board.SetPWMResponse>(
-                  this, METHODID_SET_PWM)))
-          .addMethod(
-            getPWMFrequencyMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.board.v1.Board.PWMFrequencyRequest,
-                com.viam.component.board.v1.Board.PWMFrequencyResponse>(
-                  this, METHODID_PWMFREQUENCY)))
-          .addMethod(
-            getSetPWMFrequencyMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.board.v1.Board.SetPWMFrequencyRequest,
-                com.viam.component.board.v1.Board.SetPWMFrequencyResponse>(
-                  this, METHODID_SET_PWMFREQUENCY)))
-          .addMethod(
-            getReadAnalogReaderMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.board.v1.Board.ReadAnalogReaderRequest,
-                com.viam.component.board.v1.Board.ReadAnalogReaderResponse>(
-                  this, METHODID_READ_ANALOG_READER)))
-          .addMethod(
-            getGetDigitalInterruptValueMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.board.v1.Board.GetDigitalInterruptValueRequest,
-                com.viam.component.board.v1.Board.GetDigitalInterruptValueResponse>(
-                  this, METHODID_GET_DIGITAL_INTERRUPT_VALUE)))
-          .build();
+    /**
+     * <pre>
+     * `SetPowerMode` sets the power consumption mode of the board to the requested setting for the given duration.
+     * </pre>
+     */
+    default void setPowerMode(com.viam.component.board.v1.Board.SetPowerModeRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.SetPowerModeResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetPowerModeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration.
+     * </pre>
+     */
+    default void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGeometriesMethod(), responseObserver);
     }
   }
 
   /**
+   * Base class for the server implementation of the service BoardService.
    * <pre>
    * BoardService services all Boards associated with a robot
    * </pre>
    */
-  public static final class BoardServiceStub extends io.grpc.stub.AbstractAsyncStub<BoardServiceStub> {
+  public static abstract class BoardServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return BoardServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service BoardService.
+   * <pre>
+   * BoardService services all Boards associated with a robot
+   * </pre>
+   */
+  public static final class BoardServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<BoardServiceStub> {
     private BoardServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -591,6 +703,17 @@ public final class BoardServiceGrpc {
 
     /**
      * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public void doCommand(com.viam.common.v1.Common.DoCommandRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * ReadAnalogReader reads off the current value of an analog reader of a board of the underlying robot.
      * </pre>
      */
@@ -598,6 +721,17 @@ public final class BoardServiceGrpc {
         io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.ReadAnalogReaderResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getReadAnalogReaderMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * WriteAnalog writes the value to the analog writer of the board.
+     * </pre>
+     */
+    public void writeAnalog(com.viam.component.board.v1.Board.WriteAnalogRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.WriteAnalogResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getWriteAnalogMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -610,14 +744,38 @@ public final class BoardServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetDigitalInterruptValueMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * `SetPowerMode` sets the power consumption mode of the board to the requested setting for the given duration.
+     * </pre>
+     */
+    public void setPowerMode(com.viam.component.board.v1.Board.SetPowerModeRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.SetPowerModeResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetPowerModeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration.
+     * </pre>
+     */
+    public void getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request,
+        io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service BoardService.
    * <pre>
    * BoardService services all Boards associated with a robot
    * </pre>
    */
-  public static final class BoardServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BoardServiceBlockingStub> {
+  public static final class BoardServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<BoardServiceBlockingStub> {
     private BoardServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -695,12 +853,32 @@ public final class BoardServiceGrpc {
 
     /**
      * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.viam.common.v1.Common.DoCommandResponse doCommand(com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDoCommandMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * ReadAnalogReader reads off the current value of an analog reader of a board of the underlying robot.
      * </pre>
      */
     public com.viam.component.board.v1.Board.ReadAnalogReaderResponse readAnalogReader(com.viam.component.board.v1.Board.ReadAnalogReaderRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getReadAnalogReaderMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * WriteAnalog writes the value to the analog writer of the board.
+     * </pre>
+     */
+    public com.viam.component.board.v1.Board.WriteAnalogResponse writeAnalog(com.viam.component.board.v1.Board.WriteAnalogRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getWriteAnalogMethod(), getCallOptions(), request);
     }
 
     /**
@@ -712,14 +890,36 @@ public final class BoardServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetDigitalInterruptValueMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * `SetPowerMode` sets the power consumption mode of the board to the requested setting for the given duration.
+     * </pre>
+     */
+    public com.viam.component.board.v1.Board.SetPowerModeResponse setPowerMode(com.viam.component.board.v1.Board.SetPowerModeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetPowerModeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration.
+     * </pre>
+     */
+    public com.viam.common.v1.Common.GetGeometriesResponse getGeometries(com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetGeometriesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service BoardService.
    * <pre>
    * BoardService services all Boards associated with a robot
    * </pre>
    */
-  public static final class BoardServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BoardServiceFutureStub> {
+  public static final class BoardServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<BoardServiceFutureStub> {
     private BoardServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -804,6 +1004,17 @@ public final class BoardServiceGrpc {
 
     /**
      * <pre>
+     * DoCommand sends/receives arbitrary commands
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.DoCommandResponse> doCommand(
+        com.viam.common.v1.Common.DoCommandRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDoCommandMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * ReadAnalogReader reads off the current value of an analog reader of a board of the underlying robot.
      * </pre>
      */
@@ -811,6 +1022,17 @@ public final class BoardServiceGrpc {
         com.viam.component.board.v1.Board.ReadAnalogReaderRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getReadAnalogReaderMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * WriteAnalog writes the value to the analog writer of the board.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.board.v1.Board.WriteAnalogResponse> writeAnalog(
+        com.viam.component.board.v1.Board.WriteAnalogRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getWriteAnalogMethod(), getCallOptions()), request);
     }
 
     /**
@@ -823,6 +1045,28 @@ public final class BoardServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetDigitalInterruptValueMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * `SetPowerMode` sets the power consumption mode of the board to the requested setting for the given duration.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.component.board.v1.Board.SetPowerModeResponse> setPowerMode(
+        com.viam.component.board.v1.Board.SetPowerModeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetPowerModeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * GetGeometries returns the geometries of the component in their current configuration.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.common.v1.Common.GetGeometriesResponse> getGeometries(
+        com.viam.common.v1.Common.GetGeometriesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetGeometriesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_STATUS = 0;
@@ -832,18 +1076,22 @@ public final class BoardServiceGrpc {
   private static final int METHODID_SET_PWM = 4;
   private static final int METHODID_PWMFREQUENCY = 5;
   private static final int METHODID_SET_PWMFREQUENCY = 6;
-  private static final int METHODID_READ_ANALOG_READER = 7;
-  private static final int METHODID_GET_DIGITAL_INTERRUPT_VALUE = 8;
+  private static final int METHODID_DO_COMMAND = 7;
+  private static final int METHODID_READ_ANALOG_READER = 8;
+  private static final int METHODID_WRITE_ANALOG = 9;
+  private static final int METHODID_GET_DIGITAL_INTERRUPT_VALUE = 10;
+  private static final int METHODID_SET_POWER_MODE = 11;
+  private static final int METHODID_GET_GEOMETRIES = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final BoardServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(BoardServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -880,13 +1128,29 @@ public final class BoardServiceGrpc {
           serviceImpl.setPWMFrequency((com.viam.component.board.v1.Board.SetPWMFrequencyRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.SetPWMFrequencyResponse>) responseObserver);
           break;
+        case METHODID_DO_COMMAND:
+          serviceImpl.doCommand((com.viam.common.v1.Common.DoCommandRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.DoCommandResponse>) responseObserver);
+          break;
         case METHODID_READ_ANALOG_READER:
           serviceImpl.readAnalogReader((com.viam.component.board.v1.Board.ReadAnalogReaderRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.ReadAnalogReaderResponse>) responseObserver);
           break;
+        case METHODID_WRITE_ANALOG:
+          serviceImpl.writeAnalog((com.viam.component.board.v1.Board.WriteAnalogRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.WriteAnalogResponse>) responseObserver);
+          break;
         case METHODID_GET_DIGITAL_INTERRUPT_VALUE:
           serviceImpl.getDigitalInterruptValue((com.viam.component.board.v1.Board.GetDigitalInterruptValueRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.GetDigitalInterruptValueResponse>) responseObserver);
+          break;
+        case METHODID_SET_POWER_MODE:
+          serviceImpl.setPowerMode((com.viam.component.board.v1.Board.SetPowerModeRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.SetPowerModeResponse>) responseObserver);
+          break;
+        case METHODID_GET_GEOMETRIES:
+          serviceImpl.getGeometries((com.viam.common.v1.Common.GetGeometriesRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.common.v1.Common.GetGeometriesResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -902,6 +1166,102 @@ public final class BoardServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.board.v1.Board.StatusRequest,
+              com.viam.component.board.v1.Board.StatusResponse>(
+                service, METHODID_STATUS)))
+        .addMethod(
+          getSetGPIOMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.board.v1.Board.SetGPIORequest,
+              com.viam.component.board.v1.Board.SetGPIOResponse>(
+                service, METHODID_SET_GPIO)))
+        .addMethod(
+          getGetGPIOMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.board.v1.Board.GetGPIORequest,
+              com.viam.component.board.v1.Board.GetGPIOResponse>(
+                service, METHODID_GET_GPIO)))
+        .addMethod(
+          getPWMMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.board.v1.Board.PWMRequest,
+              com.viam.component.board.v1.Board.PWMResponse>(
+                service, METHODID_PWM)))
+        .addMethod(
+          getSetPWMMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.board.v1.Board.SetPWMRequest,
+              com.viam.component.board.v1.Board.SetPWMResponse>(
+                service, METHODID_SET_PWM)))
+        .addMethod(
+          getPWMFrequencyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.board.v1.Board.PWMFrequencyRequest,
+              com.viam.component.board.v1.Board.PWMFrequencyResponse>(
+                service, METHODID_PWMFREQUENCY)))
+        .addMethod(
+          getSetPWMFrequencyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.board.v1.Board.SetPWMFrequencyRequest,
+              com.viam.component.board.v1.Board.SetPWMFrequencyResponse>(
+                service, METHODID_SET_PWMFREQUENCY)))
+        .addMethod(
+          getDoCommandMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.DoCommandRequest,
+              com.viam.common.v1.Common.DoCommandResponse>(
+                service, METHODID_DO_COMMAND)))
+        .addMethod(
+          getReadAnalogReaderMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.board.v1.Board.ReadAnalogReaderRequest,
+              com.viam.component.board.v1.Board.ReadAnalogReaderResponse>(
+                service, METHODID_READ_ANALOG_READER)))
+        .addMethod(
+          getWriteAnalogMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.board.v1.Board.WriteAnalogRequest,
+              com.viam.component.board.v1.Board.WriteAnalogResponse>(
+                service, METHODID_WRITE_ANALOG)))
+        .addMethod(
+          getGetDigitalInterruptValueMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.board.v1.Board.GetDigitalInterruptValueRequest,
+              com.viam.component.board.v1.Board.GetDigitalInterruptValueResponse>(
+                service, METHODID_GET_DIGITAL_INTERRUPT_VALUE)))
+        .addMethod(
+          getSetPowerModeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.board.v1.Board.SetPowerModeRequest,
+              com.viam.component.board.v1.Board.SetPowerModeResponse>(
+                service, METHODID_SET_POWER_MODE)))
+        .addMethod(
+          getGetGeometriesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.common.v1.Common.GetGeometriesRequest,
+              com.viam.common.v1.Common.GetGeometriesResponse>(
+                service, METHODID_GET_GEOMETRIES)))
+        .build();
   }
 
   private static abstract class BoardServiceBaseDescriptorSupplier
@@ -927,9 +1287,9 @@ public final class BoardServiceGrpc {
   private static final class BoardServiceMethodDescriptorSupplier
       extends BoardServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    BoardServiceMethodDescriptorSupplier(String methodName) {
+    BoardServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -956,8 +1316,12 @@ public final class BoardServiceGrpc {
               .addMethod(getSetPWMMethod())
               .addMethod(getPWMFrequencyMethod())
               .addMethod(getSetPWMFrequencyMethod())
+              .addMethod(getDoCommandMethod())
               .addMethod(getReadAnalogReaderMethod())
+              .addMethod(getWriteAnalogMethod())
               .addMethod(getGetDigitalInterruptValueMethod())
+              .addMethod(getSetPowerModeMethod())
+              .addMethod(getGetGeometriesMethod())
               .build();
         }
       }

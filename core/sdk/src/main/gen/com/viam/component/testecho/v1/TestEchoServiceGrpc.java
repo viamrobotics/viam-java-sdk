@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.1)",
+    value = "by gRPC proto compiler (version 1.61.1)",
     comments = "Source: component/testecho/v1/testecho.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class TestEchoServiceGrpc {
 
   private TestEchoServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "viam.component.testecho.v1.TestEchoService";
+  public static final java.lang.String SERVICE_NAME = "viam.component.testecho.v1.TestEchoService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.viam.component.testecho.v1.Testecho.EchoRequest,
@@ -185,73 +185,53 @@ public final class TestEchoServiceGrpc {
 
   /**
    */
-  public static abstract class TestEchoServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void echo(com.viam.component.testecho.v1.Testecho.EchoRequest request,
+    default void echo(com.viam.component.testecho.v1.Testecho.EchoRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.testecho.v1.Testecho.EchoResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEchoMethod(), responseObserver);
     }
 
     /**
      */
-    public void echoMultiple(com.viam.component.testecho.v1.Testecho.EchoMultipleRequest request,
+    default void echoMultiple(com.viam.component.testecho.v1.Testecho.EchoMultipleRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.testecho.v1.Testecho.EchoMultipleResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEchoMultipleMethod(), responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.viam.component.testecho.v1.Testecho.EchoBiDiRequest> echoBiDi(
+    default io.grpc.stub.StreamObserver<com.viam.component.testecho.v1.Testecho.EchoBiDiRequest> echoBiDi(
         io.grpc.stub.StreamObserver<com.viam.component.testecho.v1.Testecho.EchoBiDiResponse> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getEchoBiDiMethod(), responseObserver);
     }
 
     /**
      */
-    public void stop(com.viam.component.testecho.v1.Testecho.StopRequest request,
+    default void stop(com.viam.component.testecho.v1.Testecho.StopRequest request,
         io.grpc.stub.StreamObserver<com.viam.component.testecho.v1.Testecho.StopResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getEchoMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.testecho.v1.Testecho.EchoRequest,
-                com.viam.component.testecho.v1.Testecho.EchoResponse>(
-                  this, METHODID_ECHO)))
-          .addMethod(
-            getEchoMultipleMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.viam.component.testecho.v1.Testecho.EchoMultipleRequest,
-                com.viam.component.testecho.v1.Testecho.EchoMultipleResponse>(
-                  this, METHODID_ECHO_MULTIPLE)))
-          .addMethod(
-            getEchoBiDiMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                com.viam.component.testecho.v1.Testecho.EchoBiDiRequest,
-                com.viam.component.testecho.v1.Testecho.EchoBiDiResponse>(
-                  this, METHODID_ECHO_BI_DI)))
-          .addMethod(
-            getStopMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.viam.component.testecho.v1.Testecho.StopRequest,
-                com.viam.component.testecho.v1.Testecho.StopResponse>(
-                  this, METHODID_STOP)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service TestEchoService.
    */
-  public static final class TestEchoServiceStub extends io.grpc.stub.AbstractAsyncStub<TestEchoServiceStub> {
+  public static abstract class TestEchoServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return TestEchoServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service TestEchoService.
+   */
+  public static final class TestEchoServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<TestEchoServiceStub> {
     private TestEchoServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -297,8 +277,10 @@ public final class TestEchoServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service TestEchoService.
    */
-  public static final class TestEchoServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TestEchoServiceBlockingStub> {
+  public static final class TestEchoServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<TestEchoServiceBlockingStub> {
     private TestEchoServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -334,8 +316,10 @@ public final class TestEchoServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service TestEchoService.
    */
-  public static final class TestEchoServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TestEchoServiceFutureStub> {
+  public static final class TestEchoServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<TestEchoServiceFutureStub> {
     private TestEchoServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -374,10 +358,10 @@ public final class TestEchoServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final TestEchoServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(TestEchoServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -417,6 +401,39 @@ public final class TestEchoServiceGrpc {
     }
   }
 
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getEchoMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.testecho.v1.Testecho.EchoRequest,
+              com.viam.component.testecho.v1.Testecho.EchoResponse>(
+                service, METHODID_ECHO)))
+        .addMethod(
+          getEchoMultipleMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.viam.component.testecho.v1.Testecho.EchoMultipleRequest,
+              com.viam.component.testecho.v1.Testecho.EchoMultipleResponse>(
+                service, METHODID_ECHO_MULTIPLE)))
+        .addMethod(
+          getEchoBiDiMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              com.viam.component.testecho.v1.Testecho.EchoBiDiRequest,
+              com.viam.component.testecho.v1.Testecho.EchoBiDiResponse>(
+                service, METHODID_ECHO_BI_DI)))
+        .addMethod(
+          getStopMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.component.testecho.v1.Testecho.StopRequest,
+              com.viam.component.testecho.v1.Testecho.StopResponse>(
+                service, METHODID_STOP)))
+        .build();
+  }
+
   private static abstract class TestEchoServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     TestEchoServiceBaseDescriptorSupplier() {}
@@ -440,9 +457,9 @@ public final class TestEchoServiceGrpc {
   private static final class TestEchoServiceMethodDescriptorSupplier
       extends TestEchoServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    TestEchoServiceMethodDescriptorSupplier(String methodName) {
+    TestEchoServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
