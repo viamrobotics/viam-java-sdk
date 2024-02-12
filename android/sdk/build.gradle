@@ -11,8 +11,8 @@ buildscript {
 
 
 android {
-    compileSdkVersion target_api
     defaultConfig {
+        compileSdk target_api
         minSdkVersion min_api
         targetSdkVersion target_api
     }
@@ -23,9 +23,11 @@ android {
     }
 
     publishing {
-        singleVariant('release') {
-            withSourcesJar()
+        multipleVariants {
+            allVariants()
+            withJavadocJar()
         }
+
     }
 
     namespace 'com.viam.sdk.android'
@@ -34,5 +36,7 @@ android {
 dependencies {
     api project(':core:viam-core-sdk')
     api 'org.jitsi:webrtc:118.0.0'
-    implementation 'io.grpc:grpc-okhttp:1.61.0'
+
+    implementation 'io.grpc:grpc-okhttp:1.61.1'
+    implementation 'io.grpc:grpc-android:1.61.1'
 }

@@ -1,0 +1,18 @@
+plugins {
+    id 'groovy-gradle-plugin'
+    id "com.gradle.plugin-publish" version "1.2.1"
+}
+
+gradlePlugin {
+    plugins {
+        androidModulePlugin {
+            id = 'com.viam.sdk.android.module'
+            implementationClass = 'com.viam.sdk.android.module.AndroidModulePlugin'
+        }
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}

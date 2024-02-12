@@ -49,7 +49,6 @@ subprojects {
 
     afterEvaluate { project ->
         if (project.plugins.hasPlugin("java")) {
-
             compileTestJava {
                 sourceCompatibility = JavaVersion.VERSION_11
                 targetCompatibility = JavaVersion.VERSION_11
@@ -80,16 +79,43 @@ subprojects {
 
             publishing {
                 publications {
+                    if (project.plugins.hasPlugin("groovy-gradle-plugin")) {
+                        pluginMaven(MavenPublication) {
+                            pom.withXml {
+                                def root = asNode()
+                                def displayName = project.properties.get("pomDisplayName", project.name)
+                                root.appendNode('name', "Viam Java/Android SDK - $displayName")
+                                root.appendNode('description', "Viam Java/Android SDK - $displayName")
+                                root.children().last() + pomConfig
+                            }
+                        }
+                    } else {
+                        maven(MavenPublication) {
+                            from components.java
+                            artifact sourcesJar
+                            artifact javadocJar
+                            pom.withXml {
+                                def root = asNode()
+                                def displayName = project.properties.get("pomDisplayName", project.name)
+                                root.appendNode('name', "Viam Java/Android SDK - $displayName")
+                                root.appendNode('description', "Viam Java/Android SDK - $displayName")
+                                root.children().last() + pomConfig
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (project.plugins.hasPlugin("com.android.library")) {
+            publishing {
+                publications {
                     maven(MavenPublication) {
-                        from components.java
-                        artifact sourcesJar
-                        artifact javadocJar
-                        pom.withXml {
-                            def root = asNode()
-                            def displayName = project.properties.get("pomDisplayName", project.name)
-                            root.appendNode('name', "Viam Java/Android SDK - $displayName")
-                            root.appendNode('description', "Viam Java/Android SDK - $displayName")
-                            root.children().last() + pomConfig
+                        groupId = groupId
+                        artifactId = project.name
+                        version = version
+
+                        afterEvaluate {
+                            from components.default
                         }
                     }
                 }

@@ -4,6 +4,8 @@ import com.viam.common.v1.Common;
 import com.viam.robot.v1.Robot;
 import com.viam.robot.v1.RobotServiceGrpc;
 import io.grpc.ServerBuilder;
+import io.grpc.Status;
+import io.grpc.protobuf.services.ProtoReflectionService;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -17,7 +19,9 @@ public class Example1Server {
 
         final Logger logger = Logger.getAnonymousLogger();
         logger.info(String.format("Serving on localhost:%d", port));
-        final io.grpc.Server server = ServerBuilder.forPort(port).addService(new RobotService()).build();
+        final io.grpc.Server server = ServerBuilder.forPort(port).
+                addService(ProtoReflectionService.newInstance()).
+                addService(new RobotService()).build();
         try {
             server.start();
             server.awaitTermination();

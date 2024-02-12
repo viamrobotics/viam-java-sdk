@@ -80,7 +80,6 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
             @Override
             public void applyRequestMetadata(RequestInfo requestInfo, Executor appExecutor, MetadataApplier applier) {
                 if (accessToken.get().isEmpty()) {
-                    // TODO(erd): can use same channel in pure java and android?
                     ManagedChannelBuilder<?> channelBuilder = ManagedChannelBuilder.forTarget(address);
                     if (opts.insecure) {
                         channelBuilder = channelBuilder.usePlaintext();
@@ -432,7 +431,6 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                             });
                         }
 
-                        // TODO(erd): probably make async
                         try {
                             createDone.get();
                         } catch (ExecutionException | InterruptedException e) {

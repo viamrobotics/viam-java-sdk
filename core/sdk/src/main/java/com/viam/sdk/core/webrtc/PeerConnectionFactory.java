@@ -32,7 +32,6 @@ public abstract class PeerConnectionFactory<MediaStreamT> {
 
 
         final CompletableFuture<Void> done = new CompletableFuture<>();
-        // TODO(erd): resolve use of observer here
         if (disableTrickle) {
             throw new IllegalStateException("cannot provide connection observer and disable trickle");
         }
@@ -64,7 +63,6 @@ public abstract class PeerConnectionFactory<MediaStreamT> {
 
                 final JSONObject remoteSDPObj;
                 try {
-                    // TODO(erd): may need to abstract out base64...
                     remoteSDPObj = new JSONObject(new String(Base64.getDecoder().decode(data)));
                 } catch (JSONException e) {
                     e.printStackTrace();
