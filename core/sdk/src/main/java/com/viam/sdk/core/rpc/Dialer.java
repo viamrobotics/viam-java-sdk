@@ -5,6 +5,8 @@ import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.rpc.Code;
 import com.google.rpc.Status;
+import com.viam.sdk.core.robot.RobotClient;
+import com.viam.sdk.core.robot.RobotClient.Options;
 import com.viam.sdk.core.webrtc.ClientChannel;
 import com.viam.sdk.core.webrtc.DataChannel;
 import com.viam.sdk.core.webrtc.DialWebRTCOptions;
@@ -17,6 +19,7 @@ import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.Metadata;
 import io.grpc.stub.MetadataUtils;
+import java.io.Closeable;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -39,12 +42,40 @@ import proto.rpc.v1.AuthServiceGrpc;
 import proto.rpc.webrtc.v1.Signaling;
 import proto.rpc.webrtc.v1.SignalingServiceGrpc;
 
-public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<MediaStreamT>> {
+public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<MediaStreamT>> implements
+    Closeable {
 
   private final T peerConnectionFactory;
 
   protected Dialer(final T peerConnectionFactory) {
     this.peerConnectionFactory = peerConnectionFactory;
+  }
+
+  public CompletableFuture<RobotClient> dialWebRTC(
+      final String host,
+      Options<MediaStreamT> options
+  ) {
+    final String signalingServerAddress;
+    if (options == null) {
+      options = new Options.Builder<MediaStreamT>().build();
+    }
+    if (options.getDialOptions() != null && options.getDialOptions().webrtcOptions != null
+        && options.getDialOptions().webrtcOptions.signalingServerAddress != null) {
+      signalingServerAddress = options.getDialOptions().webrtcOptions.signalingServerAddress;
+    } else {
+      signalingServerAddress = host;
+    }
+    final Options<MediaStreamT> finalOpts = options;
+    return dialWebRTCInternal(signalingServerAddress, host, options.getDialOptions())
+        .thenApplyAsync((chan) -> new RobotClient(chan, finalOpts));
+  }
+
+  public RobotClient dialDirectGRPC(
+      final String host,
+      final Options<MediaStreamT> options
+  ) {
+    final Channel chan = dialDirectGRPCInternal(host, options.getDialOptions());
+    return new RobotClient(chan, options);
   }
 
   public static ICECandidate iceCandidateFromProto(final Signaling.ICECandidate i) {
@@ -67,9 +98,9 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
     return peerConnectionFactory;
   }
 
-  public Channel dialDirectGRPC(
+  public Channel dialDirectGRPCInternal(
       final String address,
-      final DialOptions opts) {
+      final DialOptions<MediaStreamT> opts) {
 
     ManagedChannelBuilder<?> channelBuilder = ManagedChannelBuilder.forTarget(address);
     if (opts != null && opts.insecure) {
@@ -125,27 +156,26 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
     return new BasicManagedChannel(channel, callCreds);
   }
 
-  public abstract CompletableFuture<Channel> dialWebRTC(
+  public abstract CompletableFuture<Channel> dialWebRTCInternal(
       final String signalingAddress,
       final String host,
-      final DialOptions opts);
+      final DialOptions<MediaStreamT> opts);
 
   public CompletableFuture<Channel> dialWebRTC(
       final String signalingAddress,
       final String host,
-      final DialOptions opts,
+      final DialOptions<MediaStreamT> opts,
       final Executor executor,
-      final PeerConnection.MediaStreamObserver<MediaStreamT> mediaStreamObserver,
       final Logger logger
   ) {
     final Metadata md = new Metadata();
     md.put(Metadata.Key.of("rpc-host", Metadata.ASCII_STRING_MARSHALLER), host);
 
-    final DialOptions optsCopy = opts.clone();
+    final DialOptions<MediaStreamT> optsCopy = opts.clone();
 
     optsCopy.insecure = opts.webrtcOptions != null && opts.webrtcOptions.signalingInsecure;
     if (optsCopy.webrtcOptions == null) {
-      optsCopy.webrtcOptions = new DialWebRTCOptions();
+      optsCopy.webrtcOptions = new DialWebRTCOptions<>();
     }
     optsCopy.webrtcOptions.signalingServerAddress = signalingAddress;
     if (opts.webrtcOptions != null) {
@@ -376,40 +406,40 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
           @Override
           public void onAddStream(final MediaStreamT mediaStream) {
             logger.fine("onAddStream: " + mediaStream);
-            if (mediaStreamObserver != null) {
-              mediaStreamObserver.onAddStream(mediaStream);
+            if (optsCopy.webrtcOptions.mediaStreamObserver != null) {
+              optsCopy.webrtcOptions.mediaStreamObserver.onAddStream(mediaStream);
             }
           }
 
           @Override
           public void onRemoveStream(final MediaStreamT mediaStream) {
             logger.fine("onRemoveStream: " + mediaStream);
-            if (mediaStreamObserver != null) {
-              mediaStreamObserver.onRemoveStream(mediaStream);
+            if (optsCopy.webrtcOptions.mediaStreamObserver != null) {
+              optsCopy.webrtcOptions.mediaStreamObserver.onRemoveStream(mediaStream);
             }
           }
 
           @Override
           public void onAddTrack() {
             logger.fine("onAddTrack");
-            if (mediaStreamObserver != null) {
-              mediaStreamObserver.onAddTrack();
+            if (optsCopy.webrtcOptions.mediaStreamObserver != null) {
+              optsCopy.webrtcOptions.mediaStreamObserver.onAddTrack();
             }
           }
 
           @Override
           public void onRemoveTrack() {
             logger.fine("onRemoveTrack");
-            if (mediaStreamObserver != null) {
-              mediaStreamObserver.onRemoveTrack();
+            if (optsCopy.webrtcOptions.mediaStreamObserver != null) {
+              optsCopy.webrtcOptions.mediaStreamObserver.onRemoveTrack();
             }
           }
 
           @Override
           public void onTrack() {
             logger.fine("onTrack");
-            if (mediaStreamObserver != null) {
-              mediaStreamObserver.onTrack();
+            if (optsCopy.webrtcOptions.mediaStreamObserver != null) {
+              optsCopy.webrtcOptions.mediaStreamObserver.onTrack();
             }
           }
         };

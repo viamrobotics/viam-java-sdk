@@ -3,6 +3,8 @@ package com.viam.sdk.android.module;
 import android.net.LocalSocketAddress;
 import com.viam.sdk.core.module.BaseModule;
 import com.viam.sdk.core.robot.RobotClient;
+import com.viam.sdk.core.robot.RobotClient.Options;
+import com.viam.sdk.core.rpc.BasicManagedChannel;
 import io.grpc.ManagedChannel;
 import io.grpc.ServerBuilder;
 import io.grpc.android.UdsChannelBuilder;
@@ -26,7 +28,8 @@ public class Module extends BaseModule {
   protected void setParentAddress(final String parentAddress) {
     final ManagedChannel chan = UdsChannelBuilder.forPath(parentAddress,
         LocalSocketAddress.Namespace.FILESYSTEM).build();
-    parent = new RobotClient(chan);
+    parent = new RobotClient(new BasicManagedChannel(chan),
+        new Options.Builder().setLogLevel(getLogLevel()).build());
   }
 
   @Override

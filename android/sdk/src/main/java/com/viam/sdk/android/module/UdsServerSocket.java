@@ -8,17 +8,15 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketAddress;
-import java.net.SocketException;
 import java.nio.channels.ServerSocketChannel;
 
-@SuppressWarnings("UnsynchronizedOverridesSynchronized") // Rely on LocalSocket's synchronization
 class UdsServerSocket extends ServerSocket {
 
   private final LocalServerSocket localSocket;
   private boolean closed;
 
-  // TODO(erd): -1 default okay?
   private int recvBufferSize = -1;
+  private Integer timeout = null;
 
   public UdsServerSocket(LocalSocketAddress localSocketAddress) throws IOException {
     final LocalSocket sock = new LocalSocket();
@@ -29,6 +27,11 @@ class UdsServerSocket extends ServerSocket {
   @Override
   public Socket accept() throws IOException {
     final LocalSocket socket = localSocket.accept();
+    synchronized (this) {
+      if (timeout != null) {
+        socket.setSoTimeout(timeout);
+      }
+    }
     return new UdsSocket(socket);
   }
 
@@ -47,7 +50,6 @@ class UdsServerSocket extends ServerSocket {
     if (closed) {
       return;
     }
-    //TODO(erd): more to do?
     localSocket.close();
     closed = true;
   }
@@ -74,12 +76,12 @@ class UdsServerSocket extends ServerSocket {
   }
 
   @Override
-  public synchronized int getReceiveBufferSize() throws SocketException {
+  public synchronized int getReceiveBufferSize() {
     return recvBufferSize;
   }
 
   @Override
-  public synchronized void setReceiveBufferSize(int size) throws SocketException {
+  public synchronized void setReceiveBufferSize(int size) {
     recvBufferSize = size;
   }
 
@@ -89,21 +91,18 @@ class UdsServerSocket extends ServerSocket {
   }
 
   @Override
-  public void setReuseAddress(boolean on) throws SocketException {
-    // TODO(erd): maybe noop
+  public void setReuseAddress(boolean on) {
     throw new UnsupportedOperationException("Unsupported operation setReuseAddress()");
   }
 
   @Override
-  public synchronized int getSoTimeout() throws IOException {
-    // TODO(erd): -1 okay?
+  public synchronized int getSoTimeout() {
     return -1;
   }
 
   @Override
-  public synchronized void setSoTimeout(int timeout) throws SocketException {
-    // TODO(erd): maybe impl for passing on accept
-    // no-op
+  public synchronized void setSoTimeout(int timeout) {
+    this.timeout = timeout;
   }
 
   @Override

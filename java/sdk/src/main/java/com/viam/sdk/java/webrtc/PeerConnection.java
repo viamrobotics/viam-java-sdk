@@ -1,4 +1,4 @@
-package com.viam.sdk.java;
+package com.viam.sdk.java.webrtc;
 
 import com.viam.sdk.core.webrtc.ICECandidate;
 import com.viam.sdk.core.webrtc.SessionDescription;

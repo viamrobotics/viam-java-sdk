@@ -3,22 +3,22 @@ package com.viam.sdk.core.rpc;
 import com.viam.sdk.core.webrtc.DialWebRTCOptions;
 import proto.rpc.v1.Auth.Credentials;
 
-public class DialOptions {
+public class DialOptions<MediaStreamT> {
 
   public boolean insecure;
   public String authEntity;
   public Credentials credentials;
-  public DialWebRTCOptions webrtcOptions;
+  public DialWebRTCOptions<MediaStreamT> webrtcOptions;
   public String externalAuthAddress;
   public String externalAuthToEntity;
   public boolean externalAuthInsecure;
   public String authority;
 
-  public DialOptions clone() {
+  public DialOptions<MediaStreamT> clone() {
     try {
-      return (DialOptions) super.clone();
+      return (DialOptions<MediaStreamT>) super.clone();
     } catch (CloneNotSupportedException e) {
-      final DialOptions opts = new DialOptions();
+      final DialOptions<MediaStreamT> opts = new DialOptions<>();
       opts.insecure = this.insecure;
       opts.authEntity = this.authEntity;
       opts.credentials = this.credentials;

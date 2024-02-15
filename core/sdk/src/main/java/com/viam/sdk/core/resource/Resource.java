@@ -6,6 +6,7 @@ import com.viam.common.v1.Common;
 import com.viam.robot.v1.Robot.Status;
 import com.viam.sdk.core.exception.MethodNotImplementedException;
 import java.util.Map;
+import java.util.Optional;
 import viam.app.v1.Robot.ComponentConfig;
 
 public abstract class Resource {
@@ -52,7 +53,7 @@ public abstract class Resource {
 
   public interface Stoppable {
 
-    void stop();
+    void stop(final Optional<Struct> extra);
   }
 
   public interface Reconfigurable {

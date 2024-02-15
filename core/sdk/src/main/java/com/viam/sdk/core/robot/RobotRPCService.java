@@ -16,6 +16,8 @@ import com.viam.robot.v1.Robot.StopExtraParameters;
 import com.viam.robot.v1.Robot.StreamStatusRequest;
 import com.viam.robot.v1.Robot.StreamStatusResponse;
 import com.viam.robot.v1.RobotServiceGrpc.RobotServiceImplBase;
+import com.viam.sdk.core.component.movementsensor.MovementSensor;
+import com.viam.sdk.core.component.sensor.Sensor;
 import com.viam.sdk.core.exception.ResourceNotFoundException;
 import com.viam.sdk.core.resource.Registry;
 import com.viam.sdk.core.resource.Resource;
@@ -31,7 +33,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class RobotRPCService extends RobotServiceImplBase {
 
@@ -46,9 +50,13 @@ public class RobotRPCService extends RobotServiceImplBase {
       final ResourceNamesRequest request,
       final StreamObserver<ResourceNamesResponse> responseObserver
   ) {
-    // TODO(erd): movement sensor logic?
     responseObserver.onNext(ResourceNamesResponse.newBuilder()
-        .addAllResources(manager.resourceNames())
+        .addAllResources(manager.resourceNames().stream()
+            // If the resource is a MovementSensor, DO NOT include Sensor as well
+            // (it will get added via MovementSensor)
+            .filter(name -> !(name.getSubtype().equals(Sensor.SUBTYPE.getResourceSubtype())
+                && manager.isManaging(MovementSensor.named(name.getName()))))
+            .collect(Collectors.toList()))
         .build());
     responseObserver.onCompleted();
   }
@@ -150,8 +158,7 @@ public class RobotRPCService extends RobotServiceImplBase {
 
       if (res instanceof Stoppable) {
         try {
-          // TODO(erd): process extra
-          ((Stoppable) res).stop();
+          ((Stoppable) res).stop(Optional.ofNullable(extras.get(res.getName())));
         } catch (final Throwable t) {
           failed.add(name.getName());
         }

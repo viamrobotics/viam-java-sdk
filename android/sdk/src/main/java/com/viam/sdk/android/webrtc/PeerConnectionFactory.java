@@ -1,4 +1,4 @@
-package com.viam.sdk.android;
+package com.viam.sdk.android.webrtc;
 
 import static com.viam.sdk.core.webrtc.PeerConnection.ICEConnectionState.CHECKING;
 import static com.viam.sdk.core.webrtc.PeerConnection.ICEConnectionState.COMPLETED;
@@ -204,7 +204,7 @@ public class PeerConnectionFactory extends
 
       @Override
       public void onDataChannel(final DataChannel dataChannel) {
-        observer.onDataChannel(new com.viam.sdk.android.DataChannel(dataChannel));
+        observer.onDataChannel(new com.viam.sdk.android.webrtc.DataChannel(dataChannel));
       }
 
       @Override

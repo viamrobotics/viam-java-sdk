@@ -2,11 +2,15 @@ package com.viam.sdk.core.component.gripper;
 
 import com.google.protobuf.Struct;
 import com.viam.common.v1.Common;
+import com.viam.common.v1.Common.Geometry;
+import com.viam.common.v1.Common.GetGeometriesResponse;
 import com.viam.component.gripper.v1.Gripper;
 import com.viam.component.gripper.v1.GripperServiceGrpc;
 import com.viam.sdk.core.resource.ResourceManager;
 import com.viam.sdk.core.resource.ResourceRPCService;
 import io.grpc.stub.StreamObserver;
+import java.util.List;
+import java.util.Optional;
 
 public class GripperRPCService extends GripperServiceGrpc.GripperServiceImplBase implements
     ResourceRPCService<com.viam.sdk.core.component.gripper.Gripper> {
@@ -22,7 +26,7 @@ public class GripperRPCService extends GripperServiceGrpc.GripperServiceImplBase
       StreamObserver<Gripper.OpenResponse> responseObserver) {
     final com.viam.sdk.core.component.gripper.Gripper gripper = getResource(
         com.viam.sdk.core.component.gripper.Gripper.named(request.getName()));
-    gripper.open();
+    gripper.open(Optional.of(request.getExtra()));
     responseObserver.onNext(Gripper.OpenResponse.newBuilder().build());
     responseObserver.onCompleted();
   }
@@ -32,7 +36,7 @@ public class GripperRPCService extends GripperServiceGrpc.GripperServiceImplBase
       StreamObserver<Gripper.GrabResponse> responseObserver) {
     final com.viam.sdk.core.component.gripper.Gripper gripper = getResource(
         com.viam.sdk.core.component.gripper.Gripper.named(request.getName()));
-    final boolean success = gripper.grab();
+    final boolean success = gripper.grab(Optional.of(request.getExtra()));
     responseObserver.onNext(Gripper.GrabResponse.newBuilder().setSuccess(success).build());
     responseObserver.onCompleted();
   }
@@ -42,7 +46,7 @@ public class GripperRPCService extends GripperServiceGrpc.GripperServiceImplBase
       StreamObserver<Gripper.StopResponse> responseObserver) {
     final com.viam.sdk.core.component.gripper.Gripper gripper = getResource(
         com.viam.sdk.core.component.gripper.Gripper.named(request.getName()));
-    gripper.stop();
+    gripper.stop(Optional.of(request.getExtra()));
     responseObserver.onNext(Gripper.StopResponse.newBuilder().build());
     responseObserver.onCompleted();
   }
@@ -70,7 +74,11 @@ public class GripperRPCService extends GripperServiceGrpc.GripperServiceImplBase
   @Override
   public void getGeometries(Common.GetGeometriesRequest request,
       StreamObserver<Common.GetGeometriesResponse> responseObserver) {
-    super.getGeometries(request, responseObserver);
+    final com.viam.sdk.core.component.gripper.Gripper gripper = getResource(
+        com.viam.sdk.core.component.gripper.Gripper.named(request.getName()));
+    final List<Geometry> result = gripper.getGeometries(Optional.of(request.getExtra()));
+    responseObserver.onNext(GetGeometriesResponse.newBuilder().addAllGeometries(result).build());
+    responseObserver.onCompleted();
   }
 
   @Override

@@ -1,6 +1,7 @@
 package com.viam.sdk.core.resource;
 
 import com.viam.sdk.core.rpc.Channel;
+import java.util.Optional;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
@@ -17,7 +18,6 @@ public class ResourceRegistration<ResourceT extends Resource> {
   private final Function<ResourceManager, ResourceRPCService<ResourceT>> createRPCService;
   private final BiFunction<String, Channel, ResourceT> createRPCClient;
 
-  // TODO(erd): createStatus
   public ResourceRegistration(
       final Subtype subtype,
       final String protoServiceName,
@@ -30,8 +30,19 @@ public class ResourceRegistration<ResourceT extends Resource> {
     this.createRPCClient = createRPCClient;
   }
 
-  public Function<ResourceManager, ResourceRPCService<ResourceT>> getCreateRPCService() {
-    return createRPCService;
+  public ResourceRegistration(
+      final Subtype subtype,
+      final String protoServiceName,
+      final BiFunction<String, Channel, ResourceT> createRPCClient
+  ) {
+    this.subtype = subtype;
+    this.protoServiceName = protoServiceName;
+    this.createRPCService = null;
+    this.createRPCClient = createRPCClient;
+  }
+
+  public Optional<Function<ResourceManager, ResourceRPCService<ResourceT>>> getCreateRPCService() {
+    return Optional.ofNullable(createRPCService);
   }
 
   public BiFunction<String, Channel, ResourceT> getCreateRPCClient() {

@@ -11,6 +11,7 @@ import com.viam.sdk.core.component.Component;
 import com.viam.sdk.core.resource.Resource;
 import com.viam.sdk.core.resource.Subtype;
 import com.viam.sdk.core.robot.RobotClient;
+import java.util.Optional;
 
 public abstract class Gripper extends Component {
 
@@ -48,19 +49,19 @@ public abstract class Gripper extends Component {
   /**
    * Open the gripper.
    */
-  public abstract void open();
+  public abstract void open(final Optional<Struct> extra);
 
   /**
    * Instruct the gripper to grab.
    *
    * @return Indicates if the gripper grabbed something.
    */
-  public abstract boolean grab();
+  public abstract boolean grab(final Optional<Struct> extra);
 
   /**
    * Stop the gripper. It is assumed the gripper stops immediately.
    */
-  public abstract void stop();
+  public abstract void stop(final Optional<Struct> extra);
 
   /**
    * Get if the gripper is currently moving.

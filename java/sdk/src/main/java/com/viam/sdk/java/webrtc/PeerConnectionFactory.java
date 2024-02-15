@@ -1,4 +1,4 @@
-package com.viam.sdk.java;
+package com.viam.sdk.java.webrtc;
 
 import static com.viam.sdk.core.webrtc.PeerConnection.ICEConnectionState.CHECKING;
 import static com.viam.sdk.core.webrtc.PeerConnection.ICEConnectionState.COMPLETED;

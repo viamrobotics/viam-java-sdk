@@ -58,6 +58,7 @@ public abstract class BaseModule extends ModuleServiceGrpc.ModuleServiceImplBase
   protected final String address;
   private final Server server;
   private boolean isReady = true;
+  private final Level logLevel;
 
   /**
    * Create a new Module with the args provided in the command line. The first argument after the
@@ -72,7 +73,6 @@ public abstract class BaseModule extends ModuleServiceGrpc.ModuleServiceImplBase
     }
     address = args[0];
 
-    final Level logLevel;
     if (args.length == 2 && args[1].endsWith("=debug")) {
       logLevel = Level.FINE;
     } else {
@@ -87,6 +87,10 @@ public abstract class BaseModule extends ModuleServiceGrpc.ModuleServiceImplBase
     Thread.setDefaultUncaughtExceptionHandler(
         (thread, throwable) -> LOGGER.severe("[ERROR] Uncaught exception: " + throwable));
     server = new Server(Collections.emptyList(), getServerBuilder(), new ModuleRPCService(this));
+  }
+
+  protected Level getLogLevel() {
+    return logLevel;
   }
 
   abstract protected ServerBuilder<?> getServerBuilder();
@@ -167,7 +171,7 @@ public abstract class BaseModule extends ModuleServiceGrpc.ModuleServiceImplBase
       ((Reconfigurable) resource).reconfigure(config, deps);
     } else {
       if (resource instanceof Stoppable) {
-        ((Stoppable) resource).stop();
+        ((Stoppable) resource).stop(Optional.empty());
       }
       server.removeResource(name);
       this.addResource(AddResourceRequest.newBuilder()
@@ -182,7 +186,7 @@ public abstract class BaseModule extends ModuleServiceGrpc.ModuleServiceImplBase
     final Resource resource = server.getResource(Resource.class, name);
     try {
       if (resource instanceof Stoppable) {
-        ((Stoppable) resource).stop();
+        ((Stoppable) resource).stop(Optional.empty());
       }
     } finally {
       server.removeResource(name);

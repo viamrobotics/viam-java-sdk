@@ -3,7 +3,7 @@ package com.viam.sdk.core.webrtc;
 
 import proto.rpc.v1.Auth;
 
-public class DialWebRTCOptions {
+public class DialWebRTCOptions<MediaStreamT> {
 
   public boolean signalingInsecure;
   public boolean disableTrickleICE;
@@ -31,11 +31,13 @@ public class DialWebRTCOptions {
 
   public String authority;
 
-  public DialWebRTCOptions clone() {
+  public PeerConnection.MediaStreamObserver<MediaStreamT> mediaStreamObserver;
+
+  public DialWebRTCOptions<MediaStreamT> clone() {
     try {
-      return (DialWebRTCOptions) super.clone();
+      return (DialWebRTCOptions<MediaStreamT>) super.clone();
     } catch (CloneNotSupportedException e) {
-      final DialWebRTCOptions opts = new DialWebRTCOptions();
+      final DialWebRTCOptions<MediaStreamT> opts = new DialWebRTCOptions<>();
       opts.signalingInsecure = this.signalingInsecure;
       opts.disableTrickleICE = this.disableTrickleICE;
       opts.rtcConfig = this.rtcConfig;
@@ -46,6 +48,7 @@ public class DialWebRTCOptions {
       opts.signalingServerAddress = this.signalingServerAddress;
       opts.signalingExternalAuthInsecure = this.signalingExternalAuthInsecure;
       opts.authority = this.authority;
+      opts.mediaStreamObserver = this.mediaStreamObserver;
       return opts;
     }
   }

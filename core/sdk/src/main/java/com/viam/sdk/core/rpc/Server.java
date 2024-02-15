@@ -1,13 +1,5 @@
 package com.viam.sdk.core.rpc;
 
-import com.viam.component.generic.v1.GenericServiceGrpc;
-import com.viam.component.gripper.v1.GripperServiceGrpc;
-import com.viam.sdk.core.component.generic.Generic;
-import com.viam.sdk.core.component.generic.GenericRPCClient;
-import com.viam.sdk.core.component.generic.GenericRPCService;
-import com.viam.sdk.core.component.gripper.Gripper;
-import com.viam.sdk.core.component.gripper.GripperRPCClient;
-import com.viam.sdk.core.component.gripper.GripperRPCService;
 import com.viam.sdk.core.module.BaseModule;
 import com.viam.sdk.core.module.ModuleRPCService;
 import com.viam.sdk.core.resource.Registry;
@@ -15,7 +7,6 @@ import com.viam.sdk.core.resource.Resource;
 import com.viam.sdk.core.resource.ResourceManager;
 import com.viam.sdk.core.resource.ResourceRegistration;
 import com.viam.sdk.core.robot.RobotRPCService;
-import io.grpc.BindableService;
 import io.grpc.ServerBuilder;
 import io.grpc.protobuf.services.ProtoReflectionService;
 import java.io.IOException;
@@ -62,7 +53,10 @@ public class Server extends ResourceManager {
       serverBuilder.addService(moduleService);
     }
     for (final ResourceRegistration<?> registration : Registry.registeredSubtypes().values()) {
-      serverBuilder.addService((BindableService) registration.getCreateRPCService().apply(this));
+      if (!registration.getCreateRPCService().isPresent()) {
+        continue;
+      }
+      serverBuilder.addService(registration.getCreateRPCService().get().apply(this));
     }
 
     server = serverBuilder.build();
@@ -79,21 +73,5 @@ public class Server extends ResourceManager {
     } finally {
       LOGGER.fine("gRPC server closed");
     }
-  }
-
-  static {
-    // register well-known subtypes
-    Registry.registerSubtype(new ResourceRegistration<>(
-        Generic.SUBTYPE,
-        GenericServiceGrpc.SERVICE_NAME,
-        GenericRPCService::new,
-        GenericRPCClient::new
-    ));
-    Registry.registerSubtype(new ResourceRegistration<>(
-        Gripper.SUBTYPE,
-        GripperServiceGrpc.SERVICE_NAME,
-        GripperRPCService::new,
-        GripperRPCClient::new
-    ));
   }
 }

@@ -2,8 +2,26 @@ package com.viam.sdk.core.resource;
 
 import com.viam.common.v1.Common;
 import com.viam.common.v1.Common.ResourceName;
+import com.viam.component.generic.v1.GenericServiceGrpc;
+import com.viam.component.gripper.v1.GripperServiceGrpc;
+import com.viam.component.movementsensor.v1.MovementSensorServiceGrpc;
+import com.viam.sdk.core.component.generic.Generic;
+import com.viam.sdk.core.component.generic.GenericRPCClient;
+import com.viam.sdk.core.component.generic.GenericRPCService;
+import com.viam.sdk.core.component.gripper.Gripper;
+import com.viam.sdk.core.component.gripper.GripperRPCClient;
+import com.viam.sdk.core.component.gripper.GripperRPCService;
+import com.viam.sdk.core.component.movementsensor.MovementSensor;
+import com.viam.sdk.core.component.movementsensor.MovementSensorRPCClient;
+import com.viam.sdk.core.component.movementsensor.MovementSensorRPCService;
 import com.viam.sdk.core.exception.DuplicateResourceException;
 import com.viam.sdk.core.exception.ResourceNotFoundException;
+import com.viam.sdk.core.service.datamanager.DataManager;
+import com.viam.sdk.core.service.datamanager.DataManagerRPCClient;
+import com.viam.sdk.core.service.sensors.Sensors;
+import com.viam.sdk.core.service.sensors.SensorsRPCClient;
+import com.viam.service.datamanager.v1.DataManagerServiceGrpc;
+import com.viam.service.sensors.v1.SensorsServiceGrpc;
 import java.io.Closeable;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -123,5 +141,38 @@ public class ResourceManager implements Closeable {
         LOGGER.severe(String.format("Error while closing %s: %s", name, t));
       }
     }
+  }
+
+  static {
+    // register well-known subtypes
+    Registry.registerSubtype(new ResourceRegistration<>(
+        Generic.SUBTYPE,
+        GenericServiceGrpc.SERVICE_NAME,
+        GenericRPCService::new,
+        GenericRPCClient::new
+    ));
+    Registry.registerSubtype(new ResourceRegistration<>(
+        Gripper.SUBTYPE,
+        GripperServiceGrpc.SERVICE_NAME,
+        GripperRPCService::new,
+        GripperRPCClient::new
+    ));
+    Registry.registerSubtype(new ResourceRegistration<>(
+        MovementSensor.SUBTYPE,
+        MovementSensorServiceGrpc.SERVICE_NAME,
+        MovementSensorRPCService::new,
+        MovementSensorRPCClient::new
+    ));
+
+    Registry.registerSubtype(new ResourceRegistration<>(
+        Sensors.SUBTYPE,
+        SensorsServiceGrpc.SERVICE_NAME,
+        SensorsRPCClient::new
+    ));
+    Registry.registerSubtype(new ResourceRegistration<>(
+        DataManager.SUBTYPE,
+        DataManagerServiceGrpc.SERVICE_NAME,
+        DataManagerRPCClient::new
+    ));
   }
 }

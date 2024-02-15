@@ -3,6 +3,7 @@ package com.viam.sdk.core.component.gripper;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import com.viam.common.v1.Common;
+import com.viam.common.v1.Common.GetGeometriesRequest;
 import com.viam.component.gripper.v1.Gripper.GrabRequest;
 import com.viam.component.gripper.v1.Gripper.IsMovingRequest;
 import com.viam.component.gripper.v1.Gripper.OpenRequest;
@@ -11,6 +12,7 @@ import com.viam.component.gripper.v1.GripperServiceGrpc;
 import com.viam.sdk.core.rpc.Channel;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public class GripperRPCClient extends Gripper {
 
@@ -28,18 +30,27 @@ public class GripperRPCClient extends Gripper {
   }
 
   @Override
-  public void open() {
-    client.open(OpenRequest.newBuilder().setName(getName().getName()).build());
+  public void open(Optional<Struct> extra) {
+    final OpenRequest.Builder builder = OpenRequest.newBuilder().
+        setName(getName().getName());
+    extra.ifPresent(builder::setExtra);
+    client.open(builder.build());
   }
 
   @Override
-  public boolean grab() {
-    return client.grab(GrabRequest.newBuilder().setName(getName().getName()).build()).getSuccess();
+  public boolean grab(Optional<Struct> extra) {
+    final GrabRequest.Builder builder = GrabRequest.newBuilder().
+        setName(getName().getName());
+    extra.ifPresent(builder::setExtra);
+    return client.grab(builder.build()).getSuccess();
   }
 
   @Override
-  public void stop() {
-    client.stop(StopRequest.newBuilder().setName(getName().getName()).build());
+  public void stop(Optional<Struct> extra) {
+    final StopRequest.Builder builder = StopRequest.newBuilder().
+        setName(getName().getName());
+    extra.ifPresent(builder::setExtra);
+    client.stop(builder.build());
   }
 
   @Override
@@ -57,9 +68,10 @@ public class GripperRPCClient extends Gripper {
   }
 
   @Override
-  public List<Common.Geometry> getGeometries() {
-    return client.getGeometries(Common.GetGeometriesRequest.newBuilder().
-        setName(getName().getName()).
-        build()).getGeometriesList();
+  public List<Common.Geometry> getGeometries(Optional<Struct> extra) {
+    final GetGeometriesRequest.Builder builder = Common.GetGeometriesRequest.newBuilder().
+        setName(getName().getName());
+    extra.ifPresent(builder::setExtra);
+    return client.getGeometries(builder.build()).getGeometriesList();
   }
 }

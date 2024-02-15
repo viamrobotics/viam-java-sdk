@@ -1,21 +1,17 @@
-package com.viam.sdk.java;
-
-import dev.onvoid.webrtc.RTCDataChannel;
-import dev.onvoid.webrtc.RTCDataChannelBuffer;
-import dev.onvoid.webrtc.RTCDataChannelObserver;
+package com.viam.sdk.android.webrtc;
 
 public class DataChannel implements com.viam.sdk.core.webrtc.DataChannel {
 
-  private final RTCDataChannel nativeDataChannel;
+  private final org.webrtc.DataChannel nativeDataChannel;
 
-  public DataChannel(final RTCDataChannel nativeDataChannel) {
+  public DataChannel(final org.webrtc.DataChannel nativeDataChannel) {
     this.nativeDataChannel = nativeDataChannel;
   }
 
-  private static RTCDataChannelObserver toNativeDataChannelObserver(final Observer observer) {
-    return new RTCDataChannelObserver() {
+  private static org.webrtc.DataChannel.Observer toNativeDataChannelObserver(
+      final DataChannel.Observer observer) {
+    return new org.webrtc.DataChannel.Observer() {
 
-      @Override
       public void onBufferedAmountChange(long previousAmount) {
         observer.onBufferedAmountChange(previousAmount);
       }
@@ -26,7 +22,7 @@ public class DataChannel implements com.viam.sdk.core.webrtc.DataChannel {
       }
 
       @Override
-      public void onMessage(RTCDataChannelBuffer buffer) {
+      public void onMessage(org.webrtc.DataChannel.Buffer buffer) {
         observer.onMessage(new Buffer(buffer.data, buffer.binary));
       }
     };
@@ -44,23 +40,18 @@ public class DataChannel implements com.viam.sdk.core.webrtc.DataChannel {
 
   @Override
   public void send(final Buffer message) {
-    try {
-      this.nativeDataChannel.send(new RTCDataChannelBuffer(message.data, message.binary));
-    } catch (Exception e) {
-      throw new RuntimeException(e);
-    }
+    this.nativeDataChannel.send(new org.webrtc.DataChannel.Buffer(message.data, message.binary));
   }
 
   @Override
   public void close() {
     this.nativeDataChannel.close();
-    this.nativeDataChannel.dispose();
   }
 
   @Override
   public State state() {
     final State ourState;
-    switch (this.nativeDataChannel.getState()) {
+    switch (this.nativeDataChannel.state()) {
       case CONNECTING:
         ourState = State.CONNECTING;
         break;
@@ -74,7 +65,7 @@ public class DataChannel implements com.viam.sdk.core.webrtc.DataChannel {
         ourState = State.CLOSED;
         break;
       default:
-        throw new IllegalStateException("unknown state: " + this.nativeDataChannel.getState());
+        throw new IllegalStateException("unknown state: " + this.nativeDataChannel.state());
     }
     return ourState;
   }
