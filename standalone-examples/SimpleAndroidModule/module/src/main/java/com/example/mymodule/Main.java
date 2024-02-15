@@ -21,44 +21,34 @@ import java.util.Set;
 import viam.app.v1.Robot;
 
 public class Main {
-    public static void main(final String []args) {
-        // TODO(erd): move to right place
-        // TODO(erd): can this condense at all without much pain?
-        Registry.registerSubtype(new ResourceRegistration<>(
-                Generic.SUBTYPE,
-                Generic.class,
-                GenericServiceGrpc.SERVICE_NAME,
-                GenericRPCService::new,
-                (name, chan) -> {
-                    throw new RuntimeException("no clients for you yet sorry");
-                }
-        ));
-        Registry.registerResourceCreator(
-                Generic.SUBTYPE,
-                MyGeneric.MODEL,
-                new ResourceCreatorRegistration(MyGeneric::new, MyGeneric::validateConfig)
-        );
-        final Module module = new Module(args);
-        module.start();
+
+  public static void main(final String[] args) {
+    Registry.registerResourceCreator(
+        Generic.SUBTYPE,
+        MyGeneric.MODEL,
+        new ResourceCreatorRegistration(MyGeneric::new, MyGeneric::validateConfig)
+    );
+    final Module module = new Module(args);
+    module.start();
+  }
+
+  public static class MyGeneric extends Generic {
+
+    public static final Model MODEL = new Model(new ModelFamily("viam", "generic"), "mygeneric");
+
+    public MyGeneric(Robot.ComponentConfig config,
+        Map<Common.ResourceName, Resource> dependencies) {
+      super(config.getName());
     }
 
-    public static class MyGeneric extends Generic {
-
-        public static final Model MODEL = new Model(new ModelFamily("viam", "generic"), "mygeneric");
-
-        public MyGeneric(Robot.ComponentConfig config, Map<Common.ResourceName, Resource> dependencies) {
-            super(config.getName());
-        }
-
-        public static Set<String> validateConfig(final Robot.ComponentConfig config) {
-            // todo(erd): impl
-            return new HashSet<>();
-        }
-
-        @Override
-        public Struct doCommand(Map<String, Value> command) {
-            final Struct.Builder builder = Struct.newBuilder();
-            return builder.putFields("hello", Value.newBuilder().setBoolValue(true).build()).build();
-        }
+    public static Set<String> validateConfig(final Robot.ComponentConfig config) {
+      return new HashSet<>();
     }
+
+    @Override
+    public Struct doCommand(Map<String, Value> command) {
+      final Struct.Builder builder = Struct.newBuilder();
+      return builder.putFields("hello", Value.newBuilder().setBoolValue(true).build()).build();
+    }
+  }
 }

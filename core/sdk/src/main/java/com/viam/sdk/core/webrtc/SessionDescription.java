@@ -3,40 +3,45 @@ package com.viam.sdk.core.webrtc;
 import java.util.Locale;
 
 public class SessionDescription {
-    public final Type type;
-    public final String description;
 
-    public SessionDescription(final Type type, final String description) {
-        this.type = type;
-        this.description = description;
+  public final Type type;
+  public final String description;
+
+  public SessionDescription(final Type type, final String description) {
+    this.type = type;
+    this.description = description;
+  }
+
+  String getDescription() {
+    return this.description;
+  }
+
+  String getTypeInCanonicalForm() {
+    return this.type.canonicalForm();
+  }
+
+  public enum Type {
+    OFFER,
+    PRANSWER,
+    ANSWER,
+    ROLLBACK;
+
+    Type() {
     }
 
-    String getDescription() {
-        return this.description;
+    public String canonicalForm() {
+      return this.name().toLowerCase(Locale.US);
     }
+  }
 
-    String getTypeInCanonicalForm() {
-        return this.type.canonicalForm();
-    }
+  public interface Observer {
 
-    public enum Type {
-        OFFER,
-        PRANSWER,
-        ANSWER,
-        ROLLBACK;
+    void onCreateSuccess(SessionDescription sessionDescription);
 
-        Type() {
-        }
+    void onSetSuccess();
 
-        public String canonicalForm() {
-            return this.name().toLowerCase(Locale.US);
-        }
-    }
+    void onCreateFailure(final String error);
 
-    public interface Observer {
-        void onCreateSuccess(SessionDescription sessionDescription);
-        void onSetSuccess();
-        void onCreateFailure(final String error);
-        void onSetFailure(final String error);
-    }
+    void onSetFailure(final String error);
+  }
 }

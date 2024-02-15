@@ -1,5 +1,5 @@
 plugins {
-    id("com.viam.sdk.android.module") version("1.0-SNAPSHOT")
+    id("com.viam.sdk.android.module") version ("1.0-SNAPSHOT")
     id("org.jetbrains.kotlin.android")
 }
 

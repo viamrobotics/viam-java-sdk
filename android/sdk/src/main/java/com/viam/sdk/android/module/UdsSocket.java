@@ -40,277 +40,279 @@ import java.nio.channels.SocketChannel;
 @SuppressWarnings("UnsynchronizedOverridesSynchronized") // Rely on LocalSocket's synchronization
 class UdsSocket extends Socket {
 
-    private final LocalSocket localSocket;
-    private final LocalSocketAddress localSocketAddress;
+  private final LocalSocket localSocket;
+  private final LocalSocketAddress localSocketAddress;
 
-    @GuardedBy("this")
-    private boolean closed = false;
+  @GuardedBy("this")
+  private boolean closed = false;
 
-    @GuardedBy("this")
-    private boolean inputShutdown = false;
+  @GuardedBy("this")
+  private boolean inputShutdown = false;
 
-    @GuardedBy("this")
-    private boolean outputShutdown = false;
+  @GuardedBy("this")
+  private boolean outputShutdown = false;
 
-    public UdsSocket(LocalSocketAddress localSocketAddress) {
-        this.localSocketAddress = localSocketAddress;
-        localSocket = new LocalSocket();
+  public UdsSocket(LocalSocketAddress localSocketAddress) {
+    this.localSocketAddress = localSocketAddress;
+    localSocket = new LocalSocket();
+  }
+
+  public UdsSocket(LocalSocket socket) {
+    localSocket = socket;
+    localSocketAddress = socket.getLocalSocketAddress();
+  }
+
+  private static SocketException toSocketException(Throwable e) {
+    SocketException se = new SocketException();
+    se.initCause(e);
+    return se;
+  }
+
+  @Override
+  public void bind(SocketAddress bindpoint) {
+    // no-op
+  }
+
+  @Override
+  public synchronized void close() throws IOException {
+    if (closed) {
+      return;
     }
-
-    public UdsSocket(LocalSocket socket) {
-        localSocket = socket;
-        localSocketAddress = socket.getLocalSocketAddress();
+    if (!inputShutdown) {
+      shutdownInput();
     }
-
-    @Override
-    public void bind(SocketAddress bindpoint) {
-        // no-op
+    if (!outputShutdown) {
+      shutdownOutput();
     }
+    localSocket.close();
+    closed = true;
+  }
 
-    @Override
-    public synchronized void close() throws IOException {
-        if (closed) {
-            return;
-        }
-        if (!inputShutdown) {
-            shutdownInput();
-        }
-        if (!outputShutdown) {
-            shutdownOutput();
-        }
-        localSocket.close();
-        closed = true;
-    }
+  @Override
+  public void connect(SocketAddress endpoint) throws IOException {
+    localSocket.connect(localSocketAddress);
+  }
 
-    @Override
-    public void connect(SocketAddress endpoint) throws IOException {
-        localSocket.connect(localSocketAddress);
-    }
+  @Override
+  public void connect(SocketAddress endpoint, int timeout) throws IOException {
+    localSocket.connect(localSocketAddress, timeout);
+  }
 
-    @Override
-    public void connect(SocketAddress endpoint, int timeout) throws IOException {
-        localSocket.connect(localSocketAddress, timeout);
-    }
+  @Override
+  public SocketChannel getChannel() {
+    throw new UnsupportedOperationException("getChannel() not supported");
+  }
 
-    @Override
-    public SocketChannel getChannel() {
-        throw new UnsupportedOperationException("getChannel() not supported");
-    }
+  @Override
+  public InetAddress getInetAddress() {
+    throw new UnsupportedOperationException("getInetAddress() not supported");
+  }
 
-    @Override
-    public InetAddress getInetAddress() {
-        throw new UnsupportedOperationException("getInetAddress() not supported");
-    }
+  @Override
+  public InputStream getInputStream() throws IOException {
+    return new FilterInputStream(localSocket.getInputStream()) {
+      @Override
+      public void close() throws IOException {
+        UdsSocket.this.close();
+      }
+    };
+  }
 
-    @Override
-    public InputStream getInputStream() throws IOException {
-        return new FilterInputStream(localSocket.getInputStream()) {
-            @Override
-            public void close() throws IOException {
-                UdsSocket.this.close();
-            }
-        };
-    }
+  @Override
+  public boolean getKeepAlive() {
+    throw new UnsupportedOperationException("Unsupported operation getKeepAlive()");
+  }
 
-    @Override
-    public boolean getKeepAlive() {
-        throw new UnsupportedOperationException("Unsupported operation getKeepAlive()");
-    }
+  @Override
+  public void setKeepAlive(boolean on) {
+    throw new UnsupportedOperationException("Unsupported operation setKeepAlive()");
+  }
 
-    @Override
-    public InetAddress getLocalAddress() {
-        throw new UnsupportedOperationException("Unsupported operation getLocalAddress()");
-    }
+  @Override
+  public InetAddress getLocalAddress() {
+    throw new UnsupportedOperationException("Unsupported operation getLocalAddress()");
+  }
 
-    @Override
-    public int getLocalPort() {
-        throw new UnsupportedOperationException("Unsupported operation getLocalPort()");
-    }
+  @Override
+  public int getLocalPort() {
+    throw new UnsupportedOperationException("Unsupported operation getLocalPort()");
+  }
 
-    @Override
-    public SocketAddress getLocalSocketAddress() {
-        return new SocketAddress() {};
-    }
+  @Override
+  public SocketAddress getLocalSocketAddress() {
+    return new SocketAddress() {
+    };
+  }
 
-    @Override
-    public boolean getOOBInline() {
-        throw new UnsupportedOperationException("Unsupported operation getOOBInline()");
-    }
+  @Override
+  public boolean getOOBInline() {
+    throw new UnsupportedOperationException("Unsupported operation getOOBInline()");
+  }
 
-    @Override
-    public OutputStream getOutputStream() throws IOException {
-        return new FilterOutputStream(localSocket.getOutputStream()) {
-            @Override
-            public void close() throws IOException {
-                UdsSocket.this.close();
-            }
-        };
-    }
+  @Override
+  public void setOOBInline(boolean on) {
+    throw new UnsupportedOperationException("Unsupported operation setOOBInline()");
+  }
 
-    @Override
-    public int getPort() {
-        throw new UnsupportedOperationException("Unsupported operation getPort()");
-    }
+  @Override
+  public OutputStream getOutputStream() throws IOException {
+    return new FilterOutputStream(localSocket.getOutputStream()) {
+      @Override
+      public void close() throws IOException {
+        UdsSocket.this.close();
+      }
+    };
+  }
 
-    @Override
-    public int getReceiveBufferSize() throws SocketException {
-        try {
-            return localSocket.getReceiveBufferSize();
-        } catch (IOException e) {
-            throw toSocketException(e);
-        }
-    }
+  @Override
+  public int getPort() {
+    throw new UnsupportedOperationException("Unsupported operation getPort()");
+  }
 
-    @Override
-    public SocketAddress getRemoteSocketAddress() {
-        return new SocketAddress() {};
+  @Override
+  public int getReceiveBufferSize() throws SocketException {
+    try {
+      return localSocket.getReceiveBufferSize();
+    } catch (IOException e) {
+      throw toSocketException(e);
     }
+  }
 
-    @Override
-    public boolean getReuseAddress() {
-        throw new UnsupportedOperationException("Unsupported operation getReuseAddress()");
+  @Override
+  public void setReceiveBufferSize(int size) throws SocketException {
+    try {
+      localSocket.setReceiveBufferSize(size);
+    } catch (IOException e) {
+      throw toSocketException(e);
     }
+  }
 
-    @Override
-    public int getSendBufferSize() throws SocketException {
-        try {
-            return localSocket.getSendBufferSize();
-        } catch (IOException e) {
-            throw toSocketException(e);
-        }
-    }
+  @Override
+  public SocketAddress getRemoteSocketAddress() {
+    return new SocketAddress() {
+    };
+  }
 
-    @Override
-    public int getSoLinger() {
-        return -1; // unsupported
-    }
+  @Override
+  public boolean getReuseAddress() {
+    throw new UnsupportedOperationException("Unsupported operation getReuseAddress()");
+  }
 
-    @Override
-    public int getSoTimeout() throws SocketException {
-        try {
-            return localSocket.getSoTimeout();
-        } catch (IOException e) {
-            throw toSocketException(e);
-        }
-    }
+  @Override
+  public void setReuseAddress(boolean on) {
+    throw new UnsupportedOperationException("Unsupported operation setReuseAddress()");
+  }
 
-    @Override
-    public boolean getTcpNoDelay() {
-        return true;
+  @Override
+  public int getSendBufferSize() throws SocketException {
+    try {
+      return localSocket.getSendBufferSize();
+    } catch (IOException e) {
+      throw toSocketException(e);
     }
+  }
 
-    @Override
-    public int getTrafficClass() {
-        throw new UnsupportedOperationException("Unsupported operation getTrafficClass()");
+  @Override
+  public void setSendBufferSize(int size) throws SocketException {
+    try {
+      localSocket.setSendBufferSize(size);
+    } catch (IOException e) {
+      throw toSocketException(e);
     }
+  }
 
-    @Override
-    public boolean isBound() {
-        return localSocket.isBound();
-    }
+  @Override
+  public int getSoLinger() {
+    return -1; // unsupported
+  }
 
-    @Override
-    public synchronized boolean isClosed() {
-        return closed;
+  @Override
+  public int getSoTimeout() throws SocketException {
+    try {
+      return localSocket.getSoTimeout();
+    } catch (IOException e) {
+      throw toSocketException(e);
     }
+  }
 
-    @Override
-    public boolean isConnected() {
-        return localSocket.isConnected();
+  @Override
+  public void setSoTimeout(int timeout) throws SocketException {
+    try {
+      localSocket.setSoTimeout(timeout);
+    } catch (IOException e) {
+      throw toSocketException(e);
     }
+  }
 
-    @Override
-    public synchronized boolean isInputShutdown() {
-        return inputShutdown;
-    }
+  @Override
+  public boolean getTcpNoDelay() {
+    return true;
+  }
 
-    @Override
-    public synchronized boolean isOutputShutdown() {
-        return outputShutdown;
-    }
+  @Override
+  public void setTcpNoDelay(boolean on) {
+    // no-op
+  }
 
-    @Override
-    public void sendUrgentData(int data) {
-        throw new UnsupportedOperationException("Unsupported operation sendUrgentData()");
-    }
+  @Override
+  public int getTrafficClass() {
+    throw new UnsupportedOperationException("Unsupported operation getTrafficClass()");
+  }
 
-    @Override
-    public void setKeepAlive(boolean on) {
-        throw new UnsupportedOperationException("Unsupported operation setKeepAlive()");
-    }
+  @Override
+  public void setTrafficClass(int tc) {
+    throw new UnsupportedOperationException("Unsupported operation setTrafficClass()");
+  }
 
-    @Override
-    public void setOOBInline(boolean on) {
-        throw new UnsupportedOperationException("Unsupported operation setOOBInline()");
-    }
+  @Override
+  public boolean isBound() {
+    return localSocket.isBound();
+  }
 
-    @Override
-    public void setPerformancePreferences(int connectionTime, int latency, int bandwidth) {
-        throw new UnsupportedOperationException("Unsupported operation setPerformancePreferences()");
-    }
+  @Override
+  public synchronized boolean isClosed() {
+    return closed;
+  }
 
-    @Override
-    public void setReceiveBufferSize(int size) throws SocketException {
-        try {
-            localSocket.setReceiveBufferSize(size);
-        } catch (IOException e) {
-            throw toSocketException(e);
-        }
-    }
+  @Override
+  public boolean isConnected() {
+    return localSocket.isConnected();
+  }
 
-    @Override
-    public void setReuseAddress(boolean on) {
-        throw new UnsupportedOperationException("Unsupported operation setReuseAddress()");
-    }
+  @Override
+  public synchronized boolean isInputShutdown() {
+    return inputShutdown;
+  }
 
-    @Override
-    public void setSendBufferSize(int size) throws SocketException {
-        try {
-            localSocket.setSendBufferSize(size);
-        } catch (IOException e) {
-            throw toSocketException(e);
-        }
-    }
+  @Override
+  public synchronized boolean isOutputShutdown() {
+    return outputShutdown;
+  }
 
-    @Override
-    public void setSoLinger(boolean on, int linger) {
-        throw new UnsupportedOperationException("Unsupported operation setSoLinger()");
-    }
+  @Override
+  public void sendUrgentData(int data) {
+    throw new UnsupportedOperationException("Unsupported operation sendUrgentData()");
+  }
 
-    @Override
-    public void setSoTimeout(int timeout) throws SocketException {
-        try {
-            localSocket.setSoTimeout(timeout);
-        } catch (IOException e) {
-            throw toSocketException(e);
-        }
-    }
+  @Override
+  public void setPerformancePreferences(int connectionTime, int latency, int bandwidth) {
+    throw new UnsupportedOperationException("Unsupported operation setPerformancePreferences()");
+  }
 
-    @Override
-    public void setTcpNoDelay(boolean on) {
-        // no-op
-    }
+  @Override
+  public void setSoLinger(boolean on, int linger) {
+    throw new UnsupportedOperationException("Unsupported operation setSoLinger()");
+  }
 
-    @Override
-    public void setTrafficClass(int tc) {
-        throw new UnsupportedOperationException("Unsupported operation setTrafficClass()");
-    }
+  @Override
+  public synchronized void shutdownInput() throws IOException {
+    localSocket.shutdownInput();
+    inputShutdown = true;
+  }
 
-    @Override
-    public synchronized void shutdownInput() throws IOException {
-        localSocket.shutdownInput();
-        inputShutdown = true;
-    }
-
-    @Override
-    public synchronized void shutdownOutput() throws IOException {
-        localSocket.shutdownOutput();
-        outputShutdown = true;
-    }
-
-    private static SocketException toSocketException(Throwable e) {
-        SocketException se = new SocketException();
-        se.initCause(e);
-        return se;
-    }
+  @Override
+  public synchronized void shutdownOutput() throws IOException {
+    localSocket.shutdownOutput();
+    outputShutdown = true;
+  }
 }

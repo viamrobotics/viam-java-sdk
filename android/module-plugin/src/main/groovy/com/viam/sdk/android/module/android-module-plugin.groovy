@@ -10,8 +10,6 @@ import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.TaskAction
 import org.gradle.api.tasks.options.Option
 
-import java.nio.file.Files
-
 interface AndroidModulePluginExtension {
     Property<String> getMainEntryClass()
 }
@@ -54,7 +52,7 @@ class AndroidModulePlugin implements Plugin<Project> {
                 def assembleTask = project.tasks.named("assemble${variant.name.capitalize()}")
                 def outputDir = "${project.layout.buildDirectory.get()}/outputs/module/${variant.name}"
 
-                def tmpModDir = "${project.layout.buildDirectory.get()}/tmp/module";
+                def tmpModDir = "${project.layout.buildDirectory.get()}/tmp/module"
                 project.file(tmpModDir).mkdirs()
                 def modScript = getClass().getResourceAsStream("/mod.sh").getText()
 
@@ -68,9 +66,8 @@ class AndroidModulePlugin implements Plugin<Project> {
                             }
                         }
 
-                        new File(tmpModDir, "mod.sh").text = modScript;
+                        new File(tmpModDir, "mod.sh").text = modScript
 
-                        // TODO(erd): need to move the file inline with project
                         project.copy {
                             from project.file("${tmpModDir}/mod.sh")
                             into outputDir

@@ -20,38 +20,23 @@ import viam.app.v1.Robot
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-        // TODO(erd): move to right place
-        // TODO(erd): can this condense at all without much pain?
-        Registry.registerSubtype(ResourceRegistration(
-            Generic.SUBTYPE,
-            Generic::class.java,
-            GenericServiceGrpc.SERVICE_NAME,
-            { manager: ResourceManager? ->
-                GenericRPCService(manager)
-            },
-            { name: String?, chan: ManagedChannel? ->
-                throw RuntimeException(
-                    "no clients for you yet sorry"
-                )
-            }
-        ))
         Registry.registerResourceCreator(
-            Generic.SUBTYPE,
-            MyGeneric.MODEL,
-            ResourceCreatorRegistration({ config: Robot.ComponentConfig, dependencies: Map<Common.ResourceName?, Resource?>? ->
-                MyGeneric(
-                    config,
-                    dependencies
-                )
-            }) { config: Robot.ComponentConfig? -> MyGeneric.validateConfig(config) }
+                Generic.SUBTYPE,
+                MyGeneric.MODEL,
+                ResourceCreatorRegistration({ config: Robot.ComponentConfig, dependencies: Map<Common.ResourceName?, Resource?>? ->
+                    MyGeneric(
+                            config,
+                            dependencies
+                    )
+                }) { config: Robot.ComponentConfig? -> MyGeneric.validateConfig(config) }
         )
         val module = Module(args)
         module.start()
     }
 
     class MyGeneric(
-        config: Robot.ComponentConfig,
-        dependencies: Map<Common.ResourceName?, Resource?>?
+            config: Robot.ComponentConfig,
+            dependencies: Map<Common.ResourceName?, Resource?>?
     ) : Generic(config.name) {
         override fun doCommand(command: Map<String, Value>): Struct {
             val builder = Struct.newBuilder()
@@ -61,7 +46,6 @@ object Main {
         companion object {
             val MODEL = Model(ModelFamily("viam", "generic"), "mygeneric")
             fun validateConfig(config: Robot.ComponentConfig?): Set<String?> {
-                // todo(erd): impl
                 return HashSet()
             }
         }

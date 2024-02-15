@@ -8,6 +8,7 @@ dependencies {
     api 'io.grpc:grpc-stub:1.61.1'
     implementation 'org.json:json:20220924'
     implementation 'com.google.api.grpc:proto-google-common-protos:2.33.0'
+    implementation 'com.google.protobuf:protobuf-java-util:3.25.1'
     api 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
 }
 

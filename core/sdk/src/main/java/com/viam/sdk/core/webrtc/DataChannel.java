@@ -4,53 +4,58 @@ import java.nio.ByteBuffer;
 
 public interface DataChannel {
 
-    void registerObserver(final Observer observer);
+  void registerObserver(final Observer observer);
 
-    void unregisterObserver();
+  void unregisterObserver();
 
-    void send(final Buffer message);
+  void send(final Buffer message);
 
-    void close();
+  void close();
 
-    State state();
+  State state();
 
-    class Init {
-        public boolean ordered = true;
-        public final int maxRetransmitTimeMs = -1;
-        public final int maxRetransmits = -1;
-        public final String protocol = "";
-        public boolean negotiated;
-        public int id = -1;
+  enum State {
+    CONNECTING,
+    OPEN,
+    CLOSING,
+    CLOSED;
 
-        public Init() {
-        }
+    State() {
+    }
+  }
+
+  interface Observer {
+
+    default void onBufferedAmountChange(long previousAmount) {
+
     }
 
-    interface Observer {
-        default void onBufferedAmountChange(long previousAmount) {
+    void onStateChange();
 
-        }
-        void onStateChange();
-        void onMessage(final Buffer message);
+    void onMessage(final Buffer message);
+  }
+
+  class Init {
+
+    public final int maxRetransmitTimeMs = -1;
+    public final int maxRetransmits = -1;
+    public final String protocol = "";
+    public boolean ordered = true;
+    public boolean negotiated;
+    public int id = -1;
+
+    public Init() {
     }
+  }
 
-    class Buffer {
-        public final ByteBuffer data;
-        public final boolean binary;
+  class Buffer {
 
-        public Buffer(final ByteBuffer data, final boolean binary) {
-            this.data = data;
-            this.binary = binary;
-        }
+    public final ByteBuffer data;
+    public final boolean binary;
+
+    public Buffer(final ByteBuffer data, final boolean binary) {
+      this.data = data;
+      this.binary = binary;
     }
-
-    enum State {
-        CONNECTING,
-        OPEN,
-        CLOSING,
-        CLOSED;
-
-        State() {
-        }
-    }
+  }
 }
