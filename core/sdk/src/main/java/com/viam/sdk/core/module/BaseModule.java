@@ -85,7 +85,10 @@ public abstract class BaseModule extends ModuleServiceGrpc.ModuleServiceImplBase
     rootLogger.addHandler(logHandler);
 
     Thread.setDefaultUncaughtExceptionHandler(
-        (thread, throwable) -> LOGGER.severe("[ERROR] Uncaught exception: " + throwable));
+        (thread, throwable) -> {
+          LOGGER.severe("[ERROR] Uncaught exception: " + throwable);
+          throwable.printStackTrace();
+        });
     server = new Server(Collections.emptyList(), getServerBuilder(), new ModuleRPCService(this));
   }
 

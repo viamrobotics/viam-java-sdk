@@ -20,6 +20,7 @@ import viam.app.v1.Robot;
 public class Main {
 
   public static void main(final String[] args) {
+
     Registry.registerResourceCreator(
         Generic.SUBTYPE,
         MyGeneric.MODEL,
