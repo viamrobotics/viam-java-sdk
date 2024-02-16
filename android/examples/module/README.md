@@ -31,6 +31,7 @@
         1. `./gradlew copyModuleRelease --into </some/path>`
         2. Use the CLI to package the contents of `/some/path` where `mod.sh` is the executable
            and `module.jar` is the only additional file to be tarballed up.
+4. The component to add will be a generic component with model `viam:generic:mygeneric`
 
 ## Building this example
 
@@ -52,6 +53,7 @@
         1. `./gradlew :android:examples:viam-android-sdk-examples-module:copyModuleRelease --into </some/path>`
         2. Use the CLI to package the contents of `/some/path` where `mod.sh` is the executable
            and `module.jar` is the only additional file to be tarballed up.
+3. The component to add will be a generic component with model `viam:generic:mygeneric`
 
 ## Development
 
