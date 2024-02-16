@@ -12,6 +12,8 @@ import org.gradle.api.tasks.options.Option
 
 interface AndroidModulePluginExtension {
     Property<String> getMainEntryClass()
+
+    Property<Boolean> getForce32Bit()
 }
 
 abstract class CopyModuleTask extends DefaultTask {
@@ -74,7 +76,8 @@ class AndroidModulePlugin implements Plugin<Project> {
                             filter { line ->
                                 line.
                                         replaceAll('__MODULE_JAR_PATH__', './module.jar').
-                                        replaceAll('__MAIN_ENTRY_CLASS__', extension.mainEntryClass.get())
+                                        replaceAll('__MAIN_ENTRY_CLASS__', extension.mainEntryClass.get()).
+                                        replaceAll('__FORCE_32__', extension.force32Bit.getOrElse(false).toString())
                             }
                         }
                     }
@@ -97,7 +100,8 @@ class AndroidModulePlugin implements Plugin<Project> {
                             filter { line ->
                                 line.
                                         replaceAll('__MODULE_JAR_PATH__', '/sdcard/Download/module.jar').
-                                        replaceAll('__MAIN_ENTRY_CLASS__', extension.mainEntryClass.get())
+                                        replaceAll('__MAIN_ENTRY_CLASS__', extension.mainEntryClass.get()).
+                                        replaceAll('__FORCE_32__', extension.force32Bit.getOrElse(false).toString())
                             }
                         }
                         project.copy {

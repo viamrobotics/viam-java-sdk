@@ -1,4 +1,4 @@
-package com.viam.sdk.android.examples.module;
+package com.viam.sdk.android.module;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -38,6 +38,12 @@ import java.nio.file.Paths;
 
 public class FakeContext extends Context {
 
+  private final String filesDir;
+
+  public FakeContext(final String filesDir) {
+    this.filesDir = filesDir;
+  }
+
   @Override
   public AssetManager getAssets() {
     throw new UnsupportedOperationException("getAssets");
@@ -65,7 +71,7 @@ public class FakeContext extends Context {
 
   @Override
   public Context getApplicationContext() {
-    throw new UnsupportedOperationException("getApplicationContext");
+    return this;
   }
 
   @Override
@@ -80,12 +86,12 @@ public class FakeContext extends Context {
 
   @Override
   public ClassLoader getClassLoader() {
-    throw new UnsupportedOperationException("getClassLoader");
+    return getClass().getClassLoader();
   }
 
   @Override
   public String getPackageName() {
-    throw new UnsupportedOperationException("getPackageName");
+    return getClass().getPackage().getName();
   }
 
   public static class FakeApplicationInfo extends ApplicationInfo {
@@ -152,7 +158,7 @@ public class FakeContext extends Context {
 
   @Override
   public File getFilesDir() {
-    return new File("/sdcard/Download");
+    return new File(filesDir);
   }
 
   @Override
@@ -212,7 +218,7 @@ public class FakeContext extends Context {
 
   @Override
   public File getDir(String name, int ignored) {
-    final File file = Paths.get("/sdcard/Download", name).toFile();
+    final File file = Paths.get(filesDir, name).toFile();
     file.mkdirs();
     return file;
   }

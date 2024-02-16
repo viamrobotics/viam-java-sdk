@@ -33,10 +33,16 @@ do
     LIBRARY_PATH=$LIBRARY_PATH:$NEXT_PATH_TMP
   fi
 done
-if [ `getconf LONG_BIT` == "64" ]; then
+FORCE_32=__FORCE_32__
+if [ "${FORCE_32}" != "true" ] && `getconf LONG_BIT` == "64" ]; then
   LIBRARY_PATH=$LIBRARY_PATH:/system/lib64:/system/product/lib64
 else
   LIBRARY_PATH=$LIBRARY_PATH:/system/lib:/system/product/lib
+fi
+
+APP_PROCESS_NAME=app_process
+if [ "${FORCE_32}" == "true" ]; then
+  APP_PROCESS_NAME=app_process32
 fi
 
 # Note: May want to include /lib/arm64 and variants within the temp dir in the future.
@@ -44,6 +50,6 @@ fi
 
 # app_process is the closest thing to being able to run a Zygote without actually running an
 # [Native]Activity. It will give us all the android runtime dependencies we need.
-app_process -Djava.class.path="$SAFE_JAR_PATH" -Djava.library.path="$LIBRARY_PATH" \
+${APP_PROCESS_NAME} -Djava.class.path="$SAFE_JAR_PATH" -Djava.library.path="$LIBRARY_PATH" \
             /system/bin __MAIN_ENTRY_CLASS__ "$@"
 echo $?
