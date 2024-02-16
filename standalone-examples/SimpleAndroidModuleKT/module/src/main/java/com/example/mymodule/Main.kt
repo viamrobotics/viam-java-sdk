@@ -3,18 +3,13 @@ package com.example.mymodule
 import com.google.protobuf.Struct
 import com.google.protobuf.Value
 import com.viam.common.v1.Common
-import com.viam.component.generic.v1.GenericServiceGrpc
 import com.viam.sdk.android.module.Module
-import com.viam.sdk.core.Model
-import com.viam.sdk.core.ModelFamily
-import com.viam.sdk.core.Registry
-import com.viam.sdk.core.Resource
-import com.viam.sdk.core.ResourceCreatorRegistration
-import com.viam.sdk.core.ResourceManager
-import com.viam.sdk.core.ResourceRegistration
-import com.viam.sdk.core.component.Generic
-import com.viam.sdk.core.component.GenericRPCService
-import io.grpc.ManagedChannel
+import com.viam.sdk.core.component.generic.Generic
+import com.viam.sdk.core.resource.Model
+import com.viam.sdk.core.resource.ModelFamily
+import com.viam.sdk.core.resource.Registry
+import com.viam.sdk.core.resource.Resource
+import com.viam.sdk.core.resource.ResourceCreatorRegistration
 import viam.app.v1.Robot
 
 object Main {
