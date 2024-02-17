@@ -30,6 +30,19 @@ android {
 
     }
 
+    sourceSets {
+        main {
+            java {
+                exclude '**/FakeContentResolver.java'
+            }
+        }
+        androidTest {
+            java {
+                exclude '**/FakeContentResolver.java'
+            }
+        }
+    }
+
     namespace 'com.viam.sdk.android'
 }
 
@@ -39,4 +52,5 @@ dependencies {
 
     implementation 'io.grpc:grpc-okhttp:1.61.1'
     implementation 'io.grpc:grpc-android:1.61.1'
+    implementation 'commons-io:commons-io:2.15.1'
 }

@@ -35,7 +35,7 @@ do
   fi
 done
 FORCE_32=__FORCE_32__
-if [ "${FORCE_32}" != "true" ] && `getconf LONG_BIT` == "64" ]; then
+if [ "${FORCE_32}" != "true" ] && [ `getconf LONG_BIT` == "64" ]; then
   LIBRARY_PATH=$LIBRARY_PATH:/system/lib64:/system/product/lib64
 else
   LIBRARY_PATH=$LIBRARY_PATH:/system/lib:/system/product/lib

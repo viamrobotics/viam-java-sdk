@@ -1,4 +1,4 @@
-package com.viam.sdk.android.module;
+package com.viam.sdk.android.module.fake;
 
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -35,13 +35,17 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Paths;
+import java.util.function.Function;
 
 public class FakeContext extends Context {
 
   private final String filesDir;
+  private final ContentResolver resolver;
 
-  public FakeContext(final String filesDir) {
+  public FakeContext(final String filesDir,
+      final Function<Context, ContentResolver> resolverFactory) {
     this.filesDir = filesDir;
+    this.resolver = resolverFactory.apply(this);
   }
 
   @Override
@@ -60,8 +64,13 @@ public class FakeContext extends Context {
   }
 
   @Override
+  public String getOpPackageName() {
+    return "com.nothing";
+  }
+
+  @Override
   public ContentResolver getContentResolver() {
-    throw new UnsupportedOperationException("getContentResolver");
+    return resolver;
   }
 
   @Override
@@ -332,12 +341,24 @@ public class FakeContext extends Context {
   }
 
   @Override
+  public void sendBroadcast(Intent intent, String receiverPermission, Bundle options) {
+
+  }
+
+  @Override
   public void sendOrderedBroadcast(Intent intent, String receiverPermission) {
 
   }
 
   @Override
   public void sendOrderedBroadcast(Intent intent, String receiverPermission,
+      BroadcastReceiver resultReceiver, Handler scheduler, int initialCode, String initialData,
+      Bundle initialExtras) {
+
+  }
+
+  @Override
+  public void sendOrderedBroadcast(Intent intent, String receiverPermission, Bundle options,
       BroadcastReceiver resultReceiver, Handler scheduler, int initialCode, String initialData,
       Bundle initialExtras) {
 
