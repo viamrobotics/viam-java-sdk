@@ -39,12 +39,12 @@ public class Main {
       super(config.getName());
     }
 
-    public static Set<String> validateConfig(final Robot.ComponentConfig config) {
+    public static Set<String> validateConfig(final Robot.ComponentConfig ignored) {
       return new HashSet<>();
     }
 
     @Override
-    public Struct doCommand(Map<String, Value> command) {
+    public Struct doCommand(Map<String, Value> ignored) {
       final Struct.Builder builder = Struct.newBuilder();
       return builder.putFields("hello", Value.newBuilder().setBoolValue(true).build()).build();
     }
