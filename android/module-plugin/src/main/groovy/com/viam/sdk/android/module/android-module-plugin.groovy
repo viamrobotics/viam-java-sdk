@@ -1,3 +1,4 @@
+//file:noinspection ConfigurationAvoidance
 package com.viam.sdk.android.module
 
 import org.gradle.api.DefaultTask

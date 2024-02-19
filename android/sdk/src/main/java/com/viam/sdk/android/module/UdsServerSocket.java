@@ -19,6 +19,7 @@ class UdsServerSocket extends ServerSocket {
   private Integer timeout = null;
 
   public UdsServerSocket(LocalSocketAddress localSocketAddress) throws IOException {
+    //noinspection resource
     final LocalSocket sock = new LocalSocket();
     sock.bind(localSocketAddress);
     localSocket = new LocalServerSocket(sock.getFileDescriptor());

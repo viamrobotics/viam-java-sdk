@@ -4,19 +4,23 @@ import java.util.Locale;
 
 public class SessionDescription {
 
-  public final Type type;
-  public final String description;
+  private final Type type;
+  private final String description;
 
   public SessionDescription(final Type type, final String description) {
     this.type = type;
     this.description = description;
   }
 
-  String getDescription() {
+  public String getDescription() {
     return this.description;
   }
 
-  String getTypeInCanonicalForm() {
+  public Type getType() {
+    return this.type;
+  }
+
+  public String getTypeInCanonicalForm() {
     return this.type.canonicalForm();
   }
 

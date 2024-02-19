@@ -18,6 +18,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.nio.ByteBuffer;
 import java.util.List;
 import org.apache.commons.io.IOUtils;
+import org.webrtc.MediaStream;
 
 public class Module extends BaseModule {
 
@@ -34,10 +35,14 @@ public class Module extends BaseModule {
     super(args);
   }
 
+  /**
+   * @noinspection SameParameterValue
+   */
   private ByteBuffer readResourceFile(final String name) {
     final InputStream is = getClass().getResourceAsStream(name);
     final byte[] data;
     try {
+      assert is != null;
       data = IOUtils.toByteArray(is);
     } catch (IOException e) {
       throw new RuntimeException(e);
@@ -74,7 +79,7 @@ public class Module extends BaseModule {
     final ManagedChannel chan = UdsChannelBuilder.forPath(parentAddress,
         LocalSocketAddress.Namespace.FILESYSTEM).build();
     parent = new RobotClient(new BasicManagedChannel(chan),
-        new Options.Builder().setLogLevel(getLogLevel()).build());
+        new Options.Builder<MediaStream>().setLogLevel(getLogLevel()).build());
   }
 
   @Override

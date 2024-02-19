@@ -31,7 +31,7 @@ import java.nio.channels.SocketChannel;
 
 /**
  * Adapter from Android's LocalSocket to Socket. This class is only needed by grpc-okhttp, so the
- * adapter only has to support the things that grcp-okhttp uses. It is fine to support trivial
+ * adapter only has to support the things that gRPC-okhttp uses. It is fine to support trivial
  * things unused by the transport, to be less likely to break as the transport usage changes, but it
  * is also unnecessary. It's okay to stretch the truth or lie when necessary. For example, little
  * hurts with {@link #setTcpNoDelay(boolean)} being a noop since unix domain sockets don't have such
@@ -69,7 +69,7 @@ class UdsSocket extends Socket {
   }
 
   @Override
-  public void bind(SocketAddress bindpoint) {
+  public void bind(SocketAddress bindPoint) {
     // no-op
   }
 

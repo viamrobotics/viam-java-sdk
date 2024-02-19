@@ -28,6 +28,7 @@ public class DataManagerRPCClient extends DataManager {
   public void sync(final Optional<Struct> extra) {
     final SyncRequest.Builder builder = SyncRequest.newBuilder().setName(getName().getName());
     extra.ifPresent(builder::setExtra);
+    //noinspection ResultOfMethodCallIgnored
     client.sync(builder.build());
   }
 

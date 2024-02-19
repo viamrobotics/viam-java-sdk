@@ -9,6 +9,7 @@ public interface PeerConnection {
 
   SessionDescription getLocalDescription();
 
+  @SuppressWarnings("unused")
   SessionDescription getRemoteDescription();
 
   void createOffer(final SessionDescription.Observer observer);
@@ -101,6 +102,7 @@ public interface PeerConnection {
 
     void onICECandidate(final ICECandidate candidate);
 
+    @SuppressWarnings("unused")
     default void onICECandidateError(ICECandidateErrorEvent ignoredEvent) {
     }
 

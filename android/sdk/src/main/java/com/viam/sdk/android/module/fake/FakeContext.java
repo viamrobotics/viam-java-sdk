@@ -7,12 +7,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.IntentSender;
-import android.content.IntentSender.SendIntentException;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -35,8 +33,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Paths;
+import java.util.Objects;
 import java.util.function.Function;
 
+/**
+ * @noinspection NullableProblems
+ */
 public class FakeContext extends Context {
 
   private final String filesDir;
@@ -84,7 +86,7 @@ public class FakeContext extends Context {
   }
 
   @Override
-  public void setTheme(int resid) {
+  public void setTheme(int resId) {
 
   }
 
@@ -100,7 +102,7 @@ public class FakeContext extends Context {
 
   @Override
   public String getPackageName() {
-    return getClass().getPackage().getName();
+    return Objects.requireNonNull(getClass().getPackage()).getName();
   }
 
   public static class FakeApplicationInfo extends ApplicationInfo {
@@ -228,6 +230,7 @@ public class FakeContext extends Context {
   @Override
   public File getDir(String name, int ignored) {
     final File file = Paths.get(filesDir, name).toFile();
+    //noinspection ResultOfMethodCallIgnored
     file.mkdirs();
     return file;
   }
@@ -320,13 +323,13 @@ public class FakeContext extends Context {
 
   @Override
   public void startIntentSender(IntentSender intent, Intent fillInIntent, int flagsMask,
-      int flagsValues, int extraFlags) throws SendIntentException {
+      int flagsValues, int extraFlags) {
 
   }
 
   @Override
   public void startIntentSender(IntentSender intent, Intent fillInIntent, int flagsMask,
-      int flagsValues, int extraFlags, Bundle options) throws SendIntentException {
+      int flagsValues, int extraFlags, Bundle options) {
 
   }
 
@@ -575,12 +578,12 @@ public class FakeContext extends Context {
   }
 
   @Override
-  public Context createPackageContext(String packageName, int flags) throws NameNotFoundException {
+  public Context createPackageContext(String packageName, int flags) {
     throw new UnsupportedOperationException("createPackageContext");
   }
 
   @Override
-  public Context createContextForSplit(String splitName) throws NameNotFoundException {
+  public Context createContextForSplit(String splitName) {
     throw new UnsupportedOperationException("createContextForSplit");
   }
 

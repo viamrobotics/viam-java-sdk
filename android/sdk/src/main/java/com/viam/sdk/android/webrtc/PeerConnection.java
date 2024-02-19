@@ -39,7 +39,7 @@ public class PeerConnection implements com.viam.sdk.core.webrtc.PeerConnection {
   private static org.webrtc.SessionDescription toNativeSessionDescription(
       final SessionDescription sessionDescription) {
     final org.webrtc.SessionDescription.Type sdpType;
-    switch (sessionDescription.type) {
+    switch (sessionDescription.getType()) {
       case OFFER:
         sdpType = org.webrtc.SessionDescription.Type.OFFER;
         break;
@@ -53,9 +53,10 @@ public class PeerConnection implements com.viam.sdk.core.webrtc.PeerConnection {
         sdpType = org.webrtc.SessionDescription.Type.ROLLBACK;
         break;
       default:
-        throw new IllegalStateException("unknown sdp type: " + sessionDescription.type);
+        throw new IllegalStateException(
+            "unknown sdp type: " + sessionDescription.getTypeInCanonicalForm());
     }
-    return new org.webrtc.SessionDescription(sdpType, sessionDescription.description);
+    return new org.webrtc.SessionDescription(sdpType, sessionDescription.getDescription());
   }
 
   @Override

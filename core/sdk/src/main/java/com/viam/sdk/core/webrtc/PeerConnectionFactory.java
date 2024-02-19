@@ -126,7 +126,7 @@ public abstract class PeerConnectionFactory<MediaStreamT> {
                     final SessionDescription localDesc = rpcConn.peerConnection.getLocalDescription();
                     final JSONObject localDescJSON = new JSONObject();
                     final String sdpTypeStr;
-                    switch (localDesc.type) {
+                    switch (localDesc.getType()) {
                       case OFFER:
                         sdpTypeStr = "offer";
                         break;
@@ -140,7 +140,8 @@ public abstract class PeerConnectionFactory<MediaStreamT> {
                         sdpTypeStr = "rollback";
                         break;
                       default:
-                        throw new IllegalArgumentException("unknown sdp type: " + localDesc.type);
+                        throw new IllegalArgumentException(
+                            "unknown sdp type: " + localDesc.getTypeInCanonicalForm());
                     }
                     try {
                       localDescJSON.put("type", sdpTypeStr);
@@ -148,7 +149,7 @@ public abstract class PeerConnectionFactory<MediaStreamT> {
                       e.printStackTrace();
                     }
                     try {
-                      localDescJSON.put("sdp", localDesc.description);
+                      localDescJSON.put("sdp", localDesc.getDescription());
                     } catch (JSONException e) {
                       e.printStackTrace();
                     }

@@ -51,6 +51,7 @@ import viam.module.v1.Module.RemoveResourceRequest;
 import viam.module.v1.Module.ValidateConfigRequest;
 import viam.module.v1.ModuleServiceGrpc;
 
+@SuppressWarnings("SimplifyOptionalCallChains")
 public abstract class BaseModule extends ModuleServiceGrpc.ModuleServiceImplBase {
 
   private static final Logger LOGGER = Logger.getLogger("module");

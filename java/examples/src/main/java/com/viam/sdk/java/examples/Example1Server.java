@@ -6,6 +6,7 @@ import com.viam.sdk.core.component.generic.Generic;
 import com.viam.sdk.core.rpc.Server;
 import io.grpc.ServerBuilder;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.logging.Logger;
 
@@ -18,7 +19,7 @@ public class Example1Server {
     }
 
     final Logger logger = Logger.getAnonymousLogger();
-    logger.info(String.format("Serving on localhost:%d", port));
+    logger.info(String.format(Locale.getDefault(), "Serving on localhost:%d", port));
     final Generic generic = new MyGeneric("generic1");
     try (Server server = new Server(List.of(generic), ServerBuilder.forPort(port))) {
       server.start();

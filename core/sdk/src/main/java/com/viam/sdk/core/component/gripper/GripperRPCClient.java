@@ -34,6 +34,7 @@ public class GripperRPCClient extends Gripper {
     final OpenRequest.Builder builder = OpenRequest.newBuilder().
         setName(getName().getName());
     extra.ifPresent(builder::setExtra);
+    //noinspection ResultOfMethodCallIgnored
     client.open(builder.build());
   }
 
@@ -50,6 +51,7 @@ public class GripperRPCClient extends Gripper {
     final StopRequest.Builder builder = StopRequest.newBuilder().
         setName(getName().getName());
     extra.ifPresent(builder::setExtra);
+    //noinspection ResultOfMethodCallIgnored
     client.stop(builder.build());
   }
 

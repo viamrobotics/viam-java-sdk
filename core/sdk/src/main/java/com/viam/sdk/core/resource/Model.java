@@ -45,11 +45,11 @@ public class Model {
     final ModelFamily family;
     final String name;
     if (!matcher.matches()) {
-      if (ignoreErrors) {
-        family = new ModelFamily("", "");
-        name = model;
+      if (!ignoreErrors) {
+        throw new IllegalArgumentException(String.format("%s is not a valid model", model));
       }
-      throw new IllegalArgumentException(String.format("%s is not a valid model", model));
+      family = new ModelFamily("", "");
+      name = model;
     } else {
       family = new ModelFamily(matcher.group(1), matcher.group(2));
       name = matcher.group(3);

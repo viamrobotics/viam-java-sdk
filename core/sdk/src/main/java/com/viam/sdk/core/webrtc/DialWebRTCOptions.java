@@ -35,6 +35,7 @@ public class DialWebRTCOptions<MediaStreamT> {
 
   public DialWebRTCOptions<MediaStreamT> clone() {
     try {
+      //noinspection unchecked
       return (DialWebRTCOptions<MediaStreamT>) super.clone();
     } catch (CloneNotSupportedException e) {
       final DialWebRTCOptions<MediaStreamT> opts = new DialWebRTCOptions<>();

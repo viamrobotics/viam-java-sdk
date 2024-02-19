@@ -17,6 +17,7 @@ import proto.rpc.webrtc.v1.SignalingServiceGrpc.SignalingServiceImplBase;
 /**
  * gRPC Server
  */
+@SuppressWarnings("SimplifyOptionalCallChains")
 public class Server extends ResourceManager {
 
   private static final Logger LOGGER = Logger.getLogger(Server.class.getName());

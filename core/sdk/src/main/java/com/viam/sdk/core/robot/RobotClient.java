@@ -42,6 +42,7 @@ import java.io.Closeable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.logging.Level;
@@ -107,6 +108,7 @@ public class RobotClient implements Closeable {
       refreshIntervalThread.start();
     }
 
+    //noinspection StatementWithEmptyBody
     if (options.getCheckConnectionInterval() > 0 || options.getAttemptReconnectInterval() > 0) {
       // TODO: reconnect - implement reconnect thread
     }
@@ -153,10 +155,11 @@ public class RobotClient implements Closeable {
       this.resourceNames.clear();
       this.resourceNames.addAll(resourceNames);
     }
-    LOGGER.fine(String.format("refreshed %d resources", resourceNames.size()));
+    LOGGER.fine(String.format(Locale.getDefault(), "refreshed %d resources", resourceNames.size()));
   }
 
   private void createOrResetClient(final ResourceName name) {
+    //noinspection StatementWithEmptyBody
     if (manager.isManaging(name)) {
       // TODO: reconnect - handle resetting channel on reconnect with a ReconfigurableChannel
     } else {
@@ -219,6 +222,7 @@ public class RobotClient implements Closeable {
     final CancelOperationRequest request = CancelOperationRequest.newBuilder()
         .setId(id)
         .build();
+    //noinspection ResultOfMethodCallIgnored
     robotClient.cancelOperation(request);
   }
 
@@ -226,6 +230,7 @@ public class RobotClient implements Closeable {
     final BlockForOperationRequest request = BlockForOperationRequest.newBuilder()
         .setId(id)
         .build();
+    //noinspection ResultOfMethodCallIgnored
     robotClient.blockForOperation(request);
   }
 
@@ -278,14 +283,17 @@ public class RobotClient implements Closeable {
           .setParams(Struct.newBuilder().putAllFields(entry.getValue()))
           .build());
     }
+    //noinspection ResultOfMethodCallIgnored
     robotClient.stopAll(StopAllRequest.newBuilder().addAllExtra(ep).build());
   }
 
   public void addStream(final String name) {
+    //noinspection ResultOfMethodCallIgnored
     streamClient.addStream(AddStreamRequest.newBuilder().setName(name).build());
   }
 
   public void removeStream(final String name) {
+    //noinspection ResultOfMethodCallIgnored
     streamClient.removeStream(RemoveStreamRequest.newBuilder().setName(name).build());
   }
 

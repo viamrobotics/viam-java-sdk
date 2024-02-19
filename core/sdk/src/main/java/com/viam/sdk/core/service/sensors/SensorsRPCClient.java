@@ -32,7 +32,7 @@ public class SensorsRPCClient extends Sensors {
 
   @Deprecated
   public List<ResourceName> getSensors(Optional<Struct> extra) {
-    final GetSensorsRequest.Builder builder = GetSensorsRequest.newBuilder().build().newBuilder()
+    final GetSensorsRequest.Builder builder = GetSensorsRequest.newBuilder()
         .setName(getName().getName());
     extra.ifPresent(builder::setExtra);
     return client.getSensors(builder.build()).getSensorNamesList();

@@ -490,7 +490,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
             final SessionDescription localDesc = peerConn.peerConnection.getLocalDescription();
             final JSONObject localDescJSON = new JSONObject();
             final String sdpTypeStr;
-            switch (localDesc.type) {
+            switch (localDesc.getType()) {
               case OFFER:
                 sdpTypeStr = "offer";
                 break;
@@ -504,7 +504,8 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
                 sdpTypeStr = "rollback";
                 break;
               default:
-                throw new IllegalArgumentException("unknown sdp type: " + localDesc.type);
+                throw new IllegalArgumentException(
+                    "unknown sdp type: " + localDesc.getTypeInCanonicalForm());
             }
             try {
               localDescJSON.put("type", sdpTypeStr);
@@ -513,7 +514,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
               throw new RuntimeException(e);
             }
             try {
-              localDescJSON.put("sdp", localDesc.description);
+              localDescJSON.put("sdp", localDesc.getDescription());
             } catch (JSONException e) {
               e.printStackTrace();
               throw new RuntimeException(e);

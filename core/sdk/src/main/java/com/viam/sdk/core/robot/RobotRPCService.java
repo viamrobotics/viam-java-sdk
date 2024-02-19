@@ -133,7 +133,7 @@ public class RobotRPCService extends RobotServiceImplBase {
         Thread.sleep(request.getEvery().getSeconds() * 1000, request.getEvery().getNanos());
       } catch (InterruptedException e) {
         responseObserver.onError(e);
-        throw new RuntimeException(e);
+        return;
       }
       responseObserver.onNext(StreamStatusResponse.newBuilder()
           .addAllStatus(generateStatuses(request.getResourceNamesList())).build());

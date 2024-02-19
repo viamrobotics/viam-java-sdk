@@ -16,6 +16,7 @@ public class DialOptions<MediaStreamT> {
 
   public DialOptions<MediaStreamT> clone() {
     try {
+      //noinspection unchecked
       return (DialOptions<MediaStreamT>) super.clone();
     } catch (CloneNotSupportedException e) {
       final DialOptions<MediaStreamT> opts = new DialOptions<>();

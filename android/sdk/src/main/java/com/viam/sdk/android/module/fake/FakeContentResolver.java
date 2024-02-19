@@ -11,6 +11,9 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.IContentProvider;
 
+/**
+ * @noinspection SameReturnValue
+ */
 public class FakeContentResolver extends ContentResolver {
 
   public FakeContentResolver(Context context) {
