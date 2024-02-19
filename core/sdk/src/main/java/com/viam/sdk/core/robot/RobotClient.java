@@ -176,7 +176,7 @@ public class RobotClient implements Closeable {
     }
   }
 
-  public synchronized Component getComponent(final ResourceName name) {
+  public Component getComponent(final ResourceName name) {
     if (!name.getType().equals(RESOURCE_TYPE_COMPONENT)) {
       throw new IllegalArgumentException(
           String.format("ResourceName does not describe a component: %s", name));
@@ -184,7 +184,7 @@ public class RobotClient implements Closeable {
     return manager.getResource(Component.class, name);
   }
 
-  public synchronized Service getService(final ResourceName name) {
+  public Service getService(final ResourceName name) {
     if (!name.getType().equals(RESOURCE_TYPE_SERVICE)) {
       throw new IllegalArgumentException(
           String.format("ResourceName does not describe a service: %s", name));
@@ -192,7 +192,7 @@ public class RobotClient implements Closeable {
     return manager.getResource(Service.class, name);
   }
 
-  public synchronized <ResourceT> ResourceT getResource(Class<ResourceT> resourceClass,
+  public <ResourceT> ResourceT getResource(Class<ResourceT> resourceClass,
       ResourceName name) {
     return manager.getResource(resourceClass, name);
   }
