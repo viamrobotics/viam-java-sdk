@@ -519,7 +519,7 @@ public abstract class Dialer<MediaStreamT, T extends PeerConnectionFactory<Media
               e.printStackTrace();
               throw new RuntimeException(e);
             }
-            logger.finest("LOCAL SDP: " + localDesc.description);
+            logger.finest("LOCAL SDP: " + localDesc.getDescription());
             final String sdpEncoded = Base64.getEncoder()
                 .encodeToString(localDescJSON.toString().getBytes(StandardCharsets.UTF_8));
 
