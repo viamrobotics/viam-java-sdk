@@ -12,6 +12,7 @@ import java.nio.channels.ServerSocketChannel;
 
 class UdsServerSocket extends ServerSocket {
 
+  private final LocalSocket sock;
   private final LocalServerSocket localSocket;
   private boolean closed;
 
@@ -20,8 +21,10 @@ class UdsServerSocket extends ServerSocket {
 
   public UdsServerSocket(LocalSocketAddress localSocketAddress) throws IOException {
     //noinspection resource
-    final LocalSocket sock = new LocalSocket();
+    sock = new LocalSocket();
     sock.bind(localSocketAddress);
+    // careful: passing FD here doesn't transfer ownership. You MUST keep sock alive or
+    // this FD will get reused and then the accept loop will fail when it is closed.
     localSocket = new LocalServerSocket(sock.getFileDescriptor());
   }
 
