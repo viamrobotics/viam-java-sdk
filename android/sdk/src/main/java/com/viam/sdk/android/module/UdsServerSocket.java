@@ -12,25 +12,25 @@ import java.nio.channels.ServerSocketChannel;
 
 class UdsServerSocket extends ServerSocket {
 
-  private final LocalSocket sock;
-  private final LocalServerSocket localSocket;
+  private final LocalSocket boundSocket;
+  private final LocalServerSocket serverSocket;
   private boolean closed;
 
   private int recvBufferSize = -1;
   private Integer timeout = null;
 
   public UdsServerSocket(LocalSocketAddress localSocketAddress) throws IOException {
-    //noinspection resource
-    sock = new LocalSocket();
-    sock.bind(localSocketAddress);
-    // careful: passing FD here doesn't transfer ownership. You MUST keep sock alive or
-    // this FD will get reused and then the accept loop will fail when it is closed.
-    localSocket = new LocalServerSocket(sock.getFileDescriptor());
+    boundSocket = new LocalSocket();
+    boundSocket.bind(localSocketAddress);
+    // Note: According to this LocalServerSocket constructor: "The passed-in FileDescriptor is not
+    // managed by this class and must be closed by the caller." Therefore, we MUST keep the bound
+    // socket alive or else this FD may get reused and corrupted (close-after-use or unrelated use).
+    serverSocket = new LocalServerSocket(boundSocket.getFileDescriptor());
   }
 
   @Override
   public Socket accept() throws IOException {
-    final LocalSocket socket = localSocket.accept();
+    final LocalSocket socket = serverSocket.accept();
     synchronized (this) {
       if (timeout != null) {
         socket.setSoTimeout(timeout);
@@ -54,7 +54,8 @@ class UdsServerSocket extends ServerSocket {
     if (closed) {
       return;
     }
-    localSocket.close();
+    serverSocket.close();
+    boundSocket.close();
     closed = true;
   }
 
