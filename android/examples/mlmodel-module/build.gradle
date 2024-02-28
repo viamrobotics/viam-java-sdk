@@ -1,0 +1,48 @@
+buildscript {
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.2'
+    }
+}
+
+plugins {
+    id 'com.viam.sdk.android.module' version '1.0-SNAPSHOT'
+}
+
+module {
+    mainEntryClass = "com.viam.sdk.android.examples.module.MNISTMLModelModule"
+}
+
+android {
+    namespace 'com.viam.sdk.android.examples.module'
+
+    defaultConfig {
+        minSdkVersion min_api
+        targetSdkVersion target_api
+        compileSdk target_api
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            // Note: Change this to your ABI (https://developer.android.com/ndk/guides/abis)
+            // DLJ is large so we need to select just one version of it
+            //noinspection ChromeOsAbiSupport
+            abiFilters 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation project(':android:viam-android-sdk')
+    implementation project(':android:services:viam-android-sdk-mlmodel-service')
+    implementation 'ai.djl:model-zoo:0.26.0'
+}

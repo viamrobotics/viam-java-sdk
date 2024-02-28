@@ -7,19 +7,27 @@ pluginManagement {
 rootProject.name = 'Viam-SDK'
 
 include ':core:sdk',
+        ':core:services:mlmodel',
 
         ':java:sdk',
+        ':java:services:mlmodel',
         ':java:examples',
 
         ':android:sdk',
+        ':android:services:mlmodel',
         ':android:module-plugin',
         ':android:examples:simple',
-        ':android:examples:module'
+        ':android:examples:module',
+        ':android:examples:mlmodel-module'
 
 project(':core:sdk').name = 'viam-core-sdk'
+project(':core:services:mlmodel').name = 'viam-core-sdk-mlmodel-service'
 project(':java:sdk').name = 'viam-java-sdk'
+project(':java:services:mlmodel').name = 'viam-java-sdk-mlmodel-service'
 project(':java:examples').name = 'viam-java-sdk-examples'
 project(':android:sdk').name = 'viam-android-sdk'
+project(':android:services:mlmodel').name = 'viam-android-sdk-mlmodel-service'
 project(':android:module-plugin').name = 'viam-android-module'
 project(':android:examples:simple').name = 'viam-android-sdk-examples-simple'
 project(':android:examples:module').name = 'viam-android-sdk-examples-module'
+project(':android:examples:mlmodel-module').name = 'viam-android-sdk-examples-mlmodel-module'

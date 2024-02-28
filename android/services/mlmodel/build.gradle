@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+ext.pomDisplayName = "Viam Android SDK - MLModel Service"
+
+buildscript {
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.2'
+    }
+}
+
+
+android {
+    defaultConfig {
+        compileSdk target_api
+        minSdkVersion min_api
+        targetSdkVersion target_api
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    publishing {
+        multipleVariants {
+            allVariants()
+            withJavadocJar()
+        }
+
+    }
+
+    namespace 'com.viam.sdk.android.services.mlmodel'
+}
+
+dependencies {
+    api project(':core:services:viam-core-sdk-mlmodel-service')
+    implementation "ai.djl.android:core:0.26.0"
+    runtimeOnly "ai.djl.pytorch:pytorch-engine:0.26.0"
+    runtimeOnly "ai.djl.android:pytorch-native:0.26.0"
+    runtimeOnly "ai.djl.android:onnxruntime:0.26.0"
+    runtimeOnly 'uk.uuid.slf4j:slf4j-android:2.0.7-0'
+}

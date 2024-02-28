@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+
+ext.pomDisplayName = "Viam Core SDK - MLModel Service"
+
+dependencies {
+    implementation project(':core:viam-core-sdk')
+
+    // MLModel Service
+    api platform("ai.djl:bom:0.26.0")
+    api "ai.djl:api"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
