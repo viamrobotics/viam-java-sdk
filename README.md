@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-* JDK 21+ (source is Java 11 compatible)
+* JDK 21+ (source is Java 11 compatible) (be sure to set `JAVA_HOME`)
 * Run `make setup buf`
 
 ## Pure Java SDK

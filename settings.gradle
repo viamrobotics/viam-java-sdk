@@ -1,3 +1,9 @@
+pluginManagement {
+    // Note: including this along with the include as a subproject will cause duplicate content
+    // roots. Just don't worry about it, it's not worth figuring out :)
+    includeBuild("android/module-plugin")
+}
+
 rootProject.name = 'Viam-SDK'
 
 include ':core:sdk',
@@ -6,10 +12,14 @@ include ':core:sdk',
         ':java:examples',
 
         ':android:sdk',
-        ':android:examples:simple'
+        ':android:module-plugin',
+        ':android:examples:simple',
+        ':android:examples:module'
 
 project(':core:sdk').name = 'viam-core-sdk'
 project(':java:sdk').name = 'viam-java-sdk'
 project(':java:examples').name = 'viam-java-sdk-examples'
 project(':android:sdk').name = 'viam-android-sdk'
+project(':android:module-plugin').name = 'viam-android-module'
 project(':android:examples:simple').name = 'viam-android-sdk-examples-simple'
+project(':android:examples:module').name = 'viam-android-sdk-examples-module'

@@ -5,7 +5,7 @@ ext.pomDisplayName = "Viam Java SDK"
 dependencies {
     api project(':core:viam-core-sdk')
     runtimeOnly 'io.grpc:grpc-netty-shaded:1.61.1'
-    implementation "dev.onvoid.webrtc:webrtc-java:0.8.0"
+    api "dev.onvoid.webrtc:webrtc-java:0.8.0"
     // NOTE(erd): can only use one (os,arch) pair of these at a time unless we do a more specific build time
     // declaration based on arch
 //    implementation group: "dev.onvoid.webrtc", name: "webrtc-java", version: "0.8.0", classifier: "windows-x86_64"
