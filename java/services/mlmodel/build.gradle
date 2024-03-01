@@ -1,0 +1,17 @@
+apply plugin: 'java-library'
+
+ext.pomDisplayName = "Viam Java SDK - MLModel Service"
+
+dependencies {
+    api project(':core:services:viam-core-sdk-mlmodel-service')
+    implementation "ai.djl:core:0.26.0"
+    runtimeOnly "ai.djl.pytorch:pytorch-engine:0.26.0"
+    runtimeOnly "ai.djl.pytorch:pytorch-native-auto:0.26.0"
+    runtimeOnly "ai.djl.onnxruntime:onnxruntime-engine:0.26.0"
+    runtimeOnly "ai.djl.onnxruntime:onnxruntime-native-auto:0.26.0"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
