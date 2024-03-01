@@ -74,7 +74,6 @@ public class MNISTMLModelModule {
       try {
         Files.createDirectories(tmpPath);
         modelFile = Paths.get(tmpPath.toString(), modelFileName).toFile();
-        modelFile.deleteOnExit();
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
