@@ -66,8 +66,11 @@ public class FakeContext extends Context {
     // hidden api
     // https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/app/ActivityThread.java#L2575
     try {
-      return (PackageManager) Class.forName("android.app.ActivityThread").getMethod("getPackageManager").invoke(null, (Object[]) null);
-    } catch (ClassNotFoundException | InvocationTargetException | UnsupportedOperationException | NoSuchMethodException | IllegalAccessException  e) {
+      // Class IPackageManager = Class.forName("android.app.IPackageManager");
+      Class ApplicationPackageManager = Class.forName("android.app.ApplicationPackageManager");
+      Object ipm = Class.forName("android.app.ActivityThread").getMethod("getPackageManager").invoke(null, (Object[]) null);
+      return (PackageManager) ApplicationPackageManager.getDeclaredConstructors()[0].newInstance(this, ipm);
+    } catch (ClassNotFoundException | InvocationTargetException | UnsupportedOperationException | NoSuchMethodException | IllegalAccessException | InstantiationException e) {
        throw new UnsupportedOperationException("getPackageManager, " + e);
     }
   }
