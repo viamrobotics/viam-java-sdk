@@ -77,8 +77,7 @@ public class FakeContext extends Context {
     }
   }
 
-  public static Context getSystemContext() {
-    // warning: race condition
+  public static synchronized Context getSystemContext() {
     if (systemContext == null) {
       systemContext = createSystemContext();
     }
