@@ -35,6 +35,7 @@ import java.io.InputStream;
 import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.function.Function;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * @noinspection NullableProblems
@@ -62,7 +63,13 @@ public class FakeContext extends Context {
 
   @Override
   public PackageManager getPackageManager() {
-    throw new UnsupportedOperationException("getPackageManager");
+    // hidden api
+    // https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/app/ActivityThread.java#L2575
+    try {
+      return (PackageManager) Class.forName("android.app.ActivityThread").getMethod("getPackageManager").invoke(null, (Object[]) null);
+    } catch (ClassNotFoundException | InvocationTargetException | UnsupportedOperationException | NoSuchMethodException | IllegalAccessException  e) {
+       throw new UnsupportedOperationException("getPackageManager, " + e);
+    }
   }
 
   @Override
