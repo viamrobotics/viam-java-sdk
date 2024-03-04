@@ -36,6 +36,7 @@ import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.function.Function;
 import java.lang.reflect.InvocationTargetException;
+import android.content.ContextWrapper;
 
 /**
  * @noinspection NullableProblems
@@ -61,18 +62,19 @@ public class FakeContext extends Context {
     throw new UnsupportedOperationException("getResources");
   }
 
-  @Override
-  public PackageManager getPackageManager() {
-    // hidden api
-    // https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/app/ActivityThread.java#L2575
+  // create a ContextImpl instance with reflection.
+  public static ContextWrapper createContextImpl() {
     try {
-      // Class IPackageManager = Class.forName("android.app.IPackageManager");
-      Class ApplicationPackageManager = Class.forName("android.app.ApplicationPackageManager");
-      Object ipm = Class.forName("android.app.ActivityThread").getMethod("getPackageManager").invoke(null, (Object[]) null);
-      return (PackageManager) ApplicationPackageManager.getDeclaredConstructors()[0].newInstance(this, ipm);
-    } catch (ClassNotFoundException | InvocationTargetException | UnsupportedOperationException | NoSuchMethodException | IllegalAccessException | InstantiationException e) {
+      Class ContextImpl = Class.forName("android.app.ContextImpl");
+      return (ContextWrapper) ContextImpl.getMethod("createSystemContext").invoke(null, new Object[]{null});
+    } catch (ClassNotFoundException | InvocationTargetException | UnsupportedOperationException | NoSuchMethodException | IllegalAccessException e) {
        throw new UnsupportedOperationException("getPackageManager, " + e);
     }
+  }
+
+  @Override
+  public PackageManager getPackageManager() {
+    return createContextImpl().getPackageManager();
   }
 
   @Override
