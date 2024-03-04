@@ -45,7 +45,7 @@ public class FakeContext extends Context {
 
   private final String filesDir;
   private final ContentResolver resolver;
-  static Context systemContext = null;
+  private static Context systemContext = null;
 
   public FakeContext(final String filesDir,
       final Function<Context, ContentResolver> resolverFactory) {
@@ -64,7 +64,7 @@ public class FakeContext extends Context {
   }
 
   // create a ContextImpl instance with reflection.
-  public static Context createContextImpl() {
+  static Context createSystemContext() {
     try {
       Class ContextImpl = Class.forName("android.app.ContextImpl");
       Class ActivityThread = Class.forName("android.app.ActivityThread");
@@ -80,7 +80,7 @@ public class FakeContext extends Context {
   public static Context getSystemContext() {
     // warning: race condition
     if (systemContext == null) {
-      systemContext = createContextImpl();
+      systemContext = createSystemContext();
     }
     return systemContext;
   }
