@@ -35,6 +35,8 @@ import java.io.InputStream;
 import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.function.Function;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * @noinspection NullableProblems
@@ -43,6 +45,7 @@ public class FakeContext extends Context {
 
   private final String filesDir;
   private final ContentResolver resolver;
+  private static Context systemContext = null;
 
   public FakeContext(final String filesDir,
       final Function<Context, ContentResolver> resolverFactory) {
@@ -60,9 +63,30 @@ public class FakeContext extends Context {
     throw new UnsupportedOperationException("getResources");
   }
 
+  // create a ContextImpl instance with reflection.
+  static Context createSystemContext() {
+    try {
+      Class ContextImpl = Class.forName("android.app.ContextImpl");
+      Class ActivityThread = Class.forName("android.app.ActivityThread");
+      Object thread = ActivityThread.getDeclaredConstructors()[0].newInstance();
+      Method createSystemContext = ContextImpl.getDeclaredMethod("createSystemContext", ActivityThread);
+      createSystemContext.setAccessible(true);
+      return (Context) createSystemContext.invoke(null, new Object[]{thread});
+    } catch (ClassNotFoundException | InvocationTargetException | UnsupportedOperationException | NoSuchMethodException | IllegalAccessException | InstantiationException e) {
+       throw new UnsupportedOperationException("getPackageManager, " + e + ", cause " + e.getCause());
+    }
+  }
+
+  public static synchronized Context getSystemContext() {
+    if (systemContext == null) {
+      systemContext = createSystemContext();
+    }
+    return systemContext;
+  }
+
   @Override
   public PackageManager getPackageManager() {
-    throw new UnsupportedOperationException("getPackageManager");
+    return getSystemContext().getPackageManager();
   }
 
   @Override
