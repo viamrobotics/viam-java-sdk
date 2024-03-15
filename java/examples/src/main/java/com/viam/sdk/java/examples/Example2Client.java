@@ -19,23 +19,18 @@ public class Example2Client {
 
     final DialOptions<MediaStream> dialOpts = new DialOptions<>();
     dialOpts.webrtcOptions = new DialWebRTCOptions<>();
-    dialOpts.webrtcOptions.signalingInsecure = true;
-    dialOpts.webrtcOptions.signalingServerAddress = "localhost:8080";
+    dialOpts.webrtcOptions.signalingServerAddress = "app.viam.com:443";
+    dialOpts.webrtcOptions.signalingAuthEntity = "<API_KEY_ID>";
     dialOpts.webrtcOptions.signalingCredentials = Auth.Credentials.newBuilder()
         .setType("api-key")
-        .setPayload("sosecret")
+        .setPayload("<API_KEY>")
         .build();
 
     final Logger logger = Logger.getAnonymousLogger();
-    robotClientFactory.dialWebRTC("something-unique",
+    robotClientFactory.dialWebRTC("<CLOUD_URL>",
             new Options.Builder<MediaStream>().setDialOptions(dialOpts).build())
         .thenAcceptAsync((client) -> {
           logger.info(client.getResourceNames().toString());
-
-          client.addStream("camera1");
-
-          final MovementSensor sensor = MovementSensor.fromRobot(client, "gps1");
-          logger.info(sensor.getPosition(Optional.empty()).getCoordinate().toString());
 
           client.close();
           robotClientFactory.close();
