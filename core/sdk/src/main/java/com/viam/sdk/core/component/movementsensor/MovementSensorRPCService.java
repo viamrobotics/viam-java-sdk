@@ -33,6 +33,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * gRPC Service for a MovementSensor component
+ */
 public class MovementSensorRPCService extends
     MovementSensorServiceGrpc.MovementSensorServiceImplBase implements
     ResourceRPCService<MovementSensor> {

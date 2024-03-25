@@ -12,6 +12,9 @@ import io.grpc.stub.StreamObserver;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * gRPC Service for a Generic component
+ */
 public class GenericRPCService extends GenericServiceGrpc.GenericServiceImplBase implements
     ResourceRPCService<Generic> {
 
