@@ -12,6 +12,9 @@ import io.grpc.stub.StreamObserver;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * gRPC Service for a Gripper component
+ */
 public class GripperRPCService extends GripperServiceGrpc.GripperServiceImplBase implements
     ResourceRPCService<com.viam.sdk.core.component.gripper.Gripper> {
 

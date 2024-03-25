@@ -13,6 +13,9 @@ import com.viam.sdk.core.resource.Subtype;
 import com.viam.sdk.core.robot.RobotClient;
 import java.util.Optional;
 
+/**
+ * Gripper represents a physical robotic gripper.
+ */
 public abstract class Gripper extends Component {
 
   public static final Subtype SUBTYPE = new Subtype(
@@ -38,10 +41,21 @@ public abstract class Gripper extends Component {
     super(SUBTYPE, named(name));
   }
 
+  /**
+   * Get the ResourceName of the component
+   * @param name the name of the component
+   * @return     the component's ResourceName
+   */
   public static Common.ResourceName named(final String name) {
     return Resource.named(SUBTYPE, name);
   }
 
+  /**
+   * Get the component with the provided name from the provided robot.
+   * @param robot the RobotClient
+   * @param name  the name of the component
+   * @return      the component
+   */
   public static Gripper fromRobot(final RobotClient robot, final String name) {
     return robot.getResource(Gripper.class, named(name));
   }

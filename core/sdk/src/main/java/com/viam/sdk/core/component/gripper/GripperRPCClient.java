@@ -14,6 +14,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * gRPC Client for a Gripper component
+ */
 public class GripperRPCClient extends Gripper {
 
   private final GripperServiceGrpc.GripperServiceBlockingStub client;

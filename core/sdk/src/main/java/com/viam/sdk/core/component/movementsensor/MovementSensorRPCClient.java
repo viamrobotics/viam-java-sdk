@@ -24,6 +24,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+/**
+ * gRPC Client for a MovementSensor component
+ */
 public class MovementSensorRPCClient extends MovementSensor {
 
   private final MovementSensorServiceGrpc.MovementSensorServiceBlockingStub client;
