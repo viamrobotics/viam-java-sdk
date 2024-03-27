@@ -1,3 +1,7 @@
+plugins {
+    id "com.github.hierynomus.license-report" version "0.16.1"
+}
+
 group 'com.viam'
 version '0.0.1'
 
@@ -51,6 +55,22 @@ subprojects {
         if (project.name.contains("example")) {
             return
         }
+
+        if (project.name == 'viam-java-sdk-mlmodel-service') {
+            // Ignore dependencies in this project, as they will be checked in
+            // viam-core-sdk-mlmodel-service
+            downloadLicenses {
+                // Setting 'runtime' will fail to pick up any dependencies, effectively
+                // ignoring this project.
+                dependencyConfiguration = 'runtime'
+            }
+        } else {
+            downloadLicenses {
+                includeProjectDependencies = true
+                dependencyConfiguration = 'runtimeClasspath'
+            }
+        }
+
         if (project.plugins.hasPlugin("java")) {
             compileTestJava {
                 sourceCompatibility = JavaVersion.VERSION_11

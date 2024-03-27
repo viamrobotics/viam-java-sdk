@@ -1,0 +1,56 @@
+---
+- - :permit
+  - Apache 2.0
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2024-03-27 22:20:13.686526678 Z
+- - :permit
+  - MIT
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2024-03-27 22:20:13.686526678 Z
+- - :permit
+  - BSD-3-Clause
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2024-03-27 22:20:13.686526678 Z
+- - :permit
+  - BSD
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2024-03-27 22:20:13.686526678 Z
+- - :permit
+  - Simplified BSD
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2024-03-27 22:20:13.686526678 Z
+- - :permit
+  - ISC License (ISCL)
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2024-03-27 22:20:13.686526678 Z
+- - :permit
+  - Historical Permission Notice and Disclaimer (HPND)
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2022-09-16 15:36:22.534210576 Z
+- - :permit
+  - Public Domain
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2024-03-27 22:20:13.686526678 Z
+- - :license
+  - viam-core-sdk
+  - Apache 2.0
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2024-03-27 22:23:35.592731361 Z
