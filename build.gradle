@@ -51,6 +51,7 @@ subprojects {
         if (project.name.contains("example")) {
             return
         }
+
         if (project.plugins.hasPlugin("java")) {
             compileTestJava {
                 sourceCompatibility = JavaVersion.VERSION_11

@@ -1,0 +1,28 @@
+name: License Finder
+
+on:
+  workflow_dispatch:
+  workflow_call:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  license_finder:
+    if: github.repository_owner == 'viamrobotics'
+    name: Audit 3rd-Party Licenses
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/viamrobotics/canon:amd64-cache
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4.2.1
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Run license finder
+        run: license_finder
