@@ -1,14 +1,17 @@
-apply plugin: 'com.android.library'
-apply plugin: 'maven-publish'
-
-ext.pomDisplayName = "Viam Android SDK"
-
 buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:8.2.2'
     }
 }
 
+plugins {
+    id "com.github.hierynomus.license-report" version "0.16.1"
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+ext.pomDisplayName = "Viam Android SDK"
 
 android {
     defaultConfig {
@@ -53,4 +56,9 @@ dependencies {
     implementation 'io.grpc:grpc-okhttp:1.61.1'
     implementation 'io.grpc:grpc-android:1.61.1'
     implementation 'commons-io:commons-io:2.15.1'
+}
+
+downloadLicenses {
+    includeProjectDependencies = true
+    dependencyConfiguration = 'runtimeClasspath'
 }

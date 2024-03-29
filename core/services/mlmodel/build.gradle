@@ -1,3 +1,7 @@
+plugins {
+    id "com.github.hierynomus.license-report" version "0.16.1"
+}
+
 apply plugin: 'java-library'
 
 ext.pomDisplayName = "Viam Core SDK - MLModel Service"
@@ -13,4 +17,9 @@ dependencies {
 java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
+}
+
+downloadLicenses {
+    includeProjectDependencies = true
+    dependencyConfiguration = 'runtimeClasspath'
 }
