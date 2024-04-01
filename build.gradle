@@ -1,5 +1,21 @@
+plugins {
+    id "io.freefair.aggregate-javadoc" version "8.6"
+}
+
 group 'com.viam'
 version '0.0.1'
+
+repositories {
+    google()
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    javadoc project(':core:viam-core-sdk')
+    javadoc project(':core:services:viam-core-sdk-mlmodel-service')
+    javadoc project(':java:viam-java-sdk')
+}
 
 subprojects {
     group = rootProject.group
