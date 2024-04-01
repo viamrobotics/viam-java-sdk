@@ -11,10 +11,11 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     container:
+      # Use Android image because we also run Android tests
       image: cimg/android:2024.01.1
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Test
-        run: ./gradlew test -x viam-core-sdk
+        run: ./gradlew test
