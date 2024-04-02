@@ -92,7 +92,7 @@ public abstract class MovementSensor extends Component {
   public abstract GetAccuracyResponse getAccuracy(final Optional<Struct> extra);
 
   /**
-   * Get the current linear acceleration as a ``Vector3`` with x, y, and z axes represented in m/sec^2
+   * Get the current linear acceleration as a Vector3 with x, y, and z axes represented in m/sec^2
    *
    * @return the Vector3 representation of the linear acceleration in m/sec^2
    */
