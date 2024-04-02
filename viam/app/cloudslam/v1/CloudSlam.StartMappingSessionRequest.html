@@ -150,23 +150,26 @@ implements <a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="i
 <div class="col-second odd-row-color"><code><a href="#MAP_NAME_FIELD_NUMBER" class="member-name-link">MAP_NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#ORGANIZATION_ID_FIELD_NUMBER" class="member-name-link">ORGANIZATION_ID_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MODULE_FIELD_NUMBER" class="member-name-link">MODULE_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#ROBOT_ID_FIELD_NUMBER" class="member-name-link">ROBOT_ID_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#ORGANIZATION_ID_FIELD_NUMBER" class="member-name-link">ORGANIZATION_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#SENSORS_FIELD_NUMBER" class="member-name-link">SENSORS_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#ROBOT_ID_FIELD_NUMBER" class="member-name-link">ROBOT_ID_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#SLAM_ALGORITHM_PARAMS_FIELD_NUMBER" class="member-name-link">SLAM_ALGORITHM_PARAMS_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#SENSORS_FIELD_NUMBER" class="member-name-link">SENSORS_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code>static final int</code></div>
-<div class="col-second even-row-color"><code><a href="#SLAM_VERSION_FIELD_NUMBER" class="member-name-link">SLAM_VERSION_FIELD_NUMBER</a></code></div>
+<div class="col-second even-row-color"><code><a href="#SLAM_CONFIG_FIELD_NUMBER" class="member-name-link">SLAM_CONFIG_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><code>static final int</code></div>
-<div class="col-second odd-row-color"><code><a href="#VIAM_SERVER_VERSION_FIELD_NUMBER" class="member-name-link">VIAM_SERVER_VERSION_FIELD_NUMBER</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#SLAM_VERSION_FIELD_NUMBER" class="member-name-link">SLAM_VERSION_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#VIAM_SERVER_VERSION_FIELD_NUMBER" class="member-name-link">VIAM_SERVER_VERSION_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageV3">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageV3</h3>
@@ -242,6 +245,16 @@ implements <a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="i
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string map_name = 3 [json_name = "mapName"];</code></div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CloudSlam.Module.html" title="class in viam.app.cloudslam.v1">CloudSlam.Module</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModule()" class="member-name-link">getModule</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CloudSlam.ModuleOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.ModuleOrBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getModuleOrBuilder()" class="member-name-link">getModuleOrBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code></div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -294,14 +307,14 @@ implements <a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="i
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSerializedSize()" class="member-name-link">getSerializedSize</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Struct</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSlamAlgorithmParams()" class="member-name-link">getSlamAlgorithmParams</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSlamConfig()" class="member-name-link">getSlamConfig</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code></div>
+<div class="block"><code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.StructOrBuilder</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSlamAlgorithmParamsOrBuilder()" class="member-name-link">getSlamAlgorithmParamsOrBuilder</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSlamConfigOrBuilder()" class="member-name-link">getSlamConfigOrBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code></div>
+<div class="block"><code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSlamVersion()" class="member-name-link">getSlamVersion</a>()</code></div>
@@ -336,82 +349,87 @@ implements <a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="i
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSlamAlgorithmParams()" class="member-name-link">hasSlamAlgorithmParams</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasModule()" class="member-name-link">hasModule</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code></div>
+<div class="block"><code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#internalGetFieldAccessorTable()" class="member-name-link">internalGetFieldAccessorTable</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isInitialized()" class="member-name-link">isInitialized</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSlamConfig()" class="member-name-link">hasSlamConfig</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#internalGetFieldAccessorTable()" class="member-name-link">internalGetFieldAccessorTable</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.Builder.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isInitialized()" class="member-name-link">isInitialized</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.Builder.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest)" class="member-name-link">newBuilder</a><wbr>(<a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a>&nbsp;prototype)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder()" class="member-name-link">newBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CloudSlam.StartMappingSessionRequest.Builder.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newBuilderForType()" class="member-name-link">newBuilderForType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="CloudSlam.StartMappingSessionRequest.Builder.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent)" class="member-name-link">newBuilderForType</a><wbr>(com.google.protobuf.GeneratedMessageV3.BuilderParent&nbsp;parent)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.Builder.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#newBuilder(viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest)" class="member-name-link">newBuilder</a><wbr>(<a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a>&nbsp;prototype)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CloudSlam.StartMappingSessionRequest.Builder.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newBuilderForType()" class="member-name-link">newBuilderForType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newInstance(com.google.protobuf.GeneratedMessageV3.UnusedPrivateParameter)" class="member-name-link">newInstance</a><wbr>(com.google.protobuf.GeneratedMessageV3.UnusedPrivateParameter&nbsp;unused)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="CloudSlam.StartMappingSessionRequest.Builder.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newBuilderForType(com.google.protobuf.GeneratedMessageV3.BuilderParent)" class="member-name-link">newBuilderForType</a><wbr>(com.google.protobuf.GeneratedMessageV3.BuilderParent&nbsp;parent)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser&lt;<a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CloudSlam.StartMappingSessionRequest.Builder.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toBuilder()" class="member-name-link">toBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#writeTo(com.google.protobuf.CodedOutputStream)" class="member-name-link">writeTo</a><wbr>(com.google.protobuf.CodedOutputStream&nbsp;output)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newInstance(com.google.protobuf.GeneratedMessageV3.UnusedPrivateParameter)" class="member-name-link">newInstance</a><wbr>(com.google.protobuf.GeneratedMessageV3.UnusedPrivateParameter&nbsp;unused)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseDelimitedFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseDelimitedFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(byte%5B%5D,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(byte[]&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.ByteString,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.ByteString&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.io.InputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/InputStream.html" title="class or interface in java.io" class="external-link">InputStream</a>&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parseFrom(java.nio.ByteBuffer,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">parseFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/ByteBuffer.html" title="class or interface in java.nio" class="external-link">ByteBuffer</a>&nbsp;data,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.google.protobuf.Parser&lt;<a href="CloudSlam.StartMappingSessionRequest.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#parser()" class="member-name-link">parser</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CloudSlam.StartMappingSessionRequest.Builder.html" title="class in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toBuilder()" class="member-name-link">toBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#writeTo(com.google.protobuf.CodedOutputStream)" class="member-name-link">writeTo</a><wbr>(com.google.protobuf.CodedOutputStream&nbsp;output)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -557,14 +575,14 @@ implements <a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="i
 </section>
 </li>
 <li>
-<section class="detail" id="SLAM_ALGORITHM_PARAMS_FIELD_NUMBER">
-<h3>SLAM_ALGORITHM_PARAMS_FIELD_NUMBER</h3>
-<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">SLAM_ALGORITHM_PARAMS_FIELD_NUMBER</span></div>
+<section class="detail" id="SLAM_CONFIG_FIELD_NUMBER">
+<h3>SLAM_CONFIG_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">SLAM_CONFIG_FIELD_NUMBER</span></div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
 <ul class="see-list">
-<li><a href="../../../../constant-values.html#viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest.SLAM_ALGORITHM_PARAMS_FIELD_NUMBER">Constant Field Values</a></li>
+<li><a href="../../../../constant-values.html#viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest.SLAM_CONFIG_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -579,6 +597,20 @@ implements <a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="i
 <dd>
 <ul class="see-list">
 <li><a href="../../../../constant-values.html#viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest.EXISTING_MAP_VERSION_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="MODULE_FIELD_NUMBER">
+<h3>MODULE_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">MODULE_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../constant-values.html#viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest.MODULE_FIELD_NUMBER">Constant Field Values</a></li>
 </ul>
 </dd>
 </dl>
@@ -883,39 +915,39 @@ implements <a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="i
 </section>
 </li>
 <li>
-<section class="detail" id="hasSlamAlgorithmParams()">
-<h3>hasSlamAlgorithmParams</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasSlamAlgorithmParams</span>()</div>
-<div class="block"><code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code></div>
+<section class="detail" id="hasSlamConfig()">
+<h3>hasSlamConfig</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasSlamConfig</span>()</div>
+<div class="block"><code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html#hasSlamAlgorithmParams()">hasSlamAlgorithmParams</a></code>&nbsp;in interface&nbsp;<code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequestOrBuilder</a></code></dd>
+<dd><code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html#hasSlamConfig()">hasSlamConfig</a></code>&nbsp;in interface&nbsp;<code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>Whether the slamAlgorithmParams field is set.</dd>
+<dd>Whether the slamConfig field is set.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getSlamAlgorithmParams()">
-<h3>getSlamAlgorithmParams</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getSlamAlgorithmParams</span>()</div>
-<div class="block"><code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code></div>
+<section class="detail" id="getSlamConfig()">
+<h3>getSlamConfig</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getSlamConfig</span>()</div>
+<div class="block"><code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html#getSlamAlgorithmParams()">getSlamAlgorithmParams</a></code>&nbsp;in interface&nbsp;<code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequestOrBuilder</a></code></dd>
+<dd><code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html#getSlamConfig()">getSlamConfig</a></code>&nbsp;in interface&nbsp;<code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
-<dd>The slamAlgorithmParams.</dd>
+<dd>The slamConfig.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getSlamAlgorithmParamsOrBuilder()">
-<h3>getSlamAlgorithmParamsOrBuilder</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.StructOrBuilder</span>&nbsp;<span class="element-name">getSlamAlgorithmParamsOrBuilder</span>()</div>
-<div class="block"><code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code></div>
+<section class="detail" id="getSlamConfigOrBuilder()">
+<h3>getSlamConfigOrBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.StructOrBuilder</span>&nbsp;<span class="element-name">getSlamConfigOrBuilder</span>()</div>
+<div class="block"><code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code></div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html#getSlamAlgorithmParamsOrBuilder()">getSlamAlgorithmParamsOrBuilder</a></code>&nbsp;in interface&nbsp;<code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequestOrBuilder</a></code></dd>
+<dd><code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html#getSlamConfigOrBuilder()">getSlamConfigOrBuilder</a></code>&nbsp;in interface&nbsp;<code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequestOrBuilder</a></code></dd>
 </dl>
 </section>
 </li>
@@ -942,6 +974,43 @@ implements <a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="i
 <dd><code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html#getExistingMapVersionBytes()">getExistingMapVersionBytes</a></code>&nbsp;in interface&nbsp;<code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for existingMapVersion.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasModule()">
+<h3>hasModule</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasModule</span>()</div>
+<div class="block"><code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html#hasModule()">hasModule</a></code>&nbsp;in interface&nbsp;<code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the module field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getModule()">
+<h3>getModule</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CloudSlam.Module.html" title="class in viam.app.cloudslam.v1">CloudSlam.Module</a></span>&nbsp;<span class="element-name">getModule</span>()</div>
+<div class="block"><code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html#getModule()">getModule</a></code>&nbsp;in interface&nbsp;<code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The module.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getModuleOrBuilder()">
+<h3>getModuleOrBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CloudSlam.ModuleOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.ModuleOrBuilder</a></span>&nbsp;<span class="element-name">getModuleOrBuilder</span>()</div>
+<div class="block"><code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html#getModuleOrBuilder()">getModuleOrBuilder</a></code>&nbsp;in interface&nbsp;<code><a href="CloudSlam.StartMappingSessionRequestOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.StartMappingSessionRequestOrBuilder</a></code></dd>
 </dl>
 </section>
 </li>

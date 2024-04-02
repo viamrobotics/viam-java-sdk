@@ -140,6 +140,9 @@ implements <a href="Slam.GetPointCloudMapRequestOrBuilder.html" title="interface
 <div class="col-first even-row-color"><code>static final int</code></div>
 <div class="col-second even-row-color"><code><a href="#NAME_FIELD_NUMBER" class="member-name-link">NAME_FIELD_NUMBER</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><code>static final int</code></div>
+<div class="col-second odd-row-color"><code><a href="#RETURN_EDITED_MAP_FIELD_NUMBER" class="member-name-link">RETURN_EDITED_MAP_FIELD_NUMBER</a></code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageV3">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageV3</h3>
@@ -190,12 +193,26 @@ implements <a href="Slam.GetPointCloudMapRequestOrBuilder.html" title="interface
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Parser&lt;<a href="Slam.GetPointCloudMapRequest.html" title="class in com.viam.service.slam.v1">Slam.GetPointCloudMapRequest</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getParserForType()" class="member-name-link">getParserForType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSerializedSize()" class="member-name-link">getSerializedSize</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReturnEditedMap()" class="member-name-link">getReturnEditedMap</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ For SLAM services that implement handling an edited map, this boolean
+ should indicate whether to return that edited map.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSerializedSize()" class="member-name-link">getSerializedSize</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasReturnEditedMap()" class="member-name-link">hasReturnEditedMap</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ For SLAM services that implement handling an edited map, this boolean
+ should indicate whether to return that edited map.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#internalGetFieldAccessorTable()" class="member-name-link">internalGetFieldAccessorTable</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -314,6 +331,20 @@ implements <a href="Slam.GetPointCloudMapRequestOrBuilder.html" title="interface
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="RETURN_EDITED_MAP_FIELD_NUMBER">
+<h3>RETURN_EDITED_MAP_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">RETURN_EDITED_MAP_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../../../constant-values.html#com.viam.service.slam.v1.Slam.GetPointCloudMapRequest.RETURN_EDITED_MAP_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -379,6 +410,44 @@ implements <a href="Slam.GetPointCloudMapRequestOrBuilder.html" title="interface
 <dd><code><a href="Slam.GetPointCloudMapRequestOrBuilder.html#getNameBytes()">getNameBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Slam.GetPointCloudMapRequestOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.GetPointCloudMapRequestOrBuilder</a></code></dd>
 <dt>Returns:</dt>
 <dd>The bytes for name.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasReturnEditedMap()">
+<h3>hasReturnEditedMap</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasReturnEditedMap</span>()</div>
+<div class="block"><pre>
+ For SLAM services that implement handling an edited map, this boolean
+ should indicate whether to return that edited map. If the SLAM service
+ does not handle edited maps, the unedited map will be returned instead.
+ </pre>
+
+ <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Slam.GetPointCloudMapRequestOrBuilder.html#hasReturnEditedMap()">hasReturnEditedMap</a></code>&nbsp;in interface&nbsp;<code><a href="Slam.GetPointCloudMapRequestOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.GetPointCloudMapRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the returnEditedMap field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getReturnEditedMap()">
+<h3>getReturnEditedMap</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getReturnEditedMap</span>()</div>
+<div class="block"><pre>
+ For SLAM services that implement handling an edited map, this boolean
+ should indicate whether to return that edited map. If the SLAM service
+ does not handle edited maps, the unedited map will be returned instead.
+ </pre>
+
+ <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Slam.GetPointCloudMapRequestOrBuilder.html#getReturnEditedMap()">getReturnEditedMap</a></code>&nbsp;in interface&nbsp;<code><a href="Slam.GetPointCloudMapRequestOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.GetPointCloudMapRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The returnEditedMap.</dd>
 </dl>
 </section>
 </li>

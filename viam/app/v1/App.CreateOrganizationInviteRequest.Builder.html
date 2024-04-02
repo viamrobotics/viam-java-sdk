@@ -180,137 +180,161 @@ implements <a href="App.CreateOrganizationInviteRequestOrBuilder.html" title="in
 <div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clone()" class="member-name-link">clone</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.Authorization.html" title="class in viam.app.v1">App.Authorization</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizations(int)" class="member-name-link">getAuthorizations</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.Authorization.Builder.html" title="class in viam.app.v1">App.Authorization.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizationsBuilder(int)" class="member-name-link">getAuthorizationsBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSendEmailInvite()" class="member-name-link">clearSendEmailInvite</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
+<div class="block">
+ Set to true (the default) to send an email to the recipient of an invite.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.Authorization.Builder.html" title="class in viam.app.v1">App.Authorization.Builder</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizationsBuilderList()" class="member-name-link">getAuthorizationsBuilderList</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizationsCount()" class="member-name-link">getAuthorizationsCount</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.Authorization.html" title="class in viam.app.v1">App.Authorization</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizationsList()" class="member-name-link">getAuthorizationsList</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.AuthorizationOrBuilder.html" title="interface in viam.app.v1">App.AuthorizationOrBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizationsOrBuilder(int)" class="member-name-link">getAuthorizationsOrBuilder</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="App.AuthorizationOrBuilder.html" title="interface in viam.app.v1">App.AuthorizationOrBuilder</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizationsOrBuilderList()" class="member-name-link">getAuthorizationsOrBuilderList</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDefaultInstanceForType()" class="member-name-link">getDefaultInstanceForType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static final com.google.protobuf.Descriptors.Descriptor</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDescriptor()" class="member-name-link">getDescriptor</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Descriptors.Descriptor</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDescriptorForType()" class="member-name-link">getDescriptorForType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEmail()" class="member-name-link">getEmail</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string email = 2 [json_name = "email"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEmailBytes()" class="member-name-link">getEmailBytes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string email = 2 [json_name = "email"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#internalGetFieldAccessorTable()" class="member-name-link">internalGetFieldAccessorTable</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isInitialized()" class="member-name-link">isInitialized</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">mergeFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clone()" class="member-name-link">clone</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.Authorization.html" title="class in viam.app.v1">App.Authorization</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizations(int)" class="member-name-link">getAuthorizations</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.Authorization.Builder.html" title="class in viam.app.v1">App.Authorization.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizationsBuilder(int)" class="member-name-link">getAuthorizationsBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.Authorization.Builder.html" title="class in viam.app.v1">App.Authorization.Builder</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizationsBuilderList()" class="member-name-link">getAuthorizationsBuilderList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizationsCount()" class="member-name-link">getAuthorizationsCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.Authorization.html" title="class in viam.app.v1">App.Authorization</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizationsList()" class="member-name-link">getAuthorizationsList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.AuthorizationOrBuilder.html" title="interface in viam.app.v1">App.AuthorizationOrBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizationsOrBuilder(int)" class="member-name-link">getAuthorizationsOrBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="App.AuthorizationOrBuilder.html" title="interface in viam.app.v1">App.AuthorizationOrBuilder</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAuthorizationsOrBuilderList()" class="member-name-link">getAuthorizationsOrBuilderList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDefaultInstanceForType()" class="member-name-link">getDefaultInstanceForType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static final com.google.protobuf.Descriptors.Descriptor</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDescriptor()" class="member-name-link">getDescriptor</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Descriptors.Descriptor</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDescriptorForType()" class="member-name-link">getDescriptorForType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEmail()" class="member-name-link">getEmail</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string email = 2 [json_name = "email"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEmailBytes()" class="member-name-link">getEmailBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string email = 2 [json_name = "email"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOrganizationIdBytes()" class="member-name-link">getOrganizationIdBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSendEmailInvite()" class="member-name-link">getSendEmailInvite</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Set to true (the default) to send an email to the recipient of an invite.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasSendEmailInvite()" class="member-name-link">hasSendEmailInvite</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Set to true (the default) to send an email to the recipient of an invite.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#internalGetFieldAccessorTable()" class="member-name-link">internalGetFieldAccessorTable</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isInitialized()" class="member-name-link">isInitialized</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">mergeFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
  com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrom(com.google.protobuf.Message)" class="member-name-link">mergeFrom</a><wbr>(com.google.protobuf.Message&nbsp;other)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrom(com.google.protobuf.Message)" class="member-name-link">mergeFrom</a><wbr>(com.google.protobuf.Message&nbsp;other)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrom(viam.app.v1.App.CreateOrganizationInviteRequest)" class="member-name-link">mergeFrom</a><wbr>(<a href="App.CreateOrganizationInviteRequest.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest</a>&nbsp;other)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrom(viam.app.v1.App.CreateOrganizationInviteRequest)" class="member-name-link">mergeFrom</a><wbr>(<a href="App.CreateOrganizationInviteRequest.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest</a>&nbsp;other)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeUnknownFields(com.google.protobuf.UnknownFieldSet)" class="member-name-link">mergeUnknownFields</a><wbr>(com.google.protobuf.UnknownFieldSet&nbsp;unknownFields)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeUnknownFields(com.google.protobuf.UnknownFieldSet)" class="member-name-link">mergeUnknownFields</a><wbr>(com.google.protobuf.UnknownFieldSet&nbsp;unknownFields)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeAuthorizations(int)" class="member-name-link">removeAuthorizations</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeAuthorizations(int)" class="member-name-link">removeAuthorizations</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAuthorizations(int,viam.app.v1.App.Authorization)" class="member-name-link">setAuthorizations</a><wbr>(int&nbsp;index,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAuthorizations(int,viam.app.v1.App.Authorization)" class="member-name-link">setAuthorizations</a><wbr>(int&nbsp;index,
  <a href="App.Authorization.html" title="class in viam.app.v1">App.Authorization</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAuthorizations(int,viam.app.v1.App.Authorization.Builder)" class="member-name-link">setAuthorizations</a><wbr>(int&nbsp;index,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAuthorizations(int,viam.app.v1.App.Authorization.Builder)" class="member-name-link">setAuthorizations</a><wbr>(int&nbsp;index,
  <a href="App.Authorization.Builder.html" title="class in viam.app.v1">App.Authorization.Builder</a>&nbsp;builderForValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmail(java.lang.String)" class="member-name-link">setEmail</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string email = 2 [json_name = "email"];</code></div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmailBytes(com.google.protobuf.ByteString)" class="member-name-link">setEmailBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmail(java.lang.String)" class="member-name-link">setEmail</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string email = 2 [json_name = "email"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setField(com.google.protobuf.Descriptors.FieldDescriptor,java.lang.Object)" class="member-name-link">setField</a><wbr>(com.google.protobuf.Descriptors.FieldDescriptor&nbsp;field,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEmailBytes(com.google.protobuf.ByteString)" class="member-name-link">setEmailBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string email = 2 [json_name = "email"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setField(com.google.protobuf.Descriptors.FieldDescriptor,java.lang.Object)" class="member-name-link">setField</a><wbr>(com.google.protobuf.Descriptors.FieldDescriptor&nbsp;field,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrganizationId(java.lang.String)" class="member-name-link">setOrganizationId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
-</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrganizationIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setOrganizationIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrganizationId(java.lang.String)" class="member-name-link">setOrganizationId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor,int,java.lang.Object)" class="member-name-link">setRepeatedField</a><wbr>(com.google.protobuf.Descriptors.FieldDescriptor&nbsp;field,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOrganizationIdBytes(com.google.protobuf.ByteString)" class="member-name-link">setOrganizationIdBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string organization_id = 1 [json_name = "organizationId"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor,int,java.lang.Object)" class="member-name-link">setRepeatedField</a><wbr>(com.google.protobuf.Descriptors.FieldDescriptor&nbsp;field,
  int&nbsp;index,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSendEmailInvite(boolean)" class="member-name-link">setSendEmailInvite</a><wbr>(boolean&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">
+ Set to true (the default) to send an email to the recipient of an invite.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUnknownFields(com.google.protobuf.UnknownFieldSet)" class="member-name-link">setUnknownFields</a><wbr>(com.google.protobuf.UnknownFieldSet&nbsp;unknownFields)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -829,6 +853,76 @@ implements <a href="App.CreateOrganizationInviteRequestOrBuilder.html" title="in
 <h3>getAuthorizationsBuilderList</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="App.Authorization.Builder.html" title="class in viam.app.v1">App.Authorization.Builder</a>&gt;</span>&nbsp;<span class="element-name">getAuthorizationsBuilderList</span>()</div>
 <div class="block"><code>repeated .viam.app.v1.Authorization authorizations = 3 [json_name = "authorizations"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="hasSendEmailInvite()">
+<h3>hasSendEmailInvite</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasSendEmailInvite</span>()</div>
+<div class="block"><pre>
+ Set to true (the default) to send an email to the recipient of an invite. The user must accept the email to be added to the associated authorizations.
+ When set to false, the user automatically receives the associated authorization on the next login of the user with the associated email address.
+ </pre>
+
+ <code>optional bool send_email_invite = 4 [json_name = "sendEmailInvite"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.CreateOrganizationInviteRequestOrBuilder.html#hasSendEmailInvite()">hasSendEmailInvite</a></code>&nbsp;in interface&nbsp;<code><a href="App.CreateOrganizationInviteRequestOrBuilder.html" title="interface in viam.app.v1">App.CreateOrganizationInviteRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the sendEmailInvite field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSendEmailInvite()">
+<h3>getSendEmailInvite</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">getSendEmailInvite</span>()</div>
+<div class="block"><pre>
+ Set to true (the default) to send an email to the recipient of an invite. The user must accept the email to be added to the associated authorizations.
+ When set to false, the user automatically receives the associated authorization on the next login of the user with the associated email address.
+ </pre>
+
+ <code>optional bool send_email_invite = 4 [json_name = "sendEmailInvite"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="App.CreateOrganizationInviteRequestOrBuilder.html#getSendEmailInvite()">getSendEmailInvite</a></code>&nbsp;in interface&nbsp;<code><a href="App.CreateOrganizationInviteRequestOrBuilder.html" title="interface in viam.app.v1">App.CreateOrganizationInviteRequestOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The sendEmailInvite.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setSendEmailInvite(boolean)">
+<h3>setSendEmailInvite</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></span>&nbsp;<span class="element-name">setSendEmailInvite</span><wbr><span class="parameters">(boolean&nbsp;value)</span></div>
+<div class="block"><pre>
+ Set to true (the default) to send an email to the recipient of an invite. The user must accept the email to be added to the associated authorizations.
+ When set to false, the user automatically receives the associated authorization on the next login of the user with the associated email address.
+ </pre>
+
+ <code>optional bool send_email_invite = 4 [json_name = "sendEmailInvite"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The sendEmailInvite to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearSendEmailInvite()">
+<h3>clearSendEmailInvite</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="App.CreateOrganizationInviteRequest.Builder.html" title="class in viam.app.v1">App.CreateOrganizationInviteRequest.Builder</a></span>&nbsp;<span class="element-name">clearSendEmailInvite</span>()</div>
+<div class="block"><pre>
+ Set to true (the default) to send an email to the recipient of an invite. The user must accept the email to be added to the associated authorizations.
+ When set to false, the user automatically receives the associated authorization on the next login of the user with the associated email address.
+ </pre>
+
+ <code>optional bool send_email_invite = 4 [json_name = "sendEmailInvite"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
 </section>
 </li>
 <li>

@@ -113,6 +113,20 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="block">
  Name of slam service</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReturnEditedMap()" class="member-name-link">getReturnEditedMap</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ For SLAM services that implement handling an edited map, this boolean
+ should indicate whether to return that edited map.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasReturnEditedMap()" class="member-name-link">hasReturnEditedMap</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">
+ For SLAM services that implement handling an edited map, this boolean
+ should indicate whether to return that edited map.</div>
+</div>
 </div>
 </div>
 </div>
@@ -160,6 +174,40 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>The bytes for name.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasReturnEditedMap()">
+<h3>hasReturnEditedMap</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasReturnEditedMap</span>()</div>
+<div class="block"><pre>
+ For SLAM services that implement handling an edited map, this boolean
+ should indicate whether to return that edited map. If the SLAM service
+ does not handle edited maps, the unedited map will be returned instead.
+ </pre>
+
+ <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the returnEditedMap field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getReturnEditedMap()">
+<h3>getReturnEditedMap</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">getReturnEditedMap</span>()</div>
+<div class="block"><pre>
+ For SLAM services that implement handling an edited map, this boolean
+ should indicate whether to return that edited map. If the SLAM service
+ does not handle edited maps, the unedited map will be returned instead.
+ </pre>
+
+ <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The returnEditedMap.</dd>
 </dl>
 </section>
 </li>

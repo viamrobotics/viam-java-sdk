@@ -143,6 +143,9 @@ implements <a href="Module.ReadyResponseOrBuilder.html" title="interface in viam
 <div class="col-first odd-row-color"><code>static final int</code></div>
 <div class="col-second odd-row-color"><code><a href="#READY_FIELD_NUMBER" class="member-name-link">READY_FIELD_NUMBER</a></code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><code>static final int</code></div>
+<div class="col-second even-row-color"><code><a href="#WEBRTC_ANSWER_FIELD_NUMBER" class="member-name-link">WEBRTC_ANSWER_FIELD_NUMBER</a></code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.google.protobuf.GeneratedMessageV3">Fields inherited from class&nbsp;com.google.protobuf.GeneratedMessageV3</h3>
@@ -199,6 +202,16 @@ implements <a href="Module.ReadyResponseOrBuilder.html" title="interface in viam
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSerializedSize()" class="member-name-link">getSerializedSize</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWebrtcAnswer()" class="member-name-link">getWebrtcAnswer</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getWebrtcAnswerBytes()" class="member-name-link">getWebrtcAnswerBytes</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code></div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasHandlermap()" class="member-name-link">hasHandlermap</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -339,6 +352,20 @@ implements <a href="Module.ReadyResponseOrBuilder.html" title="interface in viam
 </dl>
 </section>
 </li>
+<li>
+<section class="detail" id="WEBRTC_ANSWER_FIELD_NUMBER">
+<h3>WEBRTC_ANSWER_FIELD_NUMBER</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">WEBRTC_ANSWER_FIELD_NUMBER</span></div>
+<dl class="notes">
+<dt>See Also:</dt>
+<dd>
+<ul class="see-list">
+<li><a href="../../../constant-values.html#viam.module.v1.Module.ReadyResponse.WEBRTC_ANSWER_FIELD_NUMBER">Constant Field Values</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+</li>
 </ul>
 </section>
 </li>
@@ -420,6 +447,32 @@ implements <a href="Module.ReadyResponseOrBuilder.html" title="interface in viam
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Module.ReadyResponseOrBuilder.html#getHandlermapOrBuilder()">getHandlermapOrBuilder</a></code>&nbsp;in interface&nbsp;<code><a href="Module.ReadyResponseOrBuilder.html" title="interface in viam.module.v1">Module.ReadyResponseOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getWebrtcAnswer()">
+<h3>getWebrtcAnswer</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getWebrtcAnswer</span>()</div>
+<div class="block"><code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Module.ReadyResponseOrBuilder.html#getWebrtcAnswer()">getWebrtcAnswer</a></code>&nbsp;in interface&nbsp;<code><a href="Module.ReadyResponseOrBuilder.html" title="interface in viam.module.v1">Module.ReadyResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The webrtcAnswer.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getWebrtcAnswerBytes()">
+<h3>getWebrtcAnswerBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getWebrtcAnswerBytes</span>()</div>
+<div class="block"><code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Module.ReadyResponseOrBuilder.html#getWebrtcAnswerBytes()">getWebrtcAnswerBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Module.ReadyResponseOrBuilder.html" title="interface in viam.module.v1">Module.ReadyResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for webrtcAnswer.</dd>
 </dl>
 </section>
 </li>

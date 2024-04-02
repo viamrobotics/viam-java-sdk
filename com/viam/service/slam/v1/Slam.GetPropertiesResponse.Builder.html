@@ -113,26 +113,68 @@ implements <a href="Slam.GetPropertiesResponseOrBuilder.html" title="interface i
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor,java.lang.Object)" class="member-name-link">addRepeatedField</a><wbr>(com.google.protobuf.Descriptors.FieldDescriptor&nbsp;field,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildPartial()" class="member-name-link">buildPartial</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearCloudSlam()" class="member-name-link">clearCloudSlam</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAllSensorInfo(java.lang.Iterable)" class="member-name-link">addAllSensorInfo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="Slam.SensorInfo.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo</a>&gt;&nbsp;values)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>bool cloud_slam = 1 [json_name = "cloudSlam"];</code></div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearField(com.google.protobuf.Descriptors.FieldDescriptor)" class="member-name-link">clearField</a><wbr>(com.google.protobuf.Descriptors.FieldDescriptor&nbsp;field)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addRepeatedField(com.google.protobuf.Descriptors.FieldDescriptor,java.lang.Object)" class="member-name-link">addRepeatedField</a><wbr>(com.google.protobuf.Descriptors.FieldDescriptor&nbsp;field,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addSensorInfo(int,com.viam.service.slam.v1.Slam.SensorInfo)" class="member-name-link">addSensorInfo</a><wbr>(int&nbsp;index,
+ <a href="Slam.SensorInfo.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addSensorInfo(int,com.viam.service.slam.v1.Slam.SensorInfo.Builder)" class="member-name-link">addSensorInfo</a><wbr>(int&nbsp;index,
+ <a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addSensorInfo(com.viam.service.slam.v1.Slam.SensorInfo)" class="member-name-link">addSensorInfo</a><wbr>(<a href="Slam.SensorInfo.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addSensorInfo(com.viam.service.slam.v1.Slam.SensorInfo.Builder)" class="member-name-link">addSensorInfo</a><wbr>(<a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addSensorInfoBuilder()" class="member-name-link">addSensorInfoBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addSensorInfoBuilder(int)" class="member-name-link">addSensorInfoBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildPartial()" class="member-name-link">buildPartial</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearCloudSlam()" class="member-name-link">clearCloudSlam</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>bool cloud_slam = 1 [json_name = "cloudSlam"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearField(com.google.protobuf.Descriptors.FieldDescriptor)" class="member-name-link">clearField</a><wbr>(com.google.protobuf.Descriptors.FieldDescriptor&nbsp;field)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearInternalStateFileType()" class="member-name-link">clearInternalStateFileType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code></div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearMappingMode()" class="member-name-link">clearMappingMode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -142,51 +184,111 @@ implements <a href="Slam.GetPropertiesResponseOrBuilder.html" title="interface i
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearOneof(com.google.protobuf.Descriptors.OneofDescriptor)" class="member-name-link">clearOneof</a><wbr>(com.google.protobuf.Descriptors.OneofDescriptor&nbsp;oneof)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clone()" class="member-name-link">clone</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCloudSlam()" class="member-name-link">getCloudSlam</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clearSensorInfo()" class="member-name-link">clearSensorInfo</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#clone()" class="member-name-link">clone</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCloudSlam()" class="member-name-link">getCloudSlam</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>bool cloud_slam = 1 [json_name = "cloudSlam"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDefaultInstanceForType()" class="member-name-link">getDefaultInstanceForType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static final com.google.protobuf.Descriptors.Descriptor</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDescriptor()" class="member-name-link">getDescriptor</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Descriptors.Descriptor</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDescriptorForType()" class="member-name-link">getDescriptorForType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.MappingMode.html" title="enum class in com.viam.service.slam.v1">Slam.MappingMode</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMappingMode()" class="member-name-link">getMappingMode</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block"><code>.viam.service.slam.v1.MappingMode mapping_mode = 2 [json_name = "mappingMode"];</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDefaultInstanceForType()" class="member-name-link">getDefaultInstanceForType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static final com.google.protobuf.Descriptors.Descriptor</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getDescriptor()" class="member-name-link">getDescriptor</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.Descriptors.Descriptor</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDescriptorForType()" class="member-name-link">getDescriptorForType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInternalStateFileType()" class="member-name-link">getInternalStateFileType</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMappingModeValue()" class="member-name-link">getMappingModeValue</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInternalStateFileTypeBytes()" class="member-name-link">getInternalStateFileTypeBytes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.MappingMode.html" title="enum class in com.viam.service.slam.v1">Slam.MappingMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMappingMode()" class="member-name-link">getMappingMode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>.viam.service.slam.v1.MappingMode mapping_mode = 2 [json_name = "mappingMode"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#internalGetFieldAccessorTable()" class="member-name-link">internalGetFieldAccessorTable</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isInitialized()" class="member-name-link">isInitialized</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMappingModeValue()" class="member-name-link">getMappingModeValue</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>.viam.service.slam.v1.MappingMode mapping_mode = 2 [json_name = "mappingMode"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.SensorInfo.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSensorInfo(int)" class="member-name-link">getSensorInfo</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSensorInfoBuilder(int)" class="member-name-link">getSensorInfoBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSensorInfoBuilderList()" class="member-name-link">getSensorInfoBuilderList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSensorInfoCount()" class="member-name-link">getSensorInfoCount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Slam.SensorInfo.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSensorInfoList()" class="member-name-link">getSensorInfoList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.SensorInfoOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.SensorInfoOrBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSensorInfoOrBuilder(int)" class="member-name-link">getSensorInfoOrBuilder</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Slam.SensorInfoOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.SensorInfoOrBuilder</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSensorInfoOrBuilderList()" class="member-name-link">getSensorInfoOrBuilderList</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasInternalStateFileType()" class="member-name-link">hasInternalStateFileType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#internalGetFieldAccessorTable()" class="member-name-link">internalGetFieldAccessorTable</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">mergeFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
- com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isInitialized()" class="member-name-link">isInitialized</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrom(com.google.protobuf.Message)" class="member-name-link">mergeFrom</a><wbr>(com.google.protobuf.Message&nbsp;other)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrom(com.google.protobuf.CodedInputStream,com.google.protobuf.ExtensionRegistryLite)" class="member-name-link">mergeFrom</a><wbr>(com.google.protobuf.CodedInputStream&nbsp;input,
+ com.google.protobuf.ExtensionRegistryLite&nbsp;extensionRegistry)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrom(com.viam.service.slam.v1.Slam.GetPropertiesResponse)" class="member-name-link">mergeFrom</a><wbr>(<a href="Slam.GetPropertiesResponse.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse</a>&nbsp;other)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrom(com.google.protobuf.Message)" class="member-name-link">mergeFrom</a><wbr>(com.google.protobuf.Message&nbsp;other)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeUnknownFields(com.google.protobuf.UnknownFieldSet)" class="member-name-link">mergeUnknownFields</a><wbr>(com.google.protobuf.UnknownFieldSet&nbsp;unknownFields)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeFrom(com.viam.service.slam.v1.Slam.GetPropertiesResponse)" class="member-name-link">mergeFrom</a><wbr>(<a href="Slam.GetPropertiesResponse.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse</a>&nbsp;other)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#mergeUnknownFields(com.google.protobuf.UnknownFieldSet)" class="member-name-link">mergeUnknownFields</a><wbr>(com.google.protobuf.UnknownFieldSet&nbsp;unknownFields)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#removeSensorInfo(int)" class="member-name-link">removeSensorInfo</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCloudSlam(boolean)" class="member-name-link">setCloudSlam</a><wbr>(boolean&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -196,6 +298,16 @@ implements <a href="Slam.GetPropertiesResponseOrBuilder.html" title="interface i
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setField(com.google.protobuf.Descriptors.FieldDescriptor,java.lang.Object)" class="member-name-link">setField</a><wbr>(com.google.protobuf.Descriptors.FieldDescriptor&nbsp;field,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInternalStateFileType(java.lang.String)" class="member-name-link">setInternalStateFileType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInternalStateFileTypeBytes(com.google.protobuf.ByteString)" class="member-name-link">setInternalStateFileTypeBytes</a><wbr>(com.google.protobuf.ByteString&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code></div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMappingMode(com.viam.service.slam.v1.Slam.MappingMode)" class="member-name-link">setMappingMode</a><wbr>(<a href="Slam.MappingMode.html" title="enum class in com.viam.service.slam.v1">Slam.MappingMode</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -211,6 +323,18 @@ implements <a href="Slam.GetPropertiesResponseOrBuilder.html" title="interface i
  int&nbsp;index,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSensorInfo(int,com.viam.service.slam.v1.Slam.SensorInfo)" class="member-name-link">setSensorInfo</a><wbr>(int&nbsp;index,
+ <a href="Slam.SensorInfo.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo</a>&nbsp;value)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSensorInfo(int,com.viam.service.slam.v1.Slam.SensorInfo.Builder)" class="member-name-link">setSensorInfo</a><wbr>(int&nbsp;index,
+ <a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a>&nbsp;builderForValue)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUnknownFields(com.google.protobuf.UnknownFieldSet)" class="member-name-link">setUnknownFields</a><wbr>(com.google.protobuf.UnknownFieldSet&nbsp;unknownFields)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -553,6 +677,232 @@ implements <a href="Slam.GetPropertiesResponseOrBuilder.html" title="interface i
 <dt>Returns:</dt>
 <dd>This builder for chaining.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasInternalStateFileType()">
+<h3>hasInternalStateFileType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasInternalStateFileType</span>()</div>
+<div class="block"><code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Slam.GetPropertiesResponseOrBuilder.html#hasInternalStateFileType()">hasInternalStateFileType</a></code>&nbsp;in interface&nbsp;<code><a href="Slam.GetPropertiesResponseOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.GetPropertiesResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>Whether the internalStateFileType field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInternalStateFileType()">
+<h3>getInternalStateFileType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getInternalStateFileType</span>()</div>
+<div class="block"><code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Slam.GetPropertiesResponseOrBuilder.html#getInternalStateFileType()">getInternalStateFileType</a></code>&nbsp;in interface&nbsp;<code><a href="Slam.GetPropertiesResponseOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.GetPropertiesResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The internalStateFileType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInternalStateFileTypeBytes()">
+<h3>getInternalStateFileTypeBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">com.google.protobuf.ByteString</span>&nbsp;<span class="element-name">getInternalStateFileTypeBytes</span>()</div>
+<div class="block"><code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Slam.GetPropertiesResponseOrBuilder.html#getInternalStateFileTypeBytes()">getInternalStateFileTypeBytes</a></code>&nbsp;in interface&nbsp;<code><a href="Slam.GetPropertiesResponseOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.GetPropertiesResponseOrBuilder</a></code></dd>
+<dt>Returns:</dt>
+<dd>The bytes for internalStateFileType.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setInternalStateFileType(java.lang.String)">
+<h3>setInternalStateFileType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></span>&nbsp;<span class="element-name">setInternalStateFileType</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The internalStateFileType to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="clearInternalStateFileType()">
+<h3>clearInternalStateFileType</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></span>&nbsp;<span class="element-name">clearInternalStateFileType</span>()</div>
+<div class="block"><code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setInternalStateFileTypeBytes(com.google.protobuf.ByteString)">
+<h3>setInternalStateFileTypeBytes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></span>&nbsp;<span class="element-name">setInternalStateFileTypeBytes</span><wbr><span class="parameters">(com.google.protobuf.ByteString&nbsp;value)</span></div>
+<div class="block"><code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - The bytes for internalStateFileType to set.</dd>
+<dt>Returns:</dt>
+<dd>This builder for chaining.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSensorInfoList()">
+<h3>getSensorInfoList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Slam.SensorInfo.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo</a>&gt;</span>&nbsp;<span class="element-name">getSensorInfoList</span>()</div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Slam.GetPropertiesResponseOrBuilder.html#getSensorInfoList()">getSensorInfoList</a></code>&nbsp;in interface&nbsp;<code><a href="Slam.GetPropertiesResponseOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.GetPropertiesResponseOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSensorInfoCount()">
+<h3>getSensorInfoCount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getSensorInfoCount</span>()</div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Slam.GetPropertiesResponseOrBuilder.html#getSensorInfoCount()">getSensorInfoCount</a></code>&nbsp;in interface&nbsp;<code><a href="Slam.GetPropertiesResponseOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.GetPropertiesResponseOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSensorInfo(int)">
+<h3>getSensorInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.SensorInfo.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo</a></span>&nbsp;<span class="element-name">getSensorInfo</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Slam.GetPropertiesResponseOrBuilder.html#getSensorInfo(int)">getSensorInfo</a></code>&nbsp;in interface&nbsp;<code><a href="Slam.GetPropertiesResponseOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.GetPropertiesResponseOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setSensorInfo(int,com.viam.service.slam.v1.Slam.SensorInfo)">
+<h3>setSensorInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></span>&nbsp;<span class="element-name">setSensorInfo</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Slam.SensorInfo.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="setSensorInfo(int,com.viam.service.slam.v1.Slam.SensorInfo.Builder)">
+<h3>setSensorInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></span>&nbsp;<span class="element-name">setSensorInfo</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addSensorInfo(com.viam.service.slam.v1.Slam.SensorInfo)">
+<h3>addSensorInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></span>&nbsp;<span class="element-name">addSensorInfo</span><wbr><span class="parameters">(<a href="Slam.SensorInfo.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addSensorInfo(int,com.viam.service.slam.v1.Slam.SensorInfo)">
+<h3>addSensorInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></span>&nbsp;<span class="element-name">addSensorInfo</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Slam.SensorInfo.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo</a>&nbsp;value)</span></div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addSensorInfo(com.viam.service.slam.v1.Slam.SensorInfo.Builder)">
+<h3>addSensorInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></span>&nbsp;<span class="element-name">addSensorInfo</span><wbr><span class="parameters">(<a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addSensorInfo(int,com.viam.service.slam.v1.Slam.SensorInfo.Builder)">
+<h3>addSensorInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></span>&nbsp;<span class="element-name">addSensorInfo</span><wbr><span class="parameters">(int&nbsp;index,
+ <a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a>&nbsp;builderForValue)</span></div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addAllSensorInfo(java.lang.Iterable)">
+<h3>addAllSensorInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></span>&nbsp;<span class="element-name">addAllSensorInfo</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Iterable.html" title="class or interface in java.lang" class="external-link">Iterable</a>&lt;? extends <a href="Slam.SensorInfo.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo</a>&gt;&nbsp;values)</span></div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="clearSensorInfo()">
+<h3>clearSensorInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></span>&nbsp;<span class="element-name">clearSensorInfo</span>()</div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="removeSensorInfo(int)">
+<h3>removeSensorInfo</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.GetPropertiesResponse.Builder.html" title="class in com.viam.service.slam.v1">Slam.GetPropertiesResponse.Builder</a></span>&nbsp;<span class="element-name">removeSensorInfo</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getSensorInfoBuilder(int)">
+<h3>getSensorInfoBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a></span>&nbsp;<span class="element-name">getSensorInfoBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getSensorInfoOrBuilder(int)">
+<h3>getSensorInfoOrBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.SensorInfoOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.SensorInfoOrBuilder</a></span>&nbsp;<span class="element-name">getSensorInfoOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Slam.GetPropertiesResponseOrBuilder.html#getSensorInfoOrBuilder(int)">getSensorInfoOrBuilder</a></code>&nbsp;in interface&nbsp;<code><a href="Slam.GetPropertiesResponseOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.GetPropertiesResponseOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getSensorInfoOrBuilderList()">
+<h3>getSensorInfoOrBuilderList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Slam.SensorInfoOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.SensorInfoOrBuilder</a>&gt;</span>&nbsp;<span class="element-name">getSensorInfoOrBuilderList</span>()</div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Slam.GetPropertiesResponseOrBuilder.html#getSensorInfoOrBuilderList()">getSensorInfoOrBuilderList</a></code>&nbsp;in interface&nbsp;<code><a href="Slam.GetPropertiesResponseOrBuilder.html" title="interface in com.viam.service.slam.v1">Slam.GetPropertiesResponseOrBuilder</a></code></dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addSensorInfoBuilder()">
+<h3>addSensorInfoBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a></span>&nbsp;<span class="element-name">addSensorInfoBuilder</span>()</div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="addSensorInfoBuilder(int)">
+<h3>addSensorInfoBuilder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a></span>&nbsp;<span class="element-name">addSensorInfoBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
+</section>
+</li>
+<li>
+<section class="detail" id="getSensorInfoBuilderList()">
+<h3>getSensorInfoBuilderList</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Slam.SensorInfo.Builder.html" title="class in com.viam.service.slam.v1">Slam.SensorInfo.Builder</a>&gt;</span>&nbsp;<span class="element-name">getSensorInfoBuilderList</span>()</div>
+<div class="block"><code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code></div>
 </section>
 </li>
 <li>

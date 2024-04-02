@@ -141,6 +141,16 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string map_name = 3 [json_name = "mapName"];</code></div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CloudSlam.Module.html" title="class in viam.app.cloudslam.v1">CloudSlam.Module</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModule()" class="member-name-link">getModule</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="CloudSlam.ModuleOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.ModuleOrBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getModuleOrBuilder()" class="member-name-link">getModuleOrBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code></div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrganizationId()" class="member-name-link">getOrganizationId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -187,14 +197,14 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="block"><code>repeated .viam.app.cloudslam.v1.SensorInfo sensors = 8 [json_name = "sensors"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Struct</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSlamAlgorithmParams()" class="member-name-link">getSlamAlgorithmParams</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSlamConfig()" class="member-name-link">getSlamConfig</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code></div>
+<div class="block"><code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.StructOrBuilder</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSlamAlgorithmParamsOrBuilder()" class="member-name-link">getSlamAlgorithmParamsOrBuilder</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSlamConfigOrBuilder()" class="member-name-link">getSlamConfigOrBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code></div>
+<div class="block"><code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSlamVersion()" class="member-name-link">getSlamVersion</a>()</code></div>
@@ -226,9 +236,14 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="block"><code>.viam.app.cloudslam.v1.CaptureInterval capture_interval = 7 [json_name = "captureInterval"];</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasSlamAlgorithmParams()" class="member-name-link">hasSlamAlgorithmParams</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasModule()" class="member-name-link">hasModule</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code></div>
+<div class="block"><code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasSlamConfig()" class="member-name-link">hasSlamConfig</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code></div>
 </div>
 </div>
 </div>
@@ -463,32 +478,32 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="hasSlamAlgorithmParams()">
-<h3>hasSlamAlgorithmParams</h3>
-<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasSlamAlgorithmParams</span>()</div>
-<div class="block"><code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code></div>
+<section class="detail" id="hasSlamConfig()">
+<h3>hasSlamConfig</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasSlamConfig</span>()</div>
+<div class="block"><code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>Whether the slamAlgorithmParams field is set.</dd>
+<dd>Whether the slamConfig field is set.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getSlamAlgorithmParams()">
-<h3>getSlamAlgorithmParams</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getSlamAlgorithmParams</span>()</div>
-<div class="block"><code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code></div>
+<section class="detail" id="getSlamConfig()">
+<h3>getSlamConfig</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.Struct</span>&nbsp;<span class="element-name">getSlamConfig</span>()</div>
+<div class="block"><code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>The slamAlgorithmParams.</dd>
+<dd>The slamConfig.</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getSlamAlgorithmParamsOrBuilder()">
-<h3>getSlamAlgorithmParamsOrBuilder</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.StructOrBuilder</span>&nbsp;<span class="element-name">getSlamAlgorithmParamsOrBuilder</span>()</div>
-<div class="block"><code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code></div>
+<section class="detail" id="getSlamConfigOrBuilder()">
+<h3>getSlamConfigOrBuilder</h3>
+<div class="member-signature"><span class="return-type">com.google.protobuf.StructOrBuilder</span>&nbsp;<span class="element-name">getSlamConfigOrBuilder</span>()</div>
+<div class="block"><code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code></div>
 </section>
 </li>
 <li>
@@ -511,6 +526,35 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The bytes for existingMapVersion.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasModule()">
+<h3>hasModule</h3>
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasModule</span>()</div>
+<div class="block"><code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Whether the module field is set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getModule()">
+<h3>getModule</h3>
+<div class="member-signature"><span class="return-type"><a href="CloudSlam.Module.html" title="class in viam.app.cloudslam.v1">CloudSlam.Module</a></span>&nbsp;<span class="element-name">getModule</span>()</div>
+<div class="block"><code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>The module.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getModuleOrBuilder()">
+<h3>getModuleOrBuilder</h3>
+<div class="member-signature"><span class="return-type"><a href="CloudSlam.ModuleOrBuilder.html" title="interface in viam.app.cloudslam.v1">CloudSlam.ModuleOrBuilder</a></span>&nbsp;<span class="element-name">getModuleOrBuilder</span>()</div>
+<div class="block"><code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code></div>
 </section>
 </li>
 </ul>
