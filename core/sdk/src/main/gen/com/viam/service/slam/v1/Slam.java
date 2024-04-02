@@ -147,6 +147,123 @@ public final class Slam {
     // @@protoc_insertion_point(enum_scope:viam.service.slam.v1.MappingMode)
   }
 
+  /**
+   * Protobuf enum {@code viam.service.slam.v1.SensorType}
+   */
+  public enum SensorType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SENSOR_TYPE_UNSPECIFIED = 0;</code>
+     */
+    SENSOR_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>SENSOR_TYPE_CAMERA = 1;</code>
+     */
+    SENSOR_TYPE_CAMERA(1),
+    /**
+     * <code>SENSOR_TYPE_MOVEMENT_SENSOR = 2;</code>
+     */
+    SENSOR_TYPE_MOVEMENT_SENSOR(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>SENSOR_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int SENSOR_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>SENSOR_TYPE_CAMERA = 1;</code>
+     */
+    public static final int SENSOR_TYPE_CAMERA_VALUE = 1;
+    /**
+     * <code>SENSOR_TYPE_MOVEMENT_SENSOR = 2;</code>
+     */
+    public static final int SENSOR_TYPE_MOVEMENT_SENSOR_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SensorType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static SensorType forNumber(int value) {
+      switch (value) {
+        case 0: return SENSOR_TYPE_UNSPECIFIED;
+        case 1: return SENSOR_TYPE_CAMERA;
+        case 2: return SENSOR_TYPE_MOVEMENT_SENSOR;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SensorType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SensorType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SensorType>() {
+            public SensorType findValueByNumber(int number) {
+              return SensorType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.viam.service.slam.v1.Slam.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final SensorType[] VALUES = values();
+
+    public static SensorType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private SensorType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.service.slam.v1.SensorType)
+  }
+
   public interface GetPositionRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.slam.v1.GetPositionRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -1874,6 +1991,29 @@ public final class Slam {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <pre>
+     * For SLAM services that implement handling an edited map, this boolean
+     * should indicate whether to return that edited map. If the SLAM service
+     * does not handle edited maps, the unedited map will be returned instead.
+     * </pre>
+     *
+     * <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code>
+     * @return Whether the returnEditedMap field is set.
+     */
+    boolean hasReturnEditedMap();
+    /**
+     * <pre>
+     * For SLAM services that implement handling an edited map, this boolean
+     * should indicate whether to return that edited map. If the SLAM service
+     * does not handle edited maps, the unedited map will be returned instead.
+     * </pre>
+     *
+     * <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code>
+     * @return The returnEditedMap.
+     */
+    boolean getReturnEditedMap();
   }
   /**
    * Protobuf type {@code viam.service.slam.v1.GetPointCloudMapRequest}
@@ -1911,6 +2051,7 @@ public final class Slam {
               com.viam.service.slam.v1.Slam.GetPointCloudMapRequest.class, com.viam.service.slam.v1.Slam.GetPointCloudMapRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object name_ = "";
@@ -1958,6 +2099,37 @@ public final class Slam {
       }
     }
 
+    public static final int RETURN_EDITED_MAP_FIELD_NUMBER = 2;
+    private boolean returnEditedMap_ = false;
+    /**
+     * <pre>
+     * For SLAM services that implement handling an edited map, this boolean
+     * should indicate whether to return that edited map. If the SLAM service
+     * does not handle edited maps, the unedited map will be returned instead.
+     * </pre>
+     *
+     * <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code>
+     * @return Whether the returnEditedMap field is set.
+     */
+    @java.lang.Override
+    public boolean hasReturnEditedMap() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * For SLAM services that implement handling an edited map, this boolean
+     * should indicate whether to return that edited map. If the SLAM service
+     * does not handle edited maps, the unedited map will be returned instead.
+     * </pre>
+     *
+     * <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code>
+     * @return The returnEditedMap.
+     */
+    @java.lang.Override
+    public boolean getReturnEditedMap() {
+      return returnEditedMap_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1975,6 +2147,9 @@ public final class Slam {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(2, returnEditedMap_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1986,6 +2161,10 @@ public final class Slam {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, returnEditedMap_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2004,6 +2183,11 @@ public final class Slam {
 
       if (!getName()
           .equals(other.getName())) return false;
+      if (hasReturnEditedMap() != other.hasReturnEditedMap()) return false;
+      if (hasReturnEditedMap()) {
+        if (getReturnEditedMap()
+            != other.getReturnEditedMap()) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2017,6 +2201,11 @@ public final class Slam {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      if (hasReturnEditedMap()) {
+        hash = (37 * hash) + RETURN_EDITED_MAP_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getReturnEditedMap());
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2149,6 +2338,7 @@ public final class Slam {
         super.clear();
         bitField0_ = 0;
         name_ = "";
+        returnEditedMap_ = false;
         return this;
       }
 
@@ -2185,6 +2375,12 @@ public final class Slam {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.name_ = name_;
         }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.returnEditedMap_ = returnEditedMap_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2236,6 +2432,9 @@ public final class Slam {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (other.hasReturnEditedMap()) {
+          setReturnEditedMap(other.getReturnEditedMap());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2267,6 +2466,11 @@ public final class Slam {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 16: {
+                returnEditedMap_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2372,6 +2576,70 @@ public final class Slam {
         checkByteStringIsUtf8(value);
         name_ = value;
         bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private boolean returnEditedMap_ ;
+      /**
+       * <pre>
+       * For SLAM services that implement handling an edited map, this boolean
+       * should indicate whether to return that edited map. If the SLAM service
+       * does not handle edited maps, the unedited map will be returned instead.
+       * </pre>
+       *
+       * <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code>
+       * @return Whether the returnEditedMap field is set.
+       */
+      @java.lang.Override
+      public boolean hasReturnEditedMap() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * For SLAM services that implement handling an edited map, this boolean
+       * should indicate whether to return that edited map. If the SLAM service
+       * does not handle edited maps, the unedited map will be returned instead.
+       * </pre>
+       *
+       * <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code>
+       * @return The returnEditedMap.
+       */
+      @java.lang.Override
+      public boolean getReturnEditedMap() {
+        return returnEditedMap_;
+      }
+      /**
+       * <pre>
+       * For SLAM services that implement handling an edited map, this boolean
+       * should indicate whether to return that edited map. If the SLAM service
+       * does not handle edited maps, the unedited map will be returned instead.
+       * </pre>
+       *
+       * <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code>
+       * @param value The returnEditedMap to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReturnEditedMap(boolean value) {
+
+        returnEditedMap_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * For SLAM services that implement handling an edited map, this boolean
+       * should indicate whether to return that edited map. If the SLAM service
+       * does not handle edited maps, the unedited map will be returned instead.
+       * </pre>
+       *
+       * <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReturnEditedMap() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        returnEditedMap_ = false;
         onChanged();
         return this;
       }
@@ -4719,6 +4987,47 @@ public final class Slam {
      * @return The mappingMode.
      */
     com.viam.service.slam.v1.Slam.MappingMode getMappingMode();
+
+    /**
+     * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+     * @return Whether the internalStateFileType field is set.
+     */
+    boolean hasInternalStateFileType();
+    /**
+     * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+     * @return The internalStateFileType.
+     */
+    java.lang.String getInternalStateFileType();
+    /**
+     * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+     * @return The bytes for internalStateFileType.
+     */
+    com.google.protobuf.ByteString
+        getInternalStateFileTypeBytes();
+
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    java.util.List<com.viam.service.slam.v1.Slam.SensorInfo> 
+        getSensorInfoList();
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    com.viam.service.slam.v1.Slam.SensorInfo getSensorInfo(int index);
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    int getSensorInfoCount();
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    java.util.List<? extends com.viam.service.slam.v1.Slam.SensorInfoOrBuilder> 
+        getSensorInfoOrBuilderList();
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    com.viam.service.slam.v1.Slam.SensorInfoOrBuilder getSensorInfoOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -4738,6 +5047,8 @@ public final class Slam {
     }
     private GetPropertiesResponse() {
       mappingMode_ = 0;
+      internalStateFileType_ = "";
+      sensorInfo_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -4760,6 +5071,7 @@ public final class Slam {
               com.viam.service.slam.v1.Slam.GetPropertiesResponse.class, com.viam.service.slam.v1.Slam.GetPropertiesResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CLOUD_SLAM_FIELD_NUMBER = 1;
     private boolean cloudSlam_ = false;
     /**
@@ -4789,6 +5101,94 @@ public final class Slam {
       return result == null ? com.viam.service.slam.v1.Slam.MappingMode.UNRECOGNIZED : result;
     }
 
+    public static final int INTERNAL_STATE_FILE_TYPE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object internalStateFileType_ = "";
+    /**
+     * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+     * @return Whether the internalStateFileType field is set.
+     */
+    @java.lang.Override
+    public boolean hasInternalStateFileType() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+     * @return The internalStateFileType.
+     */
+    @java.lang.Override
+    public java.lang.String getInternalStateFileType() {
+      java.lang.Object ref = internalStateFileType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        internalStateFileType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+     * @return The bytes for internalStateFileType.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInternalStateFileTypeBytes() {
+      java.lang.Object ref = internalStateFileType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        internalStateFileType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SENSOR_INFO_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.viam.service.slam.v1.Slam.SensorInfo> sensorInfo_;
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.viam.service.slam.v1.Slam.SensorInfo> getSensorInfoList() {
+      return sensorInfo_;
+    }
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.viam.service.slam.v1.Slam.SensorInfoOrBuilder> 
+        getSensorInfoOrBuilderList() {
+      return sensorInfo_;
+    }
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    @java.lang.Override
+    public int getSensorInfoCount() {
+      return sensorInfo_.size();
+    }
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    @java.lang.Override
+    public com.viam.service.slam.v1.Slam.SensorInfo getSensorInfo(int index) {
+      return sensorInfo_.get(index);
+    }
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    @java.lang.Override
+    public com.viam.service.slam.v1.Slam.SensorInfoOrBuilder getSensorInfoOrBuilder(
+        int index) {
+      return sensorInfo_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4809,6 +5209,12 @@ public final class Slam {
       if (mappingMode_ != com.viam.service.slam.v1.Slam.MappingMode.MAPPING_MODE_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, mappingMode_);
       }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, internalStateFileType_);
+      }
+      for (int i = 0; i < sensorInfo_.size(); i++) {
+        output.writeMessage(4, sensorInfo_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -4825,6 +5231,13 @@ public final class Slam {
       if (mappingMode_ != com.viam.service.slam.v1.Slam.MappingMode.MAPPING_MODE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, mappingMode_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, internalStateFileType_);
+      }
+      for (int i = 0; i < sensorInfo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, sensorInfo_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -4844,6 +5257,13 @@ public final class Slam {
       if (getCloudSlam()
           != other.getCloudSlam()) return false;
       if (mappingMode_ != other.mappingMode_) return false;
+      if (hasInternalStateFileType() != other.hasInternalStateFileType()) return false;
+      if (hasInternalStateFileType()) {
+        if (!getInternalStateFileType()
+            .equals(other.getInternalStateFileType())) return false;
+      }
+      if (!getSensorInfoList()
+          .equals(other.getSensorInfoList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4860,6 +5280,14 @@ public final class Slam {
           getCloudSlam());
       hash = (37 * hash) + MAPPING_MODE_FIELD_NUMBER;
       hash = (53 * hash) + mappingMode_;
+      if (hasInternalStateFileType()) {
+        hash = (37 * hash) + INTERNAL_STATE_FILE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getInternalStateFileType().hashCode();
+      }
+      if (getSensorInfoCount() > 0) {
+        hash = (37 * hash) + SENSOR_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getSensorInfoList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4997,6 +5425,14 @@ public final class Slam {
         bitField0_ = 0;
         cloudSlam_ = false;
         mappingMode_ = 0;
+        internalStateFileType_ = "";
+        if (sensorInfoBuilder_ == null) {
+          sensorInfo_ = java.util.Collections.emptyList();
+        } else {
+          sensorInfo_ = null;
+          sensorInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -5023,9 +5459,22 @@ public final class Slam {
       @java.lang.Override
       public com.viam.service.slam.v1.Slam.GetPropertiesResponse buildPartial() {
         com.viam.service.slam.v1.Slam.GetPropertiesResponse result = new com.viam.service.slam.v1.Slam.GetPropertiesResponse(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(com.viam.service.slam.v1.Slam.GetPropertiesResponse result) {
+        if (sensorInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            sensorInfo_ = java.util.Collections.unmodifiableList(sensorInfo_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.sensorInfo_ = sensorInfo_;
+        } else {
+          result.sensorInfo_ = sensorInfoBuilder_.build();
+        }
       }
 
       private void buildPartial0(com.viam.service.slam.v1.Slam.GetPropertiesResponse result) {
@@ -5036,6 +5485,12 @@ public final class Slam {
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.mappingMode_ = mappingMode_;
         }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.internalStateFileType_ = internalStateFileType_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5088,6 +5543,37 @@ public final class Slam {
         if (other.mappingMode_ != 0) {
           setMappingModeValue(other.getMappingModeValue());
         }
+        if (other.hasInternalStateFileType()) {
+          internalStateFileType_ = other.internalStateFileType_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (sensorInfoBuilder_ == null) {
+          if (!other.sensorInfo_.isEmpty()) {
+            if (sensorInfo_.isEmpty()) {
+              sensorInfo_ = other.sensorInfo_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureSensorInfoIsMutable();
+              sensorInfo_.addAll(other.sensorInfo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.sensorInfo_.isEmpty()) {
+            if (sensorInfoBuilder_.isEmpty()) {
+              sensorInfoBuilder_.dispose();
+              sensorInfoBuilder_ = null;
+              sensorInfo_ = other.sensorInfo_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              sensorInfoBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSensorInfoFieldBuilder() : null;
+            } else {
+              sensorInfoBuilder_.addAllMessages(other.sensorInfo_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -5124,6 +5610,24 @@ public final class Slam {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
+              case 26: {
+                internalStateFileType_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.viam.service.slam.v1.Slam.SensorInfo m =
+                    input.readMessage(
+                        com.viam.service.slam.v1.Slam.SensorInfo.parser(),
+                        extensionRegistry);
+                if (sensorInfoBuilder_ == null) {
+                  ensureSensorInfoIsMutable();
+                  sensorInfo_.add(m);
+                } else {
+                  sensorInfoBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5225,6 +5729,325 @@ public final class Slam {
         onChanged();
         return this;
       }
+
+      private java.lang.Object internalStateFileType_ = "";
+      /**
+       * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+       * @return Whether the internalStateFileType field is set.
+       */
+      public boolean hasInternalStateFileType() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+       * @return The internalStateFileType.
+       */
+      public java.lang.String getInternalStateFileType() {
+        java.lang.Object ref = internalStateFileType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          internalStateFileType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+       * @return The bytes for internalStateFileType.
+       */
+      public com.google.protobuf.ByteString
+          getInternalStateFileTypeBytes() {
+        java.lang.Object ref = internalStateFileType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          internalStateFileType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+       * @param value The internalStateFileType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInternalStateFileType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        internalStateFileType_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInternalStateFileType() {
+        internalStateFileType_ = getDefaultInstance().getInternalStateFileType();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+       * @param value The bytes for internalStateFileType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInternalStateFileTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        internalStateFileType_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.viam.service.slam.v1.Slam.SensorInfo> sensorInfo_ =
+        java.util.Collections.emptyList();
+      private void ensureSensorInfoIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          sensorInfo_ = new java.util.ArrayList<com.viam.service.slam.v1.Slam.SensorInfo>(sensorInfo_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.viam.service.slam.v1.Slam.SensorInfo, com.viam.service.slam.v1.Slam.SensorInfo.Builder, com.viam.service.slam.v1.Slam.SensorInfoOrBuilder> sensorInfoBuilder_;
+
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public java.util.List<com.viam.service.slam.v1.Slam.SensorInfo> getSensorInfoList() {
+        if (sensorInfoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(sensorInfo_);
+        } else {
+          return sensorInfoBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public int getSensorInfoCount() {
+        if (sensorInfoBuilder_ == null) {
+          return sensorInfo_.size();
+        } else {
+          return sensorInfoBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public com.viam.service.slam.v1.Slam.SensorInfo getSensorInfo(int index) {
+        if (sensorInfoBuilder_ == null) {
+          return sensorInfo_.get(index);
+        } else {
+          return sensorInfoBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public Builder setSensorInfo(
+          int index, com.viam.service.slam.v1.Slam.SensorInfo value) {
+        if (sensorInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSensorInfoIsMutable();
+          sensorInfo_.set(index, value);
+          onChanged();
+        } else {
+          sensorInfoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public Builder setSensorInfo(
+          int index, com.viam.service.slam.v1.Slam.SensorInfo.Builder builderForValue) {
+        if (sensorInfoBuilder_ == null) {
+          ensureSensorInfoIsMutable();
+          sensorInfo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          sensorInfoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public Builder addSensorInfo(com.viam.service.slam.v1.Slam.SensorInfo value) {
+        if (sensorInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSensorInfoIsMutable();
+          sensorInfo_.add(value);
+          onChanged();
+        } else {
+          sensorInfoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public Builder addSensorInfo(
+          int index, com.viam.service.slam.v1.Slam.SensorInfo value) {
+        if (sensorInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSensorInfoIsMutable();
+          sensorInfo_.add(index, value);
+          onChanged();
+        } else {
+          sensorInfoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public Builder addSensorInfo(
+          com.viam.service.slam.v1.Slam.SensorInfo.Builder builderForValue) {
+        if (sensorInfoBuilder_ == null) {
+          ensureSensorInfoIsMutable();
+          sensorInfo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          sensorInfoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public Builder addSensorInfo(
+          int index, com.viam.service.slam.v1.Slam.SensorInfo.Builder builderForValue) {
+        if (sensorInfoBuilder_ == null) {
+          ensureSensorInfoIsMutable();
+          sensorInfo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          sensorInfoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public Builder addAllSensorInfo(
+          java.lang.Iterable<? extends com.viam.service.slam.v1.Slam.SensorInfo> values) {
+        if (sensorInfoBuilder_ == null) {
+          ensureSensorInfoIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, sensorInfo_);
+          onChanged();
+        } else {
+          sensorInfoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public Builder clearSensorInfo() {
+        if (sensorInfoBuilder_ == null) {
+          sensorInfo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          sensorInfoBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public Builder removeSensorInfo(int index) {
+        if (sensorInfoBuilder_ == null) {
+          ensureSensorInfoIsMutable();
+          sensorInfo_.remove(index);
+          onChanged();
+        } else {
+          sensorInfoBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public com.viam.service.slam.v1.Slam.SensorInfo.Builder getSensorInfoBuilder(
+          int index) {
+        return getSensorInfoFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public com.viam.service.slam.v1.Slam.SensorInfoOrBuilder getSensorInfoOrBuilder(
+          int index) {
+        if (sensorInfoBuilder_ == null) {
+          return sensorInfo_.get(index);  } else {
+          return sensorInfoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public java.util.List<? extends com.viam.service.slam.v1.Slam.SensorInfoOrBuilder> 
+           getSensorInfoOrBuilderList() {
+        if (sensorInfoBuilder_ != null) {
+          return sensorInfoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(sensorInfo_);
+        }
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public com.viam.service.slam.v1.Slam.SensorInfo.Builder addSensorInfoBuilder() {
+        return getSensorInfoFieldBuilder().addBuilder(
+            com.viam.service.slam.v1.Slam.SensorInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public com.viam.service.slam.v1.Slam.SensorInfo.Builder addSensorInfoBuilder(
+          int index) {
+        return getSensorInfoFieldBuilder().addBuilder(
+            index, com.viam.service.slam.v1.Slam.SensorInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+       */
+      public java.util.List<com.viam.service.slam.v1.Slam.SensorInfo.Builder> 
+           getSensorInfoBuilderList() {
+        return getSensorInfoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.viam.service.slam.v1.Slam.SensorInfo, com.viam.service.slam.v1.Slam.SensorInfo.Builder, com.viam.service.slam.v1.Slam.SensorInfoOrBuilder> 
+          getSensorInfoFieldBuilder() {
+        if (sensorInfoBuilder_ == null) {
+          sensorInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.viam.service.slam.v1.Slam.SensorInfo, com.viam.service.slam.v1.Slam.SensorInfo.Builder, com.viam.service.slam.v1.Slam.SensorInfoOrBuilder>(
+                  sensorInfo_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          sensorInfo_ = null;
+        }
+        return sensorInfoBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5289,6 +6112,663 @@ public final class Slam {
 
   }
 
+  public interface SensorInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.service.slam.v1.SensorInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    com.viam.service.slam.v1.Slam.SensorType getType();
+  }
+  /**
+   * Protobuf type {@code viam.service.slam.v1.SensorInfo}
+   */
+  public static final class SensorInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:viam.service.slam.v1.SensorInfo)
+      SensorInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SensorInfo.newBuilder() to construct.
+    private SensorInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SensorInfo() {
+      name_ = "";
+      type_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SensorInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_SensorInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_SensorInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.viam.service.slam.v1.Slam.SensorInfo.class, com.viam.service.slam.v1.Slam.SensorInfo.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private int type_ = 0;
+    /**
+     * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override public com.viam.service.slam.v1.Slam.SensorType getType() {
+      com.viam.service.slam.v1.Slam.SensorType result = com.viam.service.slam.v1.Slam.SensorType.forNumber(type_);
+      return result == null ? com.viam.service.slam.v1.Slam.SensorType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (type_ != com.viam.service.slam.v1.Slam.SensorType.SENSOR_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, type_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (type_ != com.viam.service.slam.v1.Slam.SensorType.SENSOR_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, type_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.viam.service.slam.v1.Slam.SensorInfo)) {
+        return super.equals(obj);
+      }
+      com.viam.service.slam.v1.Slam.SensorInfo other = (com.viam.service.slam.v1.Slam.SensorInfo) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (type_ != other.type_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.viam.service.slam.v1.Slam.SensorInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.viam.service.slam.v1.Slam.SensorInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.viam.service.slam.v1.Slam.SensorInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code viam.service.slam.v1.SensorInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.service.slam.v1.SensorInfo)
+        com.viam.service.slam.v1.Slam.SensorInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_SensorInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_SensorInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.viam.service.slam.v1.Slam.SensorInfo.class, com.viam.service.slam.v1.Slam.SensorInfo.Builder.class);
+      }
+
+      // Construct using com.viam.service.slam.v1.Slam.SensorInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        type_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_SensorInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.viam.service.slam.v1.Slam.SensorInfo getDefaultInstanceForType() {
+        return com.viam.service.slam.v1.Slam.SensorInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.viam.service.slam.v1.Slam.SensorInfo build() {
+        com.viam.service.slam.v1.Slam.SensorInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.viam.service.slam.v1.Slam.SensorInfo buildPartial() {
+        com.viam.service.slam.v1.Slam.SensorInfo result = new com.viam.service.slam.v1.Slam.SensorInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.viam.service.slam.v1.Slam.SensorInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.type_ = type_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.viam.service.slam.v1.Slam.SensorInfo) {
+          return mergeFrom((com.viam.service.slam.v1.Slam.SensorInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.viam.service.slam.v1.Slam.SensorInfo other) {
+        if (other == com.viam.service.slam.v1.Slam.SensorInfo.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                type_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public com.viam.service.slam.v1.Slam.SensorType getType() {
+        com.viam.service.slam.v1.Slam.SensorType result = com.viam.service.slam.v1.Slam.SensorType.forNumber(type_);
+        return result == null ? com.viam.service.slam.v1.Slam.SensorType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(com.viam.service.slam.v1.Slam.SensorType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.service.slam.v1.SensorInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:viam.service.slam.v1.SensorInfo)
+    private static final com.viam.service.slam.v1.Slam.SensorInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.viam.service.slam.v1.Slam.SensorInfo();
+    }
+
+    public static com.viam.service.slam.v1.Slam.SensorInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SensorInfo>
+        PARSER = new com.google.protobuf.AbstractParser<SensorInfo>() {
+      @java.lang.Override
+      public SensorInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SensorInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SensorInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.viam.service.slam.v1.Slam.SensorInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_viam_service_slam_v1_GetPositionRequest_descriptor;
   private static final 
@@ -5329,6 +6809,11 @@ public final class Slam {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_viam_service_slam_v1_GetPropertiesResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_viam_service_slam_v1_SensorInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_viam_service_slam_v1_SensorInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5346,43 +6831,54 @@ public final class Slam {
       "\022(\n\004pose\030\001 \001(\0132\024.viam.common.v1.PoseR\004po" +
       "se\022/\n\023component_reference\030\002 \001(\tR\022compone" +
       "ntReference\022-\n\005extra\030c \001(\0132\027.google.prot" +
-      "obuf.StructR\005extra\"-\n\027GetPointCloudMapRe" +
-      "quest\022\022\n\004name\030\001 \001(\tR\004name\"M\n\030GetPointClo" +
-      "udMapResponse\0221\n\025point_cloud_pcd_chunk\030\001" +
-      " \001(\014R\022pointCloudPcdChunk\"-\n\027GetInternalS" +
-      "tateRequest\022\022\n\004name\030\001 \001(\tR\004name\"L\n\030GetIn" +
-      "ternalStateResponse\0220\n\024internal_state_ch" +
-      "unk\030\001 \001(\014R\022internalStateChunk\"*\n\024GetProp" +
-      "ertiesRequest\022\022\n\004name\030\001 \001(\tR\004name\"|\n\025Get" +
-      "PropertiesResponse\022\035\n\ncloud_slam\030\001 \001(\010R\t" +
-      "cloudSlam\022D\n\014mapping_mode\030\002 \001(\0162!.viam.s" +
-      "ervice.slam.v1.MappingModeR\013mappingMode*" +
-      "\222\001\n\013MappingMode\022\034\n\030MAPPING_MODE_UNSPECIF" +
-      "IED\020\000\022\037\n\033MAPPING_MODE_CREATE_NEW_MAP\020\001\022\036" +
-      "\n\032MAPPING_MODE_LOCALIZE_ONLY\020\002\022$\n MAPPIN" +
-      "G_MODE_UPDATE_EXISTING_MAP\020\0032\254\006\n\013SLAMSer" +
-      "vice\022\225\001\n\013GetPosition\022(.viam.service.slam" +
-      ".v1.GetPositionRequest\032).viam.service.sl" +
-      "am.v1.GetPositionResponse\"1\202\323\344\223\002+\022)/viam" +
-      "/api/v1/service/slam/{name}/position\022\255\001\n" +
-      "\020GetPointCloudMap\022-.viam.service.slam.v1" +
-      ".GetPointCloudMapRequest\032..viam.service." +
-      "slam.v1.GetPointCloudMapResponse\"8\202\323\344\223\0022" +
-      "\0220/viam/api/v1/service/slam/{name}/point" +
-      "_cloud_map0\001\022\254\001\n\020GetInternalState\022-.viam" +
-      ".service.slam.v1.GetInternalStateRequest" +
-      "\032..viam.service.slam.v1.GetInternalState" +
-      "Response\"7\202\323\344\223\0021\022//viam/api/v1/service/s" +
-      "lam/{name}/internal_state0\001\022\235\001\n\rGetPrope" +
-      "rties\022*.viam.service.slam.v1.GetProperti" +
-      "esRequest\032+.viam.service.slam.v1.GetProp" +
-      "ertiesResponse\"3\202\323\344\223\002-\022+/viam/api/v1/ser" +
-      "vice/slam/{name}/properties\022\205\001\n\tDoComman" +
-      "d\022 .viam.common.v1.DoCommandRequest\032!.vi" +
-      "am.common.v1.DoCommandResponse\"3\202\323\344\223\002-\"+" +
-      "/viam/api/v1/service/slam/{name}/do_comm" +
-      "andB;\n\030com.viam.service.slam.v1Z\037go.viam" +
-      ".com/api/service/slam/v1b\006proto3"
+      "obuf.StructR\005extra\"t\n\027GetPointCloudMapRe" +
+      "quest\022\022\n\004name\030\001 \001(\tR\004name\022/\n\021return_edit" +
+      "ed_map\030\002 \001(\010H\000R\017returnEditedMap\210\001\001B\024\n\022_r" +
+      "eturn_edited_map\"M\n\030GetPointCloudMapResp" +
+      "onse\0221\n\025point_cloud_pcd_chunk\030\001 \001(\014R\022poi" +
+      "ntCloudPcdChunk\"-\n\027GetInternalStateReque" +
+      "st\022\022\n\004name\030\001 \001(\tR\004name\"L\n\030GetInternalSta" +
+      "teResponse\0220\n\024internal_state_chunk\030\001 \001(\014" +
+      "R\022internalStateChunk\"*\n\024GetPropertiesReq" +
+      "uest\022\022\n\004name\030\001 \001(\tR\004name\"\232\002\n\025GetProperti" +
+      "esResponse\022\035\n\ncloud_slam\030\001 \001(\010R\tcloudSla" +
+      "m\022D\n\014mapping_mode\030\002 \001(\0162!.viam.service.s" +
+      "lam.v1.MappingModeR\013mappingMode\022<\n\030inter" +
+      "nal_state_file_type\030\003 \001(\tH\000R\025internalSta" +
+      "teFileType\210\001\001\022A\n\013sensor_info\030\004 \003(\0132 .via" +
+      "m.service.slam.v1.SensorInfoR\nsensorInfo" +
+      "B\033\n\031_internal_state_file_type\"V\n\nSensorI" +
+      "nfo\022\022\n\004name\030\001 \001(\tR\004name\0224\n\004type\030\002 \001(\0162 ." +
+      "viam.service.slam.v1.SensorTypeR\004type*\222\001" +
+      "\n\013MappingMode\022\034\n\030MAPPING_MODE_UNSPECIFIE" +
+      "D\020\000\022\037\n\033MAPPING_MODE_CREATE_NEW_MAP\020\001\022\036\n\032" +
+      "MAPPING_MODE_LOCALIZE_ONLY\020\002\022$\n MAPPING_" +
+      "MODE_UPDATE_EXISTING_MAP\020\003*b\n\nSensorType" +
+      "\022\033\n\027SENSOR_TYPE_UNSPECIFIED\020\000\022\026\n\022SENSOR_" +
+      "TYPE_CAMERA\020\001\022\037\n\033SENSOR_TYPE_MOVEMENT_SE" +
+      "NSOR\020\0022\254\006\n\013SLAMService\022\225\001\n\013GetPosition\022(" +
+      ".viam.service.slam.v1.GetPositionRequest" +
+      "\032).viam.service.slam.v1.GetPositionRespo" +
+      "nse\"1\202\323\344\223\002+\022)/viam/api/v1/service/slam/{" +
+      "name}/position\022\255\001\n\020GetPointCloudMap\022-.vi" +
+      "am.service.slam.v1.GetPointCloudMapReque" +
+      "st\032..viam.service.slam.v1.GetPointCloudM" +
+      "apResponse\"8\202\323\344\223\0022\0220/viam/api/v1/service" +
+      "/slam/{name}/point_cloud_map0\001\022\254\001\n\020GetIn" +
+      "ternalState\022-.viam.service.slam.v1.GetIn" +
+      "ternalStateRequest\032..viam.service.slam.v" +
+      "1.GetInternalStateResponse\"7\202\323\344\223\0021\022//via" +
+      "m/api/v1/service/slam/{name}/internal_st" +
+      "ate0\001\022\235\001\n\rGetProperties\022*.viam.service.s" +
+      "lam.v1.GetPropertiesRequest\032+.viam.servi" +
+      "ce.slam.v1.GetPropertiesResponse\"3\202\323\344\223\002-" +
+      "\022+/viam/api/v1/service/slam/{name}/prope" +
+      "rties\022\205\001\n\tDoCommand\022 .viam.common.v1.DoC" +
+      "ommandRequest\032!.viam.common.v1.DoCommand" +
+      "Response\"3\202\323\344\223\002-\"+/viam/api/v1/service/s" +
+      "lam/{name}/do_commandB;\n\030com.viam.servic" +
+      "e.slam.v1Z\037go.viam.com/api/service/slam/" +
+      "v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5408,7 +6904,7 @@ public final class Slam {
     internal_static_viam_service_slam_v1_GetPointCloudMapRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_service_slam_v1_GetPointCloudMapRequest_descriptor,
-        new java.lang.String[] { "Name", });
+        new java.lang.String[] { "Name", "ReturnEditedMap", });
     internal_static_viam_service_slam_v1_GetPointCloudMapResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_viam_service_slam_v1_GetPointCloudMapResponse_fieldAccessorTable = new
@@ -5438,7 +6934,13 @@ public final class Slam {
     internal_static_viam_service_slam_v1_GetPropertiesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_service_slam_v1_GetPropertiesResponse_descriptor,
-        new java.lang.String[] { "CloudSlam", "MappingMode", });
+        new java.lang.String[] { "CloudSlam", "MappingMode", "InternalStateFileType", "SensorInfo", });
+    internal_static_viam_service_slam_v1_SensorInfo_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_viam_service_slam_v1_SensorInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_viam_service_slam_v1_SensorInfo_descriptor,
+        new java.lang.String[] { "Name", "Type", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

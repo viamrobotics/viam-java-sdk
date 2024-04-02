@@ -40,10 +40,6 @@ public final class Packages {
      * <code>PACKAGE_TYPE_SLAM_MAP = 4;</code>
      */
     PACKAGE_TYPE_SLAM_MAP(4),
-    /**
-     * <code>PACKAGE_TYPE_BOARD_DEFS = 5;</code>
-     */
-    PACKAGE_TYPE_BOARD_DEFS(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -67,10 +63,6 @@ public final class Packages {
      * <code>PACKAGE_TYPE_SLAM_MAP = 4;</code>
      */
     public static final int PACKAGE_TYPE_SLAM_MAP_VALUE = 4;
-    /**
-     * <code>PACKAGE_TYPE_BOARD_DEFS = 5;</code>
-     */
-    public static final int PACKAGE_TYPE_BOARD_DEFS_VALUE = 5;
 
 
     public final int getNumber() {
@@ -102,7 +94,6 @@ public final class Packages {
         case 2: return PACKAGE_TYPE_ML_MODEL;
         case 3: return PACKAGE_TYPE_MODULE;
         case 4: return PACKAGE_TYPE_SLAM_MAP;
-        case 5: return PACKAGE_TYPE_BOARD_DEFS;
         default: return null;
       }
     }
@@ -10244,26 +10235,25 @@ public final class Packages {
       "l\210\001\001B\007\n\005_nameB\n\n\010_versionB\007\n\005_typeB\016\n\014_i" +
       "nclude_url\"Q\n\024ListPackagesResponse\0229\n\010pa" +
       "ckages\030\001 \003(\0132\035.viam.app.packages.v1.Pack" +
-      "ageR\010packages*\261\001\n\013PackageType\022\034\n\030PACKAGE" +
+      "ageR\010packages*\224\001\n\013PackageType\022\034\n\030PACKAGE" +
       "_TYPE_UNSPECIFIED\020\000\022\030\n\024PACKAGE_TYPE_ARCH" +
       "IVE\020\001\022\031\n\025PACKAGE_TYPE_ML_MODEL\020\002\022\027\n\023PACK" +
       "AGE_TYPE_MODULE\020\003\022\031\n\025PACKAGE_TYPE_SLAM_M" +
-      "AP\020\004\022\033\n\027PACKAGE_TYPE_BOARD_DEFS\020\0052\240\004\n\016Pa" +
-      "ckageService\022\207\001\n\rCreatePackage\022*.viam.ap" +
-      "p.packages.v1.CreatePackageRequest\032+.via" +
-      "m.app.packages.v1.CreatePackageResponse\"" +
-      "\033\202\323\344\223\002\025\"\023/packages/v1/create(\001\022\205\001\n\rDelet" +
-      "ePackage\022*.viam.app.packages.v1.DeletePa" +
-      "ckageRequest\032+.viam.app.packages.v1.Dele" +
-      "tePackageResponse\"\033\202\323\344\223\002\025*\023/packages/v1/" +
-      "delete\022y\n\nGetPackage\022\'.viam.app.packages" +
-      ".v1.GetPackageRequest\032(.viam.app.package" +
-      "s.v1.GetPackageResponse\"\030\202\323\344\223\002\022\022\020/packag" +
-      "es/v1/get\022\200\001\n\014ListPackages\022).viam.app.pa" +
-      "ckages.v1.ListPackagesRequest\032*.viam.app" +
-      ".packages.v1.ListPackagesResponse\"\031\202\323\344\223\002" +
-      "\023\022\021/packages/v1/listB!Z\037go.viam.com/api/" +
-      "app/packages/v1b\006proto3"
+      "AP\020\0042\240\004\n\016PackageService\022\207\001\n\rCreatePackag" +
+      "e\022*.viam.app.packages.v1.CreatePackageRe" +
+      "quest\032+.viam.app.packages.v1.CreatePacka" +
+      "geResponse\"\033\202\323\344\223\002\025\"\023/packages/v1/create(" +
+      "\001\022\205\001\n\rDeletePackage\022*.viam.app.packages." +
+      "v1.DeletePackageRequest\032+.viam.app.packa" +
+      "ges.v1.DeletePackageResponse\"\033\202\323\344\223\002\025*\023/p" +
+      "ackages/v1/delete\022y\n\nGetPackage\022\'.viam.a" +
+      "pp.packages.v1.GetPackageRequest\032(.viam." +
+      "app.packages.v1.GetPackageResponse\"\030\202\323\344\223" +
+      "\002\022\022\020/packages/v1/get\022\200\001\n\014ListPackages\022)." +
+      "viam.app.packages.v1.ListPackagesRequest" +
+      "\032*.viam.app.packages.v1.ListPackagesResp" +
+      "onse\"\031\202\323\344\223\002\023\022\021/packages/v1/listB!Z\037go.vi" +
+      "am.com/api/app/packages/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

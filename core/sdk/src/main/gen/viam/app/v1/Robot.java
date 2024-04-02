@@ -372,6 +372,30 @@ public final class Robot {
      */
     viam.app.v1.Robot.PackageConfigOrBuilder getPackagesOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+     */
+    java.util.List<viam.app.v1.Robot.AppValidationStatus> 
+        getOverwriteFragmentStatusList();
+    /**
+     * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+     */
+    viam.app.v1.Robot.AppValidationStatus getOverwriteFragmentStatus(int index);
+    /**
+     * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+     */
+    int getOverwriteFragmentStatusCount();
+    /**
+     * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+     */
+    java.util.List<? extends viam.app.v1.Robot.AppValidationStatusOrBuilder> 
+        getOverwriteFragmentStatusOrBuilderList();
+    /**
+     * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+     */
+    viam.app.v1.Robot.AppValidationStatusOrBuilder getOverwriteFragmentStatusOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code viam.app.v1.RobotConfig}
@@ -392,6 +416,7 @@ public final class Robot {
       services_ = java.util.Collections.emptyList();
       modules_ = java.util.Collections.emptyList();
       packages_ = java.util.Collections.emptyList();
+      overwriteFragmentStatus_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -785,6 +810,47 @@ public final class Robot {
       return packages_.get(index);
     }
 
+    public static final int OVERWRITE_FRAGMENT_STATUS_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private java.util.List<viam.app.v1.Robot.AppValidationStatus> overwriteFragmentStatus_;
+    /**
+     * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<viam.app.v1.Robot.AppValidationStatus> getOverwriteFragmentStatusList() {
+      return overwriteFragmentStatus_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends viam.app.v1.Robot.AppValidationStatusOrBuilder> 
+        getOverwriteFragmentStatusOrBuilderList() {
+      return overwriteFragmentStatus_;
+    }
+    /**
+     * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+     */
+    @java.lang.Override
+    public int getOverwriteFragmentStatusCount() {
+      return overwriteFragmentStatus_.size();
+    }
+    /**
+     * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.AppValidationStatus getOverwriteFragmentStatus(int index) {
+      return overwriteFragmentStatus_.get(index);
+    }
+    /**
+     * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+     */
+    @java.lang.Override
+    public viam.app.v1.Robot.AppValidationStatusOrBuilder getOverwriteFragmentStatusOrBuilder(
+        int index) {
+      return overwriteFragmentStatus_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -831,6 +897,9 @@ public final class Robot {
       }
       for (int i = 0; i < packages_.size(); i++) {
         output.writeMessage(11, packages_.get(i));
+      }
+      for (int i = 0; i < overwriteFragmentStatus_.size(); i++) {
+        output.writeMessage(12, overwriteFragmentStatus_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -885,6 +954,10 @@ public final class Robot {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, packages_.get(i));
       }
+      for (int i = 0; i < overwriteFragmentStatus_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, overwriteFragmentStatus_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -937,6 +1010,8 @@ public final class Robot {
       }
       if (!getPackagesList()
           .equals(other.getPackagesList())) return false;
+      if (!getOverwriteFragmentStatusList()
+          .equals(other.getOverwriteFragmentStatusList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -993,6 +1068,10 @@ public final class Robot {
       if (getPackagesCount() > 0) {
         hash = (37 * hash) + PACKAGES_FIELD_NUMBER;
         hash = (53 * hash) + getPackagesList().hashCode();
+      }
+      if (getOverwriteFragmentStatusCount() > 0) {
+        hash = (37 * hash) + OVERWRITE_FRAGMENT_STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getOverwriteFragmentStatusList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1133,6 +1212,7 @@ public final class Robot {
           getAuthFieldBuilder();
           getModulesFieldBuilder();
           getPackagesFieldBuilder();
+          getOverwriteFragmentStatusFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1198,6 +1278,13 @@ public final class Robot {
           packagesBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000400);
+        if (overwriteFragmentStatusBuilder_ == null) {
+          overwriteFragmentStatus_ = java.util.Collections.emptyList();
+        } else {
+          overwriteFragmentStatus_ = null;
+          overwriteFragmentStatusBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -1284,6 +1371,15 @@ public final class Robot {
           result.packages_ = packages_;
         } else {
           result.packages_ = packagesBuilder_.build();
+        }
+        if (overwriteFragmentStatusBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0)) {
+            overwriteFragmentStatus_ = java.util.Collections.unmodifiableList(overwriteFragmentStatus_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.overwriteFragmentStatus_ = overwriteFragmentStatus_;
+        } else {
+          result.overwriteFragmentStatus_ = overwriteFragmentStatusBuilder_.build();
         }
       }
 
@@ -1534,6 +1630,32 @@ public final class Robot {
             }
           }
         }
+        if (overwriteFragmentStatusBuilder_ == null) {
+          if (!other.overwriteFragmentStatus_.isEmpty()) {
+            if (overwriteFragmentStatus_.isEmpty()) {
+              overwriteFragmentStatus_ = other.overwriteFragmentStatus_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureOverwriteFragmentStatusIsMutable();
+              overwriteFragmentStatus_.addAll(other.overwriteFragmentStatus_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.overwriteFragmentStatus_.isEmpty()) {
+            if (overwriteFragmentStatusBuilder_.isEmpty()) {
+              overwriteFragmentStatusBuilder_.dispose();
+              overwriteFragmentStatusBuilder_ = null;
+              overwriteFragmentStatus_ = other.overwriteFragmentStatus_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              overwriteFragmentStatusBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOverwriteFragmentStatusFieldBuilder() : null;
+            } else {
+              overwriteFragmentStatusBuilder_.addAllMessages(other.overwriteFragmentStatus_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1669,6 +1791,19 @@ public final class Robot {
                 }
                 break;
               } // case 90
+              case 98: {
+                viam.app.v1.Robot.AppValidationStatus m =
+                    input.readMessage(
+                        viam.app.v1.Robot.AppValidationStatus.parser(),
+                        extensionRegistry);
+                if (overwriteFragmentStatusBuilder_ == null) {
+                  ensureOverwriteFragmentStatusIsMutable();
+                  overwriteFragmentStatus_.add(m);
+                } else {
+                  overwriteFragmentStatusBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3584,6 +3719,246 @@ public final class Robot {
         }
         return packagesBuilder_;
       }
+
+      private java.util.List<viam.app.v1.Robot.AppValidationStatus> overwriteFragmentStatus_ =
+        java.util.Collections.emptyList();
+      private void ensureOverwriteFragmentStatusIsMutable() {
+        if (!((bitField0_ & 0x00000800) != 0)) {
+          overwriteFragmentStatus_ = new java.util.ArrayList<viam.app.v1.Robot.AppValidationStatus>(overwriteFragmentStatus_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          viam.app.v1.Robot.AppValidationStatus, viam.app.v1.Robot.AppValidationStatus.Builder, viam.app.v1.Robot.AppValidationStatusOrBuilder> overwriteFragmentStatusBuilder_;
+
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public java.util.List<viam.app.v1.Robot.AppValidationStatus> getOverwriteFragmentStatusList() {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(overwriteFragmentStatus_);
+        } else {
+          return overwriteFragmentStatusBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public int getOverwriteFragmentStatusCount() {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          return overwriteFragmentStatus_.size();
+        } else {
+          return overwriteFragmentStatusBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public viam.app.v1.Robot.AppValidationStatus getOverwriteFragmentStatus(int index) {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          return overwriteFragmentStatus_.get(index);
+        } else {
+          return overwriteFragmentStatusBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public Builder setOverwriteFragmentStatus(
+          int index, viam.app.v1.Robot.AppValidationStatus value) {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOverwriteFragmentStatusIsMutable();
+          overwriteFragmentStatus_.set(index, value);
+          onChanged();
+        } else {
+          overwriteFragmentStatusBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public Builder setOverwriteFragmentStatus(
+          int index, viam.app.v1.Robot.AppValidationStatus.Builder builderForValue) {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          ensureOverwriteFragmentStatusIsMutable();
+          overwriteFragmentStatus_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          overwriteFragmentStatusBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public Builder addOverwriteFragmentStatus(viam.app.v1.Robot.AppValidationStatus value) {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOverwriteFragmentStatusIsMutable();
+          overwriteFragmentStatus_.add(value);
+          onChanged();
+        } else {
+          overwriteFragmentStatusBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public Builder addOverwriteFragmentStatus(
+          int index, viam.app.v1.Robot.AppValidationStatus value) {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOverwriteFragmentStatusIsMutable();
+          overwriteFragmentStatus_.add(index, value);
+          onChanged();
+        } else {
+          overwriteFragmentStatusBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public Builder addOverwriteFragmentStatus(
+          viam.app.v1.Robot.AppValidationStatus.Builder builderForValue) {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          ensureOverwriteFragmentStatusIsMutable();
+          overwriteFragmentStatus_.add(builderForValue.build());
+          onChanged();
+        } else {
+          overwriteFragmentStatusBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public Builder addOverwriteFragmentStatus(
+          int index, viam.app.v1.Robot.AppValidationStatus.Builder builderForValue) {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          ensureOverwriteFragmentStatusIsMutable();
+          overwriteFragmentStatus_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          overwriteFragmentStatusBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public Builder addAllOverwriteFragmentStatus(
+          java.lang.Iterable<? extends viam.app.v1.Robot.AppValidationStatus> values) {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          ensureOverwriteFragmentStatusIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, overwriteFragmentStatus_);
+          onChanged();
+        } else {
+          overwriteFragmentStatusBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public Builder clearOverwriteFragmentStatus() {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          overwriteFragmentStatus_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          overwriteFragmentStatusBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public Builder removeOverwriteFragmentStatus(int index) {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          ensureOverwriteFragmentStatusIsMutable();
+          overwriteFragmentStatus_.remove(index);
+          onChanged();
+        } else {
+          overwriteFragmentStatusBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public viam.app.v1.Robot.AppValidationStatus.Builder getOverwriteFragmentStatusBuilder(
+          int index) {
+        return getOverwriteFragmentStatusFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public viam.app.v1.Robot.AppValidationStatusOrBuilder getOverwriteFragmentStatusOrBuilder(
+          int index) {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          return overwriteFragmentStatus_.get(index);  } else {
+          return overwriteFragmentStatusBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public java.util.List<? extends viam.app.v1.Robot.AppValidationStatusOrBuilder> 
+           getOverwriteFragmentStatusOrBuilderList() {
+        if (overwriteFragmentStatusBuilder_ != null) {
+          return overwriteFragmentStatusBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(overwriteFragmentStatus_);
+        }
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public viam.app.v1.Robot.AppValidationStatus.Builder addOverwriteFragmentStatusBuilder() {
+        return getOverwriteFragmentStatusFieldBuilder().addBuilder(
+            viam.app.v1.Robot.AppValidationStatus.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public viam.app.v1.Robot.AppValidationStatus.Builder addOverwriteFragmentStatusBuilder(
+          int index) {
+        return getOverwriteFragmentStatusFieldBuilder().addBuilder(
+            index, viam.app.v1.Robot.AppValidationStatus.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .viam.app.v1.AppValidationStatus overwrite_fragment_status = 12 [json_name = "overwriteFragmentStatus"];</code>
+       */
+      public java.util.List<viam.app.v1.Robot.AppValidationStatus.Builder> 
+           getOverwriteFragmentStatusBuilderList() {
+        return getOverwriteFragmentStatusFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          viam.app.v1.Robot.AppValidationStatus, viam.app.v1.Robot.AppValidationStatus.Builder, viam.app.v1.Robot.AppValidationStatusOrBuilder> 
+          getOverwriteFragmentStatusFieldBuilder() {
+        if (overwriteFragmentStatusBuilder_ == null) {
+          overwriteFragmentStatusBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              viam.app.v1.Robot.AppValidationStatus, viam.app.v1.Robot.AppValidationStatus.Builder, viam.app.v1.Robot.AppValidationStatusOrBuilder>(
+                  overwriteFragmentStatus_,
+                  ((bitField0_ & 0x00000800) != 0),
+                  getParentForChildren(),
+                  isClean());
+          overwriteFragmentStatus_ = null;
+        }
+        return overwriteFragmentStatusBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5029,7 +5404,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=61
+     *     See app/v1/robot.proto;l=62
      * @return The locationSecret.
      */
     @java.lang.Deprecated java.lang.String getLocationSecret();
@@ -5040,7 +5415,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=61
+     *     See app/v1/robot.proto;l=62
      * @return The bytes for locationSecret.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -5109,6 +5484,42 @@ public final class Robot {
      */
     viam.app.v1.Robot.LocationSecretOrBuilder getLocationSecretsOrBuilder(
         int index);
+
+    /**
+     * <code>string primary_org_id = 10 [json_name = "primaryOrgId"];</code>
+     * @return The primaryOrgId.
+     */
+    java.lang.String getPrimaryOrgId();
+    /**
+     * <code>string primary_org_id = 10 [json_name = "primaryOrgId"];</code>
+     * @return The bytes for primaryOrgId.
+     */
+    com.google.protobuf.ByteString
+        getPrimaryOrgIdBytes();
+
+    /**
+     * <code>string location_id = 11 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    java.lang.String getLocationId();
+    /**
+     * <code>string location_id = 11 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    com.google.protobuf.ByteString
+        getLocationIdBytes();
+
+    /**
+     * <code>string machine_id = 12 [json_name = "machineId"];</code>
+     * @return The machineId.
+     */
+    java.lang.String getMachineId();
+    /**
+     * <code>string machine_id = 12 [json_name = "machineId"];</code>
+     * @return The bytes for machineId.
+     */
+    com.google.protobuf.ByteString
+        getMachineIdBytes();
   }
   /**
    * Protobuf type {@code viam.app.v1.CloudConfig}
@@ -5131,6 +5542,9 @@ public final class Robot {
       locationSecret_ = "";
       secret_ = "";
       locationSecrets_ = java.util.Collections.emptyList();
+      primaryOrgId_ = "";
+      locationId_ = "";
+      machineId_ = "";
     }
 
     @java.lang.Override
@@ -5377,7 +5791,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=61
+     *     See app/v1/robot.proto;l=62
      * @return The locationSecret.
      */
     @java.lang.Override
@@ -5400,7 +5814,7 @@ public final class Robot {
      *
      * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
      * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-     *     See app/v1/robot.proto;l=61
+     *     See app/v1/robot.proto;l=62
      * @return The bytes for locationSecret.
      */
     @java.lang.Override
@@ -5526,6 +5940,123 @@ public final class Robot {
       return locationSecrets_.get(index);
     }
 
+    public static final int PRIMARY_ORG_ID_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object primaryOrgId_ = "";
+    /**
+     * <code>string primary_org_id = 10 [json_name = "primaryOrgId"];</code>
+     * @return The primaryOrgId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrimaryOrgId() {
+      java.lang.Object ref = primaryOrgId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        primaryOrgId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string primary_org_id = 10 [json_name = "primaryOrgId"];</code>
+     * @return The bytes for primaryOrgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrimaryOrgIdBytes() {
+      java.lang.Object ref = primaryOrgId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        primaryOrgId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCATION_ID_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object locationId_ = "";
+    /**
+     * <code>string location_id = 11 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    @java.lang.Override
+    public java.lang.String getLocationId() {
+      java.lang.Object ref = locationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        locationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string location_id = 11 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocationIdBytes() {
+      java.lang.Object ref = locationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        locationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MACHINE_ID_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object machineId_ = "";
+    /**
+     * <code>string machine_id = 12 [json_name = "machineId"];</code>
+     * @return The machineId.
+     */
+    @java.lang.Override
+    public java.lang.String getMachineId() {
+      java.lang.Object ref = machineId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        machineId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string machine_id = 12 [json_name = "machineId"];</code>
+     * @return The bytes for machineId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMachineIdBytes() {
+      java.lang.Object ref = machineId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        machineId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5567,6 +6098,15 @@ public final class Robot {
       for (int i = 0; i < locationSecrets_.size(); i++) {
         output.writeMessage(9, locationSecrets_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(primaryOrgId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, primaryOrgId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, locationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(machineId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, machineId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5605,6 +6145,15 @@ public final class Robot {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, locationSecrets_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(primaryOrgId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, primaryOrgId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, locationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(machineId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, machineId_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5638,6 +6187,12 @@ public final class Robot {
           .equals(other.getSecret())) return false;
       if (!getLocationSecretsList()
           .equals(other.getLocationSecretsList())) return false;
+      if (!getPrimaryOrgId()
+          .equals(other.getPrimaryOrgId())) return false;
+      if (!getLocationId()
+          .equals(other.getLocationId())) return false;
+      if (!getMachineId()
+          .equals(other.getMachineId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -5670,6 +6225,12 @@ public final class Robot {
         hash = (37 * hash) + LOCATION_SECRETS_FIELD_NUMBER;
         hash = (53 * hash) + getLocationSecretsList().hashCode();
       }
+      hash = (37 * hash) + PRIMARY_ORG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrimaryOrgId().hashCode();
+      hash = (37 * hash) + LOCATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLocationId().hashCode();
+      hash = (37 * hash) + MACHINE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getMachineId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5816,6 +6377,9 @@ public final class Robot {
           locationSecretsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000100);
+        primaryOrgId_ = "";
+        locationId_ = "";
+        machineId_ = "";
         return this;
       }
 
@@ -5885,6 +6449,15 @@ public final class Robot {
         }
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.secret_ = secret_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.primaryOrgId_ = primaryOrgId_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.locationId_ = locationId_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.machineId_ = machineId_;
         }
       }
 
@@ -5996,6 +6569,21 @@ public final class Robot {
             }
           }
         }
+        if (!other.getPrimaryOrgId().isEmpty()) {
+          primaryOrgId_ = other.primaryOrgId_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        if (!other.getLocationId().isEmpty()) {
+          locationId_ = other.locationId_;
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        if (!other.getMachineId().isEmpty()) {
+          machineId_ = other.machineId_;
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -6075,6 +6663,21 @@ public final class Robot {
                 }
                 break;
               } // case 74
+              case 82: {
+                primaryOrgId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                locationId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                machineId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6512,7 +7115,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=61
+       *     See app/v1/robot.proto;l=62
        * @return The locationSecret.
        */
       @java.lang.Deprecated public java.lang.String getLocationSecret() {
@@ -6534,7 +7137,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=61
+       *     See app/v1/robot.proto;l=62
        * @return The bytes for locationSecret.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -6557,7 +7160,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=61
+       *     See app/v1/robot.proto;l=62
        * @param value The locationSecret to set.
        * @return This builder for chaining.
        */
@@ -6576,7 +7179,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=61
+       *     See app/v1/robot.proto;l=62
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearLocationSecret() {
@@ -6592,7 +7195,7 @@ public final class Robot {
        *
        * <code>string location_secret = 7 [json_name = "locationSecret", deprecated = true];</code>
        * @deprecated viam.app.v1.CloudConfig.location_secret is deprecated.
-       *     See app/v1/robot.proto;l=61
+       *     See app/v1/robot.proto;l=62
        * @param value The bytes for locationSecret to set.
        * @return This builder for chaining.
        */
@@ -7008,6 +7611,222 @@ public final class Robot {
           locationSecrets_ = null;
         }
         return locationSecretsBuilder_;
+      }
+
+      private java.lang.Object primaryOrgId_ = "";
+      /**
+       * <code>string primary_org_id = 10 [json_name = "primaryOrgId"];</code>
+       * @return The primaryOrgId.
+       */
+      public java.lang.String getPrimaryOrgId() {
+        java.lang.Object ref = primaryOrgId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          primaryOrgId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string primary_org_id = 10 [json_name = "primaryOrgId"];</code>
+       * @return The bytes for primaryOrgId.
+       */
+      public com.google.protobuf.ByteString
+          getPrimaryOrgIdBytes() {
+        java.lang.Object ref = primaryOrgId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          primaryOrgId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string primary_org_id = 10 [json_name = "primaryOrgId"];</code>
+       * @param value The primaryOrgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrimaryOrgId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        primaryOrgId_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string primary_org_id = 10 [json_name = "primaryOrgId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrimaryOrgId() {
+        primaryOrgId_ = getDefaultInstance().getPrimaryOrgId();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string primary_org_id = 10 [json_name = "primaryOrgId"];</code>
+       * @param value The bytes for primaryOrgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrimaryOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        primaryOrgId_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object locationId_ = "";
+      /**
+       * <code>string location_id = 11 [json_name = "locationId"];</code>
+       * @return The locationId.
+       */
+      public java.lang.String getLocationId() {
+        java.lang.Object ref = locationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          locationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string location_id = 11 [json_name = "locationId"];</code>
+       * @return The bytes for locationId.
+       */
+      public com.google.protobuf.ByteString
+          getLocationIdBytes() {
+        java.lang.Object ref = locationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          locationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string location_id = 11 [json_name = "locationId"];</code>
+       * @param value The locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        locationId_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string location_id = 11 [json_name = "locationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocationId() {
+        locationId_ = getDefaultInstance().getLocationId();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string location_id = 11 [json_name = "locationId"];</code>
+       * @param value The bytes for locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        locationId_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object machineId_ = "";
+      /**
+       * <code>string machine_id = 12 [json_name = "machineId"];</code>
+       * @return The machineId.
+       */
+      public java.lang.String getMachineId() {
+        java.lang.Object ref = machineId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          machineId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string machine_id = 12 [json_name = "machineId"];</code>
+       * @return The bytes for machineId.
+       */
+      public com.google.protobuf.ByteString
+          getMachineIdBytes() {
+        java.lang.Object ref = machineId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          machineId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string machine_id = 12 [json_name = "machineId"];</code>
+       * @param value The machineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachineId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        machineId_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string machine_id = 12 [json_name = "machineId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMachineId() {
+        machineId_ = getDefaultInstance().getMachineId();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string machine_id = 12 [json_name = "machineId"];</code>
+       * @param value The bytes for machineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachineIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        machineId_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -41956,7 +42775,7 @@ java.lang.String defaultValue) {
       "\n\022app/v1/robot.proto\022\013viam.app.v1\032\026commo" +
       "n/v1/common.proto\032\036google/protobuf/durat" +
       "ion.proto\032\034google/protobuf/struct.proto\032" +
-      "\026tagger/v1/tagger.proto\"\211\005\n\013RobotConfig\022" +
+      "\026tagger/v1/tagger.proto\"\347\005\n\013RobotConfig\022" +
       ".\n\005cloud\030\001 \001(\0132\030.viam.app.v1.CloudConfig" +
       "R\005cloud\0223\n\007remotes\030\002 \003(\0132\031.viam.app.v1.R" +
       "emoteConfigR\007remotes\022<\n\ncomponents\030\003 \003(\013" +
@@ -41971,164 +42790,169 @@ java.lang.String defaultValue) {
       ".v1.ModuleConfigR\007modules\0227\n\025disable_par" +
       "tial_start\030\n \001(\010H\003R\023disablePartialStart\210" +
       "\001\001\0226\n\010packages\030\013 \003(\0132\032.viam.app.v1.Packa" +
-      "geConfigR\010packagesB\n\n\010_networkB\007\n\005_authB" +
-      "\010\n\006_debugB\030\n\026_disable_partial_start\"8\n\016L" +
-      "ocationSecret\022\016\n\002id\030\001 \001(\tR\002id\022\026\n\006secret\030" +
-      "\002 \001(\tR\006secret\"+\n\023AppValidationStatus\022\024\n\005" +
-      "error\030\001 \001(\tR\005error\"\330\002\n\013CloudConfig\022\016\n\002id" +
-      "\030\001 \001(\tR\002id\022\022\n\004fqdn\030\002 \001(\tR\004fqdn\022\035\n\nlocal_" +
-      "fqdn\030\003 \001(\tR\tlocalFqdn\022\035\n\nmanaged_by\030\004 \001(" +
-      "\tR\tmanagedBy\022+\n\021signaling_address\030\005 \001(\tR" +
-      "\020signalingAddress\022-\n\022signaling_insecure\030" +
-      "\006 \001(\010R\021signalingInsecure\022+\n\017location_sec" +
-      "ret\030\007 \001(\tB\002\030\001R\016locationSecret\022\026\n\006secret\030" +
-      "\010 \001(\tR\006secret\022F\n\020location_secrets\030\t \003(\0132" +
-      "\033.viam.app.v1.LocationSecretR\017locationSe" +
-      "crets\"\273\003\n\017ComponentConfig\022\022\n\004name\030\001 \001(\tR" +
-      "\004name\022\034\n\tnamespace\030\002 \001(\tR\tnamespace\022\022\n\004t" +
-      "ype\030\003 \001(\tR\004type\022\024\n\005model\030\004 \001(\tR\005model\022(\n" +
-      "\005frame\030\005 \001(\0132\022.viam.app.v1.FrameR\005frame\022" +
-      "\035\n\ndepends_on\030\006 \003(\tR\tdependsOn\022l\n\017servic" +
-      "e_configs\030\007 \003(\0132\'.viam.app.v1.ResourceLe" +
-      "velServiceConfigB\032\232\204\236\003\025json:\"service_con" +
-      "fig\"R\016serviceConfigs\0227\n\nattributes\030\010 \001(\013" +
-      "2\027.google.protobuf.StructR\nattributes\022\020\n" +
-      "\003api\030\t \001(\tR\003api\022J\n\021log_configuration\030\n \001" +
-      "(\0132\035.viam.app.v1.LogConfigurationR\020logCo" +
-      "nfiguration\"i\n\032ResourceLevelServiceConfi" +
-      "g\022\022\n\004type\030\001 \001(\tR\004type\0227\n\nattributes\030\002 \001(" +
-      "\0132\027.google.protobuf.StructR\nattributes\"\324" +
-      "\002\n\rProcessConfig\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name" +
-      "\030\002 \001(\tR\004name\022\022\n\004args\030\003 \003(\tR\004args\022\020\n\003cwd\030" +
-      "\004 \001(\tR\003cwd\022\031\n\010one_shot\030\005 \001(\010R\007oneShot\022\020\n" +
-      "\003log\030\006 \001(\010R\003log\022\037\n\013stop_signal\030\007 \001(\005R\nst" +
-      "opSignal\022<\n\014stop_timeout\030\010 \001(\0132\031.google." +
-      "protobuf.DurationR\013stopTimeout\0225\n\003env\030\t " +
-      "\003(\0132#.viam.app.v1.ProcessConfig.EnvEntry" +
-      "R\003env\0326\n\010EnvEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005v" +
-      "alue\030\002 \001(\tR\005value:\0028\001\"\303\002\n\rServiceConfig\022" +
-      "\022\n\004name\030\001 \001(\tR\004name\022\034\n\tnamespace\030\002 \001(\tR\t" +
-      "namespace\022\022\n\004type\030\003 \001(\tR\004type\0227\n\nattribu" +
-      "tes\030\004 \001(\0132\027.google.protobuf.StructR\nattr" +
-      "ibutes\022\035\n\ndepends_on\030\005 \003(\tR\tdependsOn\022\024\n" +
-      "\005model\030\006 \001(\tR\005model\022\020\n\003api\030\t \001(\tR\003api\022l\n" +
-      "\017service_configs\030\n \003(\0132\'.viam.app.v1.Res" +
-      "ourceLevelServiceConfigB\032\232\204\236\003\025json:\"serv" +
-      "ice_config\"R\016serviceConfigs\"\305\001\n\rNetworkC" +
-      "onfig\022\022\n\004fqdn\030\001 \001(\tR\004fqdn\022!\n\014bind_addres" +
-      "s\030\002 \001(\tR\013bindAddress\022\"\n\rtls_cert_file\030\003 " +
-      "\001(\tR\013tlsCertFile\022 \n\014tls_key_file\030\004 \001(\tR\n" +
-      "tlsKeyFile\0227\n\010sessions\030\005 \001(\0132\033.viam.app." +
-      "v1.SessionsConfigR\010sessions\"V\n\016SessionsC" +
-      "onfig\022D\n\020heartbeat_window\030\001 \001(\0132\031.google" +
-      ".protobuf.DurationR\017heartbeatWindow\"\345\001\n\n" +
-      "AuthConfig\022:\n\010handlers\030\001 \003(\0132\036.viam.app." +
-      "v1.AuthHandlerConfigR\010handlers\022*\n\021tls_au" +
-      "th_entities\030\002 \003(\tR\017tlsAuthEntities\022V\n\024ex" +
-      "ternal_auth_config\030\003 \001(\0132\037.viam.app.v1.E" +
-      "xternalAuthConfigH\000R\022externalAuthConfig\210" +
-      "\001\001B\027\n\025_external_auth_config\"7\n\010JWKSFile\022" +
-      "+\n\004json\030\001 \001(\0132\027.google.protobuf.StructR\004" +
-      "json\"?\n\022ExternalAuthConfig\022)\n\004jwks\030\001 \001(\013" +
-      "2\025.viam.app.v1.JWKSFileR\004jwks\"v\n\021AuthHan" +
-      "dlerConfig\0220\n\004type\030\001 \001(\0162\034.viam.app.v1.C" +
-      "redentialsTypeR\004type\022/\n\006config\030\005 \001(\0132\027.g" +
-      "oogle.protobuf.StructR\006config\"\315\001\n\005Frame\022" +
-      "\026\n\006parent\030\001 \001(\tR\006parent\022:\n\013translation\030\002" +
-      " \001(\0132\030.viam.app.v1.TranslationR\013translat" +
-      "ion\022:\n\013orientation\030\003 \001(\0132\030.viam.app.v1.O" +
-      "rientationR\013orientation\0224\n\010geometry\030\004 \001(" +
-      "\0132\030.viam.common.v1.GeometryR\010geometry\"(\n" +
-      "\020LogConfiguration\022\024\n\005level\030\001 \001(\tR\005level\"" +
-      "7\n\013Translation\022\014\n\001x\030\001 \001(\001R\001x\022\014\n\001y\030\002 \001(\001R" +
-      "\001y\022\014\n\001z\030\003 \001(\001R\001z\"\320\007\n\013Orientation\022O\n\016no_o" +
-      "rientation\030\001 \001(\0132&.viam.app.v1.Orientati" +
-      "on.NoOrientationH\000R\rnoOrientation\022Z\n\016vec" +
-      "tor_radians\030\002 \001(\01321.viam.app.v1.Orientat" +
-      "ion.OrientationVectorRadiansH\000R\rvectorRa" +
-      "dians\022Z\n\016vector_degrees\030\003 \001(\01321.viam.app" +
-      ".v1.Orientation.OrientationVectorDegrees" +
-      "H\000R\rvectorDegrees\022I\n\014euler_angles\030\004 \001(\0132" +
-      "$.viam.app.v1.Orientation.EulerAnglesH\000R" +
-      "\013eulerAngles\022F\n\013axis_angles\030\005 \001(\0132#.viam" +
-      ".app.v1.Orientation.AxisAnglesH\000R\naxisAn" +
-      "gles\022E\n\nquaternion\030\006 \001(\0132#.viam.app.v1.O" +
-      "rientation.QuaternionH\000R\nquaternion\032\017\n\rN" +
-      "oOrientation\032j\n\030OrientationVectorRadians" +
-      "\022$\n\005theta\030\001 \001(\001B\016\232\204\236\003\tjson:\"th\"R\005theta\022\014" +
-      "\n\001x\030\002 \001(\001R\001x\022\014\n\001y\030\003 \001(\001R\001y\022\014\n\001z\030\004 \001(\001R\001z" +
-      "\032j\n\030OrientationVectorDegrees\022$\n\005theta\030\001 " +
-      "\001(\001B\016\232\204\236\003\tjson:\"th\"R\005theta\022\014\n\001x\030\002 \001(\001R\001x" +
-      "\022\014\n\001y\030\003 \001(\001R\001y\022\014\n\001z\030\004 \001(\001R\001z\032I\n\013EulerAng" +
-      "les\022\022\n\004roll\030\001 \001(\001R\004roll\022\024\n\005pitch\030\002 \001(\001R\005" +
-      "pitch\022\020\n\003yaw\030\003 \001(\001R\003yaw\032\\\n\nAxisAngles\022$\n" +
-      "\005theta\030\001 \001(\001B\016\232\204\236\003\tjson:\"th\"R\005theta\022\014\n\001x" +
-      "\030\002 \001(\001R\001x\022\014\n\001y\030\003 \001(\001R\001y\022\014\n\001z\030\004 \001(\001R\001z\032D\n" +
-      "\nQuaternion\022\014\n\001w\030\001 \001(\001R\001w\022\014\n\001x\030\002 \001(\001R\001x\022" +
-      "\014\n\001y\030\003 \001(\001R\001y\022\014\n\001z\030\004 \001(\001R\001zB\006\n\004type\"\365\003\n\014" +
-      "RemoteConfig\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\007addr" +
-      "ess\030\002 \001(\tR\007address\022(\n\005frame\030\003 \001(\0132\022.viam" +
-      ".app.v1.FrameR\005frame\022+\n\004auth\030\004 \001(\0132\027.via" +
-      "m.app.v1.RemoteAuthR\004auth\022\035\n\nmanaged_by\030" +
-      "\005 \001(\tR\tmanagedBy\022\032\n\010insecure\030\006 \001(\010R\010inse" +
-      "cure\022U\n\031connection_check_interval\030\007 \001(\0132" +
-      "\031.google.protobuf.DurationR\027connectionCh" +
-      "eckInterval\022H\n\022reconnect_interval\030\010 \001(\0132" +
-      "\031.google.protobuf.DurationR\021reconnectInt" +
-      "erval\022l\n\017service_configs\030\t \003(\0132\'.viam.ap" +
-      "p.v1.ResourceLevelServiceConfigB\032\232\204\236\003\025js" +
-      "on:\"service_config\"R\016serviceConfigs\022\026\n\006s" +
-      "ecret\030\n \001(\tR\006secret\"\306\001\n\nRemoteAuth\022E\n\013cr" +
-      "edentials\030\001 \001(\0132#.viam.app.v1.RemoteAuth" +
-      ".CredentialsR\013credentials\022\026\n\006entity\030\002 \001(" +
-      "\tR\006entity\032Y\n\013Credentials\0220\n\004type\030\001 \001(\0162\034" +
-      ".viam.app.v1.CredentialsTypeR\004type\022\030\n\007pa" +
-      "yload\030\002 \001(\tR\007payload\"\254\001\n\tAgentInfo\022\022\n\004ho" +
-      "st\030\001 \001(\tR\004host\022\016\n\002os\030\002 \001(\tR\002os\022\020\n\003ips\030\003 " +
-      "\003(\tR\003ips\022\030\n\007version\030\004 \001(\tR\007version\022!\n\014gi" +
-      "t_revision\030\005 \001(\tR\013gitRevision\022\037\n\010platfor" +
-      "m\030\006 \001(\tH\000R\010platform\210\001\001B\013\n\t_platform\"j\n\rC" +
-      "onfigRequest\022\016\n\002id\030\001 \001(\tR\002id\022:\n\nagent_in" +
-      "fo\030\002 \001(\0132\026.viam.app.v1.AgentInfoH\000R\tagen" +
-      "tInfo\210\001\001B\r\n\013_agent_info\"B\n\016ConfigRespons" +
-      "e\0220\n\006config\030\001 \001(\0132\030.viam.app.v1.RobotCon" +
-      "figR\006config\"$\n\022CertificateRequest\022\016\n\002id\030" +
-      "\001 \001(\tR\002id\"v\n\023CertificateResponse\022\016\n\002id\030\001" +
-      " \001(\tR\002id\022\'\n\017tls_certificate\030\002 \001(\tR\016tlsCe" +
-      "rtificate\022&\n\017tls_private_key\030\003 \001(\tR\rtlsP" +
-      "rivateKey\"J\n\nLogRequest\022\016\n\002id\030\001 \001(\tR\002id\022" +
-      ",\n\004logs\030\002 \003(\0132\030.viam.common.v1.LogEntryR" +
-      "\004logs\"\r\n\013LogResponse\"%\n\023NeedsRestartRequ" +
-      "est\022\016\n\002id\030\001 \001(\tR\002id\"\232\001\n\024NeedsRestartResp" +
-      "onse\022\016\n\002id\030\001 \001(\tR\002id\022!\n\014must_restart\030\002 \001" +
-      "(\010R\013mustRestart\022O\n\026restart_check_interva" +
-      "l\030\003 \001(\0132\031.google.protobuf.DurationR\024rest" +
-      "artCheckInterval\"\254\002\n\014ModuleConfig\022\022\n\004nam" +
-      "e\030\001 \001(\tR\004name\022\022\n\004path\030\002 \001(\tR\004path\022\033\n\tlog" +
-      "_level\030\003 \001(\tR\010logLevel\022\022\n\004type\030\004 \001(\tR\004ty" +
-      "pe\022\033\n\tmodule_id\030\005 \001(\tR\010moduleId\0224\n\003env\030\006" +
-      " \003(\0132\".viam.app.v1.ModuleConfig.EnvEntry" +
-      "R\003env\0228\n\006status\030\007 \001(\0132 .viam.app.v1.AppV" +
-      "alidationStatusR\006status\0326\n\010EnvEntry\022\020\n\003k" +
-      "ey\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"" +
-      "\245\001\n\rPackageConfig\022\022\n\004name\030\001 \001(\tR\004name\022\030\n" +
-      "\007package\030\002 \001(\tR\007package\022\030\n\007version\030\003 \001(\t" +
-      "R\007version\022\022\n\004type\030\004 \001(\tR\004type\0228\n\006status\030" +
-      "\005 \001(\0132 .viam.app.v1.AppValidationStatusR" +
-      "\006status*\277\001\n\017CredentialsType\022 \n\034CREDENTIA" +
-      "LS_TYPE_UNSPECIFIED\020\000\022\035\n\031CREDENTIALS_TYP" +
-      "E_INTERNAL\020\001\022\034\n\030CREDENTIALS_TYPE_API_KEY" +
-      "\020\002\022!\n\035CREDENTIALS_TYPE_ROBOT_SECRET\020\003\022*\n" +
-      "&CREDENTIALS_TYPE_ROBOT_LOCATION_SECRET\020" +
-      "\0042\262\002\n\014RobotService\022A\n\006Config\022\032.viam.app." +
-      "v1.ConfigRequest\032\033.viam.app.v1.ConfigRes" +
-      "ponse\022P\n\013Certificate\022\037.viam.app.v1.Certi" +
-      "ficateRequest\032 .viam.app.v1.CertificateR" +
-      "esponse\0228\n\003Log\022\027.viam.app.v1.LogRequest\032" +
-      "\030.viam.app.v1.LogResponse\022S\n\014NeedsRestar" +
-      "t\022 .viam.app.v1.NeedsRestartRequest\032!.vi" +
-      "am.app.v1.NeedsRestartResponseB\030Z\026go.via" +
-      "m.com/api/app/v1b\006proto3"
+      "geConfigR\010packages\022\\\n\031overwrite_fragment" +
+      "_status\030\014 \003(\0132 .viam.app.v1.AppValidatio" +
+      "nStatusR\027overwriteFragmentStatusB\n\n\010_net" +
+      "workB\007\n\005_authB\010\n\006_debugB\030\n\026_disable_part" +
+      "ial_start\"8\n\016LocationSecret\022\016\n\002id\030\001 \001(\tR" +
+      "\002id\022\026\n\006secret\030\002 \001(\tR\006secret\"+\n\023AppValida" +
+      "tionStatus\022\024\n\005error\030\001 \001(\tR\005error\"\276\003\n\013Clo" +
+      "udConfig\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004fqdn\030\002 \001(\tR\004" +
+      "fqdn\022\035\n\nlocal_fqdn\030\003 \001(\tR\tlocalFqdn\022\035\n\nm" +
+      "anaged_by\030\004 \001(\tR\tmanagedBy\022+\n\021signaling_" +
+      "address\030\005 \001(\tR\020signalingAddress\022-\n\022signa" +
+      "ling_insecure\030\006 \001(\010R\021signalingInsecure\022+" +
+      "\n\017location_secret\030\007 \001(\tB\002\030\001R\016locationSec" +
+      "ret\022\026\n\006secret\030\010 \001(\tR\006secret\022F\n\020location_" +
+      "secrets\030\t \003(\0132\033.viam.app.v1.LocationSecr" +
+      "etR\017locationSecrets\022$\n\016primary_org_id\030\n " +
+      "\001(\tR\014primaryOrgId\022\037\n\013location_id\030\013 \001(\tR\n" +
+      "locationId\022\035\n\nmachine_id\030\014 \001(\tR\tmachineI" +
+      "d\"\273\003\n\017ComponentConfig\022\022\n\004name\030\001 \001(\tR\004nam" +
+      "e\022\034\n\tnamespace\030\002 \001(\tR\tnamespace\022\022\n\004type\030" +
+      "\003 \001(\tR\004type\022\024\n\005model\030\004 \001(\tR\005model\022(\n\005fra" +
+      "me\030\005 \001(\0132\022.viam.app.v1.FrameR\005frame\022\035\n\nd" +
+      "epends_on\030\006 \003(\tR\tdependsOn\022l\n\017service_co" +
+      "nfigs\030\007 \003(\0132\'.viam.app.v1.ResourceLevelS" +
+      "erviceConfigB\032\232\204\236\003\025json:\"service_config\"" +
+      "R\016serviceConfigs\0227\n\nattributes\030\010 \001(\0132\027.g" +
+      "oogle.protobuf.StructR\nattributes\022\020\n\003api" +
+      "\030\t \001(\tR\003api\022J\n\021log_configuration\030\n \001(\0132\035" +
+      ".viam.app.v1.LogConfigurationR\020logConfig" +
+      "uration\"i\n\032ResourceLevelServiceConfig\022\022\n" +
+      "\004type\030\001 \001(\tR\004type\0227\n\nattributes\030\002 \001(\0132\027." +
+      "google.protobuf.StructR\nattributes\"\324\002\n\rP" +
+      "rocessConfig\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004name\030\002 \001" +
+      "(\tR\004name\022\022\n\004args\030\003 \003(\tR\004args\022\020\n\003cwd\030\004 \001(" +
+      "\tR\003cwd\022\031\n\010one_shot\030\005 \001(\010R\007oneShot\022\020\n\003log" +
+      "\030\006 \001(\010R\003log\022\037\n\013stop_signal\030\007 \001(\005R\nstopSi" +
+      "gnal\022<\n\014stop_timeout\030\010 \001(\0132\031.google.prot" +
+      "obuf.DurationR\013stopTimeout\0225\n\003env\030\t \003(\0132" +
+      "#.viam.app.v1.ProcessConfig.EnvEntryR\003en" +
+      "v\0326\n\010EnvEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value" +
+      "\030\002 \001(\tR\005value:\0028\001\"\303\002\n\rServiceConfig\022\022\n\004n" +
+      "ame\030\001 \001(\tR\004name\022\034\n\tnamespace\030\002 \001(\tR\tname" +
+      "space\022\022\n\004type\030\003 \001(\tR\004type\0227\n\nattributes\030" +
+      "\004 \001(\0132\027.google.protobuf.StructR\nattribut" +
+      "es\022\035\n\ndepends_on\030\005 \003(\tR\tdependsOn\022\024\n\005mod" +
+      "el\030\006 \001(\tR\005model\022\020\n\003api\030\t \001(\tR\003api\022l\n\017ser" +
+      "vice_configs\030\n \003(\0132\'.viam.app.v1.Resourc" +
+      "eLevelServiceConfigB\032\232\204\236\003\025json:\"service_" +
+      "config\"R\016serviceConfigs\"\305\001\n\rNetworkConfi" +
+      "g\022\022\n\004fqdn\030\001 \001(\tR\004fqdn\022!\n\014bind_address\030\002 " +
+      "\001(\tR\013bindAddress\022\"\n\rtls_cert_file\030\003 \001(\tR" +
+      "\013tlsCertFile\022 \n\014tls_key_file\030\004 \001(\tR\ntlsK" +
+      "eyFile\0227\n\010sessions\030\005 \001(\0132\033.viam.app.v1.S" +
+      "essionsConfigR\010sessions\"V\n\016SessionsConfi" +
+      "g\022D\n\020heartbeat_window\030\001 \001(\0132\031.google.pro" +
+      "tobuf.DurationR\017heartbeatWindow\"\345\001\n\nAuth" +
+      "Config\022:\n\010handlers\030\001 \003(\0132\036.viam.app.v1.A" +
+      "uthHandlerConfigR\010handlers\022*\n\021tls_auth_e" +
+      "ntities\030\002 \003(\tR\017tlsAuthEntities\022V\n\024extern" +
+      "al_auth_config\030\003 \001(\0132\037.viam.app.v1.Exter" +
+      "nalAuthConfigH\000R\022externalAuthConfig\210\001\001B\027" +
+      "\n\025_external_auth_config\"7\n\010JWKSFile\022+\n\004j" +
+      "son\030\001 \001(\0132\027.google.protobuf.StructR\004json" +
+      "\"?\n\022ExternalAuthConfig\022)\n\004jwks\030\001 \001(\0132\025.v" +
+      "iam.app.v1.JWKSFileR\004jwks\"v\n\021AuthHandler" +
+      "Config\0220\n\004type\030\001 \001(\0162\034.viam.app.v1.Crede" +
+      "ntialsTypeR\004type\022/\n\006config\030\005 \001(\0132\027.googl" +
+      "e.protobuf.StructR\006config\"\315\001\n\005Frame\022\026\n\006p" +
+      "arent\030\001 \001(\tR\006parent\022:\n\013translation\030\002 \001(\013" +
+      "2\030.viam.app.v1.TranslationR\013translation\022" +
+      ":\n\013orientation\030\003 \001(\0132\030.viam.app.v1.Orien" +
+      "tationR\013orientation\0224\n\010geometry\030\004 \001(\0132\030." +
+      "viam.common.v1.GeometryR\010geometry\"(\n\020Log" +
+      "Configuration\022\024\n\005level\030\001 \001(\tR\005level\"7\n\013T" +
+      "ranslation\022\014\n\001x\030\001 \001(\001R\001x\022\014\n\001y\030\002 \001(\001R\001y\022\014" +
+      "\n\001z\030\003 \001(\001R\001z\"\320\007\n\013Orientation\022O\n\016no_orien" +
+      "tation\030\001 \001(\0132&.viam.app.v1.Orientation.N" +
+      "oOrientationH\000R\rnoOrientation\022Z\n\016vector_" +
+      "radians\030\002 \001(\01321.viam.app.v1.Orientation." +
+      "OrientationVectorRadiansH\000R\rvectorRadian" +
+      "s\022Z\n\016vector_degrees\030\003 \001(\01321.viam.app.v1." +
+      "Orientation.OrientationVectorDegreesH\000R\r" +
+      "vectorDegrees\022I\n\014euler_angles\030\004 \001(\0132$.vi" +
+      "am.app.v1.Orientation.EulerAnglesH\000R\013eul" +
+      "erAngles\022F\n\013axis_angles\030\005 \001(\0132#.viam.app" +
+      ".v1.Orientation.AxisAnglesH\000R\naxisAngles" +
+      "\022E\n\nquaternion\030\006 \001(\0132#.viam.app.v1.Orien" +
+      "tation.QuaternionH\000R\nquaternion\032\017\n\rNoOri" +
+      "entation\032j\n\030OrientationVectorRadians\022$\n\005" +
+      "theta\030\001 \001(\001B\016\232\204\236\003\tjson:\"th\"R\005theta\022\014\n\001x\030" +
+      "\002 \001(\001R\001x\022\014\n\001y\030\003 \001(\001R\001y\022\014\n\001z\030\004 \001(\001R\001z\032j\n\030" +
+      "OrientationVectorDegrees\022$\n\005theta\030\001 \001(\001B" +
+      "\016\232\204\236\003\tjson:\"th\"R\005theta\022\014\n\001x\030\002 \001(\001R\001x\022\014\n\001" +
+      "y\030\003 \001(\001R\001y\022\014\n\001z\030\004 \001(\001R\001z\032I\n\013EulerAngles\022" +
+      "\022\n\004roll\030\001 \001(\001R\004roll\022\024\n\005pitch\030\002 \001(\001R\005pitc" +
+      "h\022\020\n\003yaw\030\003 \001(\001R\003yaw\032\\\n\nAxisAngles\022$\n\005the" +
+      "ta\030\001 \001(\001B\016\232\204\236\003\tjson:\"th\"R\005theta\022\014\n\001x\030\002 \001" +
+      "(\001R\001x\022\014\n\001y\030\003 \001(\001R\001y\022\014\n\001z\030\004 \001(\001R\001z\032D\n\nQua" +
+      "ternion\022\014\n\001w\030\001 \001(\001R\001w\022\014\n\001x\030\002 \001(\001R\001x\022\014\n\001y" +
+      "\030\003 \001(\001R\001y\022\014\n\001z\030\004 \001(\001R\001zB\006\n\004type\"\365\003\n\014Remo" +
+      "teConfig\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\007address\030" +
+      "\002 \001(\tR\007address\022(\n\005frame\030\003 \001(\0132\022.viam.app" +
+      ".v1.FrameR\005frame\022+\n\004auth\030\004 \001(\0132\027.viam.ap" +
+      "p.v1.RemoteAuthR\004auth\022\035\n\nmanaged_by\030\005 \001(" +
+      "\tR\tmanagedBy\022\032\n\010insecure\030\006 \001(\010R\010insecure" +
+      "\022U\n\031connection_check_interval\030\007 \001(\0132\031.go" +
+      "ogle.protobuf.DurationR\027connectionCheckI" +
+      "nterval\022H\n\022reconnect_interval\030\010 \001(\0132\031.go" +
+      "ogle.protobuf.DurationR\021reconnectInterva" +
+      "l\022l\n\017service_configs\030\t \003(\0132\'.viam.app.v1" +
+      ".ResourceLevelServiceConfigB\032\232\204\236\003\025json:\"" +
+      "service_config\"R\016serviceConfigs\022\026\n\006secre" +
+      "t\030\n \001(\tR\006secret\"\306\001\n\nRemoteAuth\022E\n\013creden" +
+      "tials\030\001 \001(\0132#.viam.app.v1.RemoteAuth.Cre" +
+      "dentialsR\013credentials\022\026\n\006entity\030\002 \001(\tR\006e" +
+      "ntity\032Y\n\013Credentials\0220\n\004type\030\001 \001(\0162\034.via" +
+      "m.app.v1.CredentialsTypeR\004type\022\030\n\007payloa" +
+      "d\030\002 \001(\tR\007payload\"\254\001\n\tAgentInfo\022\022\n\004host\030\001" +
+      " \001(\tR\004host\022\016\n\002os\030\002 \001(\tR\002os\022\020\n\003ips\030\003 \003(\tR" +
+      "\003ips\022\030\n\007version\030\004 \001(\tR\007version\022!\n\014git_re" +
+      "vision\030\005 \001(\tR\013gitRevision\022\037\n\010platform\030\006 " +
+      "\001(\tH\000R\010platform\210\001\001B\013\n\t_platform\"j\n\rConfi" +
+      "gRequest\022\016\n\002id\030\001 \001(\tR\002id\022:\n\nagent_info\030\002" +
+      " \001(\0132\026.viam.app.v1.AgentInfoH\000R\tagentInf" +
+      "o\210\001\001B\r\n\013_agent_info\"B\n\016ConfigResponse\0220\n" +
+      "\006config\030\001 \001(\0132\030.viam.app.v1.RobotConfigR" +
+      "\006config\"$\n\022CertificateRequest\022\016\n\002id\030\001 \001(" +
+      "\tR\002id\"v\n\023CertificateResponse\022\016\n\002id\030\001 \001(\t" +
+      "R\002id\022\'\n\017tls_certificate\030\002 \001(\tR\016tlsCertif" +
+      "icate\022&\n\017tls_private_key\030\003 \001(\tR\rtlsPriva" +
+      "teKey\"J\n\nLogRequest\022\016\n\002id\030\001 \001(\tR\002id\022,\n\004l" +
+      "ogs\030\002 \003(\0132\030.viam.common.v1.LogEntryR\004log" +
+      "s\"\r\n\013LogResponse\"%\n\023NeedsRestartRequest\022" +
+      "\016\n\002id\030\001 \001(\tR\002id\"\232\001\n\024NeedsRestartResponse" +
+      "\022\016\n\002id\030\001 \001(\tR\002id\022!\n\014must_restart\030\002 \001(\010R\013" +
+      "mustRestart\022O\n\026restart_check_interval\030\003 " +
+      "\001(\0132\031.google.protobuf.DurationR\024restartC" +
+      "heckInterval\"\254\002\n\014ModuleConfig\022\022\n\004name\030\001 " +
+      "\001(\tR\004name\022\022\n\004path\030\002 \001(\tR\004path\022\033\n\tlog_lev" +
+      "el\030\003 \001(\tR\010logLevel\022\022\n\004type\030\004 \001(\tR\004type\022\033" +
+      "\n\tmodule_id\030\005 \001(\tR\010moduleId\0224\n\003env\030\006 \003(\013" +
+      "2\".viam.app.v1.ModuleConfig.EnvEntryR\003en" +
+      "v\0228\n\006status\030\007 \001(\0132 .viam.app.v1.AppValid" +
+      "ationStatusR\006status\0326\n\010EnvEntry\022\020\n\003key\030\001" +
+      " \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\245\001\n\r" +
+      "PackageConfig\022\022\n\004name\030\001 \001(\tR\004name\022\030\n\007pac" +
+      "kage\030\002 \001(\tR\007package\022\030\n\007version\030\003 \001(\tR\007ve" +
+      "rsion\022\022\n\004type\030\004 \001(\tR\004type\0228\n\006status\030\005 \001(" +
+      "\0132 .viam.app.v1.AppValidationStatusR\006sta" +
+      "tus*\277\001\n\017CredentialsType\022 \n\034CREDENTIALS_T" +
+      "YPE_UNSPECIFIED\020\000\022\035\n\031CREDENTIALS_TYPE_IN" +
+      "TERNAL\020\001\022\034\n\030CREDENTIALS_TYPE_API_KEY\020\002\022!" +
+      "\n\035CREDENTIALS_TYPE_ROBOT_SECRET\020\003\022*\n&CRE" +
+      "DENTIALS_TYPE_ROBOT_LOCATION_SECRET\020\0042\262\002" +
+      "\n\014RobotService\022A\n\006Config\022\032.viam.app.v1.C" +
+      "onfigRequest\032\033.viam.app.v1.ConfigRespons" +
+      "e\022P\n\013Certificate\022\037.viam.app.v1.Certifica" +
+      "teRequest\032 .viam.app.v1.CertificateRespo" +
+      "nse\0228\n\003Log\022\027.viam.app.v1.LogRequest\032\030.vi" +
+      "am.app.v1.LogResponse\022S\n\014NeedsRestart\022 ." +
+      "viam.app.v1.NeedsRestartRequest\032!.viam.a" +
+      "pp.v1.NeedsRestartResponseB\030Z\026go.viam.co" +
+      "m/api/app/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -42143,7 +42967,7 @@ java.lang.String defaultValue) {
     internal_static_viam_app_v1_RobotConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_v1_RobotConfig_descriptor,
-        new java.lang.String[] { "Cloud", "Remotes", "Components", "Processes", "Services", "Network", "Auth", "Debug", "Modules", "DisablePartialStart", "Packages", });
+        new java.lang.String[] { "Cloud", "Remotes", "Components", "Processes", "Services", "Network", "Auth", "Debug", "Modules", "DisablePartialStart", "Packages", "OverwriteFragmentStatus", });
     internal_static_viam_app_v1_LocationSecret_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_viam_app_v1_LocationSecret_fieldAccessorTable = new
@@ -42161,7 +42985,7 @@ java.lang.String defaultValue) {
     internal_static_viam_app_v1_CloudConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_v1_CloudConfig_descriptor,
-        new java.lang.String[] { "Id", "Fqdn", "LocalFqdn", "ManagedBy", "SignalingAddress", "SignalingInsecure", "LocationSecret", "Secret", "LocationSecrets", });
+        new java.lang.String[] { "Id", "Fqdn", "LocalFqdn", "ManagedBy", "SignalingAddress", "SignalingInsecure", "LocationSecret", "Secret", "LocationSecrets", "PrimaryOrgId", "LocationId", "MachineId", });
     internal_static_viam_app_v1_ComponentConfig_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_viam_app_v1_ComponentConfig_fieldAccessorTable = new

@@ -273,19 +273,19 @@ public final class CloudSlam {
         int index);
 
     /**
-     * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
-     * @return Whether the slamAlgorithmParams field is set.
+     * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
+     * @return Whether the slamConfig field is set.
      */
-    boolean hasSlamAlgorithmParams();
+    boolean hasSlamConfig();
     /**
-     * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
-     * @return The slamAlgorithmParams.
+     * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
+     * @return The slamConfig.
      */
-    com.google.protobuf.Struct getSlamAlgorithmParams();
+    com.google.protobuf.Struct getSlamConfig();
     /**
-     * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
+     * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
      */
-    com.google.protobuf.StructOrBuilder getSlamAlgorithmParamsOrBuilder();
+    com.google.protobuf.StructOrBuilder getSlamConfigOrBuilder();
 
     /**
      * <code>string existing_map_version = 11 [json_name = "existingMapVersion"];</code>
@@ -298,6 +298,21 @@ public final class CloudSlam {
      */
     com.google.protobuf.ByteString
         getExistingMapVersionBytes();
+
+    /**
+     * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+     * @return Whether the module field is set.
+     */
+    boolean hasModule();
+    /**
+     * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+     * @return The module.
+     */
+    viam.app.cloudslam.v1.CloudSlam.Module getModule();
+    /**
+     * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+     */
+    viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder getModuleOrBuilder();
   }
   /**
    * Protobuf type {@code viam.app.cloudslam.v1.StartMappingSessionRequest}
@@ -660,30 +675,30 @@ public final class CloudSlam {
       return sensors_.get(index);
     }
 
-    public static final int SLAM_ALGORITHM_PARAMS_FIELD_NUMBER = 10;
-    private com.google.protobuf.Struct slamAlgorithmParams_;
+    public static final int SLAM_CONFIG_FIELD_NUMBER = 10;
+    private com.google.protobuf.Struct slamConfig_;
     /**
-     * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
-     * @return Whether the slamAlgorithmParams field is set.
+     * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
+     * @return Whether the slamConfig field is set.
      */
     @java.lang.Override
-    public boolean hasSlamAlgorithmParams() {
+    public boolean hasSlamConfig() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
-     * @return The slamAlgorithmParams.
+     * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
+     * @return The slamConfig.
      */
     @java.lang.Override
-    public com.google.protobuf.Struct getSlamAlgorithmParams() {
-      return slamAlgorithmParams_ == null ? com.google.protobuf.Struct.getDefaultInstance() : slamAlgorithmParams_;
+    public com.google.protobuf.Struct getSlamConfig() {
+      return slamConfig_ == null ? com.google.protobuf.Struct.getDefaultInstance() : slamConfig_;
     }
     /**
-     * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
+     * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
      */
     @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getSlamAlgorithmParamsOrBuilder() {
-      return slamAlgorithmParams_ == null ? com.google.protobuf.Struct.getDefaultInstance() : slamAlgorithmParams_;
+    public com.google.protobuf.StructOrBuilder getSlamConfigOrBuilder() {
+      return slamConfig_ == null ? com.google.protobuf.Struct.getDefaultInstance() : slamConfig_;
     }
 
     public static final int EXISTING_MAP_VERSION_FIELD_NUMBER = 11;
@@ -725,6 +740,32 @@ public final class CloudSlam {
       }
     }
 
+    public static final int MODULE_FIELD_NUMBER = 12;
+    private viam.app.cloudslam.v1.CloudSlam.Module module_;
+    /**
+     * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+     * @return Whether the module field is set.
+     */
+    @java.lang.Override
+    public boolean hasModule() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+     * @return The module.
+     */
+    @java.lang.Override
+    public viam.app.cloudslam.v1.CloudSlam.Module getModule() {
+      return module_ == null ? viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance() : module_;
+    }
+    /**
+     * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+     */
+    @java.lang.Override
+    public viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder getModuleOrBuilder() {
+      return module_ == null ? viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance() : module_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -764,10 +805,13 @@ public final class CloudSlam {
         output.writeMessage(8, sensors_.get(i));
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(10, getSlamAlgorithmParams());
+        output.writeMessage(10, getSlamConfig());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(existingMapVersion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, existingMapVersion_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(12, getModule());
       }
       getUnknownFields().writeTo(output);
     }
@@ -806,10 +850,14 @@ public final class CloudSlam {
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, getSlamAlgorithmParams());
+          .computeMessageSize(10, getSlamConfig());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(existingMapVersion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, existingMapVersion_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getModule());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -845,13 +893,18 @@ public final class CloudSlam {
       }
       if (!getSensorsList()
           .equals(other.getSensorsList())) return false;
-      if (hasSlamAlgorithmParams() != other.hasSlamAlgorithmParams()) return false;
-      if (hasSlamAlgorithmParams()) {
-        if (!getSlamAlgorithmParams()
-            .equals(other.getSlamAlgorithmParams())) return false;
+      if (hasSlamConfig() != other.hasSlamConfig()) return false;
+      if (hasSlamConfig()) {
+        if (!getSlamConfig()
+            .equals(other.getSlamConfig())) return false;
       }
       if (!getExistingMapVersion()
           .equals(other.getExistingMapVersion())) return false;
+      if (hasModule() != other.hasModule()) return false;
+      if (hasModule()) {
+        if (!getModule()
+            .equals(other.getModule())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -883,12 +936,16 @@ public final class CloudSlam {
         hash = (37 * hash) + SENSORS_FIELD_NUMBER;
         hash = (53 * hash) + getSensorsList().hashCode();
       }
-      if (hasSlamAlgorithmParams()) {
-        hash = (37 * hash) + SLAM_ALGORITHM_PARAMS_FIELD_NUMBER;
-        hash = (53 * hash) + getSlamAlgorithmParams().hashCode();
+      if (hasSlamConfig()) {
+        hash = (37 * hash) + SLAM_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getSlamConfig().hashCode();
       }
       hash = (37 * hash) + EXISTING_MAP_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getExistingMapVersion().hashCode();
+      if (hasModule()) {
+        hash = (37 * hash) + MODULE_FIELD_NUMBER;
+        hash = (53 * hash) + getModule().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1021,7 +1078,8 @@ public final class CloudSlam {
                 .alwaysUseFieldBuilders) {
           getCaptureIntervalFieldBuilder();
           getSensorsFieldBuilder();
-          getSlamAlgorithmParamsFieldBuilder();
+          getSlamConfigFieldBuilder();
+          getModuleFieldBuilder();
         }
       }
       @java.lang.Override
@@ -1046,12 +1104,17 @@ public final class CloudSlam {
           sensorsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000080);
-        slamAlgorithmParams_ = null;
-        if (slamAlgorithmParamsBuilder_ != null) {
-          slamAlgorithmParamsBuilder_.dispose();
-          slamAlgorithmParamsBuilder_ = null;
+        slamConfig_ = null;
+        if (slamConfigBuilder_ != null) {
+          slamConfigBuilder_.dispose();
+          slamConfigBuilder_ = null;
         }
         existingMapVersion_ = "";
+        module_ = null;
+        if (moduleBuilder_ != null) {
+          moduleBuilder_.dispose();
+          moduleBuilder_ = null;
+        }
         return this;
       }
 
@@ -1124,13 +1187,19 @@ public final class CloudSlam {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.slamAlgorithmParams_ = slamAlgorithmParamsBuilder_ == null
-              ? slamAlgorithmParams_
-              : slamAlgorithmParamsBuilder_.build();
+          result.slamConfig_ = slamConfigBuilder_ == null
+              ? slamConfig_
+              : slamConfigBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.existingMapVersion_ = existingMapVersion_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.module_ = moduleBuilder_ == null
+              ? module_
+              : moduleBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -1238,13 +1307,16 @@ public final class CloudSlam {
             }
           }
         }
-        if (other.hasSlamAlgorithmParams()) {
-          mergeSlamAlgorithmParams(other.getSlamAlgorithmParams());
+        if (other.hasSlamConfig()) {
+          mergeSlamConfig(other.getSlamConfig());
         }
         if (!other.getExistingMapVersion().isEmpty()) {
           existingMapVersion_ = other.existingMapVersion_;
           bitField0_ |= 0x00000200;
           onChanged();
+        }
+        if (other.hasModule()) {
+          mergeModule(other.getModule());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1324,7 +1396,7 @@ public final class CloudSlam {
               } // case 66
               case 82: {
                 input.readMessage(
-                    getSlamAlgorithmParamsFieldBuilder().getBuilder(),
+                    getSlamConfigFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000100;
                 break;
@@ -1334,6 +1406,13 @@ public final class CloudSlam {
                 bitField0_ |= 0x00000200;
                 break;
               } // case 90
+              case 98: {
+                input.readMessage(
+                    getModuleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 98
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2184,125 +2263,125 @@ public final class CloudSlam {
         return sensorsBuilder_;
       }
 
-      private com.google.protobuf.Struct slamAlgorithmParams_;
+      private com.google.protobuf.Struct slamConfig_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> slamAlgorithmParamsBuilder_;
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> slamConfigBuilder_;
       /**
-       * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
-       * @return Whether the slamAlgorithmParams field is set.
+       * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
+       * @return Whether the slamConfig field is set.
        */
-      public boolean hasSlamAlgorithmParams() {
+      public boolean hasSlamConfig() {
         return ((bitField0_ & 0x00000100) != 0);
       }
       /**
-       * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
-       * @return The slamAlgorithmParams.
+       * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
+       * @return The slamConfig.
        */
-      public com.google.protobuf.Struct getSlamAlgorithmParams() {
-        if (slamAlgorithmParamsBuilder_ == null) {
-          return slamAlgorithmParams_ == null ? com.google.protobuf.Struct.getDefaultInstance() : slamAlgorithmParams_;
+      public com.google.protobuf.Struct getSlamConfig() {
+        if (slamConfigBuilder_ == null) {
+          return slamConfig_ == null ? com.google.protobuf.Struct.getDefaultInstance() : slamConfig_;
         } else {
-          return slamAlgorithmParamsBuilder_.getMessage();
+          return slamConfigBuilder_.getMessage();
         }
       }
       /**
-       * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
+       * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
        */
-      public Builder setSlamAlgorithmParams(com.google.protobuf.Struct value) {
-        if (slamAlgorithmParamsBuilder_ == null) {
+      public Builder setSlamConfig(com.google.protobuf.Struct value) {
+        if (slamConfigBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          slamAlgorithmParams_ = value;
+          slamConfig_ = value;
         } else {
-          slamAlgorithmParamsBuilder_.setMessage(value);
+          slamConfigBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
+       * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
        */
-      public Builder setSlamAlgorithmParams(
+      public Builder setSlamConfig(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (slamAlgorithmParamsBuilder_ == null) {
-          slamAlgorithmParams_ = builderForValue.build();
+        if (slamConfigBuilder_ == null) {
+          slamConfig_ = builderForValue.build();
         } else {
-          slamAlgorithmParamsBuilder_.setMessage(builderForValue.build());
+          slamConfigBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
+       * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
        */
-      public Builder mergeSlamAlgorithmParams(com.google.protobuf.Struct value) {
-        if (slamAlgorithmParamsBuilder_ == null) {
+      public Builder mergeSlamConfig(com.google.protobuf.Struct value) {
+        if (slamConfigBuilder_ == null) {
           if (((bitField0_ & 0x00000100) != 0) &&
-            slamAlgorithmParams_ != null &&
-            slamAlgorithmParams_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getSlamAlgorithmParamsBuilder().mergeFrom(value);
+            slamConfig_ != null &&
+            slamConfig_ != com.google.protobuf.Struct.getDefaultInstance()) {
+            getSlamConfigBuilder().mergeFrom(value);
           } else {
-            slamAlgorithmParams_ = value;
+            slamConfig_ = value;
           }
         } else {
-          slamAlgorithmParamsBuilder_.mergeFrom(value);
+          slamConfigBuilder_.mergeFrom(value);
         }
-        if (slamAlgorithmParams_ != null) {
+        if (slamConfig_ != null) {
           bitField0_ |= 0x00000100;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
+       * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
        */
-      public Builder clearSlamAlgorithmParams() {
+      public Builder clearSlamConfig() {
         bitField0_ = (bitField0_ & ~0x00000100);
-        slamAlgorithmParams_ = null;
-        if (slamAlgorithmParamsBuilder_ != null) {
-          slamAlgorithmParamsBuilder_.dispose();
-          slamAlgorithmParamsBuilder_ = null;
+        slamConfig_ = null;
+        if (slamConfigBuilder_ != null) {
+          slamConfigBuilder_.dispose();
+          slamConfigBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
-       * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
+       * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
        */
-      public com.google.protobuf.Struct.Builder getSlamAlgorithmParamsBuilder() {
+      public com.google.protobuf.Struct.Builder getSlamConfigBuilder() {
         bitField0_ |= 0x00000100;
         onChanged();
-        return getSlamAlgorithmParamsFieldBuilder().getBuilder();
+        return getSlamConfigFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
+       * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
        */
-      public com.google.protobuf.StructOrBuilder getSlamAlgorithmParamsOrBuilder() {
-        if (slamAlgorithmParamsBuilder_ != null) {
-          return slamAlgorithmParamsBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.StructOrBuilder getSlamConfigOrBuilder() {
+        if (slamConfigBuilder_ != null) {
+          return slamConfigBuilder_.getMessageOrBuilder();
         } else {
-          return slamAlgorithmParams_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : slamAlgorithmParams_;
+          return slamConfig_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : slamConfig_;
         }
       }
       /**
-       * <code>.google.protobuf.Struct slam_algorithm_params = 10 [json_name = "slamAlgorithmParams"];</code>
+       * <code>.google.protobuf.Struct slam_config = 10 [json_name = "slamConfig"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getSlamAlgorithmParamsFieldBuilder() {
-        if (slamAlgorithmParamsBuilder_ == null) {
-          slamAlgorithmParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getSlamConfigFieldBuilder() {
+        if (slamConfigBuilder_ == null) {
+          slamConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getSlamAlgorithmParams(),
+                  getSlamConfig(),
                   getParentForChildren(),
                   isClean());
-          slamAlgorithmParams_ = null;
+          slamConfig_ = null;
         }
-        return slamAlgorithmParamsBuilder_;
+        return slamConfigBuilder_;
       }
 
       private java.lang.Object existingMapVersion_ = "";
@@ -2376,6 +2455,127 @@ public final class CloudSlam {
         onChanged();
         return this;
       }
+
+      private viam.app.cloudslam.v1.CloudSlam.Module module_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          viam.app.cloudslam.v1.CloudSlam.Module, viam.app.cloudslam.v1.CloudSlam.Module.Builder, viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder> moduleBuilder_;
+      /**
+       * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+       * @return Whether the module field is set.
+       */
+      public boolean hasModule() {
+        return ((bitField0_ & 0x00000400) != 0);
+      }
+      /**
+       * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+       * @return The module.
+       */
+      public viam.app.cloudslam.v1.CloudSlam.Module getModule() {
+        if (moduleBuilder_ == null) {
+          return module_ == null ? viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance() : module_;
+        } else {
+          return moduleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+       */
+      public Builder setModule(viam.app.cloudslam.v1.CloudSlam.Module value) {
+        if (moduleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          module_ = value;
+        } else {
+          moduleBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+       */
+      public Builder setModule(
+          viam.app.cloudslam.v1.CloudSlam.Module.Builder builderForValue) {
+        if (moduleBuilder_ == null) {
+          module_ = builderForValue.build();
+        } else {
+          moduleBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+       */
+      public Builder mergeModule(viam.app.cloudslam.v1.CloudSlam.Module value) {
+        if (moduleBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0) &&
+            module_ != null &&
+            module_ != viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance()) {
+            getModuleBuilder().mergeFrom(value);
+          } else {
+            module_ = value;
+          }
+        } else {
+          moduleBuilder_.mergeFrom(value);
+        }
+        if (module_ != null) {
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+       */
+      public Builder clearModule() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        module_ = null;
+        if (moduleBuilder_ != null) {
+          moduleBuilder_.dispose();
+          moduleBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+       */
+      public viam.app.cloudslam.v1.CloudSlam.Module.Builder getModuleBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return getModuleFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+       */
+      public viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder getModuleOrBuilder() {
+        if (moduleBuilder_ != null) {
+          return moduleBuilder_.getMessageOrBuilder();
+        } else {
+          return module_ == null ?
+              viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance() : module_;
+        }
+      }
+      /**
+       * <code>.viam.app.cloudslam.v1.Module module = 12 [json_name = "module"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          viam.app.cloudslam.v1.CloudSlam.Module, viam.app.cloudslam.v1.CloudSlam.Module.Builder, viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder> 
+          getModuleFieldBuilder() {
+        if (moduleBuilder_ == null) {
+          moduleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              viam.app.cloudslam.v1.CloudSlam.Module, viam.app.cloudslam.v1.CloudSlam.Module.Builder, viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder>(
+                  getModule(),
+                  getParentForChildren(),
+                  isClean());
+          module_ = null;
+        }
+        return moduleBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2435,6 +2635,854 @@ public final class CloudSlam {
 
     @java.lang.Override
     public viam.app.cloudslam.v1.CloudSlam.StartMappingSessionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ModuleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.cloudslam.v1.Module)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>string module_id = 3 [json_name = "moduleId"];</code>
+     * @return The moduleId.
+     */
+    java.lang.String getModuleId();
+    /**
+     * <code>string module_id = 3 [json_name = "moduleId"];</code>
+     * @return The bytes for moduleId.
+     */
+    com.google.protobuf.ByteString
+        getModuleIdBytes();
+
+    /**
+     * <code>string version = 4 [json_name = "version"];</code>
+     * @return The version.
+     */
+    java.lang.String getVersion();
+    /**
+     * <code>string version = 4 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    com.google.protobuf.ByteString
+        getVersionBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.cloudslam.v1.Module}
+   */
+  public static final class Module extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:viam.app.cloudslam.v1.Module)
+      ModuleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Module.newBuilder() to construct.
+    private Module(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Module() {
+      name_ = "";
+      moduleId_ = "";
+      version_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Module();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_Module_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_Module_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              viam.app.cloudslam.v1.CloudSlam.Module.class, viam.app.cloudslam.v1.CloudSlam.Module.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 2 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODULE_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object moduleId_ = "";
+    /**
+     * <code>string module_id = 3 [json_name = "moduleId"];</code>
+     * @return The moduleId.
+     */
+    @java.lang.Override
+    public java.lang.String getModuleId() {
+      java.lang.Object ref = moduleId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        moduleId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string module_id = 3 [json_name = "moduleId"];</code>
+     * @return The bytes for moduleId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleIdBytes() {
+      java.lang.Object ref = moduleId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        moduleId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object version_ = "";
+    /**
+     * <code>string version = 4 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public java.lang.String getVersion() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        version_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string version = 4 [json_name = "version"];</code>
+     * @return The bytes for version.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVersionBytes() {
+      java.lang.Object ref = version_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        version_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moduleId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, moduleId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, version_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(moduleId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, moduleId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, version_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof viam.app.cloudslam.v1.CloudSlam.Module)) {
+        return super.equals(obj);
+      }
+      viam.app.cloudslam.v1.CloudSlam.Module other = (viam.app.cloudslam.v1.CloudSlam.Module) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getModuleId()
+          .equals(other.getModuleId())) return false;
+      if (!getVersion()
+          .equals(other.getVersion())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + MODULE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getModuleId().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getVersion().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static viam.app.cloudslam.v1.CloudSlam.Module parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static viam.app.cloudslam.v1.CloudSlam.Module parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static viam.app.cloudslam.v1.CloudSlam.Module parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(viam.app.cloudslam.v1.CloudSlam.Module prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code viam.app.cloudslam.v1.Module}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.cloudslam.v1.Module)
+        viam.app.cloudslam.v1.CloudSlam.ModuleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_Module_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_Module_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                viam.app.cloudslam.v1.CloudSlam.Module.class, viam.app.cloudslam.v1.CloudSlam.Module.Builder.class);
+      }
+
+      // Construct using viam.app.cloudslam.v1.CloudSlam.Module.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        moduleId_ = "";
+        version_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return viam.app.cloudslam.v1.CloudSlam.internal_static_viam_app_cloudslam_v1_Module_descriptor;
+      }
+
+      @java.lang.Override
+      public viam.app.cloudslam.v1.CloudSlam.Module getDefaultInstanceForType() {
+        return viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public viam.app.cloudslam.v1.CloudSlam.Module build() {
+        viam.app.cloudslam.v1.CloudSlam.Module result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public viam.app.cloudslam.v1.CloudSlam.Module buildPartial() {
+        viam.app.cloudslam.v1.CloudSlam.Module result = new viam.app.cloudslam.v1.CloudSlam.Module(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(viam.app.cloudslam.v1.CloudSlam.Module result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.moduleId_ = moduleId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.version_ = version_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof viam.app.cloudslam.v1.CloudSlam.Module) {
+          return mergeFrom((viam.app.cloudslam.v1.CloudSlam.Module)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(viam.app.cloudslam.v1.CloudSlam.Module other) {
+        if (other == viam.app.cloudslam.v1.CloudSlam.Module.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getModuleId().isEmpty()) {
+          moduleId_ = other.moduleId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getVersion().isEmpty()) {
+          version_ = other.version_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 18
+              case 26: {
+                moduleId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 26
+              case 34: {
+                version_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 2 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object moduleId_ = "";
+      /**
+       * <code>string module_id = 3 [json_name = "moduleId"];</code>
+       * @return The moduleId.
+       */
+      public java.lang.String getModuleId() {
+        java.lang.Object ref = moduleId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          moduleId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string module_id = 3 [json_name = "moduleId"];</code>
+       * @return The bytes for moduleId.
+       */
+      public com.google.protobuf.ByteString
+          getModuleIdBytes() {
+        java.lang.Object ref = moduleId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          moduleId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string module_id = 3 [json_name = "moduleId"];</code>
+       * @param value The moduleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        moduleId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module_id = 3 [json_name = "moduleId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModuleId() {
+        moduleId_ = getDefaultInstance().getModuleId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module_id = 3 [json_name = "moduleId"];</code>
+       * @param value The bytes for moduleId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        moduleId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object version_ = "";
+      /**
+       * <code>string version = 4 [json_name = "version"];</code>
+       * @return The version.
+       */
+      public java.lang.String getVersion() {
+        java.lang.Object ref = version_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          version_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string version = 4 [json_name = "version"];</code>
+       * @return The bytes for version.
+       */
+      public com.google.protobuf.ByteString
+          getVersionBytes() {
+        java.lang.Object ref = version_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          version_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string version = 4 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        version_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string version = 4 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        version_ = getDefaultInstance().getVersion();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string version = 4 [json_name = "version"];</code>
+       * @param value The bytes for version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        version_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.cloudslam.v1.Module)
+    }
+
+    // @@protoc_insertion_point(class_scope:viam.app.cloudslam.v1.Module)
+    private static final viam.app.cloudslam.v1.CloudSlam.Module DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new viam.app.cloudslam.v1.CloudSlam.Module();
+    }
+
+    public static viam.app.cloudslam.v1.CloudSlam.Module getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Module>
+        PARSER = new com.google.protobuf.AbstractParser<Module>() {
+      @java.lang.Override
+      public Module parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Module> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Module> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public viam.app.cloudslam.v1.CloudSlam.Module getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14449,6 +15497,11 @@ public final class CloudSlam {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_viam_app_cloudslam_v1_StartMappingSessionRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_viam_app_cloudslam_v1_Module_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_viam_app_cloudslam_v1_Module_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_viam_app_cloudslam_v1_SensorInfo_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14530,7 +15583,7 @@ public final class CloudSlam {
       "\n!app/cloudslam/v1/cloud_slam.proto\022\025via" +
       "m.app.cloudslam.v1\032\026common/v1/common.pro" +
       "to\032\034google/protobuf/struct.proto\032\037google" +
-      "/protobuf/timestamp.proto\"\376\003\n\032StartMappi" +
+      "/protobuf/timestamp.proto\"\242\004\n\032StartMappi" +
       "ngSessionRequest\022!\n\014slam_version\030\001 \001(\tR\013" +
       "slamVersion\022.\n\023viam_server_version\030\002 \001(\t" +
       "R\021viamServerVersion\022\031\n\010map_name\030\003 \001(\tR\007m" +
@@ -14540,83 +15593,86 @@ public final class CloudSlam {
       "nterval\030\007 \001(\0132&.viam.app.cloudslam.v1.Ca" +
       "ptureIntervalR\017captureInterval\022;\n\007sensor" +
       "s\030\010 \003(\0132!.viam.app.cloudslam.v1.SensorIn" +
-      "foR\007sensors\022K\n\025slam_algorithm_params\030\n \001" +
-      "(\0132\027.google.protobuf.StructR\023slamAlgorit" +
-      "hmParams\0220\n\024existing_map_version\030\013 \001(\tR\022" +
-      "existingMapVersion\"\200\001\n\nSensorInfo\0222\n\025sou" +
-      "rce_component_name\030\001 \001(\tR\023sourceComponen" +
-      "tName\022\022\n\004type\030\002 \001(\tR\004type\022*\n\021data_freque" +
-      "ncy_hz\030\003 \001(\tR\017dataFrequencyHz\"\203\001\n\017Captur" +
-      "eInterval\0229\n\nstart_time\030\001 \001(\0132\032.google.p" +
-      "rotobuf.TimestampR\tstartTime\0225\n\010end_time" +
-      "\030\002 \001(\0132\032.google.protobuf.TimestampR\007endT" +
-      "ime\"<\n\033StartMappingSessionResponse\022\035\n\nse" +
-      "ssion_id\030\001 \001(\tR\tsessionId\"D\n\'GetActiveMa" +
-      "ppingSessionsForRobotRequest\022\031\n\010robot_id" +
-      "\030\001 \001(\tR\007robotId\"I\n(GetActiveMappingSessi" +
-      "onsForRobotResponse\022\035\n\nsession_id\030\001 \001(\tR" +
-      "\tsessionId\"C\n\"GetMappingSessionPointClou" +
-      "dRequest\022\035\n\nsession_id\030\001 \001(\tR\tsessionId\"" +
-      "h\n#GetMappingSessionPointCloudResponse\022\027" +
-      "\n\007map_url\030\001 \001(\tR\006mapUrl\022(\n\004pose\030\002 \001(\0132\024." +
-      "viam.common.v1.PoseR\004pose\"f\n\032ListMapping" +
-      "SessionsRequest\022\'\n\017organization_id\030\001 \001(\t" +
-      "R\016organizationId\022\037\n\013location_id\030\002 \001(\tR\nl" +
-      "ocationId\"_\n\033ListMappingSessionsResponse" +
-      "\022@\n\007session\030\001 \003(\0132&.viam.app.cloudslam.v" +
-      "1.MappingMetadataR\007session\":\n\031StopMappin" +
-      "gSessionRequest\022\035\n\nsession_id\030\001 \001(\tR\tses" +
-      "sionId\"U\n\032StopMappingSessionResponse\022\035\n\n" +
-      "package_id\030\001 \001(\tR\tpackageId\022\030\n\007version\030\002" +
-      " \001(\tR\007version\"E\n$GetMappingSessionMetada" +
-      "taByIDRequest\022\035\n\nsession_id\030\001 \001(\tR\tsessi" +
-      "onId\"z\n%GetMappingSessionMetadataByIDRes" +
-      "ponse\022Q\n\020session_metadata\030\001 \001(\0132&.viam.a" +
-      "pp.cloudslam.v1.MappingMetadataR\017session" +
-      "Metadata\"\265\005\n\017MappingMetadata\022\025\n\006org_id\030\001" +
-      " \001(\tR\005orgId\022\037\n\013location_id\030\002 \001(\tR\nlocati" +
-      "onId\022\031\n\010robot_id\030\003 \001(\tR\007robotId\022L\n\024time_" +
-      "start_submitted\030\004 \001(\0132\032.google.protobuf." +
-      "TimestampR\022timeStartSubmitted\022V\n\032time_cl" +
-      "oud_run_job_started\030\005 \001(\0132\032.google.proto" +
-      "buf.TimestampR\026timeCloudRunJobStarted\022H\n" +
-      "\022time_end_submitted\030\006 \001(\0132\032.google.proto" +
-      "buf.TimestampR\020timeEndSubmitted\022R\n\030time_" +
-      "cloud_run_job_ended\030\007 \001(\0132\032.google.proto" +
-      "buf.TimestampR\024timeCloudRunJobEnded\022?\n\ne" +
-      "nd_status\030\010 \001(\0162 .viam.app.cloudslam.v1." +
-      "EndStatusR\tendStatus\022\'\n\020cloud_run_job_id" +
-      "\030\t \001(\tR\rcloudRunJobId\022.\n\023viam_server_ver" +
-      "sion\030\n \001(\tR\021viamServerVersion\022\031\n\010map_nam" +
-      "e\030\013 \001(\tR\007mapName\022!\n\014slam_version\030\014 \001(\tR\013" +
-      "slamVersion\022\026\n\006config\030\r \001(\tR\006config\022\033\n\te" +
-      "rror_msg\030\016 \001(\tR\010errorMsg*l\n\tEndStatus\022\032\n" +
-      "\026END_STATUS_UNSPECIFIED\020\000\022\026\n\022END_STATUS_" +
-      "SUCCESS\020\001\022\026\n\022END_STATUS_TIMEOUT\020\002\022\023\n\017END" +
-      "_STATUS_FAIL\020\0032\343\006\n\020CloudSLAMService\022|\n\023S" +
-      "tartMappingSession\0221.viam.app.cloudslam." +
-      "v1.StartMappingSessionRequest\0322.viam.app" +
-      ".cloudslam.v1.StartMappingSessionRespons" +
-      "e\022\243\001\n GetActiveMappingSessionsForRobot\022>" +
-      ".viam.app.cloudslam.v1.GetActiveMappingS" +
-      "essionsForRobotRequest\032?.viam.app.clouds" +
-      "lam.v1.GetActiveMappingSessionsForRobotR" +
-      "esponse\022\224\001\n\033GetMappingSessionPointCloud\022" +
-      "9.viam.app.cloudslam.v1.GetMappingSessio" +
-      "nPointCloudRequest\032:.viam.app.cloudslam." +
-      "v1.GetMappingSessionPointCloudResponse\022|" +
-      "\n\023ListMappingSessions\0221.viam.app.cloudsl" +
-      "am.v1.ListMappingSessionsRequest\0322.viam." +
-      "app.cloudslam.v1.ListMappingSessionsResp" +
-      "onse\022y\n\022StopMappingSession\0220.viam.app.cl" +
-      "oudslam.v1.StopMappingSessionRequest\0321.v" +
-      "iam.app.cloudslam.v1.StopMappingSessionR" +
-      "esponse\022\232\001\n\035GetMappingSessionMetadataByI" +
-      "D\022;.viam.app.cloudslam.v1.GetMappingSess" +
-      "ionMetadataByIDRequest\032<.viam.app.clouds" +
-      "lam.v1.GetMappingSessionMetadataByIDResp" +
-      "onseB\"Z go.viam.com/api/app/cloudslam/v1" +
-      "b\006proto3"
+      "foR\007sensors\0228\n\013slam_config\030\n \001(\0132\027.googl" +
+      "e.protobuf.StructR\nslamConfig\0220\n\024existin" +
+      "g_map_version\030\013 \001(\tR\022existingMapVersion\022" +
+      "5\n\006module\030\014 \001(\0132\035.viam.app.cloudslam.v1." +
+      "ModuleR\006module\"S\n\006Module\022\022\n\004name\030\002 \001(\tR\004" +
+      "name\022\033\n\tmodule_id\030\003 \001(\tR\010moduleId\022\030\n\007ver" +
+      "sion\030\004 \001(\tR\007version\"\200\001\n\nSensorInfo\0222\n\025so" +
+      "urce_component_name\030\001 \001(\tR\023sourceCompone" +
+      "ntName\022\022\n\004type\030\002 \001(\tR\004type\022*\n\021data_frequ" +
+      "ency_hz\030\003 \001(\tR\017dataFrequencyHz\"\203\001\n\017Captu" +
+      "reInterval\0229\n\nstart_time\030\001 \001(\0132\032.google." +
+      "protobuf.TimestampR\tstartTime\0225\n\010end_tim" +
+      "e\030\002 \001(\0132\032.google.protobuf.TimestampR\007end" +
+      "Time\"<\n\033StartMappingSessionResponse\022\035\n\ns" +
+      "ession_id\030\001 \001(\tR\tsessionId\"D\n\'GetActiveM" +
+      "appingSessionsForRobotRequest\022\031\n\010robot_i" +
+      "d\030\001 \001(\tR\007robotId\"I\n(GetActiveMappingSess" +
+      "ionsForRobotResponse\022\035\n\nsession_id\030\001 \001(\t" +
+      "R\tsessionId\"C\n\"GetMappingSessionPointClo" +
+      "udRequest\022\035\n\nsession_id\030\001 \001(\tR\tsessionId" +
+      "\"h\n#GetMappingSessionPointCloudResponse\022" +
+      "\027\n\007map_url\030\001 \001(\tR\006mapUrl\022(\n\004pose\030\002 \001(\0132\024" +
+      ".viam.common.v1.PoseR\004pose\"f\n\032ListMappin" +
+      "gSessionsRequest\022\'\n\017organization_id\030\001 \001(" +
+      "\tR\016organizationId\022\037\n\013location_id\030\002 \001(\tR\n" +
+      "locationId\"_\n\033ListMappingSessionsRespons" +
+      "e\022@\n\007session\030\001 \003(\0132&.viam.app.cloudslam." +
+      "v1.MappingMetadataR\007session\":\n\031StopMappi" +
+      "ngSessionRequest\022\035\n\nsession_id\030\001 \001(\tR\tse" +
+      "ssionId\"U\n\032StopMappingSessionResponse\022\035\n" +
+      "\npackage_id\030\001 \001(\tR\tpackageId\022\030\n\007version\030" +
+      "\002 \001(\tR\007version\"E\n$GetMappingSessionMetad" +
+      "ataByIDRequest\022\035\n\nsession_id\030\001 \001(\tR\tsess" +
+      "ionId\"z\n%GetMappingSessionMetadataByIDRe" +
+      "sponse\022Q\n\020session_metadata\030\001 \001(\0132&.viam." +
+      "app.cloudslam.v1.MappingMetadataR\017sessio" +
+      "nMetadata\"\265\005\n\017MappingMetadata\022\025\n\006org_id\030" +
+      "\001 \001(\tR\005orgId\022\037\n\013location_id\030\002 \001(\tR\nlocat" +
+      "ionId\022\031\n\010robot_id\030\003 \001(\tR\007robotId\022L\n\024time" +
+      "_start_submitted\030\004 \001(\0132\032.google.protobuf" +
+      ".TimestampR\022timeStartSubmitted\022V\n\032time_c" +
+      "loud_run_job_started\030\005 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\026timeCloudRunJobStarted\022H" +
+      "\n\022time_end_submitted\030\006 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\020timeEndSubmitted\022R\n\030time" +
+      "_cloud_run_job_ended\030\007 \001(\0132\032.google.prot" +
+      "obuf.TimestampR\024timeCloudRunJobEnded\022?\n\n" +
+      "end_status\030\010 \001(\0162 .viam.app.cloudslam.v1" +
+      ".EndStatusR\tendStatus\022\'\n\020cloud_run_job_i" +
+      "d\030\t \001(\tR\rcloudRunJobId\022.\n\023viam_server_ve" +
+      "rsion\030\n \001(\tR\021viamServerVersion\022\031\n\010map_na" +
+      "me\030\013 \001(\tR\007mapName\022!\n\014slam_version\030\014 \001(\tR" +
+      "\013slamVersion\022\026\n\006config\030\r \001(\tR\006config\022\033\n\t" +
+      "error_msg\030\016 \001(\tR\010errorMsg*l\n\tEndStatus\022\032" +
+      "\n\026END_STATUS_UNSPECIFIED\020\000\022\026\n\022END_STATUS" +
+      "_SUCCESS\020\001\022\026\n\022END_STATUS_TIMEOUT\020\002\022\023\n\017EN" +
+      "D_STATUS_FAIL\020\0032\343\006\n\020CloudSLAMService\022|\n\023" +
+      "StartMappingSession\0221.viam.app.cloudslam" +
+      ".v1.StartMappingSessionRequest\0322.viam.ap" +
+      "p.cloudslam.v1.StartMappingSessionRespon" +
+      "se\022\243\001\n GetActiveMappingSessionsForRobot\022" +
+      ">.viam.app.cloudslam.v1.GetActiveMapping" +
+      "SessionsForRobotRequest\032?.viam.app.cloud" +
+      "slam.v1.GetActiveMappingSessionsForRobot" +
+      "Response\022\224\001\n\033GetMappingSessionPointCloud" +
+      "\0229.viam.app.cloudslam.v1.GetMappingSessi" +
+      "onPointCloudRequest\032:.viam.app.cloudslam" +
+      ".v1.GetMappingSessionPointCloudResponse\022" +
+      "|\n\023ListMappingSessions\0221.viam.app.clouds" +
+      "lam.v1.ListMappingSessionsRequest\0322.viam" +
+      ".app.cloudslam.v1.ListMappingSessionsRes" +
+      "ponse\022y\n\022StopMappingSession\0220.viam.app.c" +
+      "loudslam.v1.StopMappingSessionRequest\0321." +
+      "viam.app.cloudslam.v1.StopMappingSession" +
+      "Response\022\232\001\n\035GetMappingSessionMetadataBy" +
+      "ID\022;.viam.app.cloudslam.v1.GetMappingSes" +
+      "sionMetadataByIDRequest\032<.viam.app.cloud" +
+      "slam.v1.GetMappingSessionMetadataByIDRes" +
+      "ponseB\"Z go.viam.com/api/app/cloudslam/v" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14630,87 +15686,93 @@ public final class CloudSlam {
     internal_static_viam_app_cloudslam_v1_StartMappingSessionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_StartMappingSessionRequest_descriptor,
-        new java.lang.String[] { "SlamVersion", "ViamServerVersion", "MapName", "OrganizationId", "LocationId", "RobotId", "CaptureInterval", "Sensors", "SlamAlgorithmParams", "ExistingMapVersion", });
-    internal_static_viam_app_cloudslam_v1_SensorInfo_descriptor =
+        new java.lang.String[] { "SlamVersion", "ViamServerVersion", "MapName", "OrganizationId", "LocationId", "RobotId", "CaptureInterval", "Sensors", "SlamConfig", "ExistingMapVersion", "Module", });
+    internal_static_viam_app_cloudslam_v1_Module_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_viam_app_cloudslam_v1_Module_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_viam_app_cloudslam_v1_Module_descriptor,
+        new java.lang.String[] { "Name", "ModuleId", "Version", });
+    internal_static_viam_app_cloudslam_v1_SensorInfo_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_viam_app_cloudslam_v1_SensorInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_SensorInfo_descriptor,
         new java.lang.String[] { "SourceComponentName", "Type", "DataFrequencyHz", });
     internal_static_viam_app_cloudslam_v1_CaptureInterval_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_viam_app_cloudslam_v1_CaptureInterval_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_CaptureInterval_descriptor,
         new java.lang.String[] { "StartTime", "EndTime", });
     internal_static_viam_app_cloudslam_v1_StartMappingSessionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_viam_app_cloudslam_v1_StartMappingSessionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_StartMappingSessionResponse_descriptor,
         new java.lang.String[] { "SessionId", });
     internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotRequest_descriptor,
         new java.lang.String[] { "RobotId", });
     internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_GetActiveMappingSessionsForRobotResponse_descriptor,
         new java.lang.String[] { "SessionId", });
     internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudRequest_descriptor,
         new java.lang.String[] { "SessionId", });
     internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_GetMappingSessionPointCloudResponse_descriptor,
         new java.lang.String[] { "MapUrl", "Pose", });
     internal_static_viam_app_cloudslam_v1_ListMappingSessionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_viam_app_cloudslam_v1_ListMappingSessionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_ListMappingSessionsRequest_descriptor,
         new java.lang.String[] { "OrganizationId", "LocationId", });
     internal_static_viam_app_cloudslam_v1_ListMappingSessionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_viam_app_cloudslam_v1_ListMappingSessionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_ListMappingSessionsResponse_descriptor,
         new java.lang.String[] { "Session", });
     internal_static_viam_app_cloudslam_v1_StopMappingSessionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_viam_app_cloudslam_v1_StopMappingSessionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_StopMappingSessionRequest_descriptor,
         new java.lang.String[] { "SessionId", });
     internal_static_viam_app_cloudslam_v1_StopMappingSessionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_viam_app_cloudslam_v1_StopMappingSessionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_StopMappingSessionResponse_descriptor,
         new java.lang.String[] { "PackageId", "Version", });
     internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDRequest_descriptor,
         new java.lang.String[] { "SessionId", });
     internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_GetMappingSessionMetadataByIDResponse_descriptor,
         new java.lang.String[] { "SessionMetadata", });
     internal_static_viam_app_cloudslam_v1_MappingMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_viam_app_cloudslam_v1_MappingMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_cloudslam_v1_MappingMetadata_descriptor,
