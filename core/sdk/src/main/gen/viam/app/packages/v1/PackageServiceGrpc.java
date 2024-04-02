@@ -220,7 +220,7 @@ public final class PackageServiceGrpc {
 
     /**
      * <pre>
-     * ListPackages gets the metadata for the requested packages. Include package name, version, and/or
+     * ListPackages gets the metadata for the requested packages. Includes package name, version, and/or
      * type to filter beyond the required organization_id. ListPackages also returns URLs for
      * downloading each package if they are requested.
      * </pre>
@@ -294,7 +294,7 @@ public final class PackageServiceGrpc {
 
     /**
      * <pre>
-     * ListPackages gets the metadata for the requested packages. Include package name, version, and/or
+     * ListPackages gets the metadata for the requested packages. Includes package name, version, and/or
      * type to filter beyond the required organization_id. ListPackages also returns URLs for
      * downloading each package if they are requested.
      * </pre>
@@ -345,7 +345,7 @@ public final class PackageServiceGrpc {
 
     /**
      * <pre>
-     * ListPackages gets the metadata for the requested packages. Include package name, version, and/or
+     * ListPackages gets the metadata for the requested packages. Includes package name, version, and/or
      * type to filter beyond the required organization_id. ListPackages also returns URLs for
      * downloading each package if they are requested.
      * </pre>
@@ -397,7 +397,7 @@ public final class PackageServiceGrpc {
 
     /**
      * <pre>
-     * ListPackages gets the metadata for the requested packages. Include package name, version, and/or
+     * ListPackages gets the metadata for the requested packages. Includes package name, version, and/or
      * type to filter beyond the required organization_id. ListPackages also returns URLs for
      * downloading each package if they are requested.
      * </pre>

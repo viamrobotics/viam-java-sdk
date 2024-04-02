@@ -184,6 +184,23 @@ public final class Common {
      */
     com.google.protobuf.ByteString
         getNameBytes();
+
+    /**
+     * <code>optional string machine_part_id = 5 [json_name = "machinePartId"];</code>
+     * @return Whether the machinePartId field is set.
+     */
+    boolean hasMachinePartId();
+    /**
+     * <code>optional string machine_part_id = 5 [json_name = "machinePartId"];</code>
+     * @return The machinePartId.
+     */
+    java.lang.String getMachinePartId();
+    /**
+     * <code>optional string machine_part_id = 5 [json_name = "machinePartId"];</code>
+     * @return The bytes for machinePartId.
+     */
+    com.google.protobuf.ByteString
+        getMachinePartIdBytes();
   }
   /**
    * Protobuf type {@code viam.common.v1.ResourceName}
@@ -202,6 +219,7 @@ public final class Common {
       type_ = "";
       subtype_ = "";
       name_ = "";
+      machinePartId_ = "";
     }
 
     @java.lang.Override
@@ -224,6 +242,7 @@ public final class Common {
               com.viam.common.v1.Common.ResourceName.class, com.viam.common.v1.Common.ResourceName.Builder.class);
     }
 
+    private int bitField0_;
     public static final int NAMESPACE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object namespace_ = "";
@@ -380,6 +399,53 @@ public final class Common {
       }
     }
 
+    public static final int MACHINE_PART_ID_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object machinePartId_ = "";
+    /**
+     * <code>optional string machine_part_id = 5 [json_name = "machinePartId"];</code>
+     * @return Whether the machinePartId field is set.
+     */
+    @java.lang.Override
+    public boolean hasMachinePartId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional string machine_part_id = 5 [json_name = "machinePartId"];</code>
+     * @return The machinePartId.
+     */
+    @java.lang.Override
+    public java.lang.String getMachinePartId() {
+      java.lang.Object ref = machinePartId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        machinePartId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string machine_part_id = 5 [json_name = "machinePartId"];</code>
+     * @return The bytes for machinePartId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMachinePartIdBytes() {
+      java.lang.Object ref = machinePartId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        machinePartId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -406,6 +472,9 @@ public final class Common {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, machinePartId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -426,6 +495,9 @@ public final class Common {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, machinePartId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -450,6 +522,11 @@ public final class Common {
           .equals(other.getSubtype())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (hasMachinePartId() != other.hasMachinePartId()) return false;
+      if (hasMachinePartId()) {
+        if (!getMachinePartId()
+            .equals(other.getMachinePartId())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -469,6 +546,10 @@ public final class Common {
       hash = (53 * hash) + getSubtype().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      if (hasMachinePartId()) {
+        hash = (37 * hash) + MACHINE_PART_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getMachinePartId().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -604,6 +685,7 @@ public final class Common {
         type_ = "";
         subtype_ = "";
         name_ = "";
+        machinePartId_ = "";
         return this;
       }
 
@@ -649,6 +731,12 @@ public final class Common {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.name_ = name_;
         }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.machinePartId_ = machinePartId_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -715,6 +803,11 @@ public final class Common {
           bitField0_ |= 0x00000008;
           onChanged();
         }
+        if (other.hasMachinePartId()) {
+          machinePartId_ = other.machinePartId_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -761,6 +854,11 @@ public final class Common {
                 bitField0_ |= 0x00000008;
                 break;
               } // case 34
+              case 42: {
+                machinePartId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1062,6 +1160,85 @@ public final class Common {
         checkByteStringIsUtf8(value);
         name_ = value;
         bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object machinePartId_ = "";
+      /**
+       * <code>optional string machine_part_id = 5 [json_name = "machinePartId"];</code>
+       * @return Whether the machinePartId field is set.
+       */
+      public boolean hasMachinePartId() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional string machine_part_id = 5 [json_name = "machinePartId"];</code>
+       * @return The machinePartId.
+       */
+      public java.lang.String getMachinePartId() {
+        java.lang.Object ref = machinePartId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          machinePartId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string machine_part_id = 5 [json_name = "machinePartId"];</code>
+       * @return The bytes for machinePartId.
+       */
+      public com.google.protobuf.ByteString
+          getMachinePartIdBytes() {
+        java.lang.Object ref = machinePartId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          machinePartId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string machine_part_id = 5 [json_name = "machinePartId"];</code>
+       * @param value The machinePartId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachinePartId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        machinePartId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string machine_part_id = 5 [json_name = "machinePartId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMachinePartId() {
+        machinePartId_ = getDefaultInstance().getMachinePartId();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string machine_part_id = 5 [json_name = "machinePartId"];</code>
+       * @param value The bytes for machinePartId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachinePartIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        machinePartId_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -25309,100 +25486,102 @@ com.google.protobuf.Value defaultValue) {
       "\n\026common/v1/common.proto\022\016viam.common.v1" +
       "\032 google/protobuf/descriptor.proto\032\034goog" +
       "le/protobuf/struct.proto\032\037google/protobu" +
-      "f/timestamp.proto\"n\n\014ResourceName\022\034\n\tnam" +
-      "espace\030\001 \001(\tR\tnamespace\022\022\n\004type\030\002 \001(\tR\004t" +
-      "ype\022\030\n\007subtype\030\003 \001(\tR\007subtype\022\022\n\004name\030\004 " +
-      "\001(\tR\004name\"\374\002\n\013BoardStatus\022B\n\007analogs\030\001 \003" +
-      "(\0132(.viam.common.v1.BoardStatus.AnalogsE" +
-      "ntryR\007analogs\022a\n\022digital_interrupts\030\002 \003(" +
-      "\01322.viam.common.v1.BoardStatus.DigitalIn" +
-      "terruptsEntryR\021digitalInterrupts\032X\n\014Anal" +
-      "ogsEntry\022\020\n\003key\030\001 \001(\tR\003key\0222\n\005value\030\002 \001(" +
-      "\0132\034.viam.common.v1.AnalogStatusR\005value:\002" +
-      "8\001\032l\n\026DigitalInterruptsEntry\022\020\n\003key\030\001 \001(" +
-      "\tR\003key\022<\n\005value\030\002 \001(\0132&.viam.common.v1.D" +
-      "igitalInterruptStatusR\005value:\0028\001\"$\n\014Anal" +
-      "ogStatus\022\024\n\005value\030\001 \001(\005R\005value\".\n\026Digita" +
-      "lInterruptStatus\022\024\n\005value\030\001 \001(\003R\005value\"y" +
-      "\n\004Pose\022\014\n\001x\030\001 \001(\001R\001x\022\014\n\001y\030\002 \001(\001R\001y\022\014\n\001z\030" +
-      "\003 \001(\001R\001z\022\017\n\003o_x\030\004 \001(\001R\002oX\022\017\n\003o_y\030\005 \001(\001R\002" +
-      "oY\022\017\n\003o_z\030\006 \001(\001R\002oZ\022\024\n\005theta\030\007 \001(\001R\005thet" +
-      "a\"V\n\013Orientation\022\017\n\003o_x\030\001 \001(\001R\002oX\022\017\n\003o_y" +
-      "\030\002 \001(\001R\002oY\022\017\n\003o_z\030\003 \001(\001R\002oZ\022\024\n\005theta\030\004 \001" +
-      "(\001R\005theta\"`\n\013PoseInFrame\022\'\n\017reference_fr" +
-      "ame\030\001 \001(\tR\016referenceFrame\022(\n\004pose\030\002 \001(\0132" +
-      "\024.viam.common.v1.PoseR\004pose\"3\n\007Vector3\022\014" +
-      "\n\001x\030\001 \001(\001R\001x\022\014\n\001y\030\002 \001(\001R\001y\022\014\n\001z\030\003 \001(\001R\001z" +
-      "\"%\n\006Sphere\022\033\n\tradius_mm\030\001 \001(\001R\010radiusMm\"" +
-      "C\n\007Capsule\022\033\n\tradius_mm\030\001 \001(\001R\010radiusMm\022" +
-      "\033\n\tlength_mm\030\002 \001(\001R\010lengthMm\"D\n\020Rectangu" +
-      "larPrism\0220\n\007dims_mm\030\001 \001(\0132\027.viam.common." +
-      "v1.Vector3R\006dimsMm\"\374\001\n\010Geometry\022,\n\006cente" +
-      "r\030\001 \001(\0132\024.viam.common.v1.PoseR\006center\0220\n" +
-      "\006sphere\030\002 \001(\0132\026.viam.common.v1.SphereH\000R" +
-      "\006sphere\0224\n\003box\030\003 \001(\0132 .viam.common.v1.Re" +
-      "ctangularPrismH\000R\003box\0223\n\007capsule\030\005 \001(\0132\027" +
-      ".viam.common.v1.CapsuleH\000R\007capsule\022\024\n\005la" +
-      "bel\030\004 \001(\tR\005labelB\017\n\rgeometry_type\"v\n\021Geo" +
-      "metriesInFrame\022\'\n\017reference_frame\030\001 \001(\tR" +
-      "\016referenceFrame\0228\n\ngeometries\030\002 \003(\0132\030.vi" +
-      "am.common.v1.GeometryR\ngeometries\"v\n\020Poi" +
-      "ntCloudObject\022\037\n\013point_cloud\030\001 \001(\014R\npoin" +
-      "tCloud\022A\n\ngeometries\030\002 \001(\0132!.viam.common" +
-      ".v1.GeometriesInFrameR\ngeometries\"D\n\010Geo" +
-      "Point\022\032\n\010latitude\030\001 \001(\001R\010latitude\022\034\n\tlon" +
-      "gitude\030\002 \001(\001R\tlongitude\"}\n\013GeoObstacle\0224" +
-      "\n\010location\030\001 \001(\0132\030.viam.common.v1.GeoPoi" +
-      "ntR\010location\0228\n\ngeometries\030\002 \003(\0132\030.viam." +
-      "common.v1.GeometryR\ngeometries\"\342\001\n\tTrans" +
-      "form\022\'\n\017reference_frame\030\001 \001(\tR\016reference" +
-      "Frame\022P\n\026pose_in_observer_frame\030\002 \001(\0132\033." +
-      "viam.common.v1.PoseInFrameR\023poseInObserv" +
-      "erFrame\022F\n\017physical_object\030\003 \001(\0132\030.viam." +
-      "common.v1.GeometryH\000R\016physicalObject\210\001\001B" +
-      "\022\n\020_physical_object\"\210\001\n\nWorldState\022?\n\tob" +
-      "stacles\030\001 \003(\0132!.viam.common.v1.Geometrie" +
-      "sInFrameR\tobstacles\0229\n\ntransforms\030\003 \003(\0132" +
-      "\031.viam.common.v1.TransformR\ntransforms\"-" +
-      "\n\016ActuatorStatus\022\033\n\tis_moving\030\001 \001(\010R\010isM" +
-      "oving\"d\n\020ResponseMetadata\022@\n\013captured_at" +
-      "\030\001 \001(\0132\032.google.protobuf.TimestampH\000R\nca" +
-      "pturedAt\210\001\001B\016\n\014_captured_at\"Y\n\020DoCommand" +
-      "Request\022\022\n\004name\030\001 \001(\tR\004name\0221\n\007command\030\002" +
-      " \001(\0132\027.google.protobuf.StructR\007command\"D" +
-      "\n\021DoCommandResponse\022/\n\006result\030\001 \001(\0132\027.go" +
-      "ogle.protobuf.StructR\006result\"Y\n\024GetKinem" +
-      "aticsRequest\022\022\n\004name\030\001 \001(\tR\004name\022-\n\005extr" +
-      "a\030c \001(\0132\027.google.protobuf.StructR\005extra\"" +
-      "~\n\025GetKinematicsResponse\022<\n\006format\030\001 \001(\016" +
-      "2$.viam.common.v1.KinematicsFileFormatR\006" +
-      "format\022\'\n\017kinematics_data\030\002 \001(\014R\016kinemat" +
-      "icsData\"Y\n\024GetGeometriesRequest\022\022\n\004name\030" +
-      "\001 \001(\tR\004name\022-\n\005extra\030c \001(\0132\027.google.prot" +
-      "obuf.StructR\005extra\"Q\n\025GetGeometriesRespo" +
-      "nse\0228\n\ngeometries\030\001 \003(\0132\030.viam.common.v1" +
-      ".GeometryR\ngeometries\"W\n\022GetReadingsRequ" +
-      "est\022\022\n\004name\030\001 \001(\tR\004name\022-\n\005extra\030c \001(\0132\027" +
-      ".google.protobuf.StructR\005extra\"\271\001\n\023GetRe" +
-      "adingsResponse\022M\n\010readings\030\001 \003(\01321.viam." +
-      "common.v1.GetReadingsResponse.ReadingsEn" +
-      "tryR\010readings\032S\n\rReadingsEntry\022\020\n\003key\030\001 " +
-      "\001(\tR\003key\022,\n\005value\030\002 \001(\0132\026.google.protobu" +
-      "f.ValueR\005value:\0028\001\"\227\002\n\010LogEntry\022\022\n\004host\030" +
-      "\001 \001(\tR\004host\022\024\n\005level\030\002 \001(\tR\005level\022.\n\004tim" +
-      "e\030\003 \001(\0132\032.google.protobuf.TimestampR\004tim" +
-      "e\022\037\n\013logger_name\030\004 \001(\tR\nloggerName\022\030\n\007me" +
-      "ssage\030\005 \001(\tR\007message\022/\n\006caller\030\006 \001(\0132\027.g" +
-      "oogle.protobuf.StructR\006caller\022\024\n\005stack\030\007" +
-      " \001(\tR\005stack\022/\n\006fields\030\010 \003(\0132\027.google.pro" +
-      "tobuf.StructR\006fields*\177\n\024KinematicsFileFo" +
-      "rmat\022&\n\"KINEMATICS_FILE_FORMAT_UNSPECIFI" +
-      "ED\020\000\022\036\n\032KINEMATICS_FILE_FORMAT_SVA\020\001\022\037\n\033" +
-      "KINEMATICS_FILE_FORMAT_URDF\020\002:a\n\032safety_" +
-      "heartbeat_monitored\022\036.google.protobuf.Me" +
-      "thodOptions\030\244\222\005 \001(\010R\030safetyHeartbeatMoni" +
-      "tored\210\001\001B/\n\022com.viam.common.v1Z\031go.viam." +
-      "com/api/common/v1b\006proto3"
+      "f/timestamp.proto\"\257\001\n\014ResourceName\022\034\n\tna" +
+      "mespace\030\001 \001(\tR\tnamespace\022\022\n\004type\030\002 \001(\tR\004" +
+      "type\022\030\n\007subtype\030\003 \001(\tR\007subtype\022\022\n\004name\030\004" +
+      " \001(\tR\004name\022+\n\017machine_part_id\030\005 \001(\tH\000R\rm" +
+      "achinePartId\210\001\001B\022\n\020_machine_part_id\"\374\002\n\013" +
+      "BoardStatus\022B\n\007analogs\030\001 \003(\0132(.viam.comm" +
+      "on.v1.BoardStatus.AnalogsEntryR\007analogs\022" +
+      "a\n\022digital_interrupts\030\002 \003(\01322.viam.commo" +
+      "n.v1.BoardStatus.DigitalInterruptsEntryR" +
+      "\021digitalInterrupts\032X\n\014AnalogsEntry\022\020\n\003ke" +
+      "y\030\001 \001(\tR\003key\0222\n\005value\030\002 \001(\0132\034.viam.commo" +
+      "n.v1.AnalogStatusR\005value:\0028\001\032l\n\026DigitalI" +
+      "nterruptsEntry\022\020\n\003key\030\001 \001(\tR\003key\022<\n\005valu" +
+      "e\030\002 \001(\0132&.viam.common.v1.DigitalInterrup" +
+      "tStatusR\005value:\0028\001\"$\n\014AnalogStatus\022\024\n\005va" +
+      "lue\030\001 \001(\005R\005value\".\n\026DigitalInterruptStat" +
+      "us\022\024\n\005value\030\001 \001(\003R\005value\"y\n\004Pose\022\014\n\001x\030\001 " +
+      "\001(\001R\001x\022\014\n\001y\030\002 \001(\001R\001y\022\014\n\001z\030\003 \001(\001R\001z\022\017\n\003o_" +
+      "x\030\004 \001(\001R\002oX\022\017\n\003o_y\030\005 \001(\001R\002oY\022\017\n\003o_z\030\006 \001(" +
+      "\001R\002oZ\022\024\n\005theta\030\007 \001(\001R\005theta\"V\n\013Orientati" +
+      "on\022\017\n\003o_x\030\001 \001(\001R\002oX\022\017\n\003o_y\030\002 \001(\001R\002oY\022\017\n\003" +
+      "o_z\030\003 \001(\001R\002oZ\022\024\n\005theta\030\004 \001(\001R\005theta\"`\n\013P" +
+      "oseInFrame\022\'\n\017reference_frame\030\001 \001(\tR\016ref" +
+      "erenceFrame\022(\n\004pose\030\002 \001(\0132\024.viam.common." +
+      "v1.PoseR\004pose\"3\n\007Vector3\022\014\n\001x\030\001 \001(\001R\001x\022\014" +
+      "\n\001y\030\002 \001(\001R\001y\022\014\n\001z\030\003 \001(\001R\001z\"%\n\006Sphere\022\033\n\t" +
+      "radius_mm\030\001 \001(\001R\010radiusMm\"C\n\007Capsule\022\033\n\t" +
+      "radius_mm\030\001 \001(\001R\010radiusMm\022\033\n\tlength_mm\030\002" +
+      " \001(\001R\010lengthMm\"D\n\020RectangularPrism\0220\n\007di" +
+      "ms_mm\030\001 \001(\0132\027.viam.common.v1.Vector3R\006di" +
+      "msMm\"\374\001\n\010Geometry\022,\n\006center\030\001 \001(\0132\024.viam" +
+      ".common.v1.PoseR\006center\0220\n\006sphere\030\002 \001(\0132" +
+      "\026.viam.common.v1.SphereH\000R\006sphere\0224\n\003box" +
+      "\030\003 \001(\0132 .viam.common.v1.RectangularPrism" +
+      "H\000R\003box\0223\n\007capsule\030\005 \001(\0132\027.viam.common.v" +
+      "1.CapsuleH\000R\007capsule\022\024\n\005label\030\004 \001(\tR\005lab" +
+      "elB\017\n\rgeometry_type\"v\n\021GeometriesInFrame" +
+      "\022\'\n\017reference_frame\030\001 \001(\tR\016referenceFram" +
+      "e\0228\n\ngeometries\030\002 \003(\0132\030.viam.common.v1.G" +
+      "eometryR\ngeometries\"v\n\020PointCloudObject\022" +
+      "\037\n\013point_cloud\030\001 \001(\014R\npointCloud\022A\n\ngeom" +
+      "etries\030\002 \001(\0132!.viam.common.v1.Geometries" +
+      "InFrameR\ngeometries\"D\n\010GeoPoint\022\032\n\010latit" +
+      "ude\030\001 \001(\001R\010latitude\022\034\n\tlongitude\030\002 \001(\001R\t" +
+      "longitude\"}\n\013GeoObstacle\0224\n\010location\030\001 \001" +
+      "(\0132\030.viam.common.v1.GeoPointR\010location\0228" +
+      "\n\ngeometries\030\002 \003(\0132\030.viam.common.v1.Geom" +
+      "etryR\ngeometries\"\342\001\n\tTransform\022\'\n\017refere" +
+      "nce_frame\030\001 \001(\tR\016referenceFrame\022P\n\026pose_" +
+      "in_observer_frame\030\002 \001(\0132\033.viam.common.v1" +
+      ".PoseInFrameR\023poseInObserverFrame\022F\n\017phy" +
+      "sical_object\030\003 \001(\0132\030.viam.common.v1.Geom" +
+      "etryH\000R\016physicalObject\210\001\001B\022\n\020_physical_o" +
+      "bject\"\210\001\n\nWorldState\022?\n\tobstacles\030\001 \003(\0132" +
+      "!.viam.common.v1.GeometriesInFrameR\tobst" +
+      "acles\0229\n\ntransforms\030\003 \003(\0132\031.viam.common." +
+      "v1.TransformR\ntransforms\"-\n\016ActuatorStat" +
+      "us\022\033\n\tis_moving\030\001 \001(\010R\010isMoving\"d\n\020Respo" +
+      "nseMetadata\022@\n\013captured_at\030\001 \001(\0132\032.googl" +
+      "e.protobuf.TimestampH\000R\ncapturedAt\210\001\001B\016\n" +
+      "\014_captured_at\"Y\n\020DoCommandRequest\022\022\n\004nam" +
+      "e\030\001 \001(\tR\004name\0221\n\007command\030\002 \001(\0132\027.google." +
+      "protobuf.StructR\007command\"D\n\021DoCommandRes" +
+      "ponse\022/\n\006result\030\001 \001(\0132\027.google.protobuf." +
+      "StructR\006result\"Y\n\024GetKinematicsRequest\022\022" +
+      "\n\004name\030\001 \001(\tR\004name\022-\n\005extra\030c \001(\0132\027.goog" +
+      "le.protobuf.StructR\005extra\"~\n\025GetKinemati" +
+      "csResponse\022<\n\006format\030\001 \001(\0162$.viam.common" +
+      ".v1.KinematicsFileFormatR\006format\022\'\n\017kine" +
+      "matics_data\030\002 \001(\014R\016kinematicsData\"Y\n\024Get" +
+      "GeometriesRequest\022\022\n\004name\030\001 \001(\tR\004name\022-\n" +
+      "\005extra\030c \001(\0132\027.google.protobuf.StructR\005e" +
+      "xtra\"Q\n\025GetGeometriesResponse\0228\n\ngeometr" +
+      "ies\030\001 \003(\0132\030.viam.common.v1.GeometryR\ngeo" +
+      "metries\"W\n\022GetReadingsRequest\022\022\n\004name\030\001 " +
+      "\001(\tR\004name\022-\n\005extra\030c \001(\0132\027.google.protob" +
+      "uf.StructR\005extra\"\271\001\n\023GetReadingsResponse" +
+      "\022M\n\010readings\030\001 \003(\01321.viam.common.v1.GetR" +
+      "eadingsResponse.ReadingsEntryR\010readings\032" +
+      "S\n\rReadingsEntry\022\020\n\003key\030\001 \001(\tR\003key\022,\n\005va" +
+      "lue\030\002 \001(\0132\026.google.protobuf.ValueR\005value" +
+      ":\0028\001\"\227\002\n\010LogEntry\022\022\n\004host\030\001 \001(\tR\004host\022\024\n" +
+      "\005level\030\002 \001(\tR\005level\022.\n\004time\030\003 \001(\0132\032.goog" +
+      "le.protobuf.TimestampR\004time\022\037\n\013logger_na" +
+      "me\030\004 \001(\tR\nloggerName\022\030\n\007message\030\005 \001(\tR\007m" +
+      "essage\022/\n\006caller\030\006 \001(\0132\027.google.protobuf" +
+      ".StructR\006caller\022\024\n\005stack\030\007 \001(\tR\005stack\022/\n" +
+      "\006fields\030\010 \003(\0132\027.google.protobuf.StructR\006" +
+      "fields*\177\n\024KinematicsFileFormat\022&\n\"KINEMA" +
+      "TICS_FILE_FORMAT_UNSPECIFIED\020\000\022\036\n\032KINEMA" +
+      "TICS_FILE_FORMAT_SVA\020\001\022\037\n\033KINEMATICS_FIL" +
+      "E_FORMAT_URDF\020\002:a\n\032safety_heartbeat_moni" +
+      "tored\022\036.google.protobuf.MethodOptions\030\244\222" +
+      "\005 \001(\010R\030safetyHeartbeatMonitored\210\001\001B/\n\022co" +
+      "m.viam.common.v1Z\031go.viam.com/api/common" +
+      "/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25416,7 +25595,7 @@ com.google.protobuf.Value defaultValue) {
     internal_static_viam_common_v1_ResourceName_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_common_v1_ResourceName_descriptor,
-        new java.lang.String[] { "Namespace", "Type", "Subtype", "Name", });
+        new java.lang.String[] { "Namespace", "Type", "Subtype", "Name", "MachinePartId", });
     internal_static_viam_common_v1_BoardStatus_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_viam_common_v1_BoardStatus_fieldAccessorTable = new

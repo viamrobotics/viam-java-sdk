@@ -4784,6 +4784,77 @@ public final class MlTraining {
     viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequestOrBuilder getRequestOrBuilder();
 
     /**
+     * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @return The datasetId.
+     */
+    java.lang.String getDatasetId();
+    /**
+     * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @return The bytes for datasetId.
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdBytes();
+
+    /**
+     * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @return The organizationId.
+     */
+    java.lang.String getOrganizationId();
+    /**
+     * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @return The bytes for organizationId.
+     */
+    com.google.protobuf.ByteString
+        getOrganizationIdBytes();
+
+    /**
+     * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @return The modelName.
+     */
+    java.lang.String getModelName();
+    /**
+     * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @return The bytes for modelName.
+     */
+    com.google.protobuf.ByteString
+        getModelNameBytes();
+
+    /**
+     * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @return The modelVersion.
+     */
+    java.lang.String getModelVersion();
+    /**
+     * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @return The bytes for modelVersion.
+     */
+    com.google.protobuf.ByteString
+        getModelVersionBytes();
+
+    /**
+     * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+     * @return The enum numeric value on the wire for modelType.
+     */
+    int getModelTypeValue();
+    /**
+     * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+     * @return The modelType.
+     */
+    viam.app.mltraining.v1.MlTraining.ModelType getModelType();
+
+    /**
      * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -4793,6 +4864,21 @@ public final class MlTraining {
      * @return The status.
      */
     viam.app.mltraining.v1.MlTraining.TrainingStatus getStatus();
+
+    /**
+     * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+     * @return Whether the errorStatus field is set.
+     */
+    boolean hasErrorStatus();
+    /**
+     * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+     * @return The errorStatus.
+     */
+    com.google.rpc.Status getErrorStatus();
+    /**
+     * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+     */
+    com.google.rpc.StatusOrBuilder getErrorStatusOrBuilder();
 
     /**
      * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
@@ -4825,45 +4911,6 @@ public final class MlTraining {
     com.google.protobuf.TimestampOrBuilder getLastModifiedOrBuilder();
 
     /**
-     * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
-     * @return The syncedModelId.
-     */
-    java.lang.String getSyncedModelId();
-    /**
-     * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
-     * @return The bytes for syncedModelId.
-     */
-    com.google.protobuf.ByteString
-        getSyncedModelIdBytes();
-
-    /**
-     * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
-     * @return The id.
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
-     * @return The bytes for id.
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-     * @return Whether the errorStatus field is set.
-     */
-    boolean hasErrorStatus();
-    /**
-     * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-     * @return The errorStatus.
-     */
-    com.google.rpc.Status getErrorStatus();
-    /**
-     * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-     */
-    com.google.rpc.StatusOrBuilder getErrorStatusOrBuilder();
-
-    /**
      * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
      * @return Whether the trainingStarted field is set.
      */
@@ -4892,6 +4939,43 @@ public final class MlTraining {
      * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
      */
     com.google.protobuf.TimestampOrBuilder getTrainingEndedOrBuilder();
+
+    /**
+     * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
+     * @return The syncedModelId.
+     */
+    java.lang.String getSyncedModelId();
+    /**
+     * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
+     * @return The bytes for syncedModelId.
+     */
+    com.google.protobuf.ByteString
+        getSyncedModelIdBytes();
+
+    /**
+     * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @return A list containing the tags.
+     */
+    java.util.List<java.lang.String>
+        getTagsList();
+    /**
+     * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @return The count of tags.
+     */
+    int getTagsCount();
+    /**
+     * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
+     */
+    java.lang.String getTags(int index);
+    /**
+     * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTagsBytes(int index);
   }
   /**
    * Protobuf type {@code viam.app.mltraining.v1.TrainingJobMetadata}
@@ -4906,9 +4990,16 @@ public final class MlTraining {
       super(builder);
     }
     private TrainingJobMetadata() {
+      id_ = "";
+      datasetId_ = "";
+      organizationId_ = "";
+      modelName_ = "";
+      modelVersion_ = "";
+      modelType_ = 0;
       status_ = 0;
       syncedModelId_ = "";
-      id_ = "";
+      tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -4958,115 +5049,6 @@ public final class MlTraining {
       return request_ == null ? viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.getDefaultInstance() : request_;
     }
 
-    public static final int STATUS_FIELD_NUMBER = 2;
-    private int status_ = 0;
-    /**
-     * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    @java.lang.Override public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
-     * @return The status.
-     */
-    @java.lang.Override public viam.app.mltraining.v1.MlTraining.TrainingStatus getStatus() {
-      viam.app.mltraining.v1.MlTraining.TrainingStatus result = viam.app.mltraining.v1.MlTraining.TrainingStatus.forNumber(status_);
-      return result == null ? viam.app.mltraining.v1.MlTraining.TrainingStatus.UNRECOGNIZED : result;
-    }
-
-    public static final int CREATED_ON_FIELD_NUMBER = 3;
-    private com.google.protobuf.Timestamp createdOn_;
-    /**
-     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
-     * @return Whether the createdOn field is set.
-     */
-    @java.lang.Override
-    public boolean hasCreatedOn() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
-     * @return The createdOn.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getCreatedOn() {
-      return createdOn_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getCreatedOnOrBuilder() {
-      return createdOn_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
-    }
-
-    public static final int LAST_MODIFIED_FIELD_NUMBER = 4;
-    private com.google.protobuf.Timestamp lastModified_;
-    /**
-     * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
-     * @return Whether the lastModified field is set.
-     */
-    @java.lang.Override
-    public boolean hasLastModified() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
-     * @return The lastModified.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getLastModified() {
-      return lastModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
-    }
-    /**
-     * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getLastModifiedOrBuilder() {
-      return lastModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
-    }
-
-    public static final int SYNCED_MODEL_ID_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object syncedModelId_ = "";
-    /**
-     * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
-     * @return The syncedModelId.
-     */
-    @java.lang.Override
-    public java.lang.String getSyncedModelId() {
-      java.lang.Object ref = syncedModelId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        syncedModelId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
-     * @return The bytes for syncedModelId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getSyncedModelIdBytes() {
-      java.lang.Object ref = syncedModelId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        syncedModelId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int ID_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
     private volatile java.lang.Object id_ = "";
@@ -5106,6 +5088,198 @@ public final class MlTraining {
       }
     }
 
+    public static final int DATASET_ID_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object datasetId_ = "";
+    /**
+     * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @return The datasetId.
+     */
+    @java.lang.Override
+    public java.lang.String getDatasetId() {
+      java.lang.Object ref = datasetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        datasetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+     * @return The bytes for datasetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDatasetIdBytes() {
+      java.lang.Object ref = datasetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        datasetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORGANIZATION_ID_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object organizationId_ = "";
+    /**
+     * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @return The organizationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrganizationId() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        organizationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+     * @return The bytes for organizationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrganizationIdBytes() {
+      java.lang.Object ref = organizationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        organizationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODEL_NAME_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modelName_ = "";
+    /**
+     * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @return The modelName.
+     */
+    @java.lang.Override
+    public java.lang.String getModelName() {
+      java.lang.Object ref = modelName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        modelName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+     * @return The bytes for modelName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModelNameBytes() {
+      java.lang.Object ref = modelName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modelName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODEL_VERSION_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modelVersion_ = "";
+    /**
+     * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @return The modelVersion.
+     */
+    @java.lang.Override
+    public java.lang.String getModelVersion() {
+      java.lang.Object ref = modelVersion_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        modelVersion_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+     * @return The bytes for modelVersion.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModelVersionBytes() {
+      java.lang.Object ref = modelVersion_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modelVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODEL_TYPE_FIELD_NUMBER = 15;
+    private int modelType_ = 0;
+    /**
+     * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+     * @return The enum numeric value on the wire for modelType.
+     */
+    @java.lang.Override public int getModelTypeValue() {
+      return modelType_;
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+     * @return The modelType.
+     */
+    @java.lang.Override public viam.app.mltraining.v1.MlTraining.ModelType getModelType() {
+      viam.app.mltraining.v1.MlTraining.ModelType result = viam.app.mltraining.v1.MlTraining.ModelType.forNumber(modelType_);
+      return result == null ? viam.app.mltraining.v1.MlTraining.ModelType.UNRECOGNIZED : result;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_ = 0;
+    /**
+     * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
+     * @return The status.
+     */
+    @java.lang.Override public viam.app.mltraining.v1.MlTraining.TrainingStatus getStatus() {
+      viam.app.mltraining.v1.MlTraining.TrainingStatus result = viam.app.mltraining.v1.MlTraining.TrainingStatus.forNumber(status_);
+      return result == null ? viam.app.mltraining.v1.MlTraining.TrainingStatus.UNRECOGNIZED : result;
+    }
+
     public static final int ERROR_STATUS_FIELD_NUMBER = 8;
     private com.google.rpc.Status errorStatus_;
     /**
@@ -5114,7 +5288,7 @@ public final class MlTraining {
      */
     @java.lang.Override
     public boolean hasErrorStatus() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
@@ -5130,6 +5304,58 @@ public final class MlTraining {
     @java.lang.Override
     public com.google.rpc.StatusOrBuilder getErrorStatusOrBuilder() {
       return errorStatus_ == null ? com.google.rpc.Status.getDefaultInstance() : errorStatus_;
+    }
+
+    public static final int CREATED_ON_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp createdOn_;
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
+     * @return Whether the createdOn field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedOn() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
+     * @return The createdOn.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedOn() {
+      return createdOn_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedOnOrBuilder() {
+      return createdOn_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdOn_;
+    }
+
+    public static final int LAST_MODIFIED_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp lastModified_;
+    /**
+     * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
+     * @return Whether the lastModified field is set.
+     */
+    @java.lang.Override
+    public boolean hasLastModified() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
+     * @return The lastModified.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getLastModified() {
+      return lastModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getLastModifiedOrBuilder() {
+      return lastModified_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastModified_;
     }
 
     public static final int TRAINING_STARTED_FIELD_NUMBER = 9;
@@ -5184,6 +5410,82 @@ public final class MlTraining {
       return trainingEnded_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : trainingEnded_;
     }
 
+    public static final int SYNCED_MODEL_ID_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object syncedModelId_ = "";
+    /**
+     * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
+     * @return The syncedModelId.
+     */
+    @java.lang.Override
+    public java.lang.String getSyncedModelId() {
+      java.lang.Object ref = syncedModelId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        syncedModelId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string synced_model_id = 5 [json_name = "syncedModelId", (.tagger.v1.tags) = "bson:&#92;"synced_model_id&#92;" json:&#92;"synced_model_id&#92;""];</code>
+     * @return The bytes for syncedModelId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSyncedModelIdBytes() {
+      java.lang.Object ref = syncedModelId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        syncedModelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList tags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @return A list containing the tags.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @return The count of tags.
+     */
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
+     */
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return tags_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5204,10 +5506,10 @@ public final class MlTraining {
       if (status_ != viam.app.mltraining.v1.MlTraining.TrainingStatus.TRAINING_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, status_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getCreatedOn());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(4, getLastModified());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(syncedModelId_)) {
@@ -5216,7 +5518,7 @@ public final class MlTraining {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, id_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(8, getErrorStatus());
       }
       if (((bitField0_ & 0x00000010) != 0)) {
@@ -5224,6 +5526,24 @@ public final class MlTraining {
       }
       if (((bitField0_ & 0x00000020) != 0)) {
         output.writeMessage(10, getTrainingEnded());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, datasetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, organizationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, modelName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelVersion_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, modelVersion_);
+      }
+      if (modelType_ != viam.app.mltraining.v1.MlTraining.ModelType.MODEL_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(15, modelType_);
+      }
+      for (int i = 0; i < tags_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, tags_.getRaw(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -5242,11 +5562,11 @@ public final class MlTraining {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, status_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCreatedOn());
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLastModified());
       }
@@ -5256,7 +5576,7 @@ public final class MlTraining {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, id_);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getErrorStatus());
       }
@@ -5267,6 +5587,30 @@ public final class MlTraining {
       if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getTrainingEnded());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(datasetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, datasetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, organizationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, modelName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modelVersion_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, modelVersion_);
+      }
+      if (modelType_ != viam.app.mltraining.v1.MlTraining.ModelType.MODEL_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(15, modelType_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tags_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getTagsList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -5288,7 +5632,23 @@ public final class MlTraining {
         if (!getRequest()
             .equals(other.getRequest())) return false;
       }
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getDatasetId()
+          .equals(other.getDatasetId())) return false;
+      if (!getOrganizationId()
+          .equals(other.getOrganizationId())) return false;
+      if (!getModelName()
+          .equals(other.getModelName())) return false;
+      if (!getModelVersion()
+          .equals(other.getModelVersion())) return false;
+      if (modelType_ != other.modelType_) return false;
       if (status_ != other.status_) return false;
+      if (hasErrorStatus() != other.hasErrorStatus()) return false;
+      if (hasErrorStatus()) {
+        if (!getErrorStatus()
+            .equals(other.getErrorStatus())) return false;
+      }
       if (hasCreatedOn() != other.hasCreatedOn()) return false;
       if (hasCreatedOn()) {
         if (!getCreatedOn()
@@ -5298,15 +5658,6 @@ public final class MlTraining {
       if (hasLastModified()) {
         if (!getLastModified()
             .equals(other.getLastModified())) return false;
-      }
-      if (!getSyncedModelId()
-          .equals(other.getSyncedModelId())) return false;
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (hasErrorStatus() != other.hasErrorStatus()) return false;
-      if (hasErrorStatus()) {
-        if (!getErrorStatus()
-            .equals(other.getErrorStatus())) return false;
       }
       if (hasTrainingStarted() != other.hasTrainingStarted()) return false;
       if (hasTrainingStarted()) {
@@ -5318,6 +5669,10 @@ public final class MlTraining {
         if (!getTrainingEnded()
             .equals(other.getTrainingEnded())) return false;
       }
+      if (!getSyncedModelId()
+          .equals(other.getSyncedModelId())) return false;
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -5333,8 +5688,24 @@ public final class MlTraining {
         hash = (37 * hash) + REQUEST_FIELD_NUMBER;
         hash = (53 * hash) + getRequest().hashCode();
       }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + DATASET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetId().hashCode();
+      hash = (37 * hash) + ORGANIZATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrganizationId().hashCode();
+      hash = (37 * hash) + MODEL_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getModelName().hashCode();
+      hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getModelVersion().hashCode();
+      hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + modelType_;
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      if (hasErrorStatus()) {
+        hash = (37 * hash) + ERROR_STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getErrorStatus().hashCode();
+      }
       if (hasCreatedOn()) {
         hash = (37 * hash) + CREATED_ON_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedOn().hashCode();
@@ -5343,14 +5714,6 @@ public final class MlTraining {
         hash = (37 * hash) + LAST_MODIFIED_FIELD_NUMBER;
         hash = (53 * hash) + getLastModified().hashCode();
       }
-      hash = (37 * hash) + SYNCED_MODEL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getSyncedModelId().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      if (hasErrorStatus()) {
-        hash = (37 * hash) + ERROR_STATUS_FIELD_NUMBER;
-        hash = (53 * hash) + getErrorStatus().hashCode();
-      }
       if (hasTrainingStarted()) {
         hash = (37 * hash) + TRAINING_STARTED_FIELD_NUMBER;
         hash = (53 * hash) + getTrainingStarted().hashCode();
@@ -5358,6 +5721,12 @@ public final class MlTraining {
       if (hasTrainingEnded()) {
         hash = (37 * hash) + TRAINING_ENDED_FIELD_NUMBER;
         hash = (53 * hash) + getTrainingEnded().hashCode();
+      }
+      hash = (37 * hash) + SYNCED_MODEL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSyncedModelId().hashCode();
+      if (getTagsCount() > 0) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagsList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -5490,9 +5859,9 @@ public final class MlTraining {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getRequestFieldBuilder();
+          getErrorStatusFieldBuilder();
           getCreatedOnFieldBuilder();
           getLastModifiedFieldBuilder();
-          getErrorStatusFieldBuilder();
           getTrainingStartedFieldBuilder();
           getTrainingEndedFieldBuilder();
         }
@@ -5506,7 +5875,18 @@ public final class MlTraining {
           requestBuilder_.dispose();
           requestBuilder_ = null;
         }
+        id_ = "";
+        datasetId_ = "";
+        organizationId_ = "";
+        modelName_ = "";
+        modelVersion_ = "";
+        modelType_ = 0;
         status_ = 0;
+        errorStatus_ = null;
+        if (errorStatusBuilder_ != null) {
+          errorStatusBuilder_.dispose();
+          errorStatusBuilder_ = null;
+        }
         createdOn_ = null;
         if (createdOnBuilder_ != null) {
           createdOnBuilder_.dispose();
@@ -5516,13 +5896,6 @@ public final class MlTraining {
         if (lastModifiedBuilder_ != null) {
           lastModifiedBuilder_.dispose();
           lastModifiedBuilder_ = null;
-        }
-        syncedModelId_ = "";
-        id_ = "";
-        errorStatus_ = null;
-        if (errorStatusBuilder_ != null) {
-          errorStatusBuilder_.dispose();
-          errorStatusBuilder_ = null;
         }
         trainingStarted_ = null;
         if (trainingStartedBuilder_ != null) {
@@ -5534,6 +5907,9 @@ public final class MlTraining {
           trainingEndedBuilder_.dispose();
           trainingEndedBuilder_ = null;
         }
+        syncedModelId_ = "";
+        tags_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -5575,43 +5951,62 @@ public final class MlTraining {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.status_ = status_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.createdOn_ = createdOnBuilder_ == null
-              ? createdOn_
-              : createdOnBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.lastModified_ = lastModifiedBuilder_ == null
-              ? lastModified_
-              : lastModifiedBuilder_.build();
-          to_bitField0_ |= 0x00000004;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.syncedModelId_ = syncedModelId_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
           result.id_ = id_;
         }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.datasetId_ = datasetId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.organizationId_ = organizationId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.modelName_ = modelName_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.modelVersion_ = modelVersion_;
+        }
         if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.modelType_ = modelType_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
           result.errorStatus_ = errorStatusBuilder_ == null
               ? errorStatus_
               : errorStatusBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.createdOn_ = createdOnBuilder_ == null
+              ? createdOn_
+              : createdOnBuilder_.build();
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.lastModified_ = lastModifiedBuilder_ == null
+              ? lastModified_
+              : lastModifiedBuilder_.build();
           to_bitField0_ |= 0x00000008;
         }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
+        if (((from_bitField0_ & 0x00000800) != 0)) {
           result.trainingStarted_ = trainingStartedBuilder_ == null
               ? trainingStarted_
               : trainingStartedBuilder_.build();
           to_bitField0_ |= 0x00000010;
         }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
+        if (((from_bitField0_ & 0x00001000) != 0)) {
           result.trainingEnded_ = trainingEndedBuilder_ == null
               ? trainingEnded_
               : trainingEndedBuilder_.build();
           to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.syncedModelId_ = syncedModelId_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          tags_.makeImmutable();
+          result.tags_ = tags_;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -5663,8 +6058,39 @@ public final class MlTraining {
         if (other.hasRequest()) {
           mergeRequest(other.getRequest());
         }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDatasetId().isEmpty()) {
+          datasetId_ = other.datasetId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getOrganizationId().isEmpty()) {
+          organizationId_ = other.organizationId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getModelName().isEmpty()) {
+          modelName_ = other.modelName_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getModelVersion().isEmpty()) {
+          modelVersion_ = other.modelVersion_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (other.modelType_ != 0) {
+          setModelTypeValue(other.getModelTypeValue());
+        }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.hasErrorStatus()) {
+          mergeErrorStatus(other.getErrorStatus());
         }
         if (other.hasCreatedOn()) {
           mergeCreatedOn(other.getCreatedOn());
@@ -5672,24 +6098,26 @@ public final class MlTraining {
         if (other.hasLastModified()) {
           mergeLastModified(other.getLastModified());
         }
-        if (!other.getSyncedModelId().isEmpty()) {
-          syncedModelId_ = other.syncedModelId_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
-        if (other.hasErrorStatus()) {
-          mergeErrorStatus(other.getErrorStatus());
-        }
         if (other.hasTrainingStarted()) {
           mergeTrainingStarted(other.getTrainingStarted());
         }
         if (other.hasTrainingEnded()) {
           mergeTrainingEnded(other.getTrainingEnded());
+        }
+        if (!other.getSyncedModelId().isEmpty()) {
+          syncedModelId_ = other.syncedModelId_;
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
+        if (!other.tags_.isEmpty()) {
+          if (tags_.isEmpty()) {
+            tags_ = other.tags_;
+            bitField0_ |= 0x00004000;
+          } else {
+            ensureTagsIsMutable();
+            tags_.addAll(other.tags_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -5726,54 +6154,85 @@ public final class MlTraining {
               } // case 10
               case 16: {
                 status_ = input.readEnum();
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000080;
                 break;
               } // case 16
               case 26: {
                 input.readMessage(
                     getCreatedOnFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000200;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getLastModifiedFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000400;
                 break;
               } // case 34
               case 42: {
                 syncedModelId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00002000;
                 break;
               } // case 42
               case 58: {
                 id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
+                bitField0_ |= 0x00000002;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
                     getErrorStatusFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000040;
+                bitField0_ |= 0x00000100;
                 break;
               } // case 66
               case 74: {
                 input.readMessage(
                     getTrainingStartedFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000080;
+                bitField0_ |= 0x00000800;
                 break;
               } // case 74
               case 82: {
                 input.readMessage(
                     getTrainingEndedFieldBuilder().getBuilder(),
                     extensionRegistry);
-                bitField0_ |= 0x00000100;
+                bitField0_ |= 0x00001000;
                 break;
               } // case 82
+              case 90: {
+                datasetId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 90
+              case 98: {
+                organizationId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 98
+              case 106: {
+                modelName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 106
+              case 114: {
+                modelVersion_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 114
+              case 120: {
+                modelType_ = input.readEnum();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 120
+              case 130: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureTagsIsMutable();
+                tags_.add(s);
+                break;
+              } // case 130
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5912,6 +6371,419 @@ public final class MlTraining {
         return requestBuilder_;
       }
 
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        id_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object datasetId_ = "";
+      /**
+       * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+       * @return The datasetId.
+       */
+      public java.lang.String getDatasetId() {
+        java.lang.Object ref = datasetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          datasetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+       * @return The bytes for datasetId.
+       */
+      public com.google.protobuf.ByteString
+          getDatasetIdBytes() {
+        java.lang.Object ref = datasetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          datasetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+       * @param value The datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        datasetId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDatasetId() {
+        datasetId_ = getDefaultInstance().getDatasetId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 11 [json_name = "datasetId", (.tagger.v1.tags) = "bson:&#92;"dataset_id&#92;" json:&#92;"dataset_id&#92;""];</code>
+       * @param value The bytes for datasetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDatasetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        datasetId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object organizationId_ = "";
+      /**
+       * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+       * @return The organizationId.
+       */
+      public java.lang.String getOrganizationId() {
+        java.lang.Object ref = organizationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          organizationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+       * @return The bytes for organizationId.
+       */
+      public com.google.protobuf.ByteString
+          getOrganizationIdBytes() {
+        java.lang.Object ref = organizationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          organizationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+       * @param value The organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        organizationId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrganizationId() {
+        organizationId_ = getDefaultInstance().getOrganizationId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string organization_id = 12 [json_name = "organizationId", (.tagger.v1.tags) = "bson:&#92;"organization_id&#92;" json:&#92;"organization_id&#92;""];</code>
+       * @param value The bytes for organizationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrganizationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        organizationId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object modelName_ = "";
+      /**
+       * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+       * @return The modelName.
+       */
+      public java.lang.String getModelName() {
+        java.lang.Object ref = modelName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          modelName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+       * @return The bytes for modelName.
+       */
+      public com.google.protobuf.ByteString
+          getModelNameBytes() {
+        java.lang.Object ref = modelName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          modelName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+       * @param value The modelName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        modelName_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelName() {
+        modelName_ = getDefaultInstance().getModelName();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string model_name = 13 [json_name = "modelName", (.tagger.v1.tags) = "bson:&#92;"model_name&#92;" json:&#92;"model_name&#92;""];</code>
+       * @param value The bytes for modelName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        modelName_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object modelVersion_ = "";
+      /**
+       * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+       * @return The modelVersion.
+       */
+      public java.lang.String getModelVersion() {
+        java.lang.Object ref = modelVersion_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          modelVersion_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+       * @return The bytes for modelVersion.
+       */
+      public com.google.protobuf.ByteString
+          getModelVersionBytes() {
+        java.lang.Object ref = modelVersion_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          modelVersion_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+       * @param value The modelVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelVersion(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        modelVersion_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelVersion() {
+        modelVersion_ = getDefaultInstance().getModelVersion();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string model_version = 14 [json_name = "modelVersion", (.tagger.v1.tags) = "bson:&#92;"model_version&#92;" json:&#92;"model_version&#92;""];</code>
+       * @param value The bytes for modelVersion to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelVersionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        modelVersion_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private int modelType_ = 0;
+      /**
+       * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+       * @return The enum numeric value on the wire for modelType.
+       */
+      @java.lang.Override public int getModelTypeValue() {
+        return modelType_;
+      }
+      /**
+       * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+       * @param value The enum numeric value on the wire for modelType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelTypeValue(int value) {
+        modelType_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+       * @return The modelType.
+       */
+      @java.lang.Override
+      public viam.app.mltraining.v1.MlTraining.ModelType getModelType() {
+        viam.app.mltraining.v1.MlTraining.ModelType result = viam.app.mltraining.v1.MlTraining.ModelType.forNumber(modelType_);
+        return result == null ? viam.app.mltraining.v1.MlTraining.ModelType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+       * @param value The modelType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelType(viam.app.mltraining.v1.MlTraining.ModelType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000040;
+        modelType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.viam.app.mltraining.v1.ModelType model_type = 15 [json_name = "modelType", (.tagger.v1.tags) = "bson:&#92;"model_type&#92;" json:&#92;"model_type&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelType() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        modelType_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int status_ = 0;
       /**
        * <code>.viam.app.mltraining.v1.TrainingStatus status = 2 [json_name = "status", (.tagger.v1.tags) = "bson:&#92;"status&#92;" json:&#92;"status&#92;""];</code>
@@ -5927,7 +6799,7 @@ public final class MlTraining {
        */
       public Builder setStatusValue(int value) {
         status_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -5949,7 +6821,7 @@ public final class MlTraining {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000080;
         status_ = value.getNumber();
         onChanged();
         return this;
@@ -5959,10 +6831,131 @@ public final class MlTraining {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000080);
         status_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.rpc.Status errorStatus_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> errorStatusBuilder_;
+      /**
+       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+       * @return Whether the errorStatus field is set.
+       */
+      public boolean hasErrorStatus() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+       * @return The errorStatus.
+       */
+      public com.google.rpc.Status getErrorStatus() {
+        if (errorStatusBuilder_ == null) {
+          return errorStatus_ == null ? com.google.rpc.Status.getDefaultInstance() : errorStatus_;
+        } else {
+          return errorStatusBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+       */
+      public Builder setErrorStatus(com.google.rpc.Status value) {
+        if (errorStatusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          errorStatus_ = value;
+        } else {
+          errorStatusBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+       */
+      public Builder setErrorStatus(
+          com.google.rpc.Status.Builder builderForValue) {
+        if (errorStatusBuilder_ == null) {
+          errorStatus_ = builderForValue.build();
+        } else {
+          errorStatusBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+       */
+      public Builder mergeErrorStatus(com.google.rpc.Status value) {
+        if (errorStatusBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            errorStatus_ != null &&
+            errorStatus_ != com.google.rpc.Status.getDefaultInstance()) {
+            getErrorStatusBuilder().mergeFrom(value);
+          } else {
+            errorStatus_ = value;
+          }
+        } else {
+          errorStatusBuilder_.mergeFrom(value);
+        }
+        if (errorStatus_ != null) {
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+       */
+      public Builder clearErrorStatus() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        errorStatus_ = null;
+        if (errorStatusBuilder_ != null) {
+          errorStatusBuilder_.dispose();
+          errorStatusBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+       */
+      public com.google.rpc.Status.Builder getErrorStatusBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getErrorStatusFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+       */
+      public com.google.rpc.StatusOrBuilder getErrorStatusOrBuilder() {
+        if (errorStatusBuilder_ != null) {
+          return errorStatusBuilder_.getMessageOrBuilder();
+        } else {
+          return errorStatus_ == null ?
+              com.google.rpc.Status.getDefaultInstance() : errorStatus_;
+        }
+      }
+      /**
+       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
+          getErrorStatusFieldBuilder() {
+        if (errorStatusBuilder_ == null) {
+          errorStatusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
+                  getErrorStatus(),
+                  getParentForChildren(),
+                  isClean());
+          errorStatus_ = null;
+        }
+        return errorStatusBuilder_;
       }
 
       private com.google.protobuf.Timestamp createdOn_;
@@ -5973,7 +6966,7 @@ public final class MlTraining {
        * @return Whether the createdOn field is set.
        */
       public boolean hasCreatedOn() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
@@ -5998,7 +6991,7 @@ public final class MlTraining {
         } else {
           createdOnBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -6012,7 +7005,7 @@ public final class MlTraining {
         } else {
           createdOnBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -6021,7 +7014,7 @@ public final class MlTraining {
        */
       public Builder mergeCreatedOn(com.google.protobuf.Timestamp value) {
         if (createdOnBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
+          if (((bitField0_ & 0x00000200) != 0) &&
             createdOn_ != null &&
             createdOn_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             getCreatedOnBuilder().mergeFrom(value);
@@ -6032,7 +7025,7 @@ public final class MlTraining {
           createdOnBuilder_.mergeFrom(value);
         }
         if (createdOn_ != null) {
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000200;
           onChanged();
         }
         return this;
@@ -6041,7 +7034,7 @@ public final class MlTraining {
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
        */
       public Builder clearCreatedOn() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000200);
         createdOn_ = null;
         if (createdOnBuilder_ != null) {
           createdOnBuilder_.dispose();
@@ -6054,7 +7047,7 @@ public final class MlTraining {
        * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedOnBuilder() {
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000200;
         onChanged();
         return getCreatedOnFieldBuilder().getBuilder();
       }
@@ -6094,7 +7087,7 @@ public final class MlTraining {
        * @return Whether the lastModified field is set.
        */
       public boolean hasLastModified() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
@@ -6119,7 +7112,7 @@ public final class MlTraining {
         } else {
           lastModifiedBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -6133,7 +7126,7 @@ public final class MlTraining {
         } else {
           lastModifiedBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -6142,7 +7135,7 @@ public final class MlTraining {
        */
       public Builder mergeLastModified(com.google.protobuf.Timestamp value) {
         if (lastModifiedBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
+          if (((bitField0_ & 0x00000400) != 0) &&
             lastModified_ != null &&
             lastModified_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
             getLastModifiedBuilder().mergeFrom(value);
@@ -6153,7 +7146,7 @@ public final class MlTraining {
           lastModifiedBuilder_.mergeFrom(value);
         }
         if (lastModified_ != null) {
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000400;
           onChanged();
         }
         return this;
@@ -6162,7 +7155,7 @@ public final class MlTraining {
        * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
        */
       public Builder clearLastModified() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000400);
         lastModified_ = null;
         if (lastModifiedBuilder_ != null) {
           lastModifiedBuilder_.dispose();
@@ -6175,7 +7168,7 @@ public final class MlTraining {
        * <code>.google.protobuf.Timestamp last_modified = 4 [json_name = "lastModified", (.tagger.v1.tags) = "bson:&#92;"last_modified&#92;" json:&#92;"last_modified&#92;""];</code>
        */
       public com.google.protobuf.Timestamp.Builder getLastModifiedBuilder() {
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000400;
         onChanged();
         return getLastModifiedFieldBuilder().getBuilder();
       }
@@ -6205,6 +7198,248 @@ public final class MlTraining {
           lastModified_ = null;
         }
         return lastModifiedBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp trainingStarted_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> trainingStartedBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
+       * @return Whether the trainingStarted field is set.
+       */
+      public boolean hasTrainingStarted() {
+        return ((bitField0_ & 0x00000800) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
+       * @return The trainingStarted.
+       */
+      public com.google.protobuf.Timestamp getTrainingStarted() {
+        if (trainingStartedBuilder_ == null) {
+          return trainingStarted_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : trainingStarted_;
+        } else {
+          return trainingStartedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
+       */
+      public Builder setTrainingStarted(com.google.protobuf.Timestamp value) {
+        if (trainingStartedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          trainingStarted_ = value;
+        } else {
+          trainingStartedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
+       */
+      public Builder setTrainingStarted(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (trainingStartedBuilder_ == null) {
+          trainingStarted_ = builderForValue.build();
+        } else {
+          trainingStartedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
+       */
+      public Builder mergeTrainingStarted(com.google.protobuf.Timestamp value) {
+        if (trainingStartedBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) != 0) &&
+            trainingStarted_ != null &&
+            trainingStarted_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getTrainingStartedBuilder().mergeFrom(value);
+          } else {
+            trainingStarted_ = value;
+          }
+        } else {
+          trainingStartedBuilder_.mergeFrom(value);
+        }
+        if (trainingStarted_ != null) {
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
+       */
+      public Builder clearTrainingStarted() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        trainingStarted_ = null;
+        if (trainingStartedBuilder_ != null) {
+          trainingStartedBuilder_.dispose();
+          trainingStartedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTrainingStartedBuilder() {
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return getTrainingStartedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTrainingStartedOrBuilder() {
+        if (trainingStartedBuilder_ != null) {
+          return trainingStartedBuilder_.getMessageOrBuilder();
+        } else {
+          return trainingStarted_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : trainingStarted_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTrainingStartedFieldBuilder() {
+        if (trainingStartedBuilder_ == null) {
+          trainingStartedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTrainingStarted(),
+                  getParentForChildren(),
+                  isClean());
+          trainingStarted_ = null;
+        }
+        return trainingStartedBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp trainingEnded_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> trainingEndedBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
+       * @return Whether the trainingEnded field is set.
+       */
+      public boolean hasTrainingEnded() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
+       * @return The trainingEnded.
+       */
+      public com.google.protobuf.Timestamp getTrainingEnded() {
+        if (trainingEndedBuilder_ == null) {
+          return trainingEnded_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : trainingEnded_;
+        } else {
+          return trainingEndedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
+       */
+      public Builder setTrainingEnded(com.google.protobuf.Timestamp value) {
+        if (trainingEndedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          trainingEnded_ = value;
+        } else {
+          trainingEndedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
+       */
+      public Builder setTrainingEnded(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (trainingEndedBuilder_ == null) {
+          trainingEnded_ = builderForValue.build();
+        } else {
+          trainingEndedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
+       */
+      public Builder mergeTrainingEnded(com.google.protobuf.Timestamp value) {
+        if (trainingEndedBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) != 0) &&
+            trainingEnded_ != null &&
+            trainingEnded_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getTrainingEndedBuilder().mergeFrom(value);
+          } else {
+            trainingEnded_ = value;
+          }
+        } else {
+          trainingEndedBuilder_.mergeFrom(value);
+        }
+        if (trainingEnded_ != null) {
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
+       */
+      public Builder clearTrainingEnded() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        trainingEnded_ = null;
+        if (trainingEndedBuilder_ != null) {
+          trainingEndedBuilder_.dispose();
+          trainingEndedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getTrainingEndedBuilder() {
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return getTrainingEndedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTrainingEndedOrBuilder() {
+        if (trainingEndedBuilder_ != null) {
+          return trainingEndedBuilder_.getMessageOrBuilder();
+        } else {
+          return trainingEnded_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : trainingEnded_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getTrainingEndedFieldBuilder() {
+        if (trainingEndedBuilder_ == null) {
+          trainingEndedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getTrainingEnded(),
+                  getParentForChildren(),
+                  isClean());
+          trainingEnded_ = null;
+        }
+        return trainingEndedBuilder_;
       }
 
       private java.lang.Object syncedModelId_ = "";
@@ -6250,7 +7485,7 @@ public final class MlTraining {
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         syncedModelId_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -6260,7 +7495,7 @@ public final class MlTraining {
        */
       public Builder clearSyncedModelId() {
         syncedModelId_ = getDefaultInstance().getSyncedModelId();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00002000);
         onChanged();
         return this;
       }
@@ -6274,444 +7509,120 @@ public final class MlTraining {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
         syncedModelId_ = value;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
 
-      private java.lang.Object id_ = "";
-      /**
-       * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
-       * @return The id.
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
+      private com.google.protobuf.LazyStringArrayList tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureTagsIsMutable() {
+        if (!tags_.isModifiable()) {
+          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
         }
+        bitField0_ |= 0x00004000;
       }
       /**
-       * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
-       * @return The bytes for id.
+       * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+       * @return A list containing the tags.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTagsList() {
+        tags_.makeImmutable();
+        return tags_;
+      }
+      /**
+       * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+       * @return The count of tags.
+       */
+      public int getTagsCount() {
+        return tags_.size();
+      }
+      /**
+       * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
+       */
+      public java.lang.String getTags(int index) {
+        return tags_.get(index);
+      }
+      /**
+       * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+          getTagsBytes(int index) {
+        return tags_.getByteString(index);
       }
       /**
-       * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
-       * @param value The id to set.
+       * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
        * @return This builder for chaining.
        */
-      public Builder setId(
+      public Builder setTags(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
+        tags_.set(index, value);
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTags(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000020;
+        ensureTagsIsMutable();
+        tags_.add(value);
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
       /**
-       * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
+       * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+       * @param values The tags to add.
        * @return This builder for chaining.
        */
-      public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000020);
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tags_);
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
       /**
-       * <code>string id = 7 [json_name = "id", (.tagger.v1.tags) = "bson:&#92;"_id&#92;" json:&#92;"id,omitempty&#92;""];</code>
-       * @param value The bytes for id to set.
+       * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
        * @return This builder for chaining.
        */
-      public Builder setIdBytes(
+      public Builder clearTags() {
+        tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00004000);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 16 [json_name = "tags", (.tagger.v1.tags) = "bson:&#92;"tags&#92;" json:&#92;"tags&#92;""];</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000020;
+        ensureTagsIsMutable();
+        tags_.add(value);
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
-      }
-
-      private com.google.rpc.Status errorStatus_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> errorStatusBuilder_;
-      /**
-       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       * @return Whether the errorStatus field is set.
-       */
-      public boolean hasErrorStatus() {
-        return ((bitField0_ & 0x00000040) != 0);
-      }
-      /**
-       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       * @return The errorStatus.
-       */
-      public com.google.rpc.Status getErrorStatus() {
-        if (errorStatusBuilder_ == null) {
-          return errorStatus_ == null ? com.google.rpc.Status.getDefaultInstance() : errorStatus_;
-        } else {
-          return errorStatusBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       */
-      public Builder setErrorStatus(com.google.rpc.Status value) {
-        if (errorStatusBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          errorStatus_ = value;
-        } else {
-          errorStatusBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       */
-      public Builder setErrorStatus(
-          com.google.rpc.Status.Builder builderForValue) {
-        if (errorStatusBuilder_ == null) {
-          errorStatus_ = builderForValue.build();
-        } else {
-          errorStatusBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       */
-      public Builder mergeErrorStatus(com.google.rpc.Status value) {
-        if (errorStatusBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) != 0) &&
-            errorStatus_ != null &&
-            errorStatus_ != com.google.rpc.Status.getDefaultInstance()) {
-            getErrorStatusBuilder().mergeFrom(value);
-          } else {
-            errorStatus_ = value;
-          }
-        } else {
-          errorStatusBuilder_.mergeFrom(value);
-        }
-        if (errorStatus_ != null) {
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       */
-      public Builder clearErrorStatus() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        errorStatus_ = null;
-        if (errorStatusBuilder_ != null) {
-          errorStatusBuilder_.dispose();
-          errorStatusBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       */
-      public com.google.rpc.Status.Builder getErrorStatusBuilder() {
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return getErrorStatusFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       */
-      public com.google.rpc.StatusOrBuilder getErrorStatusOrBuilder() {
-        if (errorStatusBuilder_ != null) {
-          return errorStatusBuilder_.getMessageOrBuilder();
-        } else {
-          return errorStatus_ == null ?
-              com.google.rpc.Status.getDefaultInstance() : errorStatus_;
-        }
-      }
-      /**
-       * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
-          getErrorStatusFieldBuilder() {
-        if (errorStatusBuilder_ == null) {
-          errorStatusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
-                  getErrorStatus(),
-                  getParentForChildren(),
-                  isClean());
-          errorStatus_ = null;
-        }
-        return errorStatusBuilder_;
-      }
-
-      private com.google.protobuf.Timestamp trainingStarted_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> trainingStartedBuilder_;
-      /**
-       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       * @return Whether the trainingStarted field is set.
-       */
-      public boolean hasTrainingStarted() {
-        return ((bitField0_ & 0x00000080) != 0);
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       * @return The trainingStarted.
-       */
-      public com.google.protobuf.Timestamp getTrainingStarted() {
-        if (trainingStartedBuilder_ == null) {
-          return trainingStarted_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : trainingStarted_;
-        } else {
-          return trainingStartedBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       */
-      public Builder setTrainingStarted(com.google.protobuf.Timestamp value) {
-        if (trainingStartedBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          trainingStarted_ = value;
-        } else {
-          trainingStartedBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000080;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       */
-      public Builder setTrainingStarted(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (trainingStartedBuilder_ == null) {
-          trainingStarted_ = builderForValue.build();
-        } else {
-          trainingStartedBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000080;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       */
-      public Builder mergeTrainingStarted(com.google.protobuf.Timestamp value) {
-        if (trainingStartedBuilder_ == null) {
-          if (((bitField0_ & 0x00000080) != 0) &&
-            trainingStarted_ != null &&
-            trainingStarted_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getTrainingStartedBuilder().mergeFrom(value);
-          } else {
-            trainingStarted_ = value;
-          }
-        } else {
-          trainingStartedBuilder_.mergeFrom(value);
-        }
-        if (trainingStarted_ != null) {
-          bitField0_ |= 0x00000080;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       */
-      public Builder clearTrainingStarted() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        trainingStarted_ = null;
-        if (trainingStartedBuilder_ != null) {
-          trainingStartedBuilder_.dispose();
-          trainingStartedBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getTrainingStartedBuilder() {
-        bitField0_ |= 0x00000080;
-        onChanged();
-        return getTrainingStartedFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTrainingStartedOrBuilder() {
-        if (trainingStartedBuilder_ != null) {
-          return trainingStartedBuilder_.getMessageOrBuilder();
-        } else {
-          return trainingStarted_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : trainingStarted_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_started = 9 [json_name = "trainingStarted", (.tagger.v1.tags) = "bson:&#92;"training_started&#92;" json:&#92;"training_started&#92;""];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTrainingStartedFieldBuilder() {
-        if (trainingStartedBuilder_ == null) {
-          trainingStartedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTrainingStarted(),
-                  getParentForChildren(),
-                  isClean());
-          trainingStarted_ = null;
-        }
-        return trainingStartedBuilder_;
-      }
-
-      private com.google.protobuf.Timestamp trainingEnded_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> trainingEndedBuilder_;
-      /**
-       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       * @return Whether the trainingEnded field is set.
-       */
-      public boolean hasTrainingEnded() {
-        return ((bitField0_ & 0x00000100) != 0);
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       * @return The trainingEnded.
-       */
-      public com.google.protobuf.Timestamp getTrainingEnded() {
-        if (trainingEndedBuilder_ == null) {
-          return trainingEnded_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : trainingEnded_;
-        } else {
-          return trainingEndedBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       */
-      public Builder setTrainingEnded(com.google.protobuf.Timestamp value) {
-        if (trainingEndedBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          trainingEnded_ = value;
-        } else {
-          trainingEndedBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000100;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       */
-      public Builder setTrainingEnded(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (trainingEndedBuilder_ == null) {
-          trainingEnded_ = builderForValue.build();
-        } else {
-          trainingEndedBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000100;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       */
-      public Builder mergeTrainingEnded(com.google.protobuf.Timestamp value) {
-        if (trainingEndedBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) != 0) &&
-            trainingEnded_ != null &&
-            trainingEnded_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getTrainingEndedBuilder().mergeFrom(value);
-          } else {
-            trainingEnded_ = value;
-          }
-        } else {
-          trainingEndedBuilder_.mergeFrom(value);
-        }
-        if (trainingEnded_ != null) {
-          bitField0_ |= 0x00000100;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       */
-      public Builder clearTrainingEnded() {
-        bitField0_ = (bitField0_ & ~0x00000100);
-        trainingEnded_ = null;
-        if (trainingEndedBuilder_ != null) {
-          trainingEndedBuilder_.dispose();
-          trainingEndedBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getTrainingEndedBuilder() {
-        bitField0_ |= 0x00000100;
-        onChanged();
-        return getTrainingEndedFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTrainingEndedOrBuilder() {
-        if (trainingEndedBuilder_ != null) {
-          return trainingEndedBuilder_.getMessageOrBuilder();
-        } else {
-          return trainingEnded_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : trainingEnded_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp training_ended = 10 [json_name = "trainingEnded", (.tagger.v1.tags) = "bson:&#92;"training_ended&#92;" json:&#92;"training_ended&#92;""];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTrainingEndedFieldBuilder() {
-        if (trainingEndedBuilder_ == null) {
-          trainingEndedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTrainingEnded(),
-                  getParentForChildren(),
-                  isClean());
-          trainingEnded_ = null;
-        }
-        return trainingEndedBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8766,62 +9677,74 @@ public final class MlTraining {
       ".v1.TrainingStatusR\006status\"[\n\030ListTraini" +
       "ngJobsResponse\022?\n\004jobs\030\001 \003(\0132+.viam.app." +
       "mltraining.v1.TrainingJobMetadataR\004jobs\"" +
-      "\267\007\n\023TrainingJobMetadata\022n\n\007request\030\001 \001(\013" +
+      "\231\013\n\023TrainingJobMetadata\022n\n\007request\030\001 \001(\013" +
       "20.viam.app.mltraining.v1.SubmitTraining" +
       "JobRequestB\"\232\204\236\003\035bson:\"request\" json:\"re" +
-      "quest\"R\007request\022`\n\006status\030\002 \001(\0162&.viam.a" +
-      "pp.mltraining.v1.TrainingStatusB \232\204\236\003\033bs" +
-      "on:\"status\" json:\"status\"R\006status\022c\n\ncre" +
-      "ated_on\030\003 \001(\0132\032.google.protobuf.Timestam" +
-      "pB(\232\204\236\003#bson:\"created_on\" json:\"created_" +
-      "on\"R\tcreatedOn\022o\n\rlast_modified\030\004 \001(\0132\032." +
-      "google.protobuf.TimestampB.\232\204\236\003)bson:\"la" +
-      "st_modified\" json:\"last_modified\"R\014lastM" +
-      "odified\022Z\n\017synced_model_id\030\005 \001(\tB2\232\204\236\003-b" +
-      "son:\"synced_model_id\" json:\"synced_model" +
-      "_id\"R\rsyncedModelId\0223\n\002id\030\007 \001(\tB#\232\204\236\003\036bs" +
-      "on:\"_id\" json:\"id,omitempty\"R\002id\022c\n\014erro" +
-      "r_status\030\010 \001(\0132\022.google.rpc.StatusB,\232\204\236\003" +
-      "\'bson:\"error_status\" json:\"error_status\"" +
-      "R\013errorStatus\022{\n\020training_started\030\t \001(\0132" +
-      "\032.google.protobuf.TimestampB4\232\204\236\003/bson:\"" +
-      "training_started\" json:\"training_started" +
-      "\"R\017trainingStarted\022s\n\016training_ended\030\n \001" +
-      "(\0132\032.google.protobuf.TimestampB0\232\204\236\003+bso" +
-      "n:\"training_ended\" json:\"training_ended\"" +
-      "R\rtrainingEndedJ\004\010\006\020\007R\nuser_email\"*\n\030Can" +
-      "celTrainingJobRequest\022\016\n\002id\030\001 \001(\tR\002id\"\033\n" +
-      "\031CancelTrainingJobResponse\"3\n!DeleteComp" +
-      "letedTrainingJobRequest\022\016\n\002id\030\001 \001(\tR\002id\"" +
-      "$\n\"DeleteCompletedTrainingJobResponse*\237\001" +
-      "\n\tModelType\022\032\n\026MODEL_TYPE_UNSPECIFIED\020\000\022" +
-      "*\n&MODEL_TYPE_SINGLE_LABEL_CLASSIFICATIO" +
-      "N\020\001\022)\n%MODEL_TYPE_MULTI_LABEL_CLASSIFICA" +
-      "TION\020\002\022\037\n\033MODEL_TYPE_OBJECT_DETECTION\020\003*" +
-      "\347\001\n\016TrainingStatus\022\037\n\033TRAINING_STATUS_UN" +
-      "SPECIFIED\020\000\022\033\n\027TRAINING_STATUS_PENDING\020\001" +
-      "\022\037\n\033TRAINING_STATUS_IN_PROGRESS\020\002\022\035\n\031TRA" +
-      "INING_STATUS_COMPLETED\020\003\022\032\n\026TRAINING_STA" +
-      "TUS_FAILED\020\004\022\034\n\030TRAINING_STATUS_CANCELED" +
-      "\020\005\022\035\n\031TRAINING_STATUS_CANCELING\020\0062\205\005\n\021ML" +
-      "TrainingService\022x\n\021SubmitTrainingJob\0220.v" +
-      "iam.app.mltraining.v1.SubmitTrainingJobR" +
-      "equest\0321.viam.app.mltraining.v1.SubmitTr" +
-      "ainingJobResponse\022o\n\016GetTrainingJob\022-.vi" +
-      "am.app.mltraining.v1.GetTrainingJobReque" +
-      "st\032..viam.app.mltraining.v1.GetTrainingJ" +
-      "obResponse\022u\n\020ListTrainingJobs\022/.viam.ap" +
-      "p.mltraining.v1.ListTrainingJobsRequest\032" +
-      "0.viam.app.mltraining.v1.ListTrainingJob" +
-      "sResponse\022x\n\021CancelTrainingJob\0220.viam.ap" +
-      "p.mltraining.v1.CancelTrainingJobRequest" +
-      "\0321.viam.app.mltraining.v1.CancelTraining" +
-      "JobResponse\022\223\001\n\032DeleteCompletedTrainingJ" +
-      "ob\0229.viam.app.mltraining.v1.DeleteComple" +
-      "tedTrainingJobRequest\032:.viam.app.mltrain" +
-      "ing.v1.DeleteCompletedTrainingJobRespons" +
-      "eB#Z!go.viam.com/api/app/mltraining/v1b\006" +
-      "proto3"
+      "quest\"R\007request\0223\n\002id\030\007 \001(\tB#\232\204\236\003\036bson:\"" +
+      "_id\" json:\"id,omitempty\"R\002id\022G\n\ndataset_" +
+      "id\030\013 \001(\tB(\232\204\236\003#bson:\"dataset_id\" json:\"d" +
+      "ataset_id\"R\tdatasetId\022[\n\017organization_id" +
+      "\030\014 \001(\tB2\232\204\236\003-bson:\"organization_id\" json" +
+      ":\"organization_id\"R\016organizationId\022G\n\nmo" +
+      "del_name\030\r \001(\tB(\232\204\236\003#bson:\"model_name\" j" +
+      "son:\"model_name\"R\tmodelName\022S\n\rmodel_ver" +
+      "sion\030\016 \001(\tB.\232\204\236\003)bson:\"model_version\" js" +
+      "on:\"model_version\"R\014modelVersion\022j\n\nmode" +
+      "l_type\030\017 \001(\0162!.viam.app.mltraining.v1.Mo" +
+      "delTypeB(\232\204\236\003#bson:\"model_type\" json:\"mo" +
+      "del_type\"R\tmodelType\022`\n\006status\030\002 \001(\0162&.v" +
+      "iam.app.mltraining.v1.TrainingStatusB \232\204" +
+      "\236\003\033bson:\"status\" json:\"status\"R\006status\022c" +
+      "\n\014error_status\030\010 \001(\0132\022.google.rpc.Status" +
+      "B,\232\204\236\003\'bson:\"error_status\" json:\"error_s" +
+      "tatus\"R\013errorStatus\022c\n\ncreated_on\030\003 \001(\0132" +
+      "\032.google.protobuf.TimestampB(\232\204\236\003#bson:\"" +
+      "created_on\" json:\"created_on\"R\tcreatedOn" +
+      "\022o\n\rlast_modified\030\004 \001(\0132\032.google.protobu" +
+      "f.TimestampB.\232\204\236\003)bson:\"last_modified\" j" +
+      "son:\"last_modified\"R\014lastModified\022{\n\020tra" +
+      "ining_started\030\t \001(\0132\032.google.protobuf.Ti" +
+      "mestampB4\232\204\236\003/bson:\"training_started\" js" +
+      "on:\"training_started\"R\017trainingStarted\022s" +
+      "\n\016training_ended\030\n \001(\0132\032.google.protobuf" +
+      ".TimestampB0\232\204\236\003+bson:\"training_ended\" j" +
+      "son:\"training_ended\"R\rtrainingEnded\022Z\n\017s" +
+      "ynced_model_id\030\005 \001(\tB2\232\204\236\003-bson:\"synced_" +
+      "model_id\" json:\"synced_model_id\"R\rsynced" +
+      "ModelId\0220\n\004tags\030\020 \003(\tB\034\232\204\236\003\027bson:\"tags\" " +
+      "json:\"tags\"R\004tagsJ\004\010\006\020\007R\nuser_email\"*\n\030C" +
+      "ancelTrainingJobRequest\022\016\n\002id\030\001 \001(\tR\002id\"" +
+      "\033\n\031CancelTrainingJobResponse\"3\n!DeleteCo" +
+      "mpletedTrainingJobRequest\022\016\n\002id\030\001 \001(\tR\002i" +
+      "d\"$\n\"DeleteCompletedTrainingJobResponse*" +
+      "\237\001\n\tModelType\022\032\n\026MODEL_TYPE_UNSPECIFIED\020" +
+      "\000\022*\n&MODEL_TYPE_SINGLE_LABEL_CLASSIFICAT" +
+      "ION\020\001\022)\n%MODEL_TYPE_MULTI_LABEL_CLASSIFI" +
+      "CATION\020\002\022\037\n\033MODEL_TYPE_OBJECT_DETECTION\020" +
+      "\003*\347\001\n\016TrainingStatus\022\037\n\033TRAINING_STATUS_" +
+      "UNSPECIFIED\020\000\022\033\n\027TRAINING_STATUS_PENDING" +
+      "\020\001\022\037\n\033TRAINING_STATUS_IN_PROGRESS\020\002\022\035\n\031T" +
+      "RAINING_STATUS_COMPLETED\020\003\022\032\n\026TRAINING_S" +
+      "TATUS_FAILED\020\004\022\034\n\030TRAINING_STATUS_CANCEL" +
+      "ED\020\005\022\035\n\031TRAINING_STATUS_CANCELING\020\0062\205\005\n\021" +
+      "MLTrainingService\022x\n\021SubmitTrainingJob\0220" +
+      ".viam.app.mltraining.v1.SubmitTrainingJo" +
+      "bRequest\0321.viam.app.mltraining.v1.Submit" +
+      "TrainingJobResponse\022o\n\016GetTrainingJob\022-." +
+      "viam.app.mltraining.v1.GetTrainingJobReq" +
+      "uest\032..viam.app.mltraining.v1.GetTrainin" +
+      "gJobResponse\022u\n\020ListTrainingJobs\022/.viam." +
+      "app.mltraining.v1.ListTrainingJobsReques" +
+      "t\0320.viam.app.mltraining.v1.ListTrainingJ" +
+      "obsResponse\022x\n\021CancelTrainingJob\0220.viam." +
+      "app.mltraining.v1.CancelTrainingJobReque" +
+      "st\0321.viam.app.mltraining.v1.CancelTraini" +
+      "ngJobResponse\022\223\001\n\032DeleteCompletedTrainin" +
+      "gJob\0229.viam.app.mltraining.v1.DeleteComp" +
+      "letedTrainingJobRequest\032:.viam.app.mltra" +
+      "ining.v1.DeleteCompletedTrainingJobRespo" +
+      "nseB#Z!go.viam.com/api/app/mltraining/v1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8871,7 +9794,7 @@ public final class MlTraining {
     internal_static_viam_app_mltraining_v1_TrainingJobMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_mltraining_v1_TrainingJobMetadata_descriptor,
-        new java.lang.String[] { "Request", "Status", "CreatedOn", "LastModified", "SyncedModelId", "Id", "ErrorStatus", "TrainingStarted", "TrainingEnded", });
+        new java.lang.String[] { "Request", "Id", "DatasetId", "OrganizationId", "ModelName", "ModelVersion", "ModelType", "Status", "ErrorStatus", "CreatedOn", "LastModified", "TrainingStarted", "TrainingEnded", "SyncedModelId", "Tags", });
     internal_static_viam_app_mltraining_v1_CancelTrainingJobRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_viam_app_mltraining_v1_CancelTrainingJobRequest_fieldAccessorTable = new

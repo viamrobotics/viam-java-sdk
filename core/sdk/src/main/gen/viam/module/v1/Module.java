@@ -5033,6 +5033,18 @@ public final class Module {
      */
     com.google.protobuf.ByteString
         getParentAddressBytes();
+
+    /**
+     * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
+     * @return The webrtcOffer.
+     */
+    java.lang.String getWebrtcOffer();
+    /**
+     * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
+     * @return The bytes for webrtcOffer.
+     */
+    com.google.protobuf.ByteString
+        getWebrtcOfferBytes();
   }
   /**
    * Protobuf type {@code viam.module.v1.ReadyRequest}
@@ -5048,6 +5060,7 @@ public final class Module {
     }
     private ReadyRequest() {
       parentAddress_ = "";
+      webrtcOffer_ = "";
     }
 
     @java.lang.Override
@@ -5109,6 +5122,45 @@ public final class Module {
       }
     }
 
+    public static final int WEBRTC_OFFER_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object webrtcOffer_ = "";
+    /**
+     * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
+     * @return The webrtcOffer.
+     */
+    @java.lang.Override
+    public java.lang.String getWebrtcOffer() {
+      java.lang.Object ref = webrtcOffer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        webrtcOffer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
+     * @return The bytes for webrtcOffer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWebrtcOfferBytes() {
+      java.lang.Object ref = webrtcOffer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        webrtcOffer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5126,6 +5178,9 @@ public final class Module {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, parentAddress_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(webrtcOffer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, webrtcOffer_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5137,6 +5192,9 @@ public final class Module {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, parentAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(webrtcOffer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, webrtcOffer_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -5155,6 +5213,8 @@ public final class Module {
 
       if (!getParentAddress()
           .equals(other.getParentAddress())) return false;
+      if (!getWebrtcOffer()
+          .equals(other.getWebrtcOffer())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -5168,6 +5228,8 @@ public final class Module {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PARENT_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getParentAddress().hashCode();
+      hash = (37 * hash) + WEBRTC_OFFER_FIELD_NUMBER;
+      hash = (53 * hash) + getWebrtcOffer().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5300,6 +5362,7 @@ public final class Module {
         super.clear();
         bitField0_ = 0;
         parentAddress_ = "";
+        webrtcOffer_ = "";
         return this;
       }
 
@@ -5335,6 +5398,9 @@ public final class Module {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.parentAddress_ = parentAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.webrtcOffer_ = webrtcOffer_;
         }
       }
 
@@ -5387,6 +5453,11 @@ public final class Module {
           bitField0_ |= 0x00000001;
           onChanged();
         }
+        if (!other.getWebrtcOffer().isEmpty()) {
+          webrtcOffer_ = other.webrtcOffer_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -5418,6 +5489,11 @@ public final class Module {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
+              case 18: {
+                webrtcOffer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5503,6 +5579,78 @@ public final class Module {
         checkByteStringIsUtf8(value);
         parentAddress_ = value;
         bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object webrtcOffer_ = "";
+      /**
+       * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
+       * @return The webrtcOffer.
+       */
+      public java.lang.String getWebrtcOffer() {
+        java.lang.Object ref = webrtcOffer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          webrtcOffer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
+       * @return The bytes for webrtcOffer.
+       */
+      public com.google.protobuf.ByteString
+          getWebrtcOfferBytes() {
+        java.lang.Object ref = webrtcOffer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          webrtcOffer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
+       * @param value The webrtcOffer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebrtcOffer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        webrtcOffer_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWebrtcOffer() {
+        webrtcOffer_ = getDefaultInstance().getWebrtcOffer();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
+       * @param value The bytes for webrtcOffer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebrtcOfferBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        webrtcOffer_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5594,6 +5742,18 @@ public final class Module {
      * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
      */
     viam.module.v1.Module.HandlerMapOrBuilder getHandlermapOrBuilder();
+
+    /**
+     * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
+     * @return The webrtcAnswer.
+     */
+    java.lang.String getWebrtcAnswer();
+    /**
+     * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
+     * @return The bytes for webrtcAnswer.
+     */
+    com.google.protobuf.ByteString
+        getWebrtcAnswerBytes();
   }
   /**
    * Protobuf type {@code viam.module.v1.ReadyResponse}
@@ -5608,6 +5768,7 @@ public final class Module {
       super(builder);
     }
     private ReadyResponse() {
+      webrtcAnswer_ = "";
     }
 
     @java.lang.Override
@@ -5668,6 +5829,45 @@ public final class Module {
       return handlermap_ == null ? viam.module.v1.Module.HandlerMap.getDefaultInstance() : handlermap_;
     }
 
+    public static final int WEBRTC_ANSWER_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object webrtcAnswer_ = "";
+    /**
+     * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
+     * @return The webrtcAnswer.
+     */
+    @java.lang.Override
+    public java.lang.String getWebrtcAnswer() {
+      java.lang.Object ref = webrtcAnswer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        webrtcAnswer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
+     * @return The bytes for webrtcAnswer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWebrtcAnswerBytes() {
+      java.lang.Object ref = webrtcAnswer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        webrtcAnswer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5688,6 +5888,9 @@ public final class Module {
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getHandlermap());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(webrtcAnswer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, webrtcAnswer_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5704,6 +5907,9 @@ public final class Module {
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getHandlermap());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(webrtcAnswer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, webrtcAnswer_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -5727,6 +5933,8 @@ public final class Module {
         if (!getHandlermap()
             .equals(other.getHandlermap())) return false;
       }
+      if (!getWebrtcAnswer()
+          .equals(other.getWebrtcAnswer())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -5745,6 +5953,8 @@ public final class Module {
         hash = (37 * hash) + HANDLERMAP_FIELD_NUMBER;
         hash = (53 * hash) + getHandlermap().hashCode();
       }
+      hash = (37 * hash) + WEBRTC_ANSWER_FIELD_NUMBER;
+      hash = (53 * hash) + getWebrtcAnswer().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5888,6 +6098,7 @@ public final class Module {
           handlermapBuilder_.dispose();
           handlermapBuilder_ = null;
         }
+        webrtcAnswer_ = "";
         return this;
       }
 
@@ -5930,6 +6141,9 @@ public final class Module {
               ? handlermap_
               : handlermapBuilder_.build();
           to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.webrtcAnswer_ = webrtcAnswer_;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -5984,6 +6198,11 @@ public final class Module {
         if (other.hasHandlermap()) {
           mergeHandlermap(other.getHandlermap());
         }
+        if (!other.getWebrtcAnswer().isEmpty()) {
+          webrtcAnswer_ = other.webrtcAnswer_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -6022,6 +6241,11 @@ public final class Module {
                 bitField0_ |= 0x00000002;
                 break;
               } // case 18
+              case 26: {
+                webrtcAnswer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6190,6 +6414,78 @@ public final class Module {
           handlermap_ = null;
         }
         return handlermapBuilder_;
+      }
+
+      private java.lang.Object webrtcAnswer_ = "";
+      /**
+       * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
+       * @return The webrtcAnswer.
+       */
+      public java.lang.String getWebrtcAnswer() {
+        java.lang.Object ref = webrtcAnswer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          webrtcAnswer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
+       * @return The bytes for webrtcAnswer.
+       */
+      public com.google.protobuf.ByteString
+          getWebrtcAnswerBytes() {
+        java.lang.Object ref = webrtcAnswer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          webrtcAnswer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
+       * @param value The webrtcAnswer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebrtcAnswer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        webrtcAnswer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWebrtcAnswer() {
+        webrtcAnswer_ = getDefaultInstance().getWebrtcAnswer();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
+       * @param value The bytes for webrtcAnswer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWebrtcAnswerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        webrtcAnswer_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7569,27 +7865,29 @@ public final class Module {
       "viam.robot.v1.ResourceRPCSubtypeR\007subtyp" +
       "e\022\026\n\006models\030\002 \003(\tR\006models\"K\n\nHandlerMap\022" +
       "=\n\010handlers\030\001 \003(\0132!.viam.module.v1.Handl" +
-      "erDefinitionR\010handlers\"5\n\014ReadyRequest\022%" +
-      "\n\016parent_address\030\001 \001(\tR\rparentAddress\"a\n" +
-      "\rReadyResponse\022\024\n\005ready\030\001 \001(\010R\005ready\022:\n\n" +
-      "handlermap\030\002 \001(\0132\032.viam.module.v1.Handle" +
-      "rMapR\nhandlermap\"M\n\025ValidateConfigReques" +
-      "t\0224\n\006config\030\001 \001(\0132\034.viam.app.v1.Componen" +
-      "tConfigR\006config\"<\n\026ValidateConfigRespons" +
-      "e\022\"\n\014dependencies\030\001 \003(\tR\014dependencies2\337\003" +
-      "\n\rModuleService\022V\n\013AddResource\022\".viam.mo" +
-      "dule.v1.AddResourceRequest\032#.viam.module" +
-      ".v1.AddResourceResponse\022n\n\023ReconfigureRe" +
-      "source\022*.viam.module.v1.ReconfigureResou" +
-      "rceRequest\032+.viam.module.v1.ReconfigureR" +
-      "esourceResponse\022_\n\016RemoveResource\022%.viam" +
-      ".module.v1.RemoveResourceRequest\032&.viam." +
-      "module.v1.RemoveResourceResponse\022D\n\005Read" +
-      "y\022\034.viam.module.v1.ReadyRequest\032\035.viam.m" +
-      "odule.v1.ReadyResponse\022_\n\016ValidateConfig" +
-      "\022%.viam.module.v1.ValidateConfigRequest\032" +
-      "&.viam.module.v1.ValidateConfigResponseB" +
-      "\033Z\031go.viam.com/api/module/v1b\006proto3"
+      "erDefinitionR\010handlers\"X\n\014ReadyRequest\022%" +
+      "\n\016parent_address\030\001 \001(\tR\rparentAddress\022!\n" +
+      "\014webrtc_offer\030\002 \001(\tR\013webrtcOffer\"\206\001\n\rRea" +
+      "dyResponse\022\024\n\005ready\030\001 \001(\010R\005ready\022:\n\nhand" +
+      "lermap\030\002 \001(\0132\032.viam.module.v1.HandlerMap" +
+      "R\nhandlermap\022#\n\rwebrtc_answer\030\003 \001(\tR\014web" +
+      "rtcAnswer\"M\n\025ValidateConfigRequest\0224\n\006co" +
+      "nfig\030\001 \001(\0132\034.viam.app.v1.ComponentConfig" +
+      "R\006config\"<\n\026ValidateConfigResponse\022\"\n\014de" +
+      "pendencies\030\001 \003(\tR\014dependencies2\337\003\n\rModul" +
+      "eService\022V\n\013AddResource\022\".viam.module.v1" +
+      ".AddResourceRequest\032#.viam.module.v1.Add" +
+      "ResourceResponse\022n\n\023ReconfigureResource\022" +
+      "*.viam.module.v1.ReconfigureResourceRequ" +
+      "est\032+.viam.module.v1.ReconfigureResource" +
+      "Response\022_\n\016RemoveResource\022%.viam.module" +
+      ".v1.RemoveResourceRequest\032&.viam.module." +
+      "v1.RemoveResourceResponse\022D\n\005Ready\022\034.via" +
+      "m.module.v1.ReadyRequest\032\035.viam.module.v" +
+      "1.ReadyResponse\022_\n\016ValidateConfig\022%.viam" +
+      ".module.v1.ValidateConfigRequest\032&.viam." +
+      "module.v1.ValidateConfigResponseB\033Z\031go.v" +
+      "iam.com/api/module/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7650,13 +7948,13 @@ public final class Module {
     internal_static_viam_module_v1_ReadyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_module_v1_ReadyRequest_descriptor,
-        new java.lang.String[] { "ParentAddress", });
+        new java.lang.String[] { "ParentAddress", "WebrtcOffer", });
     internal_static_viam_module_v1_ReadyResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_viam_module_v1_ReadyResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_module_v1_ReadyResponse_descriptor,
-        new java.lang.String[] { "Ready", "Handlermap", });
+        new java.lang.String[] { "Ready", "Handlermap", "WebrtcAnswer", });
     internal_static_viam_module_v1_ValidateConfigRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_viam_module_v1_ValidateConfigRequest_fieldAccessorTable = new

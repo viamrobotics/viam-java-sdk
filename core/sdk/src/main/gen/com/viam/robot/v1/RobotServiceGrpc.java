@@ -514,6 +514,37 @@ public final class RobotServiceGrpc {
     return getLogMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetCloudMetadataRequest,
+      com.viam.robot.v1.Robot.GetCloudMetadataResponse> getGetCloudMetadataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCloudMetadata",
+      requestType = com.viam.robot.v1.Robot.GetCloudMetadataRequest.class,
+      responseType = com.viam.robot.v1.Robot.GetCloudMetadataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetCloudMetadataRequest,
+      com.viam.robot.v1.Robot.GetCloudMetadataResponse> getGetCloudMetadataMethod() {
+    io.grpc.MethodDescriptor<com.viam.robot.v1.Robot.GetCloudMetadataRequest, com.viam.robot.v1.Robot.GetCloudMetadataResponse> getGetCloudMetadataMethod;
+    if ((getGetCloudMetadataMethod = RobotServiceGrpc.getGetCloudMetadataMethod) == null) {
+      synchronized (RobotServiceGrpc.class) {
+        if ((getGetCloudMetadataMethod = RobotServiceGrpc.getGetCloudMetadataMethod) == null) {
+          RobotServiceGrpc.getGetCloudMetadataMethod = getGetCloudMetadataMethod =
+              io.grpc.MethodDescriptor.<com.viam.robot.v1.Robot.GetCloudMetadataRequest, com.viam.robot.v1.Robot.GetCloudMetadataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCloudMetadata"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.robot.v1.Robot.GetCloudMetadataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.robot.v1.Robot.GetCloudMetadataResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new RobotServiceMethodDescriptorSupplier("GetCloudMetadata"))
+              .build();
+        }
+      }
+    }
+    return getGetCloudMetadataMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -705,6 +736,16 @@ public final class RobotServiceGrpc {
     default void log(com.viam.robot.v1.Robot.LogRequest request,
         io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.LogResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLogMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * GetCloudMetadata returns app-related information about the robot.
+     * </pre>
+     */
+    default void getCloudMetadata(com.viam.robot.v1.Robot.GetCloudMetadataRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetCloudMetadataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCloudMetadataMethod(), responseObserver);
     }
   }
 
@@ -898,6 +939,17 @@ public final class RobotServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getLogMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * GetCloudMetadata returns app-related information about the robot.
+     * </pre>
+     */
+    public void getCloudMetadata(com.viam.robot.v1.Robot.GetCloudMetadataRequest request,
+        io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetCloudMetadataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetCloudMetadataMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1060,6 +1112,16 @@ public final class RobotServiceGrpc {
     public com.viam.robot.v1.Robot.LogResponse log(com.viam.robot.v1.Robot.LogRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getLogMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * GetCloudMetadata returns app-related information about the robot.
+     * </pre>
+     */
+    public com.viam.robot.v1.Robot.GetCloudMetadataResponse getCloudMetadata(com.viam.robot.v1.Robot.GetCloudMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetCloudMetadataMethod(), getCallOptions(), request);
     }
   }
 
@@ -1228,6 +1290,17 @@ public final class RobotServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getLogMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * GetCloudMetadata returns app-related information about the robot.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.viam.robot.v1.Robot.GetCloudMetadataResponse> getCloudMetadata(
+        com.viam.robot.v1.Robot.GetCloudMetadataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetCloudMetadataMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_OPERATIONS = 0;
@@ -1246,6 +1319,7 @@ public final class RobotServiceGrpc {
   private static final int METHODID_START_SESSION = 13;
   private static final int METHODID_SEND_SESSION_HEARTBEAT = 14;
   private static final int METHODID_LOG = 15;
+  private static final int METHODID_GET_CLOUD_METADATA = 16;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1327,6 +1401,10 @@ public final class RobotServiceGrpc {
         case METHODID_LOG:
           serviceImpl.log((com.viam.robot.v1.Robot.LogRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.LogResponse>) responseObserver);
+          break;
+        case METHODID_GET_CLOUD_METADATA:
+          serviceImpl.getCloudMetadata((com.viam.robot.v1.Robot.GetCloudMetadataRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.robot.v1.Robot.GetCloudMetadataResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1458,6 +1536,13 @@ public final class RobotServiceGrpc {
               com.viam.robot.v1.Robot.LogRequest,
               com.viam.robot.v1.Robot.LogResponse>(
                 service, METHODID_LOG)))
+        .addMethod(
+          getGetCloudMetadataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.viam.robot.v1.Robot.GetCloudMetadataRequest,
+              com.viam.robot.v1.Robot.GetCloudMetadataResponse>(
+                service, METHODID_GET_CLOUD_METADATA)))
         .build();
   }
 
@@ -1522,6 +1607,7 @@ public final class RobotServiceGrpc {
               .addMethod(getStartSessionMethod())
               .addMethod(getSendSessionHeartbeatMethod())
               .addMethod(getLogMethod())
+              .addMethod(getGetCloudMetadataMethod())
               .build();
         }
       }

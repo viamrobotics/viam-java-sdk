@@ -359,6 +359,37 @@ public final class BoardServiceGrpc {
     return getGetDigitalInterruptValueMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.StreamTicksRequest,
+      com.viam.component.board.v1.Board.StreamTicksResponse> getStreamTicksMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "StreamTicks",
+      requestType = com.viam.component.board.v1.Board.StreamTicksRequest.class,
+      responseType = com.viam.component.board.v1.Board.StreamTicksResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.StreamTicksRequest,
+      com.viam.component.board.v1.Board.StreamTicksResponse> getStreamTicksMethod() {
+    io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.StreamTicksRequest, com.viam.component.board.v1.Board.StreamTicksResponse> getStreamTicksMethod;
+    if ((getStreamTicksMethod = BoardServiceGrpc.getStreamTicksMethod) == null) {
+      synchronized (BoardServiceGrpc.class) {
+        if ((getStreamTicksMethod = BoardServiceGrpc.getStreamTicksMethod) == null) {
+          BoardServiceGrpc.getStreamTicksMethod = getStreamTicksMethod =
+              io.grpc.MethodDescriptor.<com.viam.component.board.v1.Board.StreamTicksRequest, com.viam.component.board.v1.Board.StreamTicksResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamTicks"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.component.board.v1.Board.StreamTicksRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.viam.component.board.v1.Board.StreamTicksResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("StreamTicks"))
+              .build();
+        }
+      }
+    }
+    return getStreamTicksMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.viam.component.board.v1.Board.SetPowerModeRequest,
       com.viam.component.board.v1.Board.SetPowerModeResponse> getSetPowerModeMethod;
 
@@ -578,6 +609,16 @@ public final class BoardServiceGrpc {
 
     /**
      * <pre>
+     * StreamTicks starts a stream of ticks for the given digital interrupts.
+     * </pre>
+     */
+    default void streamTicks(com.viam.component.board.v1.Board.StreamTicksRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.StreamTicksResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStreamTicksMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * `SetPowerMode` sets the power consumption mode of the board to the requested setting for the given duration.
      * </pre>
      */
@@ -747,6 +788,17 @@ public final class BoardServiceGrpc {
 
     /**
      * <pre>
+     * StreamTicks starts a stream of ticks for the given digital interrupts.
+     * </pre>
+     */
+    public void streamTicks(com.viam.component.board.v1.Board.StreamTicksRequest request,
+        io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.StreamTicksResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getStreamTicksMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * `SetPowerMode` sets the power consumption mode of the board to the requested setting for the given duration.
      * </pre>
      */
@@ -889,6 +941,17 @@ public final class BoardServiceGrpc {
     public com.viam.component.board.v1.Board.GetDigitalInterruptValueResponse getDigitalInterruptValue(com.viam.component.board.v1.Board.GetDigitalInterruptValueRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetDigitalInterruptValueMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * StreamTicks starts a stream of ticks for the given digital interrupts.
+     * </pre>
+     */
+    public java.util.Iterator<com.viam.component.board.v1.Board.StreamTicksResponse> streamTicks(
+        com.viam.component.board.v1.Board.StreamTicksRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getStreamTicksMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1080,8 +1143,9 @@ public final class BoardServiceGrpc {
   private static final int METHODID_READ_ANALOG_READER = 8;
   private static final int METHODID_WRITE_ANALOG = 9;
   private static final int METHODID_GET_DIGITAL_INTERRUPT_VALUE = 10;
-  private static final int METHODID_SET_POWER_MODE = 11;
-  private static final int METHODID_GET_GEOMETRIES = 12;
+  private static final int METHODID_STREAM_TICKS = 11;
+  private static final int METHODID_SET_POWER_MODE = 12;
+  private static final int METHODID_GET_GEOMETRIES = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1143,6 +1207,10 @@ public final class BoardServiceGrpc {
         case METHODID_GET_DIGITAL_INTERRUPT_VALUE:
           serviceImpl.getDigitalInterruptValue((com.viam.component.board.v1.Board.GetDigitalInterruptValueRequest) request,
               (io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.GetDigitalInterruptValueResponse>) responseObserver);
+          break;
+        case METHODID_STREAM_TICKS:
+          serviceImpl.streamTicks((com.viam.component.board.v1.Board.StreamTicksRequest) request,
+              (io.grpc.stub.StreamObserver<com.viam.component.board.v1.Board.StreamTicksResponse>) responseObserver);
           break;
         case METHODID_SET_POWER_MODE:
           serviceImpl.setPowerMode((com.viam.component.board.v1.Board.SetPowerModeRequest) request,
@@ -1248,6 +1316,13 @@ public final class BoardServiceGrpc {
               com.viam.component.board.v1.Board.GetDigitalInterruptValueResponse>(
                 service, METHODID_GET_DIGITAL_INTERRUPT_VALUE)))
         .addMethod(
+          getStreamTicksMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.viam.component.board.v1.Board.StreamTicksRequest,
+              com.viam.component.board.v1.Board.StreamTicksResponse>(
+                service, METHODID_STREAM_TICKS)))
+        .addMethod(
           getSetPowerModeMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1320,6 +1395,7 @@ public final class BoardServiceGrpc {
               .addMethod(getReadAnalogReaderMethod())
               .addMethod(getWriteAnalogMethod())
               .addMethod(getGetDigitalInterruptValueMethod())
+              .addMethod(getStreamTicksMethod())
               .addMethod(getSetPowerModeMethod())
               .addMethod(getGetGeometriesMethod())
               .build();

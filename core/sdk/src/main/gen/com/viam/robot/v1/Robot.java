@@ -29269,6 +29269,1547 @@ public final class Robot {
 
   }
 
+  public interface GetCloudMetadataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.GetCloudMetadataRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.GetCloudMetadataRequest}
+   */
+  public static final class GetCloudMetadataRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.GetCloudMetadataRequest)
+      GetCloudMetadataRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetCloudMetadataRequest.newBuilder() to construct.
+    private GetCloudMetadataRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetCloudMetadataRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetCloudMetadataRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.viam.robot.v1.Robot.internal_static_viam_robot_v1_GetCloudMetadataRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.viam.robot.v1.Robot.internal_static_viam_robot_v1_GetCloudMetadataRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.viam.robot.v1.Robot.GetCloudMetadataRequest.class, com.viam.robot.v1.Robot.GetCloudMetadataRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.viam.robot.v1.Robot.GetCloudMetadataRequest)) {
+        return super.equals(obj);
+      }
+      com.viam.robot.v1.Robot.GetCloudMetadataRequest other = (com.viam.robot.v1.Robot.GetCloudMetadataRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.viam.robot.v1.Robot.GetCloudMetadataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.GetCloudMetadataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.viam.robot.v1.Robot.GetCloudMetadataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.GetCloudMetadataRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code viam.robot.v1.GetCloudMetadataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.GetCloudMetadataRequest)
+        com.viam.robot.v1.Robot.GetCloudMetadataRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.viam.robot.v1.Robot.internal_static_viam_robot_v1_GetCloudMetadataRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.viam.robot.v1.Robot.internal_static_viam_robot_v1_GetCloudMetadataRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.viam.robot.v1.Robot.GetCloudMetadataRequest.class, com.viam.robot.v1.Robot.GetCloudMetadataRequest.Builder.class);
+      }
+
+      // Construct using com.viam.robot.v1.Robot.GetCloudMetadataRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.viam.robot.v1.Robot.internal_static_viam_robot_v1_GetCloudMetadataRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.GetCloudMetadataRequest getDefaultInstanceForType() {
+        return com.viam.robot.v1.Robot.GetCloudMetadataRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.GetCloudMetadataRequest build() {
+        com.viam.robot.v1.Robot.GetCloudMetadataRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.GetCloudMetadataRequest buildPartial() {
+        com.viam.robot.v1.Robot.GetCloudMetadataRequest result = new com.viam.robot.v1.Robot.GetCloudMetadataRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.viam.robot.v1.Robot.GetCloudMetadataRequest) {
+          return mergeFrom((com.viam.robot.v1.Robot.GetCloudMetadataRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.viam.robot.v1.Robot.GetCloudMetadataRequest other) {
+        if (other == com.viam.robot.v1.Robot.GetCloudMetadataRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.GetCloudMetadataRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.GetCloudMetadataRequest)
+    private static final com.viam.robot.v1.Robot.GetCloudMetadataRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.viam.robot.v1.Robot.GetCloudMetadataRequest();
+    }
+
+    public static com.viam.robot.v1.Robot.GetCloudMetadataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetCloudMetadataRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetCloudMetadataRequest>() {
+      @java.lang.Override
+      public GetCloudMetadataRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetCloudMetadataRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetCloudMetadataRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.GetCloudMetadataRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetCloudMetadataResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.robot.v1.GetCloudMetadataResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * @return The robotPartId.
+     */
+    java.lang.String getRobotPartId();
+    /**
+     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * @return The bytes for robotPartId.
+     */
+    com.google.protobuf.ByteString
+        getRobotPartIdBytes();
+
+    /**
+     * <code>string primary_org_id = 2 [json_name = "primaryOrgId"];</code>
+     * @return The primaryOrgId.
+     */
+    java.lang.String getPrimaryOrgId();
+    /**
+     * <code>string primary_org_id = 2 [json_name = "primaryOrgId"];</code>
+     * @return The bytes for primaryOrgId.
+     */
+    com.google.protobuf.ByteString
+        getPrimaryOrgIdBytes();
+
+    /**
+     * <code>string location_id = 3 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    java.lang.String getLocationId();
+    /**
+     * <code>string location_id = 3 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    com.google.protobuf.ByteString
+        getLocationIdBytes();
+
+    /**
+     * <code>string machine_id = 4 [json_name = "machineId"];</code>
+     * @return The machineId.
+     */
+    java.lang.String getMachineId();
+    /**
+     * <code>string machine_id = 4 [json_name = "machineId"];</code>
+     * @return The bytes for machineId.
+     */
+    com.google.protobuf.ByteString
+        getMachineIdBytes();
+
+    /**
+     * <code>string machine_part_id = 5 [json_name = "machinePartId"];</code>
+     * @return The machinePartId.
+     */
+    java.lang.String getMachinePartId();
+    /**
+     * <code>string machine_part_id = 5 [json_name = "machinePartId"];</code>
+     * @return The bytes for machinePartId.
+     */
+    com.google.protobuf.ByteString
+        getMachinePartIdBytes();
+  }
+  /**
+   * Protobuf type {@code viam.robot.v1.GetCloudMetadataResponse}
+   */
+  public static final class GetCloudMetadataResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:viam.robot.v1.GetCloudMetadataResponse)
+      GetCloudMetadataResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetCloudMetadataResponse.newBuilder() to construct.
+    private GetCloudMetadataResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetCloudMetadataResponse() {
+      robotPartId_ = "";
+      primaryOrgId_ = "";
+      locationId_ = "";
+      machineId_ = "";
+      machinePartId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetCloudMetadataResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.viam.robot.v1.Robot.internal_static_viam_robot_v1_GetCloudMetadataResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.viam.robot.v1.Robot.internal_static_viam_robot_v1_GetCloudMetadataResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.viam.robot.v1.Robot.GetCloudMetadataResponse.class, com.viam.robot.v1.Robot.GetCloudMetadataResponse.Builder.class);
+    }
+
+    public static final int ROBOT_PART_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object robotPartId_ = "";
+    /**
+     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * @return The robotPartId.
+     */
+    @java.lang.Override
+    public java.lang.String getRobotPartId() {
+      java.lang.Object ref = robotPartId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        robotPartId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+     * @return The bytes for robotPartId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRobotPartIdBytes() {
+      java.lang.Object ref = robotPartId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        robotPartId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRIMARY_ORG_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object primaryOrgId_ = "";
+    /**
+     * <code>string primary_org_id = 2 [json_name = "primaryOrgId"];</code>
+     * @return The primaryOrgId.
+     */
+    @java.lang.Override
+    public java.lang.String getPrimaryOrgId() {
+      java.lang.Object ref = primaryOrgId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        primaryOrgId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string primary_org_id = 2 [json_name = "primaryOrgId"];</code>
+     * @return The bytes for primaryOrgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrimaryOrgIdBytes() {
+      java.lang.Object ref = primaryOrgId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        primaryOrgId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCATION_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object locationId_ = "";
+    /**
+     * <code>string location_id = 3 [json_name = "locationId"];</code>
+     * @return The locationId.
+     */
+    @java.lang.Override
+    public java.lang.String getLocationId() {
+      java.lang.Object ref = locationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        locationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string location_id = 3 [json_name = "locationId"];</code>
+     * @return The bytes for locationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLocationIdBytes() {
+      java.lang.Object ref = locationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        locationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MACHINE_ID_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object machineId_ = "";
+    /**
+     * <code>string machine_id = 4 [json_name = "machineId"];</code>
+     * @return The machineId.
+     */
+    @java.lang.Override
+    public java.lang.String getMachineId() {
+      java.lang.Object ref = machineId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        machineId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string machine_id = 4 [json_name = "machineId"];</code>
+     * @return The bytes for machineId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMachineIdBytes() {
+      java.lang.Object ref = machineId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        machineId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MACHINE_PART_ID_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object machinePartId_ = "";
+    /**
+     * <code>string machine_part_id = 5 [json_name = "machinePartId"];</code>
+     * @return The machinePartId.
+     */
+    @java.lang.Override
+    public java.lang.String getMachinePartId() {
+      java.lang.Object ref = machinePartId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        machinePartId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string machine_part_id = 5 [json_name = "machinePartId"];</code>
+     * @return The bytes for machinePartId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMachinePartIdBytes() {
+      java.lang.Object ref = machinePartId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        machinePartId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(robotPartId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, robotPartId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(primaryOrgId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, primaryOrgId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, locationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(machineId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, machineId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(machinePartId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, machinePartId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(robotPartId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, robotPartId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(primaryOrgId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, primaryOrgId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(locationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, locationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(machineId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, machineId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(machinePartId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, machinePartId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.viam.robot.v1.Robot.GetCloudMetadataResponse)) {
+        return super.equals(obj);
+      }
+      com.viam.robot.v1.Robot.GetCloudMetadataResponse other = (com.viam.robot.v1.Robot.GetCloudMetadataResponse) obj;
+
+      if (!getRobotPartId()
+          .equals(other.getRobotPartId())) return false;
+      if (!getPrimaryOrgId()
+          .equals(other.getPrimaryOrgId())) return false;
+      if (!getLocationId()
+          .equals(other.getLocationId())) return false;
+      if (!getMachineId()
+          .equals(other.getMachineId())) return false;
+      if (!getMachinePartId()
+          .equals(other.getMachinePartId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ROBOT_PART_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getRobotPartId().hashCode();
+      hash = (37 * hash) + PRIMARY_ORG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getPrimaryOrgId().hashCode();
+      hash = (37 * hash) + LOCATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLocationId().hashCode();
+      hash = (37 * hash) + MACHINE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getMachineId().hashCode();
+      hash = (37 * hash) + MACHINE_PART_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getMachinePartId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.viam.robot.v1.Robot.GetCloudMetadataResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.viam.robot.v1.Robot.GetCloudMetadataResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.viam.robot.v1.Robot.GetCloudMetadataResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.viam.robot.v1.Robot.GetCloudMetadataResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.viam.robot.v1.Robot.GetCloudMetadataResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code viam.robot.v1.GetCloudMetadataResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.robot.v1.GetCloudMetadataResponse)
+        com.viam.robot.v1.Robot.GetCloudMetadataResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.viam.robot.v1.Robot.internal_static_viam_robot_v1_GetCloudMetadataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.viam.robot.v1.Robot.internal_static_viam_robot_v1_GetCloudMetadataResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.viam.robot.v1.Robot.GetCloudMetadataResponse.class, com.viam.robot.v1.Robot.GetCloudMetadataResponse.Builder.class);
+      }
+
+      // Construct using com.viam.robot.v1.Robot.GetCloudMetadataResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        robotPartId_ = "";
+        primaryOrgId_ = "";
+        locationId_ = "";
+        machineId_ = "";
+        machinePartId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.viam.robot.v1.Robot.internal_static_viam_robot_v1_GetCloudMetadataResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.GetCloudMetadataResponse getDefaultInstanceForType() {
+        return com.viam.robot.v1.Robot.GetCloudMetadataResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.GetCloudMetadataResponse build() {
+        com.viam.robot.v1.Robot.GetCloudMetadataResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.viam.robot.v1.Robot.GetCloudMetadataResponse buildPartial() {
+        com.viam.robot.v1.Robot.GetCloudMetadataResponse result = new com.viam.robot.v1.Robot.GetCloudMetadataResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.viam.robot.v1.Robot.GetCloudMetadataResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.robotPartId_ = robotPartId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.primaryOrgId_ = primaryOrgId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.locationId_ = locationId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.machineId_ = machineId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.machinePartId_ = machinePartId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.viam.robot.v1.Robot.GetCloudMetadataResponse) {
+          return mergeFrom((com.viam.robot.v1.Robot.GetCloudMetadataResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.viam.robot.v1.Robot.GetCloudMetadataResponse other) {
+        if (other == com.viam.robot.v1.Robot.GetCloudMetadataResponse.getDefaultInstance()) return this;
+        if (!other.getRobotPartId().isEmpty()) {
+          robotPartId_ = other.robotPartId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getPrimaryOrgId().isEmpty()) {
+          primaryOrgId_ = other.primaryOrgId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getLocationId().isEmpty()) {
+          locationId_ = other.locationId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getMachineId().isEmpty()) {
+          machineId_ = other.machineId_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getMachinePartId().isEmpty()) {
+          machinePartId_ = other.machinePartId_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                robotPartId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                primaryOrgId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                locationId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                machineId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                machinePartId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object robotPartId_ = "";
+      /**
+       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * @return The robotPartId.
+       */
+      public java.lang.String getRobotPartId() {
+        java.lang.Object ref = robotPartId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          robotPartId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * @return The bytes for robotPartId.
+       */
+      public com.google.protobuf.ByteString
+          getRobotPartIdBytes() {
+        java.lang.Object ref = robotPartId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          robotPartId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * @param value The robotPartId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRobotPartId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        robotPartId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRobotPartId() {
+        robotPartId_ = getDefaultInstance().getRobotPartId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string robot_part_id = 1 [json_name = "robotPartId"];</code>
+       * @param value The bytes for robotPartId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRobotPartIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        robotPartId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object primaryOrgId_ = "";
+      /**
+       * <code>string primary_org_id = 2 [json_name = "primaryOrgId"];</code>
+       * @return The primaryOrgId.
+       */
+      public java.lang.String getPrimaryOrgId() {
+        java.lang.Object ref = primaryOrgId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          primaryOrgId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string primary_org_id = 2 [json_name = "primaryOrgId"];</code>
+       * @return The bytes for primaryOrgId.
+       */
+      public com.google.protobuf.ByteString
+          getPrimaryOrgIdBytes() {
+        java.lang.Object ref = primaryOrgId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          primaryOrgId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string primary_org_id = 2 [json_name = "primaryOrgId"];</code>
+       * @param value The primaryOrgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrimaryOrgId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        primaryOrgId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string primary_org_id = 2 [json_name = "primaryOrgId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrimaryOrgId() {
+        primaryOrgId_ = getDefaultInstance().getPrimaryOrgId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string primary_org_id = 2 [json_name = "primaryOrgId"];</code>
+       * @param value The bytes for primaryOrgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrimaryOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        primaryOrgId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object locationId_ = "";
+      /**
+       * <code>string location_id = 3 [json_name = "locationId"];</code>
+       * @return The locationId.
+       */
+      public java.lang.String getLocationId() {
+        java.lang.Object ref = locationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          locationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string location_id = 3 [json_name = "locationId"];</code>
+       * @return The bytes for locationId.
+       */
+      public com.google.protobuf.ByteString
+          getLocationIdBytes() {
+        java.lang.Object ref = locationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          locationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string location_id = 3 [json_name = "locationId"];</code>
+       * @param value The locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        locationId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string location_id = 3 [json_name = "locationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocationId() {
+        locationId_ = getDefaultInstance().getLocationId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string location_id = 3 [json_name = "locationId"];</code>
+       * @param value The bytes for locationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        locationId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object machineId_ = "";
+      /**
+       * <code>string machine_id = 4 [json_name = "machineId"];</code>
+       * @return The machineId.
+       */
+      public java.lang.String getMachineId() {
+        java.lang.Object ref = machineId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          machineId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string machine_id = 4 [json_name = "machineId"];</code>
+       * @return The bytes for machineId.
+       */
+      public com.google.protobuf.ByteString
+          getMachineIdBytes() {
+        java.lang.Object ref = machineId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          machineId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string machine_id = 4 [json_name = "machineId"];</code>
+       * @param value The machineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachineId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        machineId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string machine_id = 4 [json_name = "machineId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMachineId() {
+        machineId_ = getDefaultInstance().getMachineId();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string machine_id = 4 [json_name = "machineId"];</code>
+       * @param value The bytes for machineId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachineIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        machineId_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object machinePartId_ = "";
+      /**
+       * <code>string machine_part_id = 5 [json_name = "machinePartId"];</code>
+       * @return The machinePartId.
+       */
+      public java.lang.String getMachinePartId() {
+        java.lang.Object ref = machinePartId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          machinePartId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string machine_part_id = 5 [json_name = "machinePartId"];</code>
+       * @return The bytes for machinePartId.
+       */
+      public com.google.protobuf.ByteString
+          getMachinePartIdBytes() {
+        java.lang.Object ref = machinePartId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          machinePartId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string machine_part_id = 5 [json_name = "machinePartId"];</code>
+       * @param value The machinePartId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachinePartId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        machinePartId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string machine_part_id = 5 [json_name = "machinePartId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMachinePartId() {
+        machinePartId_ = getDefaultInstance().getMachinePartId();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string machine_part_id = 5 [json_name = "machinePartId"];</code>
+       * @param value The bytes for machinePartId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMachinePartIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        machinePartId_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.robot.v1.GetCloudMetadataResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:viam.robot.v1.GetCloudMetadataResponse)
+    private static final com.viam.robot.v1.Robot.GetCloudMetadataResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.viam.robot.v1.Robot.GetCloudMetadataResponse();
+    }
+
+    public static com.viam.robot.v1.Robot.GetCloudMetadataResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetCloudMetadataResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetCloudMetadataResponse>() {
+      @java.lang.Override
+      public GetCloudMetadataResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetCloudMetadataResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetCloudMetadataResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.viam.robot.v1.Robot.GetCloudMetadataResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_viam_robot_v1_FrameSystemConfig_descriptor;
   private static final 
@@ -29474,6 +31015,16 @@ public final class Robot {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_viam_robot_v1_LogResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_viam_robot_v1_GetCloudMetadataRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_viam_robot_v1_GetCloudMetadataRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_viam_robot_v1_GetCloudMetadataResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_viam_robot_v1_GetCloudMetadataResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -29575,65 +31126,74 @@ public final class Robot {
       "essionHeartbeatRequest\022\016\n\002id\030\001 \001(\tR\002id\"\036" +
       "\n\034SendSessionHeartbeatResponse\":\n\nLogReq" +
       "uest\022,\n\004logs\030\001 \003(\0132\030.viam.common.v1.LogE" +
-      "ntryR\004logs\"\r\n\013LogResponse*z\n\022PeerConnect" +
-      "ionType\022$\n PEER_CONNECTION_TYPE_UNSPECIF" +
-      "IED\020\000\022\035\n\031PEER_CONNECTION_TYPE_GRPC\020\001\022\037\n\033" +
-      "PEER_CONNECTION_TYPE_WEBRTC\020\0022\320\020\n\014RobotS" +
-      "ervice\022\200\001\n\rGetOperations\022#.viam.robot.v1" +
-      ".GetOperationsRequest\032$.viam.robot.v1.Ge" +
-      "tOperationsResponse\"$\202\323\344\223\002\036\022\034/viam/api/v" +
-      "1/operations/list\022x\n\013GetSessions\022!.viam." +
-      "robot.v1.GetSessionsRequest\032\".viam.robot" +
-      ".v1.GetSessionsResponse\"\"\202\323\344\223\002\034\022\032/viam/a" +
-      "pi/v1/sessions/list\022\177\n\rResourceNames\022#.v" +
-      "iam.robot.v1.ResourceNamesRequest\032$.viam" +
-      ".robot.v1.ResourceNamesResponse\"#\202\323\344\223\002\035\022" +
-      "\033/viam/api/v1/resources/list\022\235\001\n\023Resourc" +
-      "eRPCSubtypes\022).viam.robot.v1.ResourceRPC" +
-      "SubtypesRequest\032*.viam.robot.v1.Resource" +
-      "RPCSubtypesResponse\"/\202\323\344\223\002)\022\'/viam/api/v" +
-      "1/resource_rpc_subtypes/list\022\210\001\n\017CancelO" +
-      "peration\022%.viam.robot.v1.CancelOperation" +
-      "Request\032&.viam.robot.v1.CancelOperationR" +
-      "esponse\"&\202\323\344\223\002 \"\036/viam/api/v1/operations" +
-      "/cancel\022\215\001\n\021BlockForOperation\022\'.viam.rob" +
-      "ot.v1.BlockForOperationRequest\032(.viam.ro" +
-      "bot.v1.BlockForOperationResponse\"%\202\323\344\223\002\037" +
-      "\"\035/viam/api/v1/operations/block\022\224\001\n\022Disc" +
-      "overComponents\022(.viam.robot.v1.DiscoverC" +
-      "omponentsRequest\032).viam.robot.v1.Discove" +
-      "rComponentsResponse\")\202\323\344\223\002#\022!/viam/api/v" +
-      "1/discovery/components\022\220\001\n\021FrameSystemCo" +
-      "nfig\022\'.viam.robot.v1.FrameSystemConfigRe" +
-      "quest\032(.viam.robot.v1.FrameSystemConfigR" +
-      "esponse\"(\202\323\344\223\002\"\022 /viam/api/v1/frame_syst" +
-      "em/config\022\214\001\n\rTransformPose\022#.viam.robot" +
-      ".v1.TransformPoseRequest\032$.viam.robot.v1" +
-      ".TransformPoseResponse\"0\202\323\344\223\002*\022(/viam/ap" +
-      "i/v1/frame_system/transform_pose\022\210\001\n\014Tra" +
-      "nsformPCD\022\".viam.robot.v1.TransformPCDRe" +
-      "quest\032#.viam.robot.v1.TransformPCDRespon" +
-      "se\"/\202\323\344\223\002)\022\'/viam/api/v1/frame_system/tr" +
-      "ansform_pcd\022k\n\tGetStatus\022\037.viam.robot.v1" +
-      ".GetStatusRequest\032 .viam.robot.v1.GetSta" +
-      "tusResponse\"\033\202\323\344\223\002\025\022\023/viam/api/v1/status" +
-      "\022}\n\014StreamStatus\022\".viam.robot.v1.StreamS" +
-      "tatusRequest\032#.viam.robot.v1.StreamStatu" +
-      "sResponse\"\"\202\323\344\223\002\034\022\032/viam/api/v1/status/s" +
-      "tream0\001\022g\n\007StopAll\022\035.viam.robot.v1.StopA" +
-      "llRequest\032\036.viam.robot.v1.StopAllRespons" +
-      "e\"\035\202\323\344\223\002\027\022\025/viam/api/v1/stop_all\022v\n\014Star" +
-      "tSession\022\".viam.robot.v1.StartSessionReq" +
-      "uest\032#.viam.robot.v1.StartSessionRespons" +
-      "e\"\035\202\323\344\223\002\027\"\025/viam/api/v1/sessions\022\235\001\n\024Sen" +
-      "dSessionHeartbeat\022*.viam.robot.v1.SendSe" +
-      "ssionHeartbeatRequest\032+.viam.robot.v1.Se" +
-      "ndSessionHeartbeatResponse\",\202\323\344\223\002&\"$/via" +
-      "m/api/v1/sessions/{id}/heartbeat\022V\n\003Log\022" +
-      "\031.viam.robot.v1.LogRequest\032\032.viam.robot." +
-      "v1.LogResponse\"\030\202\323\344\223\002\022\"\020/viam/api/v1/log" +
-      "B-\n\021com.viam.robot.v1Z\030go.viam.com/api/r" +
-      "obot/v1b\006proto3"
+      "ntryR\004logs\"\r\n\013LogResponse\"\031\n\027GetCloudMet" +
+      "adataRequest\"\314\001\n\030GetCloudMetadataRespons" +
+      "e\022\"\n\rrobot_part_id\030\001 \001(\tR\013robotPartId\022$\n" +
+      "\016primary_org_id\030\002 \001(\tR\014primaryOrgId\022\037\n\013l" +
+      "ocation_id\030\003 \001(\tR\nlocationId\022\035\n\nmachine_" +
+      "id\030\004 \001(\tR\tmachineId\022&\n\017machine_part_id\030\005" +
+      " \001(\tR\rmachinePartId*z\n\022PeerConnectionTyp" +
+      "e\022$\n PEER_CONNECTION_TYPE_UNSPECIFIED\020\000\022" +
+      "\035\n\031PEER_CONNECTION_TYPE_GRPC\020\001\022\037\n\033PEER_C" +
+      "ONNECTION_TYPE_WEBRTC\020\0022\333\021\n\014RobotService" +
+      "\022\200\001\n\rGetOperations\022#.viam.robot.v1.GetOp" +
+      "erationsRequest\032$.viam.robot.v1.GetOpera" +
+      "tionsResponse\"$\202\323\344\223\002\036\022\034/viam/api/v1/oper" +
+      "ations/list\022x\n\013GetSessions\022!.viam.robot." +
+      "v1.GetSessionsRequest\032\".viam.robot.v1.Ge" +
+      "tSessionsResponse\"\"\202\323\344\223\002\034\022\032/viam/api/v1/" +
+      "sessions/list\022\177\n\rResourceNames\022#.viam.ro" +
+      "bot.v1.ResourceNamesRequest\032$.viam.robot" +
+      ".v1.ResourceNamesResponse\"#\202\323\344\223\002\035\022\033/viam" +
+      "/api/v1/resources/list\022\235\001\n\023ResourceRPCSu" +
+      "btypes\022).viam.robot.v1.ResourceRPCSubtyp" +
+      "esRequest\032*.viam.robot.v1.ResourceRPCSub" +
+      "typesResponse\"/\202\323\344\223\002)\022\'/viam/api/v1/reso" +
+      "urce_rpc_subtypes/list\022\210\001\n\017CancelOperati" +
+      "on\022%.viam.robot.v1.CancelOperationReques" +
+      "t\032&.viam.robot.v1.CancelOperationRespons" +
+      "e\"&\202\323\344\223\002 \"\036/viam/api/v1/operations/cance" +
+      "l\022\215\001\n\021BlockForOperation\022\'.viam.robot.v1." +
+      "BlockForOperationRequest\032(.viam.robot.v1" +
+      ".BlockForOperationResponse\"%\202\323\344\223\002\037\"\035/via" +
+      "m/api/v1/operations/block\022\224\001\n\022DiscoverCo" +
+      "mponents\022(.viam.robot.v1.DiscoverCompone" +
+      "ntsRequest\032).viam.robot.v1.DiscoverCompo" +
+      "nentsResponse\")\202\323\344\223\002#\022!/viam/api/v1/disc" +
+      "overy/components\022\220\001\n\021FrameSystemConfig\022\'" +
+      ".viam.robot.v1.FrameSystemConfigRequest\032" +
+      "(.viam.robot.v1.FrameSystemConfigRespons" +
+      "e\"(\202\323\344\223\002\"\022 /viam/api/v1/frame_system/con" +
+      "fig\022\214\001\n\rTransformPose\022#.viam.robot.v1.Tr" +
+      "ansformPoseRequest\032$.viam.robot.v1.Trans" +
+      "formPoseResponse\"0\202\323\344\223\002*\022(/viam/api/v1/f" +
+      "rame_system/transform_pose\022\210\001\n\014Transform" +
+      "PCD\022\".viam.robot.v1.TransformPCDRequest\032" +
+      "#.viam.robot.v1.TransformPCDResponse\"/\202\323" +
+      "\344\223\002)\022\'/viam/api/v1/frame_system/transfor" +
+      "m_pcd\022k\n\tGetStatus\022\037.viam.robot.v1.GetSt" +
+      "atusRequest\032 .viam.robot.v1.GetStatusRes" +
+      "ponse\"\033\202\323\344\223\002\025\022\023/viam/api/v1/status\022}\n\014St" +
+      "reamStatus\022\".viam.robot.v1.StreamStatusR" +
+      "equest\032#.viam.robot.v1.StreamStatusRespo" +
+      "nse\"\"\202\323\344\223\002\034\022\032/viam/api/v1/status/stream0" +
+      "\001\022g\n\007StopAll\022\035.viam.robot.v1.StopAllRequ" +
+      "est\032\036.viam.robot.v1.StopAllResponse\"\035\202\323\344" +
+      "\223\002\027\022\025/viam/api/v1/stop_all\022v\n\014StartSessi" +
+      "on\022\".viam.robot.v1.StartSessionRequest\032#" +
+      ".viam.robot.v1.StartSessionResponse\"\035\202\323\344" +
+      "\223\002\027\"\025/viam/api/v1/sessions\022\235\001\n\024SendSessi" +
+      "onHeartbeat\022*.viam.robot.v1.SendSessionH" +
+      "eartbeatRequest\032+.viam.robot.v1.SendSess" +
+      "ionHeartbeatResponse\",\202\323\344\223\002&\"$/viam/api/" +
+      "v1/sessions/{id}/heartbeat\022V\n\003Log\022\031.viam" +
+      ".robot.v1.LogRequest\032\032.viam.robot.v1.Log" +
+      "Response\"\030\202\323\344\223\002\022\"\020/viam/api/v1/log\022\210\001\n\020G" +
+      "etCloudMetadata\022&.viam.robot.v1.GetCloud" +
+      "MetadataRequest\032\'.viam.robot.v1.GetCloud" +
+      "MetadataResponse\"#\202\323\344\223\002\035\022\033/viam/api/v1/c" +
+      "loud_metadataB-\n\021com.viam.robot.v1Z\030go.v" +
+      "iam.com/api/robot/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -29890,6 +31450,18 @@ public final class Robot {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_robot_v1_LogResponse_descriptor,
         new java.lang.String[] { });
+    internal_static_viam_robot_v1_GetCloudMetadataRequest_descriptor =
+      getDescriptor().getMessageTypes().get(41);
+    internal_static_viam_robot_v1_GetCloudMetadataRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_viam_robot_v1_GetCloudMetadataRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_viam_robot_v1_GetCloudMetadataResponse_descriptor =
+      getDescriptor().getMessageTypes().get(42);
+    internal_static_viam_robot_v1_GetCloudMetadataResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_viam_robot_v1_GetCloudMetadataResponse_descriptor,
+        new java.lang.String[] { "RobotPartId", "PrimaryOrgId", "LocationId", "MachineId", "MachinePartId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

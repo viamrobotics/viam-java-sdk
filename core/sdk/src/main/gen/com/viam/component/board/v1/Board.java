@@ -14581,6 +14581,1918 @@ public final class Board {
 
   }
 
+  public interface StreamTicksRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.board.v1.StreamTicksRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Board name
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Board name
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Name of digital interrupts to recieve ticks from
+     * </pre>
+     *
+     * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+     * @return A list containing the pinNames.
+     */
+    java.util.List<java.lang.String>
+        getPinNamesList();
+    /**
+     * <pre>
+     * Name of digital interrupts to recieve ticks from
+     * </pre>
+     *
+     * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+     * @return The count of pinNames.
+     */
+    int getPinNamesCount();
+    /**
+     * <pre>
+     * Name of digital interrupts to recieve ticks from
+     * </pre>
+     *
+     * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+     * @param index The index of the element to return.
+     * @return The pinNames at the given index.
+     */
+    java.lang.String getPinNames(int index);
+    /**
+     * <pre>
+     * Name of digital interrupts to recieve ticks from
+     * </pre>
+     *
+     * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the pinNames at the given index.
+     */
+    com.google.protobuf.ByteString
+        getPinNamesBytes(int index);
+
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    boolean hasExtra();
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    com.google.protobuf.Struct getExtra();
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
+  }
+  /**
+   * Protobuf type {@code viam.component.board.v1.StreamTicksRequest}
+   */
+  public static final class StreamTicksRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:viam.component.board.v1.StreamTicksRequest)
+      StreamTicksRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StreamTicksRequest.newBuilder() to construct.
+    private StreamTicksRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StreamTicksRequest() {
+      name_ = "";
+      pinNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StreamTicksRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.viam.component.board.v1.Board.internal_static_viam_component_board_v1_StreamTicksRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.viam.component.board.v1.Board.internal_static_viam_component_board_v1_StreamTicksRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.viam.component.board.v1.Board.StreamTicksRequest.class, com.viam.component.board.v1.Board.StreamTicksRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Board name
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Board name
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PIN_NAMES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList pinNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Name of digital interrupts to recieve ticks from
+     * </pre>
+     *
+     * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+     * @return A list containing the pinNames.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPinNamesList() {
+      return pinNames_;
+    }
+    /**
+     * <pre>
+     * Name of digital interrupts to recieve ticks from
+     * </pre>
+     *
+     * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+     * @return The count of pinNames.
+     */
+    public int getPinNamesCount() {
+      return pinNames_.size();
+    }
+    /**
+     * <pre>
+     * Name of digital interrupts to recieve ticks from
+     * </pre>
+     *
+     * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+     * @param index The index of the element to return.
+     * @return The pinNames at the given index.
+     */
+    public java.lang.String getPinNames(int index) {
+      return pinNames_.get(index);
+    }
+    /**
+     * <pre>
+     * Name of digital interrupts to recieve ticks from
+     * </pre>
+     *
+     * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the pinNames at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPinNamesBytes(int index) {
+      return pinNames_.getByteString(index);
+    }
+
+    public static final int EXTRA_FIELD_NUMBER = 99;
+    private com.google.protobuf.Struct extra_;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return Whether the extra field is set.
+     */
+    @java.lang.Override
+    public boolean hasExtra() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     * @return The extra.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Struct getExtra() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
+      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      for (int i = 0; i < pinNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, pinNames_.getRaw(i));
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(99, getExtra());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < pinNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(pinNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getPinNamesList().size();
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(99, getExtra());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.viam.component.board.v1.Board.StreamTicksRequest)) {
+        return super.equals(obj);
+      }
+      com.viam.component.board.v1.Board.StreamTicksRequest other = (com.viam.component.board.v1.Board.StreamTicksRequest) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getPinNamesList()
+          .equals(other.getPinNamesList())) return false;
+      if (hasExtra() != other.hasExtra()) return false;
+      if (hasExtra()) {
+        if (!getExtra()
+            .equals(other.getExtra())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (getPinNamesCount() > 0) {
+        hash = (37 * hash) + PIN_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getPinNamesList().hashCode();
+      }
+      if (hasExtra()) {
+        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
+        hash = (53 * hash) + getExtra().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.viam.component.board.v1.Board.StreamTicksRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.viam.component.board.v1.Board.StreamTicksRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.viam.component.board.v1.Board.StreamTicksRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.board.v1.Board.StreamTicksRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code viam.component.board.v1.StreamTicksRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.board.v1.StreamTicksRequest)
+        com.viam.component.board.v1.Board.StreamTicksRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.viam.component.board.v1.Board.internal_static_viam_component_board_v1_StreamTicksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.viam.component.board.v1.Board.internal_static_viam_component_board_v1_StreamTicksRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.viam.component.board.v1.Board.StreamTicksRequest.class, com.viam.component.board.v1.Board.StreamTicksRequest.Builder.class);
+      }
+
+      // Construct using com.viam.component.board.v1.Board.StreamTicksRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getExtraFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        pinNames_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        extra_ = null;
+        if (extraBuilder_ != null) {
+          extraBuilder_.dispose();
+          extraBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.viam.component.board.v1.Board.internal_static_viam_component_board_v1_StreamTicksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.viam.component.board.v1.Board.StreamTicksRequest getDefaultInstanceForType() {
+        return com.viam.component.board.v1.Board.StreamTicksRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.viam.component.board.v1.Board.StreamTicksRequest build() {
+        com.viam.component.board.v1.Board.StreamTicksRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.viam.component.board.v1.Board.StreamTicksRequest buildPartial() {
+        com.viam.component.board.v1.Board.StreamTicksRequest result = new com.viam.component.board.v1.Board.StreamTicksRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.viam.component.board.v1.Board.StreamTicksRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          pinNames_.makeImmutable();
+          result.pinNames_ = pinNames_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.extra_ = extraBuilder_ == null
+              ? extra_
+              : extraBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.viam.component.board.v1.Board.StreamTicksRequest) {
+          return mergeFrom((com.viam.component.board.v1.Board.StreamTicksRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.viam.component.board.v1.Board.StreamTicksRequest other) {
+        if (other == com.viam.component.board.v1.Board.StreamTicksRequest.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.pinNames_.isEmpty()) {
+          if (pinNames_.isEmpty()) {
+            pinNames_ = other.pinNames_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensurePinNamesIsMutable();
+            pinNames_.addAll(other.pinNames_);
+          }
+          onChanged();
+        }
+        if (other.hasExtra()) {
+          mergeExtra(other.getExtra());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensurePinNamesIsMutable();
+                pinNames_.add(s);
+                break;
+              } // case 18
+              case 794: {
+                input.readMessage(
+                    getExtraFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 794
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Board name
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Board name
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Board name
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Board name
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Board name
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList pinNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensurePinNamesIsMutable() {
+        if (!pinNames_.isModifiable()) {
+          pinNames_ = new com.google.protobuf.LazyStringArrayList(pinNames_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <pre>
+       * Name of digital interrupts to recieve ticks from
+       * </pre>
+       *
+       * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+       * @return A list containing the pinNames.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getPinNamesList() {
+        pinNames_.makeImmutable();
+        return pinNames_;
+      }
+      /**
+       * <pre>
+       * Name of digital interrupts to recieve ticks from
+       * </pre>
+       *
+       * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+       * @return The count of pinNames.
+       */
+      public int getPinNamesCount() {
+        return pinNames_.size();
+      }
+      /**
+       * <pre>
+       * Name of digital interrupts to recieve ticks from
+       * </pre>
+       *
+       * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+       * @param index The index of the element to return.
+       * @return The pinNames at the given index.
+       */
+      public java.lang.String getPinNames(int index) {
+        return pinNames_.get(index);
+      }
+      /**
+       * <pre>
+       * Name of digital interrupts to recieve ticks from
+       * </pre>
+       *
+       * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the pinNames at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getPinNamesBytes(int index) {
+        return pinNames_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Name of digital interrupts to recieve ticks from
+       * </pre>
+       *
+       * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+       * @param index The index to set the value at.
+       * @param value The pinNames to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPinNames(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePinNamesIsMutable();
+        pinNames_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of digital interrupts to recieve ticks from
+       * </pre>
+       *
+       * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+       * @param value The pinNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPinNames(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensurePinNamesIsMutable();
+        pinNames_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of digital interrupts to recieve ticks from
+       * </pre>
+       *
+       * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+       * @param values The pinNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPinNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensurePinNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, pinNames_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of digital interrupts to recieve ticks from
+       * </pre>
+       *
+       * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPinNames() {
+        pinNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of digital interrupts to recieve ticks from
+       * </pre>
+       *
+       * <code>repeated string pin_names = 2 [json_name = "pinNames"];</code>
+       * @param value The bytes of the pinNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPinNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensurePinNamesIsMutable();
+        pinNames_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Struct extra_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       * @return Whether the extra field is set.
+       */
+      public boolean hasExtra() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       * @return The extra.
+       */
+      public com.google.protobuf.Struct getExtra() {
+        if (extraBuilder_ == null) {
+          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+        } else {
+          return extraBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(com.google.protobuf.Struct value) {
+        if (extraBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          extra_ = value;
+        } else {
+          extraBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder setExtra(
+          com.google.protobuf.Struct.Builder builderForValue) {
+        if (extraBuilder_ == null) {
+          extra_ = builderForValue.build();
+        } else {
+          extraBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder mergeExtra(com.google.protobuf.Struct value) {
+        if (extraBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            extra_ != null &&
+            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+            getExtraBuilder().mergeFrom(value);
+          } else {
+            extra_ = value;
+          }
+        } else {
+          extraBuilder_.mergeFrom(value);
+        }
+        if (extra_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public Builder clearExtra() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        extra_ = null;
+        if (extraBuilder_ != null) {
+          extraBuilder_.dispose();
+          extraBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public com.google.protobuf.Struct.Builder getExtraBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getExtraFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
+        if (extraBuilder_ != null) {
+          return extraBuilder_.getMessageOrBuilder();
+        } else {
+          return extra_ == null ?
+              com.google.protobuf.Struct.getDefaultInstance() : extra_;
+        }
+      }
+      /**
+       * <pre>
+       * Additional arguments to the method
+       * </pre>
+       *
+       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
+          getExtraFieldBuilder() {
+        if (extraBuilder_ == null) {
+          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
+                  getExtra(),
+                  getParentForChildren(),
+                  isClean());
+          extra_ = null;
+        }
+        return extraBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.component.board.v1.StreamTicksRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:viam.component.board.v1.StreamTicksRequest)
+    private static final com.viam.component.board.v1.Board.StreamTicksRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.viam.component.board.v1.Board.StreamTicksRequest();
+    }
+
+    public static com.viam.component.board.v1.Board.StreamTicksRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StreamTicksRequest>
+        PARSER = new com.google.protobuf.AbstractParser<StreamTicksRequest>() {
+      @java.lang.Override
+      public StreamTicksRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StreamTicksRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StreamTicksRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.viam.component.board.v1.Board.StreamTicksRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StreamTicksResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.component.board.v1.StreamTicksResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * name of interrupt
+     * </pre>
+     *
+     * <code>string pin_name = 1 [json_name = "pinName"];</code>
+     * @return The pinName.
+     */
+    java.lang.String getPinName();
+    /**
+     * <pre>
+     * name of interrupt
+     * </pre>
+     *
+     * <code>string pin_name = 1 [json_name = "pinName"];</code>
+     * @return The bytes for pinName.
+     */
+    com.google.protobuf.ByteString
+        getPinNameBytes();
+
+    /**
+     * <pre>
+     * Time in nanoseconds of a tick
+     * </pre>
+     *
+     * <code>uint64 time = 2 [json_name = "time"];</code>
+     * @return The time.
+     */
+    long getTime();
+
+    /**
+     * <pre>
+     * Value high or low of the tick
+     * </pre>
+     *
+     * <code>bool high = 3 [json_name = "high"];</code>
+     * @return The high.
+     */
+    boolean getHigh();
+  }
+  /**
+   * Protobuf type {@code viam.component.board.v1.StreamTicksResponse}
+   */
+  public static final class StreamTicksResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:viam.component.board.v1.StreamTicksResponse)
+      StreamTicksResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StreamTicksResponse.newBuilder() to construct.
+    private StreamTicksResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StreamTicksResponse() {
+      pinName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StreamTicksResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.viam.component.board.v1.Board.internal_static_viam_component_board_v1_StreamTicksResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.viam.component.board.v1.Board.internal_static_viam_component_board_v1_StreamTicksResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.viam.component.board.v1.Board.StreamTicksResponse.class, com.viam.component.board.v1.Board.StreamTicksResponse.Builder.class);
+    }
+
+    public static final int PIN_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pinName_ = "";
+    /**
+     * <pre>
+     * name of interrupt
+     * </pre>
+     *
+     * <code>string pin_name = 1 [json_name = "pinName"];</code>
+     * @return The pinName.
+     */
+    @java.lang.Override
+    public java.lang.String getPinName() {
+      java.lang.Object ref = pinName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pinName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name of interrupt
+     * </pre>
+     *
+     * <code>string pin_name = 1 [json_name = "pinName"];</code>
+     * @return The bytes for pinName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPinNameBytes() {
+      java.lang.Object ref = pinName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pinName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIME_FIELD_NUMBER = 2;
+    private long time_ = 0L;
+    /**
+     * <pre>
+     * Time in nanoseconds of a tick
+     * </pre>
+     *
+     * <code>uint64 time = 2 [json_name = "time"];</code>
+     * @return The time.
+     */
+    @java.lang.Override
+    public long getTime() {
+      return time_;
+    }
+
+    public static final int HIGH_FIELD_NUMBER = 3;
+    private boolean high_ = false;
+    /**
+     * <pre>
+     * Value high or low of the tick
+     * </pre>
+     *
+     * <code>bool high = 3 [json_name = "high"];</code>
+     * @return The high.
+     */
+    @java.lang.Override
+    public boolean getHigh() {
+      return high_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pinName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pinName_);
+      }
+      if (time_ != 0L) {
+        output.writeUInt64(2, time_);
+      }
+      if (high_ != false) {
+        output.writeBool(3, high_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pinName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pinName_);
+      }
+      if (time_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, time_);
+      }
+      if (high_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, high_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.viam.component.board.v1.Board.StreamTicksResponse)) {
+        return super.equals(obj);
+      }
+      com.viam.component.board.v1.Board.StreamTicksResponse other = (com.viam.component.board.v1.Board.StreamTicksResponse) obj;
+
+      if (!getPinName()
+          .equals(other.getPinName())) return false;
+      if (getTime()
+          != other.getTime()) return false;
+      if (getHigh()
+          != other.getHigh()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PIN_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getPinName().hashCode();
+      hash = (37 * hash) + TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTime());
+      hash = (37 * hash) + HIGH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getHigh());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.viam.component.board.v1.Board.StreamTicksResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.viam.component.board.v1.Board.StreamTicksResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.viam.component.board.v1.Board.StreamTicksResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.viam.component.board.v1.Board.StreamTicksResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.viam.component.board.v1.Board.StreamTicksResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code viam.component.board.v1.StreamTicksResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.component.board.v1.StreamTicksResponse)
+        com.viam.component.board.v1.Board.StreamTicksResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.viam.component.board.v1.Board.internal_static_viam_component_board_v1_StreamTicksResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.viam.component.board.v1.Board.internal_static_viam_component_board_v1_StreamTicksResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.viam.component.board.v1.Board.StreamTicksResponse.class, com.viam.component.board.v1.Board.StreamTicksResponse.Builder.class);
+      }
+
+      // Construct using com.viam.component.board.v1.Board.StreamTicksResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pinName_ = "";
+        time_ = 0L;
+        high_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.viam.component.board.v1.Board.internal_static_viam_component_board_v1_StreamTicksResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.viam.component.board.v1.Board.StreamTicksResponse getDefaultInstanceForType() {
+        return com.viam.component.board.v1.Board.StreamTicksResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.viam.component.board.v1.Board.StreamTicksResponse build() {
+        com.viam.component.board.v1.Board.StreamTicksResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.viam.component.board.v1.Board.StreamTicksResponse buildPartial() {
+        com.viam.component.board.v1.Board.StreamTicksResponse result = new com.viam.component.board.v1.Board.StreamTicksResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.viam.component.board.v1.Board.StreamTicksResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pinName_ = pinName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.time_ = time_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.high_ = high_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.viam.component.board.v1.Board.StreamTicksResponse) {
+          return mergeFrom((com.viam.component.board.v1.Board.StreamTicksResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.viam.component.board.v1.Board.StreamTicksResponse other) {
+        if (other == com.viam.component.board.v1.Board.StreamTicksResponse.getDefaultInstance()) return this;
+        if (!other.getPinName().isEmpty()) {
+          pinName_ = other.pinName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getTime() != 0L) {
+          setTime(other.getTime());
+        }
+        if (other.getHigh() != false) {
+          setHigh(other.getHigh());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                pinName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                time_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                high_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object pinName_ = "";
+      /**
+       * <pre>
+       * name of interrupt
+       * </pre>
+       *
+       * <code>string pin_name = 1 [json_name = "pinName"];</code>
+       * @return The pinName.
+       */
+      public java.lang.String getPinName() {
+        java.lang.Object ref = pinName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pinName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of interrupt
+       * </pre>
+       *
+       * <code>string pin_name = 1 [json_name = "pinName"];</code>
+       * @return The bytes for pinName.
+       */
+      public com.google.protobuf.ByteString
+          getPinNameBytes() {
+        java.lang.Object ref = pinName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pinName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of interrupt
+       * </pre>
+       *
+       * <code>string pin_name = 1 [json_name = "pinName"];</code>
+       * @param value The pinName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPinName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        pinName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of interrupt
+       * </pre>
+       *
+       * <code>string pin_name = 1 [json_name = "pinName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPinName() {
+        pinName_ = getDefaultInstance().getPinName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name of interrupt
+       * </pre>
+       *
+       * <code>string pin_name = 1 [json_name = "pinName"];</code>
+       * @param value The bytes for pinName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPinNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        pinName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long time_ ;
+      /**
+       * <pre>
+       * Time in nanoseconds of a tick
+       * </pre>
+       *
+       * <code>uint64 time = 2 [json_name = "time"];</code>
+       * @return The time.
+       */
+      @java.lang.Override
+      public long getTime() {
+        return time_;
+      }
+      /**
+       * <pre>
+       * Time in nanoseconds of a tick
+       * </pre>
+       *
+       * <code>uint64 time = 2 [json_name = "time"];</code>
+       * @param value The time to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTime(long value) {
+
+        time_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Time in nanoseconds of a tick
+       * </pre>
+       *
+       * <code>uint64 time = 2 [json_name = "time"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        time_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private boolean high_ ;
+      /**
+       * <pre>
+       * Value high or low of the tick
+       * </pre>
+       *
+       * <code>bool high = 3 [json_name = "high"];</code>
+       * @return The high.
+       */
+      @java.lang.Override
+      public boolean getHigh() {
+        return high_;
+      }
+      /**
+       * <pre>
+       * Value high or low of the tick
+       * </pre>
+       *
+       * <code>bool high = 3 [json_name = "high"];</code>
+       * @param value The high to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHigh(boolean value) {
+
+        high_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Value high or low of the tick
+       * </pre>
+       *
+       * <code>bool high = 3 [json_name = "high"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHigh() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        high_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.component.board.v1.StreamTicksResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:viam.component.board.v1.StreamTicksResponse)
+    private static final com.viam.component.board.v1.Board.StreamTicksResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.viam.component.board.v1.Board.StreamTicksResponse();
+    }
+
+    public static com.viam.component.board.v1.Board.StreamTicksResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StreamTicksResponse>
+        PARSER = new com.google.protobuf.AbstractParser<StreamTicksResponse>() {
+      @java.lang.Override
+      public StreamTicksResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StreamTicksResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StreamTicksResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.viam.component.board.v1.Board.StreamTicksResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface SetPowerModeRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.board.v1.SetPowerModeRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -16336,6 +18248,16 @@ public final class Board {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_viam_component_board_v1_GetDigitalInterruptValueResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_viam_component_board_v1_StreamTicksRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_viam_component_board_v1_StreamTicksRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_viam_component_board_v1_StreamTicksResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_viam_component_board_v1_StreamTicksResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_viam_component_board_v1_SetPowerModeRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -16400,71 +18322,80 @@ public final class Board {
       "igitalInterruptName\022-\n\005extra\030c \001(\0132\027.goo" +
       "gle.protobuf.StructR\005extra\"8\n GetDigital" +
       "InterruptValueResponse\022\024\n\005value\030\001 \001(\003R\005v" +
-      "alue\"\344\001\n\023SetPowerModeRequest\022\022\n\004name\030\001 \001" +
-      "(\tR\004name\022A\n\npower_mode\030\002 \001(\0162\".viam.comp" +
-      "onent.board.v1.PowerModeR\tpowerMode\022:\n\010d" +
-      "uration\030\003 \001(\0132\031.google.protobuf.Duration" +
-      "H\000R\010duration\210\001\001\022-\n\005extra\030c \001(\0132\027.google." +
-      "protobuf.StructR\005extraB\013\n\t_duration\"\026\n\024S" +
-      "etPowerModeResponse*[\n\tPowerMode\022\032\n\026POWE" +
-      "R_MODE_UNSPECIFIED\020\000\022\025\n\021POWER_MODE_NORMA" +
-      "L\020\001\022\033\n\027POWER_MODE_OFFLINE_DEEP\020\0022\332\020\n\014Boa" +
-      "rdService\022\215\001\n\006Status\022&.viam.component.bo" +
-      "ard.v1.StatusRequest\032\'.viam.component.bo" +
-      "ard.v1.StatusResponse\"2\202\323\344\223\002,\022*/viam/api" +
-      "/v1/component/board/{name}/status\022\216\001\n\007Se" +
-      "tGPIO\022\'.viam.component.board.v1.SetGPIOR" +
-      "equest\032(.viam.component.board.v1.SetGPIO" +
-      "Response\"0\202\323\344\223\002*\032(/viam/api/v1/component" +
-      "/board/{name}/gpio\022\216\001\n\007GetGPIO\022\'.viam.co" +
-      "mponent.board.v1.GetGPIORequest\032(.viam.c" +
-      "omponent.board.v1.GetGPIOResponse\"0\202\323\344\223\002" +
-      "*\022(/viam/api/v1/component/board/{name}/g" +
-      "pio\022\201\001\n\003PWM\022#.viam.component.board.v1.PW" +
-      "MRequest\032$.viam.component.board.v1.PWMRe" +
-      "sponse\"/\202\323\344\223\002)\022\'/viam/api/v1/component/b" +
-      "oard/{name}/pwm\022\212\001\n\006SetPWM\022&.viam.compon" +
-      "ent.board.v1.SetPWMRequest\032\'.viam.compon" +
-      "ent.board.v1.SetPWMResponse\"/\202\323\344\223\002)\032\'/vi" +
-      "am/api/v1/component/board/{name}/pwm\022\241\001\n" +
-      "\014PWMFrequency\022,.viam.component.board.v1." +
-      "PWMFrequencyRequest\032-.viam.component.boa" +
-      "rd.v1.PWMFrequencyResponse\"4\202\323\344\223\002.\022,/via" +
-      "m/api/v1/component/board/{name}/pwm_freq" +
-      "\022\252\001\n\017SetPWMFrequency\022/.viam.component.bo" +
-      "ard.v1.SetPWMFrequencyRequest\0320.viam.com" +
-      "ponent.board.v1.SetPWMFrequencyResponse\"" +
-      "4\202\323\344\223\002.\032,/viam/api/v1/component/board/{n" +
-      "ame}/pwm_freq\022\210\001\n\tDoCommand\022 .viam.commo" +
-      "n.v1.DoCommandRequest\032!.viam.common.v1.D" +
-      "oCommandResponse\"6\202\323\344\223\0020\"./viam/api/v1/c" +
-      "omponent/board/{name}/do_command\022\322\001\n\020Rea" +
-      "dAnalogReader\0220.viam.component.board.v1." +
-      "ReadAnalogReaderRequest\0321.viam.component" +
-      ".board.v1.ReadAnalogReaderResponse\"Y\202\323\344\223" +
-      "\002S\022Q/viam/api/v1/component/board/{board_" +
-      "name}/analog_reader/{analog_reader_name}" +
-      "/read\022\242\001\n\013WriteAnalog\022+.viam.component.b" +
-      "oard.v1.WriteAnalogRequest\032,.viam.compon" +
-      "ent.board.v1.WriteAnalogResponse\"8\202\323\344\223\0022" +
-      "\0320/viam/api/v1/component/board/{name}/an" +
-      "alog_write\022\363\001\n\030GetDigitalInterruptValue\022" +
-      "8.viam.component.board.v1.GetDigitalInte" +
-      "rruptValueRequest\0329.viam.component.board" +
-      ".v1.GetDigitalInterruptValueResponse\"b\202\323" +
-      "\344\223\002\\\022Z/viam/api/v1/component/board/{boar" +
-      "d_name}/digital_interrupt/{digital_inter" +
-      "rupt_name}/value\022\243\001\n\014SetPowerMode\022,.viam" +
-      ".component.board.v1.SetPowerModeRequest\032" +
-      "-.viam.component.board.v1.SetPowerModeRe" +
-      "sponse\"6\202\323\344\223\0020\032./viam/api/v1/component/b" +
-      "oard/{name}/power_mode\022\224\001\n\rGetGeometries" +
-      "\022$.viam.common.v1.GetGeometriesRequest\032%" +
-      ".viam.common.v1.GetGeometriesResponse\"6\202" +
-      "\323\344\223\0020\022./viam/api/v1/component/board/{nam" +
-      "e}/geometriesBA\n\033com.viam.component.boar" +
-      "d.v1Z\"go.viam.com/api/component/board/v1" +
-      "b\006proto3"
+      "alue\"t\n\022StreamTicksRequest\022\022\n\004name\030\001 \001(\t" +
+      "R\004name\022\033\n\tpin_names\030\002 \003(\tR\010pinNames\022-\n\005e" +
+      "xtra\030c \001(\0132\027.google.protobuf.StructR\005ext" +
+      "ra\"X\n\023StreamTicksResponse\022\031\n\010pin_name\030\001 " +
+      "\001(\tR\007pinName\022\022\n\004time\030\002 \001(\004R\004time\022\022\n\004high" +
+      "\030\003 \001(\010R\004high\"\344\001\n\023SetPowerModeRequest\022\022\n\004" +
+      "name\030\001 \001(\tR\004name\022A\n\npower_mode\030\002 \001(\0162\".v" +
+      "iam.component.board.v1.PowerModeR\tpowerM" +
+      "ode\022:\n\010duration\030\003 \001(\0132\031.google.protobuf." +
+      "DurationH\000R\010duration\210\001\001\022-\n\005extra\030c \001(\0132\027" +
+      ".google.protobuf.StructR\005extraB\013\n\t_durat" +
+      "ion\"\026\n\024SetPowerModeResponse*[\n\tPowerMode" +
+      "\022\032\n\026POWER_MODE_UNSPECIFIED\020\000\022\025\n\021POWER_MO" +
+      "DE_NORMAL\020\001\022\033\n\027POWER_MODE_OFFLINE_DEEP\020\002" +
+      "2\200\022\n\014BoardService\022\215\001\n\006Status\022&.viam.comp" +
+      "onent.board.v1.StatusRequest\032\'.viam.comp" +
+      "onent.board.v1.StatusResponse\"2\202\323\344\223\002,\022*/" +
+      "viam/api/v1/component/board/{name}/statu" +
+      "s\022\216\001\n\007SetGPIO\022\'.viam.component.board.v1." +
+      "SetGPIORequest\032(.viam.component.board.v1" +
+      ".SetGPIOResponse\"0\202\323\344\223\002*\032(/viam/api/v1/c" +
+      "omponent/board/{name}/gpio\022\216\001\n\007GetGPIO\022\'" +
+      ".viam.component.board.v1.GetGPIORequest\032" +
+      "(.viam.component.board.v1.GetGPIORespons" +
+      "e\"0\202\323\344\223\002*\022(/viam/api/v1/component/board/" +
+      "{name}/gpio\022\201\001\n\003PWM\022#.viam.component.boa" +
+      "rd.v1.PWMRequest\032$.viam.component.board." +
+      "v1.PWMResponse\"/\202\323\344\223\002)\022\'/viam/api/v1/com" +
+      "ponent/board/{name}/pwm\022\212\001\n\006SetPWM\022&.via" +
+      "m.component.board.v1.SetPWMRequest\032\'.via" +
+      "m.component.board.v1.SetPWMResponse\"/\202\323\344" +
+      "\223\002)\032\'/viam/api/v1/component/board/{name}" +
+      "/pwm\022\241\001\n\014PWMFrequency\022,.viam.component.b" +
+      "oard.v1.PWMFrequencyRequest\032-.viam.compo" +
+      "nent.board.v1.PWMFrequencyResponse\"4\202\323\344\223" +
+      "\002.\022,/viam/api/v1/component/board/{name}/" +
+      "pwm_freq\022\252\001\n\017SetPWMFrequency\022/.viam.comp" +
+      "onent.board.v1.SetPWMFrequencyRequest\0320." +
+      "viam.component.board.v1.SetPWMFrequencyR" +
+      "esponse\"4\202\323\344\223\002.\032,/viam/api/v1/component/" +
+      "board/{name}/pwm_freq\022\210\001\n\tDoCommand\022 .vi" +
+      "am.common.v1.DoCommandRequest\032!.viam.com" +
+      "mon.v1.DoCommandResponse\"6\202\323\344\223\0020\"./viam/" +
+      "api/v1/component/board/{name}/do_command" +
+      "\022\322\001\n\020ReadAnalogReader\0220.viam.component.b" +
+      "oard.v1.ReadAnalogReaderRequest\0321.viam.c" +
+      "omponent.board.v1.ReadAnalogReaderRespon" +
+      "se\"Y\202\323\344\223\002S\022Q/viam/api/v1/component/board" +
+      "/{board_name}/analog_reader/{analog_read" +
+      "er_name}/read\022\242\001\n\013WriteAnalog\022+.viam.com" +
+      "ponent.board.v1.WriteAnalogRequest\032,.via" +
+      "m.component.board.v1.WriteAnalogResponse" +
+      "\"8\202\323\344\223\0022\0320/viam/api/v1/component/board/{" +
+      "name}/analog_write\022\363\001\n\030GetDigitalInterru" +
+      "ptValue\0228.viam.component.board.v1.GetDig" +
+      "italInterruptValueRequest\0329.viam.compone" +
+      "nt.board.v1.GetDigitalInterruptValueResp" +
+      "onse\"b\202\323\344\223\002\\\022Z/viam/api/v1/component/boa" +
+      "rd/{board_name}/digital_interrupt/{digit" +
+      "al_interrupt_name}/value\022\243\001\n\013StreamTicks" +
+      "\022+.viam.component.board.v1.StreamTicksRe" +
+      "quest\032,.viam.component.board.v1.StreamTi" +
+      "cksResponse\"7\202\323\344\223\0021\022//viam/api/v1/compon" +
+      "ent/board/{name}/tick_stream0\001\022\243\001\n\014SetPo" +
+      "werMode\022,.viam.component.board.v1.SetPow" +
+      "erModeRequest\032-.viam.component.board.v1." +
+      "SetPowerModeResponse\"6\202\323\344\223\0020\032./viam/api/" +
+      "v1/component/board/{name}/power_mode\022\224\001\n" +
+      "\rGetGeometries\022$.viam.common.v1.GetGeome" +
+      "triesRequest\032%.viam.common.v1.GetGeometr" +
+      "iesResponse\"6\202\323\344\223\0020\022./viam/api/v1/compon" +
+      "ent/board/{name}/geometriesBA\n\033com.viam." +
+      "component.board.v1Z\"go.viam.com/api/comp" +
+      "onent/board/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16594,14 +18525,26 @@ public final class Board {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_component_board_v1_GetDigitalInterruptValueResponse_descriptor,
         new java.lang.String[] { "Value", });
-    internal_static_viam_component_board_v1_SetPowerModeRequest_descriptor =
+    internal_static_viam_component_board_v1_StreamTicksRequest_descriptor =
       getDescriptor().getMessageTypes().get(20);
+    internal_static_viam_component_board_v1_StreamTicksRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_viam_component_board_v1_StreamTicksRequest_descriptor,
+        new java.lang.String[] { "Name", "PinNames", "Extra", });
+    internal_static_viam_component_board_v1_StreamTicksResponse_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_viam_component_board_v1_StreamTicksResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_viam_component_board_v1_StreamTicksResponse_descriptor,
+        new java.lang.String[] { "PinName", "Time", "High", });
+    internal_static_viam_component_board_v1_SetPowerModeRequest_descriptor =
+      getDescriptor().getMessageTypes().get(22);
     internal_static_viam_component_board_v1_SetPowerModeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_component_board_v1_SetPowerModeRequest_descriptor,
         new java.lang.String[] { "Name", "PowerMode", "Duration", "Extra", });
     internal_static_viam_component_board_v1_SetPowerModeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_viam_component_board_v1_SetPowerModeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_component_board_v1_SetPowerModeResponse_descriptor,
