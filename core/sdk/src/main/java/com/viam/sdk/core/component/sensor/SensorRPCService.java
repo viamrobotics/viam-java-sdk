@@ -52,7 +52,6 @@ public class SensorRPCService extends SensorServiceGrpc.SensorServiceImplBase
         final GetReadingsResponse result = sensor.getReadings(Optional.of(request.getExtra()));
         responseObserver.onNext(GetReadingsResponse.newBuilder().putAllReadings(result.getReadingsMap()).build());
         responseObserver.onCompleted();
-        responseObserver.onCompleted();
     }
 
     @Override
