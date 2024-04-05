@@ -1703,6 +1703,4254 @@ public final class EndUser {
 
   }
 
+  public interface RegisterAuthApplicationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.RegisterAuthApplicationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string application_name = 1 [json_name = "applicationName"];</code>
+     * @return The applicationName.
+     */
+    java.lang.String getApplicationName();
+    /**
+     * <code>string application_name = 1 [json_name = "applicationName"];</code>
+     * @return The bytes for applicationName.
+     */
+    com.google.protobuf.ByteString
+        getApplicationNameBytes();
+
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+     * @return A list containing the originUris.
+     */
+    java.util.List<java.lang.String>
+        getOriginUrisList();
+    /**
+     * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+     * @return The count of originUris.
+     */
+    int getOriginUrisCount();
+    /**
+     * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+     * @param index The index of the element to return.
+     * @return The originUris at the given index.
+     */
+    java.lang.String getOriginUris(int index);
+    /**
+     * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the originUris at the given index.
+     */
+    com.google.protobuf.ByteString
+        getOriginUrisBytes(int index);
+
+    /**
+     * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+     * @return A list containing the redirectUris.
+     */
+    java.util.List<java.lang.String>
+        getRedirectUrisList();
+    /**
+     * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+     * @return The count of redirectUris.
+     */
+    int getRedirectUrisCount();
+    /**
+     * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+     * @param index The index of the element to return.
+     * @return The redirectUris at the given index.
+     */
+    java.lang.String getRedirectUris(int index);
+    /**
+     * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the redirectUris at the given index.
+     */
+    com.google.protobuf.ByteString
+        getRedirectUrisBytes(int index);
+
+    /**
+     * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
+     * @return The logoutUri.
+     */
+    java.lang.String getLogoutUri();
+    /**
+     * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
+     * @return The bytes for logoutUri.
+     */
+    com.google.protobuf.ByteString
+        getLogoutUriBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.RegisterAuthApplicationRequest}
+   */
+  public static final class RegisterAuthApplicationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.RegisterAuthApplicationRequest)
+      RegisterAuthApplicationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterAuthApplicationRequest.newBuilder() to construct.
+    private RegisterAuthApplicationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterAuthApplicationRequest() {
+      applicationName_ = "";
+      orgId_ = "";
+      originUris_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      redirectUris_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      logoutUri_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterAuthApplicationRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              viam.app.v1.EndUser.RegisterAuthApplicationRequest.class, viam.app.v1.EndUser.RegisterAuthApplicationRequest.Builder.class);
+    }
+
+    public static final int APPLICATION_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object applicationName_ = "";
+    /**
+     * <code>string application_name = 1 [json_name = "applicationName"];</code>
+     * @return The applicationName.
+     */
+    @java.lang.Override
+    public java.lang.String getApplicationName() {
+      java.lang.Object ref = applicationName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        applicationName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string application_name = 1 [json_name = "applicationName"];</code>
+     * @return The bytes for applicationName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApplicationNameBytes() {
+      java.lang.Object ref = applicationName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        applicationName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORG_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object orgId_ = "";
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      java.lang.Object ref = orgId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orgId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      java.lang.Object ref = orgId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orgId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORIGIN_URIS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList originUris_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+     * @return A list containing the originUris.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getOriginUrisList() {
+      return originUris_;
+    }
+    /**
+     * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+     * @return The count of originUris.
+     */
+    public int getOriginUrisCount() {
+      return originUris_.size();
+    }
+    /**
+     * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+     * @param index The index of the element to return.
+     * @return The originUris at the given index.
+     */
+    public java.lang.String getOriginUris(int index) {
+      return originUris_.get(index);
+    }
+    /**
+     * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the originUris at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getOriginUrisBytes(int index) {
+      return originUris_.getByteString(index);
+    }
+
+    public static final int REDIRECT_URIS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList redirectUris_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+     * @return A list containing the redirectUris.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRedirectUrisList() {
+      return redirectUris_;
+    }
+    /**
+     * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+     * @return The count of redirectUris.
+     */
+    public int getRedirectUrisCount() {
+      return redirectUris_.size();
+    }
+    /**
+     * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+     * @param index The index of the element to return.
+     * @return The redirectUris at the given index.
+     */
+    public java.lang.String getRedirectUris(int index) {
+      return redirectUris_.get(index);
+    }
+    /**
+     * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the redirectUris at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRedirectUrisBytes(int index) {
+      return redirectUris_.getByteString(index);
+    }
+
+    public static final int LOGOUT_URI_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object logoutUri_ = "";
+    /**
+     * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
+     * @return The logoutUri.
+     */
+    @java.lang.Override
+    public java.lang.String getLogoutUri() {
+      java.lang.Object ref = logoutUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        logoutUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
+     * @return The bytes for logoutUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLogoutUriBytes() {
+      java.lang.Object ref = logoutUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        logoutUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, applicationName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
+      }
+      for (int i = 0; i < originUris_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, originUris_.getRaw(i));
+      }
+      for (int i = 0; i < redirectUris_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, redirectUris_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logoutUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, logoutUri_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, applicationName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < originUris_.size(); i++) {
+          dataSize += computeStringSizeNoTag(originUris_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getOriginUrisList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < redirectUris_.size(); i++) {
+          dataSize += computeStringSizeNoTag(redirectUris_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getRedirectUrisList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logoutUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, logoutUri_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof viam.app.v1.EndUser.RegisterAuthApplicationRequest)) {
+        return super.equals(obj);
+      }
+      viam.app.v1.EndUser.RegisterAuthApplicationRequest other = (viam.app.v1.EndUser.RegisterAuthApplicationRequest) obj;
+
+      if (!getApplicationName()
+          .equals(other.getApplicationName())) return false;
+      if (!getOrgId()
+          .equals(other.getOrgId())) return false;
+      if (!getOriginUrisList()
+          .equals(other.getOriginUrisList())) return false;
+      if (!getRedirectUrisList()
+          .equals(other.getRedirectUrisList())) return false;
+      if (!getLogoutUri()
+          .equals(other.getLogoutUri())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APPLICATION_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getApplicationName().hashCode();
+      hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrgId().hashCode();
+      if (getOriginUrisCount() > 0) {
+        hash = (37 * hash) + ORIGIN_URIS_FIELD_NUMBER;
+        hash = (53 * hash) + getOriginUrisList().hashCode();
+      }
+      if (getRedirectUrisCount() > 0) {
+        hash = (37 * hash) + REDIRECT_URIS_FIELD_NUMBER;
+        hash = (53 * hash) + getRedirectUrisList().hashCode();
+      }
+      hash = (37 * hash) + LOGOUT_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getLogoutUri().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.EndUser.RegisterAuthApplicationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code viam.app.v1.RegisterAuthApplicationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.RegisterAuthApplicationRequest)
+        viam.app.v1.EndUser.RegisterAuthApplicationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                viam.app.v1.EndUser.RegisterAuthApplicationRequest.class, viam.app.v1.EndUser.RegisterAuthApplicationRequest.Builder.class);
+      }
+
+      // Construct using viam.app.v1.EndUser.RegisterAuthApplicationRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        applicationName_ = "";
+        orgId_ = "";
+        originUris_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        redirectUris_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        logoutUri_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public viam.app.v1.EndUser.RegisterAuthApplicationRequest getDefaultInstanceForType() {
+        return viam.app.v1.EndUser.RegisterAuthApplicationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public viam.app.v1.EndUser.RegisterAuthApplicationRequest build() {
+        viam.app.v1.EndUser.RegisterAuthApplicationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public viam.app.v1.EndUser.RegisterAuthApplicationRequest buildPartial() {
+        viam.app.v1.EndUser.RegisterAuthApplicationRequest result = new viam.app.v1.EndUser.RegisterAuthApplicationRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(viam.app.v1.EndUser.RegisterAuthApplicationRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.applicationName_ = applicationName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.orgId_ = orgId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          originUris_.makeImmutable();
+          result.originUris_ = originUris_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          redirectUris_.makeImmutable();
+          result.redirectUris_ = redirectUris_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.logoutUri_ = logoutUri_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof viam.app.v1.EndUser.RegisterAuthApplicationRequest) {
+          return mergeFrom((viam.app.v1.EndUser.RegisterAuthApplicationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(viam.app.v1.EndUser.RegisterAuthApplicationRequest other) {
+        if (other == viam.app.v1.EndUser.RegisterAuthApplicationRequest.getDefaultInstance()) return this;
+        if (!other.getApplicationName().isEmpty()) {
+          applicationName_ = other.applicationName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getOrgId().isEmpty()) {
+          orgId_ = other.orgId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.originUris_.isEmpty()) {
+          if (originUris_.isEmpty()) {
+            originUris_ = other.originUris_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureOriginUrisIsMutable();
+            originUris_.addAll(other.originUris_);
+          }
+          onChanged();
+        }
+        if (!other.redirectUris_.isEmpty()) {
+          if (redirectUris_.isEmpty()) {
+            redirectUris_ = other.redirectUris_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensureRedirectUrisIsMutable();
+            redirectUris_.addAll(other.redirectUris_);
+          }
+          onChanged();
+        }
+        if (!other.getLogoutUri().isEmpty()) {
+          logoutUri_ = other.logoutUri_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                applicationName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                orgId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureOriginUrisIsMutable();
+                originUris_.add(s);
+                break;
+              } // case 26
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureRedirectUrisIsMutable();
+                redirectUris_.add(s);
+                break;
+              } // case 34
+              case 42: {
+                logoutUri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object applicationName_ = "";
+      /**
+       * <code>string application_name = 1 [json_name = "applicationName"];</code>
+       * @return The applicationName.
+       */
+      public java.lang.String getApplicationName() {
+        java.lang.Object ref = applicationName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          applicationName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string application_name = 1 [json_name = "applicationName"];</code>
+       * @return The bytes for applicationName.
+       */
+      public com.google.protobuf.ByteString
+          getApplicationNameBytes() {
+        java.lang.Object ref = applicationName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          applicationName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string application_name = 1 [json_name = "applicationName"];</code>
+       * @param value The applicationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        applicationName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_name = 1 [json_name = "applicationName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApplicationName() {
+        applicationName_ = getDefaultInstance().getApplicationName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_name = 1 [json_name = "applicationName"];</code>
+       * @param value The bytes for applicationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        applicationName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object orgId_ = "";
+      /**
+       * <code>string org_id = 2 [json_name = "orgId"];</code>
+       * @return The orgId.
+       */
+      public java.lang.String getOrgId() {
+        java.lang.Object ref = orgId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orgId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string org_id = 2 [json_name = "orgId"];</code>
+       * @return The bytes for orgId.
+       */
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        java.lang.Object ref = orgId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orgId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string org_id = 2 [json_name = "orgId"];</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        orgId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string org_id = 2 [json_name = "orgId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        orgId_ = getDefaultInstance().getOrgId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string org_id = 2 [json_name = "orgId"];</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        orgId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList originUris_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureOriginUrisIsMutable() {
+        if (!originUris_.isModifiable()) {
+          originUris_ = new com.google.protobuf.LazyStringArrayList(originUris_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+       * @return A list containing the originUris.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getOriginUrisList() {
+        originUris_.makeImmutable();
+        return originUris_;
+      }
+      /**
+       * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+       * @return The count of originUris.
+       */
+      public int getOriginUrisCount() {
+        return originUris_.size();
+      }
+      /**
+       * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+       * @param index The index of the element to return.
+       * @return The originUris at the given index.
+       */
+      public java.lang.String getOriginUris(int index) {
+        return originUris_.get(index);
+      }
+      /**
+       * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the originUris at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getOriginUrisBytes(int index) {
+        return originUris_.getByteString(index);
+      }
+      /**
+       * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+       * @param index The index to set the value at.
+       * @param value The originUris to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginUris(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOriginUrisIsMutable();
+        originUris_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+       * @param value The originUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOriginUris(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOriginUrisIsMutable();
+        originUris_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+       * @param values The originUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOriginUris(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureOriginUrisIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, originUris_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOriginUris() {
+        originUris_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+       * @param value The bytes of the originUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOriginUrisBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureOriginUrisIsMutable();
+        originUris_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList redirectUris_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureRedirectUrisIsMutable() {
+        if (!redirectUris_.isModifiable()) {
+          redirectUris_ = new com.google.protobuf.LazyStringArrayList(redirectUris_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+       * @return A list containing the redirectUris.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRedirectUrisList() {
+        redirectUris_.makeImmutable();
+        return redirectUris_;
+      }
+      /**
+       * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+       * @return The count of redirectUris.
+       */
+      public int getRedirectUrisCount() {
+        return redirectUris_.size();
+      }
+      /**
+       * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+       * @param index The index of the element to return.
+       * @return The redirectUris at the given index.
+       */
+      public java.lang.String getRedirectUris(int index) {
+        return redirectUris_.get(index);
+      }
+      /**
+       * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the redirectUris at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getRedirectUrisBytes(int index) {
+        return redirectUris_.getByteString(index);
+      }
+      /**
+       * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+       * @param index The index to set the value at.
+       * @param value The redirectUris to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRedirectUris(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRedirectUrisIsMutable();
+        redirectUris_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+       * @param value The redirectUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRedirectUris(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRedirectUrisIsMutable();
+        redirectUris_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+       * @param values The redirectUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRedirectUris(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRedirectUrisIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, redirectUris_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRedirectUris() {
+        redirectUris_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+       * @param value The bytes of the redirectUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRedirectUrisBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureRedirectUrisIsMutable();
+        redirectUris_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object logoutUri_ = "";
+      /**
+       * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
+       * @return The logoutUri.
+       */
+      public java.lang.String getLogoutUri() {
+        java.lang.Object ref = logoutUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          logoutUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
+       * @return The bytes for logoutUri.
+       */
+      public com.google.protobuf.ByteString
+          getLogoutUriBytes() {
+        java.lang.Object ref = logoutUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          logoutUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
+       * @param value The logoutUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogoutUri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        logoutUri_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLogoutUri() {
+        logoutUri_ = getDefaultInstance().getLogoutUri();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
+       * @param value The bytes for logoutUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogoutUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        logoutUri_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.RegisterAuthApplicationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.RegisterAuthApplicationRequest)
+    private static final viam.app.v1.EndUser.RegisterAuthApplicationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new viam.app.v1.EndUser.RegisterAuthApplicationRequest();
+    }
+
+    public static viam.app.v1.EndUser.RegisterAuthApplicationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterAuthApplicationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterAuthApplicationRequest>() {
+      @java.lang.Override
+      public RegisterAuthApplicationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterAuthApplicationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterAuthApplicationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public viam.app.v1.EndUser.RegisterAuthApplicationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RegisterAuthApplicationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.RegisterAuthApplicationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     * @return The applicationId.
+     */
+    java.lang.String getApplicationId();
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     * @return The bytes for applicationId.
+     */
+    com.google.protobuf.ByteString
+        getApplicationIdBytes();
+
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     * @return The applicationName.
+     */
+    java.lang.String getApplicationName();
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     * @return The bytes for applicationName.
+     */
+    com.google.protobuf.ByteString
+        getApplicationNameBytes();
+
+    /**
+     * <code>string secret = 3 [json_name = "secret"];</code>
+     * @return The secret.
+     */
+    java.lang.String getSecret();
+    /**
+     * <code>string secret = 3 [json_name = "secret"];</code>
+     * @return The bytes for secret.
+     */
+    com.google.protobuf.ByteString
+        getSecretBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.RegisterAuthApplicationResponse}
+   */
+  public static final class RegisterAuthApplicationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.RegisterAuthApplicationResponse)
+      RegisterAuthApplicationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RegisterAuthApplicationResponse.newBuilder() to construct.
+    private RegisterAuthApplicationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RegisterAuthApplicationResponse() {
+      applicationId_ = "";
+      applicationName_ = "";
+      secret_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterAuthApplicationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              viam.app.v1.EndUser.RegisterAuthApplicationResponse.class, viam.app.v1.EndUser.RegisterAuthApplicationResponse.Builder.class);
+    }
+
+    public static final int APPLICATION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object applicationId_ = "";
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     * @return The applicationId.
+     */
+    @java.lang.Override
+    public java.lang.String getApplicationId() {
+      java.lang.Object ref = applicationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        applicationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     * @return The bytes for applicationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApplicationIdBytes() {
+      java.lang.Object ref = applicationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        applicationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APPLICATION_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object applicationName_ = "";
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     * @return The applicationName.
+     */
+    @java.lang.Override
+    public java.lang.String getApplicationName() {
+      java.lang.Object ref = applicationName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        applicationName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     * @return The bytes for applicationName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApplicationNameBytes() {
+      java.lang.Object ref = applicationName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        applicationName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECRET_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object secret_ = "";
+    /**
+     * <code>string secret = 3 [json_name = "secret"];</code>
+     * @return The secret.
+     */
+    @java.lang.Override
+    public java.lang.String getSecret() {
+      java.lang.Object ref = secret_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secret_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string secret = 3 [json_name = "secret"];</code>
+     * @return The bytes for secret.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretBytes() {
+      java.lang.Object ref = secret_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secret_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, applicationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, applicationName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, secret_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, applicationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, applicationName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, secret_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof viam.app.v1.EndUser.RegisterAuthApplicationResponse)) {
+        return super.equals(obj);
+      }
+      viam.app.v1.EndUser.RegisterAuthApplicationResponse other = (viam.app.v1.EndUser.RegisterAuthApplicationResponse) obj;
+
+      if (!getApplicationId()
+          .equals(other.getApplicationId())) return false;
+      if (!getApplicationName()
+          .equals(other.getApplicationName())) return false;
+      if (!getSecret()
+          .equals(other.getSecret())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APPLICATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getApplicationId().hashCode();
+      hash = (37 * hash) + APPLICATION_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getApplicationName().hashCode();
+      hash = (37 * hash) + SECRET_FIELD_NUMBER;
+      hash = (53 * hash) + getSecret().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.EndUser.RegisterAuthApplicationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code viam.app.v1.RegisterAuthApplicationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.RegisterAuthApplicationResponse)
+        viam.app.v1.EndUser.RegisterAuthApplicationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                viam.app.v1.EndUser.RegisterAuthApplicationResponse.class, viam.app.v1.EndUser.RegisterAuthApplicationResponse.Builder.class);
+      }
+
+      // Construct using viam.app.v1.EndUser.RegisterAuthApplicationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        applicationId_ = "";
+        applicationName_ = "";
+        secret_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public viam.app.v1.EndUser.RegisterAuthApplicationResponse getDefaultInstanceForType() {
+        return viam.app.v1.EndUser.RegisterAuthApplicationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public viam.app.v1.EndUser.RegisterAuthApplicationResponse build() {
+        viam.app.v1.EndUser.RegisterAuthApplicationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public viam.app.v1.EndUser.RegisterAuthApplicationResponse buildPartial() {
+        viam.app.v1.EndUser.RegisterAuthApplicationResponse result = new viam.app.v1.EndUser.RegisterAuthApplicationResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(viam.app.v1.EndUser.RegisterAuthApplicationResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.applicationId_ = applicationId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.applicationName_ = applicationName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.secret_ = secret_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof viam.app.v1.EndUser.RegisterAuthApplicationResponse) {
+          return mergeFrom((viam.app.v1.EndUser.RegisterAuthApplicationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(viam.app.v1.EndUser.RegisterAuthApplicationResponse other) {
+        if (other == viam.app.v1.EndUser.RegisterAuthApplicationResponse.getDefaultInstance()) return this;
+        if (!other.getApplicationId().isEmpty()) {
+          applicationId_ = other.applicationId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getApplicationName().isEmpty()) {
+          applicationName_ = other.applicationName_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getSecret().isEmpty()) {
+          secret_ = other.secret_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                applicationId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                applicationName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                secret_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object applicationId_ = "";
+      /**
+       * <code>string application_id = 1 [json_name = "applicationId"];</code>
+       * @return The applicationId.
+       */
+      public java.lang.String getApplicationId() {
+        java.lang.Object ref = applicationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          applicationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string application_id = 1 [json_name = "applicationId"];</code>
+       * @return The bytes for applicationId.
+       */
+      public com.google.protobuf.ByteString
+          getApplicationIdBytes() {
+        java.lang.Object ref = applicationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          applicationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string application_id = 1 [json_name = "applicationId"];</code>
+       * @param value The applicationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        applicationId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_id = 1 [json_name = "applicationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApplicationId() {
+        applicationId_ = getDefaultInstance().getApplicationId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_id = 1 [json_name = "applicationId"];</code>
+       * @param value The bytes for applicationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        applicationId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object applicationName_ = "";
+      /**
+       * <code>string application_name = 2 [json_name = "applicationName"];</code>
+       * @return The applicationName.
+       */
+      public java.lang.String getApplicationName() {
+        java.lang.Object ref = applicationName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          applicationName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string application_name = 2 [json_name = "applicationName"];</code>
+       * @return The bytes for applicationName.
+       */
+      public com.google.protobuf.ByteString
+          getApplicationNameBytes() {
+        java.lang.Object ref = applicationName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          applicationName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string application_name = 2 [json_name = "applicationName"];</code>
+       * @param value The applicationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        applicationName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_name = 2 [json_name = "applicationName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApplicationName() {
+        applicationName_ = getDefaultInstance().getApplicationName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_name = 2 [json_name = "applicationName"];</code>
+       * @param value The bytes for applicationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        applicationName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object secret_ = "";
+      /**
+       * <code>string secret = 3 [json_name = "secret"];</code>
+       * @return The secret.
+       */
+      public java.lang.String getSecret() {
+        java.lang.Object ref = secret_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secret_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string secret = 3 [json_name = "secret"];</code>
+       * @return The bytes for secret.
+       */
+      public com.google.protobuf.ByteString
+          getSecretBytes() {
+        java.lang.Object ref = secret_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secret_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string secret = 3 [json_name = "secret"];</code>
+       * @param value The secret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecret(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        secret_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret = 3 [json_name = "secret"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecret() {
+        secret_ = getDefaultInstance().getSecret();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret = 3 [json_name = "secret"];</code>
+       * @param value The bytes for secret to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        secret_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.RegisterAuthApplicationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.RegisterAuthApplicationResponse)
+    private static final viam.app.v1.EndUser.RegisterAuthApplicationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new viam.app.v1.EndUser.RegisterAuthApplicationResponse();
+    }
+
+    public static viam.app.v1.EndUser.RegisterAuthApplicationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RegisterAuthApplicationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RegisterAuthApplicationResponse>() {
+      @java.lang.Override
+      public RegisterAuthApplicationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RegisterAuthApplicationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RegisterAuthApplicationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public viam.app.v1.EndUser.RegisterAuthApplicationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateAuthApplicationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateAuthApplicationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    java.lang.String getOrgId();
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    com.google.protobuf.ByteString
+        getOrgIdBytes();
+
+    /**
+     * <code>string application_id = 2 [json_name = "applicationId"];</code>
+     * @return The applicationId.
+     */
+    java.lang.String getApplicationId();
+    /**
+     * <code>string application_id = 2 [json_name = "applicationId"];</code>
+     * @return The bytes for applicationId.
+     */
+    com.google.protobuf.ByteString
+        getApplicationIdBytes();
+
+    /**
+     * <code>string application_name = 3 [json_name = "applicationName"];</code>
+     * @return The applicationName.
+     */
+    java.lang.String getApplicationName();
+    /**
+     * <code>string application_name = 3 [json_name = "applicationName"];</code>
+     * @return The bytes for applicationName.
+     */
+    com.google.protobuf.ByteString
+        getApplicationNameBytes();
+
+    /**
+     * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+     * @return A list containing the originUris.
+     */
+    java.util.List<java.lang.String>
+        getOriginUrisList();
+    /**
+     * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+     * @return The count of originUris.
+     */
+    int getOriginUrisCount();
+    /**
+     * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+     * @param index The index of the element to return.
+     * @return The originUris at the given index.
+     */
+    java.lang.String getOriginUris(int index);
+    /**
+     * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the originUris at the given index.
+     */
+    com.google.protobuf.ByteString
+        getOriginUrisBytes(int index);
+
+    /**
+     * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+     * @return A list containing the redirectUris.
+     */
+    java.util.List<java.lang.String>
+        getRedirectUrisList();
+    /**
+     * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+     * @return The count of redirectUris.
+     */
+    int getRedirectUrisCount();
+    /**
+     * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+     * @param index The index of the element to return.
+     * @return The redirectUris at the given index.
+     */
+    java.lang.String getRedirectUris(int index);
+    /**
+     * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the redirectUris at the given index.
+     */
+    com.google.protobuf.ByteString
+        getRedirectUrisBytes(int index);
+
+    /**
+     * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
+     * @return The logoutUri.
+     */
+    java.lang.String getLogoutUri();
+    /**
+     * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
+     * @return The bytes for logoutUri.
+     */
+    com.google.protobuf.ByteString
+        getLogoutUriBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateAuthApplicationRequest}
+   */
+  public static final class UpdateAuthApplicationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateAuthApplicationRequest)
+      UpdateAuthApplicationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateAuthApplicationRequest.newBuilder() to construct.
+    private UpdateAuthApplicationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateAuthApplicationRequest() {
+      orgId_ = "";
+      applicationId_ = "";
+      applicationName_ = "";
+      originUris_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      redirectUris_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      logoutUri_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateAuthApplicationRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              viam.app.v1.EndUser.UpdateAuthApplicationRequest.class, viam.app.v1.EndUser.UpdateAuthApplicationRequest.Builder.class);
+    }
+
+    public static final int ORG_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object orgId_ = "";
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The orgId.
+     */
+    @java.lang.Override
+    public java.lang.String getOrgId() {
+      java.lang.Object ref = orgId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orgId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @return The bytes for orgId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrgIdBytes() {
+      java.lang.Object ref = orgId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orgId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APPLICATION_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object applicationId_ = "";
+    /**
+     * <code>string application_id = 2 [json_name = "applicationId"];</code>
+     * @return The applicationId.
+     */
+    @java.lang.Override
+    public java.lang.String getApplicationId() {
+      java.lang.Object ref = applicationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        applicationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string application_id = 2 [json_name = "applicationId"];</code>
+     * @return The bytes for applicationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApplicationIdBytes() {
+      java.lang.Object ref = applicationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        applicationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APPLICATION_NAME_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object applicationName_ = "";
+    /**
+     * <code>string application_name = 3 [json_name = "applicationName"];</code>
+     * @return The applicationName.
+     */
+    @java.lang.Override
+    public java.lang.String getApplicationName() {
+      java.lang.Object ref = applicationName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        applicationName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string application_name = 3 [json_name = "applicationName"];</code>
+     * @return The bytes for applicationName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApplicationNameBytes() {
+      java.lang.Object ref = applicationName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        applicationName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORIGIN_URIS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList originUris_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+     * @return A list containing the originUris.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getOriginUrisList() {
+      return originUris_;
+    }
+    /**
+     * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+     * @return The count of originUris.
+     */
+    public int getOriginUrisCount() {
+      return originUris_.size();
+    }
+    /**
+     * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+     * @param index The index of the element to return.
+     * @return The originUris at the given index.
+     */
+    public java.lang.String getOriginUris(int index) {
+      return originUris_.get(index);
+    }
+    /**
+     * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the originUris at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getOriginUrisBytes(int index) {
+      return originUris_.getByteString(index);
+    }
+
+    public static final int REDIRECT_URIS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList redirectUris_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+     * @return A list containing the redirectUris.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRedirectUrisList() {
+      return redirectUris_;
+    }
+    /**
+     * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+     * @return The count of redirectUris.
+     */
+    public int getRedirectUrisCount() {
+      return redirectUris_.size();
+    }
+    /**
+     * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+     * @param index The index of the element to return.
+     * @return The redirectUris at the given index.
+     */
+    public java.lang.String getRedirectUris(int index) {
+      return redirectUris_.get(index);
+    }
+    /**
+     * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the redirectUris at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRedirectUrisBytes(int index) {
+      return redirectUris_.getByteString(index);
+    }
+
+    public static final int LOGOUT_URI_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object logoutUri_ = "";
+    /**
+     * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
+     * @return The logoutUri.
+     */
+    @java.lang.Override
+    public java.lang.String getLogoutUri() {
+      java.lang.Object ref = logoutUri_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        logoutUri_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
+     * @return The bytes for logoutUri.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLogoutUriBytes() {
+      java.lang.Object ref = logoutUri_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        logoutUri_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, applicationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, applicationName_);
+      }
+      for (int i = 0; i < originUris_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, originUris_.getRaw(i));
+      }
+      for (int i = 0; i < redirectUris_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, redirectUris_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logoutUri_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, logoutUri_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, applicationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, applicationName_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < originUris_.size(); i++) {
+          dataSize += computeStringSizeNoTag(originUris_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getOriginUrisList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < redirectUris_.size(); i++) {
+          dataSize += computeStringSizeNoTag(redirectUris_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getRedirectUrisList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logoutUri_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, logoutUri_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof viam.app.v1.EndUser.UpdateAuthApplicationRequest)) {
+        return super.equals(obj);
+      }
+      viam.app.v1.EndUser.UpdateAuthApplicationRequest other = (viam.app.v1.EndUser.UpdateAuthApplicationRequest) obj;
+
+      if (!getOrgId()
+          .equals(other.getOrgId())) return false;
+      if (!getApplicationId()
+          .equals(other.getApplicationId())) return false;
+      if (!getApplicationName()
+          .equals(other.getApplicationName())) return false;
+      if (!getOriginUrisList()
+          .equals(other.getOriginUrisList())) return false;
+      if (!getRedirectUrisList()
+          .equals(other.getRedirectUrisList())) return false;
+      if (!getLogoutUri()
+          .equals(other.getLogoutUri())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrgId().hashCode();
+      hash = (37 * hash) + APPLICATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getApplicationId().hashCode();
+      hash = (37 * hash) + APPLICATION_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getApplicationName().hashCode();
+      if (getOriginUrisCount() > 0) {
+        hash = (37 * hash) + ORIGIN_URIS_FIELD_NUMBER;
+        hash = (53 * hash) + getOriginUrisList().hashCode();
+      }
+      if (getRedirectUrisCount() > 0) {
+        hash = (37 * hash) + REDIRECT_URIS_FIELD_NUMBER;
+        hash = (53 * hash) + getRedirectUrisList().hashCode();
+      }
+      hash = (37 * hash) + LOGOUT_URI_FIELD_NUMBER;
+      hash = (53 * hash) + getLogoutUri().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.EndUser.UpdateAuthApplicationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateAuthApplicationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateAuthApplicationRequest)
+        viam.app.v1.EndUser.UpdateAuthApplicationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                viam.app.v1.EndUser.UpdateAuthApplicationRequest.class, viam.app.v1.EndUser.UpdateAuthApplicationRequest.Builder.class);
+      }
+
+      // Construct using viam.app.v1.EndUser.UpdateAuthApplicationRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        orgId_ = "";
+        applicationId_ = "";
+        applicationName_ = "";
+        originUris_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        redirectUris_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        logoutUri_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public viam.app.v1.EndUser.UpdateAuthApplicationRequest getDefaultInstanceForType() {
+        return viam.app.v1.EndUser.UpdateAuthApplicationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public viam.app.v1.EndUser.UpdateAuthApplicationRequest build() {
+        viam.app.v1.EndUser.UpdateAuthApplicationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public viam.app.v1.EndUser.UpdateAuthApplicationRequest buildPartial() {
+        viam.app.v1.EndUser.UpdateAuthApplicationRequest result = new viam.app.v1.EndUser.UpdateAuthApplicationRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(viam.app.v1.EndUser.UpdateAuthApplicationRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.orgId_ = orgId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.applicationId_ = applicationId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.applicationName_ = applicationName_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          originUris_.makeImmutable();
+          result.originUris_ = originUris_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          redirectUris_.makeImmutable();
+          result.redirectUris_ = redirectUris_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.logoutUri_ = logoutUri_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof viam.app.v1.EndUser.UpdateAuthApplicationRequest) {
+          return mergeFrom((viam.app.v1.EndUser.UpdateAuthApplicationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(viam.app.v1.EndUser.UpdateAuthApplicationRequest other) {
+        if (other == viam.app.v1.EndUser.UpdateAuthApplicationRequest.getDefaultInstance()) return this;
+        if (!other.getOrgId().isEmpty()) {
+          orgId_ = other.orgId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getApplicationId().isEmpty()) {
+          applicationId_ = other.applicationId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getApplicationName().isEmpty()) {
+          applicationName_ = other.applicationName_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.originUris_.isEmpty()) {
+          if (originUris_.isEmpty()) {
+            originUris_ = other.originUris_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensureOriginUrisIsMutable();
+            originUris_.addAll(other.originUris_);
+          }
+          onChanged();
+        }
+        if (!other.redirectUris_.isEmpty()) {
+          if (redirectUris_.isEmpty()) {
+            redirectUris_ = other.redirectUris_;
+            bitField0_ |= 0x00000010;
+          } else {
+            ensureRedirectUrisIsMutable();
+            redirectUris_.addAll(other.redirectUris_);
+          }
+          onChanged();
+        }
+        if (!other.getLogoutUri().isEmpty()) {
+          logoutUri_ = other.logoutUri_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                orgId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                applicationId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                applicationName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureOriginUrisIsMutable();
+                originUris_.add(s);
+                break;
+              } // case 34
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureRedirectUrisIsMutable();
+                redirectUris_.add(s);
+                break;
+              } // case 42
+              case 50: {
+                logoutUri_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object orgId_ = "";
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return The orgId.
+       */
+      public java.lang.String getOrgId() {
+        java.lang.Object ref = orgId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orgId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return The bytes for orgId.
+       */
+      public com.google.protobuf.ByteString
+          getOrgIdBytes() {
+        java.lang.Object ref = orgId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orgId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @param value The orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        orgId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrgId() {
+        orgId_ = getDefaultInstance().getOrgId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string org_id = 1 [json_name = "orgId"];</code>
+       * @param value The bytes for orgId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrgIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        orgId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object applicationId_ = "";
+      /**
+       * <code>string application_id = 2 [json_name = "applicationId"];</code>
+       * @return The applicationId.
+       */
+      public java.lang.String getApplicationId() {
+        java.lang.Object ref = applicationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          applicationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string application_id = 2 [json_name = "applicationId"];</code>
+       * @return The bytes for applicationId.
+       */
+      public com.google.protobuf.ByteString
+          getApplicationIdBytes() {
+        java.lang.Object ref = applicationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          applicationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string application_id = 2 [json_name = "applicationId"];</code>
+       * @param value The applicationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        applicationId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_id = 2 [json_name = "applicationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApplicationId() {
+        applicationId_ = getDefaultInstance().getApplicationId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_id = 2 [json_name = "applicationId"];</code>
+       * @param value The bytes for applicationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        applicationId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object applicationName_ = "";
+      /**
+       * <code>string application_name = 3 [json_name = "applicationName"];</code>
+       * @return The applicationName.
+       */
+      public java.lang.String getApplicationName() {
+        java.lang.Object ref = applicationName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          applicationName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string application_name = 3 [json_name = "applicationName"];</code>
+       * @return The bytes for applicationName.
+       */
+      public com.google.protobuf.ByteString
+          getApplicationNameBytes() {
+        java.lang.Object ref = applicationName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          applicationName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string application_name = 3 [json_name = "applicationName"];</code>
+       * @param value The applicationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        applicationName_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_name = 3 [json_name = "applicationName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApplicationName() {
+        applicationName_ = getDefaultInstance().getApplicationName();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_name = 3 [json_name = "applicationName"];</code>
+       * @param value The bytes for applicationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        applicationName_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList originUris_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureOriginUrisIsMutable() {
+        if (!originUris_.isModifiable()) {
+          originUris_ = new com.google.protobuf.LazyStringArrayList(originUris_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+       * @return A list containing the originUris.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getOriginUrisList() {
+        originUris_.makeImmutable();
+        return originUris_;
+      }
+      /**
+       * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+       * @return The count of originUris.
+       */
+      public int getOriginUrisCount() {
+        return originUris_.size();
+      }
+      /**
+       * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+       * @param index The index of the element to return.
+       * @return The originUris at the given index.
+       */
+      public java.lang.String getOriginUris(int index) {
+        return originUris_.get(index);
+      }
+      /**
+       * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the originUris at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getOriginUrisBytes(int index) {
+        return originUris_.getByteString(index);
+      }
+      /**
+       * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+       * @param index The index to set the value at.
+       * @param value The originUris to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOriginUris(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOriginUrisIsMutable();
+        originUris_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+       * @param value The originUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOriginUris(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOriginUrisIsMutable();
+        originUris_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+       * @param values The originUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOriginUris(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureOriginUrisIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, originUris_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOriginUris() {
+        originUris_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+       * @param value The bytes of the originUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOriginUrisBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureOriginUrisIsMutable();
+        originUris_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList redirectUris_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureRedirectUrisIsMutable() {
+        if (!redirectUris_.isModifiable()) {
+          redirectUris_ = new com.google.protobuf.LazyStringArrayList(redirectUris_);
+        }
+        bitField0_ |= 0x00000010;
+      }
+      /**
+       * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+       * @return A list containing the redirectUris.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRedirectUrisList() {
+        redirectUris_.makeImmutable();
+        return redirectUris_;
+      }
+      /**
+       * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+       * @return The count of redirectUris.
+       */
+      public int getRedirectUrisCount() {
+        return redirectUris_.size();
+      }
+      /**
+       * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+       * @param index The index of the element to return.
+       * @return The redirectUris at the given index.
+       */
+      public java.lang.String getRedirectUris(int index) {
+        return redirectUris_.get(index);
+      }
+      /**
+       * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the redirectUris at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getRedirectUrisBytes(int index) {
+        return redirectUris_.getByteString(index);
+      }
+      /**
+       * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+       * @param index The index to set the value at.
+       * @param value The redirectUris to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRedirectUris(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRedirectUrisIsMutable();
+        redirectUris_.set(index, value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+       * @param value The redirectUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRedirectUris(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureRedirectUrisIsMutable();
+        redirectUris_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+       * @param values The redirectUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRedirectUris(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRedirectUrisIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, redirectUris_);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRedirectUris() {
+        redirectUris_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+       * @param value The bytes of the redirectUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRedirectUrisBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureRedirectUrisIsMutable();
+        redirectUris_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object logoutUri_ = "";
+      /**
+       * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
+       * @return The logoutUri.
+       */
+      public java.lang.String getLogoutUri() {
+        java.lang.Object ref = logoutUri_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          logoutUri_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
+       * @return The bytes for logoutUri.
+       */
+      public com.google.protobuf.ByteString
+          getLogoutUriBytes() {
+        java.lang.Object ref = logoutUri_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          logoutUri_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
+       * @param value The logoutUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogoutUri(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        logoutUri_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLogoutUri() {
+        logoutUri_ = getDefaultInstance().getLogoutUri();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
+       * @param value The bytes for logoutUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogoutUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        logoutUri_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateAuthApplicationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateAuthApplicationRequest)
+    private static final viam.app.v1.EndUser.UpdateAuthApplicationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new viam.app.v1.EndUser.UpdateAuthApplicationRequest();
+    }
+
+    public static viam.app.v1.EndUser.UpdateAuthApplicationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateAuthApplicationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateAuthApplicationRequest>() {
+      @java.lang.Override
+      public UpdateAuthApplicationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateAuthApplicationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateAuthApplicationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public viam.app.v1.EndUser.UpdateAuthApplicationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateAuthApplicationResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateAuthApplicationResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     * @return The applicationId.
+     */
+    java.lang.String getApplicationId();
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     * @return The bytes for applicationId.
+     */
+    com.google.protobuf.ByteString
+        getApplicationIdBytes();
+
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     * @return The applicationName.
+     */
+    java.lang.String getApplicationName();
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     * @return The bytes for applicationName.
+     */
+    com.google.protobuf.ByteString
+        getApplicationNameBytes();
+  }
+  /**
+   * Protobuf type {@code viam.app.v1.UpdateAuthApplicationResponse}
+   */
+  public static final class UpdateAuthApplicationResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateAuthApplicationResponse)
+      UpdateAuthApplicationResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateAuthApplicationResponse.newBuilder() to construct.
+    private UpdateAuthApplicationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateAuthApplicationResponse() {
+      applicationId_ = "";
+      applicationName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateAuthApplicationResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              viam.app.v1.EndUser.UpdateAuthApplicationResponse.class, viam.app.v1.EndUser.UpdateAuthApplicationResponse.Builder.class);
+    }
+
+    public static final int APPLICATION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object applicationId_ = "";
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     * @return The applicationId.
+     */
+    @java.lang.Override
+    public java.lang.String getApplicationId() {
+      java.lang.Object ref = applicationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        applicationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     * @return The bytes for applicationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApplicationIdBytes() {
+      java.lang.Object ref = applicationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        applicationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int APPLICATION_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object applicationName_ = "";
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     * @return The applicationName.
+     */
+    @java.lang.Override
+    public java.lang.String getApplicationName() {
+      java.lang.Object ref = applicationName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        applicationName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     * @return The bytes for applicationName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApplicationNameBytes() {
+      java.lang.Object ref = applicationName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        applicationName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, applicationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, applicationName_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, applicationId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, applicationName_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof viam.app.v1.EndUser.UpdateAuthApplicationResponse)) {
+        return super.equals(obj);
+      }
+      viam.app.v1.EndUser.UpdateAuthApplicationResponse other = (viam.app.v1.EndUser.UpdateAuthApplicationResponse) obj;
+
+      if (!getApplicationId()
+          .equals(other.getApplicationId())) return false;
+      if (!getApplicationName()
+          .equals(other.getApplicationName())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APPLICATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getApplicationId().hashCode();
+      hash = (37 * hash) + APPLICATION_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getApplicationName().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(viam.app.v1.EndUser.UpdateAuthApplicationResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code viam.app.v1.UpdateAuthApplicationResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateAuthApplicationResponse)
+        viam.app.v1.EndUser.UpdateAuthApplicationResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                viam.app.v1.EndUser.UpdateAuthApplicationResponse.class, viam.app.v1.EndUser.UpdateAuthApplicationResponse.Builder.class);
+      }
+
+      // Construct using viam.app.v1.EndUser.UpdateAuthApplicationResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        applicationId_ = "";
+        applicationName_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public viam.app.v1.EndUser.UpdateAuthApplicationResponse getDefaultInstanceForType() {
+        return viam.app.v1.EndUser.UpdateAuthApplicationResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public viam.app.v1.EndUser.UpdateAuthApplicationResponse build() {
+        viam.app.v1.EndUser.UpdateAuthApplicationResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public viam.app.v1.EndUser.UpdateAuthApplicationResponse buildPartial() {
+        viam.app.v1.EndUser.UpdateAuthApplicationResponse result = new viam.app.v1.EndUser.UpdateAuthApplicationResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(viam.app.v1.EndUser.UpdateAuthApplicationResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.applicationId_ = applicationId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.applicationName_ = applicationName_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof viam.app.v1.EndUser.UpdateAuthApplicationResponse) {
+          return mergeFrom((viam.app.v1.EndUser.UpdateAuthApplicationResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(viam.app.v1.EndUser.UpdateAuthApplicationResponse other) {
+        if (other == viam.app.v1.EndUser.UpdateAuthApplicationResponse.getDefaultInstance()) return this;
+        if (!other.getApplicationId().isEmpty()) {
+          applicationId_ = other.applicationId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getApplicationName().isEmpty()) {
+          applicationName_ = other.applicationName_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                applicationId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                applicationName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object applicationId_ = "";
+      /**
+       * <code>string application_id = 1 [json_name = "applicationId"];</code>
+       * @return The applicationId.
+       */
+      public java.lang.String getApplicationId() {
+        java.lang.Object ref = applicationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          applicationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string application_id = 1 [json_name = "applicationId"];</code>
+       * @return The bytes for applicationId.
+       */
+      public com.google.protobuf.ByteString
+          getApplicationIdBytes() {
+        java.lang.Object ref = applicationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          applicationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string application_id = 1 [json_name = "applicationId"];</code>
+       * @param value The applicationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        applicationId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_id = 1 [json_name = "applicationId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApplicationId() {
+        applicationId_ = getDefaultInstance().getApplicationId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_id = 1 [json_name = "applicationId"];</code>
+       * @param value The bytes for applicationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        applicationId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object applicationName_ = "";
+      /**
+       * <code>string application_name = 2 [json_name = "applicationName"];</code>
+       * @return The applicationName.
+       */
+      public java.lang.String getApplicationName() {
+        java.lang.Object ref = applicationName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          applicationName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string application_name = 2 [json_name = "applicationName"];</code>
+       * @return The bytes for applicationName.
+       */
+      public com.google.protobuf.ByteString
+          getApplicationNameBytes() {
+        java.lang.Object ref = applicationName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          applicationName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string application_name = 2 [json_name = "applicationName"];</code>
+       * @param value The applicationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        applicationName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_name = 2 [json_name = "applicationName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApplicationName() {
+        applicationName_ = getDefaultInstance().getApplicationName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string application_name = 2 [json_name = "applicationName"];</code>
+       * @param value The bytes for applicationName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApplicationNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        applicationName_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateAuthApplicationResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateAuthApplicationResponse)
+    private static final viam.app.v1.EndUser.UpdateAuthApplicationResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new viam.app.v1.EndUser.UpdateAuthApplicationResponse();
+    }
+
+    public static viam.app.v1.EndUser.UpdateAuthApplicationResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateAuthApplicationResponse>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateAuthApplicationResponse>() {
+      @java.lang.Override
+      public UpdateAuthApplicationResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateAuthApplicationResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateAuthApplicationResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public viam.app.v1.EndUser.UpdateAuthApplicationResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_viam_app_v1_IsLegalAcceptedRequest_descriptor;
   private static final 
@@ -1723,6 +5971,26 @@ public final class EndUser {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_viam_app_v1_AcceptLegalResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_viam_app_v1_RegisterAuthApplicationRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_viam_app_v1_RegisterAuthApplicationRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_viam_app_v1_RegisterAuthApplicationResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_viam_app_v1_RegisterAuthApplicationResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_viam_app_v1_UpdateAuthApplicationRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_viam_app_v1_UpdateAuthApplicationRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_viam_app_v1_UpdateAuthApplicationResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_viam_app_v1_UpdateAuthApplicationResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1736,13 +6004,36 @@ public final class EndUser {
       "IsLegalAcceptedRequest\"@\n\027IsLegalAccepte" +
       "dResponse\022%\n\016accepted_legal\030\001 \001(\010R\raccep" +
       "tedLegal\"\024\n\022AcceptLegalRequest\"\025\n\023Accept" +
-      "LegalResponse2\300\001\n\016EndUserService\022\\\n\017IsLe" +
-      "galAccepted\022#.viam.app.v1.IsLegalAccepte" +
-      "dRequest\032$.viam.app.v1.IsLegalAcceptedRe" +
-      "sponse\022P\n\013AcceptLegal\022\037.viam.app.v1.Acce" +
-      "ptLegalRequest\032 .viam.app.v1.AcceptLegal" +
-      "ResponseB\030Z\026go.viam.com/api/app/v1b\006prot" +
-      "o3"
+      "LegalResponse\"\307\001\n\036RegisterAuthApplicatio" +
+      "nRequest\022)\n\020application_name\030\001 \001(\tR\017appl" +
+      "icationName\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\037\n\013or" +
+      "igin_uris\030\003 \003(\tR\noriginUris\022#\n\rredirect_" +
+      "uris\030\004 \003(\tR\014redirectUris\022\035\n\nlogout_uri\030\005" +
+      " \001(\tR\tlogoutUri\"\213\001\n\037RegisterAuthApplicat" +
+      "ionResponse\022%\n\016application_id\030\001 \001(\tR\rapp" +
+      "licationId\022)\n\020application_name\030\002 \001(\tR\017ap" +
+      "plicationName\022\026\n\006secret\030\003 \001(\tR\006secret\"\354\001" +
+      "\n\034UpdateAuthApplicationRequest\022\025\n\006org_id" +
+      "\030\001 \001(\tR\005orgId\022%\n\016application_id\030\002 \001(\tR\ra" +
+      "pplicationId\022)\n\020application_name\030\003 \001(\tR\017" +
+      "applicationName\022\037\n\013origin_uris\030\004 \003(\tR\nor" +
+      "iginUris\022#\n\rredirect_uris\030\005 \003(\tR\014redirec" +
+      "tUris\022\035\n\nlogout_uri\030\006 \001(\tR\tlogoutUri\"q\n\035" +
+      "UpdateAuthApplicationResponse\022%\n\016applica" +
+      "tion_id\030\001 \001(\tR\rapplicationId\022)\n\020applicat" +
+      "ion_name\030\002 \001(\tR\017applicationName2\246\003\n\016EndU" +
+      "serService\022\\\n\017IsLegalAccepted\022#.viam.app" +
+      ".v1.IsLegalAcceptedRequest\032$.viam.app.v1" +
+      ".IsLegalAcceptedResponse\022P\n\013AcceptLegal\022" +
+      "\037.viam.app.v1.AcceptLegalRequest\032 .viam." +
+      "app.v1.AcceptLegalResponse\022t\n\027RegisterAu" +
+      "thApplication\022+.viam.app.v1.RegisterAuth" +
+      "ApplicationRequest\032,.viam.app.v1.Registe" +
+      "rAuthApplicationResponse\022n\n\025UpdateAuthAp" +
+      "plication\022).viam.app.v1.UpdateAuthApplic" +
+      "ationRequest\032*.viam.app.v1.UpdateAuthApp" +
+      "licationResponseB\030Z\026go.viam.com/api/app/" +
+      "v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1772,6 +6063,30 @@ public final class EndUser {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_viam_app_v1_AcceptLegalResponse_descriptor,
         new java.lang.String[] { });
+    internal_static_viam_app_v1_RegisterAuthApplicationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_viam_app_v1_RegisterAuthApplicationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_viam_app_v1_RegisterAuthApplicationRequest_descriptor,
+        new java.lang.String[] { "ApplicationName", "OrgId", "OriginUris", "RedirectUris", "LogoutUri", });
+    internal_static_viam_app_v1_RegisterAuthApplicationResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_viam_app_v1_RegisterAuthApplicationResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_viam_app_v1_RegisterAuthApplicationResponse_descriptor,
+        new java.lang.String[] { "ApplicationId", "ApplicationName", "Secret", });
+    internal_static_viam_app_v1_UpdateAuthApplicationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_viam_app_v1_UpdateAuthApplicationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_viam_app_v1_UpdateAuthApplicationRequest_descriptor,
+        new java.lang.String[] { "OrgId", "ApplicationId", "ApplicationName", "OriginUris", "RedirectUris", "LogoutUri", });
+    internal_static_viam_app_v1_UpdateAuthApplicationResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_viam_app_v1_UpdateAuthApplicationResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_viam_app_v1_UpdateAuthApplicationResponse_descriptor,
+        new java.lang.String[] { "ApplicationId", "ApplicationName", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

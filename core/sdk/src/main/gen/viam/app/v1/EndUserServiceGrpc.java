@@ -77,6 +77,68 @@ public final class EndUserServiceGrpc {
     return getAcceptLegalMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.EndUser.RegisterAuthApplicationRequest,
+      viam.app.v1.EndUser.RegisterAuthApplicationResponse> getRegisterAuthApplicationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RegisterAuthApplication",
+      requestType = viam.app.v1.EndUser.RegisterAuthApplicationRequest.class,
+      responseType = viam.app.v1.EndUser.RegisterAuthApplicationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.EndUser.RegisterAuthApplicationRequest,
+      viam.app.v1.EndUser.RegisterAuthApplicationResponse> getRegisterAuthApplicationMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.EndUser.RegisterAuthApplicationRequest, viam.app.v1.EndUser.RegisterAuthApplicationResponse> getRegisterAuthApplicationMethod;
+    if ((getRegisterAuthApplicationMethod = EndUserServiceGrpc.getRegisterAuthApplicationMethod) == null) {
+      synchronized (EndUserServiceGrpc.class) {
+        if ((getRegisterAuthApplicationMethod = EndUserServiceGrpc.getRegisterAuthApplicationMethod) == null) {
+          EndUserServiceGrpc.getRegisterAuthApplicationMethod = getRegisterAuthApplicationMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.EndUser.RegisterAuthApplicationRequest, viam.app.v1.EndUser.RegisterAuthApplicationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RegisterAuthApplication"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.v1.EndUser.RegisterAuthApplicationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.v1.EndUser.RegisterAuthApplicationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new EndUserServiceMethodDescriptorSupplier("RegisterAuthApplication"))
+              .build();
+        }
+      }
+    }
+    return getRegisterAuthApplicationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<viam.app.v1.EndUser.UpdateAuthApplicationRequest,
+      viam.app.v1.EndUser.UpdateAuthApplicationResponse> getUpdateAuthApplicationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAuthApplication",
+      requestType = viam.app.v1.EndUser.UpdateAuthApplicationRequest.class,
+      responseType = viam.app.v1.EndUser.UpdateAuthApplicationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<viam.app.v1.EndUser.UpdateAuthApplicationRequest,
+      viam.app.v1.EndUser.UpdateAuthApplicationResponse> getUpdateAuthApplicationMethod() {
+    io.grpc.MethodDescriptor<viam.app.v1.EndUser.UpdateAuthApplicationRequest, viam.app.v1.EndUser.UpdateAuthApplicationResponse> getUpdateAuthApplicationMethod;
+    if ((getUpdateAuthApplicationMethod = EndUserServiceGrpc.getUpdateAuthApplicationMethod) == null) {
+      synchronized (EndUserServiceGrpc.class) {
+        if ((getUpdateAuthApplicationMethod = EndUserServiceGrpc.getUpdateAuthApplicationMethod) == null) {
+          EndUserServiceGrpc.getUpdateAuthApplicationMethod = getUpdateAuthApplicationMethod =
+              io.grpc.MethodDescriptor.<viam.app.v1.EndUser.UpdateAuthApplicationRequest, viam.app.v1.EndUser.UpdateAuthApplicationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAuthApplication"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.v1.EndUser.UpdateAuthApplicationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  viam.app.v1.EndUser.UpdateAuthApplicationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new EndUserServiceMethodDescriptorSupplier("UpdateAuthApplication"))
+              .build();
+        }
+      }
+    }
+    return getUpdateAuthApplicationMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -145,6 +207,26 @@ public final class EndUserServiceGrpc {
         io.grpc.stub.StreamObserver<viam.app.v1.EndUser.AcceptLegalResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAcceptLegalMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Allows users to register third party auth applications using Viam linked to the indicated organization
+     * </pre>
+     */
+    default void registerAuthApplication(viam.app.v1.EndUser.RegisterAuthApplicationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.EndUser.RegisterAuthApplicationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterAuthApplicationMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Allows users to update their third party auth applications
+     * </pre>
+     */
+    default void updateAuthApplication(viam.app.v1.EndUser.UpdateAuthApplicationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.EndUser.UpdateAuthApplicationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAuthApplicationMethod(), responseObserver);
+    }
   }
 
   /**
@@ -196,6 +278,28 @@ public final class EndUserServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAcceptLegalMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Allows users to register third party auth applications using Viam linked to the indicated organization
+     * </pre>
+     */
+    public void registerAuthApplication(viam.app.v1.EndUser.RegisterAuthApplicationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.EndUser.RegisterAuthApplicationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRegisterAuthApplicationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Allows users to update their third party auth applications
+     * </pre>
+     */
+    public void updateAuthApplication(viam.app.v1.EndUser.UpdateAuthApplicationRequest request,
+        io.grpc.stub.StreamObserver<viam.app.v1.EndUser.UpdateAuthApplicationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateAuthApplicationMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -233,6 +337,26 @@ public final class EndUserServiceGrpc {
     public viam.app.v1.EndUser.AcceptLegalResponse acceptLegal(viam.app.v1.EndUser.AcceptLegalRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAcceptLegalMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Allows users to register third party auth applications using Viam linked to the indicated organization
+     * </pre>
+     */
+    public viam.app.v1.EndUser.RegisterAuthApplicationResponse registerAuthApplication(viam.app.v1.EndUser.RegisterAuthApplicationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRegisterAuthApplicationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Allows users to update their third party auth applications
+     * </pre>
+     */
+    public viam.app.v1.EndUser.UpdateAuthApplicationResponse updateAuthApplication(viam.app.v1.EndUser.UpdateAuthApplicationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateAuthApplicationMethod(), getCallOptions(), request);
     }
   }
 
@@ -274,10 +398,34 @@ public final class EndUserServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAcceptLegalMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Allows users to register third party auth applications using Viam linked to the indicated organization
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.EndUser.RegisterAuthApplicationResponse> registerAuthApplication(
+        viam.app.v1.EndUser.RegisterAuthApplicationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRegisterAuthApplicationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Allows users to update their third party auth applications
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<viam.app.v1.EndUser.UpdateAuthApplicationResponse> updateAuthApplication(
+        viam.app.v1.EndUser.UpdateAuthApplicationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateAuthApplicationMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_IS_LEGAL_ACCEPTED = 0;
   private static final int METHODID_ACCEPT_LEGAL = 1;
+  private static final int METHODID_REGISTER_AUTH_APPLICATION = 2;
+  private static final int METHODID_UPDATE_AUTH_APPLICATION = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -303,6 +451,14 @@ public final class EndUserServiceGrpc {
         case METHODID_ACCEPT_LEGAL:
           serviceImpl.acceptLegal((viam.app.v1.EndUser.AcceptLegalRequest) request,
               (io.grpc.stub.StreamObserver<viam.app.v1.EndUser.AcceptLegalResponse>) responseObserver);
+          break;
+        case METHODID_REGISTER_AUTH_APPLICATION:
+          serviceImpl.registerAuthApplication((viam.app.v1.EndUser.RegisterAuthApplicationRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.EndUser.RegisterAuthApplicationResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_AUTH_APPLICATION:
+          serviceImpl.updateAuthApplication((viam.app.v1.EndUser.UpdateAuthApplicationRequest) request,
+              (io.grpc.stub.StreamObserver<viam.app.v1.EndUser.UpdateAuthApplicationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -336,6 +492,20 @@ public final class EndUserServiceGrpc {
               viam.app.v1.EndUser.AcceptLegalRequest,
               viam.app.v1.EndUser.AcceptLegalResponse>(
                 service, METHODID_ACCEPT_LEGAL)))
+        .addMethod(
+          getRegisterAuthApplicationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.EndUser.RegisterAuthApplicationRequest,
+              viam.app.v1.EndUser.RegisterAuthApplicationResponse>(
+                service, METHODID_REGISTER_AUTH_APPLICATION)))
+        .addMethod(
+          getUpdateAuthApplicationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              viam.app.v1.EndUser.UpdateAuthApplicationRequest,
+              viam.app.v1.EndUser.UpdateAuthApplicationResponse>(
+                service, METHODID_UPDATE_AUTH_APPLICATION)))
         .build();
   }
 
@@ -386,6 +556,8 @@ public final class EndUserServiceGrpc {
               .setSchemaDescriptor(new EndUserServiceFileDescriptorSupplier())
               .addMethod(getIsLegalAcceptedMethod())
               .addMethod(getAcceptLegalMethod())
+              .addMethod(getRegisterAuthApplicationMethod())
+              .addMethod(getUpdateAuthApplicationMethod())
               .build();
         }
       }
