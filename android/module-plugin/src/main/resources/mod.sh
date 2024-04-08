@@ -1,13 +1,5 @@
 #!/bin/sh
 
-# These exports are necessary for app_process to have the right runtime setup. These were inferred
-# from reading AOSP code and following straces.
-export ANDROID_DATA="/data"
-export ANDROID_ROOT="/system"
-export ANDROID_TZDATA_ROOT="/apex/com.android.tzdata"
-export ANDROID_RUNTIME_ROOT="/apex/com.android.runtime"
-export BOOTCLASSPATH=/apex/com.android.runtime/javalib/core-oj.jar:/apex/com.android.runtime/javalib/core-libart.jar:/apex/com.android.runtime/javalib/okhttp.jar:/apex/com.android.runtime/javalib/bouncycastle.jar:/apex/com.android.runtime/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/android.test.base.jar:/apex/com.android.conscrypt/javalib/conscrypt.jar:/apex/com.android.media/javalib/updatable-media.jar
-
 CWD=`pwd`
 JAR_PATH=__MODULE_JAR_PATH__
 JAR_PARENT_PATH="$(realpath $(dirname "$JAR_PATH"))"
