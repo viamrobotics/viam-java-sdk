@@ -5,6 +5,7 @@ import com.viam.common.v1.Common.ResourceName;
 import com.viam.component.generic.v1.GenericServiceGrpc;
 import com.viam.component.gripper.v1.GripperServiceGrpc;
 import com.viam.component.movementsensor.v1.MovementSensorServiceGrpc;
+import com.viam.component.sensor.v1.SensorServiceGrpc;
 import com.viam.sdk.core.component.generic.Generic;
 import com.viam.sdk.core.component.generic.GenericRPCClient;
 import com.viam.sdk.core.component.generic.GenericRPCService;
@@ -14,6 +15,9 @@ import com.viam.sdk.core.component.gripper.GripperRPCService;
 import com.viam.sdk.core.component.movementsensor.MovementSensor;
 import com.viam.sdk.core.component.movementsensor.MovementSensorRPCClient;
 import com.viam.sdk.core.component.movementsensor.MovementSensorRPCService;
+import com.viam.sdk.core.component.sensor.Sensor;
+import com.viam.sdk.core.component.sensor.SensorRPCClient;
+import com.viam.sdk.core.component.sensor.SensorRPCService;
 import com.viam.sdk.core.exception.DuplicateResourceException;
 import com.viam.sdk.core.exception.ResourceNotFoundException;
 import com.viam.sdk.core.service.datamanager.DataManager;
@@ -163,7 +167,12 @@ public class ResourceManager implements Closeable {
         MovementSensorRPCService::new,
         MovementSensorRPCClient::new
     ));
-
+    Registry.registerSubtype(new ResourceRegistration<>(
+        Sensor.SUBTYPE,
+        SensorServiceGrpc.SERVICE_NAME,
+        SensorRPCService::new,
+        SensorRPCClient::new
+    ));
     Registry.registerSubtype(new ResourceRegistration<>(
         Sensors.SUBTYPE,
         SensorsServiceGrpc.SERVICE_NAME,

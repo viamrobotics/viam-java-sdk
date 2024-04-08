@@ -3,6 +3,7 @@ package com.viam.sdk.core.component.sensor;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import com.viam.common.v1.Common;
+import com.viam.common.v1.Common.GetReadingsResponse;
 import com.viam.common.v1.Common.ResourceName;
 import com.viam.sdk.core.component.Component;
 import com.viam.sdk.core.component.generic.Generic;
@@ -22,6 +23,10 @@ public abstract class Sensor extends Component {
       Subtype.NAMESPACE_RDK,
       Subtype.RESOURCE_TYPE_COMPONENT,
       "sensor");
+
+  public Sensor(final String name) {
+    super(SUBTYPE, named(name));
+  }
 
   public Sensor(Subtype subtype, ResourceName name) {
     super(subtype, name);
@@ -47,4 +52,6 @@ public abstract class Sensor extends Component {
   public static Sensor fromRobot(final RobotClient robot, final String name) {
     return robot.getResource(Sensor.class, named(name));
   }
+
+  public abstract GetReadingsResponse getReadings(final Optional<Struct> extra);
 }
