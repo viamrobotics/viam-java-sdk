@@ -3,6 +3,7 @@ package com.viam.sdk.android.module;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.LocalSocketAddress;
+import android.os.Looper;
 import com.viam.sdk.android.module.fake.FakeContext;
 import com.viam.sdk.core.module.BaseModule;
 import com.viam.sdk.core.robot.RobotClient;
@@ -33,6 +34,7 @@ public class Module extends BaseModule {
    */
   public Module(final String[] args) {
     super(args);
+    Looper.prepareMainLooper();
   }
 
   /**
