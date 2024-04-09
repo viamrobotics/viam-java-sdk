@@ -3,7 +3,6 @@ package com.viam.sdk.android.module;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.LocalSocketAddress;
-import android.os.Looper;
 import com.viam.sdk.android.module.fake.FakeContext;
 import com.viam.sdk.core.module.BaseModule;
 import com.viam.sdk.core.robot.RobotClient;
@@ -18,10 +17,13 @@ import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.ByteBuffer;
 import java.util.List;
+import java.util.function.Supplier;
 import org.apache.commons.io.IOUtils;
 import org.webrtc.MediaStream;
 
 public class Module extends BaseModule {
+
+  private static Supplier<Context> parentContext;
 
   RobotClient parent;
 
@@ -34,7 +36,14 @@ public class Module extends BaseModule {
    */
   public Module(final String[] args) {
     super(args);
-    Looper.prepareMainLooper();
+  }
+
+  public static Context getParentContext() {
+    if (parentContext == null) {
+      throw new RuntimeException(
+          "invalid module state with no parent context (not running as in-process module?)");
+    }
+    return parentContext.get();
   }
 
   /**

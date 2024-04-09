@@ -18,6 +18,7 @@ include ':core:sdk',
         ':android:module-plugin',
         ':android:examples:simple',
         ':android:examples:module',
+        ':android:examples:module-in-process',
         ':android:examples:mlmodel-module'
 
 project(':core:sdk').name = 'viam-core-sdk'
@@ -30,4 +31,5 @@ project(':android:services:mlmodel').name = 'viam-android-sdk-mlmodel-service'
 project(':android:module-plugin').name = 'viam-android-module'
 project(':android:examples:simple').name = 'viam-android-sdk-examples-simple'
 project(':android:examples:module').name = 'viam-android-sdk-examples-module'
+project(':android:examples:module-in-process').name = 'viam-android-sdk-examples-module-in-process'
 project(':android:examples:mlmodel-module').name = 'viam-android-sdk-examples-mlmodel-module'

@@ -15,6 +15,8 @@ interface AndroidModulePluginExtension {
     Property<String> getMainEntryClass()
 
     Property<Boolean> getForce32Bit()
+
+    Property<Boolean> getExecuteInProcess()
 }
 
 abstract class CopyModuleTask extends DefaultTask {
@@ -37,6 +39,7 @@ abstract class CopyModuleTask extends DefaultTask {
 class AndroidModulePlugin implements Plugin<Project> {
     void apply(Project project) {
         def extension = project.extensions.create('module', AndroidModulePluginExtension)
+
         // Note(erd): based on research, going the route of an android library makes it *very*
         // difficult to maintain the logic of how to create a "fat AAR" such that we have all
         // dependencies (including transitive) in one package. Using application naturally gets
@@ -49,6 +52,7 @@ class AndroidModulePlugin implements Plugin<Project> {
             if (!extension.mainEntryClass.isPresent()) {
                 throw new Exception("Must set module.mainEntryClass")
             }
+            def executeInProcess = extension.executeInProcess.getOrElse(false)
 
             project.android.applicationVariants.all { variant ->
                 def outputFile = variant.outputs.first().outputFile
@@ -57,7 +61,9 @@ class AndroidModulePlugin implements Plugin<Project> {
 
                 def tmpModDir = "${project.layout.buildDirectory.get()}/tmp/module"
                 project.file(tmpModDir).mkdirs()
-                def modScript = getClass().getResourceAsStream("/mod.sh").getText()
+                def modScript = executeInProcess ?
+                        getClass().getResourceAsStream("/mod-in-process.sh").getText() :
+                        getClass().getResourceAsStream("/mod.sh").getText()
 
                 assembleTask.configure {
                     doLast {
