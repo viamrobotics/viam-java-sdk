@@ -43,7 +43,10 @@ intentURI="$intentURI;S.proc_file=$proc_file"
 intentURI="$intentURI;S.java_class_path=$SAFE_JAR_PATH"
 intentURI="$intentURI;S.java_library_path=$LIBRARY_PATH"
 intentURI="$intentURI;S.java_entry_point_class=__MAIN_ENTRY_CLASS__"
+saveIFS="$IFS"
+IFS=$'\n'
 intentURI="$intentURI;S.java_entry_point_args=$*"
+IFS=$saveIFS
 intentURI="$intentURI;end"
 am broadcast --user -3 "$intentURI"
 
