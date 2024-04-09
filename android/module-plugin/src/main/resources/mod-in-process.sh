@@ -48,6 +48,13 @@ IFS=$'\n'
 intentURI="$intentURI;S.java_entry_point_args=$*"
 IFS=$saveIFS
 intentURI="$intentURI;end"
+
+# Note(erd):
+# user being -3 is USER_CURRENT_OR_SELF which works better than -2 (USER_CURRENT).
+# When passing nothing before or even the same UID as the Viam APK, this would fail with
+# a tautological message. -2 did not help. -3 allowed this new process (in the shell) to
+# execute as the self user from a user process. I assume user process is some other pid
+# that is not the app itself.
 am broadcast --user -3 "$intentURI"
 
 while [ ! -f $proc_file ]; do sleep 0.1; done
