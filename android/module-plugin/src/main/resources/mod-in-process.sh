@@ -54,7 +54,8 @@ intentURI="$intentURI;end"
 # When passing nothing before or even the same UID as the Viam APK, this would fail with
 # a tautological message. -2 did not help. -3 allowed this new process (in the shell) to
 # execute as the self user from a user process. I assume user process is some other pid
-# that is not the app itself.
+# that is not the app itself. Also, the "current" option is -2 and I found no human readable
+# option that is for -3.
 am broadcast --user -3 "$intentURI"
 
 while [ ! -f $proc_file ]; do sleep 0.1; done
