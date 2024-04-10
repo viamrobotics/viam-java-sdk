@@ -35,7 +35,11 @@ fi
 
 proc_file=$(mktemp -p $_VIAM_FG_TEMP_DIR)
 rm $proc_file
-trap 'rm -rf -- "$proc_file"' EXIT
+
+removeTempFile() {
+  rm -rf -- "$proc_file"
+}
+trap removeTempFile EXIT
 
 intentURI="intent:#Intent;action=com.viam.rdk.fgservice.START_MODULE"
 intentURI="$intentURI;S.secret=$_VIAM_FG_SECRET"
@@ -57,6 +61,14 @@ intentURI="$intentURI;end"
 # that is not the app itself. Also, the "current" option is -2 and I found no human readable
 # option that is for -3.
 am broadcast --user -3 "$intentURI"
+stopModule() {
+  intentURI="intent:#Intent;action=com.viam.rdk.fgservice.STOP_MODULE"
+  intentURI="$intentURI;S.secret=$_VIAM_FG_SECRET"
+  intentURI="$intentURI;S.java_entry_point_class=__MAIN_ENTRY_CLASS__"
+  intentURI="$intentURI;end"
+  am broadcast --user -3 "$intentURI"
+}
+trap stopModule SIGTERM
 
 while [ ! -f $proc_file ]; do sleep 0.1; done
-cat $proc_file
+exit "$(cat $proc_file)"

@@ -32,11 +32,11 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.function.Function;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 /**
  * @noinspection NullableProblems
@@ -46,9 +46,14 @@ public class FakeContext extends Context {
   private final String filesDir;
   private final ContentResolver resolver;
   private static Context systemContext = null;
+  private static boolean accessible = true;
 
   public FakeContext(final String filesDir,
       final Function<Context, ContentResolver> resolverFactory) {
+    if (!accessible) {
+      throw new UnsupportedOperationException(
+          "not allowed to use FakeContext in this type of module");
+    }
     this.filesDir = filesDir;
     this.resolver = resolverFactory.apply(this);
   }
@@ -65,15 +70,22 @@ public class FakeContext extends Context {
 
   // create a ContextImpl instance with reflection.
   static Context createSystemContext() {
+    if (!accessible) {
+      throw new UnsupportedOperationException(
+          "not allowed to use FakeContext in this type of module");
+    }
     try {
       Class ContextImpl = Class.forName("android.app.ContextImpl");
       Class ActivityThread = Class.forName("android.app.ActivityThread");
       Object thread = ActivityThread.getDeclaredConstructors()[0].newInstance();
-      Method createSystemContext = ContextImpl.getDeclaredMethod("createSystemContext", ActivityThread);
+      Method createSystemContext = ContextImpl.getDeclaredMethod("createSystemContext",
+          ActivityThread);
       createSystemContext.setAccessible(true);
       return (Context) createSystemContext.invoke(null, new Object[]{thread});
-    } catch (ClassNotFoundException | InvocationTargetException | UnsupportedOperationException | NoSuchMethodException | IllegalAccessException | InstantiationException e) {
-       throw new UnsupportedOperationException("getPackageManager, " + e + ", cause " + e.getCause());
+    } catch (ClassNotFoundException | InvocationTargetException | UnsupportedOperationException |
+             NoSuchMethodException | IllegalAccessException | InstantiationException e) {
+      throw new UnsupportedOperationException(
+          "getPackageManager, " + e + ", cause " + e.getCause());
     }
   }
 

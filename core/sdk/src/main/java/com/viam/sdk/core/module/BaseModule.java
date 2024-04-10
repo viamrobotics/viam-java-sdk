@@ -34,6 +34,8 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 import java.util.function.Function;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
@@ -90,7 +92,9 @@ public abstract class BaseModule extends ModuleServiceGrpc.ModuleServiceImplBase
           LOGGER.severe("[ERROR] Uncaught exception: " + throwable);
           throwable.printStackTrace();
         });
-    server = new Server(Collections.emptyList(), getServerBuilder(), new ModuleRPCService(this));
+    final Executor executor = Executors.newCachedThreadPool(Executors.defaultThreadFactory());
+    final ServerBuilder<?> builder = getServerBuilder().executor(executor);
+    server = new Server(Collections.emptyList(), builder, new ModuleRPCService(this));
   }
 
   protected Level getLogLevel() {

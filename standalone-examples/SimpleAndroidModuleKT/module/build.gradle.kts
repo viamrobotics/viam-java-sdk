@@ -1,5 +1,5 @@
 plugins {
-    id("com.viam.sdk.android.module") version ("1.0-SNAPSHOT")
+    id("com.viam.sdk.android.module") version ("0.0.1")
     id("org.jetbrains.kotlin.android")
 }
 
@@ -21,7 +21,10 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -34,5 +37,5 @@ android {
 }
 
 dependencies {
-    implementation("com.viam:viam-android-sdk:1.0-SNAPSHOT")
+    implementation("com.viam:viam-android-sdk:0.0.1")
 }

@@ -3,6 +3,7 @@ package com.viam.sdk.android.module;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.net.LocalSocketAddress;
+import android.os.Looper;
 import com.viam.sdk.android.module.fake.FakeContext;
 import com.viam.sdk.core.module.BaseModule;
 import com.viam.sdk.core.robot.RobotClient;
@@ -36,6 +37,15 @@ public class Module extends BaseModule {
    */
   public Module(final String[] args) {
     super(args);
+
+    // if we're running out of process, we may need this. noop otherwise
+    try {
+      if (Looper.getMainLooper() == null) {
+        Looper.prepareMainLooper();
+      }
+    } catch (IllegalStateException ignored) {
+    }
+
   }
 
   public static Context getParentContext() {

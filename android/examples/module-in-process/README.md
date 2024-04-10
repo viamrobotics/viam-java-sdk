@@ -11,9 +11,4 @@ How to use:
 * It's exactly the same as a normal module except in the `module` gradle configuration block, you
   use `executeInProcess = true`. This allows access to `Module.getParentContext()`.
 
-What's not tested:
-
-* Multiple modules running in-process
-* Logging
-
 See [examples/module](../module/README.md) for more info.
