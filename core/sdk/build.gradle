@@ -1,8 +1,18 @@
+buildscript {
+    ext.kotlin_version = '1.9.23'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
 plugins {
     id "com.github.hierynomus.license-report" version "0.16.1"
 }
 
 apply plugin: 'java-library'
+apply plugin: 'kotlin'
 
 ext.pomDisplayName = "Viam Core SDK"
 
@@ -16,6 +26,7 @@ dependencies {
     api 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
 
 test {
@@ -34,11 +45,15 @@ sourceSets {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
 }
 
 downloadLicenses {
     includeProjectDependencies = true
     dependencyConfiguration = 'runtimeClasspath'
+}
+repositories {
+    mavenCentral()
+}
+kotlin {
+    jvmToolchain(11)
 }

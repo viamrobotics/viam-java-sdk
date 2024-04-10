@@ -2,6 +2,12 @@ pluginManagement {
     // Note: including this along with the include as a subproject will cause duplicate content
     // roots. Just don't worry about it, it's not worth figuring out :)
     includeBuild("android/module-plugin")
+    plugins {
+        id 'org.jetbrains.kotlin.jvm' version '1.9.23'
+    }
+}
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.5.0'
 }
 
 rootProject.name = 'Viam-SDK'
