@@ -45,4 +45,4 @@ fi
 # [Native]Activity. It will give us all the android runtime dependencies we need.
 ${APP_PROCESS_NAME} -Djava.class.path="$SAFE_JAR_PATH" -Djava.library.path="$LIBRARY_PATH" \
             /system/bin __MAIN_ENTRY_CLASS__ "$@"
-echo $?
+exit $?

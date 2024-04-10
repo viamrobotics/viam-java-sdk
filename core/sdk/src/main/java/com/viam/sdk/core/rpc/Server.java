@@ -69,8 +69,10 @@ public class Server extends ResourceManager {
       server.start();
       server.awaitTermination();
     } catch (IOException | InterruptedException e) {
-      LOGGER.severe("Error starting server: " + e);
-      throw new RuntimeException(e);
+      if (!(e instanceof InterruptedException)) {
+        LOGGER.severe("Error starting server: " + e);
+        throw new RuntimeException(e);
+      }
     } finally {
       LOGGER.fine("gRPC server closed");
     }
