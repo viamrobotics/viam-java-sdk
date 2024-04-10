@@ -9,6 +9,6 @@ public class ModelNotFoundException extends StatusRuntimeException {
 
   public ModelNotFoundException(final Subtype subtype, final Model model) {
     super(Status.NOT_FOUND.withDescription(
-        String.format("No %s with subtype \"%s\" found in the registry", subtype, model)));
+        String.format("No %s with model \"%s\" found in the registry", subtype, model)));
   }
 }
