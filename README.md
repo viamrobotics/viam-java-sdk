@@ -1,5 +1,35 @@
 # Viam Java SDK
 
+> [!WARNING]  
+> This is an alpha release of the Viam Java SDK. 
+> No guarantees are made to the stability of the API.
+
+## Installation
+
+This SDK provides Java and Android libraries. To install, add appropriate dependency to your gradle file:
+
+```groovy
+// build.gradle
+
+dependencies {
+    // For Java
+    implementation 'com.viam:viam-java-sdk'
+
+    // For Android
+    implementation 'com.viam:viam-android-sdk'
+}
+```
+
+The SDK also provides additional packages to enable various functionality:
+
+* `viam-java-sdk-mlmodel-service` and `viam-android-sdk-mlmodel-service` for [machine learning models](https://docs.viam.com/ml/)
+* `viam-android-module` for running modules on Android
+
+See examples for more information:
+* [Java Examples](https://github.com/viamrobotics/viam-java-sdk/tree/main/java/examples/src/main/java/com/viam/sdk/java/examples)
+* [Android Examples](https://github.com/viamrobotics/viam-java-sdk/tree/main/android/examples)
+
+
 ## Dependencies
 
 * JDK 21+ (source is Java 11 compatible) (be sure to set `JAVA_HOME`)
