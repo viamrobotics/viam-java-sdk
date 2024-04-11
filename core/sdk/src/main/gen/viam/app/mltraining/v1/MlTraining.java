@@ -142,6 +142,141 @@ public final class MlTraining {
   }
 
   /**
+   * Protobuf enum {@code viam.app.mltraining.v1.ModelFramework}
+   */
+  public enum ModelFramework
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>MODEL_FRAMEWORK_UNSPECIFIED = 0;</code>
+     */
+    MODEL_FRAMEWORK_UNSPECIFIED(0),
+    /**
+     * <code>MODEL_FRAMEWORK_TFLITE = 1;</code>
+     */
+    MODEL_FRAMEWORK_TFLITE(1),
+    /**
+     * <code>MODEL_FRAMEWORK_TENSORFLOW = 2;</code>
+     */
+    MODEL_FRAMEWORK_TENSORFLOW(2),
+    /**
+     * <code>MODEL_FRAMEWORK_PYTORCH = 3;</code>
+     */
+    MODEL_FRAMEWORK_PYTORCH(3),
+    /**
+     * <code>MODEL_FRAMEWORK_ONNX = 4;</code>
+     */
+    MODEL_FRAMEWORK_ONNX(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>MODEL_FRAMEWORK_UNSPECIFIED = 0;</code>
+     */
+    public static final int MODEL_FRAMEWORK_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>MODEL_FRAMEWORK_TFLITE = 1;</code>
+     */
+    public static final int MODEL_FRAMEWORK_TFLITE_VALUE = 1;
+    /**
+     * <code>MODEL_FRAMEWORK_TENSORFLOW = 2;</code>
+     */
+    public static final int MODEL_FRAMEWORK_TENSORFLOW_VALUE = 2;
+    /**
+     * <code>MODEL_FRAMEWORK_PYTORCH = 3;</code>
+     */
+    public static final int MODEL_FRAMEWORK_PYTORCH_VALUE = 3;
+    /**
+     * <code>MODEL_FRAMEWORK_ONNX = 4;</code>
+     */
+    public static final int MODEL_FRAMEWORK_ONNX_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ModelFramework valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ModelFramework forNumber(int value) {
+      switch (value) {
+        case 0: return MODEL_FRAMEWORK_UNSPECIFIED;
+        case 1: return MODEL_FRAMEWORK_TFLITE;
+        case 2: return MODEL_FRAMEWORK_TENSORFLOW;
+        case 3: return MODEL_FRAMEWORK_PYTORCH;
+        case 4: return MODEL_FRAMEWORK_ONNX;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ModelFramework>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ModelFramework> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ModelFramework>() {
+            public ModelFramework findValueByNumber(int number) {
+              return ModelFramework.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return viam.app.mltraining.v1.MlTraining.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final ModelFramework[] VALUES = values();
+
+    public static ModelFramework valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ModelFramework(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:viam.app.mltraining.v1.ModelFramework)
+  }
+
+  /**
    * Protobuf enum {@code viam.app.mltraining.v1.TrainingStatus}
    */
   public enum TrainingStatus
@@ -268,7 +403,7 @@ public final class MlTraining {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.getDescriptor().getEnumTypes().get(1);
+      return viam.app.mltraining.v1.MlTraining.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final TrainingStatus[] VALUES = values();
@@ -9721,30 +9856,34 @@ public final class MlTraining {
       "\000\022*\n&MODEL_TYPE_SINGLE_LABEL_CLASSIFICAT" +
       "ION\020\001\022)\n%MODEL_TYPE_MULTI_LABEL_CLASSIFI" +
       "CATION\020\002\022\037\n\033MODEL_TYPE_OBJECT_DETECTION\020" +
-      "\003*\347\001\n\016TrainingStatus\022\037\n\033TRAINING_STATUS_" +
-      "UNSPECIFIED\020\000\022\033\n\027TRAINING_STATUS_PENDING" +
-      "\020\001\022\037\n\033TRAINING_STATUS_IN_PROGRESS\020\002\022\035\n\031T" +
-      "RAINING_STATUS_COMPLETED\020\003\022\032\n\026TRAINING_S" +
-      "TATUS_FAILED\020\004\022\034\n\030TRAINING_STATUS_CANCEL" +
-      "ED\020\005\022\035\n\031TRAINING_STATUS_CANCELING\020\0062\205\005\n\021" +
-      "MLTrainingService\022x\n\021SubmitTrainingJob\0220" +
-      ".viam.app.mltraining.v1.SubmitTrainingJo" +
-      "bRequest\0321.viam.app.mltraining.v1.Submit" +
-      "TrainingJobResponse\022o\n\016GetTrainingJob\022-." +
-      "viam.app.mltraining.v1.GetTrainingJobReq" +
-      "uest\032..viam.app.mltraining.v1.GetTrainin" +
-      "gJobResponse\022u\n\020ListTrainingJobs\022/.viam." +
-      "app.mltraining.v1.ListTrainingJobsReques" +
-      "t\0320.viam.app.mltraining.v1.ListTrainingJ" +
-      "obsResponse\022x\n\021CancelTrainingJob\0220.viam." +
-      "app.mltraining.v1.CancelTrainingJobReque" +
-      "st\0321.viam.app.mltraining.v1.CancelTraini" +
-      "ngJobResponse\022\223\001\n\032DeleteCompletedTrainin" +
-      "gJob\0229.viam.app.mltraining.v1.DeleteComp" +
-      "letedTrainingJobRequest\032:.viam.app.mltra" +
-      "ining.v1.DeleteCompletedTrainingJobRespo" +
-      "nseB#Z!go.viam.com/api/app/mltraining/v1" +
-      "b\006proto3"
+      "\003*\244\001\n\016ModelFramework\022\037\n\033MODEL_FRAMEWORK_" +
+      "UNSPECIFIED\020\000\022\032\n\026MODEL_FRAMEWORK_TFLITE\020" +
+      "\001\022\036\n\032MODEL_FRAMEWORK_TENSORFLOW\020\002\022\033\n\027MOD" +
+      "EL_FRAMEWORK_PYTORCH\020\003\022\030\n\024MODEL_FRAMEWOR" +
+      "K_ONNX\020\004*\347\001\n\016TrainingStatus\022\037\n\033TRAINING_" +
+      "STATUS_UNSPECIFIED\020\000\022\033\n\027TRAINING_STATUS_" +
+      "PENDING\020\001\022\037\n\033TRAINING_STATUS_IN_PROGRESS" +
+      "\020\002\022\035\n\031TRAINING_STATUS_COMPLETED\020\003\022\032\n\026TRA" +
+      "INING_STATUS_FAILED\020\004\022\034\n\030TRAINING_STATUS" +
+      "_CANCELED\020\005\022\035\n\031TRAINING_STATUS_CANCELING" +
+      "\020\0062\205\005\n\021MLTrainingService\022x\n\021SubmitTraini" +
+      "ngJob\0220.viam.app.mltraining.v1.SubmitTra" +
+      "iningJobRequest\0321.viam.app.mltraining.v1" +
+      ".SubmitTrainingJobResponse\022o\n\016GetTrainin" +
+      "gJob\022-.viam.app.mltraining.v1.GetTrainin" +
+      "gJobRequest\032..viam.app.mltraining.v1.Get" +
+      "TrainingJobResponse\022u\n\020ListTrainingJobs\022" +
+      "/.viam.app.mltraining.v1.ListTrainingJob" +
+      "sRequest\0320.viam.app.mltraining.v1.ListTr" +
+      "ainingJobsResponse\022x\n\021CancelTrainingJob\022" +
+      "0.viam.app.mltraining.v1.CancelTrainingJ" +
+      "obRequest\0321.viam.app.mltraining.v1.Cance" +
+      "lTrainingJobResponse\022\223\001\n\032DeleteCompleted" +
+      "TrainingJob\0229.viam.app.mltraining.v1.Del" +
+      "eteCompletedTrainingJobRequest\032:.viam.ap" +
+      "p.mltraining.v1.DeleteCompletedTrainingJ" +
+      "obResponseB#Z!go.viam.com/api/app/mltrai" +
+      "ning/v1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
