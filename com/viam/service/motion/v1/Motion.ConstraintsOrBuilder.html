@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">Motion.ConstraintsOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -119,18 +119,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="block">
  Arc constraint, Time constraint, and others will be added here when they are supported</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.CollisionSpecificationOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.CollisionSpecificationOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCollisionSpecificationOrBuilder(int)" class="member-name-link">getCollisionSpecificationOrBuilder</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Motion.CollisionSpecificationOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.CollisionSpecificationOrBuilder</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCollisionSpecificationOrBuilderList()" class="member-name-link">getCollisionSpecificationOrBuilderList</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Arc constraint, Time constraint, and others will be added here when they are supported</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.LinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.LinearConstraint</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLinearConstraint(int)" class="member-name-link">getLinearConstraint</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -145,18 +133,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.LinearConstraint.html" title="class in com.viam.service.motion.v1">Motion.LinearConstraint</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLinearConstraintList()" class="member-name-link">getLinearConstraintList</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Typed message for a specific constraint</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.LinearConstraintOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.LinearConstraintOrBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLinearConstraintOrBuilder(int)" class="member-name-link">getLinearConstraintOrBuilder</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Typed message for a specific constraint</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Motion.LinearConstraintOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.LinearConstraintOrBuilder</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLinearConstraintOrBuilderList()" class="member-name-link">getLinearConstraintOrBuilderList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Typed message for a specific constraint</div>
@@ -176,25 +152,12 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.OrientationConstraintOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.OrientationConstraintOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrientationConstraintOrBuilder(int)" class="member-name-link">getOrientationConstraintOrBuilder</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Motion.OrientationConstraintOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.OrientationConstraintOrBuilder</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOrientationConstraintOrBuilderList()" class="member-name-link">getOrientationConstraintOrBuilderList</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
-</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -240,28 +203,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getLinearConstraintOrBuilderList()">
-<h3>getLinearConstraintOrBuilderList</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Motion.LinearConstraintOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.LinearConstraintOrBuilder</a>&gt;</span>&nbsp;<span class="element-name">getLinearConstraintOrBuilderList</span>()</div>
-<div class="block"><pre>
- Typed message for a specific constraint
- </pre>
-
- <code>repeated .viam.service.motion.v1.LinearConstraint linear_constraint = 1 [json_name = "linearConstraint"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getLinearConstraintOrBuilder(int)">
-<h3>getLinearConstraintOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Motion.LinearConstraintOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.LinearConstraintOrBuilder</a></span>&nbsp;<span class="element-name">getLinearConstraintOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block"><pre>
- Typed message for a specific constraint
- </pre>
-
- <code>repeated .viam.service.motion.v1.LinearConstraint linear_constraint = 1 [json_name = "linearConstraint"];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="getOrientationConstraintList()">
 <h3>getOrientationConstraintList</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.OrientationConstraint.html" title="class in com.viam.service.motion.v1">Motion.OrientationConstraint</a>&gt;</span>&nbsp;<span class="element-name">getOrientationConstraintList</span>()</div>
@@ -279,20 +220,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <section class="detail" id="getOrientationConstraintCount()">
 <h3>getOrientationConstraintCount</h3>
 <div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getOrientationConstraintCount</span>()</div>
-<div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getOrientationConstraintOrBuilderList()">
-<h3>getOrientationConstraintOrBuilderList</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Motion.OrientationConstraintOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.OrientationConstraintOrBuilder</a>&gt;</span>&nbsp;<span class="element-name">getOrientationConstraintOrBuilderList</span>()</div>
-<div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getOrientationConstraintOrBuilder(int)">
-<h3>getOrientationConstraintOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Motion.OrientationConstraintOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.OrientationConstraintOrBuilder</a></span>&nbsp;<span class="element-name">getOrientationConstraintOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><code>repeated .viam.service.motion.v1.OrientationConstraint orientation_constraint = 2 [json_name = "orientationConstraint"];</code></div>
 </section>
 </li>
@@ -322,28 +249,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <section class="detail" id="getCollisionSpecificationCount()">
 <h3>getCollisionSpecificationCount</h3>
 <div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getCollisionSpecificationCount</span>()</div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getCollisionSpecificationOrBuilderList()">
-<h3>getCollisionSpecificationOrBuilderList</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Motion.CollisionSpecificationOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.CollisionSpecificationOrBuilder</a>&gt;</span>&nbsp;<span class="element-name">getCollisionSpecificationOrBuilderList</span>()</div>
-<div class="block"><pre>
- Arc constraint, Time constraint, and others will be added here when they are supported
- </pre>
-
- <code>repeated .viam.service.motion.v1.CollisionSpecification collision_specification = 3 [json_name = "collisionSpecification"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getCollisionSpecificationOrBuilder(int)">
-<h3>getCollisionSpecificationOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Motion.CollisionSpecificationOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.CollisionSpecificationOrBuilder</a></span>&nbsp;<span class="element-name">getCollisionSpecificationOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><pre>
  Arc constraint, Time constraint, and others will be added here when they are supported
  </pre>

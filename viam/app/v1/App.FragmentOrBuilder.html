@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">App.FragmentOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -106,18 +106,8 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.google.protobuf.Timestamp created_on = 6 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;""];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.TimestampOrBuilder</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCreatedOnOrBuilder()" class="member-name-link">getCreatedOnOrBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.google.protobuf.Timestamp created_on = 6 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;""];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Struct</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFragment()" class="member-name-link">getFragment</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.google.protobuf.Struct fragment = 3 [json_name = "fragment", (.tagger.v1.tags) = "bson:&#92;"fragment&#92;" json:&#92;"fragment&#92;""];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.StructOrBuilder</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFragmentOrBuilder()" class="member-name-link">getFragmentOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFragment()" class="member-name-link">getFragment</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.google.protobuf.Struct fragment = 3 [json_name = "fragment", (.tagger.v1.tags) = "bson:&#92;"fragment&#92;" json:&#92;"fragment&#92;""];</code></div>
 </div>
@@ -199,10 +189,7 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -281,13 +268,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getFragmentOrBuilder()">
-<h3>getFragmentOrBuilder</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.StructOrBuilder</span>&nbsp;<span class="element-name">getFragmentOrBuilder</span>()</div>
-<div class="block"><code>.google.protobuf.Struct fragment = 3 [json_name = "fragment", (.tagger.v1.tags) = "bson:&#92;"fragment&#92;" json:&#92;"fragment&#92;""];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="getOrganizationOwner()">
 <h3>getOrganizationOwner</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getOrganizationOwner</span>()</div>
@@ -340,13 +320,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The createdOn.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getCreatedOnOrBuilder()">
-<h3>getCreatedOnOrBuilder</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.TimestampOrBuilder</span>&nbsp;<span class="element-name">getCreatedOnOrBuilder</span>()</div>
-<div class="block"><code>.google.protobuf.Timestamp created_on = 6 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;""];</code></div>
 </section>
 </li>
 <li>

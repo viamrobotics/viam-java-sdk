@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">Common.PoseInFrameOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -106,24 +106,19 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Common.PoseOrBuilder.html" title="interface in com.viam.common.v1">Common.PoseOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPoseOrBuilder()" class="member-name-link">getPoseOrBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReferenceFrame()" class="member-name-link">getReferenceFrame</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>string reference_frame = 1 [json_name = "referenceFrame"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReferenceFrameBytes()" class="member-name-link">getReferenceFrameBytes</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReferenceFrame()" class="member-name-link">getReferenceFrame</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>string reference_frame = 1 [json_name = "referenceFrame"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPose()" class="member-name-link">hasPose</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReferenceFrameBytes()" class="member-name-link">getReferenceFrameBytes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>string reference_frame = 1 [json_name = "referenceFrame"];</code></div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPose()" class="member-name-link">hasPose</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code></div>
 </div>
 </div>
@@ -131,10 +126,7 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -188,13 +180,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The pose.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getPoseOrBuilder()">
-<h3>getPoseOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Common.PoseOrBuilder.html" title="interface in com.viam.common.v1">Common.PoseOrBuilder</a></span>&nbsp;<span class="element-name">getPoseOrBuilder</span>()</div>
-<div class="block"><code>.viam.common.v1.Pose pose = 2 [json_name = "pose"];</code></div>
 </section>
 </li>
 </ul>

@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">Agent.DeviceSubsystemConfigOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -107,32 +107,20 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="block">
 arbitrary config sections</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.StructOrBuilder</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAttributesOrBuilder()" class="member-name-link">getAttributesOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDisable()" class="member-name-link">getDisable</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
-arbitrary config sections</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDisable()" class="member-name-link">getDisable</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  if this subsystem is disabled and should not be started by the agent</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getForceRestart()" class="member-name-link">getForceRestart</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getForceRestart()" class="member-name-link">getForceRestart</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  force_restart will restart the subsystem, even if no updates are available</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Agent.SubsystemUpdateInfo.html" title="class in viam.app.agent.v1">Agent.SubsystemUpdateInfo</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUpdateInfo()" class="member-name-link">getUpdateInfo</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- data needed to download/validate the subsystem</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Agent.SubsystemUpdateInfoOrBuilder.html" title="interface in viam.app.agent.v1">Agent.SubsystemUpdateInfoOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUpdateInfoOrBuilder()" class="member-name-link">getUpdateInfoOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Agent.SubsystemUpdateInfo.html" title="class in viam.app.agent.v1">Agent.SubsystemUpdateInfo</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUpdateInfo()" class="member-name-link">getUpdateInfo</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  data needed to download/validate the subsystem</div>
@@ -154,10 +142,7 @@ arbitrary config sections</div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -197,17 +182,6 @@ arbitrary config sections</div>
 <dt>Returns:</dt>
 <dd>The updateInfo.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getUpdateInfoOrBuilder()">
-<h3>getUpdateInfoOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Agent.SubsystemUpdateInfoOrBuilder.html" title="interface in viam.app.agent.v1">Agent.SubsystemUpdateInfoOrBuilder</a></span>&nbsp;<span class="element-name">getUpdateInfoOrBuilder</span>()</div>
-<div class="block"><pre>
- data needed to download/validate the subsystem
- </pre>
-
- <code>.viam.app.agent.v1.SubsystemUpdateInfo update_info = 1 [json_name = "updateInfo"];</code></div>
 </section>
 </li>
 <li>
@@ -268,17 +242,6 @@ arbitrary config sections
 <dt>Returns:</dt>
 <dd>The attributes.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getAttributesOrBuilder()">
-<h3>getAttributesOrBuilder</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.StructOrBuilder</span>&nbsp;<span class="element-name">getAttributesOrBuilder</span>()</div>
-<div class="block"><pre>
-arbitrary config sections
- </pre>
-
- <code>.google.protobuf.Struct attributes = 4 [json_name = "attributes"];</code></div>
 </section>
 </li>
 </ul>

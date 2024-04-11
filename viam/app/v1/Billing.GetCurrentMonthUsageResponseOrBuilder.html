@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">Billing.GetCurrentMonthUsageResponseOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -126,28 +126,18 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.TimestampOrBuilder</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEndDateOrBuilder()" class="member-name-link">getEndDateOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>double</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRemoteControlUsageCost()" class="member-name-link">getRemoteControlUsageCost</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRemoteControlUsageCost()" class="member-name-link">getRemoteControlUsageCost</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStandardComputeUsageCost()" class="member-name-link">getStandardComputeUsageCost</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStandardComputeUsageCost()" class="member-name-link">getStandardComputeUsageCost</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Timestamp</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStartDate()" class="member-name-link">getStartDate</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.TimestampOrBuilder</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStartDateOrBuilder()" class="member-name-link">getStartDateOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Timestamp</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStartDate()" class="member-name-link">getStartDate</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code></div>
 </div>
@@ -176,10 +166,7 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -214,13 +201,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getStartDateOrBuilder()">
-<h3>getStartDateOrBuilder</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.TimestampOrBuilder</span>&nbsp;<span class="element-name">getStartDateOrBuilder</span>()</div>
-<div class="block"><code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="hasEndDate()">
 <h3>hasEndDate</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasEndDate</span>()</div>
@@ -240,13 +220,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The endDate.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getEndDateOrBuilder()">
-<h3>getEndDateOrBuilder</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.TimestampOrBuilder</span>&nbsp;<span class="element-name">getEndDateOrBuilder</span>()</div>
-<div class="block"><code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code></div>
 </section>
 </li>
 <li>

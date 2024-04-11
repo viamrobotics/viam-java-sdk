@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">Grpc.RequestOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -106,18 +106,8 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Grpc.RequestHeadersOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.RequestHeadersOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getHeadersOrBuilder()" class="member-name-link">getHeadersOrBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Grpc.RequestMessage.html" title="class in proto.rpc.webrtc.v1">Grpc.RequestMessage</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMessage()" class="member-name-link">getMessage</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Grpc.RequestMessageOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.RequestMessageOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMessageOrBuilder()" class="member-name-link">getMessageOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Grpc.RequestMessage.html" title="class in proto.rpc.webrtc.v1">Grpc.RequestMessage</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMessage()" class="member-name-link">getMessage</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code></div>
 </div>
@@ -131,32 +121,27 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Grpc.StreamOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.StreamOrBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStreamOrBuilder()" class="member-name-link">getStreamOrBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Grpc.Request.TypeCase.html" title="enum class in proto.rpc.webrtc.v1">Grpc.Request.TypeCase</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTypeCase()" class="member-name-link">getTypeCase</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasHeaders()" class="member-name-link">hasHeaders</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Grpc.Request.TypeCase.html" title="enum class in proto.rpc.webrtc.v1">Grpc.Request.TypeCase</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTypeCase()" class="member-name-link">getTypeCase</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasHeaders()" class="member-name-link">hasHeaders</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasMessage()" class="member-name-link">hasMessage</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasMessage()" class="member-name-link">hasMessage</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasRstStream()" class="member-name-link">hasRstStream</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasRstStream()" class="member-name-link">hasRstStream</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>bool rst_stream = 4 [json_name = "rstStream"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasStream()" class="member-name-link">hasStream</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasStream()" class="member-name-link">hasStream</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code></div>
 </div>
 </div>
@@ -164,10 +149,7 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -202,13 +184,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getStreamOrBuilder()">
-<h3>getStreamOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Grpc.StreamOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.StreamOrBuilder</a></span>&nbsp;<span class="element-name">getStreamOrBuilder</span>()</div>
-<div class="block"><code>.proto.rpc.webrtc.v1.Stream stream = 1 [json_name = "stream"];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="hasHeaders()">
 <h3>hasHeaders</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasHeaders</span>()</div>
@@ -231,13 +206,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getHeadersOrBuilder()">
-<h3>getHeadersOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Grpc.RequestHeadersOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.RequestHeadersOrBuilder</a></span>&nbsp;<span class="element-name">getHeadersOrBuilder</span>()</div>
-<div class="block"><code>.proto.rpc.webrtc.v1.RequestHeaders headers = 2 [json_name = "headers"];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="hasMessage()">
 <h3>hasMessage</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasMessage</span>()</div>
@@ -257,13 +225,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The message.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMessageOrBuilder()">
-<h3>getMessageOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Grpc.RequestMessageOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.RequestMessageOrBuilder</a></span>&nbsp;<span class="element-name">getMessageOrBuilder</span>()</div>
-<div class="block"><code>.proto.rpc.webrtc.v1.RequestMessage message = 3 [json_name = "message"];</code></div>
 </section>
 </li>
 <li>

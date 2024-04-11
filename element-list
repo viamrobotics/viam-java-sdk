@@ -1,3 +1,12 @@
+com.google.api
+com.google.api.expr.v1alpha1
+com.google.api.expr.v1beta1
+com.google.bytestream
+com.google.geo.type
+com.google.longrunning
+com.google.rpc
+com.google.rpc.context
+com.google.type
 com.viam.common.v1
 com.viam.component.arm.v1
 com.viam.component.audioinput.v1
@@ -28,6 +37,7 @@ com.viam.sdk.core.module
 com.viam.sdk.core.resource
 com.viam.sdk.core.robot
 com.viam.sdk.core.rpc
+com.viam.sdk.core.rpc.reflectionv1alpha
 com.viam.sdk.core.service
 com.viam.sdk.core.service.datamanager
 com.viam.sdk.core.service.mlmodel

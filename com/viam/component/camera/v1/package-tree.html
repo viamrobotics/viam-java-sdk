@@ -61,9 +61,7 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">com.google.protobuf.AbstractMessageLite&lt;MessageType,<wbr>BuilderType&gt; (implements com.google.protobuf.MessageLite)
 <ul>
-<li class="circle">com.google.protobuf.AbstractMessage (implements com.google.protobuf.Message)
-<ul>
-<li class="circle">com.google.protobuf.GeneratedMessageV3 (implements java.io.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>)
+<li class="circle">com.google.protobuf.GeneratedMessageLite&lt;MessageType,<wbr>BuilderType&gt;
 <ul>
 <li class="circle">com.viam.component.camera.v1.<a href="Camera.DistortionParameters.html" class="type-name-link" title="class in com.viam.component.camera.v1">Camera.DistortionParameters</a> (implements com.viam.component.camera.v1.<a href="Camera.DistortionParametersOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.DistortionParametersOrBuilder</a>)</li>
 <li class="circle">com.viam.component.camera.v1.<a href="Camera.GetImageRequest.html" class="type-name-link" title="class in com.viam.component.camera.v1">Camera.GetImageRequest</a> (implements com.viam.component.camera.v1.<a href="Camera.GetImageRequestOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.GetImageRequestOrBuilder</a>)</li>
@@ -84,13 +82,9 @@ loadScripts(document, 'script');</script>
 </li>
 </ul>
 </li>
-</ul>
-</li>
 <li class="circle">com.google.protobuf.AbstractMessageLite.Builder&lt;MessageType,<wbr>BuilderType&gt; (implements com.google.protobuf.MessageLite.Builder)
 <ul>
-<li class="circle">com.google.protobuf.AbstractMessage.Builder&lt;BuilderType&gt; (implements com.google.protobuf.Message.Builder)
-<ul>
-<li class="circle">com.google.protobuf.GeneratedMessageV3.Builder&lt;BuilderT&gt;
+<li class="circle">com.google.protobuf.GeneratedMessageLite.Builder&lt;MessageType,<wbr>BuilderType&gt;
 <ul>
 <li class="circle">com.viam.component.camera.v1.<a href="Camera.DistortionParameters.Builder.html" class="type-name-link" title="class in com.viam.component.camera.v1">Camera.DistortionParameters.Builder</a> (implements com.viam.component.camera.v1.<a href="Camera.DistortionParametersOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.DistortionParametersOrBuilder</a>)</li>
 <li class="circle">com.viam.component.camera.v1.<a href="Camera.GetImageRequest.Builder.html" class="type-name-link" title="class in com.viam.component.camera.v1">Camera.GetImageRequest.Builder</a> (implements com.viam.component.camera.v1.<a href="Camera.GetImageRequestOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.GetImageRequestOrBuilder</a>)</li>
@@ -107,8 +101,6 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.viam.component.camera.v1.<a href="Camera.RenderFrameRequest.Builder.html" class="type-name-link" title="class in com.viam.component.camera.v1">Camera.RenderFrameRequest.Builder</a> (implements com.viam.component.camera.v1.<a href="Camera.RenderFrameRequestOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.RenderFrameRequestOrBuilder</a>)</li>
 <li class="circle">com.viam.component.camera.v1.<a href="Camera.Webcam.Builder.html" class="type-name-link" title="class in com.viam.component.camera.v1">Camera.Webcam.Builder</a> (implements com.viam.component.camera.v1.<a href="Camera.WebcamOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.WebcamOrBuilder</a>)</li>
 <li class="circle">com.viam.component.camera.v1.<a href="Camera.Webcams.Builder.html" class="type-name-link" title="class in com.viam.component.camera.v1">Camera.Webcams.Builder</a> (implements com.viam.component.camera.v1.<a href="Camera.WebcamsOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.WebcamsOrBuilder</a>)</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -145,8 +137,6 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.viam.component.camera.v1.<a href="CameraServiceGrpc.AsyncService.html" class="type-name-link" title="interface in com.viam.component.camera.v1">CameraServiceGrpc.AsyncService</a></li>
 <li class="circle">com.google.protobuf.MessageLiteOrBuilder
 <ul>
-<li class="circle">com.google.protobuf.MessageOrBuilder
-<ul>
 <li class="circle">com.viam.component.camera.v1.<a href="Camera.DistortionParametersOrBuilder.html" class="type-name-link" title="interface in com.viam.component.camera.v1">Camera.DistortionParametersOrBuilder</a></li>
 <li class="circle">com.viam.component.camera.v1.<a href="Camera.GetImageRequestOrBuilder.html" class="type-name-link" title="interface in com.viam.component.camera.v1">Camera.GetImageRequestOrBuilder</a></li>
 <li class="circle">com.viam.component.camera.v1.<a href="Camera.GetImageResponseOrBuilder.html" class="type-name-link" title="interface in com.viam.component.camera.v1">Camera.GetImageResponseOrBuilder</a></li>
@@ -165,8 +155,6 @@ loadScripts(document, 'script');</script>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 </section>
 <section class="hierarchy">
 <h2 title="Enum Class Hierarchy">Enum Class Hierarchy</h2>
@@ -175,7 +163,7 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" class="type-name-link external-link" title="class or interface in java.lang">Enum</a>&lt;E&gt; (implements java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;T&gt;, java.lang.constant.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a>, java.io.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>)
 <ul>
-<li class="circle">com.viam.component.camera.v1.<a href="Camera.Format.html" class="type-name-link" title="enum class in com.viam.component.camera.v1">Camera.Format</a> (implements com.google.protobuf.ProtocolMessageEnum)</li>
+<li class="circle">com.viam.component.camera.v1.<a href="Camera.Format.html" class="type-name-link" title="enum class in com.viam.component.camera.v1">Camera.Format</a> (implements com.google.protobuf.Internal.EnumLite)</li>
 </ul>
 </li>
 </ul>

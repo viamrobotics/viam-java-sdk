@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">Signaling.AnswerRequestInitStageOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -106,18 +106,8 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.TimestampOrBuilder</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDeadlineOrBuilder()" class="member-name-link">getDeadlineOrBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Signaling.WebRTCConfig.html" title="class in proto.rpc.webrtc.v1">Signaling.WebRTCConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOptionalConfig()" class="member-name-link">getOptionalConfig</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Signaling.WebRTCConfigOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.WebRTCConfigOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOptionalConfigOrBuilder()" class="member-name-link">getOptionalConfigOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Signaling.WebRTCConfig.html" title="class in proto.rpc.webrtc.v1">Signaling.WebRTCConfig</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOptionalConfig()" class="member-name-link">getOptionalConfig</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code></div>
 </div>
@@ -146,10 +136,7 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -206,13 +193,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getOptionalConfigOrBuilder()">
-<h3>getOptionalConfigOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Signaling.WebRTCConfigOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Signaling.WebRTCConfigOrBuilder</a></span>&nbsp;<span class="element-name">getOptionalConfigOrBuilder</span>()</div>
-<div class="block"><code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="hasDeadline()">
 <h3>hasDeadline</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasDeadline</span>()</div>
@@ -232,13 +212,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The deadline.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getDeadlineOrBuilder()">
-<h3>getDeadlineOrBuilder</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.TimestampOrBuilder</span>&nbsp;<span class="element-name">getDeadlineOrBuilder</span>()</div>
-<div class="block"><code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code></div>
 </section>
 </li>
 </ul>

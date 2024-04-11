@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">Motion.PlanWithStatusOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -107,53 +107,29 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="block">
  The plan</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.PlanOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPlanOrBuilder()" class="member-name-link">getPlanOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.PlanStatus.html" title="class in com.viam.service.motion.v1">Motion.PlanStatus</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStatus()" class="member-name-link">getStatus</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- The plan</div>
+ The current status of the plan</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.PlanStatus.html" title="class in com.viam.service.motion.v1">Motion.PlanStatus</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStatus()" class="member-name-link">getStatus</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStatusHistory(int)" class="member-name-link">getStatusHistory</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- The current status of the plan</div>
+ The prior status changes that have happened during plan execution</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.PlanStatus.html" title="class in com.viam.service.motion.v1">Motion.PlanStatus</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStatusHistory(int)" class="member-name-link">getStatusHistory</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStatusHistoryCount()" class="member-name-link">getStatusHistoryCount</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  The prior status changes that have happened during plan execution</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStatusHistoryCount()" class="member-name-link">getStatusHistoryCount</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.PlanStatus.html" title="class in com.viam.service.motion.v1">Motion.PlanStatus</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStatusHistoryList()" class="member-name-link">getStatusHistoryList</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  The prior status changes that have happened during plan execution</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.PlanStatus.html" title="class in com.viam.service.motion.v1">Motion.PlanStatus</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStatusHistoryList()" class="member-name-link">getStatusHistoryList</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- The prior status changes that have happened during plan execution</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.PlanStatusOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanStatusOrBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStatusHistoryOrBuilder(int)" class="member-name-link">getStatusHistoryOrBuilder</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- The prior status changes that have happened during plan execution</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Motion.PlanStatusOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanStatusOrBuilder</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStatusHistoryOrBuilderList()" class="member-name-link">getStatusHistoryOrBuilderList</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- The prior status changes that have happened during plan execution</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.PlanStatusOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanStatusOrBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStatusOrBuilder()" class="member-name-link">getStatusOrBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- The current status of the plan</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasPlan()" class="member-name-link">hasPlan</a>()</code></div>
@@ -172,10 +148,7 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -218,17 +191,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getPlanOrBuilder()">
-<h3>getPlanOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Motion.PlanOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanOrBuilder</a></span>&nbsp;<span class="element-name">getPlanOrBuilder</span>()</div>
-<div class="block"><pre>
- The plan
- </pre>
-
- <code>.viam.service.motion.v1.Plan plan = 1 [json_name = "plan"];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="hasStatus()">
 <h3>hasStatus</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasStatus</span>()</div>
@@ -259,17 +221,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getStatusOrBuilder()">
-<h3>getStatusOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Motion.PlanStatusOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanStatusOrBuilder</a></span>&nbsp;<span class="element-name">getStatusOrBuilder</span>()</div>
-<div class="block"><pre>
- The current status of the plan
- </pre>
-
- <code>.viam.service.motion.v1.PlanStatus status = 2 [json_name = "status"];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="getStatusHistoryList()">
 <h3>getStatusHistoryList</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.PlanStatus.html" title="class in com.viam.service.motion.v1">Motion.PlanStatus</a>&gt;</span>&nbsp;<span class="element-name">getStatusHistoryList</span>()</div>
@@ -295,28 +246,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <section class="detail" id="getStatusHistoryCount()">
 <h3>getStatusHistoryCount</h3>
 <div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getStatusHistoryCount</span>()</div>
-<div class="block"><pre>
- The prior status changes that have happened during plan execution
- </pre>
-
- <code>repeated .viam.service.motion.v1.PlanStatus status_history = 3 [json_name = "statusHistory"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getStatusHistoryOrBuilderList()">
-<h3>getStatusHistoryOrBuilderList</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Motion.PlanStatusOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanStatusOrBuilder</a>&gt;</span>&nbsp;<span class="element-name">getStatusHistoryOrBuilderList</span>()</div>
-<div class="block"><pre>
- The prior status changes that have happened during plan execution
- </pre>
-
- <code>repeated .viam.service.motion.v1.PlanStatus status_history = 3 [json_name = "statusHistory"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getStatusHistoryOrBuilder(int)">
-<h3>getStatusHistoryOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Motion.PlanStatusOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanStatusOrBuilder</a></span>&nbsp;<span class="element-name">getStatusHistoryOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><pre>
  The prior status changes that have happened during plan execution
  </pre>

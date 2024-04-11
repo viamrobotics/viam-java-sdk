@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">Camera.GetImagesResponseOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -119,33 +119,15 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="block">
  list of images returned from the camera system</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Camera.ImageOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.ImageOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getImagesOrBuilder(int)" class="member-name-link">getImagesOrBuilder</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- list of images returned from the camera system</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Camera.ImageOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.ImageOrBuilder</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getImagesOrBuilderList()" class="member-name-link">getImagesOrBuilderList</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- list of images returned from the camera system</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../../common/v1/Common.ResponseMetadata.html" title="class in com.viam.common.v1">Common.ResponseMetadata</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResponseMetadata()" class="member-name-link">getResponseMetadata</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  contains timestamp data</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../../common/v1/Common.ResponseMetadataOrBuilder.html" title="interface in com.viam.common.v1">Common.ResponseMetadataOrBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResponseMetadataOrBuilder()" class="member-name-link">getResponseMetadataOrBuilder</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasResponseMetadata()" class="member-name-link">hasResponseMetadata</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- contains timestamp data</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasResponseMetadata()" class="member-name-link">hasResponseMetadata</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  contains timestamp data</div>
 </div>
@@ -154,10 +136,7 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -203,28 +182,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getImagesOrBuilderList()">
-<h3>getImagesOrBuilderList</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Camera.ImageOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.ImageOrBuilder</a>&gt;</span>&nbsp;<span class="element-name">getImagesOrBuilderList</span>()</div>
-<div class="block"><pre>
- list of images returned from the camera system
- </pre>
-
- <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getImagesOrBuilder(int)">
-<h3>getImagesOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Camera.ImageOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.ImageOrBuilder</a></span>&nbsp;<span class="element-name">getImagesOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block"><pre>
- list of images returned from the camera system
- </pre>
-
- <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="hasResponseMetadata()">
 <h3>hasResponseMetadata</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasResponseMetadata</span>()</div>
@@ -252,17 +209,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The responseMetadata.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getResponseMetadataOrBuilder()">
-<h3>getResponseMetadataOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="../../../common/v1/Common.ResponseMetadataOrBuilder.html" title="interface in com.viam.common.v1">Common.ResponseMetadataOrBuilder</a></span>&nbsp;<span class="element-name">getResponseMetadataOrBuilder</span>()</div>
-<div class="block"><pre>
- contains timestamp data
- </pre>
-
- <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code></div>
 </section>
 </li>
 </ul>

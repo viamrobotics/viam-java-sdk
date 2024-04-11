@@ -61,9 +61,7 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">com.google.protobuf.AbstractMessageLite&lt;MessageType,<wbr>BuilderType&gt; (implements com.google.protobuf.MessageLite)
 <ul>
-<li class="circle">com.google.protobuf.AbstractMessage (implements com.google.protobuf.Message)
-<ul>
-<li class="circle">com.google.protobuf.GeneratedMessageV3 (implements java.io.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>)
+<li class="circle">com.google.protobuf.GeneratedMessageLite&lt;MessageType,<wbr>BuilderType&gt;
 <ul>
 <li class="circle">proto.rpc.webrtc.v1.<a href="Grpc.Metadata.html" class="type-name-link" title="class in proto.rpc.webrtc.v1">Grpc.Metadata</a> (implements proto.rpc.webrtc.v1.<a href="Grpc.MetadataOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.MetadataOrBuilder</a>)</li>
 <li class="circle">proto.rpc.webrtc.v1.<a href="Grpc.PacketMessage.html" class="type-name-link" title="class in proto.rpc.webrtc.v1">Grpc.PacketMessage</a> (implements proto.rpc.webrtc.v1.<a href="Grpc.PacketMessageOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.PacketMessageOrBuilder</a>)</li>
@@ -101,13 +99,9 @@ loadScripts(document, 'script');</script>
 </li>
 </ul>
 </li>
-</ul>
-</li>
 <li class="circle">com.google.protobuf.AbstractMessageLite.Builder&lt;MessageType,<wbr>BuilderType&gt; (implements com.google.protobuf.MessageLite.Builder)
 <ul>
-<li class="circle">com.google.protobuf.AbstractMessage.Builder&lt;BuilderType&gt; (implements com.google.protobuf.Message.Builder)
-<ul>
-<li class="circle">com.google.protobuf.GeneratedMessageV3.Builder&lt;BuilderT&gt;
+<li class="circle">com.google.protobuf.GeneratedMessageLite.Builder&lt;MessageType,<wbr>BuilderType&gt;
 <ul>
 <li class="circle">proto.rpc.webrtc.v1.<a href="Grpc.Metadata.Builder.html" class="type-name-link" title="class in proto.rpc.webrtc.v1">Grpc.Metadata.Builder</a> (implements proto.rpc.webrtc.v1.<a href="Grpc.MetadataOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.MetadataOrBuilder</a>)</li>
 <li class="circle">proto.rpc.webrtc.v1.<a href="Grpc.PacketMessage.Builder.html" class="type-name-link" title="class in proto.rpc.webrtc.v1">Grpc.PacketMessage.Builder</a> (implements proto.rpc.webrtc.v1.<a href="Grpc.PacketMessageOrBuilder.html" title="interface in proto.rpc.webrtc.v1">Grpc.PacketMessageOrBuilder</a>)</li>
@@ -145,8 +139,6 @@ loadScripts(document, 'script');</script>
 </li>
 </ul>
 </li>
-</ul>
-</li>
 <li class="circle">io.grpc.stub.AbstractStub&lt;S&gt;
 <ul>
 <li class="circle">io.grpc.stub.AbstractAsyncStub&lt;S&gt;
@@ -178,8 +170,6 @@ loadScripts(document, 'script');</script>
 <h2 title="Interface Hierarchy">Interface Hierarchy</h2>
 <ul>
 <li class="circle">com.google.protobuf.MessageLiteOrBuilder
-<ul>
-<li class="circle">com.google.protobuf.MessageOrBuilder
 <ul>
 <li class="circle">proto.rpc.webrtc.v1.<a href="Grpc.MetadataOrBuilder.html" class="type-name-link" title="interface in proto.rpc.webrtc.v1">Grpc.MetadataOrBuilder</a></li>
 <li class="circle">proto.rpc.webrtc.v1.<a href="Grpc.PacketMessageOrBuilder.html" class="type-name-link" title="interface in proto.rpc.webrtc.v1">Grpc.PacketMessageOrBuilder</a></li>
@@ -215,8 +205,6 @@ loadScripts(document, 'script');</script>
 <li class="circle">proto.rpc.webrtc.v1.<a href="Signaling.WebRTCConfigOrBuilder.html" class="type-name-link" title="interface in proto.rpc.webrtc.v1">Signaling.WebRTCConfigOrBuilder</a></li>
 </ul>
 </li>
-</ul>
-</li>
 <li class="circle">proto.rpc.webrtc.v1.<a href="SignalingServiceGrpc.AsyncService.html" class="type-name-link" title="interface in proto.rpc.webrtc.v1">SignalingServiceGrpc.AsyncService</a></li>
 </ul>
 </section>
@@ -227,12 +215,12 @@ loadScripts(document, 'script');</script>
 <ul>
 <li class="circle">java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html" class="type-name-link external-link" title="class or interface in java.lang">Enum</a>&lt;E&gt; (implements java.lang.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" title="class or interface in java.lang" class="external-link">Comparable</a>&lt;T&gt;, java.lang.constant.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/constant/Constable.html" title="class or interface in java.lang.constant" class="external-link">Constable</a>, java.io.<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>)
 <ul>
-<li class="circle">proto.rpc.webrtc.v1.<a href="Grpc.Request.TypeCase.html" class="type-name-link" title="enum class in proto.rpc.webrtc.v1">Grpc.Request.TypeCase</a> (implements com.google.protobuf.Internal.EnumLite)</li>
-<li class="circle">proto.rpc.webrtc.v1.<a href="Grpc.Response.TypeCase.html" class="type-name-link" title="enum class in proto.rpc.webrtc.v1">Grpc.Response.TypeCase</a> (implements com.google.protobuf.Internal.EnumLite)</li>
-<li class="circle">proto.rpc.webrtc.v1.<a href="Signaling.AnswerRequest.StageCase.html" class="type-name-link" title="enum class in proto.rpc.webrtc.v1">Signaling.AnswerRequest.StageCase</a> (implements com.google.protobuf.Internal.EnumLite)</li>
-<li class="circle">proto.rpc.webrtc.v1.<a href="Signaling.AnswerResponse.StageCase.html" class="type-name-link" title="enum class in proto.rpc.webrtc.v1">Signaling.AnswerResponse.StageCase</a> (implements com.google.protobuf.Internal.EnumLite)</li>
-<li class="circle">proto.rpc.webrtc.v1.<a href="Signaling.CallResponse.StageCase.html" class="type-name-link" title="enum class in proto.rpc.webrtc.v1">Signaling.CallResponse.StageCase</a> (implements com.google.protobuf.Internal.EnumLite)</li>
-<li class="circle">proto.rpc.webrtc.v1.<a href="Signaling.CallUpdateRequest.UpdateCase.html" class="type-name-link" title="enum class in proto.rpc.webrtc.v1">Signaling.CallUpdateRequest.UpdateCase</a> (implements com.google.protobuf.Internal.EnumLite)</li>
+<li class="circle">proto.rpc.webrtc.v1.<a href="Grpc.Request.TypeCase.html" class="type-name-link" title="enum class in proto.rpc.webrtc.v1">Grpc.Request.TypeCase</a></li>
+<li class="circle">proto.rpc.webrtc.v1.<a href="Grpc.Response.TypeCase.html" class="type-name-link" title="enum class in proto.rpc.webrtc.v1">Grpc.Response.TypeCase</a></li>
+<li class="circle">proto.rpc.webrtc.v1.<a href="Signaling.AnswerRequest.StageCase.html" class="type-name-link" title="enum class in proto.rpc.webrtc.v1">Signaling.AnswerRequest.StageCase</a></li>
+<li class="circle">proto.rpc.webrtc.v1.<a href="Signaling.AnswerResponse.StageCase.html" class="type-name-link" title="enum class in proto.rpc.webrtc.v1">Signaling.AnswerResponse.StageCase</a></li>
+<li class="circle">proto.rpc.webrtc.v1.<a href="Signaling.CallResponse.StageCase.html" class="type-name-link" title="enum class in proto.rpc.webrtc.v1">Signaling.CallResponse.StageCase</a></li>
+<li class="circle">proto.rpc.webrtc.v1.<a href="Signaling.CallUpdateRequest.UpdateCase.html" class="type-name-link" title="enum class in proto.rpc.webrtc.v1">Signaling.CallUpdateRequest.UpdateCase</a></li>
 </ul>
 </li>
 </ul>

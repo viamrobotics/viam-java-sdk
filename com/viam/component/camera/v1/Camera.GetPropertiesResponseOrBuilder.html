@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">Camera.GetPropertiesResponseOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -109,24 +109,8 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
  If camera does not provide distortion parameters, leave the field empty
  Initializing the parameters with 0-values is considered an error</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Camera.DistortionParametersOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.DistortionParametersOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDistortionParametersOrBuilder()" class="member-name-link">getDistortionParametersOrBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Parameters for modeling lens distortion in cameras
- If camera does not provide distortion parameters, leave the field empty
- Initializing the parameters with 0-values is considered an error</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Camera.IntrinsicParameters.html" title="class in com.viam.component.camera.v1">Camera.IntrinsicParameters</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIntrinsicParameters()" class="member-name-link">getIntrinsicParameters</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Parameters for doing a perspective of a 3D scene to a 2D plane
- If camera does not provide intrinsic parameters, leave the field empty
- Initializing the parameters with 0-values is considered an error</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Camera.IntrinsicParametersOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.IntrinsicParametersOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIntrinsicParametersOrBuilder()" class="member-name-link">getIntrinsicParametersOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Camera.IntrinsicParameters.html" title="class in com.viam.component.camera.v1">Camera.IntrinsicParameters</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIntrinsicParameters()" class="member-name-link">getIntrinsicParameters</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Parameters for doing a perspective of a 3D scene to a 2D plane
@@ -184,10 +168,7 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -249,19 +230,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getIntrinsicParametersOrBuilder()">
-<h3>getIntrinsicParametersOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Camera.IntrinsicParametersOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.IntrinsicParametersOrBuilder</a></span>&nbsp;<span class="element-name">getIntrinsicParametersOrBuilder</span>()</div>
-<div class="block"><pre>
- Parameters for doing a perspective of a 3D scene to a 2D plane
- If camera does not provide intrinsic parameters, leave the field empty
- Initializing the parameters with 0-values is considered an error
- </pre>
-
- <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="hasDistortionParameters()">
 <h3>hasDistortionParameters</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasDistortionParameters</span>()</div>
@@ -293,19 +261,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The distortionParameters.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getDistortionParametersOrBuilder()">
-<h3>getDistortionParametersOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Camera.DistortionParametersOrBuilder.html" title="interface in com.viam.component.camera.v1">Camera.DistortionParametersOrBuilder</a></span>&nbsp;<span class="element-name">getDistortionParametersOrBuilder</span>()</div>
-<div class="block"><pre>
- Parameters for modeling lens distortion in cameras
- If camera does not provide distortion parameters, leave the field empty
- Initializing the parameters with 0-values is considered an error
- </pre>
-
- <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code></div>
 </section>
 </li>
 <li>
@@ -366,9 +321,9 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
  <code>repeated string mime_types = 4 [json_name = "mimeTypes"];</code></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>index</code> - The index of the value to return.</dd>
+<dd><code>index</code> - The index of the element to return.</dd>
 <dt>Returns:</dt>
-<dd>The bytes of the mimeTypes at the given index.</dd>
+<dd>The mimeTypes at the given index.</dd>
 </dl>
 </section>
 </li>

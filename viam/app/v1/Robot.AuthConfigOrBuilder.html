@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">Robot.AuthConfigOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -106,59 +106,44 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>optional .viam.app.v1.ExternalAuthConfig external_auth_config = 3 [json_name = "externalAuthConfig"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Robot.ExternalAuthConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ExternalAuthConfigOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExternalAuthConfigOrBuilder()" class="member-name-link">getExternalAuthConfigOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Robot.AuthHandlerConfig.html" title="class in viam.app.v1">Robot.AuthHandlerConfig</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getHandlers(int)" class="member-name-link">getHandlers</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>optional .viam.app.v1.ExternalAuthConfig external_auth_config = 3 [json_name = "externalAuthConfig"];</code></div>
+<div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Robot.AuthHandlerConfig.html" title="class in viam.app.v1">Robot.AuthHandlerConfig</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getHandlers(int)" class="member-name-link">getHandlers</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getHandlersCount()" class="member-name-link">getHandlersCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getHandlersCount()" class="member-name-link">getHandlersCount</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.AuthHandlerConfig.html" title="class in viam.app.v1">Robot.AuthHandlerConfig</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getHandlersList()" class="member-name-link">getHandlersList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Robot.AuthHandlerConfig.html" title="class in viam.app.v1">Robot.AuthHandlerConfig</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getHandlersList()" class="member-name-link">getHandlersList</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Robot.AuthHandlerConfigOrBuilder.html" title="interface in viam.app.v1">Robot.AuthHandlerConfigOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getHandlersOrBuilder(int)" class="member-name-link">getHandlersOrBuilder</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.AuthHandlerConfigOrBuilder.html" title="interface in viam.app.v1">Robot.AuthHandlerConfigOrBuilder</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getHandlersOrBuilderList()" class="member-name-link">getHandlersOrBuilderList</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTlsAuthEntities(int)" class="member-name-link">getTlsAuthEntities</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTlsAuthEntitiesBytes(int)" class="member-name-link">getTlsAuthEntitiesBytes</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTlsAuthEntities(int)" class="member-name-link">getTlsAuthEntities</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTlsAuthEntitiesCount()" class="member-name-link">getTlsAuthEntitiesCount</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.ByteString</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTlsAuthEntitiesBytes(int)" class="member-name-link">getTlsAuthEntitiesBytes</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTlsAuthEntitiesList()" class="member-name-link">getTlsAuthEntitiesList</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTlsAuthEntitiesCount()" class="member-name-link">getTlsAuthEntitiesCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasExternalAuthConfig()" class="member-name-link">hasExternalAuthConfig</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTlsAuthEntitiesList()" class="member-name-link">getTlsAuthEntitiesList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasExternalAuthConfig()" class="member-name-link">hasExternalAuthConfig</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>optional .viam.app.v1.ExternalAuthConfig external_auth_config = 3 [json_name = "externalAuthConfig"];</code></div>
 </div>
 </div>
@@ -166,10 +151,7 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -199,20 +181,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <section class="detail" id="getHandlersCount()">
 <h3>getHandlersCount</h3>
 <div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getHandlersCount</span>()</div>
-<div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getHandlersOrBuilderList()">
-<h3>getHandlersOrBuilderList</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Robot.AuthHandlerConfigOrBuilder.html" title="interface in viam.app.v1">Robot.AuthHandlerConfigOrBuilder</a>&gt;</span>&nbsp;<span class="element-name">getHandlersOrBuilderList</span>()</div>
-<div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getHandlersOrBuilder(int)">
-<h3>getHandlersOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Robot.AuthHandlerConfigOrBuilder.html" title="interface in viam.app.v1">Robot.AuthHandlerConfigOrBuilder</a></span>&nbsp;<span class="element-name">getHandlersOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><code>repeated .viam.app.v1.AuthHandlerConfig handlers = 1 [json_name = "handlers"];</code></div>
 </section>
 </li>
@@ -258,9 +226,9 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="block"><code>repeated string tls_auth_entities = 2 [json_name = "tlsAuthEntities"];</code></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>index</code> - The index of the value to return.</dd>
+<dd><code>index</code> - The index of the element to return.</dd>
 <dt>Returns:</dt>
-<dd>The bytes of the tlsAuthEntities at the given index.</dd>
+<dd>The tlsAuthEntities at the given index.</dd>
 </dl>
 </section>
 </li>
@@ -284,13 +252,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The externalAuthConfig.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getExternalAuthConfigOrBuilder()">
-<h3>getExternalAuthConfigOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Robot.ExternalAuthConfigOrBuilder.html" title="interface in viam.app.v1">Robot.ExternalAuthConfigOrBuilder</a></span>&nbsp;<span class="element-name">getExternalAuthConfigOrBuilder</span>()</div>
-<div class="block"><code>optional .viam.app.v1.ExternalAuthConfig external_auth_config = 3 [json_name = "externalAuthConfig"];</code></div>
 </section>
 </li>
 </ul>

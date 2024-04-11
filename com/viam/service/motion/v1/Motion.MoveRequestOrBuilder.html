@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">Motion.MoveRequestOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -107,20 +107,8 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="block">
  Component on the robot to move to the specified destination</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../../common/v1/Common.ResourceNameOrBuilder.html" title="interface in com.viam.common.v1">Common.ResourceNameOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getComponentNameOrBuilder()" class="member-name-link">getComponentNameOrBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Component on the robot to move to the specified destination</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.Constraints.html" title="class in com.viam.service.motion.v1">Motion.Constraints</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getConstraints()" class="member-name-link">getConstraints</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Constrain the way the robot will move</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.ConstraintsOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ConstraintsOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getConstraintsOrBuilder()" class="member-name-link">getConstraintsOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.Constraints.html" title="class in com.viam.service.motion.v1">Motion.Constraints</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getConstraints()" class="member-name-link">getConstraints</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Constrain the way the robot will move</div>
@@ -131,20 +119,8 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="block">
  Destination to move to, which can a pose in the reference frame of any frame in the robot's frame system</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../../common/v1/Common.PoseInFrameOrBuilder.html" title="interface in com.viam.common.v1">Common.PoseInFrameOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDestinationOrBuilder()" class="member-name-link">getDestinationOrBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Destination to move to, which can a pose in the reference frame of any frame in the robot's frame system</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Struct</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExtra()" class="member-name-link">getExtra</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Additional arguments to the method</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.StructOrBuilder</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExtraOrBuilder()" class="member-name-link">getExtraOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.Struct</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExtra()" class="member-name-link">getExtra</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Additional arguments to the method</div>
@@ -168,40 +144,33 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
  Avoid obstacles by specifying their geometries in the world state
  Augment the frame system of the robot by specifying additional transforms to add to it for the duration of the Move</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../../common/v1/Common.WorldStateOrBuilder.html" title="interface in com.viam.common.v1">Common.WorldStateOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getWorldStateOrBuilder()" class="member-name-link">getWorldStateOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasComponentName()" class="member-name-link">hasComponentName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Avoid obstacles by specifying their geometries in the world state
- Augment the frame system of the robot by specifying additional transforms to add to it for the duration of the Move</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasComponentName()" class="member-name-link">hasComponentName</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Component on the robot to move to the specified destination</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasConstraints()" class="member-name-link">hasConstraints</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasConstraints()" class="member-name-link">hasConstraints</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Constrain the way the robot will move</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasDestination()" class="member-name-link">hasDestination</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasDestination()" class="member-name-link">hasDestination</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Destination to move to, which can a pose in the reference frame of any frame in the robot's frame system</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasExtra()" class="member-name-link">hasExtra</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasExtra()" class="member-name-link">hasExtra</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Additional arguments to the method</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasWorldState()" class="member-name-link">hasWorldState</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasWorldState()" class="member-name-link">hasWorldState</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Avoid obstacles by specifying their geometries in the world state
  Augment the frame system of the robot by specifying additional transforms to add to it for the duration of the Move</div>
@@ -211,10 +180,7 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -287,17 +253,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getDestinationOrBuilder()">
-<h3>getDestinationOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="../../../common/v1/Common.PoseInFrameOrBuilder.html" title="interface in com.viam.common.v1">Common.PoseInFrameOrBuilder</a></span>&nbsp;<span class="element-name">getDestinationOrBuilder</span>()</div>
-<div class="block"><pre>
- Destination to move to, which can a pose in the reference frame of any frame in the robot's frame system
- </pre>
-
- <code>.viam.common.v1.PoseInFrame destination = 2 [json_name = "destination"];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="hasComponentName()">
 <h3>hasComponentName</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasComponentName</span>()</div>
@@ -325,17 +280,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The componentName.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getComponentNameOrBuilder()">
-<h3>getComponentNameOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="../../../common/v1/Common.ResourceNameOrBuilder.html" title="interface in com.viam.common.v1">Common.ResourceNameOrBuilder</a></span>&nbsp;<span class="element-name">getComponentNameOrBuilder</span>()</div>
-<div class="block"><pre>
- Component on the robot to move to the specified destination
- </pre>
-
- <code>.viam.common.v1.ResourceName component_name = 3 [json_name = "componentName"];</code></div>
 </section>
 </li>
 <li>
@@ -371,18 +315,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getWorldStateOrBuilder()">
-<h3>getWorldStateOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="../../../common/v1/Common.WorldStateOrBuilder.html" title="interface in com.viam.common.v1">Common.WorldStateOrBuilder</a></span>&nbsp;<span class="element-name">getWorldStateOrBuilder</span>()</div>
-<div class="block"><pre>
- Avoid obstacles by specifying their geometries in the world state
- Augment the frame system of the robot by specifying additional transforms to add to it for the duration of the Move
- </pre>
-
- <code>optional .viam.common.v1.WorldState world_state = 4 [json_name = "worldState"];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="hasConstraints()">
 <h3>hasConstraints</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasConstraints</span>()</div>
@@ -413,17 +345,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getConstraintsOrBuilder()">
-<h3>getConstraintsOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Motion.ConstraintsOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.ConstraintsOrBuilder</a></span>&nbsp;<span class="element-name">getConstraintsOrBuilder</span>()</div>
-<div class="block"><pre>
- Constrain the way the robot will move
- </pre>
-
- <code>optional .viam.service.motion.v1.Constraints constraints = 5 [json_name = "constraints"];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="hasExtra()">
 <h3>hasExtra</h3>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">hasExtra</span>()</div>
@@ -451,17 +372,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The extra.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getExtraOrBuilder()">
-<h3>getExtraOrBuilder</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.StructOrBuilder</span>&nbsp;<span class="element-name">getExtraOrBuilder</span>()</div>
-<div class="block"><pre>
- Additional arguments to the method
- </pre>
-
- <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
 </section>
 </li>
 </ul>

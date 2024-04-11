@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">Motion.GetPlanResponseOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -107,50 +107,30 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="block">
  The current plan and status that matches the request query</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.PlanWithStatusOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanWithStatusOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCurrentPlanWithStatusOrBuilder()" class="member-name-link">getCurrentPlanWithStatusOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.PlanWithStatus.html" title="class in com.viam.service.motion.v1">Motion.PlanWithStatus</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReplanHistory(int)" class="member-name-link">getReplanHistory</a><wbr>(int&nbsp;index)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
- The current plan and status that matches the request query</div>
+ Returns the history of all previous plans that were
+ generated in ascending order.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.PlanWithStatus.html" title="class in com.viam.service.motion.v1">Motion.PlanWithStatus</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReplanHistory(int)" class="member-name-link">getReplanHistory</a><wbr>(int&nbsp;index)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReplanHistoryCount()" class="member-name-link">getReplanHistoryCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Returns the history of all previous plans that were
  generated in ascending order.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReplanHistoryCount()" class="member-name-link">getReplanHistoryCount</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.PlanWithStatus.html" title="class in com.viam.service.motion.v1">Motion.PlanWithStatus</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReplanHistoryList()" class="member-name-link">getReplanHistoryList</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Returns the history of all previous plans that were
  generated in ascending order.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.PlanWithStatus.html" title="class in com.viam.service.motion.v1">Motion.PlanWithStatus</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReplanHistoryList()" class="member-name-link">getReplanHistoryList</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasCurrentPlanWithStatus()" class="member-name-link">hasCurrentPlanWithStatus</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Returns the history of all previous plans that were
- generated in ascending order.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Motion.PlanWithStatusOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanWithStatusOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReplanHistoryOrBuilder(int)" class="member-name-link">getReplanHistoryOrBuilder</a><wbr>(int&nbsp;index)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Returns the history of all previous plans that were
- generated in ascending order.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Motion.PlanWithStatusOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanWithStatusOrBuilder</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getReplanHistoryOrBuilderList()" class="member-name-link">getReplanHistoryOrBuilderList</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Returns the history of all previous plans that were
- generated in ascending order.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#hasCurrentPlanWithStatus()" class="member-name-link">hasCurrentPlanWithStatus</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  The current plan and status that matches the request query</div>
 </div>
@@ -159,10 +139,7 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -205,17 +182,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </section>
 </li>
 <li>
-<section class="detail" id="getCurrentPlanWithStatusOrBuilder()">
-<h3>getCurrentPlanWithStatusOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Motion.PlanWithStatusOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanWithStatusOrBuilder</a></span>&nbsp;<span class="element-name">getCurrentPlanWithStatusOrBuilder</span>()</div>
-<div class="block"><pre>
- The current plan and status that matches the request query
- </pre>
-
- <code>.viam.service.motion.v1.PlanWithStatus current_plan_with_status = 1 [json_name = "currentPlanWithStatus"];</code></div>
-</section>
-</li>
-<li>
 <section class="detail" id="getReplanHistoryList()">
 <h3>getReplanHistoryList</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Motion.PlanWithStatus.html" title="class in com.viam.service.motion.v1">Motion.PlanWithStatus</a>&gt;</span>&nbsp;<span class="element-name">getReplanHistoryList</span>()</div>
@@ -247,34 +213,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <section class="detail" id="getReplanHistoryCount()">
 <h3>getReplanHistoryCount</h3>
 <div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">getReplanHistoryCount</span>()</div>
-<div class="block"><pre>
- Returns the history of all previous plans that were
- generated in ascending order.
- This field will be empty if the motion service
- did not need to re-plan.
- </pre>
-
- <code>repeated .viam.service.motion.v1.PlanWithStatus replan_history = 2 [json_name = "replanHistory"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getReplanHistoryOrBuilderList()">
-<h3>getReplanHistoryOrBuilderList</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;? extends <a href="Motion.PlanWithStatusOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanWithStatusOrBuilder</a>&gt;</span>&nbsp;<span class="element-name">getReplanHistoryOrBuilderList</span>()</div>
-<div class="block"><pre>
- Returns the history of all previous plans that were
- generated in ascending order.
- This field will be empty if the motion service
- did not need to re-plan.
- </pre>
-
- <code>repeated .viam.service.motion.v1.PlanWithStatus replan_history = 2 [json_name = "replanHistory"];</code></div>
-</section>
-</li>
-<li>
-<section class="detail" id="getReplanHistoryOrBuilder(int)">
-<h3>getReplanHistoryOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="Motion.PlanWithStatusOrBuilder.html" title="interface in com.viam.service.motion.v1">Motion.PlanWithStatusOrBuilder</a></span>&nbsp;<span class="element-name">getReplanHistoryOrBuilder</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block"><pre>
  Returns the history of all previous plans that were
  generated in ascending order.

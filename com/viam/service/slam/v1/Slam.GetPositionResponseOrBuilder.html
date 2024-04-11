@@ -74,7 +74,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code>com.google.protobuf.MessageLiteOrBuilder</code>, <code>com.google.protobuf.MessageOrBuilder</code></dd>
+<dd><code>com.google.protobuf.MessageLiteOrBuilder</code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Implementing Classes:</dt>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static interface </span><span class="element-name type-name-label">Slam.GetPositionResponseOrBuilder</span><span class="extends-implements">
-extends com.google.protobuf.MessageOrBuilder</span></div>
+extends com.google.protobuf.MessageLiteOrBuilder</span></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -119,20 +119,8 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <div class="block">
  Additional information in the response</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>com.google.protobuf.StructOrBuilder</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExtraOrBuilder()" class="member-name-link">getExtraOrBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Additional information in the response</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../../common/v1/Common.Pose.html" title="class in com.viam.common.v1">Common.Pose</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPose()" class="member-name-link">getPose</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">
- Current position of the specified component in the SLAM Map</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../../common/v1/Common.PoseOrBuilder.html" title="interface in com.viam.common.v1">Common.PoseOrBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPoseOrBuilder()" class="member-name-link">getPoseOrBuilder</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="../../../common/v1/Common.Pose.html" title="class in com.viam.common.v1">Common.Pose</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPose()" class="member-name-link">getPose</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">
  Current position of the specified component in the SLAM Map</div>
@@ -154,10 +142,7 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.google.protobuf.MessageLiteOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageLiteOrBuilder</h3>
-<code>isInitialized</code></div>
-<div class="inherited-list">
-<h3 id="methods-inherited-from-class-com.google.protobuf.MessageOrBuilder">Methods inherited from interface&nbsp;com.google.protobuf.MessageOrBuilder</h3>
-<code>findInitializationErrors, getAllFields, getDefaultInstanceForType, getDescriptorForType, getField, getInitializationErrorString, getOneofFieldDescriptor, getRepeatedField, getRepeatedFieldCount, getUnknownFields, hasField, hasOneof</code></div>
+<code>getDefaultInstanceForType, isInitialized</code></div>
 </section>
 </li>
 </ul>
@@ -197,17 +182,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The pose.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getPoseOrBuilder()">
-<h3>getPoseOrBuilder</h3>
-<div class="member-signature"><span class="return-type"><a href="../../../common/v1/Common.PoseOrBuilder.html" title="interface in com.viam.common.v1">Common.PoseOrBuilder</a></span>&nbsp;<span class="element-name">getPoseOrBuilder</span>()</div>
-<div class="block"><pre>
- Current position of the specified component in the SLAM Map
- </pre>
-
- <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code></div>
 </section>
 </li>
 <li>
@@ -268,17 +242,6 @@ extends com.google.protobuf.MessageOrBuilder</span></div>
 <dt>Returns:</dt>
 <dd>The extra.</dd>
 </dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getExtraOrBuilder()">
-<h3>getExtraOrBuilder</h3>
-<div class="member-signature"><span class="return-type">com.google.protobuf.StructOrBuilder</span>&nbsp;<span class="element-name">getExtraOrBuilder</span>()</div>
-<div class="block"><pre>
- Additional information in the response
- </pre>
-
- <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code></div>
 </section>
 </li>
 </ul>
