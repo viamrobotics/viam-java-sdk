@@ -34,11 +34,10 @@ public final class MovementSensorServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLinearVelocity"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("GetLinearVelocity"))
               .build();
         }
       }
@@ -65,11 +64,10 @@ public final class MovementSensorServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAngularVelocity"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("GetAngularVelocity"))
               .build();
         }
       }
@@ -96,11 +94,10 @@ public final class MovementSensorServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCompassHeading"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("GetCompassHeading"))
               .build();
         }
       }
@@ -127,11 +124,10 @@ public final class MovementSensorServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrientation"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("GetOrientation"))
               .build();
         }
       }
@@ -158,11 +154,10 @@ public final class MovementSensorServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPosition"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("GetPosition"))
               .build();
         }
       }
@@ -189,11 +184,10 @@ public final class MovementSensorServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProperties"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("GetProperties"))
               .build();
         }
       }
@@ -220,11 +214,10 @@ public final class MovementSensorServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAccuracy"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("GetAccuracy"))
               .build();
         }
       }
@@ -251,11 +244,10 @@ public final class MovementSensorServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLinearAcceleration"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("GetLinearAcceleration"))
               .build();
         }
       }
@@ -282,11 +274,10 @@ public final class MovementSensorServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("DoCommand"))
               .build();
         }
       }
@@ -313,11 +304,10 @@ public final class MovementSensorServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeometries"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.GetGeometriesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.GetGeometriesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("GetGeometries"))
               .build();
         }
       }
@@ -344,11 +334,10 @@ public final class MovementSensorServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetReadings"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.GetReadingsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.GetReadingsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MovementSensorServiceMethodDescriptorSupplier("GetReadings"))
               .build();
         }
       }
@@ -992,41 +981,6 @@ public final class MovementSensorServiceGrpc {
         .build();
   }
 
-  private static abstract class MovementSensorServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    MovementSensorServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("MovementSensorService");
-    }
-  }
-
-  private static final class MovementSensorServiceFileDescriptorSupplier
-      extends MovementSensorServiceBaseDescriptorSupplier {
-    MovementSensorServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class MovementSensorServiceMethodDescriptorSupplier
-      extends MovementSensorServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    MovementSensorServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -1036,7 +990,6 @@ public final class MovementSensorServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new MovementSensorServiceFileDescriptorSupplier())
               .addMethod(getGetLinearVelocityMethod())
               .addMethod(getGetAngularVelocityMethod())
               .addMethod(getGetCompassHeadingMethod())

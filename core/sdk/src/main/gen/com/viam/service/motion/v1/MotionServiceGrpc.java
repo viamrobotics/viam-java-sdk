@@ -37,11 +37,10 @@ public final class MotionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Move"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.MoveRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.MoveResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("Move"))
               .build();
         }
       }
@@ -68,11 +67,10 @@ public final class MotionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MoveOnMap"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.MoveOnMapRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.MoveOnMapResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("MoveOnMap"))
               .build();
         }
       }
@@ -99,11 +97,10 @@ public final class MotionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MoveOnGlobe"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.MoveOnGlobeRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.MoveOnGlobeResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("MoveOnGlobe"))
               .build();
         }
       }
@@ -130,11 +127,10 @@ public final class MotionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPose"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.GetPoseRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.GetPoseResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("GetPose"))
               .build();
         }
       }
@@ -161,11 +157,10 @@ public final class MotionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StopPlan"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.StopPlanRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.StopPlanResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("StopPlan"))
               .build();
         }
       }
@@ -192,11 +187,10 @@ public final class MotionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPlanStatuses"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.ListPlanStatusesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.ListPlanStatusesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("ListPlanStatuses"))
               .build();
         }
       }
@@ -223,11 +217,10 @@ public final class MotionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPlan"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.GetPlanRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.motion.v1.Motion.GetPlanResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("GetPlan"))
               .build();
         }
       }
@@ -254,11 +247,10 @@ public final class MotionServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MotionServiceMethodDescriptorSupplier("DoCommand"))
               .build();
         }
       }
@@ -895,41 +887,6 @@ public final class MotionServiceGrpc {
         .build();
   }
 
-  private static abstract class MotionServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    MotionServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.viam.service.motion.v1.Motion.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("MotionService");
-    }
-  }
-
-  private static final class MotionServiceFileDescriptorSupplier
-      extends MotionServiceBaseDescriptorSupplier {
-    MotionServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class MotionServiceMethodDescriptorSupplier
-      extends MotionServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    MotionServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -939,7 +896,6 @@ public final class MotionServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new MotionServiceFileDescriptorSupplier())
               .addMethod(getMoveMethod())
               .addMethod(getMoveOnMapMethod())
               .addMethod(getMoveOnGlobeMethod())

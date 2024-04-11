@@ -37,11 +37,10 @@ public final class AgentAppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetAgentConfig"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.agent.v1.Agent.GetAgentConfigRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.agent.v1.Agent.GetAgentConfigResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentAppServiceMethodDescriptorSupplier("GetAgentConfig"))
               .build();
         }
       }
@@ -68,11 +67,10 @@ public final class AgentAppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAgentConfig"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.agent.v1.Agent.UpdateAgentConfigRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.agent.v1.Agent.UpdateAgentConfigResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AgentAppServiceMethodDescriptorSupplier("UpdateAgentConfig"))
               .build();
         }
       }
@@ -353,41 +351,6 @@ public final class AgentAppServiceGrpc {
         .build();
   }
 
-  private static abstract class AgentAppServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    AgentAppServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.app.agent.v1.Agent.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("AgentAppService");
-    }
-  }
-
-  private static final class AgentAppServiceFileDescriptorSupplier
-      extends AgentAppServiceBaseDescriptorSupplier {
-    AgentAppServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class AgentAppServiceMethodDescriptorSupplier
-      extends AgentAppServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    AgentAppServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -397,7 +360,6 @@ public final class AgentAppServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new AgentAppServiceFileDescriptorSupplier())
               .addMethod(getGetAgentConfigMethod())
               .addMethod(getUpdateAgentConfigMethod())
               .build();

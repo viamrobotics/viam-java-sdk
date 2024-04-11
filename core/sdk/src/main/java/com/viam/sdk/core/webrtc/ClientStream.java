@@ -17,7 +17,8 @@ import java.util.logging.Logger;
 import javax.annotation.Nullable;
 import proto.rpc.webrtc.v1.Grpc;
 
-public class ClientStream<RequestT, ResponseT> extends io.grpc.ClientCall<RequestT, ResponseT> {
+public class ClientStream<RequestT, ResponseT> extends
+    io.grpc.ClientCall<RequestT, ResponseT> {
 
   // see golang/client_stream.go
   private static final int MAX_REQUEST_MESSAGE_PACKET_DATA_SIZE = 16373;

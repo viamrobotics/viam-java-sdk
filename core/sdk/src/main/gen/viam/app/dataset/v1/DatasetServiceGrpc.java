@@ -37,11 +37,10 @@ public final class DatasetServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateDataset"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.dataset.v1.DatasetOuterClass.CreateDatasetRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.dataset.v1.DatasetOuterClass.CreateDatasetResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("CreateDataset"))
               .build();
         }
       }
@@ -68,11 +67,10 @@ public final class DatasetServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteDataset"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.dataset.v1.DatasetOuterClass.DeleteDatasetResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("DeleteDataset"))
               .build();
         }
       }
@@ -99,11 +97,10 @@ public final class DatasetServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RenameDataset"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.dataset.v1.DatasetOuterClass.RenameDatasetRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.dataset.v1.DatasetOuterClass.RenameDatasetResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("RenameDataset"))
               .build();
         }
       }
@@ -130,11 +127,10 @@ public final class DatasetServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDatasetsByOrganizationID"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByOrganizationIDResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("ListDatasetsByOrganizationID"))
               .build();
         }
       }
@@ -161,11 +157,10 @@ public final class DatasetServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListDatasetsByIDs"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.dataset.v1.DatasetOuterClass.ListDatasetsByIDsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("ListDatasetsByIDs"))
               .build();
         }
       }
@@ -608,41 +603,6 @@ public final class DatasetServiceGrpc {
         .build();
   }
 
-  private static abstract class DatasetServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    DatasetServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.app.dataset.v1.DatasetOuterClass.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("DatasetService");
-    }
-  }
-
-  private static final class DatasetServiceFileDescriptorSupplier
-      extends DatasetServiceBaseDescriptorSupplier {
-    DatasetServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class DatasetServiceMethodDescriptorSupplier
-      extends DatasetServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    DatasetServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -652,7 +612,6 @@ public final class DatasetServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new DatasetServiceFileDescriptorSupplier())
               .addMethod(getCreateDatasetMethod())
               .addMethod(getDeleteDatasetMethod())
               .addMethod(getRenameDatasetMethod())

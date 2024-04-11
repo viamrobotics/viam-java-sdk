@@ -9,15 +9,9 @@ public final class Auth {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   public interface CredentialsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.v1.Credentials)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -62,43 +56,17 @@ public final class Auth {
   /**
    * Protobuf type {@code proto.rpc.v1.Credentials}
    */
-  public static final class Credentials extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Credentials extends
+      com.google.protobuf.GeneratedMessageLite<
+          Credentials, Credentials.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.v1.Credentials)
       CredentialsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Credentials.newBuilder() to construct.
-    private Credentials(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Credentials() {
       type_ = "";
       payload_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Credentials();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_Credentials_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_Credentials_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.v1.Auth.Credentials.class, proto.rpc.v1.Auth.Credentials.Builder.class);
-    }
-
     public static final int TYPE_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object type_ = "";
+    private java.lang.String type_;
     /**
      * <pre>
      * type is the type of credentials being used.
@@ -109,16 +77,7 @@ public final class Auth {
      */
     @java.lang.Override
     public java.lang.String getType() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        type_ = s;
-        return s;
-      }
+      return type_;
     }
     /**
      * <pre>
@@ -131,21 +90,50 @@ public final class Auth {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        type_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(type_);
+    }
+    /**
+     * <pre>
+     * type is the type of credentials being used.
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      type_ = value;
+    }
+    /**
+     * <pre>
+     * type is the type of credentials being used.
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = getDefaultInstance().getType();
+    }
+    /**
+     * <pre>
+     * type is the type of credentials being used.
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @param value The bytes for type to set.
+     */
+    private void setTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      type_ = value.toStringUtf8();
+
     }
 
     public static final int PAYLOAD_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object payload_ = "";
+    private java.lang.String payload_;
     /**
      * <pre>
      * payload is an opaque string used that are of the given type above.
@@ -156,16 +144,7 @@ public final class Auth {
      */
     @java.lang.Override
     public java.lang.String getPayload() {
-      java.lang.Object ref = payload_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        payload_ = s;
-        return s;
-      }
+      return payload_;
     }
     /**
      * <pre>
@@ -178,369 +157,145 @@ public final class Auth {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getPayloadBytes() {
-      java.lang.Object ref = payload_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        payload_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(payload_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * payload is an opaque string used that are of the given type above.
+     * </pre>
+     *
+     * <code>string payload = 2 [json_name = "payload"];</code>
+     * @param value The payload to set.
+     */
+    private void setPayload(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      payload_ = value;
     }
+    /**
+     * <pre>
+     * payload is an opaque string used that are of the given type above.
+     * </pre>
+     *
+     * <code>string payload = 2 [json_name = "payload"];</code>
+     */
+    private void clearPayload() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payload_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, payload_);
-      }
-      getUnknownFields().writeTo(output);
+      payload_ = getDefaultInstance().getPayload();
     }
+    /**
+     * <pre>
+     * payload is an opaque string used that are of the given type above.
+     * </pre>
+     *
+     * <code>string payload = 2 [json_name = "payload"];</code>
+     * @param value The bytes for payload to set.
+     */
+    private void setPayloadBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      payload_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payload_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, payload_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.v1.Auth.Credentials)) {
-        return super.equals(obj);
-      }
-      proto.rpc.v1.Auth.Credentials other = (proto.rpc.v1.Auth.Credentials) obj;
-
-      if (!getType()
-          .equals(other.getType())) return false;
-      if (!getPayload()
-          .equals(other.getPayload())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getType().hashCode();
-      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
-      hash = (53 * hash) + getPayload().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.v1.Auth.Credentials parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.Credentials parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.Credentials parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.Credentials parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.Credentials parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.Credentials parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.Credentials parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.v1.Auth.Credentials parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.v1.Auth.Credentials parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.v1.Auth.Credentials parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.Credentials parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.v1.Auth.Credentials parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.v1.Auth.Credentials prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code proto.rpc.v1.Credentials}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.v1.Auth.Credentials, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.v1.Credentials)
         proto.rpc.v1.Auth.CredentialsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_Credentials_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_Credentials_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.v1.Auth.Credentials.class, proto.rpc.v1.Auth.Credentials.Builder.class);
-      }
-
       // Construct using proto.rpc.v1.Auth.Credentials.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        type_ = "";
-        payload_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_Credentials_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.Credentials getDefaultInstanceForType() {
-        return proto.rpc.v1.Auth.Credentials.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.Credentials build() {
-        proto.rpc.v1.Auth.Credentials result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.Credentials buildPartial() {
-        proto.rpc.v1.Auth.Credentials result = new proto.rpc.v1.Auth.Credentials(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.v1.Auth.Credentials result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.type_ = type_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.payload_ = payload_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.v1.Auth.Credentials) {
-          return mergeFrom((proto.rpc.v1.Auth.Credentials)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.v1.Auth.Credentials other) {
-        if (other == proto.rpc.v1.Auth.Credentials.getDefaultInstance()) return this;
-        if (!other.getType().isEmpty()) {
-          type_ = other.type_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getPayload().isEmpty()) {
-          payload_ = other.payload_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                type_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                payload_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object type_ = "";
       /**
        * <pre>
        * type is the type of credentials being used.
@@ -549,17 +304,9 @@ public final class Auth {
        * <code>string type = 1 [json_name = "type"];</code>
        * @return The type.
        */
+      @java.lang.Override
       public java.lang.String getType() {
-        java.lang.Object ref = type_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          type_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getType();
       }
       /**
        * <pre>
@@ -569,18 +316,10 @@ public final class Auth {
        * <code>string type = 1 [json_name = "type"];</code>
        * @return The bytes for type.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTypeBytes() {
-        java.lang.Object ref = type_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          type_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getTypeBytes();
       }
       /**
        * <pre>
@@ -593,10 +332,8 @@ public final class Auth {
        */
       public Builder setType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        type_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setType(value);
         return this;
       }
       /**
@@ -608,9 +345,8 @@ public final class Auth {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        type_ = getDefaultInstance().getType();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
       /**
@@ -624,15 +360,11 @@ public final class Auth {
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        type_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setTypeBytes(value);
         return this;
       }
 
-      private java.lang.Object payload_ = "";
       /**
        * <pre>
        * payload is an opaque string used that are of the given type above.
@@ -641,17 +373,9 @@ public final class Auth {
        * <code>string payload = 2 [json_name = "payload"];</code>
        * @return The payload.
        */
+      @java.lang.Override
       public java.lang.String getPayload() {
-        java.lang.Object ref = payload_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          payload_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getPayload();
       }
       /**
        * <pre>
@@ -661,18 +385,10 @@ public final class Auth {
        * <code>string payload = 2 [json_name = "payload"];</code>
        * @return The bytes for payload.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getPayloadBytes() {
-        java.lang.Object ref = payload_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          payload_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getPayloadBytes();
       }
       /**
        * <pre>
@@ -685,10 +401,8 @@ public final class Auth {
        */
       public Builder setPayload(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        payload_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setPayload(value);
         return this;
       }
       /**
@@ -700,9 +414,8 @@ public final class Auth {
        * @return This builder for chaining.
        */
       public Builder clearPayload() {
-        payload_ = getDefaultInstance().getPayload();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearPayload();
         return this;
       }
       /**
@@ -716,80 +429,90 @@ public final class Auth {
        */
       public Builder setPayloadBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        payload_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setPayloadBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.v1.Credentials)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.v1.Auth.Credentials();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "type_",
+              "payload_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.v1.Auth.Credentials> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.v1.Auth.Credentials.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.v1.Auth.Credentials>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.v1.Credentials)
     private static final proto.rpc.v1.Auth.Credentials DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.v1.Auth.Credentials();
+      Credentials defaultInstance = new Credentials();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Credentials.class, defaultInstance);
     }
 
     public static proto.rpc.v1.Auth.Credentials getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Credentials>
-        PARSER = new com.google.protobuf.AbstractParser<Credentials>() {
-      @java.lang.Override
-      public Credentials parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Credentials> PARSER;
 
     public static com.google.protobuf.Parser<Credentials> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Credentials> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.v1.Auth.Credentials getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AuthenticateRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.v1.AuthenticateRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string entity = 1 [json_name = "entity"];</code>
@@ -813,10 +536,6 @@ public final class Auth {
      * @return The credentials.
      */
     proto.rpc.v1.Auth.Credentials getCredentials();
-    /**
-     * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
-     */
-    proto.rpc.v1.Auth.CredentialsOrBuilder getCredentialsOrBuilder();
   }
   /**
    * <pre>
@@ -825,59 +544,24 @@ public final class Auth {
    *
    * Protobuf type {@code proto.rpc.v1.AuthenticateRequest}
    */
-  public static final class AuthenticateRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AuthenticateRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          AuthenticateRequest, AuthenticateRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.v1.AuthenticateRequest)
       AuthenticateRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AuthenticateRequest.newBuilder() to construct.
-    private AuthenticateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AuthenticateRequest() {
       entity_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AuthenticateRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.v1.Auth.AuthenticateRequest.class, proto.rpc.v1.Auth.AuthenticateRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int ENTITY_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object entity_ = "";
+    private java.lang.String entity_;
     /**
      * <code>string entity = 1 [json_name = "entity"];</code>
      * @return The entity.
      */
     @java.lang.Override
     public java.lang.String getEntity() {
-      java.lang.Object ref = entity_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        entity_ = s;
-        return s;
-      }
+      return entity_;
     }
     /**
      * <code>string entity = 1 [json_name = "entity"];</code>
@@ -886,23 +570,40 @@ public final class Auth {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getEntityBytes() {
-      java.lang.Object ref = entity_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        entity_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(entity_);
+    }
+    /**
+     * <code>string entity = 1 [json_name = "entity"];</code>
+     * @param value The entity to set.
+     */
+    private void setEntity(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      entity_ = value;
+    }
+    /**
+     * <code>string entity = 1 [json_name = "entity"];</code>
+     */
+    private void clearEntity() {
+
+      entity_ = getDefaultInstance().getEntity();
+    }
+    /**
+     * <code>string entity = 1 [json_name = "entity"];</code>
+     * @param value The bytes for entity to set.
+     */
+    private void setEntityBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      entity_ = value.toStringUtf8();
+
     }
 
     public static final int CREDENTIALS_FIELD_NUMBER = 2;
     private proto.rpc.v1.Auth.Credentials credentials_;
     /**
      * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
-     * @return Whether the credentials field is set.
      */
     @java.lang.Override
     public boolean hasCredentials() {
@@ -910,7 +611,6 @@ public final class Auth {
     }
     /**
      * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
-     * @return The credentials.
      */
     @java.lang.Override
     public proto.rpc.v1.Auth.Credentials getCredentials() {
@@ -919,183 +619,116 @@ public final class Auth {
     /**
      * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.v1.Auth.CredentialsOrBuilder getCredentialsOrBuilder() {
-      return credentials_ == null ? proto.rpc.v1.Auth.Credentials.getDefaultInstance() : credentials_;
+    private void setCredentials(proto.rpc.v1.Auth.Credentials value) {
+      value.getClass();
+  credentials_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCredentials(proto.rpc.v1.Auth.Credentials value) {
+      value.getClass();
+  if (credentials_ != null &&
+          credentials_ != proto.rpc.v1.Auth.Credentials.getDefaultInstance()) {
+        credentials_ =
+          proto.rpc.v1.Auth.Credentials.newBuilder(credentials_).mergeFrom(value).buildPartial();
+      } else {
+        credentials_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entity_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entity_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getCredentials());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entity_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, entity_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getCredentials());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.v1.Auth.AuthenticateRequest)) {
-        return super.equals(obj);
-      }
-      proto.rpc.v1.Auth.AuthenticateRequest other = (proto.rpc.v1.Auth.AuthenticateRequest) obj;
-
-      if (!getEntity()
-          .equals(other.getEntity())) return false;
-      if (hasCredentials() != other.hasCredentials()) return false;
-      if (hasCredentials()) {
-        if (!getCredentials()
-            .equals(other.getCredentials())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ENTITY_FIELD_NUMBER;
-      hash = (53 * hash) + getEntity().hashCode();
-      if (hasCredentials()) {
-        hash = (37 * hash) + CREDENTIALS_FIELD_NUMBER;
-        hash = (53 * hash) + getCredentials().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
+     */
+    private void clearCredentials() {  credentials_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static proto.rpc.v1.Auth.AuthenticateRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.AuthenticateRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.AuthenticateRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.AuthenticateRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.v1.Auth.AuthenticateRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.v1.Auth.AuthenticateRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.v1.Auth.AuthenticateRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.v1.Auth.AuthenticateRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.v1.Auth.AuthenticateRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * An AuthenticateRequest contains the credentials used to authenticate.
@@ -1104,234 +737,32 @@ public final class Auth {
      * Protobuf type {@code proto.rpc.v1.AuthenticateRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.v1.Auth.AuthenticateRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.v1.AuthenticateRequest)
         proto.rpc.v1.Auth.AuthenticateRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.v1.Auth.AuthenticateRequest.class, proto.rpc.v1.Auth.AuthenticateRequest.Builder.class);
-      }
-
       // Construct using proto.rpc.v1.Auth.AuthenticateRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCredentialsFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        entity_ = "";
-        credentials_ = null;
-        if (credentialsBuilder_ != null) {
-          credentialsBuilder_.dispose();
-          credentialsBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.AuthenticateRequest getDefaultInstanceForType() {
-        return proto.rpc.v1.Auth.AuthenticateRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.AuthenticateRequest build() {
-        proto.rpc.v1.Auth.AuthenticateRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.AuthenticateRequest buildPartial() {
-        proto.rpc.v1.Auth.AuthenticateRequest result = new proto.rpc.v1.Auth.AuthenticateRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.v1.Auth.AuthenticateRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.entity_ = entity_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.credentials_ = credentialsBuilder_ == null
-              ? credentials_
-              : credentialsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.v1.Auth.AuthenticateRequest) {
-          return mergeFrom((proto.rpc.v1.Auth.AuthenticateRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.v1.Auth.AuthenticateRequest other) {
-        if (other == proto.rpc.v1.Auth.AuthenticateRequest.getDefaultInstance()) return this;
-        if (!other.getEntity().isEmpty()) {
-          entity_ = other.entity_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasCredentials()) {
-          mergeCredentials(other.getCredentials());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                entity_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getCredentialsFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object entity_ = "";
       /**
        * <code>string entity = 1 [json_name = "entity"];</code>
        * @return The entity.
        */
+      @java.lang.Override
       public java.lang.String getEntity() {
-        java.lang.Object ref = entity_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          entity_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getEntity();
       }
       /**
        * <code>string entity = 1 [json_name = "entity"];</code>
        * @return The bytes for entity.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getEntityBytes() {
-        java.lang.Object ref = entity_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          entity_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getEntityBytes();
       }
       /**
        * <code>string entity = 1 [json_name = "entity"];</code>
@@ -1340,10 +771,8 @@ public final class Auth {
        */
       public Builder setEntity(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        entity_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setEntity(value);
         return this;
       }
       /**
@@ -1351,9 +780,8 @@ public final class Auth {
        * @return This builder for chaining.
        */
       public Builder clearEntity() {
-        entity_ = getDefaultInstance().getEntity();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearEntity();
         return this;
       }
       /**
@@ -1363,201 +791,138 @@ public final class Auth {
        */
       public Builder setEntityBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        entity_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setEntityBytes(value);
         return this;
       }
 
-      private proto.rpc.v1.Auth.Credentials credentials_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.v1.Auth.Credentials, proto.rpc.v1.Auth.Credentials.Builder, proto.rpc.v1.Auth.CredentialsOrBuilder> credentialsBuilder_;
       /**
        * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
-       * @return Whether the credentials field is set.
        */
+      @java.lang.Override
       public boolean hasCredentials() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasCredentials();
       }
       /**
        * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
-       * @return The credentials.
        */
+      @java.lang.Override
       public proto.rpc.v1.Auth.Credentials getCredentials() {
-        if (credentialsBuilder_ == null) {
-          return credentials_ == null ? proto.rpc.v1.Auth.Credentials.getDefaultInstance() : credentials_;
-        } else {
-          return credentialsBuilder_.getMessage();
-        }
+        return instance.getCredentials();
       }
       /**
        * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
        */
       public Builder setCredentials(proto.rpc.v1.Auth.Credentials value) {
-        if (credentialsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          credentials_ = value;
-        } else {
-          credentialsBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setCredentials(value);
         return this;
-      }
+        }
       /**
        * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
        */
       public Builder setCredentials(
           proto.rpc.v1.Auth.Credentials.Builder builderForValue) {
-        if (credentialsBuilder_ == null) {
-          credentials_ = builderForValue.build();
-        } else {
-          credentialsBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setCredentials(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
        */
       public Builder mergeCredentials(proto.rpc.v1.Auth.Credentials value) {
-        if (credentialsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            credentials_ != null &&
-            credentials_ != proto.rpc.v1.Auth.Credentials.getDefaultInstance()) {
-            getCredentialsBuilder().mergeFrom(value);
-          } else {
-            credentials_ = value;
-          }
-        } else {
-          credentialsBuilder_.mergeFrom(value);
-        }
-        if (credentials_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeCredentials(value);
         return this;
       }
       /**
        * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
        */
-      public Builder clearCredentials() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        credentials_ = null;
-        if (credentialsBuilder_ != null) {
-          credentialsBuilder_.dispose();
-          credentialsBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearCredentials() {  copyOnWrite();
+        instance.clearCredentials();
         return this;
       }
-      /**
-       * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
-       */
-      public proto.rpc.v1.Auth.Credentials.Builder getCredentialsBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getCredentialsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
-       */
-      public proto.rpc.v1.Auth.CredentialsOrBuilder getCredentialsOrBuilder() {
-        if (credentialsBuilder_ != null) {
-          return credentialsBuilder_.getMessageOrBuilder();
-        } else {
-          return credentials_ == null ?
-              proto.rpc.v1.Auth.Credentials.getDefaultInstance() : credentials_;
-        }
-      }
-      /**
-       * <code>.proto.rpc.v1.Credentials credentials = 2 [json_name = "credentials"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.v1.Auth.Credentials, proto.rpc.v1.Auth.Credentials.Builder, proto.rpc.v1.Auth.CredentialsOrBuilder> 
-          getCredentialsFieldBuilder() {
-        if (credentialsBuilder_ == null) {
-          credentialsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.v1.Auth.Credentials, proto.rpc.v1.Auth.Credentials.Builder, proto.rpc.v1.Auth.CredentialsOrBuilder>(
-                  getCredentials(),
-                  getParentForChildren(),
-                  isClean());
-          credentials_ = null;
-        }
-        return credentialsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.v1.AuthenticateRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.v1.Auth.AuthenticateRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "entity_",
+              "credentials_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.v1.Auth.AuthenticateRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.v1.Auth.AuthenticateRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.v1.Auth.AuthenticateRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.v1.AuthenticateRequest)
     private static final proto.rpc.v1.Auth.AuthenticateRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.v1.Auth.AuthenticateRequest();
+      AuthenticateRequest defaultInstance = new AuthenticateRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AuthenticateRequest.class, defaultInstance);
     }
 
     public static proto.rpc.v1.Auth.AuthenticateRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthenticateRequest>
-        PARSER = new com.google.protobuf.AbstractParser<AuthenticateRequest>() {
-      @java.lang.Override
-      public AuthenticateRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AuthenticateRequest> PARSER;
 
     public static com.google.protobuf.Parser<AuthenticateRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AuthenticateRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.v1.Auth.AuthenticateRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AuthenticateResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.v1.AuthenticateResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -1588,42 +953,16 @@ public final class Auth {
    *
    * Protobuf type {@code proto.rpc.v1.AuthenticateResponse}
    */
-  public static final class AuthenticateResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AuthenticateResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          AuthenticateResponse, AuthenticateResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.v1.AuthenticateResponse)
       AuthenticateResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AuthenticateResponse.newBuilder() to construct.
-    private AuthenticateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AuthenticateResponse() {
       accessToken_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AuthenticateResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.v1.Auth.AuthenticateResponse.class, proto.rpc.v1.Auth.AuthenticateResponse.Builder.class);
-    }
-
     public static final int ACCESS_TOKEN_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object accessToken_ = "";
+    private java.lang.String accessToken_;
     /**
      * <pre>
      * access_token is a JWT where only the expiration should be deemed
@@ -1635,16 +974,7 @@ public final class Auth {
      */
     @java.lang.Override
     public java.lang.String getAccessToken() {
-      java.lang.Object ref = accessToken_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        accessToken_ = s;
-        return s;
-      }
+      return accessToken_;
     }
     /**
      * <pre>
@@ -1658,174 +988,134 @@ public final class Auth {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getAccessTokenBytes() {
-      java.lang.Object ref = accessToken_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        accessToken_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(accessToken_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * access_token is a JWT where only the expiration should be deemed
+     * important.
+     * </pre>
+     *
+     * <code>string access_token = 1 [json_name = "accessToken"];</code>
+     * @param value The accessToken to set.
+     */
+    private void setAccessToken(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      accessToken_ = value;
     }
+    /**
+     * <pre>
+     * access_token is a JWT where only the expiration should be deemed
+     * important.
+     * </pre>
+     *
+     * <code>string access_token = 1 [json_name = "accessToken"];</code>
+     */
+    private void clearAccessToken() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessToken_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessToken_);
-      }
-      getUnknownFields().writeTo(output);
+      accessToken_ = getDefaultInstance().getAccessToken();
     }
+    /**
+     * <pre>
+     * access_token is a JWT where only the expiration should be deemed
+     * important.
+     * </pre>
+     *
+     * <code>string access_token = 1 [json_name = "accessToken"];</code>
+     * @param value The bytes for accessToken to set.
+     */
+    private void setAccessTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      accessToken_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessToken_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessToken_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.v1.Auth.AuthenticateResponse)) {
-        return super.equals(obj);
-      }
-      proto.rpc.v1.Auth.AuthenticateResponse other = (proto.rpc.v1.Auth.AuthenticateResponse) obj;
-
-      if (!getAccessToken()
-          .equals(other.getAccessToken())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ACCESS_TOKEN_FIELD_NUMBER;
-      hash = (53 * hash) + getAccessToken().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.v1.Auth.AuthenticateResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.AuthenticateResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.AuthenticateResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.AuthenticateResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.v1.Auth.AuthenticateResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.v1.Auth.AuthenticateResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.v1.Auth.AuthenticateResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.v1.Auth.AuthenticateResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.v1.Auth.AuthenticateResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * An AuthenticateResponse is returned after successful authentication.
@@ -1834,173 +1124,16 @@ public final class Auth {
      * Protobuf type {@code proto.rpc.v1.AuthenticateResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.v1.Auth.AuthenticateResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.v1.AuthenticateResponse)
         proto.rpc.v1.Auth.AuthenticateResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.v1.Auth.AuthenticateResponse.class, proto.rpc.v1.Auth.AuthenticateResponse.Builder.class);
-      }
-
       // Construct using proto.rpc.v1.Auth.AuthenticateResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        accessToken_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.AuthenticateResponse getDefaultInstanceForType() {
-        return proto.rpc.v1.Auth.AuthenticateResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.AuthenticateResponse build() {
-        proto.rpc.v1.Auth.AuthenticateResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.AuthenticateResponse buildPartial() {
-        proto.rpc.v1.Auth.AuthenticateResponse result = new proto.rpc.v1.Auth.AuthenticateResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.v1.Auth.AuthenticateResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.accessToken_ = accessToken_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.v1.Auth.AuthenticateResponse) {
-          return mergeFrom((proto.rpc.v1.Auth.AuthenticateResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.v1.Auth.AuthenticateResponse other) {
-        if (other == proto.rpc.v1.Auth.AuthenticateResponse.getDefaultInstance()) return this;
-        if (!other.getAccessToken().isEmpty()) {
-          accessToken_ = other.accessToken_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                accessToken_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object accessToken_ = "";
       /**
        * <pre>
        * access_token is a JWT where only the expiration should be deemed
@@ -2010,17 +1143,9 @@ public final class Auth {
        * <code>string access_token = 1 [json_name = "accessToken"];</code>
        * @return The accessToken.
        */
+      @java.lang.Override
       public java.lang.String getAccessToken() {
-        java.lang.Object ref = accessToken_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          accessToken_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getAccessToken();
       }
       /**
        * <pre>
@@ -2031,18 +1156,10 @@ public final class Auth {
        * <code>string access_token = 1 [json_name = "accessToken"];</code>
        * @return The bytes for accessToken.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getAccessTokenBytes() {
-        java.lang.Object ref = accessToken_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          accessToken_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getAccessTokenBytes();
       }
       /**
        * <pre>
@@ -2056,10 +1173,8 @@ public final class Auth {
        */
       public Builder setAccessToken(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        accessToken_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setAccessToken(value);
         return this;
       }
       /**
@@ -2072,9 +1187,8 @@ public final class Auth {
        * @return This builder for chaining.
        */
       public Builder clearAccessToken() {
-        accessToken_ = getDefaultInstance().getAccessToken();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearAccessToken();
         return this;
       }
       /**
@@ -2089,80 +1203,88 @@ public final class Auth {
        */
       public Builder setAccessTokenBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        accessToken_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setAccessTokenBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.v1.AuthenticateResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.v1.Auth.AuthenticateResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "accessToken_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.v1.Auth.AuthenticateResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.v1.Auth.AuthenticateResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.v1.Auth.AuthenticateResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.v1.AuthenticateResponse)
     private static final proto.rpc.v1.Auth.AuthenticateResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.v1.Auth.AuthenticateResponse();
+      AuthenticateResponse defaultInstance = new AuthenticateResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AuthenticateResponse.class, defaultInstance);
     }
 
     public static proto.rpc.v1.Auth.AuthenticateResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthenticateResponse>
-        PARSER = new com.google.protobuf.AbstractParser<AuthenticateResponse>() {
-      @java.lang.Override
-      public AuthenticateResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AuthenticateResponse> PARSER;
 
     public static com.google.protobuf.Parser<AuthenticateResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AuthenticateResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.v1.Auth.AuthenticateResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AuthenticateToRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.v1.AuthenticateToRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string entity = 1 [json_name = "entity"];</code>
@@ -2183,58 +1305,23 @@ public final class Auth {
    *
    * Protobuf type {@code proto.rpc.v1.AuthenticateToRequest}
    */
-  public static final class AuthenticateToRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AuthenticateToRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          AuthenticateToRequest, AuthenticateToRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.v1.AuthenticateToRequest)
       AuthenticateToRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AuthenticateToRequest.newBuilder() to construct.
-    private AuthenticateToRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AuthenticateToRequest() {
       entity_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AuthenticateToRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateToRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateToRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.v1.Auth.AuthenticateToRequest.class, proto.rpc.v1.Auth.AuthenticateToRequest.Builder.class);
-    }
-
     public static final int ENTITY_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object entity_ = "";
+    private java.lang.String entity_;
     /**
      * <code>string entity = 1 [json_name = "entity"];</code>
      * @return The entity.
      */
     @java.lang.Override
     public java.lang.String getEntity() {
-      java.lang.Object ref = entity_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        entity_ = s;
-        return s;
-      }
+      return entity_;
     }
     /**
      * <code>string entity = 1 [json_name = "entity"];</code>
@@ -2243,174 +1330,119 @@ public final class Auth {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getEntityBytes() {
-      java.lang.Object ref = entity_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        entity_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(entity_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string entity = 1 [json_name = "entity"];</code>
+     * @param value The entity to set.
+     */
+    private void setEntity(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      entity_ = value;
     }
+    /**
+     * <code>string entity = 1 [json_name = "entity"];</code>
+     */
+    private void clearEntity() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entity_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, entity_);
-      }
-      getUnknownFields().writeTo(output);
+      entity_ = getDefaultInstance().getEntity();
     }
+    /**
+     * <code>string entity = 1 [json_name = "entity"];</code>
+     * @param value The bytes for entity to set.
+     */
+    private void setEntityBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      entity_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(entity_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, entity_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.v1.Auth.AuthenticateToRequest)) {
-        return super.equals(obj);
-      }
-      proto.rpc.v1.Auth.AuthenticateToRequest other = (proto.rpc.v1.Auth.AuthenticateToRequest) obj;
-
-      if (!getEntity()
-          .equals(other.getEntity())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ENTITY_FIELD_NUMBER;
-      hash = (53 * hash) + getEntity().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.v1.Auth.AuthenticateToRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.AuthenticateToRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateToRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.AuthenticateToRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateToRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.AuthenticateToRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateToRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.v1.Auth.AuthenticateToRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.v1.Auth.AuthenticateToRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.v1.Auth.AuthenticateToRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateToRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.v1.Auth.AuthenticateToRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.v1.Auth.AuthenticateToRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * An AuthenticateToRequest contains the entity to authenticate to.
@@ -2419,205 +1451,32 @@ public final class Auth {
      * Protobuf type {@code proto.rpc.v1.AuthenticateToRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.v1.Auth.AuthenticateToRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.v1.AuthenticateToRequest)
         proto.rpc.v1.Auth.AuthenticateToRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateToRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateToRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.v1.Auth.AuthenticateToRequest.class, proto.rpc.v1.Auth.AuthenticateToRequest.Builder.class);
-      }
-
       // Construct using proto.rpc.v1.Auth.AuthenticateToRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        entity_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateToRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.AuthenticateToRequest getDefaultInstanceForType() {
-        return proto.rpc.v1.Auth.AuthenticateToRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.AuthenticateToRequest build() {
-        proto.rpc.v1.Auth.AuthenticateToRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.AuthenticateToRequest buildPartial() {
-        proto.rpc.v1.Auth.AuthenticateToRequest result = new proto.rpc.v1.Auth.AuthenticateToRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.v1.Auth.AuthenticateToRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.entity_ = entity_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.v1.Auth.AuthenticateToRequest) {
-          return mergeFrom((proto.rpc.v1.Auth.AuthenticateToRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.v1.Auth.AuthenticateToRequest other) {
-        if (other == proto.rpc.v1.Auth.AuthenticateToRequest.getDefaultInstance()) return this;
-        if (!other.getEntity().isEmpty()) {
-          entity_ = other.entity_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                entity_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object entity_ = "";
       /**
        * <code>string entity = 1 [json_name = "entity"];</code>
        * @return The entity.
        */
+      @java.lang.Override
       public java.lang.String getEntity() {
-        java.lang.Object ref = entity_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          entity_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getEntity();
       }
       /**
        * <code>string entity = 1 [json_name = "entity"];</code>
        * @return The bytes for entity.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getEntityBytes() {
-        java.lang.Object ref = entity_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          entity_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getEntityBytes();
       }
       /**
        * <code>string entity = 1 [json_name = "entity"];</code>
@@ -2626,10 +1485,8 @@ public final class Auth {
        */
       public Builder setEntity(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        entity_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setEntity(value);
         return this;
       }
       /**
@@ -2637,9 +1494,8 @@ public final class Auth {
        * @return This builder for chaining.
        */
       public Builder clearEntity() {
-        entity_ = getDefaultInstance().getEntity();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearEntity();
         return this;
       }
       /**
@@ -2649,80 +1505,88 @@ public final class Auth {
        */
       public Builder setEntityBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        entity_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setEntityBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.v1.AuthenticateToRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.v1.Auth.AuthenticateToRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "entity_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.v1.Auth.AuthenticateToRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.v1.Auth.AuthenticateToRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.v1.Auth.AuthenticateToRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.v1.AuthenticateToRequest)
     private static final proto.rpc.v1.Auth.AuthenticateToRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.v1.Auth.AuthenticateToRequest();
+      AuthenticateToRequest defaultInstance = new AuthenticateToRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AuthenticateToRequest.class, defaultInstance);
     }
 
     public static proto.rpc.v1.Auth.AuthenticateToRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthenticateToRequest>
-        PARSER = new com.google.protobuf.AbstractParser<AuthenticateToRequest>() {
-      @java.lang.Override
-      public AuthenticateToRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AuthenticateToRequest> PARSER;
 
     public static com.google.protobuf.Parser<AuthenticateToRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AuthenticateToRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.v1.Auth.AuthenticateToRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AuthenticateToResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.v1.AuthenticateToResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -2753,42 +1617,16 @@ public final class Auth {
    *
    * Protobuf type {@code proto.rpc.v1.AuthenticateToResponse}
    */
-  public static final class AuthenticateToResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AuthenticateToResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          AuthenticateToResponse, AuthenticateToResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.v1.AuthenticateToResponse)
       AuthenticateToResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AuthenticateToResponse.newBuilder() to construct.
-    private AuthenticateToResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AuthenticateToResponse() {
       accessToken_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AuthenticateToResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateToResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateToResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.v1.Auth.AuthenticateToResponse.class, proto.rpc.v1.Auth.AuthenticateToResponse.Builder.class);
-    }
-
     public static final int ACCESS_TOKEN_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object accessToken_ = "";
+    private java.lang.String accessToken_;
     /**
      * <pre>
      * access_token is a JWT where only the expiration should be deemed
@@ -2800,16 +1638,7 @@ public final class Auth {
      */
     @java.lang.Override
     public java.lang.String getAccessToken() {
-      java.lang.Object ref = accessToken_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        accessToken_ = s;
-        return s;
-      }
+      return accessToken_;
     }
     /**
      * <pre>
@@ -2823,174 +1652,134 @@ public final class Auth {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getAccessTokenBytes() {
-      java.lang.Object ref = accessToken_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        accessToken_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(accessToken_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * access_token is a JWT where only the expiration should be deemed
+     * important.
+     * </pre>
+     *
+     * <code>string access_token = 1 [json_name = "accessToken"];</code>
+     * @param value The accessToken to set.
+     */
+    private void setAccessToken(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      accessToken_ = value;
     }
+    /**
+     * <pre>
+     * access_token is a JWT where only the expiration should be deemed
+     * important.
+     * </pre>
+     *
+     * <code>string access_token = 1 [json_name = "accessToken"];</code>
+     */
+    private void clearAccessToken() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessToken_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessToken_);
-      }
-      getUnknownFields().writeTo(output);
+      accessToken_ = getDefaultInstance().getAccessToken();
     }
+    /**
+     * <pre>
+     * access_token is a JWT where only the expiration should be deemed
+     * important.
+     * </pre>
+     *
+     * <code>string access_token = 1 [json_name = "accessToken"];</code>
+     * @param value The bytes for accessToken to set.
+     */
+    private void setAccessTokenBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      accessToken_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessToken_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessToken_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.v1.Auth.AuthenticateToResponse)) {
-        return super.equals(obj);
-      }
-      proto.rpc.v1.Auth.AuthenticateToResponse other = (proto.rpc.v1.Auth.AuthenticateToResponse) obj;
-
-      if (!getAccessToken()
-          .equals(other.getAccessToken())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ACCESS_TOKEN_FIELD_NUMBER;
-      hash = (53 * hash) + getAccessToken().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.v1.Auth.AuthenticateToResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.AuthenticateToResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateToResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.AuthenticateToResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateToResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.v1.Auth.AuthenticateToResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateToResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.v1.Auth.AuthenticateToResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.v1.Auth.AuthenticateToResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.v1.Auth.AuthenticateToResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.v1.Auth.AuthenticateToResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.v1.Auth.AuthenticateToResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.v1.Auth.AuthenticateToResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * An AuthenticateResponse is returned after successful authentication.
@@ -2999,173 +1788,16 @@ public final class Auth {
      * Protobuf type {@code proto.rpc.v1.AuthenticateToResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.v1.Auth.AuthenticateToResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.v1.AuthenticateToResponse)
         proto.rpc.v1.Auth.AuthenticateToResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateToResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateToResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.v1.Auth.AuthenticateToResponse.class, proto.rpc.v1.Auth.AuthenticateToResponse.Builder.class);
-      }
-
       // Construct using proto.rpc.v1.Auth.AuthenticateToResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        accessToken_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.v1.Auth.internal_static_proto_rpc_v1_AuthenticateToResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.AuthenticateToResponse getDefaultInstanceForType() {
-        return proto.rpc.v1.Auth.AuthenticateToResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.AuthenticateToResponse build() {
-        proto.rpc.v1.Auth.AuthenticateToResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.v1.Auth.AuthenticateToResponse buildPartial() {
-        proto.rpc.v1.Auth.AuthenticateToResponse result = new proto.rpc.v1.Auth.AuthenticateToResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.v1.Auth.AuthenticateToResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.accessToken_ = accessToken_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.v1.Auth.AuthenticateToResponse) {
-          return mergeFrom((proto.rpc.v1.Auth.AuthenticateToResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.v1.Auth.AuthenticateToResponse other) {
-        if (other == proto.rpc.v1.Auth.AuthenticateToResponse.getDefaultInstance()) return this;
-        if (!other.getAccessToken().isEmpty()) {
-          accessToken_ = other.accessToken_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                accessToken_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object accessToken_ = "";
       /**
        * <pre>
        * access_token is a JWT where only the expiration should be deemed
@@ -3175,17 +1807,9 @@ public final class Auth {
        * <code>string access_token = 1 [json_name = "accessToken"];</code>
        * @return The accessToken.
        */
+      @java.lang.Override
       public java.lang.String getAccessToken() {
-        java.lang.Object ref = accessToken_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          accessToken_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getAccessToken();
       }
       /**
        * <pre>
@@ -3196,18 +1820,10 @@ public final class Auth {
        * <code>string access_token = 1 [json_name = "accessToken"];</code>
        * @return The bytes for accessToken.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getAccessTokenBytes() {
-        java.lang.Object ref = accessToken_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          accessToken_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getAccessTokenBytes();
       }
       /**
        * <pre>
@@ -3221,10 +1837,8 @@ public final class Auth {
        */
       public Builder setAccessToken(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        accessToken_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setAccessToken(value);
         return this;
       }
       /**
@@ -3237,9 +1851,8 @@ public final class Auth {
        * @return This builder for chaining.
        */
       public Builder clearAccessToken() {
-        accessToken_ = getDefaultInstance().getAccessToken();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearAccessToken();
         return this;
       }
       /**
@@ -3254,172 +1867,87 @@ public final class Auth {
        */
       public Builder setAccessTokenBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        accessToken_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setAccessTokenBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.v1.AuthenticateToResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.v1.Auth.AuthenticateToResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "accessToken_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.v1.Auth.AuthenticateToResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.v1.Auth.AuthenticateToResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.v1.Auth.AuthenticateToResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.v1.AuthenticateToResponse)
     private static final proto.rpc.v1.Auth.AuthenticateToResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.v1.Auth.AuthenticateToResponse();
+      AuthenticateToResponse defaultInstance = new AuthenticateToResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AuthenticateToResponse.class, defaultInstance);
     }
 
     public static proto.rpc.v1.Auth.AuthenticateToResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AuthenticateToResponse>
-        PARSER = new com.google.protobuf.AbstractParser<AuthenticateToResponse>() {
-      @java.lang.Override
-      public AuthenticateToResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AuthenticateToResponse> PARSER;
 
     public static com.google.protobuf.Parser<AuthenticateToResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AuthenticateToResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.v1.Auth.AuthenticateToResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_v1_Credentials_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_v1_Credentials_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_v1_AuthenticateRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_v1_AuthenticateRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_v1_AuthenticateResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_v1_AuthenticateResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_v1_AuthenticateToRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_v1_AuthenticateToRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_v1_AuthenticateToResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_v1_AuthenticateToResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\027proto/rpc/v1/auth.proto\022\014proto.rpc.v1\032" +
-      "\034google/api/annotations.proto\";\n\013Credent" +
-      "ials\022\022\n\004type\030\001 \001(\tR\004type\022\030\n\007payload\030\002 \001(" +
-      "\tR\007payload\"j\n\023AuthenticateRequest\022\026\n\006ent" +
-      "ity\030\001 \001(\tR\006entity\022;\n\013credentials\030\002 \001(\0132\031" +
-      ".proto.rpc.v1.CredentialsR\013credentials\"9" +
-      "\n\024AuthenticateResponse\022!\n\014access_token\030\001" +
-      " \001(\tR\013accessToken\"/\n\025AuthenticateToReque" +
-      "st\022\026\n\006entity\030\001 \001(\tR\006entity\";\n\026Authentica" +
-      "teToResponse\022!\n\014access_token\030\001 \001(\tR\013acce" +
-      "ssToken2\202\001\n\013AuthService\022s\n\014Authenticate\022" +
-      "!.proto.rpc.v1.AuthenticateRequest\032\".pro" +
-      "to.rpc.v1.AuthenticateResponse\"\034\202\323\344\223\002\026\"\024" +
-      "/rpc/v1/authenticate2\223\001\n\023ExternalAuthSer" +
-      "vice\022|\n\016AuthenticateTo\022#.proto.rpc.v1.Au" +
-      "thenticateToRequest\032$.proto.rpc.v1.Authe" +
-      "nticateToResponse\"\037\202\323\344\223\002\031\"\027/rpc/v1/authe" +
-      "nticate_toB Z\036go.viam.com/utils/proto/rp" +
-      "c/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
-        });
-    internal_static_proto_rpc_v1_Credentials_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_proto_rpc_v1_Credentials_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_v1_Credentials_descriptor,
-        new java.lang.String[] { "Type", "Payload", });
-    internal_static_proto_rpc_v1_AuthenticateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_proto_rpc_v1_AuthenticateRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_v1_AuthenticateRequest_descriptor,
-        new java.lang.String[] { "Entity", "Credentials", });
-    internal_static_proto_rpc_v1_AuthenticateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_proto_rpc_v1_AuthenticateResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_v1_AuthenticateResponse_descriptor,
-        new java.lang.String[] { "AccessToken", });
-    internal_static_proto_rpc_v1_AuthenticateToRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_proto_rpc_v1_AuthenticateToRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_v1_AuthenticateToRequest_descriptor,
-        new java.lang.String[] { "Entity", });
-    internal_static_proto_rpc_v1_AuthenticateToResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_proto_rpc_v1_AuthenticateToResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_v1_AuthenticateToResponse_descriptor,
-        new java.lang.String[] { "AccessToken", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

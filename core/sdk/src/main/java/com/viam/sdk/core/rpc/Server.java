@@ -8,7 +8,6 @@ import com.viam.sdk.core.resource.ResourceManager;
 import com.viam.sdk.core.resource.ResourceRegistration;
 import com.viam.sdk.core.robot.RobotRPCService;
 import io.grpc.ServerBuilder;
-import io.grpc.protobuf.services.ProtoReflectionService;
 import java.io.IOException;
 import java.util.List;
 import java.util.logging.Logger;
@@ -49,7 +48,7 @@ public class Server extends ResourceManager {
           // unimplemented to signal no support
         }).
         addService(new RobotRPCService(this)).
-        addService(ProtoReflectionService.newInstance());
+        addService(new ProtoReflectionService());
     if (moduleService != null) {
       serverBuilder.addService(moduleService);
     }

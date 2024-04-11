@@ -9,15 +9,9 @@ public final class Movementsensor {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   public interface GetLinearVelocityRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetLinearVelocityRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -57,55 +51,21 @@ public final class Movementsensor {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetLinearVelocityRequest}
    */
-  public static final class GetLinearVelocityRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetLinearVelocityRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetLinearVelocityRequest, GetLinearVelocityRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetLinearVelocityRequest)
       GetLinearVelocityRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetLinearVelocityRequest.newBuilder() to construct.
-    private GetLinearVelocityRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetLinearVelocityRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetLinearVelocityRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearVelocityRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearVelocityRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a movement sensor
@@ -116,16 +76,7 @@ public final class Movementsensor {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -138,16 +89,46 @@ public final class Movementsensor {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -158,7 +139,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -170,7 +150,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -183,383 +162,138 @@ public final class Movementsensor {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest other = (com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetLinearVelocityRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetLinearVelocityRequest)
         com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearVelocityRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearVelocityRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearVelocityRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest result = new com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a movement sensor
@@ -568,17 +302,9 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -588,18 +314,10 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -612,10 +330,8 @@ public final class Movementsensor {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -627,9 +343,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -643,27 +358,21 @@ public final class Movementsensor {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -671,14 +380,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -688,18 +393,10 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -709,13 +406,8 @@ public final class Movementsensor {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -726,21 +418,8 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -750,130 +429,91 @@ public final class Movementsensor {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetLinearVelocityRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetLinearVelocityRequest)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest();
+      GetLinearVelocityRequest defaultInstance = new GetLinearVelocityRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetLinearVelocityRequest.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetLinearVelocityRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetLinearVelocityRequest>() {
-      @java.lang.Override
-      public GetLinearVelocityRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetLinearVelocityRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetLinearVelocityRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetLinearVelocityRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetLinearVelocityResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetLinearVelocityResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -893,50 +533,17 @@ public final class Movementsensor {
      * @return The linearVelocity.
      */
     com.viam.common.v1.Common.Vector3 getLinearVelocity();
-    /**
-     * <pre>
-     * Linear velocity in m/s across x/y/z axes
-     * </pre>
-     *
-     * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
-     */
-    com.viam.common.v1.Common.Vector3OrBuilder getLinearVelocityOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetLinearVelocityResponse}
    */
-  public static final class GetLinearVelocityResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetLinearVelocityResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetLinearVelocityResponse, GetLinearVelocityResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetLinearVelocityResponse)
       GetLinearVelocityResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetLinearVelocityResponse.newBuilder() to construct.
-    private GetLinearVelocityResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetLinearVelocityResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetLinearVelocityResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearVelocityResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearVelocityResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int LINEAR_VELOCITY_FIELD_NUMBER = 1;
     private com.viam.common.v1.Common.Vector3 linearVelocity_;
@@ -946,7 +553,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
-     * @return Whether the linearVelocity field is set.
      */
     @java.lang.Override
     public boolean hasLinearVelocity() {
@@ -958,7 +564,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
-     * @return The linearVelocity.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.Vector3 getLinearVelocity() {
@@ -971,371 +576,148 @@ public final class Movementsensor {
      *
      * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.Vector3OrBuilder getLinearVelocityOrBuilder() {
-      return linearVelocity_ == null ? com.viam.common.v1.Common.Vector3.getDefaultInstance() : linearVelocity_;
+    private void setLinearVelocity(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();
+  linearVelocity_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Linear velocity in m/s across x/y/z axes
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLinearVelocity(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();
+  if (linearVelocity_ != null &&
+          linearVelocity_ != com.viam.common.v1.Common.Vector3.getDefaultInstance()) {
+        linearVelocity_ =
+          com.viam.common.v1.Common.Vector3.newBuilder(linearVelocity_).mergeFrom(value).buildPartial();
+      } else {
+        linearVelocity_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getLinearVelocity());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getLinearVelocity());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse other = (com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse) obj;
-
-      if (hasLinearVelocity() != other.hasLinearVelocity()) return false;
-      if (hasLinearVelocity()) {
-        if (!getLinearVelocity()
-            .equals(other.getLinearVelocity())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasLinearVelocity()) {
-        hash = (37 * hash) + LINEAR_VELOCITY_FIELD_NUMBER;
-        hash = (53 * hash) + getLinearVelocity().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Linear velocity in m/s across x/y/z axes
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
+     */
+    private void clearLinearVelocity() {  linearVelocity_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetLinearVelocityResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetLinearVelocityResponse)
         com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearVelocityResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearVelocityResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLinearVelocityFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        linearVelocity_ = null;
-        if (linearVelocityBuilder_ != null) {
-          linearVelocityBuilder_.dispose();
-          linearVelocityBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearVelocityResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse result = new com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.linearVelocity_ = linearVelocityBuilder_ == null
-              ? linearVelocity_
-              : linearVelocityBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse.getDefaultInstance()) return this;
-        if (other.hasLinearVelocity()) {
-          mergeLinearVelocity(other.getLinearVelocity());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getLinearVelocityFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.common.v1.Common.Vector3 linearVelocity_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Vector3, com.viam.common.v1.Common.Vector3.Builder, com.viam.common.v1.Common.Vector3OrBuilder> linearVelocityBuilder_;
       /**
        * <pre>
        * Linear velocity in m/s across x/y/z axes
        * </pre>
        *
        * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
-       * @return Whether the linearVelocity field is set.
        */
+      @java.lang.Override
       public boolean hasLinearVelocity() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasLinearVelocity();
       }
       /**
        * <pre>
@@ -1343,14 +725,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
-       * @return The linearVelocity.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.Vector3 getLinearVelocity() {
-        if (linearVelocityBuilder_ == null) {
-          return linearVelocity_ == null ? com.viam.common.v1.Common.Vector3.getDefaultInstance() : linearVelocity_;
-        } else {
-          return linearVelocityBuilder_.getMessage();
-        }
+        return instance.getLinearVelocity();
       }
       /**
        * <pre>
@@ -1360,18 +738,10 @@ public final class Movementsensor {
        * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
        */
       public Builder setLinearVelocity(com.viam.common.v1.Common.Vector3 value) {
-        if (linearVelocityBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          linearVelocity_ = value;
-        } else {
-          linearVelocityBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setLinearVelocity(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Linear velocity in m/s across x/y/z axes
@@ -1381,13 +751,8 @@ public final class Movementsensor {
        */
       public Builder setLinearVelocity(
           com.viam.common.v1.Common.Vector3.Builder builderForValue) {
-        if (linearVelocityBuilder_ == null) {
-          linearVelocity_ = builderForValue.build();
-        } else {
-          linearVelocityBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setLinearVelocity(builderForValue.build());
         return this;
       }
       /**
@@ -1398,21 +763,8 @@ public final class Movementsensor {
        * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
        */
       public Builder mergeLinearVelocity(com.viam.common.v1.Common.Vector3 value) {
-        if (linearVelocityBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            linearVelocity_ != null &&
-            linearVelocity_ != com.viam.common.v1.Common.Vector3.getDefaultInstance()) {
-            getLinearVelocityBuilder().mergeFrom(value);
-          } else {
-            linearVelocity_ = value;
-          }
-        } else {
-          linearVelocityBuilder_.mergeFrom(value);
-        }
-        if (linearVelocity_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeLinearVelocity(value);
         return this;
       }
       /**
@@ -1422,130 +774,89 @@ public final class Movementsensor {
        *
        * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
        */
-      public Builder clearLinearVelocity() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        linearVelocity_ = null;
-        if (linearVelocityBuilder_ != null) {
-          linearVelocityBuilder_.dispose();
-          linearVelocityBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearLinearVelocity() {  copyOnWrite();
+        instance.clearLinearVelocity();
         return this;
       }
-      /**
-       * <pre>
-       * Linear velocity in m/s across x/y/z axes
-       * </pre>
-       *
-       * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
-       */
-      public com.viam.common.v1.Common.Vector3.Builder getLinearVelocityBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getLinearVelocityFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Linear velocity in m/s across x/y/z axes
-       * </pre>
-       *
-       * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
-       */
-      public com.viam.common.v1.Common.Vector3OrBuilder getLinearVelocityOrBuilder() {
-        if (linearVelocityBuilder_ != null) {
-          return linearVelocityBuilder_.getMessageOrBuilder();
-        } else {
-          return linearVelocity_ == null ?
-              com.viam.common.v1.Common.Vector3.getDefaultInstance() : linearVelocity_;
-        }
-      }
-      /**
-       * <pre>
-       * Linear velocity in m/s across x/y/z axes
-       * </pre>
-       *
-       * <code>.viam.common.v1.Vector3 linear_velocity = 1 [json_name = "linearVelocity"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Vector3, com.viam.common.v1.Common.Vector3.Builder, com.viam.common.v1.Common.Vector3OrBuilder> 
-          getLinearVelocityFieldBuilder() {
-        if (linearVelocityBuilder_ == null) {
-          linearVelocityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.Vector3, com.viam.common.v1.Common.Vector3.Builder, com.viam.common.v1.Common.Vector3OrBuilder>(
-                  getLinearVelocity(),
-                  getParentForChildren(),
-                  isClean());
-          linearVelocity_ = null;
-        }
-        return linearVelocityBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetLinearVelocityResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "linearVelocity_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetLinearVelocityResponse)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse();
+      GetLinearVelocityResponse defaultInstance = new GetLinearVelocityResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetLinearVelocityResponse.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetLinearVelocityResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetLinearVelocityResponse>() {
-      @java.lang.Override
-      public GetLinearVelocityResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetLinearVelocityResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetLinearVelocityResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetLinearVelocityResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetLinearVelocityResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetAngularVelocityRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetAngularVelocityRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -1585,55 +896,21 @@ public final class Movementsensor {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetAngularVelocityRequest}
    */
-  public static final class GetAngularVelocityRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetAngularVelocityRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetAngularVelocityRequest, GetAngularVelocityRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetAngularVelocityRequest)
       GetAngularVelocityRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetAngularVelocityRequest.newBuilder() to construct.
-    private GetAngularVelocityRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetAngularVelocityRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetAngularVelocityRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAngularVelocityRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAngularVelocityRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a movement sensor
@@ -1644,16 +921,7 @@ public final class Movementsensor {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -1666,16 +934,46 @@ public final class Movementsensor {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -1686,7 +984,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -1698,7 +995,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -1711,383 +1007,138 @@ public final class Movementsensor {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest other = (com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetAngularVelocityRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetAngularVelocityRequest)
         com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAngularVelocityRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAngularVelocityRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAngularVelocityRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest result = new com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a movement sensor
@@ -2096,17 +1147,9 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -2116,18 +1159,10 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -2140,10 +1175,8 @@ public final class Movementsensor {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -2155,9 +1188,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -2171,27 +1203,21 @@ public final class Movementsensor {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -2199,14 +1225,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -2216,18 +1238,10 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -2237,13 +1251,8 @@ public final class Movementsensor {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -2254,21 +1263,8 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -2278,130 +1274,91 @@ public final class Movementsensor {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetAngularVelocityRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetAngularVelocityRequest)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest();
+      GetAngularVelocityRequest defaultInstance = new GetAngularVelocityRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetAngularVelocityRequest.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetAngularVelocityRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetAngularVelocityRequest>() {
-      @java.lang.Override
-      public GetAngularVelocityRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetAngularVelocityRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetAngularVelocityRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetAngularVelocityRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetAngularVelocityResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetAngularVelocityResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -2421,50 +1378,17 @@ public final class Movementsensor {
      * @return The angularVelocity.
      */
     com.viam.common.v1.Common.Vector3 getAngularVelocity();
-    /**
-     * <pre>
-     * Angular velocity in degrees/s across x/y/z axes
-     * </pre>
-     *
-     * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
-     */
-    com.viam.common.v1.Common.Vector3OrBuilder getAngularVelocityOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetAngularVelocityResponse}
    */
-  public static final class GetAngularVelocityResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetAngularVelocityResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetAngularVelocityResponse, GetAngularVelocityResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetAngularVelocityResponse)
       GetAngularVelocityResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetAngularVelocityResponse.newBuilder() to construct.
-    private GetAngularVelocityResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetAngularVelocityResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetAngularVelocityResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAngularVelocityResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAngularVelocityResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int ANGULAR_VELOCITY_FIELD_NUMBER = 1;
     private com.viam.common.v1.Common.Vector3 angularVelocity_;
@@ -2474,7 +1398,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
-     * @return Whether the angularVelocity field is set.
      */
     @java.lang.Override
     public boolean hasAngularVelocity() {
@@ -2486,7 +1409,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
-     * @return The angularVelocity.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.Vector3 getAngularVelocity() {
@@ -2499,371 +1421,148 @@ public final class Movementsensor {
      *
      * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.Vector3OrBuilder getAngularVelocityOrBuilder() {
-      return angularVelocity_ == null ? com.viam.common.v1.Common.Vector3.getDefaultInstance() : angularVelocity_;
+    private void setAngularVelocity(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();
+  angularVelocity_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Angular velocity in degrees/s across x/y/z axes
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeAngularVelocity(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();
+  if (angularVelocity_ != null &&
+          angularVelocity_ != com.viam.common.v1.Common.Vector3.getDefaultInstance()) {
+        angularVelocity_ =
+          com.viam.common.v1.Common.Vector3.newBuilder(angularVelocity_).mergeFrom(value).buildPartial();
+      } else {
+        angularVelocity_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getAngularVelocity());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getAngularVelocity());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse other = (com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse) obj;
-
-      if (hasAngularVelocity() != other.hasAngularVelocity()) return false;
-      if (hasAngularVelocity()) {
-        if (!getAngularVelocity()
-            .equals(other.getAngularVelocity())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasAngularVelocity()) {
-        hash = (37 * hash) + ANGULAR_VELOCITY_FIELD_NUMBER;
-        hash = (53 * hash) + getAngularVelocity().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Angular velocity in degrees/s across x/y/z axes
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
+     */
+    private void clearAngularVelocity() {  angularVelocity_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetAngularVelocityResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetAngularVelocityResponse)
         com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAngularVelocityResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAngularVelocityResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getAngularVelocityFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        angularVelocity_ = null;
-        if (angularVelocityBuilder_ != null) {
-          angularVelocityBuilder_.dispose();
-          angularVelocityBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAngularVelocityResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse result = new com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.angularVelocity_ = angularVelocityBuilder_ == null
-              ? angularVelocity_
-              : angularVelocityBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse.getDefaultInstance()) return this;
-        if (other.hasAngularVelocity()) {
-          mergeAngularVelocity(other.getAngularVelocity());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getAngularVelocityFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.common.v1.Common.Vector3 angularVelocity_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Vector3, com.viam.common.v1.Common.Vector3.Builder, com.viam.common.v1.Common.Vector3OrBuilder> angularVelocityBuilder_;
       /**
        * <pre>
        * Angular velocity in degrees/s across x/y/z axes
        * </pre>
        *
        * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
-       * @return Whether the angularVelocity field is set.
        */
+      @java.lang.Override
       public boolean hasAngularVelocity() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasAngularVelocity();
       }
       /**
        * <pre>
@@ -2871,14 +1570,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
-       * @return The angularVelocity.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.Vector3 getAngularVelocity() {
-        if (angularVelocityBuilder_ == null) {
-          return angularVelocity_ == null ? com.viam.common.v1.Common.Vector3.getDefaultInstance() : angularVelocity_;
-        } else {
-          return angularVelocityBuilder_.getMessage();
-        }
+        return instance.getAngularVelocity();
       }
       /**
        * <pre>
@@ -2888,18 +1583,10 @@ public final class Movementsensor {
        * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
        */
       public Builder setAngularVelocity(com.viam.common.v1.Common.Vector3 value) {
-        if (angularVelocityBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          angularVelocity_ = value;
-        } else {
-          angularVelocityBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setAngularVelocity(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Angular velocity in degrees/s across x/y/z axes
@@ -2909,13 +1596,8 @@ public final class Movementsensor {
        */
       public Builder setAngularVelocity(
           com.viam.common.v1.Common.Vector3.Builder builderForValue) {
-        if (angularVelocityBuilder_ == null) {
-          angularVelocity_ = builderForValue.build();
-        } else {
-          angularVelocityBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setAngularVelocity(builderForValue.build());
         return this;
       }
       /**
@@ -2926,21 +1608,8 @@ public final class Movementsensor {
        * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
        */
       public Builder mergeAngularVelocity(com.viam.common.v1.Common.Vector3 value) {
-        if (angularVelocityBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            angularVelocity_ != null &&
-            angularVelocity_ != com.viam.common.v1.Common.Vector3.getDefaultInstance()) {
-            getAngularVelocityBuilder().mergeFrom(value);
-          } else {
-            angularVelocity_ = value;
-          }
-        } else {
-          angularVelocityBuilder_.mergeFrom(value);
-        }
-        if (angularVelocity_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeAngularVelocity(value);
         return this;
       }
       /**
@@ -2950,130 +1619,89 @@ public final class Movementsensor {
        *
        * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
        */
-      public Builder clearAngularVelocity() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        angularVelocity_ = null;
-        if (angularVelocityBuilder_ != null) {
-          angularVelocityBuilder_.dispose();
-          angularVelocityBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearAngularVelocity() {  copyOnWrite();
+        instance.clearAngularVelocity();
         return this;
       }
-      /**
-       * <pre>
-       * Angular velocity in degrees/s across x/y/z axes
-       * </pre>
-       *
-       * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
-       */
-      public com.viam.common.v1.Common.Vector3.Builder getAngularVelocityBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getAngularVelocityFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Angular velocity in degrees/s across x/y/z axes
-       * </pre>
-       *
-       * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
-       */
-      public com.viam.common.v1.Common.Vector3OrBuilder getAngularVelocityOrBuilder() {
-        if (angularVelocityBuilder_ != null) {
-          return angularVelocityBuilder_.getMessageOrBuilder();
-        } else {
-          return angularVelocity_ == null ?
-              com.viam.common.v1.Common.Vector3.getDefaultInstance() : angularVelocity_;
-        }
-      }
-      /**
-       * <pre>
-       * Angular velocity in degrees/s across x/y/z axes
-       * </pre>
-       *
-       * <code>.viam.common.v1.Vector3 angular_velocity = 1 [json_name = "angularVelocity"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Vector3, com.viam.common.v1.Common.Vector3.Builder, com.viam.common.v1.Common.Vector3OrBuilder> 
-          getAngularVelocityFieldBuilder() {
-        if (angularVelocityBuilder_ == null) {
-          angularVelocityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.Vector3, com.viam.common.v1.Common.Vector3.Builder, com.viam.common.v1.Common.Vector3OrBuilder>(
-                  getAngularVelocity(),
-                  getParentForChildren(),
-                  isClean());
-          angularVelocity_ = null;
-        }
-        return angularVelocityBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetAngularVelocityResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "angularVelocity_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetAngularVelocityResponse)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse();
+      GetAngularVelocityResponse defaultInstance = new GetAngularVelocityResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetAngularVelocityResponse.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetAngularVelocityResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetAngularVelocityResponse>() {
-      @java.lang.Override
-      public GetAngularVelocityResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetAngularVelocityResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetAngularVelocityResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetAngularVelocityResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetAngularVelocityResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetCompassHeadingRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetCompassHeadingRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -3113,55 +1741,21 @@ public final class Movementsensor {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetCompassHeadingRequest}
    */
-  public static final class GetCompassHeadingRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetCompassHeadingRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetCompassHeadingRequest, GetCompassHeadingRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetCompassHeadingRequest)
       GetCompassHeadingRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetCompassHeadingRequest.newBuilder() to construct.
-    private GetCompassHeadingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetCompassHeadingRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetCompassHeadingRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetCompassHeadingRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetCompassHeadingRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a movement sensor
@@ -3172,16 +1766,7 @@ public final class Movementsensor {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -3194,16 +1779,46 @@ public final class Movementsensor {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -3214,7 +1829,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -3226,7 +1840,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -3239,383 +1852,138 @@ public final class Movementsensor {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest other = (com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetCompassHeadingRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetCompassHeadingRequest)
         com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetCompassHeadingRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetCompassHeadingRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetCompassHeadingRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest result = new com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a movement sensor
@@ -3624,17 +1992,9 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -3644,18 +2004,10 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -3668,10 +2020,8 @@ public final class Movementsensor {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -3683,9 +2033,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -3699,27 +2048,21 @@ public final class Movementsensor {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -3727,14 +2070,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -3744,18 +2083,10 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -3765,13 +2096,8 @@ public final class Movementsensor {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -3782,21 +2108,8 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -3806,130 +2119,91 @@ public final class Movementsensor {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetCompassHeadingRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetCompassHeadingRequest)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest();
+      GetCompassHeadingRequest defaultInstance = new GetCompassHeadingRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetCompassHeadingRequest.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetCompassHeadingRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetCompassHeadingRequest>() {
-      @java.lang.Override
-      public GetCompassHeadingRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetCompassHeadingRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetCompassHeadingRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetCompassHeadingRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetCompassHeadingResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetCompassHeadingResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -3945,40 +2219,15 @@ public final class Movementsensor {
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetCompassHeadingResponse}
    */
-  public static final class GetCompassHeadingResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetCompassHeadingResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetCompassHeadingResponse, GetCompassHeadingResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetCompassHeadingResponse)
       GetCompassHeadingResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetCompassHeadingResponse.newBuilder() to construct.
-    private GetCompassHeadingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetCompassHeadingResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetCompassHeadingResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetCompassHeadingResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetCompassHeadingResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse.Builder.class);
-    }
-
     public static final int VALUE_FIELD_NUMBER = 1;
-    private double value_ = 0D;
+    private double value_;
     /**
      * <pre>
      * A number from 0-359 in degrees where
@@ -3992,335 +2241,129 @@ public final class Movementsensor {
     public double getValue() {
       return value_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * A number from 0-359 in degrees where
+     * 0 is North, 90 is East, 180 is South, and 270 is   West
+     * </pre>
+     *
+     * <code>double value = 1 [json_name = "value"];</code>
+     * @param value The value to set.
+     */
+    private void setValue(double value) {
+      
+      value_ = value;
     }
+    /**
+     * <pre>
+     * A number from 0-359 in degrees where
+     * 0 is North, 90 is East, 180 is South, and 270 is   West
+     * </pre>
+     *
+     * <code>double value = 1 [json_name = "value"];</code>
+     */
+    private void clearValue() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (java.lang.Double.doubleToRawLongBits(value_) != 0) {
-        output.writeDouble(1, value_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (java.lang.Double.doubleToRawLongBits(value_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(1, value_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse other = (com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse) obj;
-
-      if (java.lang.Double.doubleToLongBits(getValue())
-          != java.lang.Double.doubleToLongBits(
-              other.getValue())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getValue()));
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      value_ = 0D;
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetCompassHeadingResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetCompassHeadingResponse)
         com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetCompassHeadingResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetCompassHeadingResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        value_ = 0D;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetCompassHeadingResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse result = new com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.value_ = value_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse.getDefaultInstance()) return this;
-        if (other.getValue() != 0D) {
-          setValue(other.getValue());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 9: {
-                value_ = input.readDouble();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 9
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private double value_ ;
       /**
        * <pre>
        * A number from 0-359 in degrees where
@@ -4332,7 +2375,7 @@ public final class Movementsensor {
        */
       @java.lang.Override
       public double getValue() {
-        return value_;
+        return instance.getValue();
       }
       /**
        * <pre>
@@ -4345,10 +2388,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder setValue(double value) {
-
-        value_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setValue(value);
         return this;
       }
       /**
@@ -4361,78 +2402,88 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearValue() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        value_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearValue();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetCompassHeadingResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "value_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetCompassHeadingResponse)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse();
+      GetCompassHeadingResponse defaultInstance = new GetCompassHeadingResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetCompassHeadingResponse.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetCompassHeadingResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetCompassHeadingResponse>() {
-      @java.lang.Override
-      public GetCompassHeadingResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetCompassHeadingResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetCompassHeadingResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetCompassHeadingResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetCompassHeadingResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetOrientationRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetOrientationRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -4472,55 +2523,21 @@ public final class Movementsensor {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetOrientationRequest}
    */
-  public static final class GetOrientationRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetOrientationRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetOrientationRequest, GetOrientationRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetOrientationRequest)
       GetOrientationRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetOrientationRequest.newBuilder() to construct.
-    private GetOrientationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetOrientationRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetOrientationRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetOrientationRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetOrientationRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a movement sensor
@@ -4531,16 +2548,7 @@ public final class Movementsensor {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -4553,16 +2561,46 @@ public final class Movementsensor {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -4573,7 +2611,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -4585,7 +2622,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -4598,383 +2634,138 @@ public final class Movementsensor {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest other = (com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetOrientationRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetOrientationRequest)
         com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetOrientationRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetOrientationRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetOrientationRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest result = new com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a movement sensor
@@ -4983,17 +2774,9 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -5003,18 +2786,10 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -5027,10 +2802,8 @@ public final class Movementsensor {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -5042,9 +2815,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -5058,27 +2830,21 @@ public final class Movementsensor {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -5086,14 +2852,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -5103,18 +2865,10 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -5124,13 +2878,8 @@ public final class Movementsensor {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -5141,21 +2890,8 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -5165,130 +2901,91 @@ public final class Movementsensor {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetOrientationRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetOrientationRequest)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest();
+      GetOrientationRequest defaultInstance = new GetOrientationRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetOrientationRequest.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetOrientationRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetOrientationRequest>() {
-      @java.lang.Override
-      public GetOrientationRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetOrientationRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetOrientationRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetOrientationRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetOrientationRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetOrientationResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetOrientationResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -5310,51 +3007,17 @@ public final class Movementsensor {
      * @return The orientation.
      */
     com.viam.common.v1.Common.Orientation getOrientation();
-    /**
-     * <pre>
-     * Orientation is returned as an orientation message with
-     * OX OY OZ as unit-normalized components of the axis of the vector, and Theta in degrees
-     * </pre>
-     *
-     * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
-     */
-    com.viam.common.v1.Common.OrientationOrBuilder getOrientationOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetOrientationResponse}
    */
-  public static final class GetOrientationResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetOrientationResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetOrientationResponse, GetOrientationResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetOrientationResponse)
       GetOrientationResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetOrientationResponse.newBuilder() to construct.
-    private GetOrientationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetOrientationResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetOrientationResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetOrientationResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetOrientationResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int ORIENTATION_FIELD_NUMBER = 1;
     private com.viam.common.v1.Common.Orientation orientation_;
@@ -5365,7 +3028,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
-     * @return Whether the orientation field is set.
      */
     @java.lang.Override
     public boolean hasOrientation() {
@@ -5378,7 +3040,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
-     * @return The orientation.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.Orientation getOrientation() {
@@ -5392,361 +3053,140 @@ public final class Movementsensor {
      *
      * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.OrientationOrBuilder getOrientationOrBuilder() {
-      return orientation_ == null ? com.viam.common.v1.Common.Orientation.getDefaultInstance() : orientation_;
+    private void setOrientation(com.viam.common.v1.Common.Orientation value) {
+      value.getClass();
+  orientation_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Orientation is returned as an orientation message with
+     * OX OY OZ as unit-normalized components of the axis of the vector, and Theta in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeOrientation(com.viam.common.v1.Common.Orientation value) {
+      value.getClass();
+  if (orientation_ != null &&
+          orientation_ != com.viam.common.v1.Common.Orientation.getDefaultInstance()) {
+        orientation_ =
+          com.viam.common.v1.Common.Orientation.newBuilder(orientation_).mergeFrom(value).buildPartial();
+      } else {
+        orientation_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getOrientation());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getOrientation());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse other = (com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse) obj;
-
-      if (hasOrientation() != other.hasOrientation()) return false;
-      if (hasOrientation()) {
-        if (!getOrientation()
-            .equals(other.getOrientation())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasOrientation()) {
-        hash = (37 * hash) + ORIENTATION_FIELD_NUMBER;
-        hash = (53 * hash) + getOrientation().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Orientation is returned as an orientation message with
+     * OX OY OZ as unit-normalized components of the axis of the vector, and Theta in degrees
+     * </pre>
+     *
+     * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
+     */
+    private void clearOrientation() {  orientation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetOrientationResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetOrientationResponse)
         com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetOrientationResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetOrientationResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOrientationFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        orientation_ = null;
-        if (orientationBuilder_ != null) {
-          orientationBuilder_.dispose();
-          orientationBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetOrientationResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse result = new com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.orientation_ = orientationBuilder_ == null
-              ? orientation_
-              : orientationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse.getDefaultInstance()) return this;
-        if (other.hasOrientation()) {
-          mergeOrientation(other.getOrientation());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getOrientationFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.common.v1.Common.Orientation orientation_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Orientation, com.viam.common.v1.Common.Orientation.Builder, com.viam.common.v1.Common.OrientationOrBuilder> orientationBuilder_;
       /**
        * <pre>
        * Orientation is returned as an orientation message with
@@ -5754,10 +3194,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
-       * @return Whether the orientation field is set.
        */
+      @java.lang.Override
       public boolean hasOrientation() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasOrientation();
       }
       /**
        * <pre>
@@ -5766,14 +3206,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
-       * @return The orientation.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.Orientation getOrientation() {
-        if (orientationBuilder_ == null) {
-          return orientation_ == null ? com.viam.common.v1.Common.Orientation.getDefaultInstance() : orientation_;
-        } else {
-          return orientationBuilder_.getMessage();
-        }
+        return instance.getOrientation();
       }
       /**
        * <pre>
@@ -5784,18 +3220,10 @@ public final class Movementsensor {
        * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
        */
       public Builder setOrientation(com.viam.common.v1.Common.Orientation value) {
-        if (orientationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          orientation_ = value;
-        } else {
-          orientationBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrientation(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Orientation is returned as an orientation message with
@@ -5806,13 +3234,8 @@ public final class Movementsensor {
        */
       public Builder setOrientation(
           com.viam.common.v1.Common.Orientation.Builder builderForValue) {
-        if (orientationBuilder_ == null) {
-          orientation_ = builderForValue.build();
-        } else {
-          orientationBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrientation(builderForValue.build());
         return this;
       }
       /**
@@ -5824,21 +3247,8 @@ public final class Movementsensor {
        * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
        */
       public Builder mergeOrientation(com.viam.common.v1.Common.Orientation value) {
-        if (orientationBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            orientation_ != null &&
-            orientation_ != com.viam.common.v1.Common.Orientation.getDefaultInstance()) {
-            getOrientationBuilder().mergeFrom(value);
-          } else {
-            orientation_ = value;
-          }
-        } else {
-          orientationBuilder_.mergeFrom(value);
-        }
-        if (orientation_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeOrientation(value);
         return this;
       }
       /**
@@ -5849,133 +3259,89 @@ public final class Movementsensor {
        *
        * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
        */
-      public Builder clearOrientation() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        orientation_ = null;
-        if (orientationBuilder_ != null) {
-          orientationBuilder_.dispose();
-          orientationBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearOrientation() {  copyOnWrite();
+        instance.clearOrientation();
         return this;
       }
-      /**
-       * <pre>
-       * Orientation is returned as an orientation message with
-       * OX OY OZ as unit-normalized components of the axis of the vector, and Theta in degrees
-       * </pre>
-       *
-       * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
-       */
-      public com.viam.common.v1.Common.Orientation.Builder getOrientationBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getOrientationFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Orientation is returned as an orientation message with
-       * OX OY OZ as unit-normalized components of the axis of the vector, and Theta in degrees
-       * </pre>
-       *
-       * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
-       */
-      public com.viam.common.v1.Common.OrientationOrBuilder getOrientationOrBuilder() {
-        if (orientationBuilder_ != null) {
-          return orientationBuilder_.getMessageOrBuilder();
-        } else {
-          return orientation_ == null ?
-              com.viam.common.v1.Common.Orientation.getDefaultInstance() : orientation_;
-        }
-      }
-      /**
-       * <pre>
-       * Orientation is returned as an orientation message with
-       * OX OY OZ as unit-normalized components of the axis of the vector, and Theta in degrees
-       * </pre>
-       *
-       * <code>.viam.common.v1.Orientation orientation = 1 [json_name = "orientation"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Orientation, com.viam.common.v1.Common.Orientation.Builder, com.viam.common.v1.Common.OrientationOrBuilder> 
-          getOrientationFieldBuilder() {
-        if (orientationBuilder_ == null) {
-          orientationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.Orientation, com.viam.common.v1.Common.Orientation.Builder, com.viam.common.v1.Common.OrientationOrBuilder>(
-                  getOrientation(),
-                  getParentForChildren(),
-                  isClean());
-          orientation_ = null;
-        }
-        return orientationBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetOrientationResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "orientation_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetOrientationResponse)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse();
+      GetOrientationResponse defaultInstance = new GetOrientationResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetOrientationResponse.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetOrientationResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetOrientationResponse>() {
-      @java.lang.Override
-      public GetOrientationResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetOrientationResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetOrientationResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetOrientationResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetOrientationResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPositionRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetPositionRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -6015,55 +3381,21 @@ public final class Movementsensor {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetPositionRequest}
    */
-  public static final class GetPositionRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPositionRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPositionRequest, GetPositionRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetPositionRequest)
       GetPositionRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPositionRequest.newBuilder() to construct.
-    private GetPositionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPositionRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPositionRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPositionRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPositionRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a movement sensor
@@ -6074,16 +3406,7 @@ public final class Movementsensor {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -6096,16 +3419,46 @@ public final class Movementsensor {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -6116,7 +3469,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -6128,7 +3480,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -6141,383 +3492,138 @@ public final class Movementsensor {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest other = (com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetPositionRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetPositionRequest)
         com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPositionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPositionRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPositionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest result = new com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a movement sensor
@@ -6526,17 +3632,9 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -6546,18 +3644,10 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -6570,10 +3660,8 @@ public final class Movementsensor {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -6585,9 +3673,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -6601,27 +3688,21 @@ public final class Movementsensor {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -6629,14 +3710,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -6646,18 +3723,10 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -6667,13 +3736,8 @@ public final class Movementsensor {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -6684,21 +3748,8 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -6708,130 +3759,91 @@ public final class Movementsensor {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetPositionRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetPositionRequest)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest();
+      GetPositionRequest defaultInstance = new GetPositionRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPositionRequest.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPositionRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetPositionRequest>() {
-      @java.lang.Override
-      public GetPositionRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPositionRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetPositionRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPositionRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetPositionRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPositionResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetPositionResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -6853,15 +3865,6 @@ public final class Movementsensor {
      * @return The coordinate.
      */
     com.viam.common.v1.Common.GeoPoint getCoordinate();
-    /**
-     * <pre>
-     * Position is returned in a coordinate of latitute and longitude
-     * and an altidue in meters
-     * </pre>
-     *
-     * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
-     */
-    com.viam.common.v1.Common.GeoPointOrBuilder getCoordinateOrBuilder();
 
     /**
      * <code>float altitude_m = 2 [json_name = "altitudeM"];</code>
@@ -6872,38 +3875,13 @@ public final class Movementsensor {
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetPositionResponse}
    */
-  public static final class GetPositionResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPositionResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPositionResponse, GetPositionResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetPositionResponse)
       GetPositionResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPositionResponse.newBuilder() to construct.
-    private GetPositionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPositionResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPositionResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPositionResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPositionResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int COORDINATE_FIELD_NUMBER = 1;
     private com.viam.common.v1.Common.GeoPoint coordinate_;
@@ -6914,7 +3892,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
-     * @return Whether the coordinate field is set.
      */
     @java.lang.Override
     public boolean hasCoordinate() {
@@ -6927,7 +3904,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
-     * @return The coordinate.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.GeoPoint getCoordinate() {
@@ -6941,13 +3917,45 @@ public final class Movementsensor {
      *
      * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.GeoPointOrBuilder getCoordinateOrBuilder() {
-      return coordinate_ == null ? com.viam.common.v1.Common.GeoPoint.getDefaultInstance() : coordinate_;
+    private void setCoordinate(com.viam.common.v1.Common.GeoPoint value) {
+      value.getClass();
+  coordinate_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Position is returned in a coordinate of latitute and longitude
+     * and an altidue in meters
+     * </pre>
+     *
+     * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCoordinate(com.viam.common.v1.Common.GeoPoint value) {
+      value.getClass();
+  if (coordinate_ != null &&
+          coordinate_ != com.viam.common.v1.Common.GeoPoint.getDefaultInstance()) {
+        coordinate_ =
+          com.viam.common.v1.Common.GeoPoint.newBuilder(coordinate_).mergeFrom(value).buildPartial();
+      } else {
+        coordinate_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Position is returned in a coordinate of latitute and longitude
+     * and an altidue in meters
+     * </pre>
+     *
+     * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
+     */
+    private void clearCoordinate() {  coordinate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int ALTITUDE_M_FIELD_NUMBER = 2;
-    private float altitudeM_ = 0F;
+    private float altitudeM_;
     /**
      * <code>float altitude_m = 2 [json_name = "altitudeM"];</code>
      * @return The altitudeM.
@@ -6956,382 +3964,119 @@ public final class Movementsensor {
     public float getAltitudeM() {
       return altitudeM_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>float altitude_m = 2 [json_name = "altitudeM"];</code>
+     * @param value The altitudeM to set.
+     */
+    private void setAltitudeM(float value) {
+      
+      altitudeM_ = value;
     }
+    /**
+     * <code>float altitude_m = 2 [json_name = "altitudeM"];</code>
+     */
+    private void clearAltitudeM() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getCoordinate());
-      }
-      if (java.lang.Float.floatToRawIntBits(altitudeM_) != 0) {
-        output.writeFloat(2, altitudeM_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getCoordinate());
-      }
-      if (java.lang.Float.floatToRawIntBits(altitudeM_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, altitudeM_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse other = (com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse) obj;
-
-      if (hasCoordinate() != other.hasCoordinate()) return false;
-      if (hasCoordinate()) {
-        if (!getCoordinate()
-            .equals(other.getCoordinate())) return false;
-      }
-      if (java.lang.Float.floatToIntBits(getAltitudeM())
-          != java.lang.Float.floatToIntBits(
-              other.getAltitudeM())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasCoordinate()) {
-        hash = (37 * hash) + COORDINATE_FIELD_NUMBER;
-        hash = (53 * hash) + getCoordinate().hashCode();
-      }
-      hash = (37 * hash) + ALTITUDE_M_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getAltitudeM());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      altitudeM_ = 0F;
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetPositionResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetPositionResponse)
         com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPositionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPositionResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCoordinateFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        coordinate_ = null;
-        if (coordinateBuilder_ != null) {
-          coordinateBuilder_.dispose();
-          coordinateBuilder_ = null;
-        }
-        altitudeM_ = 0F;
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPositionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse result = new com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.coordinate_ = coordinateBuilder_ == null
-              ? coordinate_
-              : coordinateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.altitudeM_ = altitudeM_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse.getDefaultInstance()) return this;
-        if (other.hasCoordinate()) {
-          mergeCoordinate(other.getCoordinate());
-        }
-        if (other.getAltitudeM() != 0F) {
-          setAltitudeM(other.getAltitudeM());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getCoordinateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 21: {
-                altitudeM_ = input.readFloat();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 21
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.common.v1.Common.GeoPoint coordinate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder> coordinateBuilder_;
       /**
        * <pre>
        * Position is returned in a coordinate of latitute and longitude
@@ -7339,10 +4084,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
-       * @return Whether the coordinate field is set.
        */
+      @java.lang.Override
       public boolean hasCoordinate() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasCoordinate();
       }
       /**
        * <pre>
@@ -7351,14 +4096,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
-       * @return The coordinate.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.GeoPoint getCoordinate() {
-        if (coordinateBuilder_ == null) {
-          return coordinate_ == null ? com.viam.common.v1.Common.GeoPoint.getDefaultInstance() : coordinate_;
-        } else {
-          return coordinateBuilder_.getMessage();
-        }
+        return instance.getCoordinate();
       }
       /**
        * <pre>
@@ -7369,18 +4110,10 @@ public final class Movementsensor {
        * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
        */
       public Builder setCoordinate(com.viam.common.v1.Common.GeoPoint value) {
-        if (coordinateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          coordinate_ = value;
-        } else {
-          coordinateBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setCoordinate(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Position is returned in a coordinate of latitute and longitude
@@ -7391,13 +4124,8 @@ public final class Movementsensor {
        */
       public Builder setCoordinate(
           com.viam.common.v1.Common.GeoPoint.Builder builderForValue) {
-        if (coordinateBuilder_ == null) {
-          coordinate_ = builderForValue.build();
-        } else {
-          coordinateBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setCoordinate(builderForValue.build());
         return this;
       }
       /**
@@ -7409,21 +4137,8 @@ public final class Movementsensor {
        * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
        */
       public Builder mergeCoordinate(com.viam.common.v1.Common.GeoPoint value) {
-        if (coordinateBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            coordinate_ != null &&
-            coordinate_ != com.viam.common.v1.Common.GeoPoint.getDefaultInstance()) {
-            getCoordinateBuilder().mergeFrom(value);
-          } else {
-            coordinate_ = value;
-          }
-        } else {
-          coordinateBuilder_.mergeFrom(value);
-        }
-        if (coordinate_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeCoordinate(value);
         return this;
       }
       /**
@@ -7434,75 +4149,18 @@ public final class Movementsensor {
        *
        * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
        */
-      public Builder clearCoordinate() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        coordinate_ = null;
-        if (coordinateBuilder_ != null) {
-          coordinateBuilder_.dispose();
-          coordinateBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearCoordinate() {  copyOnWrite();
+        instance.clearCoordinate();
         return this;
-      }
-      /**
-       * <pre>
-       * Position is returned in a coordinate of latitute and longitude
-       * and an altidue in meters
-       * </pre>
-       *
-       * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
-       */
-      public com.viam.common.v1.Common.GeoPoint.Builder getCoordinateBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getCoordinateFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Position is returned in a coordinate of latitute and longitude
-       * and an altidue in meters
-       * </pre>
-       *
-       * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
-       */
-      public com.viam.common.v1.Common.GeoPointOrBuilder getCoordinateOrBuilder() {
-        if (coordinateBuilder_ != null) {
-          return coordinateBuilder_.getMessageOrBuilder();
-        } else {
-          return coordinate_ == null ?
-              com.viam.common.v1.Common.GeoPoint.getDefaultInstance() : coordinate_;
-        }
-      }
-      /**
-       * <pre>
-       * Position is returned in a coordinate of latitute and longitude
-       * and an altidue in meters
-       * </pre>
-       *
-       * <code>.viam.common.v1.GeoPoint coordinate = 1 [json_name = "coordinate"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder> 
-          getCoordinateFieldBuilder() {
-        if (coordinateBuilder_ == null) {
-          coordinateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.GeoPoint, com.viam.common.v1.Common.GeoPoint.Builder, com.viam.common.v1.Common.GeoPointOrBuilder>(
-                  getCoordinate(),
-                  getParentForChildren(),
-                  isClean());
-          coordinate_ = null;
-        }
-        return coordinateBuilder_;
       }
 
-      private float altitudeM_ ;
       /**
        * <code>float altitude_m = 2 [json_name = "altitudeM"];</code>
        * @return The altitudeM.
        */
       @java.lang.Override
       public float getAltitudeM() {
-        return altitudeM_;
+        return instance.getAltitudeM();
       }
       /**
        * <code>float altitude_m = 2 [json_name = "altitudeM"];</code>
@@ -7510,10 +4168,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder setAltitudeM(float value) {
-
-        altitudeM_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setAltitudeM(value);
         return this;
       }
       /**
@@ -7521,78 +4177,91 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearAltitudeM() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        altitudeM_ = 0F;
-        onChanged();
+        copyOnWrite();
+        instance.clearAltitudeM();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetPositionResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "coordinate_",
+              "altitudeM_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetPositionResponse)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse();
+      GetPositionResponse defaultInstance = new GetPositionResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPositionResponse.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPositionResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetPositionResponse>() {
-      @java.lang.Override
-      public GetPositionResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPositionResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetPositionResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPositionResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetPositionResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPropertiesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetPropertiesRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -7632,55 +4301,21 @@ public final class Movementsensor {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetPropertiesRequest}
    */
-  public static final class GetPropertiesRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPropertiesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPropertiesRequest, GetPropertiesRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetPropertiesRequest)
       GetPropertiesRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPropertiesRequest.newBuilder() to construct.
-    private GetPropertiesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPropertiesRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPropertiesRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPropertiesRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPropertiesRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a movement sensor
@@ -7691,16 +4326,7 @@ public final class Movementsensor {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -7713,16 +4339,46 @@ public final class Movementsensor {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -7733,7 +4389,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -7745,7 +4400,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -7758,383 +4412,138 @@ public final class Movementsensor {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest other = (com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetPropertiesRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetPropertiesRequest)
         com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPropertiesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPropertiesRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPropertiesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest result = new com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a movement sensor
@@ -8143,17 +4552,9 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -8163,18 +4564,10 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -8187,10 +4580,8 @@ public final class Movementsensor {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -8202,9 +4593,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -8218,27 +4608,21 @@ public final class Movementsensor {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -8246,14 +4630,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -8263,18 +4643,10 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -8284,13 +4656,8 @@ public final class Movementsensor {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -8301,21 +4668,8 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -8325,130 +4679,91 @@ public final class Movementsensor {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetPropertiesRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetPropertiesRequest)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest();
+      GetPropertiesRequest defaultInstance = new GetPropertiesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPropertiesRequest.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPropertiesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetPropertiesRequest>() {
-      @java.lang.Override
-      public GetPropertiesRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPropertiesRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetPropertiesRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPropertiesRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPropertiesResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetPropertiesResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>bool linear_velocity_supported = 1 [json_name = "linearVelocitySupported"];</code>
@@ -8489,40 +4804,15 @@ public final class Movementsensor {
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetPropertiesResponse}
    */
-  public static final class GetPropertiesResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPropertiesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPropertiesResponse, GetPropertiesResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetPropertiesResponse)
       GetPropertiesResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPropertiesResponse.newBuilder() to construct.
-    private GetPropertiesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPropertiesResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPropertiesResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPropertiesResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPropertiesResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse.Builder.class);
-    }
-
     public static final int LINEAR_VELOCITY_SUPPORTED_FIELD_NUMBER = 1;
-    private boolean linearVelocitySupported_ = false;
+    private boolean linearVelocitySupported_;
     /**
      * <code>bool linear_velocity_supported = 1 [json_name = "linearVelocitySupported"];</code>
      * @return The linearVelocitySupported.
@@ -8531,9 +4821,24 @@ public final class Movementsensor {
     public boolean getLinearVelocitySupported() {
       return linearVelocitySupported_;
     }
+    /**
+     * <code>bool linear_velocity_supported = 1 [json_name = "linearVelocitySupported"];</code>
+     * @param value The linearVelocitySupported to set.
+     */
+    private void setLinearVelocitySupported(boolean value) {
+      
+      linearVelocitySupported_ = value;
+    }
+    /**
+     * <code>bool linear_velocity_supported = 1 [json_name = "linearVelocitySupported"];</code>
+     */
+    private void clearLinearVelocitySupported() {
+
+      linearVelocitySupported_ = false;
+    }
 
     public static final int ANGULAR_VELOCITY_SUPPORTED_FIELD_NUMBER = 2;
-    private boolean angularVelocitySupported_ = false;
+    private boolean angularVelocitySupported_;
     /**
      * <code>bool angular_velocity_supported = 2 [json_name = "angularVelocitySupported"];</code>
      * @return The angularVelocitySupported.
@@ -8542,9 +4847,24 @@ public final class Movementsensor {
     public boolean getAngularVelocitySupported() {
       return angularVelocitySupported_;
     }
+    /**
+     * <code>bool angular_velocity_supported = 2 [json_name = "angularVelocitySupported"];</code>
+     * @param value The angularVelocitySupported to set.
+     */
+    private void setAngularVelocitySupported(boolean value) {
+      
+      angularVelocitySupported_ = value;
+    }
+    /**
+     * <code>bool angular_velocity_supported = 2 [json_name = "angularVelocitySupported"];</code>
+     */
+    private void clearAngularVelocitySupported() {
+
+      angularVelocitySupported_ = false;
+    }
 
     public static final int ORIENTATION_SUPPORTED_FIELD_NUMBER = 3;
-    private boolean orientationSupported_ = false;
+    private boolean orientationSupported_;
     /**
      * <code>bool orientation_supported = 3 [json_name = "orientationSupported"];</code>
      * @return The orientationSupported.
@@ -8553,9 +4873,24 @@ public final class Movementsensor {
     public boolean getOrientationSupported() {
       return orientationSupported_;
     }
+    /**
+     * <code>bool orientation_supported = 3 [json_name = "orientationSupported"];</code>
+     * @param value The orientationSupported to set.
+     */
+    private void setOrientationSupported(boolean value) {
+      
+      orientationSupported_ = value;
+    }
+    /**
+     * <code>bool orientation_supported = 3 [json_name = "orientationSupported"];</code>
+     */
+    private void clearOrientationSupported() {
+
+      orientationSupported_ = false;
+    }
 
     public static final int POSITION_SUPPORTED_FIELD_NUMBER = 4;
-    private boolean positionSupported_ = false;
+    private boolean positionSupported_;
     /**
      * <code>bool position_supported = 4 [json_name = "positionSupported"];</code>
      * @return The positionSupported.
@@ -8564,9 +4899,24 @@ public final class Movementsensor {
     public boolean getPositionSupported() {
       return positionSupported_;
     }
+    /**
+     * <code>bool position_supported = 4 [json_name = "positionSupported"];</code>
+     * @param value The positionSupported to set.
+     */
+    private void setPositionSupported(boolean value) {
+      
+      positionSupported_ = value;
+    }
+    /**
+     * <code>bool position_supported = 4 [json_name = "positionSupported"];</code>
+     */
+    private void clearPositionSupported() {
+
+      positionSupported_ = false;
+    }
 
     public static final int COMPASS_HEADING_SUPPORTED_FIELD_NUMBER = 5;
-    private boolean compassHeadingSupported_ = false;
+    private boolean compassHeadingSupported_;
     /**
      * <code>bool compass_heading_supported = 5 [json_name = "compassHeadingSupported"];</code>
      * @return The compassHeadingSupported.
@@ -8575,9 +4925,24 @@ public final class Movementsensor {
     public boolean getCompassHeadingSupported() {
       return compassHeadingSupported_;
     }
+    /**
+     * <code>bool compass_heading_supported = 5 [json_name = "compassHeadingSupported"];</code>
+     * @param value The compassHeadingSupported to set.
+     */
+    private void setCompassHeadingSupported(boolean value) {
+      
+      compassHeadingSupported_ = value;
+    }
+    /**
+     * <code>bool compass_heading_supported = 5 [json_name = "compassHeadingSupported"];</code>
+     */
+    private void clearCompassHeadingSupported() {
+
+      compassHeadingSupported_ = false;
+    }
 
     public static final int LINEAR_ACCELERATION_SUPPORTED_FIELD_NUMBER = 6;
-    private boolean linearAccelerationSupported_ = false;
+    private boolean linearAccelerationSupported_;
     /**
      * <code>bool linear_acceleration_supported = 6 [json_name = "linearAccelerationSupported"];</code>
      * @return The linearAccelerationSupported.
@@ -8586,461 +4951,126 @@ public final class Movementsensor {
     public boolean getLinearAccelerationSupported() {
       return linearAccelerationSupported_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bool linear_acceleration_supported = 6 [json_name = "linearAccelerationSupported"];</code>
+     * @param value The linearAccelerationSupported to set.
+     */
+    private void setLinearAccelerationSupported(boolean value) {
+      
+      linearAccelerationSupported_ = value;
     }
+    /**
+     * <code>bool linear_acceleration_supported = 6 [json_name = "linearAccelerationSupported"];</code>
+     */
+    private void clearLinearAccelerationSupported() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (linearVelocitySupported_ != false) {
-        output.writeBool(1, linearVelocitySupported_);
-      }
-      if (angularVelocitySupported_ != false) {
-        output.writeBool(2, angularVelocitySupported_);
-      }
-      if (orientationSupported_ != false) {
-        output.writeBool(3, orientationSupported_);
-      }
-      if (positionSupported_ != false) {
-        output.writeBool(4, positionSupported_);
-      }
-      if (compassHeadingSupported_ != false) {
-        output.writeBool(5, compassHeadingSupported_);
-      }
-      if (linearAccelerationSupported_ != false) {
-        output.writeBool(6, linearAccelerationSupported_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (linearVelocitySupported_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, linearVelocitySupported_);
-      }
-      if (angularVelocitySupported_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, angularVelocitySupported_);
-      }
-      if (orientationSupported_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, orientationSupported_);
-      }
-      if (positionSupported_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, positionSupported_);
-      }
-      if (compassHeadingSupported_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(5, compassHeadingSupported_);
-      }
-      if (linearAccelerationSupported_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(6, linearAccelerationSupported_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse other = (com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse) obj;
-
-      if (getLinearVelocitySupported()
-          != other.getLinearVelocitySupported()) return false;
-      if (getAngularVelocitySupported()
-          != other.getAngularVelocitySupported()) return false;
-      if (getOrientationSupported()
-          != other.getOrientationSupported()) return false;
-      if (getPositionSupported()
-          != other.getPositionSupported()) return false;
-      if (getCompassHeadingSupported()
-          != other.getCompassHeadingSupported()) return false;
-      if (getLinearAccelerationSupported()
-          != other.getLinearAccelerationSupported()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + LINEAR_VELOCITY_SUPPORTED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getLinearVelocitySupported());
-      hash = (37 * hash) + ANGULAR_VELOCITY_SUPPORTED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getAngularVelocitySupported());
-      hash = (37 * hash) + ORIENTATION_SUPPORTED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getOrientationSupported());
-      hash = (37 * hash) + POSITION_SUPPORTED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getPositionSupported());
-      hash = (37 * hash) + COMPASS_HEADING_SUPPORTED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getCompassHeadingSupported());
-      hash = (37 * hash) + LINEAR_ACCELERATION_SUPPORTED_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getLinearAccelerationSupported());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      linearAccelerationSupported_ = false;
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetPropertiesResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetPropertiesResponse)
         com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPropertiesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPropertiesResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        linearVelocitySupported_ = false;
-        angularVelocitySupported_ = false;
-        orientationSupported_ = false;
-        positionSupported_ = false;
-        compassHeadingSupported_ = false;
-        linearAccelerationSupported_ = false;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetPropertiesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse result = new com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.linearVelocitySupported_ = linearVelocitySupported_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.angularVelocitySupported_ = angularVelocitySupported_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.orientationSupported_ = orientationSupported_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.positionSupported_ = positionSupported_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.compassHeadingSupported_ = compassHeadingSupported_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.linearAccelerationSupported_ = linearAccelerationSupported_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse.getDefaultInstance()) return this;
-        if (other.getLinearVelocitySupported() != false) {
-          setLinearVelocitySupported(other.getLinearVelocitySupported());
-        }
-        if (other.getAngularVelocitySupported() != false) {
-          setAngularVelocitySupported(other.getAngularVelocitySupported());
-        }
-        if (other.getOrientationSupported() != false) {
-          setOrientationSupported(other.getOrientationSupported());
-        }
-        if (other.getPositionSupported() != false) {
-          setPositionSupported(other.getPositionSupported());
-        }
-        if (other.getCompassHeadingSupported() != false) {
-          setCompassHeadingSupported(other.getCompassHeadingSupported());
-        }
-        if (other.getLinearAccelerationSupported() != false) {
-          setLinearAccelerationSupported(other.getLinearAccelerationSupported());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                linearVelocitySupported_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 16: {
-                angularVelocitySupported_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 24: {
-                orientationSupported_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 32: {
-                positionSupported_ = input.readBool();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 40: {
-                compassHeadingSupported_ = input.readBool();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 40
-              case 48: {
-                linearAccelerationSupported_ = input.readBool();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 48
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean linearVelocitySupported_ ;
       /**
        * <code>bool linear_velocity_supported = 1 [json_name = "linearVelocitySupported"];</code>
        * @return The linearVelocitySupported.
        */
       @java.lang.Override
       public boolean getLinearVelocitySupported() {
-        return linearVelocitySupported_;
+        return instance.getLinearVelocitySupported();
       }
       /**
        * <code>bool linear_velocity_supported = 1 [json_name = "linearVelocitySupported"];</code>
@@ -9048,10 +5078,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder setLinearVelocitySupported(boolean value) {
-
-        linearVelocitySupported_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setLinearVelocitySupported(value);
         return this;
       }
       /**
@@ -9059,20 +5087,18 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearLinearVelocitySupported() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        linearVelocitySupported_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearLinearVelocitySupported();
         return this;
       }
 
-      private boolean angularVelocitySupported_ ;
       /**
        * <code>bool angular_velocity_supported = 2 [json_name = "angularVelocitySupported"];</code>
        * @return The angularVelocitySupported.
        */
       @java.lang.Override
       public boolean getAngularVelocitySupported() {
-        return angularVelocitySupported_;
+        return instance.getAngularVelocitySupported();
       }
       /**
        * <code>bool angular_velocity_supported = 2 [json_name = "angularVelocitySupported"];</code>
@@ -9080,10 +5106,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder setAngularVelocitySupported(boolean value) {
-
-        angularVelocitySupported_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setAngularVelocitySupported(value);
         return this;
       }
       /**
@@ -9091,20 +5115,18 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearAngularVelocitySupported() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        angularVelocitySupported_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearAngularVelocitySupported();
         return this;
       }
 
-      private boolean orientationSupported_ ;
       /**
        * <code>bool orientation_supported = 3 [json_name = "orientationSupported"];</code>
        * @return The orientationSupported.
        */
       @java.lang.Override
       public boolean getOrientationSupported() {
-        return orientationSupported_;
+        return instance.getOrientationSupported();
       }
       /**
        * <code>bool orientation_supported = 3 [json_name = "orientationSupported"];</code>
@@ -9112,10 +5134,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder setOrientationSupported(boolean value) {
-
-        orientationSupported_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setOrientationSupported(value);
         return this;
       }
       /**
@@ -9123,20 +5143,18 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearOrientationSupported() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        orientationSupported_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearOrientationSupported();
         return this;
       }
 
-      private boolean positionSupported_ ;
       /**
        * <code>bool position_supported = 4 [json_name = "positionSupported"];</code>
        * @return The positionSupported.
        */
       @java.lang.Override
       public boolean getPositionSupported() {
-        return positionSupported_;
+        return instance.getPositionSupported();
       }
       /**
        * <code>bool position_supported = 4 [json_name = "positionSupported"];</code>
@@ -9144,10 +5162,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder setPositionSupported(boolean value) {
-
-        positionSupported_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setPositionSupported(value);
         return this;
       }
       /**
@@ -9155,20 +5171,18 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearPositionSupported() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        positionSupported_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearPositionSupported();
         return this;
       }
 
-      private boolean compassHeadingSupported_ ;
       /**
        * <code>bool compass_heading_supported = 5 [json_name = "compassHeadingSupported"];</code>
        * @return The compassHeadingSupported.
        */
       @java.lang.Override
       public boolean getCompassHeadingSupported() {
-        return compassHeadingSupported_;
+        return instance.getCompassHeadingSupported();
       }
       /**
        * <code>bool compass_heading_supported = 5 [json_name = "compassHeadingSupported"];</code>
@@ -9176,10 +5190,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder setCompassHeadingSupported(boolean value) {
-
-        compassHeadingSupported_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setCompassHeadingSupported(value);
         return this;
       }
       /**
@@ -9187,20 +5199,18 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearCompassHeadingSupported() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        compassHeadingSupported_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearCompassHeadingSupported();
         return this;
       }
 
-      private boolean linearAccelerationSupported_ ;
       /**
        * <code>bool linear_acceleration_supported = 6 [json_name = "linearAccelerationSupported"];</code>
        * @return The linearAccelerationSupported.
        */
       @java.lang.Override
       public boolean getLinearAccelerationSupported() {
-        return linearAccelerationSupported_;
+        return instance.getLinearAccelerationSupported();
       }
       /**
        * <code>bool linear_acceleration_supported = 6 [json_name = "linearAccelerationSupported"];</code>
@@ -9208,10 +5218,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder setLinearAccelerationSupported(boolean value) {
-
-        linearAccelerationSupported_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setLinearAccelerationSupported(value);
         return this;
       }
       /**
@@ -9219,78 +5227,94 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearLinearAccelerationSupported() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        linearAccelerationSupported_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearLinearAccelerationSupported();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetPropertiesResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "linearVelocitySupported_",
+              "angularVelocitySupported_",
+              "orientationSupported_",
+              "positionSupported_",
+              "compassHeadingSupported_",
+              "linearAccelerationSupported_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0007\u0002\u0007" +
+                "\u0003\u0007\u0004\u0007\u0005\u0007\u0006\u0007";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetPropertiesResponse)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse();
+      GetPropertiesResponse defaultInstance = new GetPropertiesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPropertiesResponse.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPropertiesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetPropertiesResponse>() {
-      @java.lang.Override
-      public GetPropertiesResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPropertiesResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetPropertiesResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPropertiesResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetPropertiesResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetAccuracyRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetAccuracyRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -9330,55 +5354,21 @@ public final class Movementsensor {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetAccuracyRequest}
    */
-  public static final class GetAccuracyRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetAccuracyRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetAccuracyRequest, GetAccuracyRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetAccuracyRequest)
       GetAccuracyRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetAccuracyRequest.newBuilder() to construct.
-    private GetAccuracyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetAccuracyRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetAccuracyRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAccuracyRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAccuracyRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a movement sensor
@@ -9389,16 +5379,7 @@ public final class Movementsensor {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -9411,16 +5392,46 @@ public final class Movementsensor {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -9431,7 +5442,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -9443,7 +5453,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -9456,383 +5465,138 @@ public final class Movementsensor {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest other = (com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetAccuracyRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetAccuracyRequest)
         com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAccuracyRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAccuracyRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAccuracyRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest result = new com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a movement sensor
@@ -9841,17 +5605,9 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -9861,18 +5617,10 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -9885,10 +5633,8 @@ public final class Movementsensor {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -9900,9 +5646,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -9916,27 +5661,21 @@ public final class Movementsensor {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -9944,14 +5683,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -9961,18 +5696,10 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -9982,13 +5709,8 @@ public final class Movementsensor {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -9999,21 +5721,8 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -10023,130 +5732,91 @@ public final class Movementsensor {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetAccuracyRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetAccuracyRequest)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest();
+      GetAccuracyRequest defaultInstance = new GetAccuracyRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetAccuracyRequest.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetAccuracyRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetAccuracyRequest>() {
-      @java.lang.Override
-      public GetAccuracyRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetAccuracyRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetAccuracyRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetAccuracyRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetAccuracyResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetAccuracyResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
@@ -10171,12 +5841,14 @@ public final class Movementsensor {
     /**
      * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
      */
+
     float getAccuracyOrDefault(
         java.lang.String key,
         float defaultValue);
     /**
      * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
      */
+
     float getAccuracyOrThrow(
         java.lang.String key);
 
@@ -10227,85 +5899,53 @@ public final class Movementsensor {
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetAccuracyResponse}
    */
-  public static final class GetAccuracyResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetAccuracyResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetAccuracyResponse, GetAccuracyResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetAccuracyResponse)
       GetAccuracyResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetAccuracyResponse.newBuilder() to construct.
-    private GetAccuracyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetAccuracyResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetAccuracyResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_descriptor;
-    }
-
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 1:
-          return internalGetAccuracy();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int ACCURACY_FIELD_NUMBER = 1;
     private static final class AccuracyDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
+      static final com.google.protobuf.MapEntryLite<
           java.lang.String, java.lang.Float> defaultEntry =
-              com.google.protobuf.MapEntry
+              com.google.protobuf.MapEntryLite
               .<java.lang.String, java.lang.Float>newDefaultInstance(
-                  com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_AccuracyEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.FLOAT,
                   0F);
     }
-    @SuppressWarnings("serial")
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.Float> accuracy_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.Float>
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, java.lang.Float> accuracy_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.Float>
     internalGetAccuracy() {
-      if (accuracy_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            AccuracyDefaultEntryHolder.defaultEntry);
+      return accuracy_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, java.lang.Float>
+    internalGetMutableAccuracy() {
+      if (!accuracy_.isMutable()) {
+        accuracy_ = accuracy_.mutableCopy();
       }
       return accuracy_;
     }
+    @java.lang.Override
+
     public int getAccuracyCount() {
-      return internalGetAccuracy().getMap().size();
+      return internalGetAccuracy().size();
     }
     /**
      * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
      */
     @java.lang.Override
+
     public boolean containsAccuracy(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetAccuracy().getMap().containsKey(key);
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetAccuracy().containsKey(key);
     }
     /**
      * Use {@link #getAccuracyMap()} instead.
@@ -10319,38 +5959,49 @@ public final class Movementsensor {
      * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, java.lang.Float> getAccuracyMap() {
-      return internalGetAccuracy().getMap();
+      return java.util.Collections.unmodifiableMap(
+          internalGetAccuracy());
     }
     /**
      * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
      */
     @java.lang.Override
+
     public float getAccuracyOrDefault(
         java.lang.String key,
         float defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, java.lang.Float> map =
-          internalGetAccuracy().getMap();
+          internalGetAccuracy();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
      * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
      */
     @java.lang.Override
+
     public float getAccuracyOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, java.lang.Float> map =
-          internalGetAccuracy().getMap();
+          internalGetAccuracy();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
     }
+    /**
+     * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
+     */
+    private java.util.Map<java.lang.String, java.lang.Float>
+    getMutableAccuracyMap() {
+      return internalGetMutableAccuracy();
+    }
 
     public static final int POSITION_HDOP_FIELD_NUMBER = 2;
-    private float positionHdop_ = 0F;
+    private float positionHdop_;
     /**
      * <code>optional float position_hdop = 2 [json_name = "positionHdop"];</code>
      * @return Whether the positionHdop field is set.
@@ -10367,9 +6018,24 @@ public final class Movementsensor {
     public float getPositionHdop() {
       return positionHdop_;
     }
+    /**
+     * <code>optional float position_hdop = 2 [json_name = "positionHdop"];</code>
+     * @param value The positionHdop to set.
+     */
+    private void setPositionHdop(float value) {
+      bitField0_ |= 0x00000001;
+      positionHdop_ = value;
+    }
+    /**
+     * <code>optional float position_hdop = 2 [json_name = "positionHdop"];</code>
+     */
+    private void clearPositionHdop() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      positionHdop_ = 0F;
+    }
 
     public static final int POSITION_VDOP_FIELD_NUMBER = 3;
-    private float positionVdop_ = 0F;
+    private float positionVdop_;
     /**
      * <code>optional float position_vdop = 3 [json_name = "positionVdop"];</code>
      * @return Whether the positionVdop field is set.
@@ -10386,9 +6052,24 @@ public final class Movementsensor {
     public float getPositionVdop() {
       return positionVdop_;
     }
+    /**
+     * <code>optional float position_vdop = 3 [json_name = "positionVdop"];</code>
+     * @param value The positionVdop to set.
+     */
+    private void setPositionVdop(float value) {
+      bitField0_ |= 0x00000002;
+      positionVdop_ = value;
+    }
+    /**
+     * <code>optional float position_vdop = 3 [json_name = "positionVdop"];</code>
+     */
+    private void clearPositionVdop() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      positionVdop_ = 0F;
+    }
 
     public static final int POSITION_NMEA_GGA_FIX_FIELD_NUMBER = 4;
-    private int positionNmeaGgaFix_ = 0;
+    private int positionNmeaGgaFix_;
     /**
      * <code>optional int32 position_nmea_gga_fix = 4 [json_name = "positionNmeaGgaFix"];</code>
      * @return Whether the positionNmeaGgaFix field is set.
@@ -10405,9 +6086,24 @@ public final class Movementsensor {
     public int getPositionNmeaGgaFix() {
       return positionNmeaGgaFix_;
     }
+    /**
+     * <code>optional int32 position_nmea_gga_fix = 4 [json_name = "positionNmeaGgaFix"];</code>
+     * @param value The positionNmeaGgaFix to set.
+     */
+    private void setPositionNmeaGgaFix(int value) {
+      bitField0_ |= 0x00000004;
+      positionNmeaGgaFix_ = value;
+    }
+    /**
+     * <code>optional int32 position_nmea_gga_fix = 4 [json_name = "positionNmeaGgaFix"];</code>
+     */
+    private void clearPositionNmeaGgaFix() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      positionNmeaGgaFix_ = 0;
+    }
 
     public static final int COMPASS_DEGREES_ERROR_FIELD_NUMBER = 5;
-    private float compassDegreesError_ = 0F;
+    private float compassDegreesError_;
     /**
      * <code>optional float compass_degrees_error = 5 [json_name = "compassDegreesError"];</code>
      * @return Whether the compassDegreesError field is set.
@@ -10424,528 +6120,150 @@ public final class Movementsensor {
     public float getCompassDegreesError() {
       return compassDegreesError_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>optional float compass_degrees_error = 5 [json_name = "compassDegreesError"];</code>
+     * @param value The compassDegreesError to set.
+     */
+    private void setCompassDegreesError(float value) {
+      bitField0_ |= 0x00000008;
+      compassDegreesError_ = value;
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetAccuracy(),
-          AccuracyDefaultEntryHolder.defaultEntry,
-          1);
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeFloat(2, positionHdop_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeFloat(3, positionVdop_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeInt32(4, positionNmeaGgaFix_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        output.writeFloat(5, compassDegreesError_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (java.util.Map.Entry<java.lang.String, java.lang.Float> entry
-           : internalGetAccuracy().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.Float>
-        accuracy__ = AccuracyDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, accuracy__);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, positionHdop_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(3, positionVdop_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, positionNmeaGgaFix_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(5, compassDegreesError_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse other = (com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse) obj;
-
-      if (!internalGetAccuracy().equals(
-          other.internalGetAccuracy())) return false;
-      if (hasPositionHdop() != other.hasPositionHdop()) return false;
-      if (hasPositionHdop()) {
-        if (java.lang.Float.floatToIntBits(getPositionHdop())
-            != java.lang.Float.floatToIntBits(
-                other.getPositionHdop())) return false;
-      }
-      if (hasPositionVdop() != other.hasPositionVdop()) return false;
-      if (hasPositionVdop()) {
-        if (java.lang.Float.floatToIntBits(getPositionVdop())
-            != java.lang.Float.floatToIntBits(
-                other.getPositionVdop())) return false;
-      }
-      if (hasPositionNmeaGgaFix() != other.hasPositionNmeaGgaFix()) return false;
-      if (hasPositionNmeaGgaFix()) {
-        if (getPositionNmeaGgaFix()
-            != other.getPositionNmeaGgaFix()) return false;
-      }
-      if (hasCompassDegreesError() != other.hasCompassDegreesError()) return false;
-      if (hasCompassDegreesError()) {
-        if (java.lang.Float.floatToIntBits(getCompassDegreesError())
-            != java.lang.Float.floatToIntBits(
-                other.getCompassDegreesError())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetAccuracy().getMap().isEmpty()) {
-        hash = (37 * hash) + ACCURACY_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetAccuracy().hashCode();
-      }
-      if (hasPositionHdop()) {
-        hash = (37 * hash) + POSITION_HDOP_FIELD_NUMBER;
-        hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getPositionHdop());
-      }
-      if (hasPositionVdop()) {
-        hash = (37 * hash) + POSITION_VDOP_FIELD_NUMBER;
-        hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getPositionVdop());
-      }
-      if (hasPositionNmeaGgaFix()) {
-        hash = (37 * hash) + POSITION_NMEA_GGA_FIX_FIELD_NUMBER;
-        hash = (53 * hash) + getPositionNmeaGgaFix();
-      }
-      if (hasCompassDegreesError()) {
-        hash = (37 * hash) + COMPASS_DEGREES_ERROR_FIELD_NUMBER;
-        hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getCompassDegreesError());
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>optional float compass_degrees_error = 5 [json_name = "compassDegreesError"];</code>
+     */
+    private void clearCompassDegreesError() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      compassDegreesError_ = 0F;
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetAccuracyResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetAccuracyResponse)
         com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_descriptor;
-      }
-
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetAccuracy();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetMutableAccuracy();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        internalGetMutableAccuracy().clear();
-        positionHdop_ = 0F;
-        positionVdop_ = 0F;
-        positionNmeaGgaFix_ = 0;
-        compassDegreesError_ = 0F;
-        return this;
-      }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_descriptor;
-      }
 
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse result = new com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.accuracy_ = internalGetAccuracy();
-          result.accuracy_.makeImmutable();
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.positionHdop_ = positionHdop_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.positionVdop_ = positionVdop_;
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.positionNmeaGgaFix_ = positionNmeaGgaFix_;
-          to_bitField0_ |= 0x00000004;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.compassDegreesError_ = compassDegreesError_;
-          to_bitField0_ |= 0x00000008;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse.getDefaultInstance()) return this;
-        internalGetMutableAccuracy().mergeFrom(
-            other.internalGetAccuracy());
-        bitField0_ |= 0x00000001;
-        if (other.hasPositionHdop()) {
-          setPositionHdop(other.getPositionHdop());
-        }
-        if (other.hasPositionVdop()) {
-          setPositionVdop(other.getPositionVdop());
-        }
-        if (other.hasPositionNmeaGgaFix()) {
-          setPositionNmeaGgaFix(other.getPositionNmeaGgaFix());
-        }
-        if (other.hasCompassDegreesError()) {
-          setCompassDegreesError(other.getCompassDegreesError());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.google.protobuf.MapEntry<java.lang.String, java.lang.Float>
-                accuracy__ = input.readMessage(
-                    AccuracyDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableAccuracy().getMutableMap().put(
-                    accuracy__.getKey(), accuracy__.getValue());
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 21: {
-                positionHdop_ = input.readFloat();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 21
-              case 29: {
-                positionVdop_ = input.readFloat();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 29
-              case 32: {
-                positionNmeaGgaFix_ = input.readInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 45: {
-                compassDegreesError_ = input.readFloat();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 45
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.Float> accuracy_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.Float>
-          internalGetAccuracy() {
-        if (accuracy_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              AccuracyDefaultEntryHolder.defaultEntry);
-        }
-        return accuracy_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, java.lang.Float>
-          internalGetMutableAccuracy() {
-        if (accuracy_ == null) {
-          accuracy_ = com.google.protobuf.MapField.newMapField(
-              AccuracyDefaultEntryHolder.defaultEntry);
-        }
-        if (!accuracy_.isMutable()) {
-          accuracy_ = accuracy_.copy();
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return accuracy_;
-      }
       public int getAccuracyCount() {
-        return internalGetAccuracy().getMap().size();
+        return instance.getAccuracyMap().size();
       }
       /**
        * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
        */
       @java.lang.Override
+
       public boolean containsAccuracy(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetAccuracy().getMap().containsKey(key);
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getAccuracyMap().containsKey(key);
+      }
+
+      public Builder clearAccuracy() {
+        copyOnWrite();
+        instance.getMutableAccuracyMap().clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
+       */
+
+      public Builder removeAccuracy(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableAccuracyMap().remove(key);
+        return this;
       }
       /**
        * Use {@link #getAccuracyMap()} instead.
@@ -10960,58 +6278,36 @@ public final class Movementsensor {
        */
       @java.lang.Override
       public java.util.Map<java.lang.String, java.lang.Float> getAccuracyMap() {
-        return internalGetAccuracy().getMap();
+        return java.util.Collections.unmodifiableMap(
+            instance.getAccuracyMap());
       }
       /**
        * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
        */
       @java.lang.Override
+
       public float getAccuracyOrDefault(
           java.lang.String key,
           float defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        java.lang.Class<?> keyClass = key.getClass();
         java.util.Map<java.lang.String, java.lang.Float> map =
-            internalGetAccuracy().getMap();
+            instance.getAccuracyMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
        * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
        */
       @java.lang.Override
+
       public float getAccuracyOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        java.lang.Class<?> keyClass = key.getClass();
         java.util.Map<java.lang.String, java.lang.Float> map =
-            internalGetAccuracy().getMap();
+            instance.getAccuracyMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
         return map.get(key);
-      }
-      public Builder clearAccuracy() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        internalGetMutableAccuracy().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
-       */
-      public Builder removeAccuracy(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableAccuracy().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.Float>
-          getMutableAccuracy() {
-        bitField0_ |= 0x00000001;
-        return internalGetMutableAccuracy().getMutableMap();
       }
       /**
        * <code>map&lt;string, float&gt; accuracy = 1 [json_name = "accuracy"];</code>
@@ -11019,11 +6315,10 @@ public final class Movementsensor {
       public Builder putAccuracy(
           java.lang.String key,
           float value) {
-        if (key == null) { throw new NullPointerException("map key"); }
+        java.lang.Class<?> keyClass = key.getClass();
 
-        internalGetMutableAccuracy().getMutableMap()
-            .put(key, value);
-        bitField0_ |= 0x00000001;
+        copyOnWrite();
+        instance.getMutableAccuracyMap().put(key, value);
         return this;
       }
       /**
@@ -11031,20 +6326,18 @@ public final class Movementsensor {
        */
       public Builder putAllAccuracy(
           java.util.Map<java.lang.String, java.lang.Float> values) {
-        internalGetMutableAccuracy().getMutableMap()
-            .putAll(values);
-        bitField0_ |= 0x00000001;
+        copyOnWrite();
+        instance.getMutableAccuracyMap().putAll(values);
         return this;
       }
 
-      private float positionHdop_ ;
       /**
        * <code>optional float position_hdop = 2 [json_name = "positionHdop"];</code>
        * @return Whether the positionHdop field is set.
        */
       @java.lang.Override
       public boolean hasPositionHdop() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasPositionHdop();
       }
       /**
        * <code>optional float position_hdop = 2 [json_name = "positionHdop"];</code>
@@ -11052,7 +6345,7 @@ public final class Movementsensor {
        */
       @java.lang.Override
       public float getPositionHdop() {
-        return positionHdop_;
+        return instance.getPositionHdop();
       }
       /**
        * <code>optional float position_hdop = 2 [json_name = "positionHdop"];</code>
@@ -11060,10 +6353,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder setPositionHdop(float value) {
-
-        positionHdop_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setPositionHdop(value);
         return this;
       }
       /**
@@ -11071,20 +6362,18 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearPositionHdop() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        positionHdop_ = 0F;
-        onChanged();
+        copyOnWrite();
+        instance.clearPositionHdop();
         return this;
       }
 
-      private float positionVdop_ ;
       /**
        * <code>optional float position_vdop = 3 [json_name = "positionVdop"];</code>
        * @return Whether the positionVdop field is set.
        */
       @java.lang.Override
       public boolean hasPositionVdop() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasPositionVdop();
       }
       /**
        * <code>optional float position_vdop = 3 [json_name = "positionVdop"];</code>
@@ -11092,7 +6381,7 @@ public final class Movementsensor {
        */
       @java.lang.Override
       public float getPositionVdop() {
-        return positionVdop_;
+        return instance.getPositionVdop();
       }
       /**
        * <code>optional float position_vdop = 3 [json_name = "positionVdop"];</code>
@@ -11100,10 +6389,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder setPositionVdop(float value) {
-
-        positionVdop_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setPositionVdop(value);
         return this;
       }
       /**
@@ -11111,20 +6398,18 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearPositionVdop() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        positionVdop_ = 0F;
-        onChanged();
+        copyOnWrite();
+        instance.clearPositionVdop();
         return this;
       }
 
-      private int positionNmeaGgaFix_ ;
       /**
        * <code>optional int32 position_nmea_gga_fix = 4 [json_name = "positionNmeaGgaFix"];</code>
        * @return Whether the positionNmeaGgaFix field is set.
        */
       @java.lang.Override
       public boolean hasPositionNmeaGgaFix() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return instance.hasPositionNmeaGgaFix();
       }
       /**
        * <code>optional int32 position_nmea_gga_fix = 4 [json_name = "positionNmeaGgaFix"];</code>
@@ -11132,7 +6417,7 @@ public final class Movementsensor {
        */
       @java.lang.Override
       public int getPositionNmeaGgaFix() {
-        return positionNmeaGgaFix_;
+        return instance.getPositionNmeaGgaFix();
       }
       /**
        * <code>optional int32 position_nmea_gga_fix = 4 [json_name = "positionNmeaGgaFix"];</code>
@@ -11140,10 +6425,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder setPositionNmeaGgaFix(int value) {
-
-        positionNmeaGgaFix_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setPositionNmeaGgaFix(value);
         return this;
       }
       /**
@@ -11151,20 +6434,18 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearPositionNmeaGgaFix() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        positionNmeaGgaFix_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearPositionNmeaGgaFix();
         return this;
       }
 
-      private float compassDegreesError_ ;
       /**
        * <code>optional float compass_degrees_error = 5 [json_name = "compassDegreesError"];</code>
        * @return Whether the compassDegreesError field is set.
        */
       @java.lang.Override
       public boolean hasCompassDegreesError() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return instance.hasCompassDegreesError();
       }
       /**
        * <code>optional float compass_degrees_error = 5 [json_name = "compassDegreesError"];</code>
@@ -11172,7 +6453,7 @@ public final class Movementsensor {
        */
       @java.lang.Override
       public float getCompassDegreesError() {
-        return compassDegreesError_;
+        return instance.getCompassDegreesError();
       }
       /**
        * <code>optional float compass_degrees_error = 5 [json_name = "compassDegreesError"];</code>
@@ -11180,10 +6461,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder setCompassDegreesError(float value) {
-
-        compassDegreesError_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setCompassDegreesError(value);
         return this;
       }
       /**
@@ -11191,78 +6470,95 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearCompassDegreesError() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        compassDegreesError_ = 0F;
-        onChanged();
+        copyOnWrite();
+        instance.clearCompassDegreesError();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetAccuracyResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "accuracy_",
+              AccuracyDefaultEntryHolder.defaultEntry,
+              "positionHdop_",
+              "positionVdop_",
+              "positionNmeaGgaFix_",
+              "compassDegreesError_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0001\u0001\u0005\u0005\u0001\u0000\u0000\u00012\u0002\u1001\u0000" +
+                "\u0003\u1001\u0001\u0004\u1004\u0002\u0005\u1001\u0003";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetAccuracyResponse)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse();
+      GetAccuracyResponse defaultInstance = new GetAccuracyResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetAccuracyResponse.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetAccuracyResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetAccuracyResponse>() {
-      @java.lang.Override
-      public GetAccuracyResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetAccuracyResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetAccuracyResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetAccuracyResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetAccuracyResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetLinearAccelerationRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetLinearAccelerationRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -11302,55 +6598,21 @@ public final class Movementsensor {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetLinearAccelerationRequest}
    */
-  public static final class GetLinearAccelerationRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetLinearAccelerationRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetLinearAccelerationRequest, GetLinearAccelerationRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetLinearAccelerationRequest)
       GetLinearAccelerationRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetLinearAccelerationRequest.newBuilder() to construct.
-    private GetLinearAccelerationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetLinearAccelerationRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetLinearAccelerationRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearAccelerationRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearAccelerationRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a movement sensor
@@ -11361,16 +6623,7 @@ public final class Movementsensor {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -11383,16 +6636,46 @@ public final class Movementsensor {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a movement sensor
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -11403,7 +6686,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -11415,7 +6697,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -11428,383 +6709,138 @@ public final class Movementsensor {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest other = (com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetLinearAccelerationRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetLinearAccelerationRequest)
         com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearAccelerationRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearAccelerationRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest.class, com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearAccelerationRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest result = new com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a movement sensor
@@ -11813,17 +6849,9 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -11833,18 +6861,10 @@ public final class Movementsensor {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -11857,10 +6877,8 @@ public final class Movementsensor {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -11872,9 +6890,8 @@ public final class Movementsensor {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -11888,27 +6905,21 @@ public final class Movementsensor {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -11916,14 +6927,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -11933,18 +6940,10 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -11954,13 +6953,8 @@ public final class Movementsensor {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -11971,21 +6965,8 @@ public final class Movementsensor {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -11995,130 +6976,91 @@ public final class Movementsensor {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetLinearAccelerationRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetLinearAccelerationRequest)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest();
+      GetLinearAccelerationRequest defaultInstance = new GetLinearAccelerationRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetLinearAccelerationRequest.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetLinearAccelerationRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetLinearAccelerationRequest>() {
-      @java.lang.Override
-      public GetLinearAccelerationRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetLinearAccelerationRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetLinearAccelerationRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetLinearAccelerationRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetLinearAccelerationResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.movementsensor.v1.GetLinearAccelerationResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -12138,50 +7080,17 @@ public final class Movementsensor {
      * @return The linearAcceleration.
      */
     com.viam.common.v1.Common.Vector3 getLinearAcceleration();
-    /**
-     * <pre>
-     * Linear acceleration in m/s across x/y/z axes
-     * </pre>
-     *
-     * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
-     */
-    com.viam.common.v1.Common.Vector3OrBuilder getLinearAccelerationOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.movementsensor.v1.GetLinearAccelerationResponse}
    */
-  public static final class GetLinearAccelerationResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetLinearAccelerationResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetLinearAccelerationResponse, GetLinearAccelerationResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.movementsensor.v1.GetLinearAccelerationResponse)
       GetLinearAccelerationResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetLinearAccelerationResponse.newBuilder() to construct.
-    private GetLinearAccelerationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetLinearAccelerationResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetLinearAccelerationResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearAccelerationResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearAccelerationResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int LINEAR_ACCELERATION_FIELD_NUMBER = 1;
     private com.viam.common.v1.Common.Vector3 linearAcceleration_;
@@ -12191,7 +7100,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
-     * @return Whether the linearAcceleration field is set.
      */
     @java.lang.Override
     public boolean hasLinearAcceleration() {
@@ -12203,7 +7111,6 @@ public final class Movementsensor {
      * </pre>
      *
      * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
-     * @return The linearAcceleration.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.Vector3 getLinearAcceleration() {
@@ -12216,371 +7123,148 @@ public final class Movementsensor {
      *
      * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.Vector3OrBuilder getLinearAccelerationOrBuilder() {
-      return linearAcceleration_ == null ? com.viam.common.v1.Common.Vector3.getDefaultInstance() : linearAcceleration_;
+    private void setLinearAcceleration(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();
+  linearAcceleration_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Linear acceleration in m/s across x/y/z axes
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeLinearAcceleration(com.viam.common.v1.Common.Vector3 value) {
+      value.getClass();
+  if (linearAcceleration_ != null &&
+          linearAcceleration_ != com.viam.common.v1.Common.Vector3.getDefaultInstance()) {
+        linearAcceleration_ =
+          com.viam.common.v1.Common.Vector3.newBuilder(linearAcceleration_).mergeFrom(value).buildPartial();
+      } else {
+        linearAcceleration_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getLinearAcceleration());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getLinearAcceleration());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse other = (com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse) obj;
-
-      if (hasLinearAcceleration() != other.hasLinearAcceleration()) return false;
-      if (hasLinearAcceleration()) {
-        if (!getLinearAcceleration()
-            .equals(other.getLinearAcceleration())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasLinearAcceleration()) {
-        hash = (37 * hash) + LINEAR_ACCELERATION_FIELD_NUMBER;
-        hash = (53 * hash) + getLinearAcceleration().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Linear acceleration in m/s across x/y/z axes
+     * </pre>
+     *
+     * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
+     */
+    private void clearLinearAcceleration() {  linearAcceleration_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.movementsensor.v1.GetLinearAccelerationResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.movementsensor.v1.GetLinearAccelerationResponse)
         com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearAccelerationResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearAccelerationResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse.class, com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLinearAccelerationFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        linearAcceleration_ = null;
-        if (linearAccelerationBuilder_ != null) {
-          linearAccelerationBuilder_.dispose();
-          linearAccelerationBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.internal_static_viam_component_movementsensor_v1_GetLinearAccelerationResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse getDefaultInstanceForType() {
-        return com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse build() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse buildPartial() {
-        com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse result = new com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.linearAcceleration_ = linearAccelerationBuilder_ == null
-              ? linearAcceleration_
-              : linearAccelerationBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse) {
-          return mergeFrom((com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse other) {
-        if (other == com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse.getDefaultInstance()) return this;
-        if (other.hasLinearAcceleration()) {
-          mergeLinearAcceleration(other.getLinearAcceleration());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getLinearAccelerationFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.common.v1.Common.Vector3 linearAcceleration_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Vector3, com.viam.common.v1.Common.Vector3.Builder, com.viam.common.v1.Common.Vector3OrBuilder> linearAccelerationBuilder_;
       /**
        * <pre>
        * Linear acceleration in m/s across x/y/z axes
        * </pre>
        *
        * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
-       * @return Whether the linearAcceleration field is set.
        */
+      @java.lang.Override
       public boolean hasLinearAcceleration() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasLinearAcceleration();
       }
       /**
        * <pre>
@@ -12588,14 +7272,10 @@ public final class Movementsensor {
        * </pre>
        *
        * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
-       * @return The linearAcceleration.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.Vector3 getLinearAcceleration() {
-        if (linearAccelerationBuilder_ == null) {
-          return linearAcceleration_ == null ? com.viam.common.v1.Common.Vector3.getDefaultInstance() : linearAcceleration_;
-        } else {
-          return linearAccelerationBuilder_.getMessage();
-        }
+        return instance.getLinearAcceleration();
       }
       /**
        * <pre>
@@ -12605,18 +7285,10 @@ public final class Movementsensor {
        * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
        */
       public Builder setLinearAcceleration(com.viam.common.v1.Common.Vector3 value) {
-        if (linearAccelerationBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          linearAcceleration_ = value;
-        } else {
-          linearAccelerationBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setLinearAcceleration(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Linear acceleration in m/s across x/y/z axes
@@ -12626,13 +7298,8 @@ public final class Movementsensor {
        */
       public Builder setLinearAcceleration(
           com.viam.common.v1.Common.Vector3.Builder builderForValue) {
-        if (linearAccelerationBuilder_ == null) {
-          linearAcceleration_ = builderForValue.build();
-        } else {
-          linearAccelerationBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setLinearAcceleration(builderForValue.build());
         return this;
       }
       /**
@@ -12643,21 +7310,8 @@ public final class Movementsensor {
        * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
        */
       public Builder mergeLinearAcceleration(com.viam.common.v1.Common.Vector3 value) {
-        if (linearAccelerationBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            linearAcceleration_ != null &&
-            linearAcceleration_ != com.viam.common.v1.Common.Vector3.getDefaultInstance()) {
-            getLinearAccelerationBuilder().mergeFrom(value);
-          } else {
-            linearAcceleration_ = value;
-          }
-        } else {
-          linearAccelerationBuilder_.mergeFrom(value);
-        }
-        if (linearAcceleration_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeLinearAcceleration(value);
         return this;
       }
       /**
@@ -12667,453 +7321,88 @@ public final class Movementsensor {
        *
        * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
        */
-      public Builder clearLinearAcceleration() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        linearAcceleration_ = null;
-        if (linearAccelerationBuilder_ != null) {
-          linearAccelerationBuilder_.dispose();
-          linearAccelerationBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearLinearAcceleration() {  copyOnWrite();
+        instance.clearLinearAcceleration();
         return this;
       }
-      /**
-       * <pre>
-       * Linear acceleration in m/s across x/y/z axes
-       * </pre>
-       *
-       * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
-       */
-      public com.viam.common.v1.Common.Vector3.Builder getLinearAccelerationBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getLinearAccelerationFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Linear acceleration in m/s across x/y/z axes
-       * </pre>
-       *
-       * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
-       */
-      public com.viam.common.v1.Common.Vector3OrBuilder getLinearAccelerationOrBuilder() {
-        if (linearAccelerationBuilder_ != null) {
-          return linearAccelerationBuilder_.getMessageOrBuilder();
-        } else {
-          return linearAcceleration_ == null ?
-              com.viam.common.v1.Common.Vector3.getDefaultInstance() : linearAcceleration_;
-        }
-      }
-      /**
-       * <pre>
-       * Linear acceleration in m/s across x/y/z axes
-       * </pre>
-       *
-       * <code>.viam.common.v1.Vector3 linear_acceleration = 1 [json_name = "linearAcceleration"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Vector3, com.viam.common.v1.Common.Vector3.Builder, com.viam.common.v1.Common.Vector3OrBuilder> 
-          getLinearAccelerationFieldBuilder() {
-        if (linearAccelerationBuilder_ == null) {
-          linearAccelerationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.Vector3, com.viam.common.v1.Common.Vector3.Builder, com.viam.common.v1.Common.Vector3OrBuilder>(
-                  getLinearAcceleration(),
-                  getParentForChildren(),
-                  isClean());
-          linearAcceleration_ = null;
-        }
-        return linearAccelerationBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.movementsensor.v1.GetLinearAccelerationResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "linearAcceleration_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.movementsensor.v1.GetLinearAccelerationResponse)
     private static final com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse();
+      GetLinearAccelerationResponse defaultInstance = new GetLinearAccelerationResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetLinearAccelerationResponse.class, defaultInstance);
     }
 
     public static com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetLinearAccelerationResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetLinearAccelerationResponse>() {
-      @java.lang.Override
-      public GetLinearAccelerationResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetLinearAccelerationResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetLinearAccelerationResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetLinearAccelerationResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.movementsensor.v1.Movementsensor.GetLinearAccelerationResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetLinearVelocityRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetLinearVelocityRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetLinearVelocityResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetLinearVelocityResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetAngularVelocityRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetAngularVelocityRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetAngularVelocityResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetAngularVelocityResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetCompassHeadingRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetCompassHeadingRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetCompassHeadingResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetCompassHeadingResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetOrientationRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetOrientationRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetOrientationResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetOrientationResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetPositionRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetPositionRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetPositionResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetPositionResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetPropertiesRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetPropertiesRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetPropertiesResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetPropertiesResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetAccuracyRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetAccuracyRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_AccuracyEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_AccuracyEntry_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetLinearAccelerationRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetLinearAccelerationRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_movementsensor_v1_GetLinearAccelerationResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_movementsensor_v1_GetLinearAccelerationResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n0component/movementsensor/v1/movementse" +
-      "nsor.proto\022 viam.component.movementsenso" +
-      "r.v1\032\026common/v1/common.proto\032\034google/api" +
-      "/annotations.proto\032\034google/protobuf/stru" +
-      "ct.proto\"]\n\030GetLinearVelocityRequest\022\022\n\004" +
-      "name\030\001 \001(\tR\004name\022-\n\005extra\030c \001(\0132\027.google" +
-      ".protobuf.StructR\005extra\"]\n\031GetLinearVelo" +
-      "cityResponse\022@\n\017linear_velocity\030\001 \001(\0132\027." +
-      "viam.common.v1.Vector3R\016linearVelocity\"^" +
-      "\n\031GetAngularVelocityRequest\022\022\n\004name\030\001 \001(" +
-      "\tR\004name\022-\n\005extra\030c \001(\0132\027.google.protobuf" +
-      ".StructR\005extra\"`\n\032GetAngularVelocityResp" +
-      "onse\022B\n\020angular_velocity\030\001 \001(\0132\027.viam.co" +
-      "mmon.v1.Vector3R\017angularVelocity\"]\n\030GetC" +
-      "ompassHeadingRequest\022\022\n\004name\030\001 \001(\tR\004name" +
-      "\022-\n\005extra\030c \001(\0132\027.google.protobuf.Struct" +
-      "R\005extra\"1\n\031GetCompassHeadingResponse\022\024\n\005" +
-      "value\030\001 \001(\001R\005value\"Z\n\025GetOrientationRequ" +
-      "est\022\022\n\004name\030\001 \001(\tR\004name\022-\n\005extra\030c \001(\0132\027" +
-      ".google.protobuf.StructR\005extra\"W\n\026GetOri" +
-      "entationResponse\022=\n\013orientation\030\001 \001(\0132\033." +
-      "viam.common.v1.OrientationR\013orientation\"" +
-      "W\n\022GetPositionRequest\022\022\n\004name\030\001 \001(\tR\004nam" +
-      "e\022-\n\005extra\030c \001(\0132\027.google.protobuf.Struc" +
-      "tR\005extra\"n\n\023GetPositionResponse\0228\n\ncoord" +
-      "inate\030\001 \001(\0132\030.viam.common.v1.GeoPointR\nc" +
-      "oordinate\022\035\n\naltitude_m\030\002 \001(\002R\taltitudeM" +
-      "\"Y\n\024GetPropertiesRequest\022\022\n\004name\030\001 \001(\tR\004" +
-      "name\022-\n\005extra\030c \001(\0132\027.google.protobuf.St" +
-      "ructR\005extra\"\365\002\n\025GetPropertiesResponse\022:\n" +
-      "\031linear_velocity_supported\030\001 \001(\010R\027linear" +
-      "VelocitySupported\022<\n\032angular_velocity_su" +
-      "pported\030\002 \001(\010R\030angularVelocitySupported\022" +
-      "3\n\025orientation_supported\030\003 \001(\010R\024orientat" +
-      "ionSupported\022-\n\022position_supported\030\004 \001(\010" +
-      "R\021positionSupported\022:\n\031compass_heading_s" +
-      "upported\030\005 \001(\010R\027compassHeadingSupported\022" +
-      "B\n\035linear_acceleration_supported\030\006 \001(\010R\033" +
-      "linearAccelerationSupported\"W\n\022GetAccura" +
-      "cyRequest\022\022\n\004name\030\001 \001(\tR\004name\022-\n\005extra\030c" +
-      " \001(\0132\027.google.protobuf.StructR\005extra\"\320\003\n" +
-      "\023GetAccuracyResponse\022_\n\010accuracy\030\001 \003(\0132C" +
-      ".viam.component.movementsensor.v1.GetAcc" +
-      "uracyResponse.AccuracyEntryR\010accuracy\022(\n" +
-      "\rposition_hdop\030\002 \001(\002H\000R\014positionHdop\210\001\001\022" +
-      "(\n\rposition_vdop\030\003 \001(\002H\001R\014positionVdop\210\001" +
-      "\001\0226\n\025position_nmea_gga_fix\030\004 \001(\005H\002R\022posi" +
-      "tionNmeaGgaFix\210\001\001\0227\n\025compass_degrees_err" +
-      "or\030\005 \001(\002H\003R\023compassDegreesError\210\001\001\032;\n\rAc" +
-      "curacyEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002" +
-      " \001(\002R\005value:\0028\001B\020\n\016_position_hdopB\020\n\016_po" +
-      "sition_vdopB\030\n\026_position_nmea_gga_fixB\030\n" +
-      "\026_compass_degrees_error\"a\n\034GetLinearAcce" +
-      "lerationRequest\022\022\n\004name\030\001 \001(\tR\004name\022-\n\005e" +
-      "xtra\030c \001(\0132\027.google.protobuf.StructR\005ext" +
-      "ra\"i\n\035GetLinearAccelerationResponse\022H\n\023l" +
-      "inear_acceleration\030\001 \001(\0132\027.viam.common.v" +
-      "1.Vector3R\022linearAcceleration2\317\020\n\025Moveme" +
-      "ntSensorService\022\322\001\n\021GetLinearVelocity\022:." +
-      "viam.component.movementsensor.v1.GetLine" +
-      "arVelocityRequest\032;.viam.component.movem" +
-      "entsensor.v1.GetLinearVelocityResponse\"D" +
-      "\202\323\344\223\002>\022</viam/api/v1/component/movements" +
-      "ensor/{name}/linear_velocity\022\326\001\n\022GetAngu" +
-      "larVelocity\022;.viam.component.movementsen" +
-      "sor.v1.GetAngularVelocityRequest\032<.viam." +
-      "component.movementsensor.v1.GetAngularVe" +
-      "locityResponse\"E\202\323\344\223\002?\022=/viam/api/v1/com" +
-      "ponent/movementsensor/{name}/angular_vel" +
-      "ocity\022\322\001\n\021GetCompassHeading\022:.viam.compo" +
-      "nent.movementsensor.v1.GetCompassHeading" +
-      "Request\032;.viam.component.movementsensor." +
-      "v1.GetCompassHeadingResponse\"D\202\323\344\223\002>\022</v" +
-      "iam/api/v1/component/movementsensor/{nam" +
-      "e}/compass_heading\022\305\001\n\016GetOrientation\0227." +
-      "viam.component.movementsensor.v1.GetOrie" +
-      "ntationRequest\0328.viam.component.movement" +
-      "sensor.v1.GetOrientationResponse\"@\202\323\344\223\002:" +
-      "\0228/viam/api/v1/component/movementsensor/" +
-      "{name}/orientation\022\271\001\n\013GetPosition\0224.via" +
-      "m.component.movementsensor.v1.GetPositio" +
-      "nRequest\0325.viam.component.movementsensor" +
-      ".v1.GetPositionResponse\"=\202\323\344\223\0027\0225/viam/a" +
-      "pi/v1/component/movementsensor/{name}/po" +
-      "sition\022\301\001\n\rGetProperties\0226.viam.componen" +
-      "t.movementsensor.v1.GetPropertiesRequest" +
-      "\0327.viam.component.movementsensor.v1.GetP" +
-      "ropertiesResponse\"?\202\323\344\223\0029\0227/viam/api/v1/" +
-      "component/movementsensor/{name}/properti" +
-      "es\022\271\001\n\013GetAccuracy\0224.viam.component.move" +
-      "mentsensor.v1.GetAccuracyRequest\0325.viam." +
-      "component.movementsensor.v1.GetAccuracyR" +
-      "esponse\"=\202\323\344\223\0027\0225/viam/api/v1/component/" +
-      "movementsensor/{name}/accuracy\022\342\001\n\025GetLi" +
-      "nearAcceleration\022>.viam.component.moveme" +
-      "ntsensor.v1.GetLinearAccelerationRequest" +
-      "\032?.viam.component.movementsensor.v1.GetL" +
-      "inearAccelerationResponse\"H\202\323\344\223\002B\022@/viam" +
-      "/api/v1/component/movementsensor/{name}/" +
-      "linear_acceleration\022\221\001\n\tDoCommand\022 .viam" +
-      ".common.v1.DoCommandRequest\032!.viam.commo" +
-      "n.v1.DoCommandResponse\"?\202\323\344\223\0029\"7/viam/ap" +
-      "i/v1/component/movementsensor/{name}/do_" +
-      "command\022\235\001\n\rGetGeometries\022$.viam.common." +
-      "v1.GetGeometriesRequest\032%.viam.common.v1" +
-      ".GetGeometriesResponse\"?\202\323\344\223\0029\0227/viam/ap" +
-      "i/v1/component/movementsensor/{name}/geo" +
-      "metries\022\225\001\n\013GetReadings\022\".viam.common.v1" +
-      ".GetReadingsRequest\032#.viam.common.v1.Get" +
-      "ReadingsResponse\"=\202\323\344\223\0027\0225/viam/api/v1/c" +
-      "omponent/movementsensor/{name}/readingsB" +
-      "S\n$com.viam.component.movementsensor.v1Z" +
-      "+go.viam.com/api/component/movementsenso" +
-      "r/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-        });
-    internal_static_viam_component_movementsensor_v1_GetLinearVelocityRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_component_movementsensor_v1_GetLinearVelocityRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetLinearVelocityRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_component_movementsensor_v1_GetLinearVelocityResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_component_movementsensor_v1_GetLinearVelocityResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetLinearVelocityResponse_descriptor,
-        new java.lang.String[] { "LinearVelocity", });
-    internal_static_viam_component_movementsensor_v1_GetAngularVelocityRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_component_movementsensor_v1_GetAngularVelocityRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetAngularVelocityRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_component_movementsensor_v1_GetAngularVelocityResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_component_movementsensor_v1_GetAngularVelocityResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetAngularVelocityResponse_descriptor,
-        new java.lang.String[] { "AngularVelocity", });
-    internal_static_viam_component_movementsensor_v1_GetCompassHeadingRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_component_movementsensor_v1_GetCompassHeadingRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetCompassHeadingRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_component_movementsensor_v1_GetCompassHeadingResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_component_movementsensor_v1_GetCompassHeadingResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetCompassHeadingResponse_descriptor,
-        new java.lang.String[] { "Value", });
-    internal_static_viam_component_movementsensor_v1_GetOrientationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_component_movementsensor_v1_GetOrientationRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetOrientationRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_component_movementsensor_v1_GetOrientationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_component_movementsensor_v1_GetOrientationResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetOrientationResponse_descriptor,
-        new java.lang.String[] { "Orientation", });
-    internal_static_viam_component_movementsensor_v1_GetPositionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_component_movementsensor_v1_GetPositionRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetPositionRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_component_movementsensor_v1_GetPositionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_component_movementsensor_v1_GetPositionResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetPositionResponse_descriptor,
-        new java.lang.String[] { "Coordinate", "AltitudeM", });
-    internal_static_viam_component_movementsensor_v1_GetPropertiesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_viam_component_movementsensor_v1_GetPropertiesRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetPropertiesRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_component_movementsensor_v1_GetPropertiesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_viam_component_movementsensor_v1_GetPropertiesResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetPropertiesResponse_descriptor,
-        new java.lang.String[] { "LinearVelocitySupported", "AngularVelocitySupported", "OrientationSupported", "PositionSupported", "CompassHeadingSupported", "LinearAccelerationSupported", });
-    internal_static_viam_component_movementsensor_v1_GetAccuracyRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_viam_component_movementsensor_v1_GetAccuracyRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetAccuracyRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_descriptor,
-        new java.lang.String[] { "Accuracy", "PositionHdop", "PositionVdop", "PositionNmeaGgaFix", "CompassDegreesError", });
-    internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_AccuracyEntry_descriptor =
-      internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_descriptor.getNestedTypes().get(0);
-    internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_AccuracyEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetAccuracyResponse_AccuracyEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    internal_static_viam_component_movementsensor_v1_GetLinearAccelerationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
-    internal_static_viam_component_movementsensor_v1_GetLinearAccelerationRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetLinearAccelerationRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_component_movementsensor_v1_GetLinearAccelerationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(15);
-    internal_static_viam_component_movementsensor_v1_GetLinearAccelerationResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_movementsensor_v1_GetLinearAccelerationResponse_descriptor,
-        new java.lang.String[] { "LinearAcceleration", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

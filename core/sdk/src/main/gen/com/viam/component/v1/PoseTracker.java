@@ -9,15 +9,9 @@ public final class PoseTracker {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   public interface GetPosesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.posetracker.v1.GetPosesRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -82,8 +76,8 @@ public final class PoseTracker {
      * </pre>
      *
      * <code>repeated string body_names = 2 [json_name = "bodyNames"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the bodyNames at the given index.
+     * @param index The index of the element to return.
+     * @return The bodyNames at the given index.
      */
     com.google.protobuf.ByteString
         getBodyNamesBytes(int index);
@@ -106,57 +100,22 @@ public final class PoseTracker {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.posetracker.v1.GetPosesRequest}
    */
-  public static final class GetPosesRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPosesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPosesRequest, GetPosesRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.posetracker.v1.GetPosesRequest)
       GetPosesRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPosesRequest.newBuilder() to construct.
-    private GetPosesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPosesRequest() {
       name_ = "";
-      bodyNames_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      bodyNames_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPosesRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.v1.PoseTracker.internal_static_viam_component_posetracker_v1_GetPosesRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.v1.PoseTracker.internal_static_viam_component_posetracker_v1_GetPosesRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.v1.PoseTracker.GetPosesRequest.class, com.viam.component.v1.PoseTracker.GetPosesRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of the pose tracker
@@ -167,16 +126,7 @@ public final class PoseTracker {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -189,22 +139,50 @@ public final class PoseTracker {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of the pose tracker
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of the pose tracker
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of the pose tracker
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int BODY_NAMES_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList bodyNames_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> bodyNames_;
     /**
      * <pre>
      * Names of the bodies whose poses are being requested. In the event
@@ -215,8 +193,8 @@ public final class PoseTracker {
      * <code>repeated string body_names = 2 [json_name = "bodyNames"];</code>
      * @return A list containing the bodyNames.
      */
-    public com.google.protobuf.ProtocolStringList
-        getBodyNamesList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getBodyNamesList() {
       return bodyNames_;
     }
     /**
@@ -229,6 +207,7 @@ public final class PoseTracker {
      * <code>repeated string body_names = 2 [json_name = "bodyNames"];</code>
      * @return The count of bodyNames.
      */
+    @java.lang.Override
     public int getBodyNamesCount() {
       return bodyNames_.size();
     }
@@ -243,6 +222,7 @@ public final class PoseTracker {
      * @param index The index of the element to return.
      * @return The bodyNames at the given index.
      */
+    @java.lang.Override
     public java.lang.String getBodyNames(int index) {
       return bodyNames_.get(index);
     }
@@ -257,9 +237,95 @@ public final class PoseTracker {
      * @param index The index of the value to return.
      * @return The bytes of the bodyNames at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBodyNamesBytes(int index) {
-      return bodyNames_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          bodyNames_.get(index));
+    }
+    private void ensureBodyNamesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          bodyNames_;  if (!tmp.isModifiable()) {
+        bodyNames_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <pre>
+     * Names of the bodies whose poses are being requested. In the event
+     * this parameter is not supplied or is an empty list, all available
+     * poses are returned
+     * </pre>
+     *
+     * <code>repeated string body_names = 2 [json_name = "bodyNames"];</code>
+     * @param index The index to set the value at.
+     * @param value The bodyNames to set.
+     */
+    private void setBodyNames(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBodyNamesIsMutable();
+      bodyNames_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Names of the bodies whose poses are being requested. In the event
+     * this parameter is not supplied or is an empty list, all available
+     * poses are returned
+     * </pre>
+     *
+     * <code>repeated string body_names = 2 [json_name = "bodyNames"];</code>
+     * @param value The bodyNames to add.
+     */
+    private void addBodyNames(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureBodyNamesIsMutable();
+      bodyNames_.add(value);
+    }
+    /**
+     * <pre>
+     * Names of the bodies whose poses are being requested. In the event
+     * this parameter is not supplied or is an empty list, all available
+     * poses are returned
+     * </pre>
+     *
+     * <code>repeated string body_names = 2 [json_name = "bodyNames"];</code>
+     * @param values The bodyNames to add.
+     */
+    private void addAllBodyNames(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureBodyNamesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, bodyNames_);
+    }
+    /**
+     * <pre>
+     * Names of the bodies whose poses are being requested. In the event
+     * this parameter is not supplied or is an empty list, all available
+     * poses are returned
+     * </pre>
+     *
+     * <code>repeated string body_names = 2 [json_name = "bodyNames"];</code>
+     */
+    private void clearBodyNames() {
+      bodyNames_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Names of the bodies whose poses are being requested. In the event
+     * this parameter is not supplied or is an empty list, all available
+     * poses are returned
+     * </pre>
+     *
+     * <code>repeated string body_names = 2 [json_name = "bodyNames"];</code>
+     * @param value The bytes of the bodyNames to add.
+     */
+    private void addBodyNamesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureBodyNamesIsMutable();
+      bodyNames_.add(value.toStringUtf8());
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -270,7 +336,6 @@ public final class PoseTracker {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -282,7 +347,6 @@ public final class PoseTracker {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -295,422 +359,138 @@ public final class PoseTracker {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      for (int i = 0; i < bodyNames_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bodyNames_.getRaw(i));
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < bodyNames_.size(); i++) {
-          dataSize += computeStringSizeNoTag(bodyNames_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getBodyNamesList().size();
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.v1.PoseTracker.GetPosesRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.v1.PoseTracker.GetPosesRequest other = (com.viam.component.v1.PoseTracker.GetPosesRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getBodyNamesList()
-          .equals(other.getBodyNamesList())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (getBodyNamesCount() > 0) {
-        hash = (37 * hash) + BODY_NAMES_FIELD_NUMBER;
-        hash = (53 * hash) + getBodyNamesList().hashCode();
-      }
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.v1.PoseTracker.GetPosesRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.v1.PoseTracker.GetPosesRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.v1.PoseTracker.GetPosesRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.v1.PoseTracker.GetPosesRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.posetracker.v1.GetPosesRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.v1.PoseTracker.GetPosesRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.posetracker.v1.GetPosesRequest)
         com.viam.component.v1.PoseTracker.GetPosesRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.v1.PoseTracker.internal_static_viam_component_posetracker_v1_GetPosesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.v1.PoseTracker.internal_static_viam_component_posetracker_v1_GetPosesRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.v1.PoseTracker.GetPosesRequest.class, com.viam.component.v1.PoseTracker.GetPosesRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.v1.PoseTracker.GetPosesRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        bodyNames_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.v1.PoseTracker.internal_static_viam_component_posetracker_v1_GetPosesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.v1.PoseTracker.GetPosesRequest getDefaultInstanceForType() {
-        return com.viam.component.v1.PoseTracker.GetPosesRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.v1.PoseTracker.GetPosesRequest build() {
-        com.viam.component.v1.PoseTracker.GetPosesRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.v1.PoseTracker.GetPosesRequest buildPartial() {
-        com.viam.component.v1.PoseTracker.GetPosesRequest result = new com.viam.component.v1.PoseTracker.GetPosesRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.v1.PoseTracker.GetPosesRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          bodyNames_.makeImmutable();
-          result.bodyNames_ = bodyNames_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.v1.PoseTracker.GetPosesRequest) {
-          return mergeFrom((com.viam.component.v1.PoseTracker.GetPosesRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.v1.PoseTracker.GetPosesRequest other) {
-        if (other == com.viam.component.v1.PoseTracker.GetPosesRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.bodyNames_.isEmpty()) {
-          if (bodyNames_.isEmpty()) {
-            bodyNames_ = other.bodyNames_;
-            bitField0_ |= 0x00000002;
-          } else {
-            ensureBodyNamesIsMutable();
-            bodyNames_.addAll(other.bodyNames_);
-          }
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureBodyNamesIsMutable();
-                bodyNames_.add(s);
-                break;
-              } // case 18
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of the pose tracker
@@ -719,17 +499,9 @@ public final class PoseTracker {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -739,18 +511,10 @@ public final class PoseTracker {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -763,10 +527,8 @@ public final class PoseTracker {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -778,9 +540,8 @@ public final class PoseTracker {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -794,22 +555,11 @@ public final class PoseTracker {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList bodyNames_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureBodyNamesIsMutable() {
-        if (!bodyNames_.isModifiable()) {
-          bodyNames_ = new com.google.protobuf.LazyStringArrayList(bodyNames_);
-        }
-        bitField0_ |= 0x00000002;
-      }
       /**
        * <pre>
        * Names of the bodies whose poses are being requested. In the event
@@ -820,10 +570,11 @@ public final class PoseTracker {
        * <code>repeated string body_names = 2 [json_name = "bodyNames"];</code>
        * @return A list containing the bodyNames.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getBodyNamesList() {
-        bodyNames_.makeImmutable();
-        return bodyNames_;
+        return java.util.Collections.unmodifiableList(
+            instance.getBodyNamesList());
       }
       /**
        * <pre>
@@ -835,8 +586,9 @@ public final class PoseTracker {
        * <code>repeated string body_names = 2 [json_name = "bodyNames"];</code>
        * @return The count of bodyNames.
        */
+      @java.lang.Override
       public int getBodyNamesCount() {
-        return bodyNames_.size();
+        return instance.getBodyNamesCount();
       }
       /**
        * <pre>
@@ -849,8 +601,9 @@ public final class PoseTracker {
        * @param index The index of the element to return.
        * @return The bodyNames at the given index.
        */
+      @java.lang.Override
       public java.lang.String getBodyNames(int index) {
-        return bodyNames_.get(index);
+        return instance.getBodyNames(index);
       }
       /**
        * <pre>
@@ -863,9 +616,10 @@ public final class PoseTracker {
        * @param index The index of the value to return.
        * @return The bytes of the bodyNames at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getBodyNamesBytes(int index) {
-        return bodyNames_.getByteString(index);
+        return instance.getBodyNamesBytes(index);
       }
       /**
        * <pre>
@@ -881,11 +635,8 @@ public final class PoseTracker {
        */
       public Builder setBodyNames(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureBodyNamesIsMutable();
-        bodyNames_.set(index, value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setBodyNames(index, value);
         return this;
       }
       /**
@@ -901,11 +652,8 @@ public final class PoseTracker {
        */
       public Builder addBodyNames(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureBodyNamesIsMutable();
-        bodyNames_.add(value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addBodyNames(value);
         return this;
       }
       /**
@@ -921,11 +669,8 @@ public final class PoseTracker {
        */
       public Builder addAllBodyNames(
           java.lang.Iterable<java.lang.String> values) {
-        ensureBodyNamesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, bodyNames_);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addAllBodyNames(values);
         return this;
       }
       /**
@@ -939,10 +684,8 @@ public final class PoseTracker {
        * @return This builder for chaining.
        */
       public Builder clearBodyNames() {
-        bodyNames_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);;
-        onChanged();
+        copyOnWrite();
+        instance.clearBodyNames();
         return this;
       }
       /**
@@ -958,28 +701,21 @@ public final class PoseTracker {
        */
       public Builder addBodyNamesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureBodyNamesIsMutable();
-        bodyNames_.add(value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addBodyNamesBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -987,14 +723,10 @@ public final class PoseTracker {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -1004,18 +736,10 @@ public final class PoseTracker {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -1025,13 +749,8 @@ public final class PoseTracker {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -1042,21 +761,8 @@ public final class PoseTracker {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -1066,130 +772,92 @@ public final class PoseTracker {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.posetracker.v1.GetPosesRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.v1.PoseTracker.GetPosesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "bodyNames_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0001\u0000\u0001\u0208\u0002\u021ac" +
+                "\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.v1.PoseTracker.GetPosesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.v1.PoseTracker.GetPosesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.v1.PoseTracker.GetPosesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.posetracker.v1.GetPosesRequest)
     private static final com.viam.component.v1.PoseTracker.GetPosesRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.v1.PoseTracker.GetPosesRequest();
+      GetPosesRequest defaultInstance = new GetPosesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPosesRequest.class, defaultInstance);
     }
 
     public static com.viam.component.v1.PoseTracker.GetPosesRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPosesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetPosesRequest>() {
-      @java.lang.Override
-      public GetPosesRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPosesRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetPosesRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPosesRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.v1.PoseTracker.GetPosesRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPosesResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.posetracker.v1.GetPosesResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -1230,6 +898,7 @@ public final class PoseTracker {
      *
      * <code>map&lt;string, .viam.common.v1.PoseInFrame&gt; body_poses = 1 [json_name = "bodyPoses"];</code>
      */
+
     /* nullable */
 com.viam.common.v1.Common.PoseInFrame getBodyPosesOrDefault(
         java.lang.String key,
@@ -1242,81 +911,49 @@ com.viam.common.v1.Common.PoseInFrame defaultValue);
      *
      * <code>map&lt;string, .viam.common.v1.PoseInFrame&gt; body_poses = 1 [json_name = "bodyPoses"];</code>
      */
+
     com.viam.common.v1.Common.PoseInFrame getBodyPosesOrThrow(
         java.lang.String key);
   }
   /**
    * Protobuf type {@code viam.component.posetracker.v1.GetPosesResponse}
    */
-  public static final class GetPosesResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPosesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPosesResponse, GetPosesResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.posetracker.v1.GetPosesResponse)
       GetPosesResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPosesResponse.newBuilder() to construct.
-    private GetPosesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPosesResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPosesResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.v1.PoseTracker.internal_static_viam_component_posetracker_v1_GetPosesResponse_descriptor;
-    }
-
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 1:
-          return internalGetBodyPoses();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.v1.PoseTracker.internal_static_viam_component_posetracker_v1_GetPosesResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.v1.PoseTracker.GetPosesResponse.class, com.viam.component.v1.PoseTracker.GetPosesResponse.Builder.class);
-    }
-
     public static final int BODY_POSES_FIELD_NUMBER = 1;
     private static final class BodyPosesDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
+      static final com.google.protobuf.MapEntryLite<
           java.lang.String, com.viam.common.v1.Common.PoseInFrame> defaultEntry =
-              com.google.protobuf.MapEntry
+              com.google.protobuf.MapEntryLite
               .<java.lang.String, com.viam.common.v1.Common.PoseInFrame>newDefaultInstance(
-                  com.viam.component.v1.PoseTracker.internal_static_viam_component_posetracker_v1_GetPosesResponse_BodyPosesEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   com.viam.common.v1.Common.PoseInFrame.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
-    private com.google.protobuf.MapField<
-        java.lang.String, com.viam.common.v1.Common.PoseInFrame> bodyPoses_;
-    private com.google.protobuf.MapField<java.lang.String, com.viam.common.v1.Common.PoseInFrame>
+    private com.google.protobuf.MapFieldLite<
+        java.lang.String, com.viam.common.v1.Common.PoseInFrame> bodyPoses_ =
+            com.google.protobuf.MapFieldLite.emptyMapField();
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.viam.common.v1.Common.PoseInFrame>
     internalGetBodyPoses() {
-      if (bodyPoses_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            BodyPosesDefaultEntryHolder.defaultEntry);
+      return bodyPoses_;
+    }
+    private com.google.protobuf.MapFieldLite<java.lang.String, com.viam.common.v1.Common.PoseInFrame>
+    internalGetMutableBodyPoses() {
+      if (!bodyPoses_.isMutable()) {
+        bodyPoses_ = bodyPoses_.mutableCopy();
       }
       return bodyPoses_;
     }
+    @java.lang.Override
+
     public int getBodyPosesCount() {
-      return internalGetBodyPoses().getMap().size();
+      return internalGetBodyPoses().size();
     }
     /**
      * <pre>
@@ -1326,10 +963,11 @@ com.viam.common.v1.Common.PoseInFrame defaultValue);
      * <code>map&lt;string, .viam.common.v1.PoseInFrame&gt; body_poses = 1 [json_name = "bodyPoses"];</code>
      */
     @java.lang.Override
+
     public boolean containsBodyPoses(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetBodyPoses().getMap().containsKey(key);
+      java.lang.Class<?> keyClass = key.getClass();
+      return internalGetBodyPoses().containsKey(key);
     }
     /**
      * Use {@link #getBodyPosesMap()} instead.
@@ -1347,8 +985,10 @@ com.viam.common.v1.Common.PoseInFrame defaultValue);
      * <code>map&lt;string, .viam.common.v1.PoseInFrame&gt; body_poses = 1 [json_name = "bodyPoses"];</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.String, com.viam.common.v1.Common.PoseInFrame> getBodyPosesMap() {
-      return internalGetBodyPoses().getMap();
+      return java.util.Collections.unmodifiableMap(
+          internalGetBodyPoses());
     }
     /**
      * <pre>
@@ -1358,14 +998,15 @@ com.viam.common.v1.Common.PoseInFrame defaultValue);
      * <code>map&lt;string, .viam.common.v1.PoseInFrame&gt; body_poses = 1 [json_name = "bodyPoses"];</code>
      */
     @java.lang.Override
+
     public /* nullable */
 com.viam.common.v1.Common.PoseInFrame getBodyPosesOrDefault(
         java.lang.String key,
         /* nullable */
 com.viam.common.v1.Common.PoseInFrame defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, com.viam.common.v1.Common.PoseInFrame> map =
-          internalGetBodyPoses().getMap();
+          internalGetBodyPoses();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
@@ -1376,413 +1017,130 @@ com.viam.common.v1.Common.PoseInFrame defaultValue) {
      * <code>map&lt;string, .viam.common.v1.PoseInFrame&gt; body_poses = 1 [json_name = "bodyPoses"];</code>
      */
     @java.lang.Override
+
     public com.viam.common.v1.Common.PoseInFrame getBodyPosesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
+      java.lang.Class<?> keyClass = key.getClass();
       java.util.Map<java.lang.String, com.viam.common.v1.Common.PoseInFrame> map =
-          internalGetBodyPoses().getMap();
+          internalGetBodyPoses();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      com.google.protobuf.GeneratedMessageV3
-        .serializeStringMapTo(
-          output,
-          internalGetBodyPoses(),
-          BodyPosesDefaultEntryHolder.defaultEntry,
-          1);
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (java.util.Map.Entry<java.lang.String, com.viam.common.v1.Common.PoseInFrame> entry
-           : internalGetBodyPoses().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, com.viam.common.v1.Common.PoseInFrame>
-        bodyPoses__ = BodyPosesDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, bodyPoses__);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.v1.PoseTracker.GetPosesResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.v1.PoseTracker.GetPosesResponse other = (com.viam.component.v1.PoseTracker.GetPosesResponse) obj;
-
-      if (!internalGetBodyPoses().equals(
-          other.internalGetBodyPoses())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (!internalGetBodyPoses().getMap().isEmpty()) {
-        hash = (37 * hash) + BODY_POSES_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetBodyPoses().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Mapping of each body name to the pose representing the center of the body.
+     * </pre>
+     *
+     * <code>map&lt;string, .viam.common.v1.PoseInFrame&gt; body_poses = 1 [json_name = "bodyPoses"];</code>
+     */
+    private java.util.Map<java.lang.String, com.viam.common.v1.Common.PoseInFrame>
+    getMutableBodyPosesMap() {
+      return internalGetMutableBodyPoses();
     }
 
     public static com.viam.component.v1.PoseTracker.GetPosesResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.v1.PoseTracker.GetPosesResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.v1.PoseTracker.GetPosesResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.v1.PoseTracker.GetPosesResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.v1.PoseTracker.GetPosesResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.posetracker.v1.GetPosesResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.v1.PoseTracker.GetPosesResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.posetracker.v1.GetPosesResponse)
         com.viam.component.v1.PoseTracker.GetPosesResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.v1.PoseTracker.internal_static_viam_component_posetracker_v1_GetPosesResponse_descriptor;
-      }
-
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetBodyPoses();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 1:
-            return internalGetMutableBodyPoses();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.v1.PoseTracker.internal_static_viam_component_posetracker_v1_GetPosesResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.v1.PoseTracker.GetPosesResponse.class, com.viam.component.v1.PoseTracker.GetPosesResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.v1.PoseTracker.GetPosesResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        internalGetMutableBodyPoses().clear();
-        return this;
-      }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.v1.PoseTracker.internal_static_viam_component_posetracker_v1_GetPosesResponse_descriptor;
-      }
 
-      @java.lang.Override
-      public com.viam.component.v1.PoseTracker.GetPosesResponse getDefaultInstanceForType() {
-        return com.viam.component.v1.PoseTracker.GetPosesResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.v1.PoseTracker.GetPosesResponse build() {
-        com.viam.component.v1.PoseTracker.GetPosesResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.v1.PoseTracker.GetPosesResponse buildPartial() {
-        com.viam.component.v1.PoseTracker.GetPosesResponse result = new com.viam.component.v1.PoseTracker.GetPosesResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.v1.PoseTracker.GetPosesResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.bodyPoses_ = internalGetBodyPoses().build(BodyPosesDefaultEntryHolder.defaultEntry);
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.v1.PoseTracker.GetPosesResponse) {
-          return mergeFrom((com.viam.component.v1.PoseTracker.GetPosesResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.v1.PoseTracker.GetPosesResponse other) {
-        if (other == com.viam.component.v1.PoseTracker.GetPosesResponse.getDefaultInstance()) return this;
-        internalGetMutableBodyPoses().mergeFrom(
-            other.internalGetBodyPoses());
-        bitField0_ |= 0x00000001;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.google.protobuf.MapEntry<java.lang.String, com.viam.common.v1.Common.PoseInFrame>
-                bodyPoses__ = input.readMessage(
-                    BodyPosesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableBodyPoses().ensureBuilderMap().put(
-                    bodyPoses__.getKey(), bodyPoses__.getValue());
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private static final class BodyPosesConverter implements com.google.protobuf.MapFieldBuilder.Converter<java.lang.String, com.viam.common.v1.Common.PoseInFrameOrBuilder, com.viam.common.v1.Common.PoseInFrame> {
-        @java.lang.Override
-        public com.viam.common.v1.Common.PoseInFrame build(com.viam.common.v1.Common.PoseInFrameOrBuilder val) {
-          if (val instanceof com.viam.common.v1.Common.PoseInFrame) { return (com.viam.common.v1.Common.PoseInFrame) val; }
-          return ((com.viam.common.v1.Common.PoseInFrame.Builder) val).build();
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.MapEntry<java.lang.String, com.viam.common.v1.Common.PoseInFrame> defaultEntry() {
-          return BodyPosesDefaultEntryHolder.defaultEntry;
-        }
-      };
-      private static final BodyPosesConverter bodyPosesConverter = new BodyPosesConverter();
-
-      private com.google.protobuf.MapFieldBuilder<
-          java.lang.String, com.viam.common.v1.Common.PoseInFrameOrBuilder, com.viam.common.v1.Common.PoseInFrame, com.viam.common.v1.Common.PoseInFrame.Builder> bodyPoses_;
-      private com.google.protobuf.MapFieldBuilder<java.lang.String, com.viam.common.v1.Common.PoseInFrameOrBuilder, com.viam.common.v1.Common.PoseInFrame, com.viam.common.v1.Common.PoseInFrame.Builder>
-          internalGetBodyPoses() {
-        if (bodyPoses_ == null) {
-          return new com.google.protobuf.MapFieldBuilder<>(bodyPosesConverter);
-        }
-        return bodyPoses_;
-      }
-      private com.google.protobuf.MapFieldBuilder<java.lang.String, com.viam.common.v1.Common.PoseInFrameOrBuilder, com.viam.common.v1.Common.PoseInFrame, com.viam.common.v1.Common.PoseInFrame.Builder>
-          internalGetMutableBodyPoses() {
-        if (bodyPoses_ == null) {
-          bodyPoses_ = new com.google.protobuf.MapFieldBuilder<>(bodyPosesConverter);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return bodyPoses_;
-      }
       public int getBodyPosesCount() {
-        return internalGetBodyPoses().ensureBuilderMap().size();
+        return instance.getBodyPosesMap().size();
       }
       /**
        * <pre>
@@ -1792,10 +1150,32 @@ com.viam.common.v1.Common.PoseInFrame defaultValue) {
        * <code>map&lt;string, .viam.common.v1.PoseInFrame&gt; body_poses = 1 [json_name = "bodyPoses"];</code>
        */
       @java.lang.Override
+
       public boolean containsBodyPoses(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetBodyPoses().ensureBuilderMap().containsKey(key);
+        java.lang.Class<?> keyClass = key.getClass();
+        return instance.getBodyPosesMap().containsKey(key);
+      }
+
+      public Builder clearBodyPoses() {
+        copyOnWrite();
+        instance.getMutableBodyPosesMap().clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Mapping of each body name to the pose representing the center of the body.
+       * </pre>
+       *
+       * <code>map&lt;string, .viam.common.v1.PoseInFrame&gt; body_poses = 1 [json_name = "bodyPoses"];</code>
+       */
+
+      public Builder removeBodyPoses(
+          java.lang.String key) {
+        java.lang.Class<?> keyClass = key.getClass();
+        copyOnWrite();
+        instance.getMutableBodyPosesMap().remove(key);
+        return this;
       }
       /**
        * Use {@link #getBodyPosesMap()} instead.
@@ -1814,7 +1194,8 @@ com.viam.common.v1.Common.PoseInFrame defaultValue) {
        */
       @java.lang.Override
       public java.util.Map<java.lang.String, com.viam.common.v1.Common.PoseInFrame> getBodyPosesMap() {
-        return internalGetBodyPoses().getImmutableMap();
+        return java.util.Collections.unmodifiableMap(
+            instance.getBodyPosesMap());
       }
       /**
        * <pre>
@@ -1824,14 +1205,16 @@ com.viam.common.v1.Common.PoseInFrame defaultValue) {
        * <code>map&lt;string, .viam.common.v1.PoseInFrame&gt; body_poses = 1 [json_name = "bodyPoses"];</code>
        */
       @java.lang.Override
+
       public /* nullable */
 com.viam.common.v1.Common.PoseInFrame getBodyPosesOrDefault(
           java.lang.String key,
           /* nullable */
 com.viam.common.v1.Common.PoseInFrame defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, com.viam.common.v1.Common.PoseInFrameOrBuilder> map = internalGetMutableBodyPoses().ensureBuilderMap();
-        return map.containsKey(key) ? bodyPosesConverter.build(map.get(key)) : defaultValue;
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.viam.common.v1.Common.PoseInFrame> map =
+            instance.getBodyPosesMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
        * <pre>
@@ -1841,42 +1224,16 @@ com.viam.common.v1.Common.PoseInFrame defaultValue) {
        * <code>map&lt;string, .viam.common.v1.PoseInFrame&gt; body_poses = 1 [json_name = "bodyPoses"];</code>
        */
       @java.lang.Override
+
       public com.viam.common.v1.Common.PoseInFrame getBodyPosesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, com.viam.common.v1.Common.PoseInFrameOrBuilder> map = internalGetMutableBodyPoses().ensureBuilderMap();
+        java.lang.Class<?> keyClass = key.getClass();
+        java.util.Map<java.lang.String, com.viam.common.v1.Common.PoseInFrame> map =
+            instance.getBodyPosesMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
-        return bodyPosesConverter.build(map.get(key));
-      }
-      public Builder clearBodyPoses() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        internalGetMutableBodyPoses().clear();
-        return this;
-      }
-      /**
-       * <pre>
-       * Mapping of each body name to the pose representing the center of the body.
-       * </pre>
-       *
-       * <code>map&lt;string, .viam.common.v1.PoseInFrame&gt; body_poses = 1 [json_name = "bodyPoses"];</code>
-       */
-      public Builder removeBodyPoses(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableBodyPoses().ensureBuilderMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, com.viam.common.v1.Common.PoseInFrame>
-          getMutableBodyPoses() {
-        bitField0_ |= 0x00000001;
-        return internalGetMutableBodyPoses().ensureMessageMap();
+        return map.get(key);
       }
       /**
        * <pre>
@@ -1888,11 +1245,10 @@ com.viam.common.v1.Common.PoseInFrame defaultValue) {
       public Builder putBodyPoses(
           java.lang.String key,
           com.viam.common.v1.Common.PoseInFrame value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) { throw new NullPointerException("map value"); }
-        internalGetMutableBodyPoses().ensureBuilderMap()
-            .put(key, value);
-        bitField0_ |= 0x00000001;
+        java.lang.Class<?> keyClass = key.getClass();
+        java.lang.Class<?> valueClass = value.getClass();
+        copyOnWrite();
+        instance.getMutableBodyPosesMap().put(key, value);
         return this;
       }
       /**
@@ -1904,186 +1260,88 @@ com.viam.common.v1.Common.PoseInFrame defaultValue) {
        */
       public Builder putAllBodyPoses(
           java.util.Map<java.lang.String, com.viam.common.v1.Common.PoseInFrame> values) {
-        for (java.util.Map.Entry<java.lang.String, com.viam.common.v1.Common.PoseInFrame> e : values.entrySet()) {
-          if (e.getKey() == null || e.getValue() == null) {
-            throw new NullPointerException();
-          }
-        }
-        internalGetMutableBodyPoses().ensureBuilderMap()
-            .putAll(values);
-        bitField0_ |= 0x00000001;
+        copyOnWrite();
+        instance.getMutableBodyPosesMap().putAll(values);
         return this;
       }
-      /**
-       * <pre>
-       * Mapping of each body name to the pose representing the center of the body.
-       * </pre>
-       *
-       * <code>map&lt;string, .viam.common.v1.PoseInFrame&gt; body_poses = 1 [json_name = "bodyPoses"];</code>
-       */
-      public com.viam.common.v1.Common.PoseInFrame.Builder putBodyPosesBuilderIfAbsent(
-          java.lang.String key) {
-        java.util.Map<java.lang.String, com.viam.common.v1.Common.PoseInFrameOrBuilder> builderMap = internalGetMutableBodyPoses().ensureBuilderMap();
-        com.viam.common.v1.Common.PoseInFrameOrBuilder entry = builderMap.get(key);
-        if (entry == null) {
-          entry = com.viam.common.v1.Common.PoseInFrame.newBuilder();
-          builderMap.put(key, entry);
-        }
-        if (entry instanceof com.viam.common.v1.Common.PoseInFrame) {
-          entry = ((com.viam.common.v1.Common.PoseInFrame) entry).toBuilder();
-          builderMap.put(key, entry);
-        }
-        return (com.viam.common.v1.Common.PoseInFrame.Builder) entry;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.posetracker.v1.GetPosesResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.v1.PoseTracker.GetPosesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bodyPoses_",
+              BodyPosesDefaultEntryHolder.defaultEntry,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.v1.PoseTracker.GetPosesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.v1.PoseTracker.GetPosesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.v1.PoseTracker.GetPosesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.posetracker.v1.GetPosesResponse)
     private static final com.viam.component.v1.PoseTracker.GetPosesResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.v1.PoseTracker.GetPosesResponse();
+      GetPosesResponse defaultInstance = new GetPosesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPosesResponse.class, defaultInstance);
     }
 
     public static com.viam.component.v1.PoseTracker.GetPosesResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPosesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetPosesResponse>() {
-      @java.lang.Override
-      public GetPosesResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPosesResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetPosesResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPosesResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.v1.PoseTracker.GetPosesResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_posetracker_v1_GetPosesRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_posetracker_v1_GetPosesRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_posetracker_v1_GetPosesResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_posetracker_v1_GetPosesResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_posetracker_v1_GetPosesResponse_BodyPosesEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_posetracker_v1_GetPosesResponse_BodyPosesEntry_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n+component/posetracker/v1/pose_tracker." +
-      "proto\022\035viam.component.posetracker.v1\032\026co" +
-      "mmon/v1/common.proto\032\034google/api/annotat" +
-      "ions.proto\032\034google/protobuf/struct.proto" +
-      "\"s\n\017GetPosesRequest\022\022\n\004name\030\001 \001(\tR\004name\022" +
-      "\035\n\nbody_names\030\002 \003(\tR\tbodyNames\022-\n\005extra\030" +
-      "c \001(\0132\027.google.protobuf.StructR\005extra\"\314\001" +
-      "\n\020GetPosesResponse\022]\n\nbody_poses\030\001 \003(\0132>" +
-      ".viam.component.posetracker.v1.GetPosesR" +
-      "esponse.BodyPosesEntryR\tbodyPoses\032Y\n\016Bod" +
-      "yPosesEntry\022\020\n\003key\030\001 \001(\tR\003key\0221\n\005value\030\002" +
-      " \001(\0132\033.viam.common.v1.PoseInFrameR\005value" +
-      ":\0028\0012\354\003\n\022PoseTrackerService\022\245\001\n\010GetPoses" +
-      "\022..viam.component.posetracker.v1.GetPose" +
-      "sRequest\032/.viam.component.posetracker.v1" +
-      ".GetPosesResponse\"8\202\323\344\223\0022\0220/viam/api/v1/" +
-      "component/pose_tracker/{name}/poses\022\217\001\n\t" +
-      "DoCommand\022 .viam.common.v1.DoCommandRequ" +
-      "est\032!.viam.common.v1.DoCommandResponse\"=" +
-      "\202\323\344\223\0027\"5/viam/api/v1/component/pose_trac" +
-      "ker/{name}/do_command\022\233\001\n\rGetGeometries\022" +
-      "$.viam.common.v1.GetGeometriesRequest\032%." +
-      "viam.common.v1.GetGeometriesResponse\"=\202\323" +
-      "\344\223\0027\0225/viam/api/v1/component/pose_tracke" +
-      "r/{name}/geometriesB5\n\025com.viam.componen" +
-      "t.v1Z\034go.viam.com/api/component/v1b\006prot" +
-      "o3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-        });
-    internal_static_viam_component_posetracker_v1_GetPosesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_component_posetracker_v1_GetPosesRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_posetracker_v1_GetPosesRequest_descriptor,
-        new java.lang.String[] { "Name", "BodyNames", "Extra", });
-    internal_static_viam_component_posetracker_v1_GetPosesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_component_posetracker_v1_GetPosesResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_posetracker_v1_GetPosesResponse_descriptor,
-        new java.lang.String[] { "BodyPoses", });
-    internal_static_viam_component_posetracker_v1_GetPosesResponse_BodyPosesEntry_descriptor =
-      internal_static_viam_component_posetracker_v1_GetPosesResponse_descriptor.getNestedTypes().get(0);
-    internal_static_viam_component_posetracker_v1_GetPosesResponse_BodyPosesEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_posetracker_v1_GetPosesResponse_BodyPosesEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

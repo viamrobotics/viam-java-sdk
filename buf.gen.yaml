@@ -2,5 +2,7 @@ version: v1
 plugins:
   - plugin: buf.build/protocolbuffers/java:v25.2
     out: core/sdk/src/main/gen
+    opt: lite
   - plugin: buf.build/grpc/java:v1.61.1
     out: core/sdk/src/main/gen
+    opt: lite

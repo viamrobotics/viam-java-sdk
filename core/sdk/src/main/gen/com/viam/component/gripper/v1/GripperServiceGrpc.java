@@ -37,11 +37,10 @@ public final class GripperServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Open"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.gripper.v1.Gripper.OpenRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.gripper.v1.Gripper.OpenResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GripperServiceMethodDescriptorSupplier("Open"))
               .build();
         }
       }
@@ -68,11 +67,10 @@ public final class GripperServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Grab"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.gripper.v1.Gripper.GrabRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.gripper.v1.Gripper.GrabResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GripperServiceMethodDescriptorSupplier("Grab"))
               .build();
         }
       }
@@ -99,11 +97,10 @@ public final class GripperServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Stop"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.gripper.v1.Gripper.StopRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.gripper.v1.Gripper.StopResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GripperServiceMethodDescriptorSupplier("Stop"))
               .build();
         }
       }
@@ -130,11 +127,10 @@ public final class GripperServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "IsMoving"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.gripper.v1.Gripper.IsMovingRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.gripper.v1.Gripper.IsMovingResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GripperServiceMethodDescriptorSupplier("IsMoving"))
               .build();
         }
       }
@@ -161,11 +157,10 @@ public final class GripperServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GripperServiceMethodDescriptorSupplier("DoCommand"))
               .build();
         }
       }
@@ -192,11 +187,10 @@ public final class GripperServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeometries"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.GetGeometriesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.GetGeometriesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new GripperServiceMethodDescriptorSupplier("GetGeometries"))
               .build();
         }
       }
@@ -693,41 +687,6 @@ public final class GripperServiceGrpc {
         .build();
   }
 
-  private static abstract class GripperServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    GripperServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.viam.component.gripper.v1.Gripper.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("GripperService");
-    }
-  }
-
-  private static final class GripperServiceFileDescriptorSupplier
-      extends GripperServiceBaseDescriptorSupplier {
-    GripperServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class GripperServiceMethodDescriptorSupplier
-      extends GripperServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    GripperServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -737,7 +696,6 @@ public final class GripperServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new GripperServiceFileDescriptorSupplier())
               .addMethod(getOpenMethod())
               .addMethod(getGrabMethod())
               .addMethod(getStopMethod())

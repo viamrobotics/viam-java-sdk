@@ -1,11 +1,9 @@
 package com.viam.sdk.core.component.gripper;
 
-import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Struct.Builder;
-import com.google.protobuf.util.JsonFormat;
+import com.google.protobuf.Value;
 import com.viam.common.v1.Common;
-import com.viam.common.v1.Common.ActuatorStatus;
 import com.viam.robot.v1.Robot.Status;
 import com.viam.sdk.core.component.Component;
 import com.viam.sdk.core.resource.Resource;
@@ -25,15 +23,8 @@ public abstract class Gripper extends Component {
 
   @Override
   public Status createStatus() {
-    ActuatorStatus actuatorStatus = ActuatorStatus.newBuilder()
-        .setIsMoving(isMoving()).build();
-    final Builder s = Struct.newBuilder();
-    try {
-      final String json = JsonFormat.printer().print(actuatorStatus);
-      JsonFormat.parser().ignoringUnknownFields().merge(json, s);
-    } catch (InvalidProtocolBufferException e) {
-      throw new RuntimeException(e);
-    }
+    final Builder s = Struct.newBuilder()
+        .putFields("is_moving", Value.newBuilder().setBoolValue(isMoving()).build());
     return Status.newBuilder().setName(getName()).setStatus(s.build()).build();
   }
 
@@ -43,8 +34,9 @@ public abstract class Gripper extends Component {
 
   /**
    * Get the ResourceName of the component
+   *
    * @param name the name of the component
-   * @return     the component's ResourceName
+   * @return the component's ResourceName
    */
   public static Common.ResourceName named(final String name) {
     return Resource.named(SUBTYPE, name);
@@ -52,9 +44,10 @@ public abstract class Gripper extends Component {
 
   /**
    * Get the component with the provided name from the provided robot.
+   *
    * @param robot the RobotClient
    * @param name  the name of the component
-   * @return      the component
+   * @return the component
    */
   public static Gripper fromRobot(final RobotClient robot, final String name) {
     return robot.getResource(Gripper.class, named(name));

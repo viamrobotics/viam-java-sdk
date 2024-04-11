@@ -9,12 +9,6 @@ public final class Slam {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   /**
    * <pre>
    * MappingMode represnts the various form of mapping and localizing SLAM can perform.
@@ -25,7 +19,7 @@ public final class Slam {
    * Protobuf enum {@code viam.service.slam.v1.MappingMode}
    */
   public enum MappingMode
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>MAPPING_MODE_UNSPECIFIED = 0;</code>
      */
@@ -63,6 +57,7 @@ public final class Slam {
     public static final int MAPPING_MODE_UPDATE_EXISTING_MAP_VALUE = 3;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -72,8 +67,8 @@ public final class Slam {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -81,10 +76,6 @@ public final class Slam {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static MappingMode forNumber(int value) {
       switch (value) {
         case 0: return MAPPING_MODE_UNSPECIFIED;
@@ -102,41 +93,25 @@ public final class Slam {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         MappingMode> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<MappingMode>() {
+            @java.lang.Override
             public MappingMode findValueByNumber(int number) {
               return MappingMode.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.viam.service.slam.v1.Slam.getDescriptor().getEnumTypes().get(0);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return MappingModeVerifier.INSTANCE;
     }
 
-    private static final MappingMode[] VALUES = values();
-
-    public static MappingMode valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class MappingModeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new MappingModeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return MappingMode.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -151,7 +126,7 @@ public final class Slam {
    * Protobuf enum {@code viam.service.slam.v1.SensorType}
    */
   public enum SensorType
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>SENSOR_TYPE_UNSPECIFIED = 0;</code>
      */
@@ -181,6 +156,7 @@ public final class Slam {
     public static final int SENSOR_TYPE_MOVEMENT_SENSOR_VALUE = 2;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -190,8 +166,8 @@ public final class Slam {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -199,10 +175,6 @@ public final class Slam {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static SensorType forNumber(int value) {
       switch (value) {
         case 0: return SENSOR_TYPE_UNSPECIFIED;
@@ -219,41 +191,25 @@ public final class Slam {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         SensorType> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<SensorType>() {
+            @java.lang.Override
             public SensorType findValueByNumber(int number) {
               return SensorType.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.viam.service.slam.v1.Slam.getDescriptor().getEnumTypes().get(1);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return SensorTypeVerifier.INSTANCE;
     }
 
-    private static final SensorType[] VALUES = values();
-
-    public static SensorType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class SensorTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new SensorTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return SensorType.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -266,7 +222,7 @@ public final class Slam {
 
   public interface GetPositionRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.slam.v1.GetPositionRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -291,42 +247,16 @@ public final class Slam {
   /**
    * Protobuf type {@code viam.service.slam.v1.GetPositionRequest}
    */
-  public static final class GetPositionRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPositionRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPositionRequest, GetPositionRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.slam.v1.GetPositionRequest)
       GetPositionRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPositionRequest.newBuilder() to construct.
-    private GetPositionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPositionRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPositionRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPositionRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPositionRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.slam.v1.Slam.GetPositionRequest.class, com.viam.service.slam.v1.Slam.GetPositionRequest.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of slam service
@@ -337,16 +267,7 @@ public final class Slam {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -359,345 +280,145 @@ public final class Slam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Name of slam service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
     }
+    /**
+     * <pre>
+     * Name of slam service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      getUnknownFields().writeTo(output);
+      name_ = getDefaultInstance().getName();
     }
+    /**
+     * <pre>
+     * Name of slam service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.slam.v1.Slam.GetPositionRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.slam.v1.Slam.GetPositionRequest other = (com.viam.service.slam.v1.Slam.GetPositionRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static com.viam.service.slam.v1.Slam.GetPositionRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPositionRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPositionRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.slam.v1.Slam.GetPositionRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.slam.v1.GetPositionRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.slam.v1.Slam.GetPositionRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.slam.v1.GetPositionRequest)
         com.viam.service.slam.v1.Slam.GetPositionRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPositionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPositionRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.slam.v1.Slam.GetPositionRequest.class, com.viam.service.slam.v1.Slam.GetPositionRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.slam.v1.Slam.GetPositionRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPositionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPositionRequest getDefaultInstanceForType() {
-        return com.viam.service.slam.v1.Slam.GetPositionRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPositionRequest build() {
-        com.viam.service.slam.v1.Slam.GetPositionRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPositionRequest buildPartial() {
-        com.viam.service.slam.v1.Slam.GetPositionRequest result = new com.viam.service.slam.v1.Slam.GetPositionRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.slam.v1.Slam.GetPositionRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.slam.v1.Slam.GetPositionRequest) {
-          return mergeFrom((com.viam.service.slam.v1.Slam.GetPositionRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.slam.v1.Slam.GetPositionRequest other) {
-        if (other == com.viam.service.slam.v1.Slam.GetPositionRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of slam service
@@ -706,17 +427,9 @@ public final class Slam {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -726,18 +439,10 @@ public final class Slam {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -750,10 +455,8 @@ public final class Slam {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -765,9 +468,8 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -781,80 +483,88 @@ public final class Slam {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.slam.v1.GetPositionRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.slam.v1.Slam.GetPositionRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.slam.v1.Slam.GetPositionRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.slam.v1.Slam.GetPositionRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.slam.v1.Slam.GetPositionRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.slam.v1.GetPositionRequest)
     private static final com.viam.service.slam.v1.Slam.GetPositionRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.slam.v1.Slam.GetPositionRequest();
+      GetPositionRequest defaultInstance = new GetPositionRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPositionRequest.class, defaultInstance);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPositionRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPositionRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetPositionRequest>() {
-      @java.lang.Override
-      public GetPositionRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPositionRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetPositionRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPositionRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.slam.v1.Slam.GetPositionRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPositionResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.slam.v1.GetPositionResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -874,14 +584,6 @@ public final class Slam {
      * @return The pose.
      */
     com.viam.common.v1.Common.Pose getPose();
-    /**
-     * <pre>
-     * Current position of the specified component in the SLAM Map
-     * </pre>
-     *
-     * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-     */
-    com.viam.common.v1.Common.PoseOrBuilder getPoseOrBuilder();
 
     /**
      * <pre>
@@ -921,51 +623,18 @@ public final class Slam {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional information in the response
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.service.slam.v1.GetPositionResponse}
    */
-  public static final class GetPositionResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPositionResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPositionResponse, GetPositionResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.slam.v1.GetPositionResponse)
       GetPositionResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPositionResponse.newBuilder() to construct.
-    private GetPositionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPositionResponse() {
       componentReference_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPositionResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPositionResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPositionResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.slam.v1.Slam.GetPositionResponse.class, com.viam.service.slam.v1.Slam.GetPositionResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int POSE_FIELD_NUMBER = 1;
     private com.viam.common.v1.Common.Pose pose_;
@@ -975,7 +644,6 @@ public final class Slam {
      * </pre>
      *
      * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-     * @return Whether the pose field is set.
      */
     @java.lang.Override
     public boolean hasPose() {
@@ -987,7 +655,6 @@ public final class Slam {
      * </pre>
      *
      * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-     * @return The pose.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.Pose getPose() {
@@ -1000,14 +667,43 @@ public final class Slam {
      *
      * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.PoseOrBuilder getPoseOrBuilder() {
-      return pose_ == null ? com.viam.common.v1.Common.Pose.getDefaultInstance() : pose_;
+    private void setPose(com.viam.common.v1.Common.Pose value) {
+      value.getClass();
+  pose_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Current position of the specified component in the SLAM Map
+     * </pre>
+     *
+     * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePose(com.viam.common.v1.Common.Pose value) {
+      value.getClass();
+  if (pose_ != null &&
+          pose_ != com.viam.common.v1.Common.Pose.getDefaultInstance()) {
+        pose_ =
+          com.viam.common.v1.Common.Pose.newBuilder(pose_).mergeFrom(value).buildPartial();
+      } else {
+        pose_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Current position of the specified component in the SLAM Map
+     * </pre>
+     *
+     * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
+     */
+    private void clearPose() {  pose_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int COMPONENT_REFERENCE_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object componentReference_ = "";
+    private java.lang.String componentReference_;
     /**
      * <pre>
      * This is usually the name of the camera that is in the SLAM config
@@ -1018,16 +714,7 @@ public final class Slam {
      */
     @java.lang.Override
     public java.lang.String getComponentReference() {
-      java.lang.Object ref = componentReference_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        componentReference_ = s;
-        return s;
-      }
+      return componentReference_;
     }
     /**
      * <pre>
@@ -1040,16 +727,46 @@ public final class Slam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getComponentReferenceBytes() {
-      java.lang.Object ref = componentReference_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        componentReference_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(componentReference_);
+    }
+    /**
+     * <pre>
+     * This is usually the name of the camera that is in the SLAM config
+     * </pre>
+     *
+     * <code>string component_reference = 2 [json_name = "componentReference"];</code>
+     * @param value The componentReference to set.
+     */
+    private void setComponentReference(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      componentReference_ = value;
+    }
+    /**
+     * <pre>
+     * This is usually the name of the camera that is in the SLAM config
+     * </pre>
+     *
+     * <code>string component_reference = 2 [json_name = "componentReference"];</code>
+     */
+    private void clearComponentReference() {
+
+      componentReference_ = getDefaultInstance().getComponentReference();
+    }
+    /**
+     * <pre>
+     * This is usually the name of the camera that is in the SLAM config
+     * </pre>
+     *
+     * <code>string component_reference = 2 [json_name = "componentReference"];</code>
+     * @param value The bytes for componentReference to set.
+     */
+    private void setComponentReferenceBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      componentReference_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -1060,7 +777,6 @@ public final class Slam {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -1072,7 +788,6 @@ public final class Slam {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -1085,433 +800,148 @@ public final class Slam {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * Additional information in the response
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getPose());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(componentReference_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, componentReference_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getPose());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(componentReference_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, componentReference_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.slam.v1.Slam.GetPositionResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.slam.v1.Slam.GetPositionResponse other = (com.viam.service.slam.v1.Slam.GetPositionResponse) obj;
-
-      if (hasPose() != other.hasPose()) return false;
-      if (hasPose()) {
-        if (!getPose()
-            .equals(other.getPose())) return false;
-      }
-      if (!getComponentReference()
-          .equals(other.getComponentReference())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasPose()) {
-        hash = (37 * hash) + POSE_FIELD_NUMBER;
-        hash = (53 * hash) + getPose().hashCode();
-      }
-      hash = (37 * hash) + COMPONENT_REFERENCE_FIELD_NUMBER;
-      hash = (53 * hash) + getComponentReference().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional information in the response
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPositionResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPositionResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPositionResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.slam.v1.Slam.GetPositionResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.slam.v1.GetPositionResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.slam.v1.Slam.GetPositionResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.slam.v1.GetPositionResponse)
         com.viam.service.slam.v1.Slam.GetPositionResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPositionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPositionResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.slam.v1.Slam.GetPositionResponse.class, com.viam.service.slam.v1.Slam.GetPositionResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.slam.v1.Slam.GetPositionResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPoseFieldBuilder();
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        pose_ = null;
-        if (poseBuilder_ != null) {
-          poseBuilder_.dispose();
-          poseBuilder_ = null;
-        }
-        componentReference_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPositionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPositionResponse getDefaultInstanceForType() {
-        return com.viam.service.slam.v1.Slam.GetPositionResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPositionResponse build() {
-        com.viam.service.slam.v1.Slam.GetPositionResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPositionResponse buildPartial() {
-        com.viam.service.slam.v1.Slam.GetPositionResponse result = new com.viam.service.slam.v1.Slam.GetPositionResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.slam.v1.Slam.GetPositionResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.pose_ = poseBuilder_ == null
-              ? pose_
-              : poseBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.componentReference_ = componentReference_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.slam.v1.Slam.GetPositionResponse) {
-          return mergeFrom((com.viam.service.slam.v1.Slam.GetPositionResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.slam.v1.Slam.GetPositionResponse other) {
-        if (other == com.viam.service.slam.v1.Slam.GetPositionResponse.getDefaultInstance()) return this;
-        if (other.hasPose()) {
-          mergePose(other.getPose());
-        }
-        if (!other.getComponentReference().isEmpty()) {
-          componentReference_ = other.componentReference_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getPoseFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                componentReference_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.common.v1.Common.Pose pose_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder> poseBuilder_;
       /**
        * <pre>
        * Current position of the specified component in the SLAM Map
        * </pre>
        *
        * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-       * @return Whether the pose field is set.
        */
+      @java.lang.Override
       public boolean hasPose() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasPose();
       }
       /**
        * <pre>
@@ -1519,14 +949,10 @@ public final class Slam {
        * </pre>
        *
        * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-       * @return The pose.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.Pose getPose() {
-        if (poseBuilder_ == null) {
-          return pose_ == null ? com.viam.common.v1.Common.Pose.getDefaultInstance() : pose_;
-        } else {
-          return poseBuilder_.getMessage();
-        }
+        return instance.getPose();
       }
       /**
        * <pre>
@@ -1536,18 +962,10 @@ public final class Slam {
        * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
        */
       public Builder setPose(com.viam.common.v1.Common.Pose value) {
-        if (poseBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pose_ = value;
-        } else {
-          poseBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPose(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Current position of the specified component in the SLAM Map
@@ -1557,13 +975,8 @@ public final class Slam {
        */
       public Builder setPose(
           com.viam.common.v1.Common.Pose.Builder builderForValue) {
-        if (poseBuilder_ == null) {
-          pose_ = builderForValue.build();
-        } else {
-          poseBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPose(builderForValue.build());
         return this;
       }
       /**
@@ -1574,21 +987,8 @@ public final class Slam {
        * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
        */
       public Builder mergePose(com.viam.common.v1.Common.Pose value) {
-        if (poseBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            pose_ != null &&
-            pose_ != com.viam.common.v1.Common.Pose.getDefaultInstance()) {
-            getPoseBuilder().mergeFrom(value);
-          } else {
-            pose_ = value;
-          }
-        } else {
-          poseBuilder_.mergeFrom(value);
-        }
-        if (pose_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergePose(value);
         return this;
       }
       /**
@@ -1598,65 +998,11 @@ public final class Slam {
        *
        * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
        */
-      public Builder clearPose() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        pose_ = null;
-        if (poseBuilder_ != null) {
-          poseBuilder_.dispose();
-          poseBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearPose() {  copyOnWrite();
+        instance.clearPose();
         return this;
-      }
-      /**
-       * <pre>
-       * Current position of the specified component in the SLAM Map
-       * </pre>
-       *
-       * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-       */
-      public com.viam.common.v1.Common.Pose.Builder getPoseBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getPoseFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Current position of the specified component in the SLAM Map
-       * </pre>
-       *
-       * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-       */
-      public com.viam.common.v1.Common.PoseOrBuilder getPoseOrBuilder() {
-        if (poseBuilder_ != null) {
-          return poseBuilder_.getMessageOrBuilder();
-        } else {
-          return pose_ == null ?
-              com.viam.common.v1.Common.Pose.getDefaultInstance() : pose_;
-        }
-      }
-      /**
-       * <pre>
-       * Current position of the specified component in the SLAM Map
-       * </pre>
-       *
-       * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder> 
-          getPoseFieldBuilder() {
-        if (poseBuilder_ == null) {
-          poseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder>(
-                  getPose(),
-                  getParentForChildren(),
-                  isClean());
-          pose_ = null;
-        }
-        return poseBuilder_;
       }
 
-      private java.lang.Object componentReference_ = "";
       /**
        * <pre>
        * This is usually the name of the camera that is in the SLAM config
@@ -1665,17 +1011,9 @@ public final class Slam {
        * <code>string component_reference = 2 [json_name = "componentReference"];</code>
        * @return The componentReference.
        */
+      @java.lang.Override
       public java.lang.String getComponentReference() {
-        java.lang.Object ref = componentReference_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          componentReference_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getComponentReference();
       }
       /**
        * <pre>
@@ -1685,18 +1023,10 @@ public final class Slam {
        * <code>string component_reference = 2 [json_name = "componentReference"];</code>
        * @return The bytes for componentReference.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getComponentReferenceBytes() {
-        java.lang.Object ref = componentReference_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          componentReference_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getComponentReferenceBytes();
       }
       /**
        * <pre>
@@ -1709,10 +1039,8 @@ public final class Slam {
        */
       public Builder setComponentReference(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        componentReference_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setComponentReference(value);
         return this;
       }
       /**
@@ -1724,9 +1052,8 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder clearComponentReference() {
-        componentReference_ = getDefaultInstance().getComponentReference();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearComponentReference();
         return this;
       }
       /**
@@ -1740,27 +1067,21 @@ public final class Slam {
        */
       public Builder setComponentReferenceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        componentReference_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setComponentReferenceBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional information in the response
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -1768,14 +1089,10 @@ public final class Slam {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -1785,18 +1102,10 @@ public final class Slam {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional information in the response
@@ -1806,13 +1115,8 @@ public final class Slam {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -1823,21 +1127,8 @@ public final class Slam {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -1847,130 +1138,92 @@ public final class Slam {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional information in the response
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional information in the response
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional information in the response
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.slam.v1.GetPositionResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.slam.v1.Slam.GetPositionResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "pose_",
+              "componentReference_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u1009\u0000\u0002\u0208" +
+                "c\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.slam.v1.Slam.GetPositionResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.slam.v1.Slam.GetPositionResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.slam.v1.Slam.GetPositionResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.slam.v1.GetPositionResponse)
     private static final com.viam.service.slam.v1.Slam.GetPositionResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.slam.v1.Slam.GetPositionResponse();
+      GetPositionResponse defaultInstance = new GetPositionResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPositionResponse.class, defaultInstance);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPositionResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPositionResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetPositionResponse>() {
-      @java.lang.Override
-      public GetPositionResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPositionResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetPositionResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPositionResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.slam.v1.Slam.GetPositionResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPointCloudMapRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.slam.v1.GetPointCloudMapRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -2018,43 +1271,17 @@ public final class Slam {
   /**
    * Protobuf type {@code viam.service.slam.v1.GetPointCloudMapRequest}
    */
-  public static final class GetPointCloudMapRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPointCloudMapRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPointCloudMapRequest, GetPointCloudMapRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.slam.v1.GetPointCloudMapRequest)
       GetPointCloudMapRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPointCloudMapRequest.newBuilder() to construct.
-    private GetPointCloudMapRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPointCloudMapRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPointCloudMapRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPointCloudMapRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPointCloudMapRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.slam.v1.Slam.GetPointCloudMapRequest.class, com.viam.service.slam.v1.Slam.GetPointCloudMapRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of slam service
@@ -2065,16 +1292,7 @@ public final class Slam {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -2087,20 +1305,50 @@ public final class Slam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of slam service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of slam service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of slam service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int RETURN_EDITED_MAP_FIELD_NUMBER = 2;
-    private boolean returnEditedMap_ = false;
+    private boolean returnEditedMap_;
     /**
      * <pre>
      * For SLAM services that implement handling an edited map, this boolean
@@ -2129,366 +1377,131 @@ public final class Slam {
     public boolean getReturnEditedMap() {
       return returnEditedMap_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * For SLAM services that implement handling an edited map, this boolean
+     * should indicate whether to return that edited map. If the SLAM service
+     * does not handle edited maps, the unedited map will be returned instead.
+     * </pre>
+     *
+     * <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code>
+     * @param value The returnEditedMap to set.
+     */
+    private void setReturnEditedMap(boolean value) {
+      bitField0_ |= 0x00000001;
+      returnEditedMap_ = value;
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeBool(2, returnEditedMap_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, returnEditedMap_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.slam.v1.Slam.GetPointCloudMapRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.slam.v1.Slam.GetPointCloudMapRequest other = (com.viam.service.slam.v1.Slam.GetPointCloudMapRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasReturnEditedMap() != other.hasReturnEditedMap()) return false;
-      if (hasReturnEditedMap()) {
-        if (getReturnEditedMap()
-            != other.getReturnEditedMap()) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasReturnEditedMap()) {
-        hash = (37 * hash) + RETURN_EDITED_MAP_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getReturnEditedMap());
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * For SLAM services that implement handling an edited map, this boolean
+     * should indicate whether to return that edited map. If the SLAM service
+     * does not handle edited maps, the unedited map will be returned instead.
+     * </pre>
+     *
+     * <code>optional bool return_edited_map = 2 [json_name = "returnEditedMap"];</code>
+     */
+    private void clearReturnEditedMap() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      returnEditedMap_ = false;
     }
 
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.slam.v1.Slam.GetPointCloudMapRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.slam.v1.GetPointCloudMapRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.slam.v1.Slam.GetPointCloudMapRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.slam.v1.GetPointCloudMapRequest)
         com.viam.service.slam.v1.Slam.GetPointCloudMapRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPointCloudMapRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPointCloudMapRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.slam.v1.Slam.GetPointCloudMapRequest.class, com.viam.service.slam.v1.Slam.GetPointCloudMapRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.slam.v1.Slam.GetPointCloudMapRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        returnEditedMap_ = false;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPointCloudMapRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPointCloudMapRequest getDefaultInstanceForType() {
-        return com.viam.service.slam.v1.Slam.GetPointCloudMapRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPointCloudMapRequest build() {
-        com.viam.service.slam.v1.Slam.GetPointCloudMapRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPointCloudMapRequest buildPartial() {
-        com.viam.service.slam.v1.Slam.GetPointCloudMapRequest result = new com.viam.service.slam.v1.Slam.GetPointCloudMapRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.slam.v1.Slam.GetPointCloudMapRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.returnEditedMap_ = returnEditedMap_;
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.slam.v1.Slam.GetPointCloudMapRequest) {
-          return mergeFrom((com.viam.service.slam.v1.Slam.GetPointCloudMapRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.slam.v1.Slam.GetPointCloudMapRequest other) {
-        if (other == com.viam.service.slam.v1.Slam.GetPointCloudMapRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasReturnEditedMap()) {
-          setReturnEditedMap(other.getReturnEditedMap());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                returnEditedMap_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of slam service
@@ -2497,17 +1510,9 @@ public final class Slam {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -2517,18 +1522,10 @@ public final class Slam {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -2541,10 +1538,8 @@ public final class Slam {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -2556,9 +1551,8 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -2572,15 +1566,11 @@ public final class Slam {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private boolean returnEditedMap_ ;
       /**
        * <pre>
        * For SLAM services that implement handling an edited map, this boolean
@@ -2593,7 +1583,7 @@ public final class Slam {
        */
       @java.lang.Override
       public boolean hasReturnEditedMap() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasReturnEditedMap();
       }
       /**
        * <pre>
@@ -2607,7 +1597,7 @@ public final class Slam {
        */
       @java.lang.Override
       public boolean getReturnEditedMap() {
-        return returnEditedMap_;
+        return instance.getReturnEditedMap();
       }
       /**
        * <pre>
@@ -2621,10 +1611,8 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder setReturnEditedMap(boolean value) {
-
-        returnEditedMap_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setReturnEditedMap(value);
         return this;
       }
       /**
@@ -2638,78 +1626,91 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder clearReturnEditedMap() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        returnEditedMap_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearReturnEditedMap();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.slam.v1.GetPointCloudMapRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.slam.v1.Slam.GetPointCloudMapRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "returnEditedMap_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u1007" +
+                "\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.slam.v1.Slam.GetPointCloudMapRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.slam.v1.Slam.GetPointCloudMapRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.slam.v1.Slam.GetPointCloudMapRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.slam.v1.GetPointCloudMapRequest)
     private static final com.viam.service.slam.v1.Slam.GetPointCloudMapRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.slam.v1.Slam.GetPointCloudMapRequest();
+      GetPointCloudMapRequest defaultInstance = new GetPointCloudMapRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPointCloudMapRequest.class, defaultInstance);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPointCloudMapRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetPointCloudMapRequest>() {
-      @java.lang.Override
-      public GetPointCloudMapRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPointCloudMapRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetPointCloudMapRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPointCloudMapRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.slam.v1.Slam.GetPointCloudMapRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPointCloudMapResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.slam.v1.GetPointCloudMapResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -2741,41 +1742,16 @@ public final class Slam {
   /**
    * Protobuf type {@code viam.service.slam.v1.GetPointCloudMapResponse}
    */
-  public static final class GetPointCloudMapResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPointCloudMapResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPointCloudMapResponse, GetPointCloudMapResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.slam.v1.GetPointCloudMapResponse)
       GetPointCloudMapResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPointCloudMapResponse.newBuilder() to construct.
-    private GetPointCloudMapResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPointCloudMapResponse() {
       pointCloudPcdChunk_ = com.google.protobuf.ByteString.EMPTY;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPointCloudMapResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPointCloudMapResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPointCloudMapResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.slam.v1.Slam.GetPointCloudMapResponse.class, com.viam.service.slam.v1.Slam.GetPointCloudMapResponse.Builder.class);
-    }
-
     public static final int POINT_CLOUD_PCD_CHUNK_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString pointCloudPcdChunk_ = com.google.protobuf.ByteString.EMPTY;
+    private com.google.protobuf.ByteString pointCloudPcdChunk_;
     /**
      * <pre>
      * One chunk of the PointCloud.
@@ -2805,333 +1781,162 @@ public final class Slam {
     public com.google.protobuf.ByteString getPointCloudPcdChunk() {
       return pointCloudPcdChunk_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * One chunk of the PointCloud.
+     * For a given GetPointCloudMap request, concatenating all
+     * GetPointCloudMapResponse.point_cloud_pcd_chunk values in the
+     * order received result in the complete pointcloud in standard PCD
+     * format where XY is the ground plane and positive Z is up, following
+     * the Right Hand Rule.
+     *
+     * Read more about the pointcloud format here:
+     * https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+     *
+     * Viam expects pointcloud data with fields "x y z" or "x y z rgb", and for
+     * this to be specified in the pointcloud header in the FIELDS entry. If color
+     * data is included in the pointcloud, Viam's services assume that the color
+     * value encodes a confidence score for that data point. Viam expects the
+     * confidence score to be encoded in the blue parameter of the RGB value, on a
+     * scale from 1-100.
+     *
+     * Pointclouds are little endian encoded.
+     * </pre>
+     *
+     * <code>bytes point_cloud_pcd_chunk = 1 [json_name = "pointCloudPcdChunk"];</code>
+     * @param value The pointCloudPcdChunk to set.
+     */
+    private void setPointCloudPcdChunk(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      pointCloudPcdChunk_ = value;
     }
+    /**
+     * <pre>
+     * One chunk of the PointCloud.
+     * For a given GetPointCloudMap request, concatenating all
+     * GetPointCloudMapResponse.point_cloud_pcd_chunk values in the
+     * order received result in the complete pointcloud in standard PCD
+     * format where XY is the ground plane and positive Z is up, following
+     * the Right Hand Rule.
+     *
+     * Read more about the pointcloud format here:
+     * https://pointclouds.org/documentation/tutorials/pcd_file_format.html
+     *
+     * Viam expects pointcloud data with fields "x y z" or "x y z rgb", and for
+     * this to be specified in the pointcloud header in the FIELDS entry. If color
+     * data is included in the pointcloud, Viam's services assume that the color
+     * value encodes a confidence score for that data point. Viam expects the
+     * confidence score to be encoded in the blue parameter of the RGB value, on a
+     * scale from 1-100.
+     *
+     * Pointclouds are little endian encoded.
+     * </pre>
+     *
+     * <code>bytes point_cloud_pcd_chunk = 1 [json_name = "pointCloudPcdChunk"];</code>
+     */
+    private void clearPointCloudPcdChunk() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!pointCloudPcdChunk_.isEmpty()) {
-        output.writeBytes(1, pointCloudPcdChunk_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!pointCloudPcdChunk_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, pointCloudPcdChunk_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.slam.v1.Slam.GetPointCloudMapResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.slam.v1.Slam.GetPointCloudMapResponse other = (com.viam.service.slam.v1.Slam.GetPointCloudMapResponse) obj;
-
-      if (!getPointCloudPcdChunk()
-          .equals(other.getPointCloudPcdChunk())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + POINT_CLOUD_PCD_CHUNK_FIELD_NUMBER;
-      hash = (53 * hash) + getPointCloudPcdChunk().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      pointCloudPcdChunk_ = getDefaultInstance().getPointCloudPcdChunk();
     }
 
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.slam.v1.Slam.GetPointCloudMapResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.slam.v1.GetPointCloudMapResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.slam.v1.Slam.GetPointCloudMapResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.slam.v1.GetPointCloudMapResponse)
         com.viam.service.slam.v1.Slam.GetPointCloudMapResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPointCloudMapResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPointCloudMapResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.slam.v1.Slam.GetPointCloudMapResponse.class, com.viam.service.slam.v1.Slam.GetPointCloudMapResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.slam.v1.Slam.GetPointCloudMapResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        pointCloudPcdChunk_ = com.google.protobuf.ByteString.EMPTY;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPointCloudMapResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPointCloudMapResponse getDefaultInstanceForType() {
-        return com.viam.service.slam.v1.Slam.GetPointCloudMapResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPointCloudMapResponse build() {
-        com.viam.service.slam.v1.Slam.GetPointCloudMapResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPointCloudMapResponse buildPartial() {
-        com.viam.service.slam.v1.Slam.GetPointCloudMapResponse result = new com.viam.service.slam.v1.Slam.GetPointCloudMapResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.slam.v1.Slam.GetPointCloudMapResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.pointCloudPcdChunk_ = pointCloudPcdChunk_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.slam.v1.Slam.GetPointCloudMapResponse) {
-          return mergeFrom((com.viam.service.slam.v1.Slam.GetPointCloudMapResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.slam.v1.Slam.GetPointCloudMapResponse other) {
-        if (other == com.viam.service.slam.v1.Slam.GetPointCloudMapResponse.getDefaultInstance()) return this;
-        if (other.getPointCloudPcdChunk() != com.google.protobuf.ByteString.EMPTY) {
-          setPointCloudPcdChunk(other.getPointCloudPcdChunk());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                pointCloudPcdChunk_ = input.readBytes();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.ByteString pointCloudPcdChunk_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
        * One chunk of the PointCloud.
@@ -3159,7 +1964,7 @@ public final class Slam {
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getPointCloudPcdChunk() {
-        return pointCloudPcdChunk_;
+        return instance.getPointCloudPcdChunk();
       }
       /**
        * <pre>
@@ -3188,10 +1993,8 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder setPointCloudPcdChunk(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        pointCloudPcdChunk_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPointCloudPcdChunk(value);
         return this;
       }
       /**
@@ -3220,78 +2023,88 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder clearPointCloudPcdChunk() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        pointCloudPcdChunk_ = getDefaultInstance().getPointCloudPcdChunk();
-        onChanged();
+        copyOnWrite();
+        instance.clearPointCloudPcdChunk();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.slam.v1.GetPointCloudMapResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.slam.v1.Slam.GetPointCloudMapResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "pointCloudPcdChunk_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\n";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.slam.v1.Slam.GetPointCloudMapResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.slam.v1.Slam.GetPointCloudMapResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.slam.v1.Slam.GetPointCloudMapResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.slam.v1.GetPointCloudMapResponse)
     private static final com.viam.service.slam.v1.Slam.GetPointCloudMapResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.slam.v1.Slam.GetPointCloudMapResponse();
+      GetPointCloudMapResponse defaultInstance = new GetPointCloudMapResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPointCloudMapResponse.class, defaultInstance);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPointCloudMapResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPointCloudMapResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetPointCloudMapResponse>() {
-      @java.lang.Override
-      public GetPointCloudMapResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPointCloudMapResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetPointCloudMapResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPointCloudMapResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.slam.v1.Slam.GetPointCloudMapResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetInternalStateRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.slam.v1.GetInternalStateRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -3316,42 +2129,16 @@ public final class Slam {
   /**
    * Protobuf type {@code viam.service.slam.v1.GetInternalStateRequest}
    */
-  public static final class GetInternalStateRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetInternalStateRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetInternalStateRequest, GetInternalStateRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.slam.v1.GetInternalStateRequest)
       GetInternalStateRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetInternalStateRequest.newBuilder() to construct.
-    private GetInternalStateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetInternalStateRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetInternalStateRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetInternalStateRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetInternalStateRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.slam.v1.Slam.GetInternalStateRequest.class, com.viam.service.slam.v1.Slam.GetInternalStateRequest.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of slam service
@@ -3362,16 +2149,7 @@ public final class Slam {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -3384,345 +2162,145 @@ public final class Slam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Name of slam service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
     }
+    /**
+     * <pre>
+     * Name of slam service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      getUnknownFields().writeTo(output);
+      name_ = getDefaultInstance().getName();
     }
+    /**
+     * <pre>
+     * Name of slam service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.slam.v1.Slam.GetInternalStateRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.slam.v1.Slam.GetInternalStateRequest other = (com.viam.service.slam.v1.Slam.GetInternalStateRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static com.viam.service.slam.v1.Slam.GetInternalStateRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.slam.v1.Slam.GetInternalStateRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.slam.v1.Slam.GetInternalStateRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.slam.v1.Slam.GetInternalStateRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.slam.v1.GetInternalStateRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.slam.v1.Slam.GetInternalStateRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.slam.v1.GetInternalStateRequest)
         com.viam.service.slam.v1.Slam.GetInternalStateRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetInternalStateRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetInternalStateRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.slam.v1.Slam.GetInternalStateRequest.class, com.viam.service.slam.v1.Slam.GetInternalStateRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.slam.v1.Slam.GetInternalStateRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetInternalStateRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetInternalStateRequest getDefaultInstanceForType() {
-        return com.viam.service.slam.v1.Slam.GetInternalStateRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetInternalStateRequest build() {
-        com.viam.service.slam.v1.Slam.GetInternalStateRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetInternalStateRequest buildPartial() {
-        com.viam.service.slam.v1.Slam.GetInternalStateRequest result = new com.viam.service.slam.v1.Slam.GetInternalStateRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.slam.v1.Slam.GetInternalStateRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.slam.v1.Slam.GetInternalStateRequest) {
-          return mergeFrom((com.viam.service.slam.v1.Slam.GetInternalStateRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.slam.v1.Slam.GetInternalStateRequest other) {
-        if (other == com.viam.service.slam.v1.Slam.GetInternalStateRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of slam service
@@ -3731,17 +2309,9 @@ public final class Slam {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -3751,18 +2321,10 @@ public final class Slam {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -3775,10 +2337,8 @@ public final class Slam {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -3790,9 +2350,8 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -3806,80 +2365,88 @@ public final class Slam {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.slam.v1.GetInternalStateRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.slam.v1.Slam.GetInternalStateRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.slam.v1.Slam.GetInternalStateRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.slam.v1.Slam.GetInternalStateRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.slam.v1.Slam.GetInternalStateRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.slam.v1.GetInternalStateRequest)
     private static final com.viam.service.slam.v1.Slam.GetInternalStateRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.slam.v1.Slam.GetInternalStateRequest();
+      GetInternalStateRequest defaultInstance = new GetInternalStateRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetInternalStateRequest.class, defaultInstance);
     }
 
     public static com.viam.service.slam.v1.Slam.GetInternalStateRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetInternalStateRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetInternalStateRequest>() {
-      @java.lang.Override
-      public GetInternalStateRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetInternalStateRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetInternalStateRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetInternalStateRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.slam.v1.Slam.GetInternalStateRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetInternalStateResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.slam.v1.GetInternalStateResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -3895,41 +2462,16 @@ public final class Slam {
   /**
    * Protobuf type {@code viam.service.slam.v1.GetInternalStateResponse}
    */
-  public static final class GetInternalStateResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetInternalStateResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetInternalStateResponse, GetInternalStateResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.slam.v1.GetInternalStateResponse)
       GetInternalStateResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetInternalStateResponse.newBuilder() to construct.
-    private GetInternalStateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetInternalStateResponse() {
       internalStateChunk_ = com.google.protobuf.ByteString.EMPTY;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetInternalStateResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetInternalStateResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetInternalStateResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.slam.v1.Slam.GetInternalStateResponse.class, com.viam.service.slam.v1.Slam.GetInternalStateResponse.Builder.class);
-    }
-
     public static final int INTERNAL_STATE_CHUNK_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString internalStateChunk_ = com.google.protobuf.ByteString.EMPTY;
+    private com.google.protobuf.ByteString internalStateChunk_;
     /**
      * <pre>
      * Chunk of the internal state of the SLAM algorithm required to continue
@@ -3943,333 +2485,130 @@ public final class Slam {
     public com.google.protobuf.ByteString getInternalStateChunk() {
       return internalStateChunk_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Chunk of the internal state of the SLAM algorithm required to continue
+     * mapping/localization
+     * </pre>
+     *
+     * <code>bytes internal_state_chunk = 1 [json_name = "internalStateChunk"];</code>
+     * @param value The internalStateChunk to set.
+     */
+    private void setInternalStateChunk(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      internalStateChunk_ = value;
     }
+    /**
+     * <pre>
+     * Chunk of the internal state of the SLAM algorithm required to continue
+     * mapping/localization
+     * </pre>
+     *
+     * <code>bytes internal_state_chunk = 1 [json_name = "internalStateChunk"];</code>
+     */
+    private void clearInternalStateChunk() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!internalStateChunk_.isEmpty()) {
-        output.writeBytes(1, internalStateChunk_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!internalStateChunk_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, internalStateChunk_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.slam.v1.Slam.GetInternalStateResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.slam.v1.Slam.GetInternalStateResponse other = (com.viam.service.slam.v1.Slam.GetInternalStateResponse) obj;
-
-      if (!getInternalStateChunk()
-          .equals(other.getInternalStateChunk())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + INTERNAL_STATE_CHUNK_FIELD_NUMBER;
-      hash = (53 * hash) + getInternalStateChunk().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      internalStateChunk_ = getDefaultInstance().getInternalStateChunk();
     }
 
     public static com.viam.service.slam.v1.Slam.GetInternalStateResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.slam.v1.Slam.GetInternalStateResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.slam.v1.Slam.GetInternalStateResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetInternalStateResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.slam.v1.Slam.GetInternalStateResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.slam.v1.GetInternalStateResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.slam.v1.Slam.GetInternalStateResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.slam.v1.GetInternalStateResponse)
         com.viam.service.slam.v1.Slam.GetInternalStateResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetInternalStateResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetInternalStateResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.slam.v1.Slam.GetInternalStateResponse.class, com.viam.service.slam.v1.Slam.GetInternalStateResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.slam.v1.Slam.GetInternalStateResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        internalStateChunk_ = com.google.protobuf.ByteString.EMPTY;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetInternalStateResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetInternalStateResponse getDefaultInstanceForType() {
-        return com.viam.service.slam.v1.Slam.GetInternalStateResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetInternalStateResponse build() {
-        com.viam.service.slam.v1.Slam.GetInternalStateResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetInternalStateResponse buildPartial() {
-        com.viam.service.slam.v1.Slam.GetInternalStateResponse result = new com.viam.service.slam.v1.Slam.GetInternalStateResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.slam.v1.Slam.GetInternalStateResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.internalStateChunk_ = internalStateChunk_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.slam.v1.Slam.GetInternalStateResponse) {
-          return mergeFrom((com.viam.service.slam.v1.Slam.GetInternalStateResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.slam.v1.Slam.GetInternalStateResponse other) {
-        if (other == com.viam.service.slam.v1.Slam.GetInternalStateResponse.getDefaultInstance()) return this;
-        if (other.getInternalStateChunk() != com.google.protobuf.ByteString.EMPTY) {
-          setInternalStateChunk(other.getInternalStateChunk());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                internalStateChunk_ = input.readBytes();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.ByteString internalStateChunk_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
        * Chunk of the internal state of the SLAM algorithm required to continue
@@ -4281,7 +2620,7 @@ public final class Slam {
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getInternalStateChunk() {
-        return internalStateChunk_;
+        return instance.getInternalStateChunk();
       }
       /**
        * <pre>
@@ -4294,10 +2633,8 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder setInternalStateChunk(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        internalStateChunk_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setInternalStateChunk(value);
         return this;
       }
       /**
@@ -4310,78 +2647,88 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder clearInternalStateChunk() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        internalStateChunk_ = getDefaultInstance().getInternalStateChunk();
-        onChanged();
+        copyOnWrite();
+        instance.clearInternalStateChunk();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.slam.v1.GetInternalStateResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.slam.v1.Slam.GetInternalStateResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "internalStateChunk_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\n";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.slam.v1.Slam.GetInternalStateResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.slam.v1.Slam.GetInternalStateResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.slam.v1.Slam.GetInternalStateResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.slam.v1.GetInternalStateResponse)
     private static final com.viam.service.slam.v1.Slam.GetInternalStateResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.slam.v1.Slam.GetInternalStateResponse();
+      GetInternalStateResponse defaultInstance = new GetInternalStateResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetInternalStateResponse.class, defaultInstance);
     }
 
     public static com.viam.service.slam.v1.Slam.GetInternalStateResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetInternalStateResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetInternalStateResponse>() {
-      @java.lang.Override
-      public GetInternalStateResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetInternalStateResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetInternalStateResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetInternalStateResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.slam.v1.Slam.GetInternalStateResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPropertiesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.slam.v1.GetPropertiesRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -4406,42 +2753,16 @@ public final class Slam {
   /**
    * Protobuf type {@code viam.service.slam.v1.GetPropertiesRequest}
    */
-  public static final class GetPropertiesRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPropertiesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPropertiesRequest, GetPropertiesRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.slam.v1.GetPropertiesRequest)
       GetPropertiesRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPropertiesRequest.newBuilder() to construct.
-    private GetPropertiesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPropertiesRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPropertiesRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPropertiesRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPropertiesRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.slam.v1.Slam.GetPropertiesRequest.class, com.viam.service.slam.v1.Slam.GetPropertiesRequest.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of the slam service
@@ -4452,16 +2773,7 @@ public final class Slam {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -4474,345 +2786,145 @@ public final class Slam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Name of the slam service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
     }
+    /**
+     * <pre>
+     * Name of the slam service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      getUnknownFields().writeTo(output);
+      name_ = getDefaultInstance().getName();
     }
+    /**
+     * <pre>
+     * Name of the slam service
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.slam.v1.Slam.GetPropertiesRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.service.slam.v1.Slam.GetPropertiesRequest other = (com.viam.service.slam.v1.Slam.GetPropertiesRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static com.viam.service.slam.v1.Slam.GetPropertiesRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPropertiesRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPropertiesRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.slam.v1.Slam.GetPropertiesRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.slam.v1.GetPropertiesRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.slam.v1.Slam.GetPropertiesRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.slam.v1.GetPropertiesRequest)
         com.viam.service.slam.v1.Slam.GetPropertiesRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPropertiesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPropertiesRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.slam.v1.Slam.GetPropertiesRequest.class, com.viam.service.slam.v1.Slam.GetPropertiesRequest.Builder.class);
-      }
-
       // Construct using com.viam.service.slam.v1.Slam.GetPropertiesRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPropertiesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPropertiesRequest getDefaultInstanceForType() {
-        return com.viam.service.slam.v1.Slam.GetPropertiesRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPropertiesRequest build() {
-        com.viam.service.slam.v1.Slam.GetPropertiesRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPropertiesRequest buildPartial() {
-        com.viam.service.slam.v1.Slam.GetPropertiesRequest result = new com.viam.service.slam.v1.Slam.GetPropertiesRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.slam.v1.Slam.GetPropertiesRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.slam.v1.Slam.GetPropertiesRequest) {
-          return mergeFrom((com.viam.service.slam.v1.Slam.GetPropertiesRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.slam.v1.Slam.GetPropertiesRequest other) {
-        if (other == com.viam.service.slam.v1.Slam.GetPropertiesRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of the slam service
@@ -4821,17 +2933,9 @@ public final class Slam {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -4841,18 +2945,10 @@ public final class Slam {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -4865,10 +2961,8 @@ public final class Slam {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -4880,9 +2974,8 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -4896,80 +2989,88 @@ public final class Slam {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.slam.v1.GetPropertiesRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.slam.v1.Slam.GetPropertiesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.slam.v1.Slam.GetPropertiesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.slam.v1.Slam.GetPropertiesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.slam.v1.Slam.GetPropertiesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.slam.v1.GetPropertiesRequest)
     private static final com.viam.service.slam.v1.Slam.GetPropertiesRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.slam.v1.Slam.GetPropertiesRequest();
+      GetPropertiesRequest defaultInstance = new GetPropertiesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPropertiesRequest.class, defaultInstance);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPropertiesRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPropertiesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetPropertiesRequest>() {
-      @java.lang.Override
-      public GetPropertiesRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPropertiesRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetPropertiesRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPropertiesRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.slam.v1.Slam.GetPropertiesRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPropertiesResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.slam.v1.GetPropertiesResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>bool cloud_slam = 1 [json_name = "cloudSlam"];</code>
@@ -5018,16 +3119,6 @@ public final class Slam {
      * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
      */
     int getSensorInfoCount();
-    /**
-     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
-     */
-    java.util.List<? extends com.viam.service.slam.v1.Slam.SensorInfoOrBuilder> 
-        getSensorInfoOrBuilderList();
-    /**
-     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
-     */
-    com.viam.service.slam.v1.Slam.SensorInfoOrBuilder getSensorInfoOrBuilder(
-        int index);
   }
   /**
    * <pre>
@@ -5036,44 +3127,18 @@ public final class Slam {
    *
    * Protobuf type {@code viam.service.slam.v1.GetPropertiesResponse}
    */
-  public static final class GetPropertiesResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPropertiesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPropertiesResponse, GetPropertiesResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.slam.v1.GetPropertiesResponse)
       GetPropertiesResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPropertiesResponse.newBuilder() to construct.
-    private GetPropertiesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPropertiesResponse() {
-      mappingMode_ = 0;
       internalStateFileType_ = "";
-      sensorInfo_ = java.util.Collections.emptyList();
+      sensorInfo_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPropertiesResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPropertiesResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPropertiesResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.slam.v1.Slam.GetPropertiesResponse.class, com.viam.service.slam.v1.Slam.GetPropertiesResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int CLOUD_SLAM_FIELD_NUMBER = 1;
-    private boolean cloudSlam_ = false;
+    private boolean cloudSlam_;
     /**
      * <code>bool cloud_slam = 1 [json_name = "cloudSlam"];</code>
      * @return The cloudSlam.
@@ -5082,28 +3147,66 @@ public final class Slam {
     public boolean getCloudSlam() {
       return cloudSlam_;
     }
+    /**
+     * <code>bool cloud_slam = 1 [json_name = "cloudSlam"];</code>
+     * @param value The cloudSlam to set.
+     */
+    private void setCloudSlam(boolean value) {
+      
+      cloudSlam_ = value;
+    }
+    /**
+     * <code>bool cloud_slam = 1 [json_name = "cloudSlam"];</code>
+     */
+    private void clearCloudSlam() {
+
+      cloudSlam_ = false;
+    }
 
     public static final int MAPPING_MODE_FIELD_NUMBER = 2;
-    private int mappingMode_ = 0;
+    private int mappingMode_;
     /**
      * <code>.viam.service.slam.v1.MappingMode mapping_mode = 2 [json_name = "mappingMode"];</code>
      * @return The enum numeric value on the wire for mappingMode.
      */
-    @java.lang.Override public int getMappingModeValue() {
+    @java.lang.Override
+    public int getMappingModeValue() {
       return mappingMode_;
     }
     /**
      * <code>.viam.service.slam.v1.MappingMode mapping_mode = 2 [json_name = "mappingMode"];</code>
      * @return The mappingMode.
      */
-    @java.lang.Override public com.viam.service.slam.v1.Slam.MappingMode getMappingMode() {
+    @java.lang.Override
+    public com.viam.service.slam.v1.Slam.MappingMode getMappingMode() {
       com.viam.service.slam.v1.Slam.MappingMode result = com.viam.service.slam.v1.Slam.MappingMode.forNumber(mappingMode_);
       return result == null ? com.viam.service.slam.v1.Slam.MappingMode.UNRECOGNIZED : result;
     }
+    /**
+     * <code>.viam.service.slam.v1.MappingMode mapping_mode = 2 [json_name = "mappingMode"];</code>
+     * @param value The enum numeric value on the wire for mappingMode to set.
+     */
+    private void setMappingModeValue(int value) {
+        mappingMode_ = value;
+    }
+    /**
+     * <code>.viam.service.slam.v1.MappingMode mapping_mode = 2 [json_name = "mappingMode"];</code>
+     * @param value The mappingMode to set.
+     */
+    private void setMappingMode(com.viam.service.slam.v1.Slam.MappingMode value) {
+      mappingMode_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.service.slam.v1.MappingMode mapping_mode = 2 [json_name = "mappingMode"];</code>
+     */
+    private void clearMappingMode() {
+
+      mappingMode_ = 0;
+    }
 
     public static final int INTERNAL_STATE_FILE_TYPE_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object internalStateFileType_ = "";
+    private java.lang.String internalStateFileType_;
     /**
      * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
      * @return Whether the internalStateFileType field is set.
@@ -5118,16 +3221,7 @@ public final class Slam {
      */
     @java.lang.Override
     public java.lang.String getInternalStateFileType() {
-      java.lang.Object ref = internalStateFileType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        internalStateFileType_ = s;
-        return s;
-      }
+      return internalStateFileType_;
     }
     /**
      * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
@@ -5136,21 +3230,38 @@ public final class Slam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getInternalStateFileTypeBytes() {
-      java.lang.Object ref = internalStateFileType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        internalStateFileType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(internalStateFileType_);
+    }
+    /**
+     * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+     * @param value The internalStateFileType to set.
+     */
+    private void setInternalStateFileType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      internalStateFileType_ = value;
+    }
+    /**
+     * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+     */
+    private void clearInternalStateFileType() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      internalStateFileType_ = getDefaultInstance().getInternalStateFileType();
+    }
+    /**
+     * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
+     * @param value The bytes for internalStateFileType to set.
+     */
+    private void setInternalStateFileTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      internalStateFileType_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static final int SENSOR_INFO_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.service.slam.v1.Slam.SensorInfo> sensorInfo_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.service.slam.v1.Slam.SensorInfo> sensorInfo_;
     /**
      * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
      */
@@ -5161,7 +3272,6 @@ public final class Slam {
     /**
      * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.service.slam.v1.Slam.SensorInfoOrBuilder> 
         getSensorInfoOrBuilderList() {
       return sensorInfo_;
@@ -5183,208 +3293,150 @@ public final class Slam {
     /**
      * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
      */
-    @java.lang.Override
     public com.viam.service.slam.v1.Slam.SensorInfoOrBuilder getSensorInfoOrBuilder(
         int index) {
       return sensorInfo_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureSensorInfoIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.service.slam.v1.Slam.SensorInfo> tmp = sensorInfo_;
+      if (!tmp.isModifiable()) {
+        sensorInfo_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (cloudSlam_ != false) {
-        output.writeBool(1, cloudSlam_);
-      }
-      if (mappingMode_ != com.viam.service.slam.v1.Slam.MappingMode.MAPPING_MODE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, mappingMode_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, internalStateFileType_);
-      }
-      for (int i = 0; i < sensorInfo_.size(); i++) {
-        output.writeMessage(4, sensorInfo_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    private void setSensorInfo(
+        int index, com.viam.service.slam.v1.Slam.SensorInfo value) {
+      value.getClass();
+  ensureSensorInfoIsMutable();
+      sensorInfo_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (cloudSlam_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, cloudSlam_);
-      }
-      if (mappingMode_ != com.viam.service.slam.v1.Slam.MappingMode.MAPPING_MODE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, mappingMode_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, internalStateFileType_);
-      }
-      for (int i = 0; i < sensorInfo_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, sensorInfo_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    private void addSensorInfo(com.viam.service.slam.v1.Slam.SensorInfo value) {
+      value.getClass();
+  ensureSensorInfoIsMutable();
+      sensorInfo_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.slam.v1.Slam.GetPropertiesResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.service.slam.v1.Slam.GetPropertiesResponse other = (com.viam.service.slam.v1.Slam.GetPropertiesResponse) obj;
-
-      if (getCloudSlam()
-          != other.getCloudSlam()) return false;
-      if (mappingMode_ != other.mappingMode_) return false;
-      if (hasInternalStateFileType() != other.hasInternalStateFileType()) return false;
-      if (hasInternalStateFileType()) {
-        if (!getInternalStateFileType()
-            .equals(other.getInternalStateFileType())) return false;
-      }
-      if (!getSensorInfoList()
-          .equals(other.getSensorInfoList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    private void addSensorInfo(
+        int index, com.viam.service.slam.v1.Slam.SensorInfo value) {
+      value.getClass();
+  ensureSensorInfoIsMutable();
+      sensorInfo_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CLOUD_SLAM_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getCloudSlam());
-      hash = (37 * hash) + MAPPING_MODE_FIELD_NUMBER;
-      hash = (53 * hash) + mappingMode_;
-      if (hasInternalStateFileType()) {
-        hash = (37 * hash) + INTERNAL_STATE_FILE_TYPE_FIELD_NUMBER;
-        hash = (53 * hash) + getInternalStateFileType().hashCode();
-      }
-      if (getSensorInfoCount() > 0) {
-        hash = (37 * hash) + SENSOR_INFO_FIELD_NUMBER;
-        hash = (53 * hash) + getSensorInfoList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    private void addAllSensorInfo(
+        java.lang.Iterable<? extends com.viam.service.slam.v1.Slam.SensorInfo> values) {
+      ensureSensorInfoIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, sensorInfo_);
+    }
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    private void clearSensorInfo() {
+      sensorInfo_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
+     */
+    private void removeSensorInfo(int index) {
+      ensureSensorInfoIsMutable();
+      sensorInfo_.remove(index);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPropertiesResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPropertiesResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPropertiesResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.GetPropertiesResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.slam.v1.Slam.GetPropertiesResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * Returns properties information for the named slam service
@@ -5393,266 +3445,23 @@ public final class Slam {
      * Protobuf type {@code viam.service.slam.v1.GetPropertiesResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.slam.v1.Slam.GetPropertiesResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.slam.v1.GetPropertiesResponse)
         com.viam.service.slam.v1.Slam.GetPropertiesResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPropertiesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPropertiesResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.slam.v1.Slam.GetPropertiesResponse.class, com.viam.service.slam.v1.Slam.GetPropertiesResponse.Builder.class);
-      }
-
       // Construct using com.viam.service.slam.v1.Slam.GetPropertiesResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        cloudSlam_ = false;
-        mappingMode_ = 0;
-        internalStateFileType_ = "";
-        if (sensorInfoBuilder_ == null) {
-          sensorInfo_ = java.util.Collections.emptyList();
-        } else {
-          sensorInfo_ = null;
-          sensorInfoBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000008);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_GetPropertiesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPropertiesResponse getDefaultInstanceForType() {
-        return com.viam.service.slam.v1.Slam.GetPropertiesResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPropertiesResponse build() {
-        com.viam.service.slam.v1.Slam.GetPropertiesResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.GetPropertiesResponse buildPartial() {
-        com.viam.service.slam.v1.Slam.GetPropertiesResponse result = new com.viam.service.slam.v1.Slam.GetPropertiesResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.service.slam.v1.Slam.GetPropertiesResponse result) {
-        if (sensorInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
-            sensorInfo_ = java.util.Collections.unmodifiableList(sensorInfo_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.sensorInfo_ = sensorInfo_;
-        } else {
-          result.sensorInfo_ = sensorInfoBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.service.slam.v1.Slam.GetPropertiesResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.cloudSlam_ = cloudSlam_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.mappingMode_ = mappingMode_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.internalStateFileType_ = internalStateFileType_;
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.slam.v1.Slam.GetPropertiesResponse) {
-          return mergeFrom((com.viam.service.slam.v1.Slam.GetPropertiesResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.slam.v1.Slam.GetPropertiesResponse other) {
-        if (other == com.viam.service.slam.v1.Slam.GetPropertiesResponse.getDefaultInstance()) return this;
-        if (other.getCloudSlam() != false) {
-          setCloudSlam(other.getCloudSlam());
-        }
-        if (other.mappingMode_ != 0) {
-          setMappingModeValue(other.getMappingModeValue());
-        }
-        if (other.hasInternalStateFileType()) {
-          internalStateFileType_ = other.internalStateFileType_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (sensorInfoBuilder_ == null) {
-          if (!other.sensorInfo_.isEmpty()) {
-            if (sensorInfo_.isEmpty()) {
-              sensorInfo_ = other.sensorInfo_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-            } else {
-              ensureSensorInfoIsMutable();
-              sensorInfo_.addAll(other.sensorInfo_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.sensorInfo_.isEmpty()) {
-            if (sensorInfoBuilder_.isEmpty()) {
-              sensorInfoBuilder_.dispose();
-              sensorInfoBuilder_ = null;
-              sensorInfo_ = other.sensorInfo_;
-              bitField0_ = (bitField0_ & ~0x00000008);
-              sensorInfoBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getSensorInfoFieldBuilder() : null;
-            } else {
-              sensorInfoBuilder_.addAllMessages(other.sensorInfo_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                cloudSlam_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 16: {
-                mappingMode_ = input.readEnum();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 26: {
-                internalStateFileType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 34: {
-                com.viam.service.slam.v1.Slam.SensorInfo m =
-                    input.readMessage(
-                        com.viam.service.slam.v1.Slam.SensorInfo.parser(),
-                        extensionRegistry);
-                if (sensorInfoBuilder_ == null) {
-                  ensureSensorInfoIsMutable();
-                  sensorInfo_.add(m);
-                } else {
-                  sensorInfoBuilder_.addMessage(m);
-                }
-                break;
-              } // case 34
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean cloudSlam_ ;
       /**
        * <code>bool cloud_slam = 1 [json_name = "cloudSlam"];</code>
        * @return The cloudSlam.
        */
       @java.lang.Override
       public boolean getCloudSlam() {
-        return cloudSlam_;
+        return instance.getCloudSlam();
       }
       /**
        * <code>bool cloud_slam = 1 [json_name = "cloudSlam"];</code>
@@ -5660,10 +3469,8 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder setCloudSlam(boolean value) {
-
-        cloudSlam_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setCloudSlam(value);
         return this;
       }
       /**
@@ -5671,29 +3478,27 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder clearCloudSlam() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        cloudSlam_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearCloudSlam();
         return this;
       }
 
-      private int mappingMode_ = 0;
       /**
        * <code>.viam.service.slam.v1.MappingMode mapping_mode = 2 [json_name = "mappingMode"];</code>
        * @return The enum numeric value on the wire for mappingMode.
        */
-      @java.lang.Override public int getMappingModeValue() {
-        return mappingMode_;
+      @java.lang.Override
+      public int getMappingModeValue() {
+        return instance.getMappingModeValue();
       }
       /**
        * <code>.viam.service.slam.v1.MappingMode mapping_mode = 2 [json_name = "mappingMode"];</code>
-       * @param value The enum numeric value on the wire for mappingMode to set.
+       * @param value The mappingMode to set.
        * @return This builder for chaining.
        */
       public Builder setMappingModeValue(int value) {
-        mappingMode_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setMappingModeValue(value);
         return this;
       }
       /**
@@ -5702,21 +3507,16 @@ public final class Slam {
        */
       @java.lang.Override
       public com.viam.service.slam.v1.Slam.MappingMode getMappingMode() {
-        com.viam.service.slam.v1.Slam.MappingMode result = com.viam.service.slam.v1.Slam.MappingMode.forNumber(mappingMode_);
-        return result == null ? com.viam.service.slam.v1.Slam.MappingMode.UNRECOGNIZED : result;
+        return instance.getMappingMode();
       }
       /**
        * <code>.viam.service.slam.v1.MappingMode mapping_mode = 2 [json_name = "mappingMode"];</code>
-       * @param value The mappingMode to set.
+       * @param value The enum numeric value on the wire for mappingMode to set.
        * @return This builder for chaining.
        */
       public Builder setMappingMode(com.viam.service.slam.v1.Slam.MappingMode value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        mappingMode_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setMappingMode(value);
         return this;
       }
       /**
@@ -5724,52 +3524,35 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder clearMappingMode() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        mappingMode_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearMappingMode();
         return this;
       }
 
-      private java.lang.Object internalStateFileType_ = "";
       /**
        * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
        * @return Whether the internalStateFileType field is set.
        */
+      @java.lang.Override
       public boolean hasInternalStateFileType() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasInternalStateFileType();
       }
       /**
        * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
        * @return The internalStateFileType.
        */
+      @java.lang.Override
       public java.lang.String getInternalStateFileType() {
-        java.lang.Object ref = internalStateFileType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          internalStateFileType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getInternalStateFileType();
       }
       /**
        * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
        * @return The bytes for internalStateFileType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getInternalStateFileTypeBytes() {
-        java.lang.Object ref = internalStateFileType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          internalStateFileType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getInternalStateFileTypeBytes();
       }
       /**
        * <code>optional string internal_state_file_type = 3 [json_name = "internalStateFileType"];</code>
@@ -5778,10 +3561,8 @@ public final class Slam {
        */
       public Builder setInternalStateFileType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        internalStateFileType_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setInternalStateFileType(value);
         return this;
       }
       /**
@@ -5789,9 +3570,8 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder clearInternalStateFileType() {
-        internalStateFileType_ = getDefaultInstance().getInternalStateFileType();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearInternalStateFileType();
         return this;
       }
       /**
@@ -5801,71 +3581,39 @@ public final class Slam {
        */
       public Builder setInternalStateFileTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        internalStateFileType_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setInternalStateFileTypeBytes(value);
         return this;
       }
 
-      private java.util.List<com.viam.service.slam.v1.Slam.SensorInfo> sensorInfo_ =
-        java.util.Collections.emptyList();
-      private void ensureSensorInfoIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
-          sensorInfo_ = new java.util.ArrayList<com.viam.service.slam.v1.Slam.SensorInfo>(sensorInfo_);
-          bitField0_ |= 0x00000008;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.slam.v1.Slam.SensorInfo, com.viam.service.slam.v1.Slam.SensorInfo.Builder, com.viam.service.slam.v1.Slam.SensorInfoOrBuilder> sensorInfoBuilder_;
-
       /**
        * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.service.slam.v1.Slam.SensorInfo> getSensorInfoList() {
-        if (sensorInfoBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(sensorInfo_);
-        } else {
-          return sensorInfoBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getSensorInfoList());
       }
       /**
        * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
        */
+      @java.lang.Override
       public int getSensorInfoCount() {
-        if (sensorInfoBuilder_ == null) {
-          return sensorInfo_.size();
-        } else {
-          return sensorInfoBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getSensorInfoCount();
+      }/**
        * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
        */
+      @java.lang.Override
       public com.viam.service.slam.v1.Slam.SensorInfo getSensorInfo(int index) {
-        if (sensorInfoBuilder_ == null) {
-          return sensorInfo_.get(index);
-        } else {
-          return sensorInfoBuilder_.getMessage(index);
-        }
+        return instance.getSensorInfo(index);
       }
       /**
        * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
        */
       public Builder setSensorInfo(
           int index, com.viam.service.slam.v1.Slam.SensorInfo value) {
-        if (sensorInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorInfoIsMutable();
-          sensorInfo_.set(index, value);
-          onChanged();
-        } else {
-          sensorInfoBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setSensorInfo(index, value);
         return this;
       }
       /**
@@ -5873,29 +3621,17 @@ public final class Slam {
        */
       public Builder setSensorInfo(
           int index, com.viam.service.slam.v1.Slam.SensorInfo.Builder builderForValue) {
-        if (sensorInfoBuilder_ == null) {
-          ensureSensorInfoIsMutable();
-          sensorInfo_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          sensorInfoBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setSensorInfo(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
        */
       public Builder addSensorInfo(com.viam.service.slam.v1.Slam.SensorInfo value) {
-        if (sensorInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorInfoIsMutable();
-          sensorInfo_.add(value);
-          onChanged();
-        } else {
-          sensorInfoBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addSensorInfo(value);
         return this;
       }
       /**
@@ -5903,16 +3639,8 @@ public final class Slam {
        */
       public Builder addSensorInfo(
           int index, com.viam.service.slam.v1.Slam.SensorInfo value) {
-        if (sensorInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureSensorInfoIsMutable();
-          sensorInfo_.add(index, value);
-          onChanged();
-        } else {
-          sensorInfoBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addSensorInfo(index, value);
         return this;
       }
       /**
@@ -5920,13 +3648,8 @@ public final class Slam {
        */
       public Builder addSensorInfo(
           com.viam.service.slam.v1.Slam.SensorInfo.Builder builderForValue) {
-        if (sensorInfoBuilder_ == null) {
-          ensureSensorInfoIsMutable();
-          sensorInfo_.add(builderForValue.build());
-          onChanged();
-        } else {
-          sensorInfoBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addSensorInfo(builderForValue.build());
         return this;
       }
       /**
@@ -5934,13 +3657,9 @@ public final class Slam {
        */
       public Builder addSensorInfo(
           int index, com.viam.service.slam.v1.Slam.SensorInfo.Builder builderForValue) {
-        if (sensorInfoBuilder_ == null) {
-          ensureSensorInfoIsMutable();
-          sensorInfo_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          sensorInfoBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addSensorInfo(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -5948,173 +3667,110 @@ public final class Slam {
        */
       public Builder addAllSensorInfo(
           java.lang.Iterable<? extends com.viam.service.slam.v1.Slam.SensorInfo> values) {
-        if (sensorInfoBuilder_ == null) {
-          ensureSensorInfoIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, sensorInfo_);
-          onChanged();
-        } else {
-          sensorInfoBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllSensorInfo(values);
         return this;
       }
       /**
        * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
        */
       public Builder clearSensorInfo() {
-        if (sensorInfoBuilder_ == null) {
-          sensorInfo_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
-          onChanged();
-        } else {
-          sensorInfoBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearSensorInfo();
         return this;
       }
       /**
        * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
        */
       public Builder removeSensorInfo(int index) {
-        if (sensorInfoBuilder_ == null) {
-          ensureSensorInfoIsMutable();
-          sensorInfo_.remove(index);
-          onChanged();
-        } else {
-          sensorInfoBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeSensorInfo(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
-       */
-      public com.viam.service.slam.v1.Slam.SensorInfo.Builder getSensorInfoBuilder(
-          int index) {
-        return getSensorInfoFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
-       */
-      public com.viam.service.slam.v1.Slam.SensorInfoOrBuilder getSensorInfoOrBuilder(
-          int index) {
-        if (sensorInfoBuilder_ == null) {
-          return sensorInfo_.get(index);  } else {
-          return sensorInfoBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
-       */
-      public java.util.List<? extends com.viam.service.slam.v1.Slam.SensorInfoOrBuilder> 
-           getSensorInfoOrBuilderList() {
-        if (sensorInfoBuilder_ != null) {
-          return sensorInfoBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(sensorInfo_);
-        }
-      }
-      /**
-       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
-       */
-      public com.viam.service.slam.v1.Slam.SensorInfo.Builder addSensorInfoBuilder() {
-        return getSensorInfoFieldBuilder().addBuilder(
-            com.viam.service.slam.v1.Slam.SensorInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
-       */
-      public com.viam.service.slam.v1.Slam.SensorInfo.Builder addSensorInfoBuilder(
-          int index) {
-        return getSensorInfoFieldBuilder().addBuilder(
-            index, com.viam.service.slam.v1.Slam.SensorInfo.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.service.slam.v1.SensorInfo sensor_info = 4 [json_name = "sensorInfo"];</code>
-       */
-      public java.util.List<com.viam.service.slam.v1.Slam.SensorInfo.Builder> 
-           getSensorInfoBuilderList() {
-        return getSensorInfoFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.service.slam.v1.Slam.SensorInfo, com.viam.service.slam.v1.Slam.SensorInfo.Builder, com.viam.service.slam.v1.Slam.SensorInfoOrBuilder> 
-          getSensorInfoFieldBuilder() {
-        if (sensorInfoBuilder_ == null) {
-          sensorInfoBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.service.slam.v1.Slam.SensorInfo, com.viam.service.slam.v1.Slam.SensorInfo.Builder, com.viam.service.slam.v1.Slam.SensorInfoOrBuilder>(
-                  sensorInfo_,
-                  ((bitField0_ & 0x00000008) != 0),
-                  getParentForChildren(),
-                  isClean());
-          sensorInfo_ = null;
-        }
-        return sensorInfoBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.slam.v1.GetPropertiesResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.slam.v1.Slam.GetPropertiesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "cloudSlam_",
+              "mappingMode_",
+              "internalStateFileType_",
+              "sensorInfo_",
+              com.viam.service.slam.v1.Slam.SensorInfo.class,
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0007\u0002\f" +
+                "\u0003\u1208\u0000\u0004\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.slam.v1.Slam.GetPropertiesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.slam.v1.Slam.GetPropertiesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.slam.v1.Slam.GetPropertiesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.slam.v1.GetPropertiesResponse)
     private static final com.viam.service.slam.v1.Slam.GetPropertiesResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.slam.v1.Slam.GetPropertiesResponse();
+      GetPropertiesResponse defaultInstance = new GetPropertiesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPropertiesResponse.class, defaultInstance);
     }
 
     public static com.viam.service.slam.v1.Slam.GetPropertiesResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPropertiesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetPropertiesResponse>() {
-      @java.lang.Override
-      public GetPropertiesResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPropertiesResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetPropertiesResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPropertiesResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.slam.v1.Slam.GetPropertiesResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface SensorInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.service.slam.v1.SensorInfo)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -6142,59 +3798,23 @@ public final class Slam {
   /**
    * Protobuf type {@code viam.service.slam.v1.SensorInfo}
    */
-  public static final class SensorInfo extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class SensorInfo extends
+      com.google.protobuf.GeneratedMessageLite<
+          SensorInfo, SensorInfo.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.service.slam.v1.SensorInfo)
       SensorInfoOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SensorInfo.newBuilder() to construct.
-    private SensorInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private SensorInfo() {
       name_ = "";
-      type_ = 0;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SensorInfo();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_SensorInfo_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_SensorInfo_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.service.slam.v1.Slam.SensorInfo.class, com.viam.service.slam.v1.Slam.SensorInfo.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -6203,417 +3823,191 @@ public final class Slam {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int TYPE_FIELD_NUMBER = 2;
-    private int type_ = 0;
+    private int type_;
     /**
      * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override public int getTypeValue() {
+    @java.lang.Override
+    public int getTypeValue() {
       return type_;
     }
     /**
      * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
      * @return The type.
      */
-    @java.lang.Override public com.viam.service.slam.v1.Slam.SensorType getType() {
+    @java.lang.Override
+    public com.viam.service.slam.v1.Slam.SensorType getType() {
       com.viam.service.slam.v1.Slam.SensorType result = com.viam.service.slam.v1.Slam.SensorType.forNumber(type_);
       return result == null ? com.viam.service.slam.v1.Slam.SensorType.UNRECOGNIZED : result;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     */
+    private void setTypeValue(int value) {
+        type_ = value;
     }
+    /**
+     * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(com.viam.service.slam.v1.Slam.SensorType value) {
+      type_ = value.getNumber();
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (type_ != com.viam.service.slam.v1.Slam.SensorType.SENSOR_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, type_);
-      }
-      getUnknownFields().writeTo(output);
     }
+    /**
+     * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
+     */
+    private void clearType() {
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (type_ != com.viam.service.slam.v1.Slam.SensorType.SENSOR_TYPE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, type_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.service.slam.v1.Slam.SensorInfo)) {
-        return super.equals(obj);
-      }
-      com.viam.service.slam.v1.Slam.SensorInfo other = (com.viam.service.slam.v1.Slam.SensorInfo) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (type_ != other.type_) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + type_;
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      type_ = 0;
     }
 
     public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.service.slam.v1.Slam.SensorInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.service.slam.v1.Slam.SensorInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.service.slam.v1.Slam.SensorInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.service.slam.v1.Slam.SensorInfo prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.service.slam.v1.SensorInfo}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.service.slam.v1.Slam.SensorInfo, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.service.slam.v1.SensorInfo)
         com.viam.service.slam.v1.Slam.SensorInfoOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_SensorInfo_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_SensorInfo_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.service.slam.v1.Slam.SensorInfo.class, com.viam.service.slam.v1.Slam.SensorInfo.Builder.class);
-      }
-
       // Construct using com.viam.service.slam.v1.Slam.SensorInfo.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        type_ = 0;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.service.slam.v1.Slam.internal_static_viam_service_slam_v1_SensorInfo_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.SensorInfo getDefaultInstanceForType() {
-        return com.viam.service.slam.v1.Slam.SensorInfo.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.SensorInfo build() {
-        com.viam.service.slam.v1.Slam.SensorInfo result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.service.slam.v1.Slam.SensorInfo buildPartial() {
-        com.viam.service.slam.v1.Slam.SensorInfo result = new com.viam.service.slam.v1.Slam.SensorInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.service.slam.v1.Slam.SensorInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.type_ = type_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.service.slam.v1.Slam.SensorInfo) {
-          return mergeFrom((com.viam.service.slam.v1.Slam.SensorInfo)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.service.slam.v1.Slam.SensorInfo other) {
-        if (other == com.viam.service.slam.v1.Slam.SensorInfo.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.type_ != 0) {
-          setTypeValue(other.getTypeValue());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                type_ = input.readEnum();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -6622,10 +4016,8 @@ public final class Slam {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -6633,9 +4025,8 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -6645,31 +4036,27 @@ public final class Slam {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private int type_ = 0;
       /**
        * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
        * @return The enum numeric value on the wire for type.
        */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
       }
       /**
        * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
-       * @param value The enum numeric value on the wire for type to set.
+       * @param value The type to set.
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
-        type_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setTypeValue(value);
         return this;
       }
       /**
@@ -6678,21 +4065,16 @@ public final class Slam {
        */
       @java.lang.Override
       public com.viam.service.slam.v1.Slam.SensorType getType() {
-        com.viam.service.slam.v1.Slam.SensorType result = com.viam.service.slam.v1.Slam.SensorType.forNumber(type_);
-        return result == null ? com.viam.service.slam.v1.Slam.SensorType.UNRECOGNIZED : result;
+        return instance.getType();
       }
       /**
        * <code>.viam.service.slam.v1.SensorType type = 2 [json_name = "type"];</code>
-       * @param value The type to set.
+       * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
       public Builder setType(com.viam.service.slam.v1.Slam.SensorType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        type_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setType(value);
         return this;
       }
       /**
@@ -6700,255 +4082,89 @@ public final class Slam {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        type_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.service.slam.v1.SensorInfo)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.service.slam.v1.Slam.SensorInfo();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+              "type_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\f" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.service.slam.v1.Slam.SensorInfo> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.service.slam.v1.Slam.SensorInfo.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.service.slam.v1.Slam.SensorInfo>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.service.slam.v1.SensorInfo)
     private static final com.viam.service.slam.v1.Slam.SensorInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.service.slam.v1.Slam.SensorInfo();
+      SensorInfo defaultInstance = new SensorInfo();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        SensorInfo.class, defaultInstance);
     }
 
     public static com.viam.service.slam.v1.Slam.SensorInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SensorInfo>
-        PARSER = new com.google.protobuf.AbstractParser<SensorInfo>() {
-      @java.lang.Override
-      public SensorInfo parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<SensorInfo> PARSER;
 
     public static com.google.protobuf.Parser<SensorInfo> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SensorInfo> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.service.slam.v1.Slam.SensorInfo getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_slam_v1_GetPositionRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_slam_v1_GetPositionRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_slam_v1_GetPositionResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_slam_v1_GetPositionResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_slam_v1_GetPointCloudMapRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_slam_v1_GetPointCloudMapRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_slam_v1_GetPointCloudMapResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_slam_v1_GetPointCloudMapResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_slam_v1_GetInternalStateRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_slam_v1_GetInternalStateRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_slam_v1_GetInternalStateResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_slam_v1_GetInternalStateResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_slam_v1_GetPropertiesRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_slam_v1_GetPropertiesRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_slam_v1_GetPropertiesResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_slam_v1_GetPropertiesResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_service_slam_v1_SensorInfo_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_service_slam_v1_SensorInfo_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\032service/slam/v1/slam.proto\022\024viam.servi" +
-      "ce.slam.v1\032\026common/v1/common.proto\032\034goog" +
-      "le/api/annotations.proto\032\034google/protobu" +
-      "f/struct.proto\"(\n\022GetPositionRequest\022\022\n\004" +
-      "name\030\001 \001(\tR\004name\"\237\001\n\023GetPositionResponse" +
-      "\022(\n\004pose\030\001 \001(\0132\024.viam.common.v1.PoseR\004po" +
-      "se\022/\n\023component_reference\030\002 \001(\tR\022compone" +
-      "ntReference\022-\n\005extra\030c \001(\0132\027.google.prot" +
-      "obuf.StructR\005extra\"t\n\027GetPointCloudMapRe" +
-      "quest\022\022\n\004name\030\001 \001(\tR\004name\022/\n\021return_edit" +
-      "ed_map\030\002 \001(\010H\000R\017returnEditedMap\210\001\001B\024\n\022_r" +
-      "eturn_edited_map\"M\n\030GetPointCloudMapResp" +
-      "onse\0221\n\025point_cloud_pcd_chunk\030\001 \001(\014R\022poi" +
-      "ntCloudPcdChunk\"-\n\027GetInternalStateReque" +
-      "st\022\022\n\004name\030\001 \001(\tR\004name\"L\n\030GetInternalSta" +
-      "teResponse\0220\n\024internal_state_chunk\030\001 \001(\014" +
-      "R\022internalStateChunk\"*\n\024GetPropertiesReq" +
-      "uest\022\022\n\004name\030\001 \001(\tR\004name\"\232\002\n\025GetProperti" +
-      "esResponse\022\035\n\ncloud_slam\030\001 \001(\010R\tcloudSla" +
-      "m\022D\n\014mapping_mode\030\002 \001(\0162!.viam.service.s" +
-      "lam.v1.MappingModeR\013mappingMode\022<\n\030inter" +
-      "nal_state_file_type\030\003 \001(\tH\000R\025internalSta" +
-      "teFileType\210\001\001\022A\n\013sensor_info\030\004 \003(\0132 .via" +
-      "m.service.slam.v1.SensorInfoR\nsensorInfo" +
-      "B\033\n\031_internal_state_file_type\"V\n\nSensorI" +
-      "nfo\022\022\n\004name\030\001 \001(\tR\004name\0224\n\004type\030\002 \001(\0162 ." +
-      "viam.service.slam.v1.SensorTypeR\004type*\222\001" +
-      "\n\013MappingMode\022\034\n\030MAPPING_MODE_UNSPECIFIE" +
-      "D\020\000\022\037\n\033MAPPING_MODE_CREATE_NEW_MAP\020\001\022\036\n\032" +
-      "MAPPING_MODE_LOCALIZE_ONLY\020\002\022$\n MAPPING_" +
-      "MODE_UPDATE_EXISTING_MAP\020\003*b\n\nSensorType" +
-      "\022\033\n\027SENSOR_TYPE_UNSPECIFIED\020\000\022\026\n\022SENSOR_" +
-      "TYPE_CAMERA\020\001\022\037\n\033SENSOR_TYPE_MOVEMENT_SE" +
-      "NSOR\020\0022\254\006\n\013SLAMService\022\225\001\n\013GetPosition\022(" +
-      ".viam.service.slam.v1.GetPositionRequest" +
-      "\032).viam.service.slam.v1.GetPositionRespo" +
-      "nse\"1\202\323\344\223\002+\022)/viam/api/v1/service/slam/{" +
-      "name}/position\022\255\001\n\020GetPointCloudMap\022-.vi" +
-      "am.service.slam.v1.GetPointCloudMapReque" +
-      "st\032..viam.service.slam.v1.GetPointCloudM" +
-      "apResponse\"8\202\323\344\223\0022\0220/viam/api/v1/service" +
-      "/slam/{name}/point_cloud_map0\001\022\254\001\n\020GetIn" +
-      "ternalState\022-.viam.service.slam.v1.GetIn" +
-      "ternalStateRequest\032..viam.service.slam.v" +
-      "1.GetInternalStateResponse\"7\202\323\344\223\0021\022//via" +
-      "m/api/v1/service/slam/{name}/internal_st" +
-      "ate0\001\022\235\001\n\rGetProperties\022*.viam.service.s" +
-      "lam.v1.GetPropertiesRequest\032+.viam.servi" +
-      "ce.slam.v1.GetPropertiesResponse\"3\202\323\344\223\002-" +
-      "\022+/viam/api/v1/service/slam/{name}/prope" +
-      "rties\022\205\001\n\tDoCommand\022 .viam.common.v1.DoC" +
-      "ommandRequest\032!.viam.common.v1.DoCommand" +
-      "Response\"3\202\323\344\223\002-\"+/viam/api/v1/service/s" +
-      "lam/{name}/do_commandB;\n\030com.viam.servic" +
-      "e.slam.v1Z\037go.viam.com/api/service/slam/" +
-      "v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-        });
-    internal_static_viam_service_slam_v1_GetPositionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_service_slam_v1_GetPositionRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_slam_v1_GetPositionRequest_descriptor,
-        new java.lang.String[] { "Name", });
-    internal_static_viam_service_slam_v1_GetPositionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_service_slam_v1_GetPositionResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_slam_v1_GetPositionResponse_descriptor,
-        new java.lang.String[] { "Pose", "ComponentReference", "Extra", });
-    internal_static_viam_service_slam_v1_GetPointCloudMapRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_service_slam_v1_GetPointCloudMapRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_slam_v1_GetPointCloudMapRequest_descriptor,
-        new java.lang.String[] { "Name", "ReturnEditedMap", });
-    internal_static_viam_service_slam_v1_GetPointCloudMapResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_service_slam_v1_GetPointCloudMapResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_slam_v1_GetPointCloudMapResponse_descriptor,
-        new java.lang.String[] { "PointCloudPcdChunk", });
-    internal_static_viam_service_slam_v1_GetInternalStateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_service_slam_v1_GetInternalStateRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_slam_v1_GetInternalStateRequest_descriptor,
-        new java.lang.String[] { "Name", });
-    internal_static_viam_service_slam_v1_GetInternalStateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_service_slam_v1_GetInternalStateResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_slam_v1_GetInternalStateResponse_descriptor,
-        new java.lang.String[] { "InternalStateChunk", });
-    internal_static_viam_service_slam_v1_GetPropertiesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_service_slam_v1_GetPropertiesRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_slam_v1_GetPropertiesRequest_descriptor,
-        new java.lang.String[] { "Name", });
-    internal_static_viam_service_slam_v1_GetPropertiesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_service_slam_v1_GetPropertiesResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_slam_v1_GetPropertiesResponse_descriptor,
-        new java.lang.String[] { "CloudSlam", "MappingMode", "InternalStateFileType", "SensorInfo", });
-    internal_static_viam_service_slam_v1_SensorInfo_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_service_slam_v1_SensorInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_service_slam_v1_SensorInfo_descriptor,
-        new java.lang.String[] { "Name", "Type", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

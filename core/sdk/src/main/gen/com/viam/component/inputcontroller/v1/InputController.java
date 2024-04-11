@@ -9,15 +9,9 @@ public final class InputController {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   public interface GetControlsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.inputcontroller.v1.GetControlsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -57,55 +51,21 @@ public final class InputController {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.inputcontroller.v1.GetControlsRequest}
    */
-  public static final class GetControlsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetControlsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetControlsRequest, GetControlsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.inputcontroller.v1.GetControlsRequest)
       GetControlsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetControlsRequest.newBuilder() to construct.
-    private GetControlsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetControlsRequest() {
       controller_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetControlsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetControlsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetControlsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.inputcontroller.v1.InputController.GetControlsRequest.class, com.viam.component.inputcontroller.v1.InputController.GetControlsRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int CONTROLLER_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object controller_ = "";
+    private java.lang.String controller_;
     /**
      * <pre>
      * Name of an input controller
@@ -116,16 +76,7 @@ public final class InputController {
      */
     @java.lang.Override
     public java.lang.String getController() {
-      java.lang.Object ref = controller_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        controller_ = s;
-        return s;
-      }
+      return controller_;
     }
     /**
      * <pre>
@@ -138,16 +89,46 @@ public final class InputController {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getControllerBytes() {
-      java.lang.Object ref = controller_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        controller_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(controller_);
+    }
+    /**
+     * <pre>
+     * Name of an input controller
+     * </pre>
+     *
+     * <code>string controller = 1 [json_name = "controller"];</code>
+     * @param value The controller to set.
+     */
+    private void setController(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      controller_ = value;
+    }
+    /**
+     * <pre>
+     * Name of an input controller
+     * </pre>
+     *
+     * <code>string controller = 1 [json_name = "controller"];</code>
+     */
+    private void clearController() {
+
+      controller_ = getDefaultInstance().getController();
+    }
+    /**
+     * <pre>
+     * Name of an input controller
+     * </pre>
+     *
+     * <code>string controller = 1 [json_name = "controller"];</code>
+     * @param value The bytes for controller to set.
+     */
+    private void setControllerBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      controller_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -158,7 +139,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -170,7 +150,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -183,383 +162,138 @@ public final class InputController {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controller_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, controller_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controller_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, controller_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.inputcontroller.v1.InputController.GetControlsRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.inputcontroller.v1.InputController.GetControlsRequest other = (com.viam.component.inputcontroller.v1.InputController.GetControlsRequest) obj;
-
-      if (!getController()
-          .equals(other.getController())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTROLLER_FIELD_NUMBER;
-      hash = (53 * hash) + getController().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.inputcontroller.v1.InputController.GetControlsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.inputcontroller.v1.GetControlsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.inputcontroller.v1.InputController.GetControlsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.inputcontroller.v1.GetControlsRequest)
         com.viam.component.inputcontroller.v1.InputController.GetControlsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetControlsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetControlsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.inputcontroller.v1.InputController.GetControlsRequest.class, com.viam.component.inputcontroller.v1.InputController.GetControlsRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.inputcontroller.v1.InputController.GetControlsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        controller_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetControlsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.GetControlsRequest getDefaultInstanceForType() {
-        return com.viam.component.inputcontroller.v1.InputController.GetControlsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.GetControlsRequest build() {
-        com.viam.component.inputcontroller.v1.InputController.GetControlsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.GetControlsRequest buildPartial() {
-        com.viam.component.inputcontroller.v1.InputController.GetControlsRequest result = new com.viam.component.inputcontroller.v1.InputController.GetControlsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.inputcontroller.v1.InputController.GetControlsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.controller_ = controller_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.inputcontroller.v1.InputController.GetControlsRequest) {
-          return mergeFrom((com.viam.component.inputcontroller.v1.InputController.GetControlsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.inputcontroller.v1.InputController.GetControlsRequest other) {
-        if (other == com.viam.component.inputcontroller.v1.InputController.GetControlsRequest.getDefaultInstance()) return this;
-        if (!other.getController().isEmpty()) {
-          controller_ = other.controller_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                controller_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object controller_ = "";
       /**
        * <pre>
        * Name of an input controller
@@ -568,17 +302,9 @@ public final class InputController {
        * <code>string controller = 1 [json_name = "controller"];</code>
        * @return The controller.
        */
+      @java.lang.Override
       public java.lang.String getController() {
-        java.lang.Object ref = controller_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          controller_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getController();
       }
       /**
        * <pre>
@@ -588,18 +314,10 @@ public final class InputController {
        * <code>string controller = 1 [json_name = "controller"];</code>
        * @return The bytes for controller.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getControllerBytes() {
-        java.lang.Object ref = controller_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          controller_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getControllerBytes();
       }
       /**
        * <pre>
@@ -612,10 +330,8 @@ public final class InputController {
        */
       public Builder setController(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        controller_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setController(value);
         return this;
       }
       /**
@@ -627,9 +343,8 @@ public final class InputController {
        * @return This builder for chaining.
        */
       public Builder clearController() {
-        controller_ = getDefaultInstance().getController();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearController();
         return this;
       }
       /**
@@ -643,27 +358,21 @@ public final class InputController {
        */
       public Builder setControllerBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        controller_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setControllerBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -671,14 +380,10 @@ public final class InputController {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -688,18 +393,10 @@ public final class InputController {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -709,13 +406,8 @@ public final class InputController {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -726,21 +418,8 @@ public final class InputController {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -750,130 +429,91 @@ public final class InputController {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.inputcontroller.v1.GetControlsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.inputcontroller.v1.InputController.GetControlsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "controller_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.inputcontroller.v1.InputController.GetControlsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.inputcontroller.v1.InputController.GetControlsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.inputcontroller.v1.InputController.GetControlsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.inputcontroller.v1.GetControlsRequest)
     private static final com.viam.component.inputcontroller.v1.InputController.GetControlsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.inputcontroller.v1.InputController.GetControlsRequest();
+      GetControlsRequest defaultInstance = new GetControlsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetControlsRequest.class, defaultInstance);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetControlsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetControlsRequest>() {
-      @java.lang.Override
-      public GetControlsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetControlsRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetControlsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetControlsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.inputcontroller.v1.InputController.GetControlsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetControlsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.inputcontroller.v1.GetControlsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -914,8 +554,8 @@ public final class InputController {
      * </pre>
      *
      * <code>repeated string controls = 1 [json_name = "controls"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the controls at the given index.
+     * @param index The index of the element to return.
+     * @return The controls at the given index.
      */
     com.google.protobuf.ByteString
         getControlsBytes(int index);
@@ -923,44 +563,16 @@ public final class InputController {
   /**
    * Protobuf type {@code viam.component.inputcontroller.v1.GetControlsResponse}
    */
-  public static final class GetControlsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetControlsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetControlsResponse, GetControlsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.inputcontroller.v1.GetControlsResponse)
       GetControlsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetControlsResponse.newBuilder() to construct.
-    private GetControlsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetControlsResponse() {
-      controls_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      controls_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetControlsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetControlsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetControlsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.inputcontroller.v1.InputController.GetControlsResponse.class, com.viam.component.inputcontroller.v1.InputController.GetControlsResponse.Builder.class);
-    }
-
     public static final int CONTROLS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList controls_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> controls_;
     /**
      * <pre>
      * Returns a list of all the controls (buttons and axes) that are
@@ -970,8 +582,8 @@ public final class InputController {
      * <code>repeated string controls = 1 [json_name = "controls"];</code>
      * @return A list containing the controls.
      */
-    public com.google.protobuf.ProtocolStringList
-        getControlsList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getControlsList() {
       return controls_;
     }
     /**
@@ -983,6 +595,7 @@ public final class InputController {
      * <code>repeated string controls = 1 [json_name = "controls"];</code>
      * @return The count of controls.
      */
+    @java.lang.Override
     public int getControlsCount() {
       return controls_.size();
     }
@@ -996,6 +609,7 @@ public final class InputController {
      * @param index The index of the element to return.
      * @return The controls at the given index.
      */
+    @java.lang.Override
     public java.lang.String getControls(int index) {
       return controls_.get(index);
     }
@@ -1009,360 +623,189 @@ public final class InputController {
      * @param index The index of the value to return.
      * @return The bytes of the controls at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getControlsBytes(int index) {
-      return controls_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          controls_.get(index));
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureControlsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          controls_;  if (!tmp.isModifiable()) {
+        controls_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < controls_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, controls_.getRaw(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * Returns a list of all the controls (buttons and axes) that are
+     * available to a given Input Controller
+     * </pre>
+     *
+     * <code>repeated string controls = 1 [json_name = "controls"];</code>
+     * @param index The index to set the value at.
+     * @param value The controls to set.
+     */
+    private void setControls(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureControlsIsMutable();
+      controls_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < controls_.size(); i++) {
-          dataSize += computeStringSizeNoTag(controls_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getControlsList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <pre>
+     * Returns a list of all the controls (buttons and axes) that are
+     * available to a given Input Controller
+     * </pre>
+     *
+     * <code>repeated string controls = 1 [json_name = "controls"];</code>
+     * @param value The controls to add.
+     */
+    private void addControls(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureControlsIsMutable();
+      controls_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.inputcontroller.v1.InputController.GetControlsResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.inputcontroller.v1.InputController.GetControlsResponse other = (com.viam.component.inputcontroller.v1.InputController.GetControlsResponse) obj;
-
-      if (!getControlsList()
-          .equals(other.getControlsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <pre>
+     * Returns a list of all the controls (buttons and axes) that are
+     * available to a given Input Controller
+     * </pre>
+     *
+     * <code>repeated string controls = 1 [json_name = "controls"];</code>
+     * @param values The controls to add.
+     */
+    private void addAllControls(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureControlsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, controls_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getControlsCount() > 0) {
-        hash = (37 * hash) + CONTROLS_FIELD_NUMBER;
-        hash = (53 * hash) + getControlsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Returns a list of all the controls (buttons and axes) that are
+     * available to a given Input Controller
+     * </pre>
+     *
+     * <code>repeated string controls = 1 [json_name = "controls"];</code>
+     */
+    private void clearControls() {
+      controls_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Returns a list of all the controls (buttons and axes) that are
+     * available to a given Input Controller
+     * </pre>
+     *
+     * <code>repeated string controls = 1 [json_name = "controls"];</code>
+     * @param value The bytes of the controls to add.
+     */
+    private void addControlsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureControlsIsMutable();
+      controls_.add(value.toStringUtf8());
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.inputcontroller.v1.InputController.GetControlsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.inputcontroller.v1.GetControlsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.inputcontroller.v1.InputController.GetControlsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.inputcontroller.v1.GetControlsResponse)
         com.viam.component.inputcontroller.v1.InputController.GetControlsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetControlsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetControlsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.inputcontroller.v1.InputController.GetControlsResponse.class, com.viam.component.inputcontroller.v1.InputController.GetControlsResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.inputcontroller.v1.InputController.GetControlsResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        controls_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetControlsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.GetControlsResponse getDefaultInstanceForType() {
-        return com.viam.component.inputcontroller.v1.InputController.GetControlsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.GetControlsResponse build() {
-        com.viam.component.inputcontroller.v1.InputController.GetControlsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.GetControlsResponse buildPartial() {
-        com.viam.component.inputcontroller.v1.InputController.GetControlsResponse result = new com.viam.component.inputcontroller.v1.InputController.GetControlsResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.inputcontroller.v1.InputController.GetControlsResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          controls_.makeImmutable();
-          result.controls_ = controls_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.inputcontroller.v1.InputController.GetControlsResponse) {
-          return mergeFrom((com.viam.component.inputcontroller.v1.InputController.GetControlsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.inputcontroller.v1.InputController.GetControlsResponse other) {
-        if (other == com.viam.component.inputcontroller.v1.InputController.GetControlsResponse.getDefaultInstance()) return this;
-        if (!other.controls_.isEmpty()) {
-          if (controls_.isEmpty()) {
-            controls_ = other.controls_;
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureControlsIsMutable();
-            controls_.addAll(other.controls_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureControlsIsMutable();
-                controls_.add(s);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.LazyStringArrayList controls_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureControlsIsMutable() {
-        if (!controls_.isModifiable()) {
-          controls_ = new com.google.protobuf.LazyStringArrayList(controls_);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <pre>
        * Returns a list of all the controls (buttons and axes) that are
@@ -1372,10 +815,11 @@ public final class InputController {
        * <code>repeated string controls = 1 [json_name = "controls"];</code>
        * @return A list containing the controls.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getControlsList() {
-        controls_.makeImmutable();
-        return controls_;
+        return java.util.Collections.unmodifiableList(
+            instance.getControlsList());
       }
       /**
        * <pre>
@@ -1386,8 +830,9 @@ public final class InputController {
        * <code>repeated string controls = 1 [json_name = "controls"];</code>
        * @return The count of controls.
        */
+      @java.lang.Override
       public int getControlsCount() {
-        return controls_.size();
+        return instance.getControlsCount();
       }
       /**
        * <pre>
@@ -1399,8 +844,9 @@ public final class InputController {
        * @param index The index of the element to return.
        * @return The controls at the given index.
        */
+      @java.lang.Override
       public java.lang.String getControls(int index) {
-        return controls_.get(index);
+        return instance.getControls(index);
       }
       /**
        * <pre>
@@ -1412,9 +858,10 @@ public final class InputController {
        * @param index The index of the value to return.
        * @return The bytes of the controls at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getControlsBytes(int index) {
-        return controls_.getByteString(index);
+        return instance.getControlsBytes(index);
       }
       /**
        * <pre>
@@ -1429,11 +876,8 @@ public final class InputController {
        */
       public Builder setControls(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureControlsIsMutable();
-        controls_.set(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setControls(index, value);
         return this;
       }
       /**
@@ -1448,11 +892,8 @@ public final class InputController {
        */
       public Builder addControls(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureControlsIsMutable();
-        controls_.add(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addControls(value);
         return this;
       }
       /**
@@ -1467,11 +908,8 @@ public final class InputController {
        */
       public Builder addAllControls(
           java.lang.Iterable<java.lang.String> values) {
-        ensureControlsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, controls_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllControls(values);
         return this;
       }
       /**
@@ -1484,10 +922,8 @@ public final class InputController {
        * @return This builder for chaining.
        */
       public Builder clearControls() {
-        controls_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);;
-        onChanged();
+        copyOnWrite();
+        instance.clearControls();
         return this;
       }
       /**
@@ -1502,81 +938,88 @@ public final class InputController {
        */
       public Builder addControlsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureControlsIsMutable();
-        controls_.add(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addControlsBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.inputcontroller.v1.GetControlsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.inputcontroller.v1.InputController.GetControlsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "controls_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.inputcontroller.v1.InputController.GetControlsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.inputcontroller.v1.InputController.GetControlsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.inputcontroller.v1.InputController.GetControlsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.inputcontroller.v1.GetControlsResponse)
     private static final com.viam.component.inputcontroller.v1.InputController.GetControlsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.inputcontroller.v1.InputController.GetControlsResponse();
+      GetControlsResponse defaultInstance = new GetControlsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetControlsResponse.class, defaultInstance);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetControlsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetControlsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetControlsResponse>() {
-      @java.lang.Override
-      public GetControlsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetControlsResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetControlsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetControlsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.inputcontroller.v1.InputController.GetControlsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetEventsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.inputcontroller.v1.GetEventsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -1616,55 +1059,21 @@ public final class InputController {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.inputcontroller.v1.GetEventsRequest}
    */
-  public static final class GetEventsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetEventsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetEventsRequest, GetEventsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.inputcontroller.v1.GetEventsRequest)
       GetEventsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetEventsRequest.newBuilder() to construct.
-    private GetEventsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetEventsRequest() {
       controller_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetEventsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetEventsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetEventsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.inputcontroller.v1.InputController.GetEventsRequest.class, com.viam.component.inputcontroller.v1.InputController.GetEventsRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int CONTROLLER_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object controller_ = "";
+    private java.lang.String controller_;
     /**
      * <pre>
      * Name of an input controller
@@ -1675,16 +1084,7 @@ public final class InputController {
      */
     @java.lang.Override
     public java.lang.String getController() {
-      java.lang.Object ref = controller_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        controller_ = s;
-        return s;
-      }
+      return controller_;
     }
     /**
      * <pre>
@@ -1697,16 +1097,46 @@ public final class InputController {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getControllerBytes() {
-      java.lang.Object ref = controller_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        controller_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(controller_);
+    }
+    /**
+     * <pre>
+     * Name of an input controller
+     * </pre>
+     *
+     * <code>string controller = 1 [json_name = "controller"];</code>
+     * @param value The controller to set.
+     */
+    private void setController(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      controller_ = value;
+    }
+    /**
+     * <pre>
+     * Name of an input controller
+     * </pre>
+     *
+     * <code>string controller = 1 [json_name = "controller"];</code>
+     */
+    private void clearController() {
+
+      controller_ = getDefaultInstance().getController();
+    }
+    /**
+     * <pre>
+     * Name of an input controller
+     * </pre>
+     *
+     * <code>string controller = 1 [json_name = "controller"];</code>
+     * @param value The bytes for controller to set.
+     */
+    private void setControllerBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      controller_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -1717,7 +1147,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -1729,7 +1158,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -1742,383 +1170,138 @@ public final class InputController {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controller_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, controller_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controller_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, controller_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.inputcontroller.v1.InputController.GetEventsRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.inputcontroller.v1.InputController.GetEventsRequest other = (com.viam.component.inputcontroller.v1.InputController.GetEventsRequest) obj;
-
-      if (!getController()
-          .equals(other.getController())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTROLLER_FIELD_NUMBER;
-      hash = (53 * hash) + getController().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.inputcontroller.v1.InputController.GetEventsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.inputcontroller.v1.GetEventsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.inputcontroller.v1.InputController.GetEventsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.inputcontroller.v1.GetEventsRequest)
         com.viam.component.inputcontroller.v1.InputController.GetEventsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetEventsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetEventsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.inputcontroller.v1.InputController.GetEventsRequest.class, com.viam.component.inputcontroller.v1.InputController.GetEventsRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.inputcontroller.v1.InputController.GetEventsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        controller_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetEventsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.GetEventsRequest getDefaultInstanceForType() {
-        return com.viam.component.inputcontroller.v1.InputController.GetEventsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.GetEventsRequest build() {
-        com.viam.component.inputcontroller.v1.InputController.GetEventsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.GetEventsRequest buildPartial() {
-        com.viam.component.inputcontroller.v1.InputController.GetEventsRequest result = new com.viam.component.inputcontroller.v1.InputController.GetEventsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.inputcontroller.v1.InputController.GetEventsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.controller_ = controller_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.inputcontroller.v1.InputController.GetEventsRequest) {
-          return mergeFrom((com.viam.component.inputcontroller.v1.InputController.GetEventsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.inputcontroller.v1.InputController.GetEventsRequest other) {
-        if (other == com.viam.component.inputcontroller.v1.InputController.GetEventsRequest.getDefaultInstance()) return this;
-        if (!other.getController().isEmpty()) {
-          controller_ = other.controller_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                controller_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object controller_ = "";
       /**
        * <pre>
        * Name of an input controller
@@ -2127,17 +1310,9 @@ public final class InputController {
        * <code>string controller = 1 [json_name = "controller"];</code>
        * @return The controller.
        */
+      @java.lang.Override
       public java.lang.String getController() {
-        java.lang.Object ref = controller_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          controller_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getController();
       }
       /**
        * <pre>
@@ -2147,18 +1322,10 @@ public final class InputController {
        * <code>string controller = 1 [json_name = "controller"];</code>
        * @return The bytes for controller.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getControllerBytes() {
-        java.lang.Object ref = controller_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          controller_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getControllerBytes();
       }
       /**
        * <pre>
@@ -2171,10 +1338,8 @@ public final class InputController {
        */
       public Builder setController(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        controller_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setController(value);
         return this;
       }
       /**
@@ -2186,9 +1351,8 @@ public final class InputController {
        * @return This builder for chaining.
        */
       public Builder clearController() {
-        controller_ = getDefaultInstance().getController();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearController();
         return this;
       }
       /**
@@ -2202,27 +1366,21 @@ public final class InputController {
        */
       public Builder setControllerBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        controller_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setControllerBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -2230,14 +1388,10 @@ public final class InputController {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -2247,18 +1401,10 @@ public final class InputController {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -2268,13 +1414,8 @@ public final class InputController {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -2285,21 +1426,8 @@ public final class InputController {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -2309,130 +1437,91 @@ public final class InputController {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.inputcontroller.v1.GetEventsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.inputcontroller.v1.InputController.GetEventsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "controller_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.inputcontroller.v1.InputController.GetEventsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.inputcontroller.v1.InputController.GetEventsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.inputcontroller.v1.InputController.GetEventsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.inputcontroller.v1.GetEventsRequest)
     private static final com.viam.component.inputcontroller.v1.InputController.GetEventsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.inputcontroller.v1.InputController.GetEventsRequest();
+      GetEventsRequest defaultInstance = new GetEventsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetEventsRequest.class, defaultInstance);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetEventsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetEventsRequest>() {
-      @java.lang.Override
-      public GetEventsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetEventsRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetEventsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetEventsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.inputcontroller.v1.InputController.GetEventsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetEventsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.inputcontroller.v1.GetEventsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -2462,66 +1551,20 @@ public final class InputController {
      * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
      */
     int getEventsCount();
-    /**
-     * <pre>
-     * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
-     * buttons/axes on a given input controller
-     * </pre>
-     *
-     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-     */
-    java.util.List<? extends com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> 
-        getEventsOrBuilderList();
-    /**
-     * <pre>
-     * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
-     * buttons/axes on a given input controller
-     * </pre>
-     *
-     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-     */
-    com.viam.component.inputcontroller.v1.InputController.EventOrBuilder getEventsOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.component.inputcontroller.v1.GetEventsResponse}
    */
-  public static final class GetEventsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetEventsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetEventsResponse, GetEventsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.inputcontroller.v1.GetEventsResponse)
       GetEventsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetEventsResponse.newBuilder() to construct.
-    private GetEventsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetEventsResponse() {
-      events_ = java.util.Collections.emptyList();
+      events_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetEventsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetEventsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetEventsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.inputcontroller.v1.InputController.GetEventsResponse.class, com.viam.component.inputcontroller.v1.InputController.GetEventsResponse.Builder.class);
-    }
-
     public static final int EVENTS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.component.inputcontroller.v1.InputController.Event> events_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.component.inputcontroller.v1.InputController.Event> events_;
     /**
      * <pre>
      * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
@@ -2542,7 +1585,6 @@ public final class InputController {
      *
      * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> 
         getEventsOrBuilderList() {
       return events_;
@@ -2579,397 +1621,193 @@ public final class InputController {
      *
      * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
      */
-    @java.lang.Override
     public com.viam.component.inputcontroller.v1.InputController.EventOrBuilder getEventsOrBuilder(
         int index) {
       return events_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureEventsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.component.inputcontroller.v1.InputController.Event> tmp = events_;
+      if (!tmp.isModifiable()) {
+        events_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < events_.size(); i++) {
-        output.writeMessage(1, events_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
+     * buttons/axes on a given input controller
+     * </pre>
+     *
+     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
+     */
+    private void setEvents(
+        int index, com.viam.component.inputcontroller.v1.InputController.Event value) {
+      value.getClass();
+  ensureEventsIsMutable();
+      events_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < events_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, events_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <pre>
+     * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
+     * buttons/axes on a given input controller
+     * </pre>
+     *
+     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
+     */
+    private void addEvents(com.viam.component.inputcontroller.v1.InputController.Event value) {
+      value.getClass();
+  ensureEventsIsMutable();
+      events_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.inputcontroller.v1.InputController.GetEventsResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.inputcontroller.v1.InputController.GetEventsResponse other = (com.viam.component.inputcontroller.v1.InputController.GetEventsResponse) obj;
-
-      if (!getEventsList()
-          .equals(other.getEventsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <pre>
+     * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
+     * buttons/axes on a given input controller
+     * </pre>
+     *
+     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
+     */
+    private void addEvents(
+        int index, com.viam.component.inputcontroller.v1.InputController.Event value) {
+      value.getClass();
+  ensureEventsIsMutable();
+      events_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getEventsCount() > 0) {
-        hash = (37 * hash) + EVENTS_FIELD_NUMBER;
-        hash = (53 * hash) + getEventsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
+     * buttons/axes on a given input controller
+     * </pre>
+     *
+     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
+     */
+    private void addAllEvents(
+        java.lang.Iterable<? extends com.viam.component.inputcontroller.v1.InputController.Event> values) {
+      ensureEventsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, events_);
+    }
+    /**
+     * <pre>
+     * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
+     * buttons/axes on a given input controller
+     * </pre>
+     *
+     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
+     */
+    private void clearEvents() {
+      events_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
+     * buttons/axes on a given input controller
+     * </pre>
+     *
+     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
+     */
+    private void removeEvents(int index) {
+      ensureEventsIsMutable();
+      events_.remove(index);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.inputcontroller.v1.InputController.GetEventsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.inputcontroller.v1.GetEventsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.inputcontroller.v1.InputController.GetEventsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.inputcontroller.v1.GetEventsResponse)
         com.viam.component.inputcontroller.v1.InputController.GetEventsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetEventsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetEventsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.inputcontroller.v1.InputController.GetEventsResponse.class, com.viam.component.inputcontroller.v1.InputController.GetEventsResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.inputcontroller.v1.InputController.GetEventsResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (eventsBuilder_ == null) {
-          events_ = java.util.Collections.emptyList();
-        } else {
-          events_ = null;
-          eventsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_GetEventsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.GetEventsResponse getDefaultInstanceForType() {
-        return com.viam.component.inputcontroller.v1.InputController.GetEventsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.GetEventsResponse build() {
-        com.viam.component.inputcontroller.v1.InputController.GetEventsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.GetEventsResponse buildPartial() {
-        com.viam.component.inputcontroller.v1.InputController.GetEventsResponse result = new com.viam.component.inputcontroller.v1.InputController.GetEventsResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.component.inputcontroller.v1.InputController.GetEventsResponse result) {
-        if (eventsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            events_ = java.util.Collections.unmodifiableList(events_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.events_ = events_;
-        } else {
-          result.events_ = eventsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.component.inputcontroller.v1.InputController.GetEventsResponse result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.inputcontroller.v1.InputController.GetEventsResponse) {
-          return mergeFrom((com.viam.component.inputcontroller.v1.InputController.GetEventsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.inputcontroller.v1.InputController.GetEventsResponse other) {
-        if (other == com.viam.component.inputcontroller.v1.InputController.GetEventsResponse.getDefaultInstance()) return this;
-        if (eventsBuilder_ == null) {
-          if (!other.events_.isEmpty()) {
-            if (events_.isEmpty()) {
-              events_ = other.events_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureEventsIsMutable();
-              events_.addAll(other.events_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.events_.isEmpty()) {
-            if (eventsBuilder_.isEmpty()) {
-              eventsBuilder_.dispose();
-              eventsBuilder_ = null;
-              events_ = other.events_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              eventsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getEventsFieldBuilder() : null;
-            } else {
-              eventsBuilder_.addAllMessages(other.events_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.viam.component.inputcontroller.v1.InputController.Event m =
-                    input.readMessage(
-                        com.viam.component.inputcontroller.v1.InputController.Event.parser(),
-                        extensionRegistry);
-                if (eventsBuilder_ == null) {
-                  ensureEventsIsMutable();
-                  events_.add(m);
-                } else {
-                  eventsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.viam.component.inputcontroller.v1.InputController.Event> events_ =
-        java.util.Collections.emptyList();
-      private void ensureEventsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          events_ = new java.util.ArrayList<com.viam.component.inputcontroller.v1.InputController.Event>(events_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.component.inputcontroller.v1.InputController.Event, com.viam.component.inputcontroller.v1.InputController.Event.Builder, com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> eventsBuilder_;
 
       /**
        * <pre>
@@ -2979,12 +1817,10 @@ public final class InputController {
        *
        * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.component.inputcontroller.v1.InputController.Event> getEventsList() {
-        if (eventsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(events_);
-        } else {
-          return eventsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getEventsList());
       }
       /**
        * <pre>
@@ -2994,14 +1830,10 @@ public final class InputController {
        *
        * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
        */
+      @java.lang.Override
       public int getEventsCount() {
-        if (eventsBuilder_ == null) {
-          return events_.size();
-        } else {
-          return eventsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getEventsCount();
+      }/**
        * <pre>
        * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
        * buttons/axes on a given input controller
@@ -3009,12 +1841,9 @@ public final class InputController {
        *
        * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
        */
+      @java.lang.Override
       public com.viam.component.inputcontroller.v1.InputController.Event getEvents(int index) {
-        if (eventsBuilder_ == null) {
-          return events_.get(index);
-        } else {
-          return eventsBuilder_.getMessage(index);
-        }
+        return instance.getEvents(index);
       }
       /**
        * <pre>
@@ -3026,16 +1855,8 @@ public final class InputController {
        */
       public Builder setEvents(
           int index, com.viam.component.inputcontroller.v1.InputController.Event value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.set(index, value);
-          onChanged();
-        } else {
-          eventsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setEvents(index, value);
         return this;
       }
       /**
@@ -3048,13 +1869,9 @@ public final class InputController {
        */
       public Builder setEvents(
           int index, com.viam.component.inputcontroller.v1.InputController.Event.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setEvents(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -3066,16 +1883,8 @@ public final class InputController {
        * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
        */
       public Builder addEvents(com.viam.component.inputcontroller.v1.InputController.Event value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.add(value);
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addEvents(value);
         return this;
       }
       /**
@@ -3088,16 +1897,8 @@ public final class InputController {
        */
       public Builder addEvents(
           int index, com.viam.component.inputcontroller.v1.InputController.Event value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.add(index, value);
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addEvents(index, value);
         return this;
       }
       /**
@@ -3110,13 +1911,8 @@ public final class InputController {
        */
       public Builder addEvents(
           com.viam.component.inputcontroller.v1.InputController.Event.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.add(builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addEvents(builderForValue.build());
         return this;
       }
       /**
@@ -3129,13 +1925,9 @@ public final class InputController {
        */
       public Builder addEvents(
           int index, com.viam.component.inputcontroller.v1.InputController.Event.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addEvents(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -3148,14 +1940,8 @@ public final class InputController {
        */
       public Builder addAllEvents(
           java.lang.Iterable<? extends com.viam.component.inputcontroller.v1.InputController.Event> values) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, events_);
-          onChanged();
-        } else {
-          eventsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllEvents(values);
         return this;
       }
       /**
@@ -3167,13 +1953,8 @@ public final class InputController {
        * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
        */
       public Builder clearEvents() {
-        if (eventsBuilder_ == null) {
-          events_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          eventsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearEvents();
         return this;
       }
       /**
@@ -3185,176 +1966,89 @@ public final class InputController {
        * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
        */
       public Builder removeEvents(int index) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.remove(index);
-          onChanged();
-        } else {
-          eventsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeEvents(index);
         return this;
       }
-      /**
-       * <pre>
-       * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
-       * buttons/axes on a given input controller
-       * </pre>
-       *
-       * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.Event.Builder getEventsBuilder(
-          int index) {
-        return getEventsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
-       * buttons/axes on a given input controller
-       * </pre>
-       *
-       * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.EventOrBuilder getEventsOrBuilder(
-          int index) {
-        if (eventsBuilder_ == null) {
-          return events_.get(index);  } else {
-          return eventsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
-       * buttons/axes on a given input controller
-       * </pre>
-       *
-       * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-       */
-      public java.util.List<? extends com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> 
-           getEventsOrBuilderList() {
-        if (eventsBuilder_ != null) {
-          return eventsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(events_);
-        }
-      }
-      /**
-       * <pre>
-       * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
-       * buttons/axes on a given input controller
-       * </pre>
-       *
-       * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.Event.Builder addEventsBuilder() {
-        return getEventsFieldBuilder().addBuilder(
-            com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
-       * buttons/axes on a given input controller
-       * </pre>
-       *
-       * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.Event.Builder addEventsBuilder(
-          int index) {
-        return getEventsFieldBuilder().addBuilder(
-            index, com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Returns a list of the most recent event for each control on a given InputController. Effectively provides the current "state" of all
-       * buttons/axes on a given input controller
-       * </pre>
-       *
-       * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-       */
-      public java.util.List<com.viam.component.inputcontroller.v1.InputController.Event.Builder> 
-           getEventsBuilderList() {
-        return getEventsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.component.inputcontroller.v1.InputController.Event, com.viam.component.inputcontroller.v1.InputController.Event.Builder, com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> 
-          getEventsFieldBuilder() {
-        if (eventsBuilder_ == null) {
-          eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.component.inputcontroller.v1.InputController.Event, com.viam.component.inputcontroller.v1.InputController.Event.Builder, com.viam.component.inputcontroller.v1.InputController.EventOrBuilder>(
-                  events_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          events_ = null;
-        }
-        return eventsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.inputcontroller.v1.GetEventsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.inputcontroller.v1.InputController.GetEventsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "events_",
+              com.viam.component.inputcontroller.v1.InputController.Event.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.inputcontroller.v1.InputController.GetEventsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.inputcontroller.v1.InputController.GetEventsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.inputcontroller.v1.InputController.GetEventsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.inputcontroller.v1.GetEventsResponse)
     private static final com.viam.component.inputcontroller.v1.InputController.GetEventsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.inputcontroller.v1.InputController.GetEventsResponse();
+      GetEventsResponse defaultInstance = new GetEventsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetEventsResponse.class, defaultInstance);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.GetEventsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetEventsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetEventsResponse>() {
-      @java.lang.Override
-      public GetEventsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetEventsResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetEventsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetEventsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.inputcontroller.v1.InputController.GetEventsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface TriggerEventRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.inputcontroller.v1.TriggerEventRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -3394,14 +2088,6 @@ public final class InputController {
      * @return The event.
      */
     com.viam.component.inputcontroller.v1.InputController.Event getEvent();
-    /**
-     * <pre>
-     * Digitally assert a given event
-     * </pre>
-     *
-     * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
-     */
-    com.viam.component.inputcontroller.v1.InputController.EventOrBuilder getEventOrBuilder();
 
     /**
      * <pre>
@@ -3421,55 +2107,21 @@ public final class InputController {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.inputcontroller.v1.TriggerEventRequest}
    */
-  public static final class TriggerEventRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class TriggerEventRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          TriggerEventRequest, TriggerEventRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.inputcontroller.v1.TriggerEventRequest)
       TriggerEventRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TriggerEventRequest.newBuilder() to construct.
-    private TriggerEventRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private TriggerEventRequest() {
       controller_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TriggerEventRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_TriggerEventRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_TriggerEventRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest.class, com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int CONTROLLER_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object controller_ = "";
+    private java.lang.String controller_;
     /**
      * <pre>
      * Name of an input controller
@@ -3480,16 +2132,7 @@ public final class InputController {
      */
     @java.lang.Override
     public java.lang.String getController() {
-      java.lang.Object ref = controller_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        controller_ = s;
-        return s;
-      }
+      return controller_;
     }
     /**
      * <pre>
@@ -3502,16 +2145,46 @@ public final class InputController {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getControllerBytes() {
-      java.lang.Object ref = controller_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        controller_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(controller_);
+    }
+    /**
+     * <pre>
+     * Name of an input controller
+     * </pre>
+     *
+     * <code>string controller = 1 [json_name = "controller"];</code>
+     * @param value The controller to set.
+     */
+    private void setController(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      controller_ = value;
+    }
+    /**
+     * <pre>
+     * Name of an input controller
+     * </pre>
+     *
+     * <code>string controller = 1 [json_name = "controller"];</code>
+     */
+    private void clearController() {
+
+      controller_ = getDefaultInstance().getController();
+    }
+    /**
+     * <pre>
+     * Name of an input controller
+     * </pre>
+     *
+     * <code>string controller = 1 [json_name = "controller"];</code>
+     * @param value The bytes for controller to set.
+     */
+    private void setControllerBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      controller_ = value.toStringUtf8();
+
     }
 
     public static final int EVENT_FIELD_NUMBER = 2;
@@ -3522,7 +2195,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
-     * @return Whether the event field is set.
      */
     @java.lang.Override
     public boolean hasEvent() {
@@ -3534,7 +2206,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
-     * @return The event.
      */
     @java.lang.Override
     public com.viam.component.inputcontroller.v1.InputController.Event getEvent() {
@@ -3547,9 +2218,39 @@ public final class InputController {
      *
      * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
      */
-    @java.lang.Override
-    public com.viam.component.inputcontroller.v1.InputController.EventOrBuilder getEventOrBuilder() {
-      return event_ == null ? com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance() : event_;
+    private void setEvent(com.viam.component.inputcontroller.v1.InputController.Event value) {
+      value.getClass();
+  event_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Digitally assert a given event
+     * </pre>
+     *
+     * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeEvent(com.viam.component.inputcontroller.v1.InputController.Event value) {
+      value.getClass();
+  if (event_ != null &&
+          event_ != com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance()) {
+        event_ =
+          com.viam.component.inputcontroller.v1.InputController.Event.newBuilder(event_).mergeFrom(value).buildPartial();
+      } else {
+        event_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Digitally assert a given event
+     * </pre>
+     *
+     * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
+     */
+    private void clearEvent() {  event_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -3560,7 +2261,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -3572,7 +2272,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -3585,421 +2284,138 @@ public final class InputController {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controller_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, controller_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getEvent());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controller_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, controller_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getEvent());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest other = (com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest) obj;
-
-      if (!getController()
-          .equals(other.getController())) return false;
-      if (hasEvent() != other.hasEvent()) return false;
-      if (hasEvent()) {
-        if (!getEvent()
-            .equals(other.getEvent())) return false;
-      }
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTROLLER_FIELD_NUMBER;
-      hash = (53 * hash) + getController().hashCode();
-      if (hasEvent()) {
-        hash = (37 * hash) + EVENT_FIELD_NUMBER;
-        hash = (53 * hash) + getEvent().hashCode();
-      }
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.inputcontroller.v1.TriggerEventRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.inputcontroller.v1.TriggerEventRequest)
         com.viam.component.inputcontroller.v1.InputController.TriggerEventRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_TriggerEventRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_TriggerEventRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest.class, com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEventFieldBuilder();
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        controller_ = "";
-        event_ = null;
-        if (eventBuilder_ != null) {
-          eventBuilder_.dispose();
-          eventBuilder_ = null;
-        }
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_TriggerEventRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest getDefaultInstanceForType() {
-        return com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest build() {
-        com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest buildPartial() {
-        com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest result = new com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.controller_ = controller_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.event_ = eventBuilder_ == null
-              ? event_
-              : eventBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest) {
-          return mergeFrom((com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest other) {
-        if (other == com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest.getDefaultInstance()) return this;
-        if (!other.getController().isEmpty()) {
-          controller_ = other.controller_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasEvent()) {
-          mergeEvent(other.getEvent());
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                controller_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getEventFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object controller_ = "";
       /**
        * <pre>
        * Name of an input controller
@@ -4008,17 +2424,9 @@ public final class InputController {
        * <code>string controller = 1 [json_name = "controller"];</code>
        * @return The controller.
        */
+      @java.lang.Override
       public java.lang.String getController() {
-        java.lang.Object ref = controller_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          controller_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getController();
       }
       /**
        * <pre>
@@ -4028,18 +2436,10 @@ public final class InputController {
        * <code>string controller = 1 [json_name = "controller"];</code>
        * @return The bytes for controller.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getControllerBytes() {
-        java.lang.Object ref = controller_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          controller_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getControllerBytes();
       }
       /**
        * <pre>
@@ -4052,10 +2452,8 @@ public final class InputController {
        */
       public Builder setController(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        controller_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setController(value);
         return this;
       }
       /**
@@ -4067,9 +2465,8 @@ public final class InputController {
        * @return This builder for chaining.
        */
       public Builder clearController() {
-        controller_ = getDefaultInstance().getController();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearController();
         return this;
       }
       /**
@@ -4083,27 +2480,21 @@ public final class InputController {
        */
       public Builder setControllerBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        controller_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setControllerBytes(value);
         return this;
       }
 
-      private com.viam.component.inputcontroller.v1.InputController.Event event_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.inputcontroller.v1.InputController.Event, com.viam.component.inputcontroller.v1.InputController.Event.Builder, com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> eventBuilder_;
       /**
        * <pre>
        * Digitally assert a given event
        * </pre>
        *
        * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
-       * @return Whether the event field is set.
        */
+      @java.lang.Override
       public boolean hasEvent() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasEvent();
       }
       /**
        * <pre>
@@ -4111,14 +2502,10 @@ public final class InputController {
        * </pre>
        *
        * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
-       * @return The event.
        */
+      @java.lang.Override
       public com.viam.component.inputcontroller.v1.InputController.Event getEvent() {
-        if (eventBuilder_ == null) {
-          return event_ == null ? com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance() : event_;
-        } else {
-          return eventBuilder_.getMessage();
-        }
+        return instance.getEvent();
       }
       /**
        * <pre>
@@ -4128,18 +2515,10 @@ public final class InputController {
        * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
        */
       public Builder setEvent(com.viam.component.inputcontroller.v1.InputController.Event value) {
-        if (eventBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          event_ = value;
-        } else {
-          eventBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setEvent(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Digitally assert a given event
@@ -4149,13 +2528,8 @@ public final class InputController {
        */
       public Builder setEvent(
           com.viam.component.inputcontroller.v1.InputController.Event.Builder builderForValue) {
-        if (eventBuilder_ == null) {
-          event_ = builderForValue.build();
-        } else {
-          eventBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setEvent(builderForValue.build());
         return this;
       }
       /**
@@ -4166,21 +2540,8 @@ public final class InputController {
        * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
        */
       public Builder mergeEvent(com.viam.component.inputcontroller.v1.InputController.Event value) {
-        if (eventBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            event_ != null &&
-            event_ != com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance()) {
-            getEventBuilder().mergeFrom(value);
-          } else {
-            event_ = value;
-          }
-        } else {
-          eventBuilder_.mergeFrom(value);
-        }
-        if (event_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeEvent(value);
         return this;
       }
       /**
@@ -4190,77 +2551,21 @@ public final class InputController {
        *
        * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
        */
-      public Builder clearEvent() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        event_ = null;
-        if (eventBuilder_ != null) {
-          eventBuilder_.dispose();
-          eventBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearEvent() {  copyOnWrite();
+        instance.clearEvent();
         return this;
-      }
-      /**
-       * <pre>
-       * Digitally assert a given event
-       * </pre>
-       *
-       * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.Event.Builder getEventBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getEventFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Digitally assert a given event
-       * </pre>
-       *
-       * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.EventOrBuilder getEventOrBuilder() {
-        if (eventBuilder_ != null) {
-          return eventBuilder_.getMessageOrBuilder();
-        } else {
-          return event_ == null ?
-              com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance() : event_;
-        }
-      }
-      /**
-       * <pre>
-       * Digitally assert a given event
-       * </pre>
-       *
-       * <code>.viam.component.inputcontroller.v1.Event event = 2 [json_name = "event"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.inputcontroller.v1.InputController.Event, com.viam.component.inputcontroller.v1.InputController.Event.Builder, com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> 
-          getEventFieldBuilder() {
-        if (eventBuilder_ == null) {
-          eventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.component.inputcontroller.v1.InputController.Event, com.viam.component.inputcontroller.v1.InputController.Event.Builder, com.viam.component.inputcontroller.v1.InputController.EventOrBuilder>(
-                  getEvent(),
-                  getParentForChildren(),
-                  isClean());
-          event_ = null;
-        }
-        return eventBuilder_;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -4268,14 +2573,10 @@ public final class InputController {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -4285,18 +2586,10 @@ public final class InputController {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -4306,13 +2599,8 @@ public final class InputController {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -4323,21 +2611,8 @@ public final class InputController {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -4347,527 +2622,274 @@ public final class InputController {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.inputcontroller.v1.TriggerEventRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "controller_",
+              "event_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000" +
+                "c\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.inputcontroller.v1.TriggerEventRequest)
     private static final com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest();
+      TriggerEventRequest defaultInstance = new TriggerEventRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        TriggerEventRequest.class, defaultInstance);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<TriggerEventRequest>
-        PARSER = new com.google.protobuf.AbstractParser<TriggerEventRequest>() {
-      @java.lang.Override
-      public TriggerEventRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<TriggerEventRequest> PARSER;
 
     public static com.google.protobuf.Parser<TriggerEventRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TriggerEventRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.inputcontroller.v1.InputController.TriggerEventRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface TriggerEventResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.inputcontroller.v1.TriggerEventResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.component.inputcontroller.v1.TriggerEventResponse}
    */
-  public static final class TriggerEventResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class TriggerEventResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          TriggerEventResponse, TriggerEventResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.inputcontroller.v1.TriggerEventResponse)
       TriggerEventResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use TriggerEventResponse.newBuilder() to construct.
-    private TriggerEventResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private TriggerEventResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TriggerEventResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_TriggerEventResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_TriggerEventResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse.class, com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse other = (com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.inputcontroller.v1.TriggerEventResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.inputcontroller.v1.TriggerEventResponse)
         com.viam.component.inputcontroller.v1.InputController.TriggerEventResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_TriggerEventResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_TriggerEventResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse.class, com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_TriggerEventResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse getDefaultInstanceForType() {
-        return com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse build() {
-        com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse buildPartial() {
-        com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse result = new com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse) {
-          return mergeFrom((com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse other) {
-        if (other == com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.component.inputcontroller.v1.TriggerEventResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.inputcontroller.v1.TriggerEventResponse)
     private static final com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse();
+      TriggerEventResponse defaultInstance = new TriggerEventResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        TriggerEventResponse.class, defaultInstance);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<TriggerEventResponse>
-        PARSER = new com.google.protobuf.AbstractParser<TriggerEventResponse>() {
-      @java.lang.Override
-      public TriggerEventResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<TriggerEventResponse> PARSER;
 
     public static com.google.protobuf.Parser<TriggerEventResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<TriggerEventResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.inputcontroller.v1.InputController.TriggerEventResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface EventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.inputcontroller.v1.Event)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -4887,14 +2909,6 @@ public final class InputController {
      * @return The time.
      */
     com.google.protobuf.Timestamp getTime();
-    /**
-     * <pre>
-     * Timestamp of event
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getTimeOrBuilder();
 
     /**
      * <pre>
@@ -4949,40 +2963,15 @@ public final class InputController {
   /**
    * Protobuf type {@code viam.component.inputcontroller.v1.Event}
    */
-  public static final class Event extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Event extends
+      com.google.protobuf.GeneratedMessageLite<
+          Event, Event.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.inputcontroller.v1.Event)
       EventOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Event.newBuilder() to construct.
-    private Event(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Event() {
       event_ = "";
       control_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Event();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_Event_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_Event_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.inputcontroller.v1.InputController.Event.class, com.viam.component.inputcontroller.v1.InputController.Event.Builder.class);
-    }
-
     private int bitField0_;
     public static final int TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp time_;
@@ -4992,7 +2981,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
-     * @return Whether the time field is set.
      */
     @java.lang.Override
     public boolean hasTime() {
@@ -5004,7 +2992,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
-     * @return The time.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getTime() {
@@ -5017,14 +3004,43 @@ public final class InputController {
      *
      * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getTimeOrBuilder() {
-      return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
+    private void setTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  time_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Timestamp of event
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTime(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (time_ != null &&
+          time_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        time_ =
+          com.google.protobuf.Timestamp.newBuilder(time_).mergeFrom(value).buildPartial();
+      } else {
+        time_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Timestamp of event
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
+     */
+    private void clearTime() {  time_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int EVENT_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object event_ = "";
+    private java.lang.String event_;
     /**
      * <pre>
      * An event type (eg: ButtonPress, ButtonRelease)
@@ -5035,16 +3051,7 @@ public final class InputController {
      */
     @java.lang.Override
     public java.lang.String getEvent() {
-      java.lang.Object ref = event_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        event_ = s;
-        return s;
-      }
+      return event_;
     }
     /**
      * <pre>
@@ -5057,21 +3064,50 @@ public final class InputController {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getEventBytes() {
-      java.lang.Object ref = event_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        event_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(event_);
+    }
+    /**
+     * <pre>
+     * An event type (eg: ButtonPress, ButtonRelease)
+     * </pre>
+     *
+     * <code>string event = 2 [json_name = "event"];</code>
+     * @param value The event to set.
+     */
+    private void setEvent(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      event_ = value;
+    }
+    /**
+     * <pre>
+     * An event type (eg: ButtonPress, ButtonRelease)
+     * </pre>
+     *
+     * <code>string event = 2 [json_name = "event"];</code>
+     */
+    private void clearEvent() {
+
+      event_ = getDefaultInstance().getEvent();
+    }
+    /**
+     * <pre>
+     * An event type (eg: ButtonPress, ButtonRelease)
+     * </pre>
+     *
+     * <code>string event = 2 [json_name = "event"];</code>
+     * @param value The bytes for event to set.
+     */
+    private void setEventBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      event_ = value.toStringUtf8();
+
     }
 
     public static final int CONTROL_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object control_ = "";
+    private java.lang.String control_;
     /**
      * <pre>
      * A control, can be a button (eg: ButtonSouth) or an axis (eg: AbsoluteX)
@@ -5082,16 +3118,7 @@ public final class InputController {
      */
     @java.lang.Override
     public java.lang.String getControl() {
-      java.lang.Object ref = control_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        control_ = s;
-        return s;
-      }
+      return control_;
     }
     /**
      * <pre>
@@ -5104,20 +3131,50 @@ public final class InputController {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getControlBytes() {
-      java.lang.Object ref = control_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        control_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(control_);
+    }
+    /**
+     * <pre>
+     * A control, can be a button (eg: ButtonSouth) or an axis (eg: AbsoluteX)
+     * </pre>
+     *
+     * <code>string control = 3 [json_name = "control"];</code>
+     * @param value The control to set.
+     */
+    private void setControl(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      control_ = value;
+    }
+    /**
+     * <pre>
+     * A control, can be a button (eg: ButtonSouth) or an axis (eg: AbsoluteX)
+     * </pre>
+     *
+     * <code>string control = 3 [json_name = "control"];</code>
+     */
+    private void clearControl() {
+
+      control_ = getDefaultInstance().getControl();
+    }
+    /**
+     * <pre>
+     * A control, can be a button (eg: ButtonSouth) or an axis (eg: AbsoluteX)
+     * </pre>
+     *
+     * <code>string control = 3 [json_name = "control"];</code>
+     * @param value The bytes for control to set.
+     */
+    private void setControlBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      control_ = value.toStringUtf8();
+
     }
 
     public static final int VALUE_FIELD_NUMBER = 4;
-    private double value_ = 0D;
+    private double value_;
     /**
      * <pre>
      * 0 or 1 for buttons, -1.0 to +1.0 for axes
@@ -5130,440 +3187,137 @@ public final class InputController {
     public double getValue() {
       return value_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * 0 or 1 for buttons, -1.0 to +1.0 for axes
+     * </pre>
+     *
+     * <code>double value = 4 [json_name = "value"];</code>
+     * @param value The value to set.
+     */
+    private void setValue(double value) {
+      
+      value_ = value;
     }
+    /**
+     * <pre>
+     * 0 or 1 for buttons, -1.0 to +1.0 for axes
+     * </pre>
+     *
+     * <code>double value = 4 [json_name = "value"];</code>
+     */
+    private void clearValue() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getTime());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(event_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, event_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(control_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, control_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(value_) != 0) {
-        output.writeDouble(4, value_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getTime());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(event_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, event_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(control_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, control_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(value_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(4, value_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.inputcontroller.v1.InputController.Event)) {
-        return super.equals(obj);
-      }
-      com.viam.component.inputcontroller.v1.InputController.Event other = (com.viam.component.inputcontroller.v1.InputController.Event) obj;
-
-      if (hasTime() != other.hasTime()) return false;
-      if (hasTime()) {
-        if (!getTime()
-            .equals(other.getTime())) return false;
-      }
-      if (!getEvent()
-          .equals(other.getEvent())) return false;
-      if (!getControl()
-          .equals(other.getControl())) return false;
-      if (java.lang.Double.doubleToLongBits(getValue())
-          != java.lang.Double.doubleToLongBits(
-              other.getValue())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasTime()) {
-        hash = (37 * hash) + TIME_FIELD_NUMBER;
-        hash = (53 * hash) + getTime().hashCode();
-      }
-      hash = (37 * hash) + EVENT_FIELD_NUMBER;
-      hash = (53 * hash) + getEvent().hashCode();
-      hash = (37 * hash) + CONTROL_FIELD_NUMBER;
-      hash = (53 * hash) + getControl().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getValue()));
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      value_ = 0D;
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.Event parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Event parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Event parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Event parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Event parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Event parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Event parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Event parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.Event parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.Event parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Event parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Event parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.inputcontroller.v1.InputController.Event prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.inputcontroller.v1.Event}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.inputcontroller.v1.InputController.Event, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.inputcontroller.v1.Event)
         com.viam.component.inputcontroller.v1.InputController.EventOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_Event_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_Event_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.inputcontroller.v1.InputController.Event.class, com.viam.component.inputcontroller.v1.InputController.Event.Builder.class);
-      }
-
       // Construct using com.viam.component.inputcontroller.v1.InputController.Event.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTimeFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        time_ = null;
-        if (timeBuilder_ != null) {
-          timeBuilder_.dispose();
-          timeBuilder_ = null;
-        }
-        event_ = "";
-        control_ = "";
-        value_ = 0D;
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_Event_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.Event getDefaultInstanceForType() {
-        return com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.Event build() {
-        com.viam.component.inputcontroller.v1.InputController.Event result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.Event buildPartial() {
-        com.viam.component.inputcontroller.v1.InputController.Event result = new com.viam.component.inputcontroller.v1.InputController.Event(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.inputcontroller.v1.InputController.Event result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.time_ = timeBuilder_ == null
-              ? time_
-              : timeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.event_ = event_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.control_ = control_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.value_ = value_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.inputcontroller.v1.InputController.Event) {
-          return mergeFrom((com.viam.component.inputcontroller.v1.InputController.Event)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.inputcontroller.v1.InputController.Event other) {
-        if (other == com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance()) return this;
-        if (other.hasTime()) {
-          mergeTime(other.getTime());
-        }
-        if (!other.getEvent().isEmpty()) {
-          event_ = other.event_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getControl().isEmpty()) {
-          control_ = other.control_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (other.getValue() != 0D) {
-          setValue(other.getValue());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getTimeFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                event_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                control_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 33: {
-                value_ = input.readDouble();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 33
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Timestamp time_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeBuilder_;
       /**
        * <pre>
        * Timestamp of event
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
-       * @return Whether the time field is set.
        */
+      @java.lang.Override
       public boolean hasTime() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasTime();
       }
       /**
        * <pre>
@@ -5571,14 +3325,10 @@ public final class InputController {
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
-       * @return The time.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getTime() {
-        if (timeBuilder_ == null) {
-          return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
-        } else {
-          return timeBuilder_.getMessage();
-        }
+        return instance.getTime();
       }
       /**
        * <pre>
@@ -5588,18 +3338,10 @@ public final class InputController {
        * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
        */
       public Builder setTime(com.google.protobuf.Timestamp value) {
-        if (timeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          time_ = value;
-        } else {
-          timeBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setTime(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Timestamp of event
@@ -5609,13 +3351,8 @@ public final class InputController {
        */
       public Builder setTime(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (timeBuilder_ == null) {
-          time_ = builderForValue.build();
-        } else {
-          timeBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setTime(builderForValue.build());
         return this;
       }
       /**
@@ -5626,21 +3363,8 @@ public final class InputController {
        * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
        */
       public Builder mergeTime(com.google.protobuf.Timestamp value) {
-        if (timeBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            time_ != null &&
-            time_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getTimeBuilder().mergeFrom(value);
-          } else {
-            time_ = value;
-          }
-        } else {
-          timeBuilder_.mergeFrom(value);
-        }
-        if (time_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeTime(value);
         return this;
       }
       /**
@@ -5650,65 +3374,11 @@ public final class InputController {
        *
        * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
        */
-      public Builder clearTime() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        time_ = null;
-        if (timeBuilder_ != null) {
-          timeBuilder_.dispose();
-          timeBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearTime() {  copyOnWrite();
+        instance.clearTime();
         return this;
-      }
-      /**
-       * <pre>
-       * Timestamp of event
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getTimeBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getTimeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Timestamp of event
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTimeOrBuilder() {
-        if (timeBuilder_ != null) {
-          return timeBuilder_.getMessageOrBuilder();
-        } else {
-          return time_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : time_;
-        }
-      }
-      /**
-       * <pre>
-       * Timestamp of event
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp time = 1 [json_name = "time"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getTimeFieldBuilder() {
-        if (timeBuilder_ == null) {
-          timeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getTime(),
-                  getParentForChildren(),
-                  isClean());
-          time_ = null;
-        }
-        return timeBuilder_;
       }
 
-      private java.lang.Object event_ = "";
       /**
        * <pre>
        * An event type (eg: ButtonPress, ButtonRelease)
@@ -5717,17 +3387,9 @@ public final class InputController {
        * <code>string event = 2 [json_name = "event"];</code>
        * @return The event.
        */
+      @java.lang.Override
       public java.lang.String getEvent() {
-        java.lang.Object ref = event_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          event_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getEvent();
       }
       /**
        * <pre>
@@ -5737,18 +3399,10 @@ public final class InputController {
        * <code>string event = 2 [json_name = "event"];</code>
        * @return The bytes for event.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getEventBytes() {
-        java.lang.Object ref = event_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          event_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getEventBytes();
       }
       /**
        * <pre>
@@ -5761,10 +3415,8 @@ public final class InputController {
        */
       public Builder setEvent(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        event_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setEvent(value);
         return this;
       }
       /**
@@ -5776,9 +3428,8 @@ public final class InputController {
        * @return This builder for chaining.
        */
       public Builder clearEvent() {
-        event_ = getDefaultInstance().getEvent();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearEvent();
         return this;
       }
       /**
@@ -5792,15 +3443,11 @@ public final class InputController {
        */
       public Builder setEventBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        event_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setEventBytes(value);
         return this;
       }
 
-      private java.lang.Object control_ = "";
       /**
        * <pre>
        * A control, can be a button (eg: ButtonSouth) or an axis (eg: AbsoluteX)
@@ -5809,17 +3456,9 @@ public final class InputController {
        * <code>string control = 3 [json_name = "control"];</code>
        * @return The control.
        */
+      @java.lang.Override
       public java.lang.String getControl() {
-        java.lang.Object ref = control_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          control_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getControl();
       }
       /**
        * <pre>
@@ -5829,18 +3468,10 @@ public final class InputController {
        * <code>string control = 3 [json_name = "control"];</code>
        * @return The bytes for control.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getControlBytes() {
-        java.lang.Object ref = control_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          control_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getControlBytes();
       }
       /**
        * <pre>
@@ -5853,10 +3484,8 @@ public final class InputController {
        */
       public Builder setControl(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        control_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setControl(value);
         return this;
       }
       /**
@@ -5868,9 +3497,8 @@ public final class InputController {
        * @return This builder for chaining.
        */
       public Builder clearControl() {
-        control_ = getDefaultInstance().getControl();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearControl();
         return this;
       }
       /**
@@ -5884,15 +3512,11 @@ public final class InputController {
        */
       public Builder setControlBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        control_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setControlBytes(value);
         return this;
       }
 
-      private double value_ ;
       /**
        * <pre>
        * 0 or 1 for buttons, -1.0 to +1.0 for axes
@@ -5903,7 +3527,7 @@ public final class InputController {
        */
       @java.lang.Override
       public double getValue() {
-        return value_;
+        return instance.getValue();
       }
       /**
        * <pre>
@@ -5915,10 +3539,8 @@ public final class InputController {
        * @return This builder for chaining.
        */
       public Builder setValue(double value) {
-
-        value_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setValue(value);
         return this;
       }
       /**
@@ -5930,78 +3552,93 @@ public final class InputController {
        * @return This builder for chaining.
        */
       public Builder clearValue() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        value_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearValue();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.inputcontroller.v1.Event)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.inputcontroller.v1.InputController.Event();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "time_",
+              "event_",
+              "control_",
+              "value_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u0208\u0003\u0208\u0004\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.inputcontroller.v1.InputController.Event> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.inputcontroller.v1.InputController.Event.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.inputcontroller.v1.InputController.Event>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.inputcontroller.v1.Event)
     private static final com.viam.component.inputcontroller.v1.InputController.Event DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.inputcontroller.v1.InputController.Event();
+      Event defaultInstance = new Event();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Event.class, defaultInstance);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.Event getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Event>
-        PARSER = new com.google.protobuf.AbstractParser<Event>() {
-      @java.lang.Override
-      public Event parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Event> PARSER;
 
     public static com.google.protobuf.Parser<Event> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Event> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.inputcontroller.v1.InputController.Event getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StreamEventsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.inputcontroller.v1.StreamEventsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -6048,24 +3685,6 @@ public final class InputController {
      * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
      */
     int getEventsCount();
-    /**
-     * <pre>
-     * A list of Events
-     * </pre>
-     *
-     * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
-     */
-    java.util.List<? extends com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.EventsOrBuilder> 
-        getEventsOrBuilderList();
-    /**
-     * <pre>
-     * A list of Events
-     * </pre>
-     *
-     * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
-     */
-    com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.EventsOrBuilder getEventsOrBuilder(
-        int index);
 
     /**
      * <pre>
@@ -6085,55 +3704,22 @@ public final class InputController {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.inputcontroller.v1.StreamEventsRequest}
    */
-  public static final class StreamEventsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class StreamEventsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          StreamEventsRequest, StreamEventsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.inputcontroller.v1.StreamEventsRequest)
       StreamEventsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StreamEventsRequest.newBuilder() to construct.
-    private StreamEventsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private StreamEventsRequest() {
       controller_ = "";
-      events_ = java.util.Collections.emptyList();
+      events_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StreamEventsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.class, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Builder.class);
-    }
-
     public interface EventsOrBuilder extends
         // @@protoc_insertion_point(interface_extends:viam.component.inputcontroller.v1.StreamEventsRequest.Events)
-        com.google.protobuf.MessageOrBuilder {
+        com.google.protobuf.MessageLiteOrBuilder {
 
       /**
        * <pre>
@@ -6190,8 +3776,8 @@ public final class InputController {
        * </pre>
        *
        * <code>repeated string events = 2 [json_name = "events"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the events at the given index.
+       * @param index The index of the element to return.
+       * @return The events at the given index.
        */
       com.google.protobuf.ByteString
           getEventsBytes(int index);
@@ -6235,8 +3821,8 @@ public final class InputController {
        * </pre>
        *
        * <code>repeated string cancelled_events = 3 [json_name = "cancelledEvents"];</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the cancelledEvents at the given index.
+       * @param index The index of the element to return.
+       * @return The cancelledEvents at the given index.
        */
       com.google.protobuf.ByteString
           getCancelledEventsBytes(int index);
@@ -6244,46 +3830,18 @@ public final class InputController {
     /**
      * Protobuf type {@code viam.component.inputcontroller.v1.StreamEventsRequest.Events}
      */
-    public static final class Events extends
-        com.google.protobuf.GeneratedMessageV3 implements
+    public  static final class Events extends
+        com.google.protobuf.GeneratedMessageLite<
+            Events, Events.Builder> implements
         // @@protoc_insertion_point(message_implements:viam.component.inputcontroller.v1.StreamEventsRequest.Events)
         EventsOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Events.newBuilder() to construct.
-      private Events(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
       private Events() {
         control_ = "";
-        events_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        cancelledEvents_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
+        events_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+        cancelledEvents_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       }
-
-      @java.lang.Override
-      @SuppressWarnings({"unused"})
-      protected java.lang.Object newInstance(
-          UnusedPrivateParameter unused) {
-        return new Events();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_Events_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_Events_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.class, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.Builder.class);
-      }
-
       public static final int CONTROL_FIELD_NUMBER = 1;
-      @SuppressWarnings("serial")
-      private volatile java.lang.Object control_ = "";
+      private java.lang.String control_;
       /**
        * <pre>
        * Name of a control (button or axis)
@@ -6294,16 +3852,7 @@ public final class InputController {
        */
       @java.lang.Override
       public java.lang.String getControl() {
-        java.lang.Object ref = control_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          control_ = s;
-          return s;
-        }
+        return control_;
       }
       /**
        * <pre>
@@ -6316,22 +3865,50 @@ public final class InputController {
       @java.lang.Override
       public com.google.protobuf.ByteString
           getControlBytes() {
-        java.lang.Object ref = control_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          control_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return com.google.protobuf.ByteString.copyFromUtf8(control_);
+      }
+      /**
+       * <pre>
+       * Name of a control (button or axis)
+       * </pre>
+       *
+       * <code>string control = 1 [json_name = "control"];</code>
+       * @param value The control to set.
+       */
+      private void setControl(
+          java.lang.String value) {
+        java.lang.Class<?> valueClass = value.getClass();
+  
+        control_ = value;
+      }
+      /**
+       * <pre>
+       * Name of a control (button or axis)
+       * </pre>
+       *
+       * <code>string control = 1 [json_name = "control"];</code>
+       */
+      private void clearControl() {
+
+        control_ = getDefaultInstance().getControl();
+      }
+      /**
+       * <pre>
+       * Name of a control (button or axis)
+       * </pre>
+       *
+       * <code>string control = 1 [json_name = "control"];</code>
+       * @param value The bytes for control to set.
+       */
+      private void setControlBytes(
+          com.google.protobuf.ByteString value) {
+        checkByteStringIsUtf8(value);
+        control_ = value.toStringUtf8();
+
       }
 
       public static final int EVENTS_FIELD_NUMBER = 2;
-      @SuppressWarnings("serial")
-      private com.google.protobuf.LazyStringArrayList events_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<java.lang.String> events_;
       /**
        * <pre>
        * Specify which event types to recieve events for
@@ -6340,8 +3917,8 @@ public final class InputController {
        * <code>repeated string events = 2 [json_name = "events"];</code>
        * @return A list containing the events.
        */
-      public com.google.protobuf.ProtocolStringList
-          getEventsList() {
+      @java.lang.Override
+      public java.util.List<java.lang.String> getEventsList() {
         return events_;
       }
       /**
@@ -6352,6 +3929,7 @@ public final class InputController {
        * <code>repeated string events = 2 [json_name = "events"];</code>
        * @return The count of events.
        */
+      @java.lang.Override
       public int getEventsCount() {
         return events_.size();
       }
@@ -6364,6 +3942,7 @@ public final class InputController {
        * @param index The index of the element to return.
        * @return The events at the given index.
        */
+      @java.lang.Override
       public java.lang.String getEvents(int index) {
         return events_.get(index);
       }
@@ -6376,15 +3955,89 @@ public final class InputController {
        * @param index The index of the value to return.
        * @return The bytes of the events at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getEventsBytes(int index) {
-        return events_.getByteString(index);
+        return com.google.protobuf.ByteString.copyFromUtf8(
+            events_.get(index));
+      }
+      private void ensureEventsIsMutable() {
+        com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+            events_;  if (!tmp.isModifiable()) {
+          events_ =
+              com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+         }
+      }
+      /**
+       * <pre>
+       * Specify which event types to recieve events for
+       * </pre>
+       *
+       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * @param index The index to set the value at.
+       * @param value The events to set.
+       */
+      private void setEvents(
+          int index, java.lang.String value) {
+        java.lang.Class<?> valueClass = value.getClass();
+  ensureEventsIsMutable();
+        events_.set(index, value);
+      }
+      /**
+       * <pre>
+       * Specify which event types to recieve events for
+       * </pre>
+       *
+       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * @param value The events to add.
+       */
+      private void addEvents(
+          java.lang.String value) {
+        java.lang.Class<?> valueClass = value.getClass();
+  ensureEventsIsMutable();
+        events_.add(value);
+      }
+      /**
+       * <pre>
+       * Specify which event types to recieve events for
+       * </pre>
+       *
+       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * @param values The events to add.
+       */
+      private void addAllEvents(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureEventsIsMutable();
+        com.google.protobuf.AbstractMessageLite.addAll(
+            values, events_);
+      }
+      /**
+       * <pre>
+       * Specify which event types to recieve events for
+       * </pre>
+       *
+       * <code>repeated string events = 2 [json_name = "events"];</code>
+       */
+      private void clearEvents() {
+        events_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      }
+      /**
+       * <pre>
+       * Specify which event types to recieve events for
+       * </pre>
+       *
+       * <code>repeated string events = 2 [json_name = "events"];</code>
+       * @param value The bytes of the events to add.
+       */
+      private void addEventsBytes(
+          com.google.protobuf.ByteString value) {
+        checkByteStringIsUtf8(value);
+        ensureEventsIsMutable();
+        events_.add(value.toStringUtf8());
       }
 
       public static final int CANCELLED_EVENTS_FIELD_NUMBER = 3;
-      @SuppressWarnings("serial")
-      private com.google.protobuf.LazyStringArrayList cancelledEvents_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<java.lang.String> cancelledEvents_;
       /**
        * <pre>
        * Specify which event types to stop recieving events for
@@ -6394,8 +4047,8 @@ public final class InputController {
        * <code>repeated string cancelled_events = 3 [json_name = "cancelledEvents"];</code>
        * @return A list containing the cancelledEvents.
        */
-      public com.google.protobuf.ProtocolStringList
-          getCancelledEventsList() {
+      @java.lang.Override
+      public java.util.List<java.lang.String> getCancelledEventsList() {
         return cancelledEvents_;
       }
       /**
@@ -6407,6 +4060,7 @@ public final class InputController {
        * <code>repeated string cancelled_events = 3 [json_name = "cancelledEvents"];</code>
        * @return The count of cancelledEvents.
        */
+      @java.lang.Override
       public int getCancelledEventsCount() {
         return cancelledEvents_.size();
       }
@@ -6420,6 +4074,7 @@ public final class InputController {
        * @param index The index of the element to return.
        * @return The cancelledEvents at the given index.
        */
+      @java.lang.Override
       public java.lang.String getCancelledEvents(int index) {
         return cancelledEvents_.get(index);
       }
@@ -6433,416 +4088,189 @@ public final class InputController {
        * @param index The index of the value to return.
        * @return The bytes of the cancelledEvents at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getCancelledEventsBytes(int index) {
-        return cancelledEvents_.getByteString(index);
+        return com.google.protobuf.ByteString.copyFromUtf8(
+            cancelledEvents_.get(index));
       }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
+      private void ensureCancelledEventsIsMutable() {
+        com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+            cancelledEvents_;  if (!tmp.isModifiable()) {
+          cancelledEvents_ =
+              com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+         }
       }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(control_)) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, control_);
-        }
-        for (int i = 0; i < events_.size(); i++) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, events_.getRaw(i));
-        }
-        for (int i = 0; i < cancelledEvents_.size(); i++) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cancelledEvents_.getRaw(i));
-        }
-        getUnknownFields().writeTo(output);
+      /**
+       * <pre>
+       * Specify which event types to stop recieving events for
+       * This can be an empty list
+       * </pre>
+       *
+       * <code>repeated string cancelled_events = 3 [json_name = "cancelledEvents"];</code>
+       * @param index The index to set the value at.
+       * @param value The cancelledEvents to set.
+       */
+      private void setCancelledEvents(
+          int index, java.lang.String value) {
+        java.lang.Class<?> valueClass = value.getClass();
+  ensureCancelledEventsIsMutable();
+        cancelledEvents_.set(index, value);
       }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(control_)) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, control_);
-        }
-        {
-          int dataSize = 0;
-          for (int i = 0; i < events_.size(); i++) {
-            dataSize += computeStringSizeNoTag(events_.getRaw(i));
-          }
-          size += dataSize;
-          size += 1 * getEventsList().size();
-        }
-        {
-          int dataSize = 0;
-          for (int i = 0; i < cancelledEvents_.size(); i++) {
-            dataSize += computeStringSizeNoTag(cancelledEvents_.getRaw(i));
-          }
-          size += dataSize;
-          size += 1 * getCancelledEventsList().size();
-        }
-        size += getUnknownFields().getSerializedSize();
-        memoizedSize = size;
-        return size;
+      /**
+       * <pre>
+       * Specify which event types to stop recieving events for
+       * This can be an empty list
+       * </pre>
+       *
+       * <code>repeated string cancelled_events = 3 [json_name = "cancelledEvents"];</code>
+       * @param value The cancelledEvents to add.
+       */
+      private void addCancelledEvents(
+          java.lang.String value) {
+        java.lang.Class<?> valueClass = value.getClass();
+  ensureCancelledEventsIsMutable();
+        cancelledEvents_.add(value);
       }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events)) {
-          return super.equals(obj);
-        }
-        com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events other = (com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events) obj;
-
-        if (!getControl()
-            .equals(other.getControl())) return false;
-        if (!getEventsList()
-            .equals(other.getEventsList())) return false;
-        if (!getCancelledEventsList()
-            .equals(other.getCancelledEventsList())) return false;
-        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-        return true;
+      /**
+       * <pre>
+       * Specify which event types to stop recieving events for
+       * This can be an empty list
+       * </pre>
+       *
+       * <code>repeated string cancelled_events = 3 [json_name = "cancelledEvents"];</code>
+       * @param values The cancelledEvents to add.
+       */
+      private void addAllCancelledEvents(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureCancelledEventsIsMutable();
+        com.google.protobuf.AbstractMessageLite.addAll(
+            values, cancelledEvents_);
       }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + CONTROL_FIELD_NUMBER;
-        hash = (53 * hash) + getControl().hashCode();
-        if (getEventsCount() > 0) {
-          hash = (37 * hash) + EVENTS_FIELD_NUMBER;
-          hash = (53 * hash) + getEventsList().hashCode();
-        }
-        if (getCancelledEventsCount() > 0) {
-          hash = (37 * hash) + CANCELLED_EVENTS_FIELD_NUMBER;
-          hash = (53 * hash) + getCancelledEventsList().hashCode();
-        }
-        hash = (29 * hash) + getUnknownFields().hashCode();
-        memoizedHashCode = hash;
-        return hash;
+      /**
+       * <pre>
+       * Specify which event types to stop recieving events for
+       * This can be an empty list
+       * </pre>
+       *
+       * <code>repeated string cancelled_events = 3 [json_name = "cancelledEvents"];</code>
+       */
+      private void clearCancelledEvents() {
+        cancelledEvents_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      }
+      /**
+       * <pre>
+       * Specify which event types to stop recieving events for
+       * This can be an empty list
+       * </pre>
+       *
+       * <code>repeated string cancelled_events = 3 [json_name = "cancelledEvents"];</code>
+       * @param value The bytes of the cancelledEvents to add.
+       */
+      private void addCancelledEventsBytes(
+          com.google.protobuf.ByteString value) {
+        checkByteStringIsUtf8(value);
+        ensureCancelledEventsIsMutable();
+        cancelledEvents_.add(value.toStringUtf8());
       }
 
       public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data);
       }
       public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data, extensionRegistry);
       }
       public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data);
       }
       public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data, extensionRegistry);
       }
       public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data);
       }
       public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, data, extensionRegistry);
       }
       public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, input);
       }
       public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, input, extensionRegistry);
       }
 
       public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
+        return parseDelimitedFrom(DEFAULT_INSTANCE, input);
       }
 
       public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
       }
       public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, input);
       }
       public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessageLite.parseFrom(
+            DEFAULT_INSTANCE, input, extensionRegistry);
       }
 
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
+        return (Builder) DEFAULT_INSTANCE.createBuilder();
       }
       public static Builder newBuilder(com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
+        return DEFAULT_INSTANCE.createBuilder(prototype);
       }
 
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
       /**
        * Protobuf type {@code viam.component.inputcontroller.v1.StreamEventsRequest.Events}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          com.google.protobuf.GeneratedMessageLite.Builder<
+            com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events, Builder> implements
           // @@protoc_insertion_point(builder_implements:viam.component.inputcontroller.v1.StreamEventsRequest.Events)
           com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.EventsOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_Events_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_Events_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.class, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.Builder.class);
-        }
-
         // Construct using com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.newBuilder()
         private Builder() {
-
+          super(DEFAULT_INSTANCE);
         }
 
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
 
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          bitField0_ = 0;
-          control_ = "";
-          events_ =
-              com.google.protobuf.LazyStringArrayList.emptyList();
-          cancelledEvents_ =
-              com.google.protobuf.LazyStringArrayList.emptyList();
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_Events_descriptor;
-        }
-
-        @java.lang.Override
-        public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events getDefaultInstanceForType() {
-          return com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events build() {
-          com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events buildPartial() {
-          com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events result = new com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events(this);
-          if (bitField0_ != 0) { buildPartial0(result); }
-          onBuilt();
-          return result;
-        }
-
-        private void buildPartial0(com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events result) {
-          int from_bitField0_ = bitField0_;
-          if (((from_bitField0_ & 0x00000001) != 0)) {
-            result.control_ = control_;
-          }
-          if (((from_bitField0_ & 0x00000002) != 0)) {
-            events_.makeImmutable();
-            result.events_ = events_;
-          }
-          if (((from_bitField0_ & 0x00000004) != 0)) {
-            cancelledEvents_.makeImmutable();
-            result.cancelledEvents_ = cancelledEvents_;
-          }
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events) {
-            return mergeFrom((com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events other) {
-          if (other == com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.getDefaultInstance()) return this;
-          if (!other.getControl().isEmpty()) {
-            control_ = other.control_;
-            bitField0_ |= 0x00000001;
-            onChanged();
-          }
-          if (!other.events_.isEmpty()) {
-            if (events_.isEmpty()) {
-              events_ = other.events_;
-              bitField0_ |= 0x00000002;
-            } else {
-              ensureEventsIsMutable();
-              events_.addAll(other.events_);
-            }
-            onChanged();
-          }
-          if (!other.cancelledEvents_.isEmpty()) {
-            if (cancelledEvents_.isEmpty()) {
-              cancelledEvents_ = other.cancelledEvents_;
-              bitField0_ |= 0x00000004;
-            } else {
-              ensureCancelledEventsIsMutable();
-              cancelledEvents_.addAll(other.cancelledEvents_);
-            }
-            onChanged();
-          }
-          this.mergeUnknownFields(other.getUnknownFields());
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          if (extensionRegistry == null) {
-            throw new java.lang.NullPointerException();
-          }
-          try {
-            boolean done = false;
-            while (!done) {
-              int tag = input.readTag();
-              switch (tag) {
-                case 0:
-                  done = true;
-                  break;
-                case 10: {
-                  control_ = input.readStringRequireUtf8();
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 10
-                case 18: {
-                  java.lang.String s = input.readStringRequireUtf8();
-                  ensureEventsIsMutable();
-                  events_.add(s);
-                  break;
-                } // case 18
-                case 26: {
-                  java.lang.String s = input.readStringRequireUtf8();
-                  ensureCancelledEventsIsMutable();
-                  cancelledEvents_.add(s);
-                  break;
-                } // case 26
-                default: {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
-              } // switch (tag)
-            } // while (!done)
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.unwrapIOException();
-          } finally {
-            onChanged();
-          } // finally
-          return this;
-        }
-        private int bitField0_;
-
-        private java.lang.Object control_ = "";
         /**
          * <pre>
          * Name of a control (button or axis)
@@ -6851,17 +4279,9 @@ public final class InputController {
          * <code>string control = 1 [json_name = "control"];</code>
          * @return The control.
          */
+        @java.lang.Override
         public java.lang.String getControl() {
-          java.lang.Object ref = control_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            control_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
+          return instance.getControl();
         }
         /**
          * <pre>
@@ -6871,18 +4291,10 @@ public final class InputController {
          * <code>string control = 1 [json_name = "control"];</code>
          * @return The bytes for control.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getControlBytes() {
-          java.lang.Object ref = control_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            control_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
+          return instance.getControlBytes();
         }
         /**
          * <pre>
@@ -6895,10 +4307,8 @@ public final class InputController {
          */
         public Builder setControl(
             java.lang.String value) {
-          if (value == null) { throw new NullPointerException(); }
-          control_ = value;
-          bitField0_ |= 0x00000001;
-          onChanged();
+          copyOnWrite();
+          instance.setControl(value);
           return this;
         }
         /**
@@ -6910,9 +4320,8 @@ public final class InputController {
          * @return This builder for chaining.
          */
         public Builder clearControl() {
-          control_ = getDefaultInstance().getControl();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
+          copyOnWrite();
+          instance.clearControl();
           return this;
         }
         /**
@@ -6926,22 +4335,11 @@ public final class InputController {
          */
         public Builder setControlBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) { throw new NullPointerException(); }
-          checkByteStringIsUtf8(value);
-          control_ = value;
-          bitField0_ |= 0x00000001;
-          onChanged();
+          copyOnWrite();
+          instance.setControlBytes(value);
           return this;
         }
 
-        private com.google.protobuf.LazyStringArrayList events_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        private void ensureEventsIsMutable() {
-          if (!events_.isModifiable()) {
-            events_ = new com.google.protobuf.LazyStringArrayList(events_);
-          }
-          bitField0_ |= 0x00000002;
-        }
         /**
          * <pre>
          * Specify which event types to recieve events for
@@ -6950,10 +4348,11 @@ public final class InputController {
          * <code>repeated string events = 2 [json_name = "events"];</code>
          * @return A list containing the events.
          */
-        public com.google.protobuf.ProtocolStringList
+        @java.lang.Override
+        public java.util.List<java.lang.String>
             getEventsList() {
-          events_.makeImmutable();
-          return events_;
+          return java.util.Collections.unmodifiableList(
+              instance.getEventsList());
         }
         /**
          * <pre>
@@ -6963,8 +4362,9 @@ public final class InputController {
          * <code>repeated string events = 2 [json_name = "events"];</code>
          * @return The count of events.
          */
+        @java.lang.Override
         public int getEventsCount() {
-          return events_.size();
+          return instance.getEventsCount();
         }
         /**
          * <pre>
@@ -6975,8 +4375,9 @@ public final class InputController {
          * @param index The index of the element to return.
          * @return The events at the given index.
          */
+        @java.lang.Override
         public java.lang.String getEvents(int index) {
-          return events_.get(index);
+          return instance.getEvents(index);
         }
         /**
          * <pre>
@@ -6987,9 +4388,10 @@ public final class InputController {
          * @param index The index of the value to return.
          * @return The bytes of the events at the given index.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getEventsBytes(int index) {
-          return events_.getByteString(index);
+          return instance.getEventsBytes(index);
         }
         /**
          * <pre>
@@ -7003,11 +4405,8 @@ public final class InputController {
          */
         public Builder setEvents(
             int index, java.lang.String value) {
-          if (value == null) { throw new NullPointerException(); }
-          ensureEventsIsMutable();
-          events_.set(index, value);
-          bitField0_ |= 0x00000002;
-          onChanged();
+          copyOnWrite();
+          instance.setEvents(index, value);
           return this;
         }
         /**
@@ -7021,11 +4420,8 @@ public final class InputController {
          */
         public Builder addEvents(
             java.lang.String value) {
-          if (value == null) { throw new NullPointerException(); }
-          ensureEventsIsMutable();
-          events_.add(value);
-          bitField0_ |= 0x00000002;
-          onChanged();
+          copyOnWrite();
+          instance.addEvents(value);
           return this;
         }
         /**
@@ -7039,11 +4435,8 @@ public final class InputController {
          */
         public Builder addAllEvents(
             java.lang.Iterable<java.lang.String> values) {
-          ensureEventsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, events_);
-          bitField0_ |= 0x00000002;
-          onChanged();
+          copyOnWrite();
+          instance.addAllEvents(values);
           return this;
         }
         /**
@@ -7055,10 +4448,8 @@ public final class InputController {
          * @return This builder for chaining.
          */
         public Builder clearEvents() {
-          events_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);;
-          onChanged();
+          copyOnWrite();
+          instance.clearEvents();
           return this;
         }
         /**
@@ -7072,23 +4463,11 @@ public final class InputController {
          */
         public Builder addEventsBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) { throw new NullPointerException(); }
-          checkByteStringIsUtf8(value);
-          ensureEventsIsMutable();
-          events_.add(value);
-          bitField0_ |= 0x00000002;
-          onChanged();
+          copyOnWrite();
+          instance.addEventsBytes(value);
           return this;
         }
 
-        private com.google.protobuf.LazyStringArrayList cancelledEvents_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        private void ensureCancelledEventsIsMutable() {
-          if (!cancelledEvents_.isModifiable()) {
-            cancelledEvents_ = new com.google.protobuf.LazyStringArrayList(cancelledEvents_);
-          }
-          bitField0_ |= 0x00000004;
-        }
         /**
          * <pre>
          * Specify which event types to stop recieving events for
@@ -7098,10 +4477,11 @@ public final class InputController {
          * <code>repeated string cancelled_events = 3 [json_name = "cancelledEvents"];</code>
          * @return A list containing the cancelledEvents.
          */
-        public com.google.protobuf.ProtocolStringList
+        @java.lang.Override
+        public java.util.List<java.lang.String>
             getCancelledEventsList() {
-          cancelledEvents_.makeImmutable();
-          return cancelledEvents_;
+          return java.util.Collections.unmodifiableList(
+              instance.getCancelledEventsList());
         }
         /**
          * <pre>
@@ -7112,8 +4492,9 @@ public final class InputController {
          * <code>repeated string cancelled_events = 3 [json_name = "cancelledEvents"];</code>
          * @return The count of cancelledEvents.
          */
+        @java.lang.Override
         public int getCancelledEventsCount() {
-          return cancelledEvents_.size();
+          return instance.getCancelledEventsCount();
         }
         /**
          * <pre>
@@ -7125,8 +4506,9 @@ public final class InputController {
          * @param index The index of the element to return.
          * @return The cancelledEvents at the given index.
          */
+        @java.lang.Override
         public java.lang.String getCancelledEvents(int index) {
-          return cancelledEvents_.get(index);
+          return instance.getCancelledEvents(index);
         }
         /**
          * <pre>
@@ -7138,9 +4520,10 @@ public final class InputController {
          * @param index The index of the value to return.
          * @return The bytes of the cancelledEvents at the given index.
          */
+        @java.lang.Override
         public com.google.protobuf.ByteString
             getCancelledEventsBytes(int index) {
-          return cancelledEvents_.getByteString(index);
+          return instance.getCancelledEventsBytes(index);
         }
         /**
          * <pre>
@@ -7155,11 +4538,8 @@ public final class InputController {
          */
         public Builder setCancelledEvents(
             int index, java.lang.String value) {
-          if (value == null) { throw new NullPointerException(); }
-          ensureCancelledEventsIsMutable();
-          cancelledEvents_.set(index, value);
-          bitField0_ |= 0x00000004;
-          onChanged();
+          copyOnWrite();
+          instance.setCancelledEvents(index, value);
           return this;
         }
         /**
@@ -7174,11 +4554,8 @@ public final class InputController {
          */
         public Builder addCancelledEvents(
             java.lang.String value) {
-          if (value == null) { throw new NullPointerException(); }
-          ensureCancelledEventsIsMutable();
-          cancelledEvents_.add(value);
-          bitField0_ |= 0x00000004;
-          onChanged();
+          copyOnWrite();
+          instance.addCancelledEvents(value);
           return this;
         }
         /**
@@ -7193,11 +4570,8 @@ public final class InputController {
          */
         public Builder addAllCancelledEvents(
             java.lang.Iterable<java.lang.String> values) {
-          ensureCancelledEventsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, cancelledEvents_);
-          bitField0_ |= 0x00000004;
-          onChanged();
+          copyOnWrite();
+          instance.addAllCancelledEvents(values);
           return this;
         }
         /**
@@ -7210,10 +4584,8 @@ public final class InputController {
          * @return This builder for chaining.
          */
         public Builder clearCancelledEvents() {
-          cancelledEvents_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);;
-          onChanged();
+          copyOnWrite();
+          instance.clearCancelledEvents();
           return this;
         }
         /**
@@ -7228,82 +4600,91 @@ public final class InputController {
          */
         public Builder addCancelledEventsBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) { throw new NullPointerException(); }
-          checkByteStringIsUtf8(value);
-          ensureCancelledEventsIsMutable();
-          cancelledEvents_.add(value);
-          bitField0_ |= 0x00000004;
-          onChanged();
+          copyOnWrite();
+          instance.addCancelledEventsBytes(value);
           return this;
         }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFields(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
 
         // @@protoc_insertion_point(builder_scope:viam.component.inputcontroller.v1.StreamEventsRequest.Events)
       }
+      @java.lang.Override
+      @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+      protected final java.lang.Object dynamicMethod(
+          com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+          java.lang.Object arg0, java.lang.Object arg1) {
+        switch (method) {
+          case NEW_MUTABLE_INSTANCE: {
+            return new com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events();
+          }
+          case NEW_BUILDER: {
+            return new Builder();
+          }
+          case BUILD_MESSAGE_INFO: {
+              java.lang.Object[] objects = new java.lang.Object[] {
+                "control_",
+                "events_",
+                "cancelledEvents_",
+              };
+              java.lang.String info =
+                  "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0002\u0000\u0001\u0208\u0002\u021a" +
+                  "\u0003\u021a";
+              return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+          }
+          // fall through
+          case GET_DEFAULT_INSTANCE: {
+            return DEFAULT_INSTANCE;
+          }
+          case GET_PARSER: {
+            com.google.protobuf.Parser<com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events> parser = PARSER;
+            if (parser == null) {
+              synchronized (com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.class) {
+                parser = PARSER;
+                if (parser == null) {
+                  parser =
+                      new DefaultInstanceBasedParser<com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events>(
+                          DEFAULT_INSTANCE);
+                  PARSER = parser;
+                }
+              }
+            }
+            return parser;
+        }
+        case GET_MEMOIZED_IS_INITIALIZED: {
+          return (byte) 1;
+        }
+        case SET_MEMOIZED_IS_INITIALIZED: {
+          return null;
+        }
+        }
+        throw new UnsupportedOperationException();
+      }
+
 
       // @@protoc_insertion_point(class_scope:viam.component.inputcontroller.v1.StreamEventsRequest.Events)
       private static final com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events();
+        Events defaultInstance = new Events();
+        // New instances are implicitly immutable so no need to make
+        // immutable.
+        DEFAULT_INSTANCE = defaultInstance;
+        com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+          Events.class, defaultInstance);
       }
 
       public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<Events>
-          PARSER = new com.google.protobuf.AbstractParser<Events>() {
-        @java.lang.Override
-        public Events parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
+      private static volatile com.google.protobuf.Parser<Events> PARSER;
 
       public static com.google.protobuf.Parser<Events> parser() {
-        return PARSER;
+        return DEFAULT_INSTANCE.getParserForType();
       }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Events> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
     }
 
     private int bitField0_;
     public static final int CONTROLLER_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object controller_ = "";
+    private java.lang.String controller_;
     /**
      * <pre>
      * Name of an input controller
@@ -7314,16 +4695,7 @@ public final class InputController {
      */
     @java.lang.Override
     public java.lang.String getController() {
-      java.lang.Object ref = controller_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        controller_ = s;
-        return s;
-      }
+      return controller_;
     }
     /**
      * <pre>
@@ -7336,21 +4708,50 @@ public final class InputController {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getControllerBytes() {
-      java.lang.Object ref = controller_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        controller_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(controller_);
+    }
+    /**
+     * <pre>
+     * Name of an input controller
+     * </pre>
+     *
+     * <code>string controller = 1 [json_name = "controller"];</code>
+     * @param value The controller to set.
+     */
+    private void setController(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      controller_ = value;
+    }
+    /**
+     * <pre>
+     * Name of an input controller
+     * </pre>
+     *
+     * <code>string controller = 1 [json_name = "controller"];</code>
+     */
+    private void clearController() {
+
+      controller_ = getDefaultInstance().getController();
+    }
+    /**
+     * <pre>
+     * Name of an input controller
+     * </pre>
+     *
+     * <code>string controller = 1 [json_name = "controller"];</code>
+     * @param value The bytes for controller to set.
+     */
+    private void setControllerBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      controller_ = value.toStringUtf8();
+
     }
 
     public static final int EVENTS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events> events_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events> events_;
     /**
      * <pre>
      * A list of Events
@@ -7369,7 +4770,6 @@ public final class InputController {
      *
      * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.EventsOrBuilder> 
         getEventsOrBuilderList() {
       return events_;
@@ -7403,10 +4803,89 @@ public final class InputController {
      *
      * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
      */
-    @java.lang.Override
     public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.EventsOrBuilder getEventsOrBuilder(
         int index) {
       return events_.get(index);
+    }
+    private void ensureEventsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events> tmp = events_;
+      if (!tmp.isModifiable()) {
+        events_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * A list of Events
+     * </pre>
+     *
+     * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
+     */
+    private void setEvents(
+        int index, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events value) {
+      value.getClass();
+  ensureEventsIsMutable();
+      events_.set(index, value);
+    }
+    /**
+     * <pre>
+     * A list of Events
+     * </pre>
+     *
+     * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
+     */
+    private void addEvents(com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events value) {
+      value.getClass();
+  ensureEventsIsMutable();
+      events_.add(value);
+    }
+    /**
+     * <pre>
+     * A list of Events
+     * </pre>
+     *
+     * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
+     */
+    private void addEvents(
+        int index, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events value) {
+      value.getClass();
+  ensureEventsIsMutable();
+      events_.add(index, value);
+    }
+    /**
+     * <pre>
+     * A list of Events
+     * </pre>
+     *
+     * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
+     */
+    private void addAllEvents(
+        java.lang.Iterable<? extends com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events> values) {
+      ensureEventsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, events_);
+    }
+    /**
+     * <pre>
+     * A list of Events
+     * </pre>
+     *
+     * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
+     */
+    private void clearEvents() {
+      events_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * A list of Events
+     * </pre>
+     *
+     * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
+     */
+    private void removeEvents(int index) {
+      ensureEventsIsMutable();
+      events_.remove(index);
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -7417,7 +4896,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -7429,7 +4907,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -7442,456 +4919,138 @@ public final class InputController {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controller_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, controller_);
-      }
-      for (int i = 0; i < events_.size(); i++) {
-        output.writeMessage(2, events_.get(i));
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(controller_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, controller_);
-      }
-      for (int i = 0; i < events_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, events_.get(i));
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest other = (com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest) obj;
-
-      if (!getController()
-          .equals(other.getController())) return false;
-      if (!getEventsList()
-          .equals(other.getEventsList())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONTROLLER_FIELD_NUMBER;
-      hash = (53 * hash) + getController().hashCode();
-      if (getEventsCount() > 0) {
-        hash = (37 * hash) + EVENTS_FIELD_NUMBER;
-        hash = (53 * hash) + getEventsList().hashCode();
-      }
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.inputcontroller.v1.StreamEventsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.inputcontroller.v1.StreamEventsRequest)
         com.viam.component.inputcontroller.v1.InputController.StreamEventsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.class, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEventsFieldBuilder();
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        controller_ = "";
-        if (eventsBuilder_ == null) {
-          events_ = java.util.Collections.emptyList();
-        } else {
-          events_ = null;
-          eventsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest getDefaultInstanceForType() {
-        return com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest build() {
-        com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest buildPartial() {
-        com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest result = new com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest result) {
-        if (eventsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            events_ = java.util.Collections.unmodifiableList(events_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.events_ = events_;
-        } else {
-          result.events_ = eventsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.controller_ = controller_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest) {
-          return mergeFrom((com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest other) {
-        if (other == com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.getDefaultInstance()) return this;
-        if (!other.getController().isEmpty()) {
-          controller_ = other.controller_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (eventsBuilder_ == null) {
-          if (!other.events_.isEmpty()) {
-            if (events_.isEmpty()) {
-              events_ = other.events_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureEventsIsMutable();
-              events_.addAll(other.events_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.events_.isEmpty()) {
-            if (eventsBuilder_.isEmpty()) {
-              eventsBuilder_.dispose();
-              eventsBuilder_ = null;
-              events_ = other.events_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              eventsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getEventsFieldBuilder() : null;
-            } else {
-              eventsBuilder_.addAllMessages(other.events_);
-            }
-          }
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                controller_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events m =
-                    input.readMessage(
-                        com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.parser(),
-                        extensionRegistry);
-                if (eventsBuilder_ == null) {
-                  ensureEventsIsMutable();
-                  events_.add(m);
-                } else {
-                  eventsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 18
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object controller_ = "";
       /**
        * <pre>
        * Name of an input controller
@@ -7900,17 +5059,9 @@ public final class InputController {
        * <code>string controller = 1 [json_name = "controller"];</code>
        * @return The controller.
        */
+      @java.lang.Override
       public java.lang.String getController() {
-        java.lang.Object ref = controller_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          controller_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getController();
       }
       /**
        * <pre>
@@ -7920,18 +5071,10 @@ public final class InputController {
        * <code>string controller = 1 [json_name = "controller"];</code>
        * @return The bytes for controller.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getControllerBytes() {
-        java.lang.Object ref = controller_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          controller_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getControllerBytes();
       }
       /**
        * <pre>
@@ -7944,10 +5087,8 @@ public final class InputController {
        */
       public Builder setController(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        controller_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setController(value);
         return this;
       }
       /**
@@ -7959,9 +5100,8 @@ public final class InputController {
        * @return This builder for chaining.
        */
       public Builder clearController() {
-        controller_ = getDefaultInstance().getController();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearController();
         return this;
       }
       /**
@@ -7975,26 +5115,11 @@ public final class InputController {
        */
       public Builder setControllerBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        controller_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setControllerBytes(value);
         return this;
       }
 
-      private java.util.List<com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events> events_ =
-        java.util.Collections.emptyList();
-      private void ensureEventsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          events_ = new java.util.ArrayList<com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events>(events_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.Builder, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.EventsOrBuilder> eventsBuilder_;
-
       /**
        * <pre>
        * A list of Events
@@ -8002,12 +5127,10 @@ public final class InputController {
        *
        * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events> getEventsList() {
-        if (eventsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(events_);
-        } else {
-          return eventsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getEventsList());
       }
       /**
        * <pre>
@@ -8016,26 +5139,19 @@ public final class InputController {
        *
        * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
        */
+      @java.lang.Override
       public int getEventsCount() {
-        if (eventsBuilder_ == null) {
-          return events_.size();
-        } else {
-          return eventsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getEventsCount();
+      }/**
        * <pre>
        * A list of Events
        * </pre>
        *
        * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
        */
+      @java.lang.Override
       public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events getEvents(int index) {
-        if (eventsBuilder_ == null) {
-          return events_.get(index);
-        } else {
-          return eventsBuilder_.getMessage(index);
-        }
+        return instance.getEvents(index);
       }
       /**
        * <pre>
@@ -8046,16 +5162,8 @@ public final class InputController {
        */
       public Builder setEvents(
           int index, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.set(index, value);
-          onChanged();
-        } else {
-          eventsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setEvents(index, value);
         return this;
       }
       /**
@@ -8067,13 +5175,9 @@ public final class InputController {
        */
       public Builder setEvents(
           int index, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setEvents(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -8084,16 +5188,8 @@ public final class InputController {
        * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
        */
       public Builder addEvents(com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.add(value);
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addEvents(value);
         return this;
       }
       /**
@@ -8105,16 +5201,8 @@ public final class InputController {
        */
       public Builder addEvents(
           int index, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.add(index, value);
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addEvents(index, value);
         return this;
       }
       /**
@@ -8126,13 +5214,8 @@ public final class InputController {
        */
       public Builder addEvents(
           com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.add(builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addEvents(builderForValue.build());
         return this;
       }
       /**
@@ -8144,13 +5227,9 @@ public final class InputController {
        */
       public Builder addEvents(
           int index, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addEvents(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -8162,14 +5241,8 @@ public final class InputController {
        */
       public Builder addAllEvents(
           java.lang.Iterable<? extends com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events> values) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, events_);
-          onChanged();
-        } else {
-          eventsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllEvents(values);
         return this;
       }
       /**
@@ -8180,13 +5253,8 @@ public final class InputController {
        * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
        */
       public Builder clearEvents() {
-        if (eventsBuilder_ == null) {
-          events_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          eventsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearEvents();
         return this;
       }
       /**
@@ -8197,117 +5265,21 @@ public final class InputController {
        * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
        */
       public Builder removeEvents(int index) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.remove(index);
-          onChanged();
-        } else {
-          eventsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeEvents(index);
         return this;
       }
-      /**
-       * <pre>
-       * A list of Events
-       * </pre>
-       *
-       * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.Builder getEventsBuilder(
-          int index) {
-        return getEventsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * A list of Events
-       * </pre>
-       *
-       * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.EventsOrBuilder getEventsOrBuilder(
-          int index) {
-        if (eventsBuilder_ == null) {
-          return events_.get(index);  } else {
-          return eventsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * A list of Events
-       * </pre>
-       *
-       * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
-       */
-      public java.util.List<? extends com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.EventsOrBuilder> 
-           getEventsOrBuilderList() {
-        if (eventsBuilder_ != null) {
-          return eventsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(events_);
-        }
-      }
-      /**
-       * <pre>
-       * A list of Events
-       * </pre>
-       *
-       * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.Builder addEventsBuilder() {
-        return getEventsFieldBuilder().addBuilder(
-            com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * A list of Events
-       * </pre>
-       *
-       * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.Builder addEventsBuilder(
-          int index) {
-        return getEventsFieldBuilder().addBuilder(
-            index, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * A list of Events
-       * </pre>
-       *
-       * <code>repeated .viam.component.inputcontroller.v1.StreamEventsRequest.Events events = 2 [json_name = "events"];</code>
-       */
-      public java.util.List<com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.Builder> 
-           getEventsBuilderList() {
-        return getEventsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.Builder, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.EventsOrBuilder> 
-          getEventsFieldBuilder() {
-        if (eventsBuilder_ == null) {
-          eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.Builder, com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.EventsOrBuilder>(
-                  events_,
-                  ((bitField0_ & 0x00000002) != 0),
-                  getParentForChildren(),
-                  isClean());
-          events_ = null;
-        }
-        return eventsBuilder_;
-      }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -8315,14 +5287,10 @@ public final class InputController {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -8332,18 +5300,10 @@ public final class InputController {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -8353,13 +5313,8 @@ public final class InputController {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -8370,21 +5325,8 @@ public final class InputController {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -8394,130 +5336,93 @@ public final class InputController {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.inputcontroller.v1.StreamEventsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "controller_",
+              "events_",
+              com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.Events.class,
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0001\u0000\u0001\u0208\u0002\u001bc" +
+                "\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.inputcontroller.v1.StreamEventsRequest)
     private static final com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest();
+      StreamEventsRequest defaultInstance = new StreamEventsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StreamEventsRequest.class, defaultInstance);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<StreamEventsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<StreamEventsRequest>() {
-      @java.lang.Override
-      public StreamEventsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<StreamEventsRequest> PARSER;
 
     public static com.google.protobuf.Parser<StreamEventsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StreamEventsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.inputcontroller.v1.InputController.StreamEventsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StreamEventsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.inputcontroller.v1.StreamEventsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -8537,50 +5442,17 @@ public final class InputController {
      * @return The event.
      */
     com.viam.component.inputcontroller.v1.InputController.Event getEvent();
-    /**
-     * <pre>
-     * Event for a controller
-     * </pre>
-     *
-     * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
-     */
-    com.viam.component.inputcontroller.v1.InputController.EventOrBuilder getEventOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.inputcontroller.v1.StreamEventsResponse}
    */
-  public static final class StreamEventsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class StreamEventsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          StreamEventsResponse, StreamEventsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.inputcontroller.v1.StreamEventsResponse)
       StreamEventsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StreamEventsResponse.newBuilder() to construct.
-    private StreamEventsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private StreamEventsResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StreamEventsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse.class, com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int EVENT_FIELD_NUMBER = 1;
     private com.viam.component.inputcontroller.v1.InputController.Event event_;
@@ -8590,7 +5462,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
-     * @return Whether the event field is set.
      */
     @java.lang.Override
     public boolean hasEvent() {
@@ -8602,7 +5473,6 @@ public final class InputController {
      * </pre>
      *
      * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
-     * @return The event.
      */
     @java.lang.Override
     public com.viam.component.inputcontroller.v1.InputController.Event getEvent() {
@@ -8615,371 +5485,148 @@ public final class InputController {
      *
      * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
      */
-    @java.lang.Override
-    public com.viam.component.inputcontroller.v1.InputController.EventOrBuilder getEventOrBuilder() {
-      return event_ == null ? com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance() : event_;
+    private void setEvent(com.viam.component.inputcontroller.v1.InputController.Event value) {
+      value.getClass();
+  event_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Event for a controller
+     * </pre>
+     *
+     * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeEvent(com.viam.component.inputcontroller.v1.InputController.Event value) {
+      value.getClass();
+  if (event_ != null &&
+          event_ != com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance()) {
+        event_ =
+          com.viam.component.inputcontroller.v1.InputController.Event.newBuilder(event_).mergeFrom(value).buildPartial();
+      } else {
+        event_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getEvent());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getEvent());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse other = (com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse) obj;
-
-      if (hasEvent() != other.hasEvent()) return false;
-      if (hasEvent()) {
-        if (!getEvent()
-            .equals(other.getEvent())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasEvent()) {
-        hash = (37 * hash) + EVENT_FIELD_NUMBER;
-        hash = (53 * hash) + getEvent().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Event for a controller
+     * </pre>
+     *
+     * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
+     */
+    private void clearEvent() {  event_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.inputcontroller.v1.StreamEventsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.inputcontroller.v1.StreamEventsResponse)
         com.viam.component.inputcontroller.v1.InputController.StreamEventsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse.class, com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEventFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        event_ = null;
-        if (eventBuilder_ != null) {
-          eventBuilder_.dispose();
-          eventBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_StreamEventsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse getDefaultInstanceForType() {
-        return com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse build() {
-        com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse buildPartial() {
-        com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse result = new com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.event_ = eventBuilder_ == null
-              ? event_
-              : eventBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse) {
-          return mergeFrom((com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse other) {
-        if (other == com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse.getDefaultInstance()) return this;
-        if (other.hasEvent()) {
-          mergeEvent(other.getEvent());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getEventFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.component.inputcontroller.v1.InputController.Event event_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.inputcontroller.v1.InputController.Event, com.viam.component.inputcontroller.v1.InputController.Event.Builder, com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> eventBuilder_;
       /**
        * <pre>
        * Event for a controller
        * </pre>
        *
        * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
-       * @return Whether the event field is set.
        */
+      @java.lang.Override
       public boolean hasEvent() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasEvent();
       }
       /**
        * <pre>
@@ -8987,14 +5634,10 @@ public final class InputController {
        * </pre>
        *
        * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
-       * @return The event.
        */
+      @java.lang.Override
       public com.viam.component.inputcontroller.v1.InputController.Event getEvent() {
-        if (eventBuilder_ == null) {
-          return event_ == null ? com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance() : event_;
-        } else {
-          return eventBuilder_.getMessage();
-        }
+        return instance.getEvent();
       }
       /**
        * <pre>
@@ -9004,18 +5647,10 @@ public final class InputController {
        * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
        */
       public Builder setEvent(com.viam.component.inputcontroller.v1.InputController.Event value) {
-        if (eventBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          event_ = value;
-        } else {
-          eventBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setEvent(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Event for a controller
@@ -9025,13 +5660,8 @@ public final class InputController {
        */
       public Builder setEvent(
           com.viam.component.inputcontroller.v1.InputController.Event.Builder builderForValue) {
-        if (eventBuilder_ == null) {
-          event_ = builderForValue.build();
-        } else {
-          eventBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setEvent(builderForValue.build());
         return this;
       }
       /**
@@ -9042,21 +5672,8 @@ public final class InputController {
        * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
        */
       public Builder mergeEvent(com.viam.component.inputcontroller.v1.InputController.Event value) {
-        if (eventBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            event_ != null &&
-            event_ != com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance()) {
-            getEventBuilder().mergeFrom(value);
-          } else {
-            event_ = value;
-          }
-        } else {
-          eventBuilder_.mergeFrom(value);
-        }
-        if (event_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeEvent(value);
         return this;
       }
       /**
@@ -9066,130 +5683,89 @@ public final class InputController {
        *
        * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
        */
-      public Builder clearEvent() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        event_ = null;
-        if (eventBuilder_ != null) {
-          eventBuilder_.dispose();
-          eventBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearEvent() {  copyOnWrite();
+        instance.clearEvent();
         return this;
       }
-      /**
-       * <pre>
-       * Event for a controller
-       * </pre>
-       *
-       * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.Event.Builder getEventBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getEventFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Event for a controller
-       * </pre>
-       *
-       * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.EventOrBuilder getEventOrBuilder() {
-        if (eventBuilder_ != null) {
-          return eventBuilder_.getMessageOrBuilder();
-        } else {
-          return event_ == null ?
-              com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance() : event_;
-        }
-      }
-      /**
-       * <pre>
-       * Event for a controller
-       * </pre>
-       *
-       * <code>.viam.component.inputcontroller.v1.Event event = 1 [json_name = "event"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.inputcontroller.v1.InputController.Event, com.viam.component.inputcontroller.v1.InputController.Event.Builder, com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> 
-          getEventFieldBuilder() {
-        if (eventBuilder_ == null) {
-          eventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.component.inputcontroller.v1.InputController.Event, com.viam.component.inputcontroller.v1.InputController.Event.Builder, com.viam.component.inputcontroller.v1.InputController.EventOrBuilder>(
-                  getEvent(),
-                  getParentForChildren(),
-                  isClean());
-          event_ = null;
-        }
-        return eventBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.inputcontroller.v1.StreamEventsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "event_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.inputcontroller.v1.StreamEventsResponse)
     private static final com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse();
+      StreamEventsResponse defaultInstance = new StreamEventsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StreamEventsResponse.class, defaultInstance);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<StreamEventsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<StreamEventsResponse>() {
-      @java.lang.Override
-      public StreamEventsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<StreamEventsResponse> PARSER;
 
     public static com.google.protobuf.Parser<StreamEventsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StreamEventsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.inputcontroller.v1.InputController.StreamEventsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StatusOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.inputcontroller.v1.Status)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
@@ -9204,56 +5780,20 @@ public final class InputController {
      * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
      */
     int getEventsCount();
-    /**
-     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-     */
-    java.util.List<? extends com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> 
-        getEventsOrBuilderList();
-    /**
-     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-     */
-    com.viam.component.inputcontroller.v1.InputController.EventOrBuilder getEventsOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.component.inputcontroller.v1.Status}
    */
-  public static final class Status extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Status extends
+      com.google.protobuf.GeneratedMessageLite<
+          Status, Status.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.inputcontroller.v1.Status)
       StatusOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Status.newBuilder() to construct.
-    private Status(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Status() {
-      events_ = java.util.Collections.emptyList();
+      events_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Status();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_Status_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_Status_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.inputcontroller.v1.InputController.Status.class, com.viam.component.inputcontroller.v1.InputController.Status.Builder.class);
-    }
-
     public static final int EVENTS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.component.inputcontroller.v1.InputController.Event> events_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.component.inputcontroller.v1.InputController.Event> events_;
     /**
      * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
      */
@@ -9264,7 +5804,6 @@ public final class InputController {
     /**
      * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> 
         getEventsOrBuilderList() {
       return events_;
@@ -9286,443 +5825,192 @@ public final class InputController {
     /**
      * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
      */
-    @java.lang.Override
     public com.viam.component.inputcontroller.v1.InputController.EventOrBuilder getEventsOrBuilder(
         int index) {
       return events_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureEventsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.component.inputcontroller.v1.InputController.Event> tmp = events_;
+      if (!tmp.isModifiable()) {
+        events_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < events_.size(); i++) {
-        output.writeMessage(1, events_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
+     */
+    private void setEvents(
+        int index, com.viam.component.inputcontroller.v1.InputController.Event value) {
+      value.getClass();
+  ensureEventsIsMutable();
+      events_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < events_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, events_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
+     */
+    private void addEvents(com.viam.component.inputcontroller.v1.InputController.Event value) {
+      value.getClass();
+  ensureEventsIsMutable();
+      events_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.inputcontroller.v1.InputController.Status)) {
-        return super.equals(obj);
-      }
-      com.viam.component.inputcontroller.v1.InputController.Status other = (com.viam.component.inputcontroller.v1.InputController.Status) obj;
-
-      if (!getEventsList()
-          .equals(other.getEventsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
+     */
+    private void addEvents(
+        int index, com.viam.component.inputcontroller.v1.InputController.Event value) {
+      value.getClass();
+  ensureEventsIsMutable();
+      events_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getEventsCount() > 0) {
-        hash = (37 * hash) + EVENTS_FIELD_NUMBER;
-        hash = (53 * hash) + getEventsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
+     */
+    private void addAllEvents(
+        java.lang.Iterable<? extends com.viam.component.inputcontroller.v1.InputController.Event> values) {
+      ensureEventsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, events_);
+    }
+    /**
+     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
+     */
+    private void clearEvents() {
+      events_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
+     */
+    private void removeEvents(int index) {
+      ensureEventsIsMutable();
+      events_.remove(index);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.Status parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Status parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Status parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Status parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Status parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Status parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Status parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Status parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.Status parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.Status parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Status parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.inputcontroller.v1.InputController.Status parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.inputcontroller.v1.InputController.Status prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.inputcontroller.v1.Status}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.inputcontroller.v1.InputController.Status, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.inputcontroller.v1.Status)
         com.viam.component.inputcontroller.v1.InputController.StatusOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_Status_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_Status_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.inputcontroller.v1.InputController.Status.class, com.viam.component.inputcontroller.v1.InputController.Status.Builder.class);
-      }
-
       // Construct using com.viam.component.inputcontroller.v1.InputController.Status.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (eventsBuilder_ == null) {
-          events_ = java.util.Collections.emptyList();
-        } else {
-          events_ = null;
-          eventsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.inputcontroller.v1.InputController.internal_static_viam_component_inputcontroller_v1_Status_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.Status getDefaultInstanceForType() {
-        return com.viam.component.inputcontroller.v1.InputController.Status.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.Status build() {
-        com.viam.component.inputcontroller.v1.InputController.Status result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.inputcontroller.v1.InputController.Status buildPartial() {
-        com.viam.component.inputcontroller.v1.InputController.Status result = new com.viam.component.inputcontroller.v1.InputController.Status(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.component.inputcontroller.v1.InputController.Status result) {
-        if (eventsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            events_ = java.util.Collections.unmodifiableList(events_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.events_ = events_;
-        } else {
-          result.events_ = eventsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.component.inputcontroller.v1.InputController.Status result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.inputcontroller.v1.InputController.Status) {
-          return mergeFrom((com.viam.component.inputcontroller.v1.InputController.Status)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.inputcontroller.v1.InputController.Status other) {
-        if (other == com.viam.component.inputcontroller.v1.InputController.Status.getDefaultInstance()) return this;
-        if (eventsBuilder_ == null) {
-          if (!other.events_.isEmpty()) {
-            if (events_.isEmpty()) {
-              events_ = other.events_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureEventsIsMutable();
-              events_.addAll(other.events_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.events_.isEmpty()) {
-            if (eventsBuilder_.isEmpty()) {
-              eventsBuilder_.dispose();
-              eventsBuilder_ = null;
-              events_ = other.events_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              eventsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getEventsFieldBuilder() : null;
-            } else {
-              eventsBuilder_.addAllMessages(other.events_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.viam.component.inputcontroller.v1.InputController.Event m =
-                    input.readMessage(
-                        com.viam.component.inputcontroller.v1.InputController.Event.parser(),
-                        extensionRegistry);
-                if (eventsBuilder_ == null) {
-                  ensureEventsIsMutable();
-                  events_.add(m);
-                } else {
-                  eventsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.viam.component.inputcontroller.v1.InputController.Event> events_ =
-        java.util.Collections.emptyList();
-      private void ensureEventsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          events_ = new java.util.ArrayList<com.viam.component.inputcontroller.v1.InputController.Event>(events_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.component.inputcontroller.v1.InputController.Event, com.viam.component.inputcontroller.v1.InputController.Event.Builder, com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> eventsBuilder_;
 
       /**
        * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.component.inputcontroller.v1.InputController.Event> getEventsList() {
-        if (eventsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(events_);
-        } else {
-          return eventsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getEventsList());
       }
       /**
        * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
        */
+      @java.lang.Override
       public int getEventsCount() {
-        if (eventsBuilder_ == null) {
-          return events_.size();
-        } else {
-          return eventsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getEventsCount();
+      }/**
        * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
        */
+      @java.lang.Override
       public com.viam.component.inputcontroller.v1.InputController.Event getEvents(int index) {
-        if (eventsBuilder_ == null) {
-          return events_.get(index);
-        } else {
-          return eventsBuilder_.getMessage(index);
-        }
+        return instance.getEvents(index);
       }
       /**
        * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
        */
       public Builder setEvents(
           int index, com.viam.component.inputcontroller.v1.InputController.Event value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.set(index, value);
-          onChanged();
-        } else {
-          eventsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setEvents(index, value);
         return this;
       }
       /**
@@ -9730,29 +6018,17 @@ public final class InputController {
        */
       public Builder setEvents(
           int index, com.viam.component.inputcontroller.v1.InputController.Event.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setEvents(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
        */
       public Builder addEvents(com.viam.component.inputcontroller.v1.InputController.Event value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.add(value);
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addEvents(value);
         return this;
       }
       /**
@@ -9760,16 +6036,8 @@ public final class InputController {
        */
       public Builder addEvents(
           int index, com.viam.component.inputcontroller.v1.InputController.Event value) {
-        if (eventsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEventsIsMutable();
-          events_.add(index, value);
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addEvents(index, value);
         return this;
       }
       /**
@@ -9777,13 +6045,8 @@ public final class InputController {
        */
       public Builder addEvents(
           com.viam.component.inputcontroller.v1.InputController.Event.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.add(builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addEvents(builderForValue.build());
         return this;
       }
       /**
@@ -9791,13 +6054,9 @@ public final class InputController {
        */
       public Builder addEvents(
           int index, com.viam.component.inputcontroller.v1.InputController.Event.Builder builderForValue) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          eventsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addEvents(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -9805,380 +6064,104 @@ public final class InputController {
        */
       public Builder addAllEvents(
           java.lang.Iterable<? extends com.viam.component.inputcontroller.v1.InputController.Event> values) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, events_);
-          onChanged();
-        } else {
-          eventsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllEvents(values);
         return this;
       }
       /**
        * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
        */
       public Builder clearEvents() {
-        if (eventsBuilder_ == null) {
-          events_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          eventsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearEvents();
         return this;
       }
       /**
        * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
        */
       public Builder removeEvents(int index) {
-        if (eventsBuilder_ == null) {
-          ensureEventsIsMutable();
-          events_.remove(index);
-          onChanged();
-        } else {
-          eventsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeEvents(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.Event.Builder getEventsBuilder(
-          int index) {
-        return getEventsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.EventOrBuilder getEventsOrBuilder(
-          int index) {
-        if (eventsBuilder_ == null) {
-          return events_.get(index);  } else {
-          return eventsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-       */
-      public java.util.List<? extends com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> 
-           getEventsOrBuilderList() {
-        if (eventsBuilder_ != null) {
-          return eventsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(events_);
-        }
-      }
-      /**
-       * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.Event.Builder addEventsBuilder() {
-        return getEventsFieldBuilder().addBuilder(
-            com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-       */
-      public com.viam.component.inputcontroller.v1.InputController.Event.Builder addEventsBuilder(
-          int index) {
-        return getEventsFieldBuilder().addBuilder(
-            index, com.viam.component.inputcontroller.v1.InputController.Event.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.component.inputcontroller.v1.Event events = 1 [json_name = "events"];</code>
-       */
-      public java.util.List<com.viam.component.inputcontroller.v1.InputController.Event.Builder> 
-           getEventsBuilderList() {
-        return getEventsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.component.inputcontroller.v1.InputController.Event, com.viam.component.inputcontroller.v1.InputController.Event.Builder, com.viam.component.inputcontroller.v1.InputController.EventOrBuilder> 
-          getEventsFieldBuilder() {
-        if (eventsBuilder_ == null) {
-          eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.component.inputcontroller.v1.InputController.Event, com.viam.component.inputcontroller.v1.InputController.Event.Builder, com.viam.component.inputcontroller.v1.InputController.EventOrBuilder>(
-                  events_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          events_ = null;
-        }
-        return eventsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.inputcontroller.v1.Status)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.inputcontroller.v1.InputController.Status();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "events_",
+              com.viam.component.inputcontroller.v1.InputController.Event.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.inputcontroller.v1.InputController.Status> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.inputcontroller.v1.InputController.Status.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.inputcontroller.v1.InputController.Status>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.inputcontroller.v1.Status)
     private static final com.viam.component.inputcontroller.v1.InputController.Status DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.inputcontroller.v1.InputController.Status();
+      Status defaultInstance = new Status();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Status.class, defaultInstance);
     }
 
     public static com.viam.component.inputcontroller.v1.InputController.Status getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Status>
-        PARSER = new com.google.protobuf.AbstractParser<Status>() {
-      @java.lang.Override
-      public Status parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Status> PARSER;
 
     public static com.google.protobuf.Parser<Status> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Status> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.inputcontroller.v1.InputController.Status getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_inputcontroller_v1_GetControlsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_inputcontroller_v1_GetControlsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_inputcontroller_v1_GetControlsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_inputcontroller_v1_GetControlsResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_inputcontroller_v1_GetEventsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_inputcontroller_v1_GetEventsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_inputcontroller_v1_GetEventsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_inputcontroller_v1_GetEventsResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_inputcontroller_v1_TriggerEventRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_inputcontroller_v1_TriggerEventRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_inputcontroller_v1_TriggerEventResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_inputcontroller_v1_TriggerEventResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_inputcontroller_v1_Event_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_inputcontroller_v1_Event_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_Events_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_Events_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_inputcontroller_v1_StreamEventsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_inputcontroller_v1_StreamEventsResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_inputcontroller_v1_Status_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_inputcontroller_v1_Status_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n3component/inputcontroller/v1/input_con" +
-      "troller.proto\022!viam.component.inputcontr" +
-      "oller.v1\032\026common/v1/common.proto\032\034google" +
-      "/api/annotations.proto\032\034google/protobuf/" +
-      "struct.proto\032\037google/protobuf/timestamp." +
-      "proto\"c\n\022GetControlsRequest\022\036\n\ncontrolle" +
-      "r\030\001 \001(\tR\ncontroller\022-\n\005extra\030c \001(\0132\027.goo" +
-      "gle.protobuf.StructR\005extra\"1\n\023GetControl" +
-      "sResponse\022\032\n\010controls\030\001 \003(\tR\010controls\"a\n" +
-      "\020GetEventsRequest\022\036\n\ncontroller\030\001 \001(\tR\nc" +
-      "ontroller\022-\n\005extra\030c \001(\0132\027.google.protob" +
-      "uf.StructR\005extra\"U\n\021GetEventsResponse\022@\n" +
-      "\006events\030\001 \003(\0132(.viam.component.inputcont" +
-      "roller.v1.EventR\006events\"\244\001\n\023TriggerEvent" +
-      "Request\022\036\n\ncontroller\030\001 \001(\tR\ncontroller\022" +
-      ">\n\005event\030\002 \001(\0132(.viam.component.inputcon" +
-      "troller.v1.EventR\005event\022-\n\005extra\030c \001(\0132\027" +
-      ".google.protobuf.StructR\005extra\"\026\n\024Trigge" +
-      "rEventResponse\"}\n\005Event\022.\n\004time\030\001 \001(\0132\032." +
-      "google.protobuf.TimestampR\004time\022\024\n\005event" +
-      "\030\002 \001(\tR\005event\022\030\n\007control\030\003 \001(\tR\007control\022" +
-      "\024\n\005value\030\004 \001(\001R\005value\"\242\002\n\023StreamEventsRe" +
-      "quest\022\036\n\ncontroller\030\001 \001(\tR\ncontroller\022U\n" +
-      "\006events\030\002 \003(\0132=.viam.component.inputcont" +
-      "roller.v1.StreamEventsRequest.EventsR\006ev" +
-      "ents\022-\n\005extra\030c \001(\0132\027.google.protobuf.St" +
-      "ructR\005extra\032e\n\006Events\022\030\n\007control\030\001 \001(\tR\007" +
-      "control\022\026\n\006events\030\002 \003(\tR\006events\022)\n\020cance" +
-      "lled_events\030\003 \003(\tR\017cancelledEvents\"V\n\024St" +
-      "reamEventsResponse\022>\n\005event\030\001 \001(\0132(.viam" +
-      ".component.inputcontroller.v1.EventR\005eve" +
-      "nt\"J\n\006Status\022@\n\006events\030\001 \003(\0132(.viam.comp" +
-      "onent.inputcontroller.v1.EventR\006events2\247" +
-      "\010\n\026InputControllerService\022\270\001\n\013GetControl" +
-      "s\0225.viam.component.inputcontroller.v1.Ge" +
-      "tControlsRequest\0326.viam.component.inputc" +
-      "ontroller.v1.GetControlsResponse\":\202\323\344\223\0024" +
-      "\0222/viam/api/v1/component/input/{controll" +
-      "er}/controls\022\260\001\n\tGetEvents\0223.viam.compon" +
-      "ent.inputcontroller.v1.GetEventsRequest\032" +
-      "4.viam.component.inputcontroller.v1.GetE" +
-      "ventsResponse\"8\202\323\344\223\0022\0220/viam/api/v1/comp" +
-      "onent/input/{controller}/events\022\301\001\n\014Stre" +
-      "amEvents\0226.viam.component.inputcontrolle" +
-      "r.v1.StreamEventsRequest\0327.viam.componen" +
-      "t.inputcontroller.v1.StreamEventsRespons" +
-      "e\">\202\323\344\223\0028\0226/viam/api/v1/component/input/" +
-      "{controller}/event_stream0\001\022\270\001\n\014TriggerE" +
-      "vent\0226.viam.component.inputcontroller.v1" +
-      ".TriggerEventRequest\0327.viam.component.in" +
-      "putcontroller.v1.TriggerEventResponse\"7\202" +
-      "\323\344\223\0021\"//viam/api/v1/component/input/{con" +
-      "troller}/event\022\210\001\n\tDoCommand\022 .viam.comm" +
-      "on.v1.DoCommandRequest\032!.viam.common.v1." +
-      "DoCommandResponse\"6\202\323\344\223\0020\"./viam/api/v1/" +
-      "component/input/{name}/do_command\022\224\001\n\rGe" +
-      "tGeometries\022$.viam.common.v1.GetGeometri" +
-      "esRequest\032%.viam.common.v1.GetGeometries" +
-      "Response\"6\202\323\344\223\0020\022./viam/api/v1/component" +
-      "/input/{name}/geometriesBU\n%com.viam.com" +
-      "ponent.inputcontroller.v1Z,go.viam.com/a" +
-      "pi/component/inputcontroller/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
-        });
-    internal_static_viam_component_inputcontroller_v1_GetControlsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_component_inputcontroller_v1_GetControlsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_inputcontroller_v1_GetControlsRequest_descriptor,
-        new java.lang.String[] { "Controller", "Extra", });
-    internal_static_viam_component_inputcontroller_v1_GetControlsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_component_inputcontroller_v1_GetControlsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_inputcontroller_v1_GetControlsResponse_descriptor,
-        new java.lang.String[] { "Controls", });
-    internal_static_viam_component_inputcontroller_v1_GetEventsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_component_inputcontroller_v1_GetEventsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_inputcontroller_v1_GetEventsRequest_descriptor,
-        new java.lang.String[] { "Controller", "Extra", });
-    internal_static_viam_component_inputcontroller_v1_GetEventsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_component_inputcontroller_v1_GetEventsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_inputcontroller_v1_GetEventsResponse_descriptor,
-        new java.lang.String[] { "Events", });
-    internal_static_viam_component_inputcontroller_v1_TriggerEventRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_component_inputcontroller_v1_TriggerEventRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_inputcontroller_v1_TriggerEventRequest_descriptor,
-        new java.lang.String[] { "Controller", "Event", "Extra", });
-    internal_static_viam_component_inputcontroller_v1_TriggerEventResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_component_inputcontroller_v1_TriggerEventResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_inputcontroller_v1_TriggerEventResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_component_inputcontroller_v1_Event_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_component_inputcontroller_v1_Event_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_inputcontroller_v1_Event_descriptor,
-        new java.lang.String[] { "Time", "Event", "Control", "Value", });
-    internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_descriptor,
-        new java.lang.String[] { "Controller", "Events", "Extra", });
-    internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_Events_descriptor =
-      internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_descriptor.getNestedTypes().get(0);
-    internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_Events_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_inputcontroller_v1_StreamEventsRequest_Events_descriptor,
-        new java.lang.String[] { "Control", "Events", "CancelledEvents", });
-    internal_static_viam_component_inputcontroller_v1_StreamEventsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_component_inputcontroller_v1_StreamEventsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_inputcontroller_v1_StreamEventsResponse_descriptor,
-        new java.lang.String[] { "Event", });
-    internal_static_viam_component_inputcontroller_v1_Status_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_component_inputcontroller_v1_Status_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_inputcontroller_v1_Status_descriptor,
-        new java.lang.String[] { "Events", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

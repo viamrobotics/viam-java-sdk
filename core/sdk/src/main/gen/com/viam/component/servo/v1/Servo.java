@@ -9,15 +9,9 @@ public final class Servo {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   public interface MoveRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.servo.v1.MoveRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -67,55 +61,21 @@ public final class Servo {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.servo.v1.MoveRequest}
    */
-  public static final class MoveRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class MoveRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          MoveRequest, MoveRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.servo.v1.MoveRequest)
       MoveRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MoveRequest.newBuilder() to construct.
-    private MoveRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private MoveRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MoveRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_MoveRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_MoveRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.servo.v1.Servo.MoveRequest.class, com.viam.component.servo.v1.Servo.MoveRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * the name of the servo, as registered
@@ -126,16 +86,7 @@ public final class Servo {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -148,20 +99,50 @@ public final class Servo {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * the name of the servo, as registered
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * the name of the servo, as registered
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * the name of the servo, as registered
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int ANGLE_DEG_FIELD_NUMBER = 2;
-    private int angleDeg_ = 0;
+    private int angleDeg_;
     /**
      * <pre>
      * the degrees by which to rotate the servo. Accepted values are between 0 and 180
@@ -174,6 +155,29 @@ public final class Servo {
     public int getAngleDeg() {
       return angleDeg_;
     }
+    /**
+     * <pre>
+     * the degrees by which to rotate the servo. Accepted values are between 0 and 180
+     * </pre>
+     *
+     * <code>uint32 angle_deg = 2 [json_name = "angleDeg"];</code>
+     * @param value The angleDeg to set.
+     */
+    private void setAngleDeg(int value) {
+      
+      angleDeg_ = value;
+    }
+    /**
+     * <pre>
+     * the degrees by which to rotate the servo. Accepted values are between 0 and 180
+     * </pre>
+     *
+     * <code>uint32 angle_deg = 2 [json_name = "angleDeg"];</code>
+     */
+    private void clearAngleDeg() {
+
+      angleDeg_ = 0;
+    }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
     private com.google.protobuf.Struct extra_;
@@ -183,7 +187,6 @@ public final class Servo {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -195,7 +198,6 @@ public final class Servo {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -208,406 +210,138 @@ public final class Servo {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (angleDeg_ != 0) {
-        output.writeUInt32(2, angleDeg_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (angleDeg_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, angleDeg_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.servo.v1.Servo.MoveRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.servo.v1.Servo.MoveRequest other = (com.viam.component.servo.v1.Servo.MoveRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (getAngleDeg()
-          != other.getAngleDeg()) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + ANGLE_DEG_FIELD_NUMBER;
-      hash = (53 * hash) + getAngleDeg();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.servo.v1.Servo.MoveRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.MoveRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.MoveRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.MoveRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.MoveRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.MoveRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.MoveRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.MoveRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.servo.v1.Servo.MoveRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.servo.v1.Servo.MoveRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.MoveRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.MoveRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.servo.v1.Servo.MoveRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.servo.v1.MoveRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.servo.v1.Servo.MoveRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.servo.v1.MoveRequest)
         com.viam.component.servo.v1.Servo.MoveRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_MoveRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_MoveRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.servo.v1.Servo.MoveRequest.class, com.viam.component.servo.v1.Servo.MoveRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.servo.v1.Servo.MoveRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        angleDeg_ = 0;
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_MoveRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.MoveRequest getDefaultInstanceForType() {
-        return com.viam.component.servo.v1.Servo.MoveRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.MoveRequest build() {
-        com.viam.component.servo.v1.Servo.MoveRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.MoveRequest buildPartial() {
-        com.viam.component.servo.v1.Servo.MoveRequest result = new com.viam.component.servo.v1.Servo.MoveRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.servo.v1.Servo.MoveRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.angleDeg_ = angleDeg_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.servo.v1.Servo.MoveRequest) {
-          return mergeFrom((com.viam.component.servo.v1.Servo.MoveRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.servo.v1.Servo.MoveRequest other) {
-        if (other == com.viam.component.servo.v1.Servo.MoveRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.getAngleDeg() != 0) {
-          setAngleDeg(other.getAngleDeg());
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                angleDeg_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * the name of the servo, as registered
@@ -616,17 +350,9 @@ public final class Servo {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -636,18 +362,10 @@ public final class Servo {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -660,10 +378,8 @@ public final class Servo {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -675,9 +391,8 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -691,15 +406,11 @@ public final class Servo {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private int angleDeg_ ;
       /**
        * <pre>
        * the degrees by which to rotate the servo. Accepted values are between 0 and 180
@@ -710,7 +421,7 @@ public final class Servo {
        */
       @java.lang.Override
       public int getAngleDeg() {
-        return angleDeg_;
+        return instance.getAngleDeg();
       }
       /**
        * <pre>
@@ -722,10 +433,8 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder setAngleDeg(int value) {
-
-        angleDeg_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setAngleDeg(value);
         return this;
       }
       /**
@@ -737,25 +446,21 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder clearAngleDeg() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        angleDeg_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearAngleDeg();
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -763,14 +468,10 @@ public final class Servo {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -780,18 +481,10 @@ public final class Servo {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -801,13 +494,8 @@ public final class Servo {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -818,21 +506,8 @@ public final class Servo {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -842,527 +517,274 @@ public final class Servo {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.servo.v1.MoveRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.servo.v1.Servo.MoveRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "angleDeg_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u000bc" +
+                "\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.servo.v1.Servo.MoveRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.servo.v1.Servo.MoveRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.servo.v1.Servo.MoveRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.servo.v1.MoveRequest)
     private static final com.viam.component.servo.v1.Servo.MoveRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.servo.v1.Servo.MoveRequest();
+      MoveRequest defaultInstance = new MoveRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MoveRequest.class, defaultInstance);
     }
 
     public static com.viam.component.servo.v1.Servo.MoveRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MoveRequest>
-        PARSER = new com.google.protobuf.AbstractParser<MoveRequest>() {
-      @java.lang.Override
-      public MoveRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<MoveRequest> PARSER;
 
     public static com.google.protobuf.Parser<MoveRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MoveRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.servo.v1.Servo.MoveRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface MoveResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.servo.v1.MoveResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.component.servo.v1.MoveResponse}
    */
-  public static final class MoveResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class MoveResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          MoveResponse, MoveResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.servo.v1.MoveResponse)
       MoveResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MoveResponse.newBuilder() to construct.
-    private MoveResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private MoveResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MoveResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_MoveResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_MoveResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.servo.v1.Servo.MoveResponse.class, com.viam.component.servo.v1.Servo.MoveResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.servo.v1.Servo.MoveResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.servo.v1.Servo.MoveResponse other = (com.viam.component.servo.v1.Servo.MoveResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static com.viam.component.servo.v1.Servo.MoveResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.MoveResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.MoveResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.MoveResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.MoveResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.MoveResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.MoveResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.MoveResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.servo.v1.Servo.MoveResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.servo.v1.Servo.MoveResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.MoveResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.MoveResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.servo.v1.Servo.MoveResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.servo.v1.MoveResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.servo.v1.Servo.MoveResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.servo.v1.MoveResponse)
         com.viam.component.servo.v1.Servo.MoveResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_MoveResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_MoveResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.servo.v1.Servo.MoveResponse.class, com.viam.component.servo.v1.Servo.MoveResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.servo.v1.Servo.MoveResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_MoveResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.MoveResponse getDefaultInstanceForType() {
-        return com.viam.component.servo.v1.Servo.MoveResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.MoveResponse build() {
-        com.viam.component.servo.v1.Servo.MoveResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.MoveResponse buildPartial() {
-        com.viam.component.servo.v1.Servo.MoveResponse result = new com.viam.component.servo.v1.Servo.MoveResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.servo.v1.Servo.MoveResponse) {
-          return mergeFrom((com.viam.component.servo.v1.Servo.MoveResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.servo.v1.Servo.MoveResponse other) {
-        if (other == com.viam.component.servo.v1.Servo.MoveResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.component.servo.v1.MoveResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.servo.v1.Servo.MoveResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.servo.v1.Servo.MoveResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.servo.v1.Servo.MoveResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.servo.v1.Servo.MoveResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.servo.v1.MoveResponse)
     private static final com.viam.component.servo.v1.Servo.MoveResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.servo.v1.Servo.MoveResponse();
+      MoveResponse defaultInstance = new MoveResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MoveResponse.class, defaultInstance);
     }
 
     public static com.viam.component.servo.v1.Servo.MoveResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MoveResponse>
-        PARSER = new com.google.protobuf.AbstractParser<MoveResponse>() {
-      @java.lang.Override
-      public MoveResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<MoveResponse> PARSER;
 
     public static com.google.protobuf.Parser<MoveResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MoveResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.servo.v1.Servo.MoveResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPositionRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.servo.v1.GetPositionRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -1402,55 +824,21 @@ public final class Servo {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.servo.v1.GetPositionRequest}
    */
-  public static final class GetPositionRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPositionRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPositionRequest, GetPositionRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.servo.v1.GetPositionRequest)
       GetPositionRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPositionRequest.newBuilder() to construct.
-    private GetPositionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPositionRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPositionRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_GetPositionRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_GetPositionRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.servo.v1.Servo.GetPositionRequest.class, com.viam.component.servo.v1.Servo.GetPositionRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * the name of the servo, as registered
@@ -1461,16 +849,7 @@ public final class Servo {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -1483,16 +862,46 @@ public final class Servo {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * the name of the servo, as registered
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * the name of the servo, as registered
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * the name of the servo, as registered
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -1503,7 +912,6 @@ public final class Servo {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -1515,7 +923,6 @@ public final class Servo {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -1528,383 +935,138 @@ public final class Servo {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.servo.v1.Servo.GetPositionRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.servo.v1.Servo.GetPositionRequest other = (com.viam.component.servo.v1.Servo.GetPositionRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.servo.v1.Servo.GetPositionRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.servo.v1.Servo.GetPositionRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.servo.v1.Servo.GetPositionRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.servo.v1.Servo.GetPositionRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.servo.v1.GetPositionRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.servo.v1.Servo.GetPositionRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.servo.v1.GetPositionRequest)
         com.viam.component.servo.v1.Servo.GetPositionRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_GetPositionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_GetPositionRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.servo.v1.Servo.GetPositionRequest.class, com.viam.component.servo.v1.Servo.GetPositionRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.servo.v1.Servo.GetPositionRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_GetPositionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.GetPositionRequest getDefaultInstanceForType() {
-        return com.viam.component.servo.v1.Servo.GetPositionRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.GetPositionRequest build() {
-        com.viam.component.servo.v1.Servo.GetPositionRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.GetPositionRequest buildPartial() {
-        com.viam.component.servo.v1.Servo.GetPositionRequest result = new com.viam.component.servo.v1.Servo.GetPositionRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.servo.v1.Servo.GetPositionRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.servo.v1.Servo.GetPositionRequest) {
-          return mergeFrom((com.viam.component.servo.v1.Servo.GetPositionRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.servo.v1.Servo.GetPositionRequest other) {
-        if (other == com.viam.component.servo.v1.Servo.GetPositionRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * the name of the servo, as registered
@@ -1913,17 +1075,9 @@ public final class Servo {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -1933,18 +1087,10 @@ public final class Servo {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -1957,10 +1103,8 @@ public final class Servo {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -1972,9 +1116,8 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -1988,27 +1131,21 @@ public final class Servo {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -2016,14 +1153,10 @@ public final class Servo {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -2033,18 +1166,10 @@ public final class Servo {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -2054,13 +1179,8 @@ public final class Servo {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -2071,21 +1191,8 @@ public final class Servo {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -2095,130 +1202,91 @@ public final class Servo {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.servo.v1.GetPositionRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.servo.v1.Servo.GetPositionRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.servo.v1.Servo.GetPositionRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.servo.v1.Servo.GetPositionRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.servo.v1.Servo.GetPositionRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.servo.v1.GetPositionRequest)
     private static final com.viam.component.servo.v1.Servo.GetPositionRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.servo.v1.Servo.GetPositionRequest();
+      GetPositionRequest defaultInstance = new GetPositionRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPositionRequest.class, defaultInstance);
     }
 
     public static com.viam.component.servo.v1.Servo.GetPositionRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPositionRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetPositionRequest>() {
-      @java.lang.Override
-      public GetPositionRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPositionRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetPositionRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPositionRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.servo.v1.Servo.GetPositionRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPositionResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.servo.v1.GetPositionResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -2233,40 +1301,15 @@ public final class Servo {
   /**
    * Protobuf type {@code viam.component.servo.v1.GetPositionResponse}
    */
-  public static final class GetPositionResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPositionResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPositionResponse, GetPositionResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.servo.v1.GetPositionResponse)
       GetPositionResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPositionResponse.newBuilder() to construct.
-    private GetPositionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPositionResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPositionResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_GetPositionResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_GetPositionResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.servo.v1.Servo.GetPositionResponse.class, com.viam.component.servo.v1.Servo.GetPositionResponse.Builder.class);
-    }
-
     public static final int POSITION_DEG_FIELD_NUMBER = 1;
-    private int positionDeg_ = 0;
+    private int positionDeg_;
     /**
      * <pre>
      * the degrees from neutral by which the servo is currently rotated. Values are between 0 and 180
@@ -2279,333 +1322,127 @@ public final class Servo {
     public int getPositionDeg() {
       return positionDeg_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * the degrees from neutral by which the servo is currently rotated. Values are between 0 and 180
+     * </pre>
+     *
+     * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
+     * @param value The positionDeg to set.
+     */
+    private void setPositionDeg(int value) {
+      
+      positionDeg_ = value;
     }
+    /**
+     * <pre>
+     * the degrees from neutral by which the servo is currently rotated. Values are between 0 and 180
+     * </pre>
+     *
+     * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
+     */
+    private void clearPositionDeg() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (positionDeg_ != 0) {
-        output.writeUInt32(1, positionDeg_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (positionDeg_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, positionDeg_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.servo.v1.Servo.GetPositionResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.servo.v1.Servo.GetPositionResponse other = (com.viam.component.servo.v1.Servo.GetPositionResponse) obj;
-
-      if (getPositionDeg()
-          != other.getPositionDeg()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + POSITION_DEG_FIELD_NUMBER;
-      hash = (53 * hash) + getPositionDeg();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      positionDeg_ = 0;
     }
 
     public static com.viam.component.servo.v1.Servo.GetPositionResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.servo.v1.Servo.GetPositionResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.servo.v1.Servo.GetPositionResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.GetPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.servo.v1.Servo.GetPositionResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.servo.v1.GetPositionResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.servo.v1.Servo.GetPositionResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.servo.v1.GetPositionResponse)
         com.viam.component.servo.v1.Servo.GetPositionResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_GetPositionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_GetPositionResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.servo.v1.Servo.GetPositionResponse.class, com.viam.component.servo.v1.Servo.GetPositionResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.servo.v1.Servo.GetPositionResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        positionDeg_ = 0;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_GetPositionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.GetPositionResponse getDefaultInstanceForType() {
-        return com.viam.component.servo.v1.Servo.GetPositionResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.GetPositionResponse build() {
-        com.viam.component.servo.v1.Servo.GetPositionResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.GetPositionResponse buildPartial() {
-        com.viam.component.servo.v1.Servo.GetPositionResponse result = new com.viam.component.servo.v1.Servo.GetPositionResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.servo.v1.Servo.GetPositionResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.positionDeg_ = positionDeg_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.servo.v1.Servo.GetPositionResponse) {
-          return mergeFrom((com.viam.component.servo.v1.Servo.GetPositionResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.servo.v1.Servo.GetPositionResponse other) {
-        if (other == com.viam.component.servo.v1.Servo.GetPositionResponse.getDefaultInstance()) return this;
-        if (other.getPositionDeg() != 0) {
-          setPositionDeg(other.getPositionDeg());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                positionDeg_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int positionDeg_ ;
       /**
        * <pre>
        * the degrees from neutral by which the servo is currently rotated. Values are between 0 and 180
@@ -2616,7 +1453,7 @@ public final class Servo {
        */
       @java.lang.Override
       public int getPositionDeg() {
-        return positionDeg_;
+        return instance.getPositionDeg();
       }
       /**
        * <pre>
@@ -2628,10 +1465,8 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder setPositionDeg(int value) {
-
-        positionDeg_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPositionDeg(value);
         return this;
       }
       /**
@@ -2643,78 +1478,88 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder clearPositionDeg() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        positionDeg_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearPositionDeg();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.servo.v1.GetPositionResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.servo.v1.Servo.GetPositionResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "positionDeg_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u000b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.servo.v1.Servo.GetPositionResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.servo.v1.Servo.GetPositionResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.servo.v1.Servo.GetPositionResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.servo.v1.GetPositionResponse)
     private static final com.viam.component.servo.v1.Servo.GetPositionResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.servo.v1.Servo.GetPositionResponse();
+      GetPositionResponse defaultInstance = new GetPositionResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPositionResponse.class, defaultInstance);
     }
 
     public static com.viam.component.servo.v1.Servo.GetPositionResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPositionResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetPositionResponse>() {
-      @java.lang.Override
-      public GetPositionResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPositionResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetPositionResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPositionResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.servo.v1.Servo.GetPositionResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StopRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.servo.v1.StopRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -2754,55 +1599,21 @@ public final class Servo {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.servo.v1.StopRequest}
    */
-  public static final class StopRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class StopRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          StopRequest, StopRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.servo.v1.StopRequest)
       StopRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StopRequest.newBuilder() to construct.
-    private StopRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private StopRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StopRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_StopRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_StopRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.servo.v1.Servo.StopRequest.class, com.viam.component.servo.v1.Servo.StopRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a servo
@@ -2813,16 +1624,7 @@ public final class Servo {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -2835,16 +1637,46 @@ public final class Servo {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a servo
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a servo
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a servo
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -2855,7 +1687,6 @@ public final class Servo {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -2867,7 +1698,6 @@ public final class Servo {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -2880,383 +1710,138 @@ public final class Servo {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.servo.v1.Servo.StopRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.servo.v1.Servo.StopRequest other = (com.viam.component.servo.v1.Servo.StopRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.servo.v1.Servo.StopRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.StopRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.StopRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.StopRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.StopRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.StopRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.StopRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.StopRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.servo.v1.Servo.StopRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.servo.v1.Servo.StopRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.StopRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.StopRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.servo.v1.Servo.StopRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.servo.v1.StopRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.servo.v1.Servo.StopRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.servo.v1.StopRequest)
         com.viam.component.servo.v1.Servo.StopRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_StopRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_StopRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.servo.v1.Servo.StopRequest.class, com.viam.component.servo.v1.Servo.StopRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.servo.v1.Servo.StopRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_StopRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.StopRequest getDefaultInstanceForType() {
-        return com.viam.component.servo.v1.Servo.StopRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.StopRequest build() {
-        com.viam.component.servo.v1.Servo.StopRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.StopRequest buildPartial() {
-        com.viam.component.servo.v1.Servo.StopRequest result = new com.viam.component.servo.v1.Servo.StopRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.servo.v1.Servo.StopRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.servo.v1.Servo.StopRequest) {
-          return mergeFrom((com.viam.component.servo.v1.Servo.StopRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.servo.v1.Servo.StopRequest other) {
-        if (other == com.viam.component.servo.v1.Servo.StopRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a servo
@@ -3265,17 +1850,9 @@ public final class Servo {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -3285,18 +1862,10 @@ public final class Servo {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -3309,10 +1878,8 @@ public final class Servo {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -3324,9 +1891,8 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -3340,27 +1906,21 @@ public final class Servo {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -3368,14 +1928,10 @@ public final class Servo {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -3385,18 +1941,10 @@ public final class Servo {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -3406,13 +1954,8 @@ public final class Servo {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -3423,21 +1966,8 @@ public final class Servo {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -3447,527 +1977,273 @@ public final class Servo {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.servo.v1.StopRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.servo.v1.Servo.StopRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.servo.v1.Servo.StopRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.servo.v1.Servo.StopRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.servo.v1.Servo.StopRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.servo.v1.StopRequest)
     private static final com.viam.component.servo.v1.Servo.StopRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.servo.v1.Servo.StopRequest();
+      StopRequest defaultInstance = new StopRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StopRequest.class, defaultInstance);
     }
 
     public static com.viam.component.servo.v1.Servo.StopRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<StopRequest>
-        PARSER = new com.google.protobuf.AbstractParser<StopRequest>() {
-      @java.lang.Override
-      public StopRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<StopRequest> PARSER;
 
     public static com.google.protobuf.Parser<StopRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StopRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.servo.v1.Servo.StopRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StopResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.servo.v1.StopResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.component.servo.v1.StopResponse}
    */
-  public static final class StopResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class StopResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          StopResponse, StopResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.servo.v1.StopResponse)
       StopResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StopResponse.newBuilder() to construct.
-    private StopResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private StopResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StopResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_StopResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_StopResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.servo.v1.Servo.StopResponse.class, com.viam.component.servo.v1.Servo.StopResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.servo.v1.Servo.StopResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.servo.v1.Servo.StopResponse other = (com.viam.component.servo.v1.Servo.StopResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static com.viam.component.servo.v1.Servo.StopResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.StopResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.StopResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.StopResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.StopResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.StopResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.StopResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.StopResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.servo.v1.Servo.StopResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.servo.v1.Servo.StopResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.StopResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.StopResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.servo.v1.Servo.StopResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.servo.v1.StopResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.servo.v1.Servo.StopResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.servo.v1.StopResponse)
         com.viam.component.servo.v1.Servo.StopResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_StopResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_StopResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.servo.v1.Servo.StopResponse.class, com.viam.component.servo.v1.Servo.StopResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.servo.v1.Servo.StopResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_StopResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.StopResponse getDefaultInstanceForType() {
-        return com.viam.component.servo.v1.Servo.StopResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.StopResponse build() {
-        com.viam.component.servo.v1.Servo.StopResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.StopResponse buildPartial() {
-        com.viam.component.servo.v1.Servo.StopResponse result = new com.viam.component.servo.v1.Servo.StopResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.servo.v1.Servo.StopResponse) {
-          return mergeFrom((com.viam.component.servo.v1.Servo.StopResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.servo.v1.Servo.StopResponse other) {
-        if (other == com.viam.component.servo.v1.Servo.StopResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.component.servo.v1.StopResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.servo.v1.Servo.StopResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.servo.v1.Servo.StopResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.servo.v1.Servo.StopResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.servo.v1.Servo.StopResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.servo.v1.StopResponse)
     private static final com.viam.component.servo.v1.Servo.StopResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.servo.v1.Servo.StopResponse();
+      StopResponse defaultInstance = new StopResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StopResponse.class, defaultInstance);
     }
 
     public static com.viam.component.servo.v1.Servo.StopResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<StopResponse>
-        PARSER = new com.google.protobuf.AbstractParser<StopResponse>() {
-      @java.lang.Override
-      public StopResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<StopResponse> PARSER;
 
     public static com.google.protobuf.Parser<StopResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StopResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.servo.v1.Servo.StopResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StatusOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.servo.v1.Status)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
@@ -3984,40 +2260,15 @@ public final class Servo {
   /**
    * Protobuf type {@code viam.component.servo.v1.Status}
    */
-  public static final class Status extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Status extends
+      com.google.protobuf.GeneratedMessageLite<
+          Status, Status.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.servo.v1.Status)
       StatusOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Status.newBuilder() to construct.
-    private Status(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Status() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Status();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_Status_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_Status_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.servo.v1.Servo.Status.class, com.viam.component.servo.v1.Servo.Status.Builder.class);
-    }
-
     public static final int POSITION_DEG_FIELD_NUMBER = 1;
-    private int positionDeg_ = 0;
+    private int positionDeg_;
     /**
      * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
      * @return The positionDeg.
@@ -4026,9 +2277,24 @@ public final class Servo {
     public int getPositionDeg() {
       return positionDeg_;
     }
+    /**
+     * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
+     * @param value The positionDeg to set.
+     */
+    private void setPositionDeg(int value) {
+      
+      positionDeg_ = value;
+    }
+    /**
+     * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
+     */
+    private void clearPositionDeg() {
+
+      positionDeg_ = 0;
+    }
 
     public static final int IS_MOVING_FIELD_NUMBER = 2;
-    private boolean isMoving_ = false;
+    private boolean isMoving_;
     /**
      * <code>bool is_moving = 2 [json_name = "isMoving"];</code>
      * @return The isMoving.
@@ -4037,364 +2303,126 @@ public final class Servo {
     public boolean getIsMoving() {
       return isMoving_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bool is_moving = 2 [json_name = "isMoving"];</code>
+     * @param value The isMoving to set.
+     */
+    private void setIsMoving(boolean value) {
+      
+      isMoving_ = value;
     }
+    /**
+     * <code>bool is_moving = 2 [json_name = "isMoving"];</code>
+     */
+    private void clearIsMoving() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (positionDeg_ != 0) {
-        output.writeUInt32(1, positionDeg_);
-      }
-      if (isMoving_ != false) {
-        output.writeBool(2, isMoving_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (positionDeg_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, positionDeg_);
-      }
-      if (isMoving_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, isMoving_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.servo.v1.Servo.Status)) {
-        return super.equals(obj);
-      }
-      com.viam.component.servo.v1.Servo.Status other = (com.viam.component.servo.v1.Servo.Status) obj;
-
-      if (getPositionDeg()
-          != other.getPositionDeg()) return false;
-      if (getIsMoving()
-          != other.getIsMoving()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + POSITION_DEG_FIELD_NUMBER;
-      hash = (53 * hash) + getPositionDeg();
-      hash = (37 * hash) + IS_MOVING_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsMoving());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      isMoving_ = false;
     }
 
     public static com.viam.component.servo.v1.Servo.Status parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.Status parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.Status parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.Status parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.Status parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.Status parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.Status parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.Status parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.servo.v1.Servo.Status parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.servo.v1.Servo.Status parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.Status parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.Status parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.servo.v1.Servo.Status prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.servo.v1.Status}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.servo.v1.Servo.Status, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.servo.v1.Status)
         com.viam.component.servo.v1.Servo.StatusOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_Status_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_Status_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.servo.v1.Servo.Status.class, com.viam.component.servo.v1.Servo.Status.Builder.class);
-      }
-
       // Construct using com.viam.component.servo.v1.Servo.Status.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        positionDeg_ = 0;
-        isMoving_ = false;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_Status_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.Status getDefaultInstanceForType() {
-        return com.viam.component.servo.v1.Servo.Status.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.Status build() {
-        com.viam.component.servo.v1.Servo.Status result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.Status buildPartial() {
-        com.viam.component.servo.v1.Servo.Status result = new com.viam.component.servo.v1.Servo.Status(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.servo.v1.Servo.Status result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.positionDeg_ = positionDeg_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.isMoving_ = isMoving_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.servo.v1.Servo.Status) {
-          return mergeFrom((com.viam.component.servo.v1.Servo.Status)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.servo.v1.Servo.Status other) {
-        if (other == com.viam.component.servo.v1.Servo.Status.getDefaultInstance()) return this;
-        if (other.getPositionDeg() != 0) {
-          setPositionDeg(other.getPositionDeg());
-        }
-        if (other.getIsMoving() != false) {
-          setIsMoving(other.getIsMoving());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                positionDeg_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 16: {
-                isMoving_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int positionDeg_ ;
       /**
        * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
        * @return The positionDeg.
        */
       @java.lang.Override
       public int getPositionDeg() {
-        return positionDeg_;
+        return instance.getPositionDeg();
       }
       /**
        * <code>uint32 position_deg = 1 [json_name = "positionDeg"];</code>
@@ -4402,10 +2430,8 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder setPositionDeg(int value) {
-
-        positionDeg_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPositionDeg(value);
         return this;
       }
       /**
@@ -4413,20 +2439,18 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder clearPositionDeg() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        positionDeg_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearPositionDeg();
         return this;
       }
 
-      private boolean isMoving_ ;
       /**
        * <code>bool is_moving = 2 [json_name = "isMoving"];</code>
        * @return The isMoving.
        */
       @java.lang.Override
       public boolean getIsMoving() {
-        return isMoving_;
+        return instance.getIsMoving();
       }
       /**
        * <code>bool is_moving = 2 [json_name = "isMoving"];</code>
@@ -4434,10 +2458,8 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder setIsMoving(boolean value) {
-
-        isMoving_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setIsMoving(value);
         return this;
       }
       /**
@@ -4445,78 +2467,90 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder clearIsMoving() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        isMoving_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearIsMoving();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.servo.v1.Status)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.servo.v1.Servo.Status();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "positionDeg_",
+              "isMoving_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u000b\u0002\u0007" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.servo.v1.Servo.Status> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.servo.v1.Servo.Status.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.servo.v1.Servo.Status>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.servo.v1.Status)
     private static final com.viam.component.servo.v1.Servo.Status DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.servo.v1.Servo.Status();
+      Status defaultInstance = new Status();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Status.class, defaultInstance);
     }
 
     public static com.viam.component.servo.v1.Servo.Status getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Status>
-        PARSER = new com.google.protobuf.AbstractParser<Status>() {
-      @java.lang.Override
-      public Status parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Status> PARSER;
 
     public static com.google.protobuf.Parser<Status> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Status> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.servo.v1.Servo.Status getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface IsMovingRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.servo.v1.IsMovingRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -4533,58 +2567,23 @@ public final class Servo {
   /**
    * Protobuf type {@code viam.component.servo.v1.IsMovingRequest}
    */
-  public static final class IsMovingRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class IsMovingRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          IsMovingRequest, IsMovingRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.servo.v1.IsMovingRequest)
       IsMovingRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use IsMovingRequest.newBuilder() to construct.
-    private IsMovingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private IsMovingRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new IsMovingRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_IsMovingRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_IsMovingRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.servo.v1.Servo.IsMovingRequest.class, com.viam.component.servo.v1.Servo.IsMovingRequest.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -4593,377 +2592,149 @@ public final class Servo {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
     }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      getUnknownFields().writeTo(output);
+      name_ = getDefaultInstance().getName();
     }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.servo.v1.Servo.IsMovingRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.servo.v1.Servo.IsMovingRequest other = (com.viam.component.servo.v1.Servo.IsMovingRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static com.viam.component.servo.v1.Servo.IsMovingRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.servo.v1.Servo.IsMovingRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.servo.v1.Servo.IsMovingRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.servo.v1.Servo.IsMovingRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.servo.v1.IsMovingRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.servo.v1.Servo.IsMovingRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.servo.v1.IsMovingRequest)
         com.viam.component.servo.v1.Servo.IsMovingRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_IsMovingRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_IsMovingRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.servo.v1.Servo.IsMovingRequest.class, com.viam.component.servo.v1.Servo.IsMovingRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.servo.v1.Servo.IsMovingRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_IsMovingRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.IsMovingRequest getDefaultInstanceForType() {
-        return com.viam.component.servo.v1.Servo.IsMovingRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.IsMovingRequest build() {
-        com.viam.component.servo.v1.Servo.IsMovingRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.IsMovingRequest buildPartial() {
-        com.viam.component.servo.v1.Servo.IsMovingRequest result = new com.viam.component.servo.v1.Servo.IsMovingRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.servo.v1.Servo.IsMovingRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.servo.v1.Servo.IsMovingRequest) {
-          return mergeFrom((com.viam.component.servo.v1.Servo.IsMovingRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.servo.v1.Servo.IsMovingRequest other) {
-        if (other == com.viam.component.servo.v1.Servo.IsMovingRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -4972,10 +2743,8 @@ public final class Servo {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -4983,9 +2752,8 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -4995,80 +2763,88 @@ public final class Servo {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.servo.v1.IsMovingRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.servo.v1.Servo.IsMovingRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.servo.v1.Servo.IsMovingRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.servo.v1.Servo.IsMovingRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.servo.v1.Servo.IsMovingRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.servo.v1.IsMovingRequest)
     private static final com.viam.component.servo.v1.Servo.IsMovingRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.servo.v1.Servo.IsMovingRequest();
+      IsMovingRequest defaultInstance = new IsMovingRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        IsMovingRequest.class, defaultInstance);
     }
 
     public static com.viam.component.servo.v1.Servo.IsMovingRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<IsMovingRequest>
-        PARSER = new com.google.protobuf.AbstractParser<IsMovingRequest>() {
-      @java.lang.Override
-      public IsMovingRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<IsMovingRequest> PARSER;
 
     public static com.google.protobuf.Parser<IsMovingRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<IsMovingRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.servo.v1.Servo.IsMovingRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface IsMovingResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.servo.v1.IsMovingResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>bool is_moving = 1 [json_name = "isMoving"];</code>
@@ -5079,40 +2855,15 @@ public final class Servo {
   /**
    * Protobuf type {@code viam.component.servo.v1.IsMovingResponse}
    */
-  public static final class IsMovingResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class IsMovingResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          IsMovingResponse, IsMovingResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.servo.v1.IsMovingResponse)
       IsMovingResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use IsMovingResponse.newBuilder() to construct.
-    private IsMovingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private IsMovingResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new IsMovingResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_IsMovingResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_IsMovingResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.servo.v1.Servo.IsMovingResponse.class, com.viam.component.servo.v1.Servo.IsMovingResponse.Builder.class);
-    }
-
     public static final int IS_MOVING_FIELD_NUMBER = 1;
-    private boolean isMoving_ = false;
+    private boolean isMoving_;
     /**
      * <code>bool is_moving = 1 [json_name = "isMoving"];</code>
      * @return The isMoving.
@@ -5121,341 +2872,126 @@ public final class Servo {
     public boolean getIsMoving() {
       return isMoving_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bool is_moving = 1 [json_name = "isMoving"];</code>
+     * @param value The isMoving to set.
+     */
+    private void setIsMoving(boolean value) {
+      
+      isMoving_ = value;
     }
+    /**
+     * <code>bool is_moving = 1 [json_name = "isMoving"];</code>
+     */
+    private void clearIsMoving() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (isMoving_ != false) {
-        output.writeBool(1, isMoving_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (isMoving_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isMoving_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.servo.v1.Servo.IsMovingResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.servo.v1.Servo.IsMovingResponse other = (com.viam.component.servo.v1.Servo.IsMovingResponse) obj;
-
-      if (getIsMoving()
-          != other.getIsMoving()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + IS_MOVING_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsMoving());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      isMoving_ = false;
     }
 
     public static com.viam.component.servo.v1.Servo.IsMovingResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.servo.v1.Servo.IsMovingResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.servo.v1.Servo.IsMovingResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.servo.v1.Servo.IsMovingResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.servo.v1.Servo.IsMovingResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.servo.v1.IsMovingResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.servo.v1.Servo.IsMovingResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.servo.v1.IsMovingResponse)
         com.viam.component.servo.v1.Servo.IsMovingResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_IsMovingResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_IsMovingResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.servo.v1.Servo.IsMovingResponse.class, com.viam.component.servo.v1.Servo.IsMovingResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.servo.v1.Servo.IsMovingResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        isMoving_ = false;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.servo.v1.Servo.internal_static_viam_component_servo_v1_IsMovingResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.IsMovingResponse getDefaultInstanceForType() {
-        return com.viam.component.servo.v1.Servo.IsMovingResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.IsMovingResponse build() {
-        com.viam.component.servo.v1.Servo.IsMovingResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.servo.v1.Servo.IsMovingResponse buildPartial() {
-        com.viam.component.servo.v1.Servo.IsMovingResponse result = new com.viam.component.servo.v1.Servo.IsMovingResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.servo.v1.Servo.IsMovingResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isMoving_ = isMoving_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.servo.v1.Servo.IsMovingResponse) {
-          return mergeFrom((com.viam.component.servo.v1.Servo.IsMovingResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.servo.v1.Servo.IsMovingResponse other) {
-        if (other == com.viam.component.servo.v1.Servo.IsMovingResponse.getDefaultInstance()) return this;
-        if (other.getIsMoving() != false) {
-          setIsMoving(other.getIsMoving());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                isMoving_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean isMoving_ ;
       /**
        * <code>bool is_moving = 1 [json_name = "isMoving"];</code>
        * @return The isMoving.
        */
       @java.lang.Override
       public boolean getIsMoving() {
-        return isMoving_;
+        return instance.getIsMoving();
       }
       /**
        * <code>bool is_moving = 1 [json_name = "isMoving"];</code>
@@ -5463,10 +2999,8 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder setIsMoving(boolean value) {
-
-        isMoving_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIsMoving(value);
         return this;
       }
       /**
@@ -5474,242 +3008,87 @@ public final class Servo {
        * @return This builder for chaining.
        */
       public Builder clearIsMoving() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        isMoving_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearIsMoving();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.servo.v1.IsMovingResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.servo.v1.Servo.IsMovingResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "isMoving_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0007";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.servo.v1.Servo.IsMovingResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.servo.v1.Servo.IsMovingResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.servo.v1.Servo.IsMovingResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.servo.v1.IsMovingResponse)
     private static final com.viam.component.servo.v1.Servo.IsMovingResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.servo.v1.Servo.IsMovingResponse();
+      IsMovingResponse defaultInstance = new IsMovingResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        IsMovingResponse.class, defaultInstance);
     }
 
     public static com.viam.component.servo.v1.Servo.IsMovingResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<IsMovingResponse>
-        PARSER = new com.google.protobuf.AbstractParser<IsMovingResponse>() {
-      @java.lang.Override
-      public IsMovingResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<IsMovingResponse> PARSER;
 
     public static com.google.protobuf.Parser<IsMovingResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<IsMovingResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.servo.v1.Servo.IsMovingResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_servo_v1_MoveRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_servo_v1_MoveRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_servo_v1_MoveResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_servo_v1_MoveResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_servo_v1_GetPositionRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_servo_v1_GetPositionRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_servo_v1_GetPositionResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_servo_v1_GetPositionResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_servo_v1_StopRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_servo_v1_StopRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_servo_v1_StopResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_servo_v1_StopResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_servo_v1_Status_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_servo_v1_Status_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_servo_v1_IsMovingRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_servo_v1_IsMovingRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_servo_v1_IsMovingResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_servo_v1_IsMovingResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\036component/servo/v1/servo.proto\022\027viam.c" +
-      "omponent.servo.v1\032\026common/v1/common.prot" +
-      "o\032\034google/api/annotations.proto\032\034google/" +
-      "protobuf/struct.proto\"m\n\013MoveRequest\022\022\n\004" +
-      "name\030\001 \001(\tR\004name\022\033\n\tangle_deg\030\002 \001(\rR\010ang" +
-      "leDeg\022-\n\005extra\030c \001(\0132\027.google.protobuf.S" +
-      "tructR\005extra\"\016\n\014MoveResponse\"W\n\022GetPosit" +
-      "ionRequest\022\022\n\004name\030\001 \001(\tR\004name\022-\n\005extra\030" +
-      "c \001(\0132\027.google.protobuf.StructR\005extra\"8\n" +
-      "\023GetPositionResponse\022!\n\014position_deg\030\001 \001" +
-      "(\rR\013positionDeg\"P\n\013StopRequest\022\022\n\004name\030\001" +
-      " \001(\tR\004name\022-\n\005extra\030c \001(\0132\027.google.proto" +
-      "buf.StructR\005extra\"\016\n\014StopResponse\"H\n\006Sta" +
-      "tus\022!\n\014position_deg\030\001 \001(\rR\013positionDeg\022\033" +
-      "\n\tis_moving\030\002 \001(\010R\010isMoving\"%\n\017IsMovingR" +
-      "equest\022\022\n\004name\030\001 \001(\tR\004name\"/\n\020IsMovingRe" +
-      "sponse\022\033\n\tis_moving\030\001 \001(\010R\010isMoving2\376\006\n\014" +
-      "ServoService\022\211\001\n\004Move\022$.viam.component.s" +
-      "ervo.v1.MoveRequest\032%.viam.component.ser" +
-      "vo.v1.MoveResponse\"4\240\222)\001\202\323\344\223\002*\032(/viam/ap" +
-      "i/v1/component/servo/{name}/move\022\236\001\n\013Get" +
-      "Position\022+.viam.component.servo.v1.GetPo" +
-      "sitionRequest\032,.viam.component.servo.v1." +
-      "GetPositionResponse\"4\202\323\344\223\002.\022,/viam/api/v" +
-      "1/component/servo/{name}/position\022\205\001\n\004St" +
-      "op\022$.viam.component.servo.v1.StopRequest" +
-      "\032%.viam.component.servo.v1.StopResponse\"" +
-      "0\202\323\344\223\002*\"(/viam/api/v1/component/servo/{n" +
-      "ame}/stop\022\226\001\n\010IsMoving\022(.viam.component." +
-      "servo.v1.IsMovingRequest\032).viam.componen" +
-      "t.servo.v1.IsMovingResponse\"5\202\323\344\223\002/\022-/vi" +
-      "am/api/v1/component/servo/{name}/is_movi" +
-      "ng\022\210\001\n\tDoCommand\022 .viam.common.v1.DoComm" +
-      "andRequest\032!.viam.common.v1.DoCommandRes" +
-      "ponse\"6\202\323\344\223\0020\"./viam/api/v1/component/se" +
-      "rvo/{name}/do_command\022\224\001\n\rGetGeometries\022" +
-      "$.viam.common.v1.GetGeometriesRequest\032%." +
-      "viam.common.v1.GetGeometriesResponse\"6\202\323" +
-      "\344\223\0020\022./viam/api/v1/component/servo/{name" +
-      "}/geometriesBA\n\033com.viam.component.servo" +
-      ".v1Z\"go.viam.com/api/component/servo/v1b" +
-      "\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-        });
-    internal_static_viam_component_servo_v1_MoveRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_component_servo_v1_MoveRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_servo_v1_MoveRequest_descriptor,
-        new java.lang.String[] { "Name", "AngleDeg", "Extra", });
-    internal_static_viam_component_servo_v1_MoveResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_component_servo_v1_MoveResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_servo_v1_MoveResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_component_servo_v1_GetPositionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_component_servo_v1_GetPositionRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_servo_v1_GetPositionRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_component_servo_v1_GetPositionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_component_servo_v1_GetPositionResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_servo_v1_GetPositionResponse_descriptor,
-        new java.lang.String[] { "PositionDeg", });
-    internal_static_viam_component_servo_v1_StopRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_component_servo_v1_StopRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_servo_v1_StopRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_component_servo_v1_StopResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_component_servo_v1_StopResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_servo_v1_StopResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_component_servo_v1_Status_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_component_servo_v1_Status_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_servo_v1_Status_descriptor,
-        new java.lang.String[] { "PositionDeg", "IsMoving", });
-    internal_static_viam_component_servo_v1_IsMovingRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_component_servo_v1_IsMovingRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_servo_v1_IsMovingRequest_descriptor,
-        new java.lang.String[] { "Name", });
-    internal_static_viam_component_servo_v1_IsMovingResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_component_servo_v1_IsMovingResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_servo_v1_IsMovingResponse_descriptor,
-        new java.lang.String[] { "IsMoving", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(com.viam.common.v1.Common.safetyHeartbeatMonitored);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

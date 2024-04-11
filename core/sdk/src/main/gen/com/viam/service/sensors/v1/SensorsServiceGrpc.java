@@ -38,11 +38,10 @@ public final class SensorsServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSensors"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.sensors.v1.Sensors.GetSensorsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.sensors.v1.Sensors.GetSensorsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new SensorsServiceMethodDescriptorSupplier("GetSensors"))
               .build();
         }
       }
@@ -69,11 +68,10 @@ public final class SensorsServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetReadings"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.sensors.v1.Sensors.GetReadingsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.sensors.v1.Sensors.GetReadingsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new SensorsServiceMethodDescriptorSupplier("GetReadings"))
               .build();
         }
       }
@@ -100,11 +98,10 @@ public final class SensorsServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new SensorsServiceMethodDescriptorSupplier("DoCommand"))
               .build();
         }
       }
@@ -456,41 +453,6 @@ public final class SensorsServiceGrpc {
         .build();
   }
 
-  private static abstract class SensorsServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    SensorsServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.viam.service.sensors.v1.Sensors.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("SensorsService");
-    }
-  }
-
-  private static final class SensorsServiceFileDescriptorSupplier
-      extends SensorsServiceBaseDescriptorSupplier {
-    SensorsServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class SensorsServiceMethodDescriptorSupplier
-      extends SensorsServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    SensorsServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -500,7 +462,6 @@ public final class SensorsServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new SensorsServiceFileDescriptorSupplier())
               .addMethod(getGetSensorsMethod())
               .addMethod(getGetReadingsMethod())
               .addMethod(getDoCommandMethod())

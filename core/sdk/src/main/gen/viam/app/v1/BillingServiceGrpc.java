@@ -34,11 +34,10 @@ public final class BillingServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCurrentMonthUsage"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.Billing.GetCurrentMonthUsageRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.Billing.GetCurrentMonthUsageResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("GetCurrentMonthUsage"))
               .build();
         }
       }
@@ -65,11 +64,10 @@ public final class BillingServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrgBillingInformation"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.Billing.GetOrgBillingInformationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.Billing.GetOrgBillingInformationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("GetOrgBillingInformation"))
               .build();
         }
       }
@@ -96,11 +94,10 @@ public final class BillingServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetInvoicesSummary"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.Billing.GetInvoicesSummaryRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.Billing.GetInvoicesSummaryResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("GetInvoicesSummary"))
               .build();
         }
       }
@@ -127,11 +124,10 @@ public final class BillingServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetInvoicePdf"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.Billing.GetInvoicePdfRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.Billing.GetInvoicePdfResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BillingServiceMethodDescriptorSupplier("GetInvoicePdf"))
               .build();
         }
       }
@@ -495,41 +491,6 @@ public final class BillingServiceGrpc {
         .build();
   }
 
-  private static abstract class BillingServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    BillingServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.app.v1.Billing.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("BillingService");
-    }
-  }
-
-  private static final class BillingServiceFileDescriptorSupplier
-      extends BillingServiceBaseDescriptorSupplier {
-    BillingServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class BillingServiceMethodDescriptorSupplier
-      extends BillingServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    BillingServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -539,7 +500,6 @@ public final class BillingServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new BillingServiceFileDescriptorSupplier())
               .addMethod(getGetCurrentMonthUsageMethod())
               .addMethod(getGetOrgBillingInformationMethod())
               .addMethod(getGetInvoicesSummaryMethod())

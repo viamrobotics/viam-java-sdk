@@ -37,11 +37,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Status"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.StatusRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.StatusResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("Status"))
               .build();
         }
       }
@@ -68,11 +67,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetGPIO"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.SetGPIORequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.SetGPIOResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("SetGPIO"))
               .build();
         }
       }
@@ -99,11 +97,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGPIO"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.GetGPIORequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.GetGPIOResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("GetGPIO"))
               .build();
         }
       }
@@ -130,11 +127,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PWM"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.PWMRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.PWMResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("PWM"))
               .build();
         }
       }
@@ -161,11 +157,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetPWM"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.SetPWMRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.SetPWMResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("SetPWM"))
               .build();
         }
       }
@@ -192,11 +187,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "PWMFrequency"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.PWMFrequencyRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.PWMFrequencyResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("PWMFrequency"))
               .build();
         }
       }
@@ -223,11 +217,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetPWMFrequency"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.SetPWMFrequencyRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.SetPWMFrequencyResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("SetPWMFrequency"))
               .build();
         }
       }
@@ -254,11 +247,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("DoCommand"))
               .build();
         }
       }
@@ -285,11 +277,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReadAnalogReader"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.ReadAnalogReaderRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.ReadAnalogReaderResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("ReadAnalogReader"))
               .build();
         }
       }
@@ -316,11 +307,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "WriteAnalog"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.WriteAnalogRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.WriteAnalogResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("WriteAnalog"))
               .build();
         }
       }
@@ -347,11 +337,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDigitalInterruptValue"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.GetDigitalInterruptValueRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.GetDigitalInterruptValueResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("GetDigitalInterruptValue"))
               .build();
         }
       }
@@ -378,11 +367,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "StreamTicks"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.StreamTicksRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.StreamTicksResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("StreamTicks"))
               .build();
         }
       }
@@ -409,11 +397,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetPowerMode"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.SetPowerModeRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.board.v1.Board.SetPowerModeResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("SetPowerMode"))
               .build();
         }
       }
@@ -440,11 +427,10 @@ public final class BoardServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGeometries"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.GetGeometriesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.GetGeometriesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new BoardServiceMethodDescriptorSupplier("GetGeometries"))
               .build();
         }
       }
@@ -1339,41 +1325,6 @@ public final class BoardServiceGrpc {
         .build();
   }
 
-  private static abstract class BoardServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    BoardServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.viam.component.board.v1.Board.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("BoardService");
-    }
-  }
-
-  private static final class BoardServiceFileDescriptorSupplier
-      extends BoardServiceBaseDescriptorSupplier {
-    BoardServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class BoardServiceMethodDescriptorSupplier
-      extends BoardServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    BoardServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -1383,7 +1334,6 @@ public final class BoardServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new BoardServiceFileDescriptorSupplier())
               .addMethod(getStatusMethod())
               .addMethod(getSetGPIOMethod())
               .addMethod(getGetGPIOMethod())

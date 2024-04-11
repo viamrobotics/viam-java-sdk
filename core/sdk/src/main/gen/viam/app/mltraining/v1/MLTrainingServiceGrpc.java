@@ -34,11 +34,10 @@ public final class MLTrainingServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SubmitTrainingJob"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.mltraining.v1.MlTraining.SubmitTrainingJobRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.mltraining.v1.MlTraining.SubmitTrainingJobResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MLTrainingServiceMethodDescriptorSupplier("SubmitTrainingJob"))
               .build();
         }
       }
@@ -65,11 +64,10 @@ public final class MLTrainingServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTrainingJob"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.mltraining.v1.MlTraining.GetTrainingJobRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.mltraining.v1.MlTraining.GetTrainingJobResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MLTrainingServiceMethodDescriptorSupplier("GetTrainingJob"))
               .build();
         }
       }
@@ -96,11 +94,10 @@ public final class MLTrainingServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListTrainingJobs"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.mltraining.v1.MlTraining.ListTrainingJobsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.mltraining.v1.MlTraining.ListTrainingJobsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MLTrainingServiceMethodDescriptorSupplier("ListTrainingJobs"))
               .build();
         }
       }
@@ -127,11 +124,10 @@ public final class MLTrainingServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CancelTrainingJob"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.mltraining.v1.MlTraining.CancelTrainingJobRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.mltraining.v1.MlTraining.CancelTrainingJobResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MLTrainingServiceMethodDescriptorSupplier("CancelTrainingJob"))
               .build();
         }
       }
@@ -158,11 +154,10 @@ public final class MLTrainingServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCompletedTrainingJob"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.mltraining.v1.MlTraining.DeleteCompletedTrainingJobResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MLTrainingServiceMethodDescriptorSupplier("DeleteCompletedTrainingJob"))
               .build();
         }
       }
@@ -590,41 +585,6 @@ public final class MLTrainingServiceGrpc {
         .build();
   }
 
-  private static abstract class MLTrainingServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    MLTrainingServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.app.mltraining.v1.MlTraining.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("MLTrainingService");
-    }
-  }
-
-  private static final class MLTrainingServiceFileDescriptorSupplier
-      extends MLTrainingServiceBaseDescriptorSupplier {
-    MLTrainingServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class MLTrainingServiceMethodDescriptorSupplier
-      extends MLTrainingServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    MLTrainingServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -634,7 +594,6 @@ public final class MLTrainingServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new MLTrainingServiceFileDescriptorSupplier())
               .addMethod(getSubmitTrainingJobMethod())
               .addMethod(getGetTrainingJobMethod())
               .addMethod(getListTrainingJobsMethod())

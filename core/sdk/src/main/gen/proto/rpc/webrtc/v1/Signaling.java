@@ -9,15 +9,9 @@ public final class Signaling {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   public interface ICECandidateOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.ICECandidate)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string candidate = 1 [json_name = "candidate"];</code>
@@ -84,61 +78,26 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.ICECandidate}
    */
-  public static final class ICECandidate extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ICECandidate extends
+      com.google.protobuf.GeneratedMessageLite<
+          ICECandidate, ICECandidate.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.ICECandidate)
       ICECandidateOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ICECandidate.newBuilder() to construct.
-    private ICECandidate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ICECandidate() {
       candidate_ = "";
       sdpMid_ = "";
       usernameFragment_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ICECandidate();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_ICECandidate_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_ICECandidate_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.ICECandidate.class, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder.class);
-    }
-
     private int bitField0_;
     public static final int CANDIDATE_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object candidate_ = "";
+    private java.lang.String candidate_;
     /**
      * <code>string candidate = 1 [json_name = "candidate"];</code>
      * @return The candidate.
      */
     @java.lang.Override
     public java.lang.String getCandidate() {
-      java.lang.Object ref = candidate_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        candidate_ = s;
-        return s;
-      }
+      return candidate_;
     }
     /**
      * <code>string candidate = 1 [json_name = "candidate"];</code>
@@ -147,21 +106,38 @@ public final class Signaling {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getCandidateBytes() {
-      java.lang.Object ref = candidate_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        candidate_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(candidate_);
+    }
+    /**
+     * <code>string candidate = 1 [json_name = "candidate"];</code>
+     * @param value The candidate to set.
+     */
+    private void setCandidate(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      candidate_ = value;
+    }
+    /**
+     * <code>string candidate = 1 [json_name = "candidate"];</code>
+     */
+    private void clearCandidate() {
+
+      candidate_ = getDefaultInstance().getCandidate();
+    }
+    /**
+     * <code>string candidate = 1 [json_name = "candidate"];</code>
+     * @param value The bytes for candidate to set.
+     */
+    private void setCandidateBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      candidate_ = value.toStringUtf8();
+
     }
 
     public static final int SDP_MID_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object sdpMid_ = "";
+    private java.lang.String sdpMid_;
     /**
      * <code>optional string sdp_mid = 2 [json_name = "sdpMid"];</code>
      * @return Whether the sdpMid field is set.
@@ -176,16 +152,7 @@ public final class Signaling {
      */
     @java.lang.Override
     public java.lang.String getSdpMid() {
-      java.lang.Object ref = sdpMid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sdpMid_ = s;
-        return s;
-      }
+      return sdpMid_;
     }
     /**
      * <code>optional string sdp_mid = 2 [json_name = "sdpMid"];</code>
@@ -194,20 +161,38 @@ public final class Signaling {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSdpMidBytes() {
-      java.lang.Object ref = sdpMid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sdpMid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(sdpMid_);
+    }
+    /**
+     * <code>optional string sdp_mid = 2 [json_name = "sdpMid"];</code>
+     * @param value The sdpMid to set.
+     */
+    private void setSdpMid(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000001;
+      sdpMid_ = value;
+    }
+    /**
+     * <code>optional string sdp_mid = 2 [json_name = "sdpMid"];</code>
+     */
+    private void clearSdpMid() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      sdpMid_ = getDefaultInstance().getSdpMid();
+    }
+    /**
+     * <code>optional string sdp_mid = 2 [json_name = "sdpMid"];</code>
+     * @param value The bytes for sdpMid to set.
+     */
+    private void setSdpMidBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sdpMid_ = value.toStringUtf8();
+      bitField0_ |= 0x00000001;
     }
 
     public static final int SDPM_LINE_INDEX_FIELD_NUMBER = 3;
-    private int sdpmLineIndex_ = 0;
+    private int sdpmLineIndex_;
     /**
      * <code>optional uint32 sdpm_line_index = 3 [json_name = "sdpmLineIndex"];</code>
      * @return Whether the sdpmLineIndex field is set.
@@ -224,10 +209,24 @@ public final class Signaling {
     public int getSdpmLineIndex() {
       return sdpmLineIndex_;
     }
+    /**
+     * <code>optional uint32 sdpm_line_index = 3 [json_name = "sdpmLineIndex"];</code>
+     * @param value The sdpmLineIndex to set.
+     */
+    private void setSdpmLineIndex(int value) {
+      bitField0_ |= 0x00000002;
+      sdpmLineIndex_ = value;
+    }
+    /**
+     * <code>optional uint32 sdpm_line_index = 3 [json_name = "sdpmLineIndex"];</code>
+     */
+    private void clearSdpmLineIndex() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      sdpmLineIndex_ = 0;
+    }
 
     public static final int USERNAME_FRAGMENT_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object usernameFragment_ = "";
+    private java.lang.String usernameFragment_;
     /**
      * <code>optional string username_fragment = 4 [json_name = "usernameFragment"];</code>
      * @return Whether the usernameFragment field is set.
@@ -242,16 +241,7 @@ public final class Signaling {
      */
     @java.lang.Override
     public java.lang.String getUsernameFragment() {
-      java.lang.Object ref = usernameFragment_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        usernameFragment_ = s;
-        return s;
-      }
+      return usernameFragment_;
     }
     /**
      * <code>optional string username_fragment = 4 [json_name = "usernameFragment"];</code>
@@ -260,220 +250,119 @@ public final class Signaling {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getUsernameFragmentBytes() {
-      java.lang.Object ref = usernameFragment_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        usernameFragment_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(usernameFragment_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>optional string username_fragment = 4 [json_name = "usernameFragment"];</code>
+     * @param value The usernameFragment to set.
+     */
+    private void setUsernameFragment(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000004;
+      usernameFragment_ = value;
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(candidate_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, candidate_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sdpMid_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeUInt32(3, sdpmLineIndex_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, usernameFragment_);
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>optional string username_fragment = 4 [json_name = "usernameFragment"];</code>
+     */
+    private void clearUsernameFragment() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      usernameFragment_ = getDefaultInstance().getUsernameFragment();
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(candidate_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, candidate_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sdpMid_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, sdpmLineIndex_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, usernameFragment_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.ICECandidate)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.ICECandidate other = (proto.rpc.webrtc.v1.Signaling.ICECandidate) obj;
-
-      if (!getCandidate()
-          .equals(other.getCandidate())) return false;
-      if (hasSdpMid() != other.hasSdpMid()) return false;
-      if (hasSdpMid()) {
-        if (!getSdpMid()
-            .equals(other.getSdpMid())) return false;
-      }
-      if (hasSdpmLineIndex() != other.hasSdpmLineIndex()) return false;
-      if (hasSdpmLineIndex()) {
-        if (getSdpmLineIndex()
-            != other.getSdpmLineIndex()) return false;
-      }
-      if (hasUsernameFragment() != other.hasUsernameFragment()) return false;
-      if (hasUsernameFragment()) {
-        if (!getUsernameFragment()
-            .equals(other.getUsernameFragment())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CANDIDATE_FIELD_NUMBER;
-      hash = (53 * hash) + getCandidate().hashCode();
-      if (hasSdpMid()) {
-        hash = (37 * hash) + SDP_MID_FIELD_NUMBER;
-        hash = (53 * hash) + getSdpMid().hashCode();
-      }
-      if (hasSdpmLineIndex()) {
-        hash = (37 * hash) + SDPM_LINE_INDEX_FIELD_NUMBER;
-        hash = (53 * hash) + getSdpmLineIndex();
-      }
-      if (hasUsernameFragment()) {
-        hash = (37 * hash) + USERNAME_FRAGMENT_FIELD_NUMBER;
-        hash = (53 * hash) + getUsernameFragment().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>optional string username_fragment = 4 [json_name = "usernameFragment"];</code>
+     * @param value The bytes for usernameFragment to set.
+     */
+    private void setUsernameFragmentBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      usernameFragment_ = value.toStringUtf8();
+      bitField0_ |= 0x00000004;
     }
 
     public static proto.rpc.webrtc.v1.Signaling.ICECandidate parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICECandidate parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICECandidate parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICECandidate parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICECandidate parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICECandidate parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICECandidate parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICECandidate parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.ICECandidate parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.ICECandidate parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICECandidate parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICECandidate parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.ICECandidate prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * ICECandidate represents an ICE candidate.
@@ -483,250 +372,32 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.ICECandidate}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.ICECandidate, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.ICECandidate)
         proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_ICECandidate_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_ICECandidate_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.ICECandidate.class, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.ICECandidate.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        candidate_ = "";
-        sdpMid_ = "";
-        sdpmLineIndex_ = 0;
-        usernameFragment_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_ICECandidate_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.ICECandidate getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.ICECandidate build() {
-        proto.rpc.webrtc.v1.Signaling.ICECandidate result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.ICECandidate buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.ICECandidate result = new proto.rpc.webrtc.v1.Signaling.ICECandidate(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.ICECandidate result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.candidate_ = candidate_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.sdpMid_ = sdpMid_;
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.sdpmLineIndex_ = sdpmLineIndex_;
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.usernameFragment_ = usernameFragment_;
-          to_bitField0_ |= 0x00000004;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.ICECandidate) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.ICECandidate)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.ICECandidate other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance()) return this;
-        if (!other.getCandidate().isEmpty()) {
-          candidate_ = other.candidate_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasSdpMid()) {
-          sdpMid_ = other.sdpMid_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.hasSdpmLineIndex()) {
-          setSdpmLineIndex(other.getSdpmLineIndex());
-        }
-        if (other.hasUsernameFragment()) {
-          usernameFragment_ = other.usernameFragment_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                candidate_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                sdpMid_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                sdpmLineIndex_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 34: {
-                usernameFragment_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object candidate_ = "";
       /**
        * <code>string candidate = 1 [json_name = "candidate"];</code>
        * @return The candidate.
        */
+      @java.lang.Override
       public java.lang.String getCandidate() {
-        java.lang.Object ref = candidate_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          candidate_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getCandidate();
       }
       /**
        * <code>string candidate = 1 [json_name = "candidate"];</code>
        * @return The bytes for candidate.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getCandidateBytes() {
-        java.lang.Object ref = candidate_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          candidate_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getCandidateBytes();
       }
       /**
        * <code>string candidate = 1 [json_name = "candidate"];</code>
@@ -735,10 +406,8 @@ public final class Signaling {
        */
       public Builder setCandidate(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        candidate_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setCandidate(value);
         return this;
       }
       /**
@@ -746,9 +415,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearCandidate() {
-        candidate_ = getDefaultInstance().getCandidate();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearCandidate();
         return this;
       }
       /**
@@ -758,54 +426,35 @@ public final class Signaling {
        */
       public Builder setCandidateBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        candidate_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setCandidateBytes(value);
         return this;
       }
 
-      private java.lang.Object sdpMid_ = "";
       /**
        * <code>optional string sdp_mid = 2 [json_name = "sdpMid"];</code>
        * @return Whether the sdpMid field is set.
        */
+      @java.lang.Override
       public boolean hasSdpMid() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasSdpMid();
       }
       /**
        * <code>optional string sdp_mid = 2 [json_name = "sdpMid"];</code>
        * @return The sdpMid.
        */
+      @java.lang.Override
       public java.lang.String getSdpMid() {
-        java.lang.Object ref = sdpMid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sdpMid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSdpMid();
       }
       /**
        * <code>optional string sdp_mid = 2 [json_name = "sdpMid"];</code>
        * @return The bytes for sdpMid.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSdpMidBytes() {
-        java.lang.Object ref = sdpMid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sdpMid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSdpMidBytes();
       }
       /**
        * <code>optional string sdp_mid = 2 [json_name = "sdpMid"];</code>
@@ -814,10 +463,8 @@ public final class Signaling {
        */
       public Builder setSdpMid(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        sdpMid_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setSdpMid(value);
         return this;
       }
       /**
@@ -825,9 +472,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearSdpMid() {
-        sdpMid_ = getDefaultInstance().getSdpMid();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearSdpMid();
         return this;
       }
       /**
@@ -837,22 +483,18 @@ public final class Signaling {
        */
       public Builder setSdpMidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        sdpMid_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setSdpMidBytes(value);
         return this;
       }
 
-      private int sdpmLineIndex_ ;
       /**
        * <code>optional uint32 sdpm_line_index = 3 [json_name = "sdpmLineIndex"];</code>
        * @return Whether the sdpmLineIndex field is set.
        */
       @java.lang.Override
       public boolean hasSdpmLineIndex() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasSdpmLineIndex();
       }
       /**
        * <code>optional uint32 sdpm_line_index = 3 [json_name = "sdpmLineIndex"];</code>
@@ -860,7 +502,7 @@ public final class Signaling {
        */
       @java.lang.Override
       public int getSdpmLineIndex() {
-        return sdpmLineIndex_;
+        return instance.getSdpmLineIndex();
       }
       /**
        * <code>optional uint32 sdpm_line_index = 3 [json_name = "sdpmLineIndex"];</code>
@@ -868,10 +510,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder setSdpmLineIndex(int value) {
-
-        sdpmLineIndex_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setSdpmLineIndex(value);
         return this;
       }
       /**
@@ -879,52 +519,35 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearSdpmLineIndex() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        sdpmLineIndex_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearSdpmLineIndex();
         return this;
       }
 
-      private java.lang.Object usernameFragment_ = "";
       /**
        * <code>optional string username_fragment = 4 [json_name = "usernameFragment"];</code>
        * @return Whether the usernameFragment field is set.
        */
+      @java.lang.Override
       public boolean hasUsernameFragment() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return instance.hasUsernameFragment();
       }
       /**
        * <code>optional string username_fragment = 4 [json_name = "usernameFragment"];</code>
        * @return The usernameFragment.
        */
+      @java.lang.Override
       public java.lang.String getUsernameFragment() {
-        java.lang.Object ref = usernameFragment_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          usernameFragment_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getUsernameFragment();
       }
       /**
        * <code>optional string username_fragment = 4 [json_name = "usernameFragment"];</code>
        * @return The bytes for usernameFragment.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUsernameFragmentBytes() {
-        java.lang.Object ref = usernameFragment_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          usernameFragment_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getUsernameFragmentBytes();
       }
       /**
        * <code>optional string username_fragment = 4 [json_name = "usernameFragment"];</code>
@@ -933,10 +556,8 @@ public final class Signaling {
        */
       public Builder setUsernameFragment(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        usernameFragment_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setUsernameFragment(value);
         return this;
       }
       /**
@@ -944,9 +565,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearUsernameFragment() {
-        usernameFragment_ = getDefaultInstance().getUsernameFragment();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+        copyOnWrite();
+        instance.clearUsernameFragment();
         return this;
       }
       /**
@@ -956,80 +576,93 @@ public final class Signaling {
        */
       public Builder setUsernameFragmentBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        usernameFragment_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setUsernameFragmentBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.ICECandidate)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.ICECandidate();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "candidate_",
+              "sdpMid_",
+              "sdpmLineIndex_",
+              "usernameFragment_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002\u1208" +
+                "\u0000\u0003\u100b\u0001\u0004\u1208\u0002";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.ICECandidate> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.ICECandidate.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.ICECandidate>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.ICECandidate)
     private static final proto.rpc.webrtc.v1.Signaling.ICECandidate DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.ICECandidate();
+      ICECandidate defaultInstance = new ICECandidate();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ICECandidate.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.ICECandidate getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ICECandidate>
-        PARSER = new com.google.protobuf.AbstractParser<ICECandidate>() {
-      @java.lang.Override
-      public ICECandidate parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ICECandidate> PARSER;
 
     public static com.google.protobuf.Parser<ICECandidate> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ICECandidate> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.ICECandidate getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CallRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.CallRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string sdp = 1 [json_name = "sdp"];</code>
@@ -1062,58 +695,23 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.CallRequest}
    */
-  public static final class CallRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CallRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CallRequest, CallRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.CallRequest)
       CallRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CallRequest.newBuilder() to construct.
-    private CallRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CallRequest() {
       sdp_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CallRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.CallRequest.class, proto.rpc.webrtc.v1.Signaling.CallRequest.Builder.class);
-    }
-
     public static final int SDP_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object sdp_ = "";
+    private java.lang.String sdp_;
     /**
      * <code>string sdp = 1 [json_name = "sdp"];</code>
      * @return The sdp.
      */
     @java.lang.Override
     public java.lang.String getSdp() {
-      java.lang.Object ref = sdp_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sdp_ = s;
-        return s;
-      }
+      return sdp_;
     }
     /**
      * <code>string sdp = 1 [json_name = "sdp"];</code>
@@ -1122,20 +720,38 @@ public final class Signaling {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSdpBytes() {
-      java.lang.Object ref = sdp_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sdp_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(sdp_);
+    }
+    /**
+     * <code>string sdp = 1 [json_name = "sdp"];</code>
+     * @param value The sdp to set.
+     */
+    private void setSdp(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      sdp_ = value;
+    }
+    /**
+     * <code>string sdp = 1 [json_name = "sdp"];</code>
+     */
+    private void clearSdp() {
+
+      sdp_ = getDefaultInstance().getSdp();
+    }
+    /**
+     * <code>string sdp = 1 [json_name = "sdp"];</code>
+     * @param value The bytes for sdp to set.
+     */
+    private void setSdpBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sdp_ = value.toStringUtf8();
+
     }
 
     public static final int DISABLE_TRICKLE_FIELD_NUMBER = 2;
-    private boolean disableTrickle_ = false;
+    private boolean disableTrickle_;
     /**
      * <pre>
      * when disable_trickle is true, the init stage will be the only stage
@@ -1150,175 +766,117 @@ public final class Signaling {
     public boolean getDisableTrickle() {
       return disableTrickle_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * when disable_trickle is true, the init stage will be the only stage
+     * to be received in the response and the caller can expect the SDP
+     * to contain all ICE candidates.
+     * </pre>
+     *
+     * <code>bool disable_trickle = 2 [json_name = "disableTrickle"];</code>
+     * @param value The disableTrickle to set.
+     */
+    private void setDisableTrickle(boolean value) {
+      
+      disableTrickle_ = value;
     }
+    /**
+     * <pre>
+     * when disable_trickle is true, the init stage will be the only stage
+     * to be received in the response and the caller can expect the SDP
+     * to contain all ICE candidates.
+     * </pre>
+     *
+     * <code>bool disable_trickle = 2 [json_name = "disableTrickle"];</code>
+     */
+    private void clearDisableTrickle() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sdp_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sdp_);
-      }
-      if (disableTrickle_ != false) {
-        output.writeBool(2, disableTrickle_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sdp_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sdp_);
-      }
-      if (disableTrickle_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, disableTrickle_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.CallRequest)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.CallRequest other = (proto.rpc.webrtc.v1.Signaling.CallRequest) obj;
-
-      if (!getSdp()
-          .equals(other.getSdp())) return false;
-      if (getDisableTrickle()
-          != other.getDisableTrickle()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SDP_FIELD_NUMBER;
-      hash = (53 * hash) + getSdp().hashCode();
-      hash = (37 * hash) + DISABLE_TRICKLE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getDisableTrickle());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      disableTrickle_ = false;
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.CallRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * CallRequest is the SDP offer that the controlling side is making.
@@ -1327,217 +885,32 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.CallRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.CallRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.CallRequest)
         proto.rpc.webrtc.v1.Signaling.CallRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.CallRequest.class, proto.rpc.webrtc.v1.Signaling.CallRequest.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.CallRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        sdp_ = "";
-        disableTrickle_ = false;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallRequest getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.CallRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallRequest build() {
-        proto.rpc.webrtc.v1.Signaling.CallRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallRequest buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.CallRequest result = new proto.rpc.webrtc.v1.Signaling.CallRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.CallRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sdp_ = sdp_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.disableTrickle_ = disableTrickle_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.CallRequest) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.CallRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.CallRequest other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.CallRequest.getDefaultInstance()) return this;
-        if (!other.getSdp().isEmpty()) {
-          sdp_ = other.sdp_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.getDisableTrickle() != false) {
-          setDisableTrickle(other.getDisableTrickle());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                sdp_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                disableTrickle_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object sdp_ = "";
       /**
        * <code>string sdp = 1 [json_name = "sdp"];</code>
        * @return The sdp.
        */
+      @java.lang.Override
       public java.lang.String getSdp() {
-        java.lang.Object ref = sdp_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sdp_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSdp();
       }
       /**
        * <code>string sdp = 1 [json_name = "sdp"];</code>
        * @return The bytes for sdp.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSdpBytes() {
-        java.lang.Object ref = sdp_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sdp_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSdpBytes();
       }
       /**
        * <code>string sdp = 1 [json_name = "sdp"];</code>
@@ -1546,10 +919,8 @@ public final class Signaling {
        */
       public Builder setSdp(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        sdp_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSdp(value);
         return this;
       }
       /**
@@ -1557,9 +928,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearSdp() {
-        sdp_ = getDefaultInstance().getSdp();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearSdp();
         return this;
       }
       /**
@@ -1569,15 +939,11 @@ public final class Signaling {
        */
       public Builder setSdpBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        sdp_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSdpBytes(value);
         return this;
       }
 
-      private boolean disableTrickle_ ;
       /**
        * <pre>
        * when disable_trickle is true, the init stage will be the only stage
@@ -1590,7 +956,7 @@ public final class Signaling {
        */
       @java.lang.Override
       public boolean getDisableTrickle() {
-        return disableTrickle_;
+        return instance.getDisableTrickle();
       }
       /**
        * <pre>
@@ -1604,10 +970,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder setDisableTrickle(boolean value) {
-
-        disableTrickle_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setDisableTrickle(value);
         return this;
       }
       /**
@@ -1621,78 +985,90 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearDisableTrickle() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        disableTrickle_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearDisableTrickle();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.CallRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.CallRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sdp_",
+              "disableTrickle_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0007" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.CallRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.CallRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.CallRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.CallRequest)
     private static final proto.rpc.webrtc.v1.Signaling.CallRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.CallRequest();
+      CallRequest defaultInstance = new CallRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CallRequest.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CallRequest>
-        PARSER = new com.google.protobuf.AbstractParser<CallRequest>() {
-      @java.lang.Override
-      public CallRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CallRequest> PARSER;
 
     public static com.google.protobuf.Parser<CallRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CallRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.CallRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CallResponseInitStageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.CallResponseInitStage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string sdp = 1 [json_name = "sdp"];</code>
@@ -1714,58 +1090,23 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.CallResponseInitStage}
    */
-  public static final class CallResponseInitStage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CallResponseInitStage extends
+      com.google.protobuf.GeneratedMessageLite<
+          CallResponseInitStage, CallResponseInitStage.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.CallResponseInitStage)
       CallResponseInitStageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CallResponseInitStage.newBuilder() to construct.
-    private CallResponseInitStage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CallResponseInitStage() {
       sdp_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CallResponseInitStage();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponseInitStage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponseInitStage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.class, proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.Builder.class);
-    }
-
     public static final int SDP_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object sdp_ = "";
+    private java.lang.String sdp_;
     /**
      * <code>string sdp = 1 [json_name = "sdp"];</code>
      * @return The sdp.
      */
     @java.lang.Override
     public java.lang.String getSdp() {
-      java.lang.Object ref = sdp_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sdp_ = s;
-        return s;
-      }
+      return sdp_;
     }
     /**
      * <code>string sdp = 1 [json_name = "sdp"];</code>
@@ -1774,174 +1115,119 @@ public final class Signaling {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSdpBytes() {
-      java.lang.Object ref = sdp_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sdp_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(sdp_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string sdp = 1 [json_name = "sdp"];</code>
+     * @param value The sdp to set.
+     */
+    private void setSdp(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      sdp_ = value;
     }
+    /**
+     * <code>string sdp = 1 [json_name = "sdp"];</code>
+     */
+    private void clearSdp() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sdp_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sdp_);
-      }
-      getUnknownFields().writeTo(output);
+      sdp_ = getDefaultInstance().getSdp();
     }
+    /**
+     * <code>string sdp = 1 [json_name = "sdp"];</code>
+     * @param value The bytes for sdp to set.
+     */
+    private void setSdpBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sdp_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sdp_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sdp_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.CallResponseInitStage)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.CallResponseInitStage other = (proto.rpc.webrtc.v1.Signaling.CallResponseInitStage) obj;
-
-      if (!getSdp()
-          .equals(other.getSdp())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SDP_FIELD_NUMBER;
-      hash = (53 * hash) + getSdp().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.CallResponseInitStage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * CallResponseInitStage is the first and a one time stage that represents
@@ -1951,205 +1237,32 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.CallResponseInitStage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.CallResponseInitStage, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.CallResponseInitStage)
         proto.rpc.webrtc.v1.Signaling.CallResponseInitStageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponseInitStage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponseInitStage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.class, proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        sdp_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponseInitStage_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallResponseInitStage getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallResponseInitStage build() {
-        proto.rpc.webrtc.v1.Signaling.CallResponseInitStage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallResponseInitStage buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.CallResponseInitStage result = new proto.rpc.webrtc.v1.Signaling.CallResponseInitStage(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.CallResponseInitStage result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sdp_ = sdp_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.CallResponseInitStage) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.CallResponseInitStage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.CallResponseInitStage other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.getDefaultInstance()) return this;
-        if (!other.getSdp().isEmpty()) {
-          sdp_ = other.sdp_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                sdp_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object sdp_ = "";
       /**
        * <code>string sdp = 1 [json_name = "sdp"];</code>
        * @return The sdp.
        */
+      @java.lang.Override
       public java.lang.String getSdp() {
-        java.lang.Object ref = sdp_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sdp_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSdp();
       }
       /**
        * <code>string sdp = 1 [json_name = "sdp"];</code>
        * @return The bytes for sdp.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSdpBytes() {
-        java.lang.Object ref = sdp_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sdp_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSdpBytes();
       }
       /**
        * <code>string sdp = 1 [json_name = "sdp"];</code>
@@ -2158,10 +1271,8 @@ public final class Signaling {
        */
       public Builder setSdp(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        sdp_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSdp(value);
         return this;
       }
       /**
@@ -2169,9 +1280,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearSdp() {
-        sdp_ = getDefaultInstance().getSdp();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearSdp();
         return this;
       }
       /**
@@ -2181,80 +1291,88 @@ public final class Signaling {
        */
       public Builder setSdpBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        sdp_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSdpBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.CallResponseInitStage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.CallResponseInitStage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sdp_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.CallResponseInitStage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.CallResponseInitStage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.CallResponseInitStage)
     private static final proto.rpc.webrtc.v1.Signaling.CallResponseInitStage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.CallResponseInitStage();
+      CallResponseInitStage defaultInstance = new CallResponseInitStage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CallResponseInitStage.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallResponseInitStage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CallResponseInitStage>
-        PARSER = new com.google.protobuf.AbstractParser<CallResponseInitStage>() {
-      @java.lang.Override
-      public CallResponseInitStage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CallResponseInitStage> PARSER;
 
     public static com.google.protobuf.Parser<CallResponseInitStage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CallResponseInitStage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.CallResponseInitStage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CallResponseUpdateStageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.CallResponseUpdateStage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
@@ -2266,10 +1384,6 @@ public final class Signaling {
      * @return The candidate.
      */
     proto.rpc.webrtc.v1.Signaling.ICECandidate getCandidate();
-    /**
-     * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder getCandidateOrBuilder();
   }
   /**
    * <pre>
@@ -2279,44 +1393,18 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.CallResponseUpdateStage}
    */
-  public static final class CallResponseUpdateStage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CallResponseUpdateStage extends
+      com.google.protobuf.GeneratedMessageLite<
+          CallResponseUpdateStage, CallResponseUpdateStage.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.CallResponseUpdateStage)
       CallResponseUpdateStageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CallResponseUpdateStage.newBuilder() to construct.
-    private CallResponseUpdateStage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CallResponseUpdateStage() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CallResponseUpdateStage();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponseUpdateStage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponseUpdateStage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.class, proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.Builder.class);
-    }
-
     private int bitField0_;
     public static final int CANDIDATE_FIELD_NUMBER = 1;
     private proto.rpc.webrtc.v1.Signaling.ICECandidate candidate_;
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-     * @return Whether the candidate field is set.
      */
     @java.lang.Override
     public boolean hasCandidate() {
@@ -2324,7 +1412,6 @@ public final class Signaling {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-     * @return The candidate.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.ICECandidate getCandidate() {
@@ -2333,173 +1420,116 @@ public final class Signaling {
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder getCandidateOrBuilder() {
-      return candidate_ == null ? proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance() : candidate_;
+    private void setCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
+      value.getClass();
+  candidate_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
+      value.getClass();
+  if (candidate_ != null &&
+          candidate_ != proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance()) {
+        candidate_ =
+          proto.rpc.webrtc.v1.Signaling.ICECandidate.newBuilder(candidate_).mergeFrom(value).buildPartial();
+      } else {
+        candidate_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getCandidate());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getCandidate());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage other = (proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) obj;
-
-      if (hasCandidate() != other.hasCandidate()) return false;
-      if (hasCandidate()) {
-        if (!getCandidate()
-            .equals(other.getCandidate())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasCandidate()) {
-        hash = (37 * hash) + CANDIDATE_FIELD_NUMBER;
-        hash = (53 * hash) + getCandidate().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
+     */
+    private void clearCandidate() {  candidate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * CallResponseUpdateStage is multiply used to trickle in ICE candidates from
@@ -2509,374 +1539,141 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.CallResponseUpdateStage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.CallResponseUpdateStage)
         proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponseUpdateStage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponseUpdateStage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.class, proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCandidateFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        candidate_ = null;
-        if (candidateBuilder_ != null) {
-          candidateBuilder_.dispose();
-          candidateBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponseUpdateStage_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage build() {
-        proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage result = new proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.candidate_ = candidateBuilder_ == null
-              ? candidate_
-              : candidateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.getDefaultInstance()) return this;
-        if (other.hasCandidate()) {
-          mergeCandidate(other.getCandidate());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getCandidateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private proto.rpc.webrtc.v1.Signaling.ICECandidate candidate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.ICECandidate, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder, proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder> candidateBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       * @return Whether the candidate field is set.
        */
+      @java.lang.Override
       public boolean hasCandidate() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasCandidate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       * @return The candidate.
        */
+      @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.ICECandidate getCandidate() {
-        if (candidateBuilder_ == null) {
-          return candidate_ == null ? proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance() : candidate_;
-        } else {
-          return candidateBuilder_.getMessage();
-        }
+        return instance.getCandidate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
        */
       public Builder setCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
-        if (candidateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          candidate_ = value;
-        } else {
-          candidateBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setCandidate(value);
         return this;
-      }
+        }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
        */
       public Builder setCandidate(
           proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder builderForValue) {
-        if (candidateBuilder_ == null) {
-          candidate_ = builderForValue.build();
-        } else {
-          candidateBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setCandidate(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
        */
       public Builder mergeCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
-        if (candidateBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            candidate_ != null &&
-            candidate_ != proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance()) {
-            getCandidateBuilder().mergeFrom(value);
-          } else {
-            candidate_ = value;
-          }
-        } else {
-          candidateBuilder_.mergeFrom(value);
-        }
-        if (candidate_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeCandidate(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
        */
-      public Builder clearCandidate() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        candidate_ = null;
-        if (candidateBuilder_ != null) {
-          candidateBuilder_.dispose();
-          candidateBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearCandidate() {  copyOnWrite();
+        instance.clearCandidate();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder getCandidateBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getCandidateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder getCandidateOrBuilder() {
-        if (candidateBuilder_ != null) {
-          return candidateBuilder_.getMessageOrBuilder();
-        } else {
-          return candidate_ == null ?
-              proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance() : candidate_;
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.ICECandidate, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder, proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder> 
-          getCandidateFieldBuilder() {
-        if (candidateBuilder_ == null) {
-          candidateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.ICECandidate, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder, proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder>(
-                  getCandidate(),
-                  getParentForChildren(),
-                  isClean());
-          candidate_ = null;
-        }
-        return candidateBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.CallResponseUpdateStage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "candidate_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.CallResponseUpdateStage)
     private static final proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage();
+      CallResponseUpdateStage defaultInstance = new CallResponseUpdateStage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CallResponseUpdateStage.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CallResponseUpdateStage>
-        PARSER = new com.google.protobuf.AbstractParser<CallResponseUpdateStage>() {
-      @java.lang.Override
-      public CallResponseUpdateStage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CallResponseUpdateStage> PARSER;
 
     public static com.google.protobuf.Parser<CallResponseUpdateStage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CallResponseUpdateStage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CallResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.CallResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string uuid = 1 [json_name = "uuid"];</code>
@@ -2900,10 +1697,6 @@ public final class Signaling {
      * @return The init.
      */
     proto.rpc.webrtc.v1.Signaling.CallResponseInitStage getInit();
-    /**
-     * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.CallResponseInitStageOrBuilder getInitOrBuilder();
 
     /**
      * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
@@ -2915,12 +1708,8 @@ public final class Signaling {
      * @return The update.
      */
     proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage getUpdate();
-    /**
-     * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStageOrBuilder getUpdateOrBuilder();
 
-    proto.rpc.webrtc.v1.Signaling.CallResponse.StageCase getStageCase();
+    public proto.rpc.webrtc.v1.Signaling.CallResponse.StageCase getStageCase();
   }
   /**
    * <pre>
@@ -2929,45 +1718,17 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.CallResponse}
    */
-  public static final class CallResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CallResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          CallResponse, CallResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.CallResponse)
       CallResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CallResponse.newBuilder() to construct.
-    private CallResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CallResponse() {
       uuid_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CallResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.CallResponse.class, proto.rpc.webrtc.v1.Signaling.CallResponse.Builder.class);
-    }
-
     private int stageCase_ = 0;
-    @SuppressWarnings("serial")
     private java.lang.Object stage_;
-    public enum StageCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    public enum StageCase {
       INIT(2),
       UPDATE(3),
       STAGE_NOT_SET(0);
@@ -2976,8 +1737,6 @@ public final class Signaling {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -2998,31 +1757,27 @@ public final class Signaling {
       }
     };
 
+    @java.lang.Override
     public StageCase
     getStageCase() {
       return StageCase.forNumber(
           stageCase_);
     }
 
+    private void clearStage() {
+      stageCase_ = 0;
+      stage_ = null;
+    }
+
     public static final int UUID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object uuid_ = "";
+    private java.lang.String uuid_;
     /**
      * <code>string uuid = 1 [json_name = "uuid"];</code>
      * @return The uuid.
      */
     @java.lang.Override
     public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
-        return s;
-      }
+      return uuid_;
     }
     /**
      * <code>string uuid = 1 [json_name = "uuid"];</code>
@@ -3031,22 +1786,39 @@ public final class Signaling {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getUuidBytes() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uuid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(uuid_);
+    }
+    /**
+     * <code>string uuid = 1 [json_name = "uuid"];</code>
+     * @param value The uuid to set.
+     */
+    private void setUuid(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      uuid_ = value;
+    }
+    /**
+     * <code>string uuid = 1 [json_name = "uuid"];</code>
+     */
+    private void clearUuid() {
+
+      uuid_ = getDefaultInstance().getUuid();
+    }
+    /**
+     * <code>string uuid = 1 [json_name = "uuid"];</code>
+     * @param value The bytes for uuid to set.
+     */
+    private void setUuidBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      uuid_ = value.toStringUtf8();
+
     }
 
     public static final int INIT_FIELD_NUMBER = 2;
     /**
      * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
-     * @return Whether the init field is set.
      */
     @java.lang.Override
     public boolean hasInit() {
@@ -3054,7 +1826,6 @@ public final class Signaling {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
-     * @return The init.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.CallResponseInitStage getInit() {
@@ -3066,18 +1837,38 @@ public final class Signaling {
     /**
      * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.CallResponseInitStageOrBuilder getInitOrBuilder() {
-      if (stageCase_ == 2) {
-         return (proto.rpc.webrtc.v1.Signaling.CallResponseInitStage) stage_;
+    private void setInit(proto.rpc.webrtc.v1.Signaling.CallResponseInitStage value) {
+      value.getClass();
+  stage_ = value;
+      stageCase_ = 2;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
+     */
+    private void mergeInit(proto.rpc.webrtc.v1.Signaling.CallResponseInitStage value) {
+      value.getClass();
+  if (stageCase_ == 2 &&
+          stage_ != proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.getDefaultInstance()) {
+        stage_ = proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.newBuilder((proto.rpc.webrtc.v1.Signaling.CallResponseInitStage) stage_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        stage_ = value;
       }
-      return proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.getDefaultInstance();
+      stageCase_ = 2;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
+     */
+    private void clearInit() {
+      if (stageCase_ == 2) {
+        stageCase_ = 0;
+        stage_ = null;
+      }
     }
 
     public static final int UPDATE_FIELD_NUMBER = 3;
     /**
      * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
-     * @return Whether the update field is set.
      */
     @java.lang.Override
     public boolean hasUpdate() {
@@ -3085,7 +1876,6 @@ public final class Signaling {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
-     * @return The update.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage getUpdate() {
@@ -3097,209 +1887,118 @@ public final class Signaling {
     /**
      * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStageOrBuilder getUpdateOrBuilder() {
+    private void setUpdate(proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage value) {
+      value.getClass();
+  stage_ = value;
+      stageCase_ = 3;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
+     */
+    private void mergeUpdate(proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage value) {
+      value.getClass();
+  if (stageCase_ == 3 &&
+          stage_ != proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.getDefaultInstance()) {
+        stage_ = proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.newBuilder((proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) stage_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        stage_ = value;
+      }
+      stageCase_ = 3;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
+     */
+    private void clearUpdate() {
       if (stageCase_ == 3) {
-         return (proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) stage_;
+        stageCase_ = 0;
+        stage_ = null;
       }
-      return proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
-      }
-      if (stageCase_ == 2) {
-        output.writeMessage(2, (proto.rpc.webrtc.v1.Signaling.CallResponseInitStage) stage_);
-      }
-      if (stageCase_ == 3) {
-        output.writeMessage(3, (proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) stage_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
-      }
-      if (stageCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (proto.rpc.webrtc.v1.Signaling.CallResponseInitStage) stage_);
-      }
-      if (stageCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) stage_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.CallResponse)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.CallResponse other = (proto.rpc.webrtc.v1.Signaling.CallResponse) obj;
-
-      if (!getUuid()
-          .equals(other.getUuid())) return false;
-      if (!getStageCase().equals(other.getStageCase())) return false;
-      switch (stageCase_) {
-        case 2:
-          if (!getInit()
-              .equals(other.getInit())) return false;
-          break;
-        case 3:
-          if (!getUpdate()
-              .equals(other.getUpdate())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + UUID_FIELD_NUMBER;
-      hash = (53 * hash) + getUuid().hashCode();
-      switch (stageCase_) {
-        case 2:
-          hash = (37 * hash) + INIT_FIELD_NUMBER;
-          hash = (53 * hash) + getInit().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + UPDATE_FIELD_NUMBER;
-          hash = (53 * hash) + getUpdate().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.CallResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * CallResponse is the SDP answer that the controlled side responds with.
@@ -3308,269 +2007,44 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.CallResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.CallResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.CallResponse)
         proto.rpc.webrtc.v1.Signaling.CallResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.CallResponse.class, proto.rpc.webrtc.v1.Signaling.CallResponse.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.CallResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        uuid_ = "";
-        if (initBuilder_ != null) {
-          initBuilder_.clear();
-        }
-        if (updateBuilder_ != null) {
-          updateBuilder_.clear();
-        }
-        stageCase_ = 0;
-        stage_ = null;
-        return this;
+        super(DEFAULT_INSTANCE);
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallResponse getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.CallResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallResponse build() {
-        proto.rpc.webrtc.v1.Signaling.CallResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallResponse buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.CallResponse result = new proto.rpc.webrtc.v1.Signaling.CallResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.CallResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.uuid_ = uuid_;
-        }
-      }
-
-      private void buildPartialOneofs(proto.rpc.webrtc.v1.Signaling.CallResponse result) {
-        result.stageCase_ = stageCase_;
-        result.stage_ = this.stage_;
-        if (stageCase_ == 2 &&
-            initBuilder_ != null) {
-          result.stage_ = initBuilder_.build();
-        }
-        if (stageCase_ == 3 &&
-            updateBuilder_ != null) {
-          result.stage_ = updateBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.CallResponse) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.CallResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.CallResponse other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.CallResponse.getDefaultInstance()) return this;
-        if (!other.getUuid().isEmpty()) {
-          uuid_ = other.uuid_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        switch (other.getStageCase()) {
-          case INIT: {
-            mergeInit(other.getInit());
-            break;
-          }
-          case UPDATE: {
-            mergeUpdate(other.getUpdate());
-            break;
-          }
-          case STAGE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                uuid_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getInitFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                stageCase_ = 2;
-                break;
-              } // case 18
-              case 26: {
-                input.readMessage(
-                    getUpdateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                stageCase_ = 3;
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int stageCase_ = 0;
-      private java.lang.Object stage_;
       public StageCase
           getStageCase() {
-        return StageCase.forNumber(
-            stageCase_);
+        return instance.getStageCase();
       }
 
       public Builder clearStage() {
-        stageCase_ = 0;
-        stage_ = null;
-        onChanged();
+        copyOnWrite();
+        instance.clearStage();
         return this;
       }
 
-      private int bitField0_;
 
-      private java.lang.Object uuid_ = "";
       /**
        * <code>string uuid = 1 [json_name = "uuid"];</code>
        * @return The uuid.
        */
+      @java.lang.Override
       public java.lang.String getUuid() {
-        java.lang.Object ref = uuid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getUuid();
       }
       /**
        * <code>string uuid = 1 [json_name = "uuid"];</code>
        * @return The bytes for uuid.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUuidBytes() {
-        java.lang.Object ref = uuid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          uuid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getUuidBytes();
       }
       /**
        * <code>string uuid = 1 [json_name = "uuid"];</code>
@@ -3579,10 +2053,8 @@ public final class Signaling {
        */
       public Builder setUuid(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        uuid_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setUuid(value);
         return this;
       }
       /**
@@ -3590,9 +2062,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearUuid() {
-        uuid_ = getDefaultInstance().getUuid();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearUuid();
         return this;
       }
       /**
@@ -3602,56 +2073,31 @@ public final class Signaling {
        */
       public Builder setUuidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        uuid_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setUuidBytes(value);
         return this;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.CallResponseInitStage, proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.Builder, proto.rpc.webrtc.v1.Signaling.CallResponseInitStageOrBuilder> initBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
-       * @return Whether the init field is set.
        */
       @java.lang.Override
       public boolean hasInit() {
-        return stageCase_ == 2;
+        return instance.hasInit();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
-       * @return The init.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.CallResponseInitStage getInit() {
-        if (initBuilder_ == null) {
-          if (stageCase_ == 2) {
-            return (proto.rpc.webrtc.v1.Signaling.CallResponseInitStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.getDefaultInstance();
-        } else {
-          if (stageCase_ == 2) {
-            return initBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.getDefaultInstance();
-        }
+        return instance.getInit();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
        */
       public Builder setInit(proto.rpc.webrtc.v1.Signaling.CallResponseInitStage value) {
-        if (initBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          stage_ = value;
-          onChanged();
-        } else {
-          initBuilder_.setMessage(value);
-        }
-        stageCase_ = 2;
+        copyOnWrite();
+        instance.setInit(value);
         return this;
       }
       /**
@@ -3659,141 +2105,47 @@ public final class Signaling {
        */
       public Builder setInit(
           proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.Builder builderForValue) {
-        if (initBuilder_ == null) {
-          stage_ = builderForValue.build();
-          onChanged();
-        } else {
-          initBuilder_.setMessage(builderForValue.build());
-        }
-        stageCase_ = 2;
+        copyOnWrite();
+        instance.setInit(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
        */
       public Builder mergeInit(proto.rpc.webrtc.v1.Signaling.CallResponseInitStage value) {
-        if (initBuilder_ == null) {
-          if (stageCase_ == 2 &&
-              stage_ != proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.getDefaultInstance()) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.newBuilder((proto.rpc.webrtc.v1.Signaling.CallResponseInitStage) stage_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            stage_ = value;
-          }
-          onChanged();
-        } else {
-          if (stageCase_ == 2) {
-            initBuilder_.mergeFrom(value);
-          } else {
-            initBuilder_.setMessage(value);
-          }
-        }
-        stageCase_ = 2;
+        copyOnWrite();
+        instance.mergeInit(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
        */
       public Builder clearInit() {
-        if (initBuilder_ == null) {
-          if (stageCase_ == 2) {
-            stageCase_ = 0;
-            stage_ = null;
-            onChanged();
-          }
-        } else {
-          if (stageCase_ == 2) {
-            stageCase_ = 0;
-            stage_ = null;
-          }
-          initBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearInit();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.Builder getInitBuilder() {
-        return getInitFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallResponseInitStageOrBuilder getInitOrBuilder() {
-        if ((stageCase_ == 2) && (initBuilder_ != null)) {
-          return initBuilder_.getMessageOrBuilder();
-        } else {
-          if (stageCase_ == 2) {
-            return (proto.rpc.webrtc.v1.Signaling.CallResponseInitStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.CallResponseInitStage init = 2 [json_name = "init"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.CallResponseInitStage, proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.Builder, proto.rpc.webrtc.v1.Signaling.CallResponseInitStageOrBuilder> 
-          getInitFieldBuilder() {
-        if (initBuilder_ == null) {
-          if (!(stageCase_ == 2)) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.getDefaultInstance();
-          }
-          initBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.CallResponseInitStage, proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.Builder, proto.rpc.webrtc.v1.Signaling.CallResponseInitStageOrBuilder>(
-                  (proto.rpc.webrtc.v1.Signaling.CallResponseInitStage) stage_,
-                  getParentForChildren(),
-                  isClean());
-          stage_ = null;
-        }
-        stageCase_ = 2;
-        onChanged();
-        return initBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage, proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.Builder, proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStageOrBuilder> updateBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
-       * @return Whether the update field is set.
        */
       @java.lang.Override
       public boolean hasUpdate() {
-        return stageCase_ == 3;
+        return instance.hasUpdate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
-       * @return The update.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage getUpdate() {
-        if (updateBuilder_ == null) {
-          if (stageCase_ == 3) {
-            return (proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.getDefaultInstance();
-        } else {
-          if (stageCase_ == 3) {
-            return updateBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.getDefaultInstance();
-        }
+        return instance.getUpdate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
        */
       public Builder setUpdate(proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage value) {
-        if (updateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          stage_ = value;
-          onChanged();
-        } else {
-          updateBuilder_.setMessage(value);
-        }
-        stageCase_ = 3;
+        copyOnWrite();
+        instance.setUpdate(value);
         return this;
       }
       /**
@@ -3801,165 +2153,109 @@ public final class Signaling {
        */
       public Builder setUpdate(
           proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.Builder builderForValue) {
-        if (updateBuilder_ == null) {
-          stage_ = builderForValue.build();
-          onChanged();
-        } else {
-          updateBuilder_.setMessage(builderForValue.build());
-        }
-        stageCase_ = 3;
+        copyOnWrite();
+        instance.setUpdate(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
        */
       public Builder mergeUpdate(proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage value) {
-        if (updateBuilder_ == null) {
-          if (stageCase_ == 3 &&
-              stage_ != proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.getDefaultInstance()) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.newBuilder((proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) stage_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            stage_ = value;
-          }
-          onChanged();
-        } else {
-          if (stageCase_ == 3) {
-            updateBuilder_.mergeFrom(value);
-          } else {
-            updateBuilder_.setMessage(value);
-          }
-        }
-        stageCase_ = 3;
+        copyOnWrite();
+        instance.mergeUpdate(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
        */
       public Builder clearUpdate() {
-        if (updateBuilder_ == null) {
-          if (stageCase_ == 3) {
-            stageCase_ = 0;
-            stage_ = null;
-            onChanged();
-          }
-        } else {
-          if (stageCase_ == 3) {
-            stageCase_ = 0;
-            stage_ = null;
-          }
-          updateBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearUpdate();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.Builder getUpdateBuilder() {
-        return getUpdateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStageOrBuilder getUpdateOrBuilder() {
-        if ((stageCase_ == 3) && (updateBuilder_ != null)) {
-          return updateBuilder_.getMessageOrBuilder();
-        } else {
-          if (stageCase_ == 3) {
-            return (proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.CallResponseUpdateStage update = 3 [json_name = "update"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage, proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.Builder, proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStageOrBuilder> 
-          getUpdateFieldBuilder() {
-        if (updateBuilder_ == null) {
-          if (!(stageCase_ == 3)) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.getDefaultInstance();
-          }
-          updateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage, proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.Builder, proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStageOrBuilder>(
-                  (proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage) stage_,
-                  getParentForChildren(),
-                  isClean());
-          stage_ = null;
-        }
-        stageCase_ = 3;
-        onChanged();
-        return updateBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.CallResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.CallResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "stage_",
+              "stageCase_",
+              "uuid_",
+              proto.rpc.webrtc.v1.Signaling.CallResponseInitStage.class,
+              proto.rpc.webrtc.v1.Signaling.CallResponseUpdateStage.class,
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002<\u0000" +
+                "\u0003<\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.CallResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.CallResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.CallResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.CallResponse)
     private static final proto.rpc.webrtc.v1.Signaling.CallResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.CallResponse();
+      CallResponse defaultInstance = new CallResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CallResponse.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CallResponse>
-        PARSER = new com.google.protobuf.AbstractParser<CallResponse>() {
-      @java.lang.Override
-      public CallResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CallResponse> PARSER;
 
     public static com.google.protobuf.Parser<CallResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CallResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.CallResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CallUpdateRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.CallUpdateRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string uuid = 1 [json_name = "uuid"];</code>
@@ -3983,10 +2279,6 @@ public final class Signaling {
      * @return The candidate.
      */
     proto.rpc.webrtc.v1.Signaling.ICECandidate getCandidate();
-    /**
-     * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder getCandidateOrBuilder();
 
     /**
      * <code>bool done = 3 [json_name = "done"];</code>
@@ -4008,13 +2300,9 @@ public final class Signaling {
      * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
      * @return The error.
      */
-    com.google.rpc.Status getError();
-    /**
-     * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
-     */
-    com.google.rpc.StatusOrBuilder getErrorOrBuilder();
+    com.viam.shaded.com.google.rpc.Status getError();
 
-    proto.rpc.webrtc.v1.Signaling.CallUpdateRequest.UpdateCase getUpdateCase();
+    public proto.rpc.webrtc.v1.Signaling.CallUpdateRequest.UpdateCase getUpdateCase();
   }
   /**
    * <pre>
@@ -4023,45 +2311,17 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.CallUpdateRequest}
    */
-  public static final class CallUpdateRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CallUpdateRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          CallUpdateRequest, CallUpdateRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.CallUpdateRequest)
       CallUpdateRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CallUpdateRequest.newBuilder() to construct.
-    private CallUpdateRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CallUpdateRequest() {
       uuid_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CallUpdateRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallUpdateRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallUpdateRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.CallUpdateRequest.class, proto.rpc.webrtc.v1.Signaling.CallUpdateRequest.Builder.class);
-    }
-
     private int updateCase_ = 0;
-    @SuppressWarnings("serial")
     private java.lang.Object update_;
-    public enum UpdateCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    public enum UpdateCase {
       CANDIDATE(2),
       DONE(3),
       ERROR(4),
@@ -4071,8 +2331,6 @@ public final class Signaling {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -4094,31 +2352,27 @@ public final class Signaling {
       }
     };
 
+    @java.lang.Override
     public UpdateCase
     getUpdateCase() {
       return UpdateCase.forNumber(
           updateCase_);
     }
 
+    private void clearUpdate() {
+      updateCase_ = 0;
+      update_ = null;
+    }
+
     public static final int UUID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object uuid_ = "";
+    private java.lang.String uuid_;
     /**
      * <code>string uuid = 1 [json_name = "uuid"];</code>
      * @return The uuid.
      */
     @java.lang.Override
     public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
-        return s;
-      }
+      return uuid_;
     }
     /**
      * <code>string uuid = 1 [json_name = "uuid"];</code>
@@ -4127,22 +2381,39 @@ public final class Signaling {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getUuidBytes() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uuid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(uuid_);
+    }
+    /**
+     * <code>string uuid = 1 [json_name = "uuid"];</code>
+     * @param value The uuid to set.
+     */
+    private void setUuid(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      uuid_ = value;
+    }
+    /**
+     * <code>string uuid = 1 [json_name = "uuid"];</code>
+     */
+    private void clearUuid() {
+
+      uuid_ = getDefaultInstance().getUuid();
+    }
+    /**
+     * <code>string uuid = 1 [json_name = "uuid"];</code>
+     * @param value The bytes for uuid to set.
+     */
+    private void setUuidBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      uuid_ = value.toStringUtf8();
+
     }
 
     public static final int CANDIDATE_FIELD_NUMBER = 2;
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
-     * @return Whether the candidate field is set.
      */
     @java.lang.Override
     public boolean hasCandidate() {
@@ -4150,7 +2421,6 @@ public final class Signaling {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
-     * @return The candidate.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.ICECandidate getCandidate() {
@@ -4162,12 +2432,33 @@ public final class Signaling {
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder getCandidateOrBuilder() {
-      if (updateCase_ == 2) {
-         return (proto.rpc.webrtc.v1.Signaling.ICECandidate) update_;
+    private void setCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
+      value.getClass();
+  update_ = value;
+      updateCase_ = 2;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
+     */
+    private void mergeCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
+      value.getClass();
+  if (updateCase_ == 2 &&
+          update_ != proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance()) {
+        update_ = proto.rpc.webrtc.v1.Signaling.ICECandidate.newBuilder((proto.rpc.webrtc.v1.Signaling.ICECandidate) update_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        update_ = value;
       }
-      return proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance();
+      updateCase_ = 2;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
+     */
+    private void clearCandidate() {
+      if (updateCase_ == 2) {
+        updateCase_ = 0;
+        update_ = null;
+      }
     }
 
     public static final int DONE_FIELD_NUMBER = 3;
@@ -4190,11 +2481,27 @@ public final class Signaling {
       }
       return false;
     }
+    /**
+     * <code>bool done = 3 [json_name = "done"];</code>
+     * @param value The done to set.
+     */
+    private void setDone(boolean value) {
+      updateCase_ = 3;
+      update_ = value;
+    }
+    /**
+     * <code>bool done = 3 [json_name = "done"];</code>
+     */
+    private void clearDone() {
+      if (updateCase_ == 3) {
+        updateCase_ = 0;
+        update_ = null;
+      }
+    }
 
     public static final int ERROR_FIELD_NUMBER = 4;
     /**
      * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
-     * @return Whether the error field is set.
      */
     @java.lang.Override
     public boolean hasError() {
@@ -4202,239 +2509,129 @@ public final class Signaling {
     }
     /**
      * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
-     * @return The error.
      */
     @java.lang.Override
-    public com.google.rpc.Status getError() {
+    public com.viam.shaded.com.google.rpc.Status getError() {
       if (updateCase_ == 4) {
-         return (com.google.rpc.Status) update_;
+         return (com.viam.shaded.com.google.rpc.Status) update_;
       }
-      return com.google.rpc.Status.getDefaultInstance();
+      return com.viam.shaded.com.google.rpc.Status.getDefaultInstance();
     }
     /**
      * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
      */
-    @java.lang.Override
-    public com.google.rpc.StatusOrBuilder getErrorOrBuilder() {
+    private void setError(com.viam.shaded.com.google.rpc.Status value) {
+      value.getClass();
+  update_ = value;
+      updateCase_ = 4;
+    }
+    /**
+     * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
+     */
+    private void mergeError(com.viam.shaded.com.google.rpc.Status value) {
+      value.getClass();
+  if (updateCase_ == 4 &&
+          update_ != com.viam.shaded.com.google.rpc.Status.getDefaultInstance()) {
+        update_ = com.viam.shaded.com.google.rpc.Status.newBuilder((com.viam.shaded.com.google.rpc.Status) update_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        update_ = value;
+      }
+      updateCase_ = 4;
+    }
+    /**
+     * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
+     */
+    private void clearError() {
       if (updateCase_ == 4) {
-         return (com.google.rpc.Status) update_;
+        updateCase_ = 0;
+        update_ = null;
       }
-      return com.google.rpc.Status.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
-      }
-      if (updateCase_ == 2) {
-        output.writeMessage(2, (proto.rpc.webrtc.v1.Signaling.ICECandidate) update_);
-      }
-      if (updateCase_ == 3) {
-        output.writeBool(
-            3, (boolean)((java.lang.Boolean) update_));
-      }
-      if (updateCase_ == 4) {
-        output.writeMessage(4, (com.google.rpc.Status) update_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
-      }
-      if (updateCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (proto.rpc.webrtc.v1.Signaling.ICECandidate) update_);
-      }
-      if (updateCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(
-              3, (boolean)((java.lang.Boolean) update_));
-      }
-      if (updateCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (com.google.rpc.Status) update_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.CallUpdateRequest)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.CallUpdateRequest other = (proto.rpc.webrtc.v1.Signaling.CallUpdateRequest) obj;
-
-      if (!getUuid()
-          .equals(other.getUuid())) return false;
-      if (!getUpdateCase().equals(other.getUpdateCase())) return false;
-      switch (updateCase_) {
-        case 2:
-          if (!getCandidate()
-              .equals(other.getCandidate())) return false;
-          break;
-        case 3:
-          if (getDone()
-              != other.getDone()) return false;
-          break;
-        case 4:
-          if (!getError()
-              .equals(other.getError())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + UUID_FIELD_NUMBER;
-      hash = (53 * hash) + getUuid().hashCode();
-      switch (updateCase_) {
-        case 2:
-          hash = (37 * hash) + CANDIDATE_FIELD_NUMBER;
-          hash = (53 * hash) + getCandidate().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + DONE_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-              getDone());
-          break;
-        case 4:
-          hash = (37 * hash) + ERROR_FIELD_NUMBER;
-          hash = (53 * hash) + getError().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.CallUpdateRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * CallUpdateRequest updates the call with additional info to the controlled side.
@@ -4443,278 +2640,44 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.CallUpdateRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.CallUpdateRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.CallUpdateRequest)
         proto.rpc.webrtc.v1.Signaling.CallUpdateRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallUpdateRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallUpdateRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.CallUpdateRequest.class, proto.rpc.webrtc.v1.Signaling.CallUpdateRequest.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.CallUpdateRequest.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        uuid_ = "";
-        if (candidateBuilder_ != null) {
-          candidateBuilder_.clear();
-        }
-        if (errorBuilder_ != null) {
-          errorBuilder_.clear();
-        }
-        updateCase_ = 0;
-        update_ = null;
-        return this;
+        super(DEFAULT_INSTANCE);
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallUpdateRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallUpdateRequest getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.CallUpdateRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallUpdateRequest build() {
-        proto.rpc.webrtc.v1.Signaling.CallUpdateRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallUpdateRequest buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.CallUpdateRequest result = new proto.rpc.webrtc.v1.Signaling.CallUpdateRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.CallUpdateRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.uuid_ = uuid_;
-        }
-      }
-
-      private void buildPartialOneofs(proto.rpc.webrtc.v1.Signaling.CallUpdateRequest result) {
-        result.updateCase_ = updateCase_;
-        result.update_ = this.update_;
-        if (updateCase_ == 2 &&
-            candidateBuilder_ != null) {
-          result.update_ = candidateBuilder_.build();
-        }
-        if (updateCase_ == 4 &&
-            errorBuilder_ != null) {
-          result.update_ = errorBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.CallUpdateRequest) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.CallUpdateRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.CallUpdateRequest other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.CallUpdateRequest.getDefaultInstance()) return this;
-        if (!other.getUuid().isEmpty()) {
-          uuid_ = other.uuid_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        switch (other.getUpdateCase()) {
-          case CANDIDATE: {
-            mergeCandidate(other.getCandidate());
-            break;
-          }
-          case DONE: {
-            setDone(other.getDone());
-            break;
-          }
-          case ERROR: {
-            mergeError(other.getError());
-            break;
-          }
-          case UPDATE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                uuid_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getCandidateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                updateCase_ = 2;
-                break;
-              } // case 18
-              case 24: {
-                update_ = input.readBool();
-                updateCase_ = 3;
-                break;
-              } // case 24
-              case 34: {
-                input.readMessage(
-                    getErrorFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                updateCase_ = 4;
-                break;
-              } // case 34
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int updateCase_ = 0;
-      private java.lang.Object update_;
       public UpdateCase
           getUpdateCase() {
-        return UpdateCase.forNumber(
-            updateCase_);
+        return instance.getUpdateCase();
       }
 
       public Builder clearUpdate() {
-        updateCase_ = 0;
-        update_ = null;
-        onChanged();
+        copyOnWrite();
+        instance.clearUpdate();
         return this;
       }
 
-      private int bitField0_;
 
-      private java.lang.Object uuid_ = "";
       /**
        * <code>string uuid = 1 [json_name = "uuid"];</code>
        * @return The uuid.
        */
+      @java.lang.Override
       public java.lang.String getUuid() {
-        java.lang.Object ref = uuid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getUuid();
       }
       /**
        * <code>string uuid = 1 [json_name = "uuid"];</code>
        * @return The bytes for uuid.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUuidBytes() {
-        java.lang.Object ref = uuid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          uuid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getUuidBytes();
       }
       /**
        * <code>string uuid = 1 [json_name = "uuid"];</code>
@@ -4723,10 +2686,8 @@ public final class Signaling {
        */
       public Builder setUuid(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        uuid_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setUuid(value);
         return this;
       }
       /**
@@ -4734,9 +2695,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearUuid() {
-        uuid_ = getDefaultInstance().getUuid();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearUuid();
         return this;
       }
       /**
@@ -4746,56 +2706,31 @@ public final class Signaling {
        */
       public Builder setUuidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        uuid_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setUuidBytes(value);
         return this;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.ICECandidate, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder, proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder> candidateBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
-       * @return Whether the candidate field is set.
        */
       @java.lang.Override
       public boolean hasCandidate() {
-        return updateCase_ == 2;
+        return instance.hasCandidate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
-       * @return The candidate.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.ICECandidate getCandidate() {
-        if (candidateBuilder_ == null) {
-          if (updateCase_ == 2) {
-            return (proto.rpc.webrtc.v1.Signaling.ICECandidate) update_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance();
-        } else {
-          if (updateCase_ == 2) {
-            return candidateBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance();
-        }
+        return instance.getCandidate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
        */
       public Builder setCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
-        if (candidateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          update_ = value;
-          onChanged();
-        } else {
-          candidateBuilder_.setMessage(value);
-        }
-        updateCase_ = 2;
+        copyOnWrite();
+        instance.setCandidate(value);
         return this;
       }
       /**
@@ -4803,115 +2738,42 @@ public final class Signaling {
        */
       public Builder setCandidate(
           proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder builderForValue) {
-        if (candidateBuilder_ == null) {
-          update_ = builderForValue.build();
-          onChanged();
-        } else {
-          candidateBuilder_.setMessage(builderForValue.build());
-        }
-        updateCase_ = 2;
+        copyOnWrite();
+        instance.setCandidate(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
        */
       public Builder mergeCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
-        if (candidateBuilder_ == null) {
-          if (updateCase_ == 2 &&
-              update_ != proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance()) {
-            update_ = proto.rpc.webrtc.v1.Signaling.ICECandidate.newBuilder((proto.rpc.webrtc.v1.Signaling.ICECandidate) update_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            update_ = value;
-          }
-          onChanged();
-        } else {
-          if (updateCase_ == 2) {
-            candidateBuilder_.mergeFrom(value);
-          } else {
-            candidateBuilder_.setMessage(value);
-          }
-        }
-        updateCase_ = 2;
+        copyOnWrite();
+        instance.mergeCandidate(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
        */
       public Builder clearCandidate() {
-        if (candidateBuilder_ == null) {
-          if (updateCase_ == 2) {
-            updateCase_ = 0;
-            update_ = null;
-            onChanged();
-          }
-        } else {
-          if (updateCase_ == 2) {
-            updateCase_ = 0;
-            update_ = null;
-          }
-          candidateBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearCandidate();
         return this;
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder getCandidateBuilder() {
-        return getCandidateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder getCandidateOrBuilder() {
-        if ((updateCase_ == 2) && (candidateBuilder_ != null)) {
-          return candidateBuilder_.getMessageOrBuilder();
-        } else {
-          if (updateCase_ == 2) {
-            return (proto.rpc.webrtc.v1.Signaling.ICECandidate) update_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 2 [json_name = "candidate"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.ICECandidate, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder, proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder> 
-          getCandidateFieldBuilder() {
-        if (candidateBuilder_ == null) {
-          if (!(updateCase_ == 2)) {
-            update_ = proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance();
-          }
-          candidateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.ICECandidate, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder, proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder>(
-                  (proto.rpc.webrtc.v1.Signaling.ICECandidate) update_,
-                  getParentForChildren(),
-                  isClean());
-          update_ = null;
-        }
-        updateCase_ = 2;
-        onChanged();
-        return candidateBuilder_;
       }
 
       /**
        * <code>bool done = 3 [json_name = "done"];</code>
        * @return Whether the done field is set.
        */
+      @java.lang.Override
       public boolean hasDone() {
-        return updateCase_ == 3;
+        return instance.hasDone();
       }
       /**
        * <code>bool done = 3 [json_name = "done"];</code>
        * @return The done.
        */
+      @java.lang.Override
       public boolean getDone() {
-        if (updateCase_ == 3) {
-          return (java.lang.Boolean) update_;
-        }
-        return false;
+        return instance.getDone();
       }
       /**
        * <code>bool done = 3 [json_name = "done"];</code>
@@ -4919,10 +2781,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder setDone(boolean value) {
-
-        updateCase_ = 3;
-        update_ = value;
-        onChanged();
+        copyOnWrite();
+        instance.setDone(value);
         return this;
       }
       /**
@@ -4930,222 +2790,141 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearDone() {
-        if (updateCase_ == 3) {
-          updateCase_ = 0;
-          update_ = null;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.clearDone();
         return this;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> errorBuilder_;
       /**
        * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
-       * @return Whether the error field is set.
        */
       @java.lang.Override
       public boolean hasError() {
-        return updateCase_ == 4;
+        return instance.hasError();
       }
       /**
        * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
-       * @return The error.
        */
       @java.lang.Override
-      public com.google.rpc.Status getError() {
-        if (errorBuilder_ == null) {
-          if (updateCase_ == 4) {
-            return (com.google.rpc.Status) update_;
-          }
-          return com.google.rpc.Status.getDefaultInstance();
-        } else {
-          if (updateCase_ == 4) {
-            return errorBuilder_.getMessage();
-          }
-          return com.google.rpc.Status.getDefaultInstance();
-        }
+      public com.viam.shaded.com.google.rpc.Status getError() {
+        return instance.getError();
       }
       /**
        * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
        */
-      public Builder setError(com.google.rpc.Status value) {
-        if (errorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          update_ = value;
-          onChanged();
-        } else {
-          errorBuilder_.setMessage(value);
-        }
-        updateCase_ = 4;
+      public Builder setError(com.viam.shaded.com.google.rpc.Status value) {
+        copyOnWrite();
+        instance.setError(value);
         return this;
       }
       /**
        * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
        */
       public Builder setError(
-          com.google.rpc.Status.Builder builderForValue) {
-        if (errorBuilder_ == null) {
-          update_ = builderForValue.build();
-          onChanged();
-        } else {
-          errorBuilder_.setMessage(builderForValue.build());
-        }
-        updateCase_ = 4;
+          com.viam.shaded.com.google.rpc.Status.Builder builderForValue) {
+        copyOnWrite();
+        instance.setError(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
        */
-      public Builder mergeError(com.google.rpc.Status value) {
-        if (errorBuilder_ == null) {
-          if (updateCase_ == 4 &&
-              update_ != com.google.rpc.Status.getDefaultInstance()) {
-            update_ = com.google.rpc.Status.newBuilder((com.google.rpc.Status) update_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            update_ = value;
-          }
-          onChanged();
-        } else {
-          if (updateCase_ == 4) {
-            errorBuilder_.mergeFrom(value);
-          } else {
-            errorBuilder_.setMessage(value);
-          }
-        }
-        updateCase_ = 4;
+      public Builder mergeError(com.viam.shaded.com.google.rpc.Status value) {
+        copyOnWrite();
+        instance.mergeError(value);
         return this;
       }
       /**
        * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
        */
       public Builder clearError() {
-        if (errorBuilder_ == null) {
-          if (updateCase_ == 4) {
-            updateCase_ = 0;
-            update_ = null;
-            onChanged();
-          }
-        } else {
-          if (updateCase_ == 4) {
-            updateCase_ = 0;
-            update_ = null;
-          }
-          errorBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearError();
         return this;
       }
-      /**
-       * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
-       */
-      public com.google.rpc.Status.Builder getErrorBuilder() {
-        return getErrorFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
-       */
-      @java.lang.Override
-      public com.google.rpc.StatusOrBuilder getErrorOrBuilder() {
-        if ((updateCase_ == 4) && (errorBuilder_ != null)) {
-          return errorBuilder_.getMessageOrBuilder();
-        } else {
-          if (updateCase_ == 4) {
-            return (com.google.rpc.Status) update_;
-          }
-          return com.google.rpc.Status.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
-          getErrorFieldBuilder() {
-        if (errorBuilder_ == null) {
-          if (!(updateCase_ == 4)) {
-            update_ = com.google.rpc.Status.getDefaultInstance();
-          }
-          errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
-                  (com.google.rpc.Status) update_,
-                  getParentForChildren(),
-                  isClean());
-          update_ = null;
-        }
-        updateCase_ = 4;
-        onChanged();
-        return errorBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.CallUpdateRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.CallUpdateRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "update_",
+              "updateCase_",
+              "uuid_",
+              proto.rpc.webrtc.v1.Signaling.ICECandidate.class,
+              com.viam.shaded.com.google.rpc.Status.class,
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002<\u0000" +
+                "\u0003:\u0000\u0004<\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.CallUpdateRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.CallUpdateRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.CallUpdateRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.CallUpdateRequest)
     private static final proto.rpc.webrtc.v1.Signaling.CallUpdateRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.CallUpdateRequest();
+      CallUpdateRequest defaultInstance = new CallUpdateRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CallUpdateRequest.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CallUpdateRequest>
-        PARSER = new com.google.protobuf.AbstractParser<CallUpdateRequest>() {
-      @java.lang.Override
-      public CallUpdateRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CallUpdateRequest> PARSER;
 
     public static com.google.protobuf.Parser<CallUpdateRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CallUpdateRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.CallUpdateRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface CallUpdateResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.CallUpdateResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * <pre>
@@ -5154,184 +2933,96 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.CallUpdateResponse}
    */
-  public static final class CallUpdateResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class CallUpdateResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          CallUpdateResponse, CallUpdateResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.CallUpdateResponse)
       CallUpdateResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use CallUpdateResponse.newBuilder() to construct.
-    private CallUpdateResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private CallUpdateResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CallUpdateResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallUpdateResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallUpdateResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.CallUpdateResponse.class, proto.rpc.webrtc.v1.Signaling.CallUpdateResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.CallUpdateResponse)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.CallUpdateResponse other = (proto.rpc.webrtc.v1.Signaling.CallUpdateResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.CallUpdateResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * CallUpdateResponse contains nothing in response to a call update.
@@ -5340,217 +3031,90 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.CallUpdateResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.CallUpdateResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.CallUpdateResponse)
         proto.rpc.webrtc.v1.Signaling.CallUpdateResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallUpdateResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallUpdateResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.CallUpdateResponse.class, proto.rpc.webrtc.v1.Signaling.CallUpdateResponse.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.CallUpdateResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_CallUpdateResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallUpdateResponse getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.CallUpdateResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallUpdateResponse build() {
-        proto.rpc.webrtc.v1.Signaling.CallUpdateResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.CallUpdateResponse buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.CallUpdateResponse result = new proto.rpc.webrtc.v1.Signaling.CallUpdateResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.CallUpdateResponse) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.CallUpdateResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.CallUpdateResponse other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.CallUpdateResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.CallUpdateResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.CallUpdateResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.CallUpdateResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.CallUpdateResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.CallUpdateResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.CallUpdateResponse)
     private static final proto.rpc.webrtc.v1.Signaling.CallUpdateResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.CallUpdateResponse();
+      CallUpdateResponse defaultInstance = new CallUpdateResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        CallUpdateResponse.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.CallUpdateResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<CallUpdateResponse>
-        PARSER = new com.google.protobuf.AbstractParser<CallUpdateResponse>() {
-      @java.lang.Override
-      public CallUpdateResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<CallUpdateResponse> PARSER;
 
     public static com.google.protobuf.Parser<CallUpdateResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CallUpdateResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.CallUpdateResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ICEServerOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.ICEServer)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated string urls = 1 [json_name = "urls"];</code>
@@ -5571,8 +3135,8 @@ public final class Signaling {
     java.lang.String getUrls(int index);
     /**
      * <code>repeated string urls = 1 [json_name = "urls"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the urls at the given index.
+     * @param index The index of the element to return.
+     * @return The urls at the given index.
      */
     com.google.protobuf.ByteString
         getUrlsBytes(int index);
@@ -5608,58 +3172,31 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.ICEServer}
    */
-  public static final class ICEServer extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ICEServer extends
+      com.google.protobuf.GeneratedMessageLite<
+          ICEServer, ICEServer.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.ICEServer)
       ICEServerOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ICEServer.newBuilder() to construct.
-    private ICEServer(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ICEServer() {
-      urls_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      urls_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       username_ = "";
       credential_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ICEServer();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_ICEServer_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_ICEServer_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.ICEServer.class, proto.rpc.webrtc.v1.Signaling.ICEServer.Builder.class);
-    }
-
     public static final int URLS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList urls_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> urls_;
     /**
      * <code>repeated string urls = 1 [json_name = "urls"];</code>
      * @return A list containing the urls.
      */
-    public com.google.protobuf.ProtocolStringList
-        getUrlsList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getUrlsList() {
       return urls_;
     }
     /**
      * <code>repeated string urls = 1 [json_name = "urls"];</code>
      * @return The count of urls.
      */
+    @java.lang.Override
     public int getUrlsCount() {
       return urls_.size();
     }
@@ -5668,6 +3205,7 @@ public final class Signaling {
      * @param index The index of the element to return.
      * @return The urls at the given index.
      */
+    @java.lang.Override
     public java.lang.String getUrls(int index) {
       return urls_.get(index);
     }
@@ -5676,30 +3214,76 @@ public final class Signaling {
      * @param index The index of the value to return.
      * @return The bytes of the urls at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getUrlsBytes(int index) {
-      return urls_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          urls_.get(index));
+    }
+    private void ensureUrlsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          urls_;  if (!tmp.isModifiable()) {
+        urls_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string urls = 1 [json_name = "urls"];</code>
+     * @param index The index to set the value at.
+     * @param value The urls to set.
+     */
+    private void setUrls(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureUrlsIsMutable();
+      urls_.set(index, value);
+    }
+    /**
+     * <code>repeated string urls = 1 [json_name = "urls"];</code>
+     * @param value The urls to add.
+     */
+    private void addUrls(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureUrlsIsMutable();
+      urls_.add(value);
+    }
+    /**
+     * <code>repeated string urls = 1 [json_name = "urls"];</code>
+     * @param values The urls to add.
+     */
+    private void addAllUrls(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureUrlsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, urls_);
+    }
+    /**
+     * <code>repeated string urls = 1 [json_name = "urls"];</code>
+     */
+    private void clearUrls() {
+      urls_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string urls = 1 [json_name = "urls"];</code>
+     * @param value The bytes of the urls to add.
+     */
+    private void addUrlsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureUrlsIsMutable();
+      urls_.add(value.toStringUtf8());
     }
 
     public static final int USERNAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object username_ = "";
+    private java.lang.String username_;
     /**
      * <code>string username = 2 [json_name = "username"];</code>
      * @return The username.
      */
     @java.lang.Override
     public java.lang.String getUsername() {
-      java.lang.Object ref = username_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        username_ = s;
-        return s;
-      }
+      return username_;
     }
     /**
      * <code>string username = 2 [json_name = "username"];</code>
@@ -5708,37 +3292,45 @@ public final class Signaling {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getUsernameBytes() {
-      java.lang.Object ref = username_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        username_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(username_);
+    }
+    /**
+     * <code>string username = 2 [json_name = "username"];</code>
+     * @param value The username to set.
+     */
+    private void setUsername(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      username_ = value;
+    }
+    /**
+     * <code>string username = 2 [json_name = "username"];</code>
+     */
+    private void clearUsername() {
+
+      username_ = getDefaultInstance().getUsername();
+    }
+    /**
+     * <code>string username = 2 [json_name = "username"];</code>
+     * @param value The bytes for username to set.
+     */
+    private void setUsernameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      username_ = value.toStringUtf8();
+
     }
 
     public static final int CREDENTIAL_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object credential_ = "";
+    private java.lang.String credential_;
     /**
      * <code>string credential = 3 [json_name = "credential"];</code>
      * @return The credential.
      */
     @java.lang.Override
     public java.lang.String getCredential() {
-      java.lang.Object ref = credential_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        credential_ = s;
-        return s;
-      }
+      return credential_;
     }
     /**
      * <code>string credential = 3 [json_name = "credential"];</code>
@@ -5747,201 +3339,119 @@ public final class Signaling {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getCredentialBytes() {
-      java.lang.Object ref = credential_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        credential_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(credential_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string credential = 3 [json_name = "credential"];</code>
+     * @param value The credential to set.
+     */
+    private void setCredential(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      credential_ = value;
     }
+    /**
+     * <code>string credential = 3 [json_name = "credential"];</code>
+     */
+    private void clearCredential() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < urls_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, urls_.getRaw(i));
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, username_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(credential_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, credential_);
-      }
-      getUnknownFields().writeTo(output);
+      credential_ = getDefaultInstance().getCredential();
     }
+    /**
+     * <code>string credential = 3 [json_name = "credential"];</code>
+     * @param value The bytes for credential to set.
+     */
+    private void setCredentialBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      credential_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < urls_.size(); i++) {
-          dataSize += computeStringSizeNoTag(urls_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getUrlsList().size();
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, username_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(credential_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, credential_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.ICEServer)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.ICEServer other = (proto.rpc.webrtc.v1.Signaling.ICEServer) obj;
-
-      if (!getUrlsList()
-          .equals(other.getUrlsList())) return false;
-      if (!getUsername()
-          .equals(other.getUsername())) return false;
-      if (!getCredential()
-          .equals(other.getCredential())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getUrlsCount() > 0) {
-        hash = (37 * hash) + URLS_FIELD_NUMBER;
-        hash = (53 * hash) + getUrlsList().hashCode();
-      }
-      hash = (37 * hash) + USERNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getUsername().hashCode();
-      hash = (37 * hash) + CREDENTIAL_FIELD_NUMBER;
-      hash = (53 * hash) + getCredential().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.webrtc.v1.Signaling.ICEServer parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICEServer parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICEServer parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICEServer parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICEServer parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICEServer parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICEServer parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICEServer parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.ICEServer parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.ICEServer parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICEServer parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.ICEServer parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.ICEServer prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * ICEServer describes an ICE server.
@@ -5950,248 +3460,52 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.ICEServer}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.ICEServer, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.ICEServer)
         proto.rpc.webrtc.v1.Signaling.ICEServerOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_ICEServer_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_ICEServer_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.ICEServer.class, proto.rpc.webrtc.v1.Signaling.ICEServer.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.ICEServer.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        urls_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        username_ = "";
-        credential_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_ICEServer_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.ICEServer getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.ICEServer.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.ICEServer build() {
-        proto.rpc.webrtc.v1.Signaling.ICEServer result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.ICEServer buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.ICEServer result = new proto.rpc.webrtc.v1.Signaling.ICEServer(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.ICEServer result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          urls_.makeImmutable();
-          result.urls_ = urls_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.username_ = username_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.credential_ = credential_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.ICEServer) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.ICEServer)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.ICEServer other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.ICEServer.getDefaultInstance()) return this;
-        if (!other.urls_.isEmpty()) {
-          if (urls_.isEmpty()) {
-            urls_ = other.urls_;
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureUrlsIsMutable();
-            urls_.addAll(other.urls_);
-          }
-          onChanged();
-        }
-        if (!other.getUsername().isEmpty()) {
-          username_ = other.username_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getCredential().isEmpty()) {
-          credential_ = other.credential_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureUrlsIsMutable();
-                urls_.add(s);
-                break;
-              } // case 10
-              case 18: {
-                username_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                credential_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.LazyStringArrayList urls_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureUrlsIsMutable() {
-        if (!urls_.isModifiable()) {
-          urls_ = new com.google.protobuf.LazyStringArrayList(urls_);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <code>repeated string urls = 1 [json_name = "urls"];</code>
        * @return A list containing the urls.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getUrlsList() {
-        urls_.makeImmutable();
-        return urls_;
+        return java.util.Collections.unmodifiableList(
+            instance.getUrlsList());
       }
       /**
        * <code>repeated string urls = 1 [json_name = "urls"];</code>
        * @return The count of urls.
        */
+      @java.lang.Override
       public int getUrlsCount() {
-        return urls_.size();
+        return instance.getUrlsCount();
       }
       /**
        * <code>repeated string urls = 1 [json_name = "urls"];</code>
        * @param index The index of the element to return.
        * @return The urls at the given index.
        */
+      @java.lang.Override
       public java.lang.String getUrls(int index) {
-        return urls_.get(index);
+        return instance.getUrls(index);
       }
       /**
        * <code>repeated string urls = 1 [json_name = "urls"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the urls at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUrlsBytes(int index) {
-        return urls_.getByteString(index);
+        return instance.getUrlsBytes(index);
       }
       /**
        * <code>repeated string urls = 1 [json_name = "urls"];</code>
@@ -6201,11 +3515,8 @@ public final class Signaling {
        */
       public Builder setUrls(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureUrlsIsMutable();
-        urls_.set(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setUrls(index, value);
         return this;
       }
       /**
@@ -6215,11 +3526,8 @@ public final class Signaling {
        */
       public Builder addUrls(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureUrlsIsMutable();
-        urls_.add(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addUrls(value);
         return this;
       }
       /**
@@ -6229,11 +3537,8 @@ public final class Signaling {
        */
       public Builder addAllUrls(
           java.lang.Iterable<java.lang.String> values) {
-        ensureUrlsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, urls_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllUrls(values);
         return this;
       }
       /**
@@ -6241,10 +3546,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearUrls() {
-        urls_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);;
-        onChanged();
+        copyOnWrite();
+        instance.clearUrls();
         return this;
       }
       /**
@@ -6254,48 +3557,27 @@ public final class Signaling {
        */
       public Builder addUrlsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureUrlsIsMutable();
-        urls_.add(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addUrlsBytes(value);
         return this;
       }
 
-      private java.lang.Object username_ = "";
       /**
        * <code>string username = 2 [json_name = "username"];</code>
        * @return The username.
        */
+      @java.lang.Override
       public java.lang.String getUsername() {
-        java.lang.Object ref = username_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          username_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getUsername();
       }
       /**
        * <code>string username = 2 [json_name = "username"];</code>
        * @return The bytes for username.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUsernameBytes() {
-        java.lang.Object ref = username_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          username_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getUsernameBytes();
       }
       /**
        * <code>string username = 2 [json_name = "username"];</code>
@@ -6304,10 +3586,8 @@ public final class Signaling {
        */
       public Builder setUsername(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        username_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setUsername(value);
         return this;
       }
       /**
@@ -6315,9 +3595,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearUsername() {
-        username_ = getDefaultInstance().getUsername();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearUsername();
         return this;
       }
       /**
@@ -6327,47 +3606,27 @@ public final class Signaling {
        */
       public Builder setUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        username_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setUsernameBytes(value);
         return this;
       }
 
-      private java.lang.Object credential_ = "";
       /**
        * <code>string credential = 3 [json_name = "credential"];</code>
        * @return The credential.
        */
+      @java.lang.Override
       public java.lang.String getCredential() {
-        java.lang.Object ref = credential_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          credential_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getCredential();
       }
       /**
        * <code>string credential = 3 [json_name = "credential"];</code>
        * @return The bytes for credential.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getCredentialBytes() {
-        java.lang.Object ref = credential_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          credential_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getCredentialBytes();
       }
       /**
        * <code>string credential = 3 [json_name = "credential"];</code>
@@ -6376,10 +3635,8 @@ public final class Signaling {
        */
       public Builder setCredential(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        credential_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setCredential(value);
         return this;
       }
       /**
@@ -6387,9 +3644,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearCredential() {
-        credential_ = getDefaultInstance().getCredential();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearCredential();
         return this;
       }
       /**
@@ -6399,80 +3655,91 @@ public final class Signaling {
        */
       public Builder setCredentialBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        credential_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setCredentialBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.ICEServer)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.ICEServer();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "urls_",
+              "username_",
+              "credential_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0001\u0000\u0001\u021a\u0002\u0208" +
+                "\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.ICEServer> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.ICEServer.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.ICEServer>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.ICEServer)
     private static final proto.rpc.webrtc.v1.Signaling.ICEServer DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.ICEServer();
+      ICEServer defaultInstance = new ICEServer();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ICEServer.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.ICEServer getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ICEServer>
-        PARSER = new com.google.protobuf.AbstractParser<ICEServer>() {
-      @java.lang.Override
-      public ICEServer parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ICEServer> PARSER;
 
     public static com.google.protobuf.Parser<ICEServer> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ICEServer> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.ICEServer getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface WebRTCConfigOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.WebRTCConfig)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
@@ -6487,16 +3754,6 @@ public final class Signaling {
      * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
      */
     int getAdditionalIceServersCount();
-    /**
-     * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
-     */
-    java.util.List<? extends proto.rpc.webrtc.v1.Signaling.ICEServerOrBuilder> 
-        getAdditionalIceServersOrBuilderList();
-    /**
-     * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.ICEServerOrBuilder getAdditionalIceServersOrBuilder(
-        int index);
 
     /**
      * <pre>
@@ -6516,42 +3773,16 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.WebRTCConfig}
    */
-  public static final class WebRTCConfig extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class WebRTCConfig extends
+      com.google.protobuf.GeneratedMessageLite<
+          WebRTCConfig, WebRTCConfig.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.WebRTCConfig)
       WebRTCConfigOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use WebRTCConfig.newBuilder() to construct.
-    private WebRTCConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private WebRTCConfig() {
-      additionalIceServers_ = java.util.Collections.emptyList();
+      additionalIceServers_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new WebRTCConfig();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_WebRTCConfig_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_WebRTCConfig_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.WebRTCConfig.class, proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder.class);
-    }
-
     public static final int ADDITIONAL_ICE_SERVERS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<proto.rpc.webrtc.v1.Signaling.ICEServer> additionalIceServers_;
+    private com.google.protobuf.Internal.ProtobufList<proto.rpc.webrtc.v1.Signaling.ICEServer> additionalIceServers_;
     /**
      * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
      */
@@ -6562,7 +3793,6 @@ public final class Signaling {
     /**
      * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends proto.rpc.webrtc.v1.Signaling.ICEServerOrBuilder> 
         getAdditionalIceServersOrBuilderList() {
       return additionalIceServers_;
@@ -6584,14 +3814,69 @@ public final class Signaling {
     /**
      * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
      */
-    @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.ICEServerOrBuilder getAdditionalIceServersOrBuilder(
         int index) {
       return additionalIceServers_.get(index);
     }
+    private void ensureAdditionalIceServersIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<proto.rpc.webrtc.v1.Signaling.ICEServer> tmp = additionalIceServers_;
+      if (!tmp.isModifiable()) {
+        additionalIceServers_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
+     */
+    private void setAdditionalIceServers(
+        int index, proto.rpc.webrtc.v1.Signaling.ICEServer value) {
+      value.getClass();
+  ensureAdditionalIceServersIsMutable();
+      additionalIceServers_.set(index, value);
+    }
+    /**
+     * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
+     */
+    private void addAdditionalIceServers(proto.rpc.webrtc.v1.Signaling.ICEServer value) {
+      value.getClass();
+  ensureAdditionalIceServersIsMutable();
+      additionalIceServers_.add(value);
+    }
+    /**
+     * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
+     */
+    private void addAdditionalIceServers(
+        int index, proto.rpc.webrtc.v1.Signaling.ICEServer value) {
+      value.getClass();
+  ensureAdditionalIceServersIsMutable();
+      additionalIceServers_.add(index, value);
+    }
+    /**
+     * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
+     */
+    private void addAllAdditionalIceServers(
+        java.lang.Iterable<? extends proto.rpc.webrtc.v1.Signaling.ICEServer> values) {
+      ensureAdditionalIceServersIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, additionalIceServers_);
+    }
+    /**
+     * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
+     */
+    private void clearAdditionalIceServers() {
+      additionalIceServers_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
+     */
+    private void removeAdditionalIceServers(int index) {
+      ensureAdditionalIceServersIsMutable();
+      additionalIceServers_.remove(index);
+    }
 
     public static final int DISABLE_TRICKLE_FIELD_NUMBER = 2;
-    private boolean disableTrickle_ = false;
+    private boolean disableTrickle_;
     /**
      * <pre>
      * disable_trickle indicates if Trickle ICE should be used. Currently, both
@@ -6605,178 +3890,115 @@ public final class Signaling {
     public boolean getDisableTrickle() {
       return disableTrickle_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * disable_trickle indicates if Trickle ICE should be used. Currently, both
+     * sides must both respect this setting.
+     * </pre>
+     *
+     * <code>bool disable_trickle = 2 [json_name = "disableTrickle"];</code>
+     * @param value The disableTrickle to set.
+     */
+    private void setDisableTrickle(boolean value) {
+      
+      disableTrickle_ = value;
     }
+    /**
+     * <pre>
+     * disable_trickle indicates if Trickle ICE should be used. Currently, both
+     * sides must both respect this setting.
+     * </pre>
+     *
+     * <code>bool disable_trickle = 2 [json_name = "disableTrickle"];</code>
+     */
+    private void clearDisableTrickle() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < additionalIceServers_.size(); i++) {
-        output.writeMessage(1, additionalIceServers_.get(i));
-      }
-      if (disableTrickle_ != false) {
-        output.writeBool(2, disableTrickle_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < additionalIceServers_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, additionalIceServers_.get(i));
-      }
-      if (disableTrickle_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(2, disableTrickle_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.WebRTCConfig)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.WebRTCConfig other = (proto.rpc.webrtc.v1.Signaling.WebRTCConfig) obj;
-
-      if (!getAdditionalIceServersList()
-          .equals(other.getAdditionalIceServersList())) return false;
-      if (getDisableTrickle()
-          != other.getDisableTrickle()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getAdditionalIceServersCount() > 0) {
-        hash = (37 * hash) + ADDITIONAL_ICE_SERVERS_FIELD_NUMBER;
-        hash = (53 * hash) + getAdditionalIceServersList().hashCode();
-      }
-      hash = (37 * hash) + DISABLE_TRICKLE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getDisableTrickle());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      disableTrickle_ = false;
     }
 
     public static proto.rpc.webrtc.v1.Signaling.WebRTCConfig parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.WebRTCConfig parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.WebRTCConfig parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.WebRTCConfig parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.WebRTCConfig parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.WebRTCConfig parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.WebRTCConfig parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.WebRTCConfig parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.WebRTCConfig parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.WebRTCConfig parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.WebRTCConfig parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.WebRTCConfig parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.WebRTCConfig prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * WebRTCConfig represents parts of a WebRTC config.
@@ -6785,286 +4007,44 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.WebRTCConfig}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.WebRTCConfig, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.WebRTCConfig)
         proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_WebRTCConfig_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_WebRTCConfig_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.WebRTCConfig.class, proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.WebRTCConfig.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (additionalIceServersBuilder_ == null) {
-          additionalIceServers_ = java.util.Collections.emptyList();
-        } else {
-          additionalIceServers_ = null;
-          additionalIceServersBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        disableTrickle_ = false;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_WebRTCConfig_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.WebRTCConfig getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.WebRTCConfig.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.WebRTCConfig build() {
-        proto.rpc.webrtc.v1.Signaling.WebRTCConfig result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.WebRTCConfig buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.WebRTCConfig result = new proto.rpc.webrtc.v1.Signaling.WebRTCConfig(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(proto.rpc.webrtc.v1.Signaling.WebRTCConfig result) {
-        if (additionalIceServersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            additionalIceServers_ = java.util.Collections.unmodifiableList(additionalIceServers_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.additionalIceServers_ = additionalIceServers_;
-        } else {
-          result.additionalIceServers_ = additionalIceServersBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.WebRTCConfig result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.disableTrickle_ = disableTrickle_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.WebRTCConfig) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.WebRTCConfig)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.WebRTCConfig other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.WebRTCConfig.getDefaultInstance()) return this;
-        if (additionalIceServersBuilder_ == null) {
-          if (!other.additionalIceServers_.isEmpty()) {
-            if (additionalIceServers_.isEmpty()) {
-              additionalIceServers_ = other.additionalIceServers_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureAdditionalIceServersIsMutable();
-              additionalIceServers_.addAll(other.additionalIceServers_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.additionalIceServers_.isEmpty()) {
-            if (additionalIceServersBuilder_.isEmpty()) {
-              additionalIceServersBuilder_.dispose();
-              additionalIceServersBuilder_ = null;
-              additionalIceServers_ = other.additionalIceServers_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              additionalIceServersBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getAdditionalIceServersFieldBuilder() : null;
-            } else {
-              additionalIceServersBuilder_.addAllMessages(other.additionalIceServers_);
-            }
-          }
-        }
-        if (other.getDisableTrickle() != false) {
-          setDisableTrickle(other.getDisableTrickle());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                proto.rpc.webrtc.v1.Signaling.ICEServer m =
-                    input.readMessage(
-                        proto.rpc.webrtc.v1.Signaling.ICEServer.parser(),
-                        extensionRegistry);
-                if (additionalIceServersBuilder_ == null) {
-                  ensureAdditionalIceServersIsMutable();
-                  additionalIceServers_.add(m);
-                } else {
-                  additionalIceServersBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              case 16: {
-                disableTrickle_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<proto.rpc.webrtc.v1.Signaling.ICEServer> additionalIceServers_ =
-        java.util.Collections.emptyList();
-      private void ensureAdditionalIceServersIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          additionalIceServers_ = new java.util.ArrayList<proto.rpc.webrtc.v1.Signaling.ICEServer>(additionalIceServers_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.ICEServer, proto.rpc.webrtc.v1.Signaling.ICEServer.Builder, proto.rpc.webrtc.v1.Signaling.ICEServerOrBuilder> additionalIceServersBuilder_;
 
       /**
        * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
        */
+      @java.lang.Override
       public java.util.List<proto.rpc.webrtc.v1.Signaling.ICEServer> getAdditionalIceServersList() {
-        if (additionalIceServersBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(additionalIceServers_);
-        } else {
-          return additionalIceServersBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getAdditionalIceServersList());
       }
       /**
        * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
        */
+      @java.lang.Override
       public int getAdditionalIceServersCount() {
-        if (additionalIceServersBuilder_ == null) {
-          return additionalIceServers_.size();
-        } else {
-          return additionalIceServersBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getAdditionalIceServersCount();
+      }/**
        * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
        */
+      @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.ICEServer getAdditionalIceServers(int index) {
-        if (additionalIceServersBuilder_ == null) {
-          return additionalIceServers_.get(index);
-        } else {
-          return additionalIceServersBuilder_.getMessage(index);
-        }
+        return instance.getAdditionalIceServers(index);
       }
       /**
        * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
        */
       public Builder setAdditionalIceServers(
           int index, proto.rpc.webrtc.v1.Signaling.ICEServer value) {
-        if (additionalIceServersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAdditionalIceServersIsMutable();
-          additionalIceServers_.set(index, value);
-          onChanged();
-        } else {
-          additionalIceServersBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setAdditionalIceServers(index, value);
         return this;
       }
       /**
@@ -7072,29 +4052,17 @@ public final class Signaling {
        */
       public Builder setAdditionalIceServers(
           int index, proto.rpc.webrtc.v1.Signaling.ICEServer.Builder builderForValue) {
-        if (additionalIceServersBuilder_ == null) {
-          ensureAdditionalIceServersIsMutable();
-          additionalIceServers_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          additionalIceServersBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setAdditionalIceServers(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
        */
       public Builder addAdditionalIceServers(proto.rpc.webrtc.v1.Signaling.ICEServer value) {
-        if (additionalIceServersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAdditionalIceServersIsMutable();
-          additionalIceServers_.add(value);
-          onChanged();
-        } else {
-          additionalIceServersBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addAdditionalIceServers(value);
         return this;
       }
       /**
@@ -7102,16 +4070,8 @@ public final class Signaling {
        */
       public Builder addAdditionalIceServers(
           int index, proto.rpc.webrtc.v1.Signaling.ICEServer value) {
-        if (additionalIceServersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureAdditionalIceServersIsMutable();
-          additionalIceServers_.add(index, value);
-          onChanged();
-        } else {
-          additionalIceServersBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addAdditionalIceServers(index, value);
         return this;
       }
       /**
@@ -7119,13 +4079,8 @@ public final class Signaling {
        */
       public Builder addAdditionalIceServers(
           proto.rpc.webrtc.v1.Signaling.ICEServer.Builder builderForValue) {
-        if (additionalIceServersBuilder_ == null) {
-          ensureAdditionalIceServersIsMutable();
-          additionalIceServers_.add(builderForValue.build());
-          onChanged();
-        } else {
-          additionalIceServersBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addAdditionalIceServers(builderForValue.build());
         return this;
       }
       /**
@@ -7133,13 +4088,9 @@ public final class Signaling {
        */
       public Builder addAdditionalIceServers(
           int index, proto.rpc.webrtc.v1.Signaling.ICEServer.Builder builderForValue) {
-        if (additionalIceServersBuilder_ == null) {
-          ensureAdditionalIceServersIsMutable();
-          additionalIceServers_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          additionalIceServersBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addAdditionalIceServers(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -7147,108 +4098,27 @@ public final class Signaling {
        */
       public Builder addAllAdditionalIceServers(
           java.lang.Iterable<? extends proto.rpc.webrtc.v1.Signaling.ICEServer> values) {
-        if (additionalIceServersBuilder_ == null) {
-          ensureAdditionalIceServersIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, additionalIceServers_);
-          onChanged();
-        } else {
-          additionalIceServersBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllAdditionalIceServers(values);
         return this;
       }
       /**
        * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
        */
       public Builder clearAdditionalIceServers() {
-        if (additionalIceServersBuilder_ == null) {
-          additionalIceServers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          additionalIceServersBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearAdditionalIceServers();
         return this;
       }
       /**
        * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
        */
       public Builder removeAdditionalIceServers(int index) {
-        if (additionalIceServersBuilder_ == null) {
-          ensureAdditionalIceServersIsMutable();
-          additionalIceServers_.remove(index);
-          onChanged();
-        } else {
-          additionalIceServersBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeAdditionalIceServers(index);
         return this;
       }
-      /**
-       * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.ICEServer.Builder getAdditionalIceServersBuilder(
-          int index) {
-        return getAdditionalIceServersFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.ICEServerOrBuilder getAdditionalIceServersOrBuilder(
-          int index) {
-        if (additionalIceServersBuilder_ == null) {
-          return additionalIceServers_.get(index);  } else {
-          return additionalIceServersBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
-       */
-      public java.util.List<? extends proto.rpc.webrtc.v1.Signaling.ICEServerOrBuilder> 
-           getAdditionalIceServersOrBuilderList() {
-        if (additionalIceServersBuilder_ != null) {
-          return additionalIceServersBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(additionalIceServers_);
-        }
-      }
-      /**
-       * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.ICEServer.Builder addAdditionalIceServersBuilder() {
-        return getAdditionalIceServersFieldBuilder().addBuilder(
-            proto.rpc.webrtc.v1.Signaling.ICEServer.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.ICEServer.Builder addAdditionalIceServersBuilder(
-          int index) {
-        return getAdditionalIceServersFieldBuilder().addBuilder(
-            index, proto.rpc.webrtc.v1.Signaling.ICEServer.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .proto.rpc.webrtc.v1.ICEServer additional_ice_servers = 1 [json_name = "additionalIceServers"];</code>
-       */
-      public java.util.List<proto.rpc.webrtc.v1.Signaling.ICEServer.Builder> 
-           getAdditionalIceServersBuilderList() {
-        return getAdditionalIceServersFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.ICEServer, proto.rpc.webrtc.v1.Signaling.ICEServer.Builder, proto.rpc.webrtc.v1.Signaling.ICEServerOrBuilder> 
-          getAdditionalIceServersFieldBuilder() {
-        if (additionalIceServersBuilder_ == null) {
-          additionalIceServersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.ICEServer, proto.rpc.webrtc.v1.Signaling.ICEServer.Builder, proto.rpc.webrtc.v1.Signaling.ICEServerOrBuilder>(
-                  additionalIceServers_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          additionalIceServers_ = null;
-        }
-        return additionalIceServersBuilder_;
-      }
 
-      private boolean disableTrickle_ ;
       /**
        * <pre>
        * disable_trickle indicates if Trickle ICE should be used. Currently, both
@@ -7260,7 +4130,7 @@ public final class Signaling {
        */
       @java.lang.Override
       public boolean getDisableTrickle() {
-        return disableTrickle_;
+        return instance.getDisableTrickle();
       }
       /**
        * <pre>
@@ -7273,10 +4143,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder setDisableTrickle(boolean value) {
-
-        disableTrickle_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setDisableTrickle(value);
         return this;
       }
       /**
@@ -7289,78 +4157,91 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearDisableTrickle() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        disableTrickle_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearDisableTrickle();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.WebRTCConfig)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.WebRTCConfig();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "additionalIceServers_",
+              proto.rpc.webrtc.v1.Signaling.ICEServer.class,
+              "disableTrickle_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001b\u0002\u0007" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.WebRTCConfig> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.WebRTCConfig.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.WebRTCConfig>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.WebRTCConfig)
     private static final proto.rpc.webrtc.v1.Signaling.WebRTCConfig DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.WebRTCConfig();
+      WebRTCConfig defaultInstance = new WebRTCConfig();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        WebRTCConfig.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.WebRTCConfig getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<WebRTCConfig>
-        PARSER = new com.google.protobuf.AbstractParser<WebRTCConfig>() {
-      @java.lang.Override
-      public WebRTCConfig parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<WebRTCConfig> PARSER;
 
     public static com.google.protobuf.Parser<WebRTCConfig> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<WebRTCConfig> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.WebRTCConfig getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AnswerRequestInitStageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.AnswerRequestInitStage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string sdp = 1 [json_name = "sdp"];</code>
@@ -7384,10 +4265,6 @@ public final class Signaling {
      * @return The optionalConfig.
      */
     proto.rpc.webrtc.v1.Signaling.WebRTCConfig getOptionalConfig();
-    /**
-     * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder getOptionalConfigOrBuilder();
 
     /**
      * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
@@ -7399,10 +4276,6 @@ public final class Signaling {
      * @return The deadline.
      */
     com.google.protobuf.Timestamp getDeadline();
-    /**
-     * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getDeadlineOrBuilder();
   }
   /**
    * <pre>
@@ -7412,59 +4285,24 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.AnswerRequestInitStage}
    */
-  public static final class AnswerRequestInitStage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AnswerRequestInitStage extends
+      com.google.protobuf.GeneratedMessageLite<
+          AnswerRequestInitStage, AnswerRequestInitStage.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.AnswerRequestInitStage)
       AnswerRequestInitStageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AnswerRequestInitStage.newBuilder() to construct.
-    private AnswerRequestInitStage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AnswerRequestInitStage() {
       sdp_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AnswerRequestInitStage();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestInitStage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestInitStage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.class, proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.Builder.class);
-    }
-
     private int bitField0_;
     public static final int SDP_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object sdp_ = "";
+    private java.lang.String sdp_;
     /**
      * <code>string sdp = 1 [json_name = "sdp"];</code>
      * @return The sdp.
      */
     @java.lang.Override
     public java.lang.String getSdp() {
-      java.lang.Object ref = sdp_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sdp_ = s;
-        return s;
-      }
+      return sdp_;
     }
     /**
      * <code>string sdp = 1 [json_name = "sdp"];</code>
@@ -7473,23 +4311,40 @@ public final class Signaling {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSdpBytes() {
-      java.lang.Object ref = sdp_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sdp_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(sdp_);
+    }
+    /**
+     * <code>string sdp = 1 [json_name = "sdp"];</code>
+     * @param value The sdp to set.
+     */
+    private void setSdp(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      sdp_ = value;
+    }
+    /**
+     * <code>string sdp = 1 [json_name = "sdp"];</code>
+     */
+    private void clearSdp() {
+
+      sdp_ = getDefaultInstance().getSdp();
+    }
+    /**
+     * <code>string sdp = 1 [json_name = "sdp"];</code>
+     * @param value The bytes for sdp to set.
+     */
+    private void setSdpBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sdp_ = value.toStringUtf8();
+
     }
 
     public static final int OPTIONAL_CONFIG_FIELD_NUMBER = 2;
     private proto.rpc.webrtc.v1.Signaling.WebRTCConfig optionalConfig_;
     /**
      * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
-     * @return Whether the optionalConfig field is set.
      */
     @java.lang.Override
     public boolean hasOptionalConfig() {
@@ -7497,7 +4352,6 @@ public final class Signaling {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
-     * @return The optionalConfig.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.WebRTCConfig getOptionalConfig() {
@@ -7506,16 +4360,37 @@ public final class Signaling {
     /**
      * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder getOptionalConfigOrBuilder() {
-      return optionalConfig_ == null ? proto.rpc.webrtc.v1.Signaling.WebRTCConfig.getDefaultInstance() : optionalConfig_;
+    private void setOptionalConfig(proto.rpc.webrtc.v1.Signaling.WebRTCConfig value) {
+      value.getClass();
+  optionalConfig_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeOptionalConfig(proto.rpc.webrtc.v1.Signaling.WebRTCConfig value) {
+      value.getClass();
+  if (optionalConfig_ != null &&
+          optionalConfig_ != proto.rpc.webrtc.v1.Signaling.WebRTCConfig.getDefaultInstance()) {
+        optionalConfig_ =
+          proto.rpc.webrtc.v1.Signaling.WebRTCConfig.newBuilder(optionalConfig_).mergeFrom(value).buildPartial();
+      } else {
+        optionalConfig_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
+     */
+    private void clearOptionalConfig() {  optionalConfig_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int DEADLINE_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp deadline_;
     /**
      * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
-     * @return Whether the deadline field is set.
      */
     @java.lang.Override
     public boolean hasDeadline() {
@@ -7523,7 +4398,6 @@ public final class Signaling {
     }
     /**
      * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
-     * @return The deadline.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getDeadline() {
@@ -7532,199 +4406,116 @@ public final class Signaling {
     /**
      * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getDeadlineOrBuilder() {
-      return deadline_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deadline_;
+    private void setDeadline(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  deadline_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDeadline(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (deadline_ != null &&
+          deadline_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        deadline_ =
+          com.google.protobuf.Timestamp.newBuilder(deadline_).mergeFrom(value).buildPartial();
+      } else {
+        deadline_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sdp_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sdp_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getOptionalConfig());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(3, getDeadline());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sdp_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sdp_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getOptionalConfig());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getDeadline());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage other = (proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage) obj;
-
-      if (!getSdp()
-          .equals(other.getSdp())) return false;
-      if (hasOptionalConfig() != other.hasOptionalConfig()) return false;
-      if (hasOptionalConfig()) {
-        if (!getOptionalConfig()
-            .equals(other.getOptionalConfig())) return false;
-      }
-      if (hasDeadline() != other.hasDeadline()) return false;
-      if (hasDeadline()) {
-        if (!getDeadline()
-            .equals(other.getDeadline())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SDP_FIELD_NUMBER;
-      hash = (53 * hash) + getSdp().hashCode();
-      if (hasOptionalConfig()) {
-        hash = (37 * hash) + OPTIONAL_CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getOptionalConfig().hashCode();
-      }
-      if (hasDeadline()) {
-        hash = (37 * hash) + DEADLINE_FIELD_NUMBER;
-        hash = (53 * hash) + getDeadline().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
+     */
+    private void clearDeadline() {  deadline_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * AnswerRequestInitStage is the first and a one time stage that represents the
@@ -7734,256 +4525,32 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.AnswerRequestInitStage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.AnswerRequestInitStage)
         proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestInitStage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestInitStage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.class, proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOptionalConfigFieldBuilder();
-          getDeadlineFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        sdp_ = "";
-        optionalConfig_ = null;
-        if (optionalConfigBuilder_ != null) {
-          optionalConfigBuilder_.dispose();
-          optionalConfigBuilder_ = null;
-        }
-        deadline_ = null;
-        if (deadlineBuilder_ != null) {
-          deadlineBuilder_.dispose();
-          deadlineBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestInitStage_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage build() {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage result = new proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sdp_ = sdp_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.optionalConfig_ = optionalConfigBuilder_ == null
-              ? optionalConfig_
-              : optionalConfigBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.deadline_ = deadlineBuilder_ == null
-              ? deadline_
-              : deadlineBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.getDefaultInstance()) return this;
-        if (!other.getSdp().isEmpty()) {
-          sdp_ = other.sdp_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasOptionalConfig()) {
-          mergeOptionalConfig(other.getOptionalConfig());
-        }
-        if (other.hasDeadline()) {
-          mergeDeadline(other.getDeadline());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                sdp_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getOptionalConfigFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                input.readMessage(
-                    getDeadlineFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object sdp_ = "";
       /**
        * <code>string sdp = 1 [json_name = "sdp"];</code>
        * @return The sdp.
        */
+      @java.lang.Override
       public java.lang.String getSdp() {
-        java.lang.Object ref = sdp_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sdp_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSdp();
       }
       /**
        * <code>string sdp = 1 [json_name = "sdp"];</code>
        * @return The bytes for sdp.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSdpBytes() {
-        java.lang.Object ref = sdp_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sdp_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSdpBytes();
       }
       /**
        * <code>string sdp = 1 [json_name = "sdp"];</code>
@@ -7992,10 +4559,8 @@ public final class Signaling {
        */
       public Builder setSdp(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        sdp_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSdp(value);
         return this;
       }
       /**
@@ -8003,9 +4568,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearSdp() {
-        sdp_ = getDefaultInstance().getSdp();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearSdp();
         return this;
       }
       /**
@@ -8015,322 +4579,186 @@ public final class Signaling {
        */
       public Builder setSdpBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        sdp_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSdpBytes(value);
         return this;
       }
 
-      private proto.rpc.webrtc.v1.Signaling.WebRTCConfig optionalConfig_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.WebRTCConfig, proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder, proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder> optionalConfigBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
-       * @return Whether the optionalConfig field is set.
        */
+      @java.lang.Override
       public boolean hasOptionalConfig() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasOptionalConfig();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
-       * @return The optionalConfig.
        */
+      @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.WebRTCConfig getOptionalConfig() {
-        if (optionalConfigBuilder_ == null) {
-          return optionalConfig_ == null ? proto.rpc.webrtc.v1.Signaling.WebRTCConfig.getDefaultInstance() : optionalConfig_;
-        } else {
-          return optionalConfigBuilder_.getMessage();
-        }
+        return instance.getOptionalConfig();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
        */
       public Builder setOptionalConfig(proto.rpc.webrtc.v1.Signaling.WebRTCConfig value) {
-        if (optionalConfigBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          optionalConfig_ = value;
-        } else {
-          optionalConfigBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setOptionalConfig(value);
         return this;
-      }
+        }
       /**
        * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
        */
       public Builder setOptionalConfig(
           proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder builderForValue) {
-        if (optionalConfigBuilder_ == null) {
-          optionalConfig_ = builderForValue.build();
-        } else {
-          optionalConfigBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setOptionalConfig(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
        */
       public Builder mergeOptionalConfig(proto.rpc.webrtc.v1.Signaling.WebRTCConfig value) {
-        if (optionalConfigBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            optionalConfig_ != null &&
-            optionalConfig_ != proto.rpc.webrtc.v1.Signaling.WebRTCConfig.getDefaultInstance()) {
-            getOptionalConfigBuilder().mergeFrom(value);
-          } else {
-            optionalConfig_ = value;
-          }
-        } else {
-          optionalConfigBuilder_.mergeFrom(value);
-        }
-        if (optionalConfig_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeOptionalConfig(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
        */
-      public Builder clearOptionalConfig() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        optionalConfig_ = null;
-        if (optionalConfigBuilder_ != null) {
-          optionalConfigBuilder_.dispose();
-          optionalConfigBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearOptionalConfig() {  copyOnWrite();
+        instance.clearOptionalConfig();
         return this;
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder getOptionalConfigBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getOptionalConfigFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder getOptionalConfigOrBuilder() {
-        if (optionalConfigBuilder_ != null) {
-          return optionalConfigBuilder_.getMessageOrBuilder();
-        } else {
-          return optionalConfig_ == null ?
-              proto.rpc.webrtc.v1.Signaling.WebRTCConfig.getDefaultInstance() : optionalConfig_;
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.WebRTCConfig optional_config = 2 [json_name = "optionalConfig"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.WebRTCConfig, proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder, proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder> 
-          getOptionalConfigFieldBuilder() {
-        if (optionalConfigBuilder_ == null) {
-          optionalConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.WebRTCConfig, proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder, proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder>(
-                  getOptionalConfig(),
-                  getParentForChildren(),
-                  isClean());
-          optionalConfig_ = null;
-        }
-        return optionalConfigBuilder_;
       }
 
-      private com.google.protobuf.Timestamp deadline_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deadlineBuilder_;
       /**
        * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
-       * @return Whether the deadline field is set.
        */
+      @java.lang.Override
       public boolean hasDeadline() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasDeadline();
       }
       /**
        * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
-       * @return The deadline.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getDeadline() {
-        if (deadlineBuilder_ == null) {
-          return deadline_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deadline_;
-        } else {
-          return deadlineBuilder_.getMessage();
-        }
+        return instance.getDeadline();
       }
       /**
        * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
        */
       public Builder setDeadline(com.google.protobuf.Timestamp value) {
-        if (deadlineBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          deadline_ = value;
-        } else {
-          deadlineBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setDeadline(value);
         return this;
-      }
+        }
       /**
        * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
        */
       public Builder setDeadline(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (deadlineBuilder_ == null) {
-          deadline_ = builderForValue.build();
-        } else {
-          deadlineBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setDeadline(builderForValue.build());
         return this;
       }
       /**
        * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
        */
       public Builder mergeDeadline(com.google.protobuf.Timestamp value) {
-        if (deadlineBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            deadline_ != null &&
-            deadline_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getDeadlineBuilder().mergeFrom(value);
-          } else {
-            deadline_ = value;
-          }
-        } else {
-          deadlineBuilder_.mergeFrom(value);
-        }
-        if (deadline_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeDeadline(value);
         return this;
       }
       /**
        * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
        */
-      public Builder clearDeadline() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        deadline_ = null;
-        if (deadlineBuilder_ != null) {
-          deadlineBuilder_.dispose();
-          deadlineBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearDeadline() {  copyOnWrite();
+        instance.clearDeadline();
         return this;
       }
-      /**
-       * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getDeadlineBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getDeadlineFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getDeadlineOrBuilder() {
-        if (deadlineBuilder_ != null) {
-          return deadlineBuilder_.getMessageOrBuilder();
-        } else {
-          return deadline_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : deadline_;
-        }
-      }
-      /**
-       * <code>optional .google.protobuf.Timestamp deadline = 3 [json_name = "deadline"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getDeadlineFieldBuilder() {
-        if (deadlineBuilder_ == null) {
-          deadlineBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getDeadline(),
-                  getParentForChildren(),
-                  isClean());
-          deadline_ = null;
-        }
-        return deadlineBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerRequestInitStage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "sdp_",
+              "optionalConfig_",
+              "deadline_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.AnswerRequestInitStage)
     private static final proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage();
+      AnswerRequestInitStage defaultInstance = new AnswerRequestInitStage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AnswerRequestInitStage.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AnswerRequestInitStage>
-        PARSER = new com.google.protobuf.AbstractParser<AnswerRequestInitStage>() {
-      @java.lang.Override
-      public AnswerRequestInitStage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AnswerRequestInitStage> PARSER;
 
     public static com.google.protobuf.Parser<AnswerRequestInitStage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AnswerRequestInitStage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AnswerRequestUpdateStageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.AnswerRequestUpdateStage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
@@ -8342,10 +4770,6 @@ public final class Signaling {
      * @return The candidate.
      */
     proto.rpc.webrtc.v1.Signaling.ICECandidate getCandidate();
-    /**
-     * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder getCandidateOrBuilder();
   }
   /**
    * <pre>
@@ -8355,44 +4779,18 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.AnswerRequestUpdateStage}
    */
-  public static final class AnswerRequestUpdateStage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AnswerRequestUpdateStage extends
+      com.google.protobuf.GeneratedMessageLite<
+          AnswerRequestUpdateStage, AnswerRequestUpdateStage.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.AnswerRequestUpdateStage)
       AnswerRequestUpdateStageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AnswerRequestUpdateStage.newBuilder() to construct.
-    private AnswerRequestUpdateStage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AnswerRequestUpdateStage() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AnswerRequestUpdateStage();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestUpdateStage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestUpdateStage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.class, proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.Builder.class);
-    }
-
     private int bitField0_;
     public static final int CANDIDATE_FIELD_NUMBER = 1;
     private proto.rpc.webrtc.v1.Signaling.ICECandidate candidate_;
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-     * @return Whether the candidate field is set.
      */
     @java.lang.Override
     public boolean hasCandidate() {
@@ -8400,7 +4798,6 @@ public final class Signaling {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-     * @return The candidate.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.ICECandidate getCandidate() {
@@ -8409,173 +4806,116 @@ public final class Signaling {
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder getCandidateOrBuilder() {
-      return candidate_ == null ? proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance() : candidate_;
+    private void setCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
+      value.getClass();
+  candidate_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
+      value.getClass();
+  if (candidate_ != null &&
+          candidate_ != proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance()) {
+        candidate_ =
+          proto.rpc.webrtc.v1.Signaling.ICECandidate.newBuilder(candidate_).mergeFrom(value).buildPartial();
+      } else {
+        candidate_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getCandidate());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getCandidate());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage other = (proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage) obj;
-
-      if (hasCandidate() != other.hasCandidate()) return false;
-      if (hasCandidate()) {
-        if (!getCandidate()
-            .equals(other.getCandidate())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasCandidate()) {
-        hash = (37 * hash) + CANDIDATE_FIELD_NUMBER;
-        hash = (53 * hash) + getCandidate().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
+     */
+    private void clearCandidate() {  candidate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * AnswerRequestUpdateStage is multiply used to trickle in ICE candidates to
@@ -8585,374 +4925,141 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.AnswerRequestUpdateStage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.AnswerRequestUpdateStage)
         proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestUpdateStage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestUpdateStage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.class, proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCandidateFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        candidate_ = null;
-        if (candidateBuilder_ != null) {
-          candidateBuilder_.dispose();
-          candidateBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestUpdateStage_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage build() {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage result = new proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.candidate_ = candidateBuilder_ == null
-              ? candidate_
-              : candidateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.getDefaultInstance()) return this;
-        if (other.hasCandidate()) {
-          mergeCandidate(other.getCandidate());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getCandidateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private proto.rpc.webrtc.v1.Signaling.ICECandidate candidate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.ICECandidate, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder, proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder> candidateBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       * @return Whether the candidate field is set.
        */
+      @java.lang.Override
       public boolean hasCandidate() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasCandidate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       * @return The candidate.
        */
+      @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.ICECandidate getCandidate() {
-        if (candidateBuilder_ == null) {
-          return candidate_ == null ? proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance() : candidate_;
-        } else {
-          return candidateBuilder_.getMessage();
-        }
+        return instance.getCandidate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
        */
       public Builder setCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
-        if (candidateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          candidate_ = value;
-        } else {
-          candidateBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setCandidate(value);
         return this;
-      }
+        }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
        */
       public Builder setCandidate(
           proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder builderForValue) {
-        if (candidateBuilder_ == null) {
-          candidate_ = builderForValue.build();
-        } else {
-          candidateBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setCandidate(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
        */
       public Builder mergeCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
-        if (candidateBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            candidate_ != null &&
-            candidate_ != proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance()) {
-            getCandidateBuilder().mergeFrom(value);
-          } else {
-            candidate_ = value;
-          }
-        } else {
-          candidateBuilder_.mergeFrom(value);
-        }
-        if (candidate_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeCandidate(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
        */
-      public Builder clearCandidate() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        candidate_ = null;
-        if (candidateBuilder_ != null) {
-          candidateBuilder_.dispose();
-          candidateBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearCandidate() {  copyOnWrite();
+        instance.clearCandidate();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder getCandidateBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getCandidateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder getCandidateOrBuilder() {
-        if (candidateBuilder_ != null) {
-          return candidateBuilder_.getMessageOrBuilder();
-        } else {
-          return candidate_ == null ?
-              proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance() : candidate_;
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.ICECandidate, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder, proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder> 
-          getCandidateFieldBuilder() {
-        if (candidateBuilder_ == null) {
-          candidateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.ICECandidate, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder, proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder>(
-                  getCandidate(),
-                  getParentForChildren(),
-                  isClean());
-          candidate_ = null;
-        }
-        return candidateBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerRequestUpdateStage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "candidate_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.AnswerRequestUpdateStage)
     private static final proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage();
+      AnswerRequestUpdateStage defaultInstance = new AnswerRequestUpdateStage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AnswerRequestUpdateStage.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AnswerRequestUpdateStage>
-        PARSER = new com.google.protobuf.AbstractParser<AnswerRequestUpdateStage>() {
-      @java.lang.Override
-      public AnswerRequestUpdateStage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AnswerRequestUpdateStage> PARSER;
 
     public static com.google.protobuf.Parser<AnswerRequestUpdateStage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AnswerRequestUpdateStage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AnswerRequestDoneStageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.AnswerRequestDoneStage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * <pre>
@@ -8961,184 +5068,96 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.AnswerRequestDoneStage}
    */
-  public static final class AnswerRequestDoneStage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AnswerRequestDoneStage extends
+      com.google.protobuf.GeneratedMessageLite<
+          AnswerRequestDoneStage, AnswerRequestDoneStage.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.AnswerRequestDoneStage)
       AnswerRequestDoneStageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AnswerRequestDoneStage.newBuilder() to construct.
-    private AnswerRequestDoneStage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AnswerRequestDoneStage() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AnswerRequestDoneStage();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestDoneStage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestDoneStage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.class, proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage other = (proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * AnswerRequestDoneStage indicates the controller is done responding with candidates.
@@ -9147,217 +5166,90 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.AnswerRequestDoneStage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.AnswerRequestDoneStage)
         proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestDoneStage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestDoneStage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.class, proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestDoneStage_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage build() {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage result = new proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerRequestDoneStage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.AnswerRequestDoneStage)
     private static final proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage();
+      AnswerRequestDoneStage defaultInstance = new AnswerRequestDoneStage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AnswerRequestDoneStage.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AnswerRequestDoneStage>
-        PARSER = new com.google.protobuf.AbstractParser<AnswerRequestDoneStage>() {
-      @java.lang.Override
-      public AnswerRequestDoneStage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AnswerRequestDoneStage> PARSER;
 
     public static com.google.protobuf.Parser<AnswerRequestDoneStage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AnswerRequestDoneStage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AnswerRequestErrorStageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.AnswerRequestErrorStage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
@@ -9368,11 +5260,7 @@ public final class Signaling {
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      * @return The status.
      */
-    com.google.rpc.Status getStatus();
-    /**
-     * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-     */
-    com.google.rpc.StatusOrBuilder getStatusOrBuilder();
+    com.viam.shaded.com.google.rpc.Status getStatus();
   }
   /**
    * <pre>
@@ -9381,44 +5269,18 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.AnswerRequestErrorStage}
    */
-  public static final class AnswerRequestErrorStage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AnswerRequestErrorStage extends
+      com.google.protobuf.GeneratedMessageLite<
+          AnswerRequestErrorStage, AnswerRequestErrorStage.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.AnswerRequestErrorStage)
       AnswerRequestErrorStageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AnswerRequestErrorStage.newBuilder() to construct.
-    private AnswerRequestErrorStage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AnswerRequestErrorStage() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AnswerRequestErrorStage();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestErrorStage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestErrorStage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.class, proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.Builder.class);
-    }
-
     private int bitField0_;
     public static final int STATUS_FIELD_NUMBER = 1;
-    private com.google.rpc.Status status_;
+    private com.viam.shaded.com.google.rpc.Status status_;
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-     * @return Whether the status field is set.
      */
     @java.lang.Override
     public boolean hasStatus() {
@@ -9426,182 +5288,124 @@ public final class Signaling {
     }
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-     * @return The status.
      */
     @java.lang.Override
-    public com.google.rpc.Status getStatus() {
-      return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
+    public com.viam.shaded.com.google.rpc.Status getStatus() {
+      return status_ == null ? com.viam.shaded.com.google.rpc.Status.getDefaultInstance() : status_;
     }
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
-    @java.lang.Override
-    public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
-      return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
+    private void setStatus(com.viam.shaded.com.google.rpc.Status value) {
+      value.getClass();
+  status_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeStatus(com.viam.shaded.com.google.rpc.Status value) {
+      value.getClass();
+  if (status_ != null &&
+          status_ != com.viam.shaded.com.google.rpc.Status.getDefaultInstance()) {
+        status_ =
+          com.viam.shaded.com.google.rpc.Status.newBuilder(status_).mergeFrom(value).buildPartial();
+      } else {
+        status_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getStatus());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getStatus());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage other = (proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) obj;
-
-      if (hasStatus() != other.hasStatus()) return false;
-      if (hasStatus()) {
-        if (!getStatus()
-            .equals(other.getStatus())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasStatus()) {
-        hash = (37 * hash) + STATUS_FIELD_NUMBER;
-        hash = (53 * hash) + getStatus().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
+     */
+    private void clearStatus() {  status_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * AnswerRequestErrorStage indicates the exchange has failed with an error.
@@ -9610,374 +5414,141 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.AnswerRequestErrorStage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.AnswerRequestErrorStage)
         proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestErrorStage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestErrorStage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.class, proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStatusFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        status_ = null;
-        if (statusBuilder_ != null) {
-          statusBuilder_.dispose();
-          statusBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequestErrorStage_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage build() {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage result = new proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.status_ = statusBuilder_ == null
-              ? status_
-              : statusBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.getDefaultInstance()) return this;
-        if (other.hasStatus()) {
-          mergeStatus(other.getStatus());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getStatusFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.rpc.Status status_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> statusBuilder_;
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       * @return Whether the status field is set.
        */
+      @java.lang.Override
       public boolean hasStatus() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       * @return The status.
-       */
-      public com.google.rpc.Status getStatus() {
-        if (statusBuilder_ == null) {
-          return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
-        } else {
-          return statusBuilder_.getMessage();
-        }
+        return instance.hasStatus();
       }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
-      public Builder setStatus(com.google.rpc.Status value) {
-        if (statusBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          status_ = value;
-        } else {
-          statusBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+      @java.lang.Override
+      public com.viam.shaded.com.google.rpc.Status getStatus() {
+        return instance.getStatus();
+      }
+      /**
+       * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
+       */
+      public Builder setStatus(com.viam.shaded.com.google.rpc.Status value) {
+        copyOnWrite();
+        instance.setStatus(value);
         return this;
-      }
+        }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
       public Builder setStatus(
-          com.google.rpc.Status.Builder builderForValue) {
-        if (statusBuilder_ == null) {
-          status_ = builderForValue.build();
-        } else {
-          statusBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+          com.viam.shaded.com.google.rpc.Status.Builder builderForValue) {
+        copyOnWrite();
+        instance.setStatus(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
-      public Builder mergeStatus(com.google.rpc.Status value) {
-        if (statusBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            status_ != null &&
-            status_ != com.google.rpc.Status.getDefaultInstance()) {
-            getStatusBuilder().mergeFrom(value);
-          } else {
-            status_ = value;
-          }
-        } else {
-          statusBuilder_.mergeFrom(value);
-        }
-        if (status_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+      public Builder mergeStatus(com.viam.shaded.com.google.rpc.Status value) {
+        copyOnWrite();
+        instance.mergeStatus(value);
         return this;
       }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
-      public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        status_ = null;
-        if (statusBuilder_ != null) {
-          statusBuilder_.dispose();
-          statusBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearStatus() {  copyOnWrite();
+        instance.clearStatus();
         return this;
       }
-      /**
-       * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       */
-      public com.google.rpc.Status.Builder getStatusBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getStatusFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       */
-      public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
-        if (statusBuilder_ != null) {
-          return statusBuilder_.getMessageOrBuilder();
-        } else {
-          return status_ == null ?
-              com.google.rpc.Status.getDefaultInstance() : status_;
-        }
-      }
-      /**
-       * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
-          getStatusFieldBuilder() {
-        if (statusBuilder_ == null) {
-          statusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
-                  getStatus(),
-                  getParentForChildren(),
-                  isClean());
-          status_ = null;
-        }
-        return statusBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerRequestErrorStage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "status_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.AnswerRequestErrorStage)
     private static final proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage();
+      AnswerRequestErrorStage defaultInstance = new AnswerRequestErrorStage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AnswerRequestErrorStage.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AnswerRequestErrorStage>
-        PARSER = new com.google.protobuf.AbstractParser<AnswerRequestErrorStage>() {
-      @java.lang.Override
-      public AnswerRequestErrorStage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AnswerRequestErrorStage> PARSER;
 
     public static com.google.protobuf.Parser<AnswerRequestErrorStage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AnswerRequestErrorStage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AnswerRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.AnswerRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string uuid = 1 [json_name = "uuid"];</code>
@@ -10001,10 +5572,6 @@ public final class Signaling {
      * @return The init.
      */
     proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage getInit();
-    /**
-     * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStageOrBuilder getInitOrBuilder();
 
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
@@ -10016,10 +5583,6 @@ public final class Signaling {
      * @return The update.
      */
     proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage getUpdate();
-    /**
-     * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStageOrBuilder getUpdateOrBuilder();
 
     /**
      * <pre>
@@ -10039,14 +5602,6 @@ public final class Signaling {
      * @return The done.
      */
     proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage getDone();
-    /**
-     * <pre>
-     * done is sent when the requester is done sending information
-     * </pre>
-     *
-     * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStageOrBuilder getDoneOrBuilder();
 
     /**
      * <pre>
@@ -10066,16 +5621,8 @@ public final class Signaling {
      * @return The error.
      */
     proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage getError();
-    /**
-     * <pre>
-     * error is sent any time before done
-     * </pre>
-     *
-     * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStageOrBuilder getErrorOrBuilder();
 
-    proto.rpc.webrtc.v1.Signaling.AnswerRequest.StageCase getStageCase();
+    public proto.rpc.webrtc.v1.Signaling.AnswerRequest.StageCase getStageCase();
   }
   /**
    * <pre>
@@ -10085,45 +5632,17 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.AnswerRequest}
    */
-  public static final class AnswerRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AnswerRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          AnswerRequest, AnswerRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.AnswerRequest)
       AnswerRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AnswerRequest.newBuilder() to construct.
-    private AnswerRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AnswerRequest() {
       uuid_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AnswerRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.AnswerRequest.class, proto.rpc.webrtc.v1.Signaling.AnswerRequest.Builder.class);
-    }
-
     private int stageCase_ = 0;
-    @SuppressWarnings("serial")
     private java.lang.Object stage_;
-    public enum StageCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    public enum StageCase {
       INIT(2),
       UPDATE(3),
       DONE(4),
@@ -10134,8 +5653,6 @@ public final class Signaling {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -10158,31 +5675,27 @@ public final class Signaling {
       }
     };
 
+    @java.lang.Override
     public StageCase
     getStageCase() {
       return StageCase.forNumber(
           stageCase_);
     }
 
+    private void clearStage() {
+      stageCase_ = 0;
+      stage_ = null;
+    }
+
     public static final int UUID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object uuid_ = "";
+    private java.lang.String uuid_;
     /**
      * <code>string uuid = 1 [json_name = "uuid"];</code>
      * @return The uuid.
      */
     @java.lang.Override
     public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
-        return s;
-      }
+      return uuid_;
     }
     /**
      * <code>string uuid = 1 [json_name = "uuid"];</code>
@@ -10191,22 +5704,39 @@ public final class Signaling {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getUuidBytes() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uuid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(uuid_);
+    }
+    /**
+     * <code>string uuid = 1 [json_name = "uuid"];</code>
+     * @param value The uuid to set.
+     */
+    private void setUuid(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      uuid_ = value;
+    }
+    /**
+     * <code>string uuid = 1 [json_name = "uuid"];</code>
+     */
+    private void clearUuid() {
+
+      uuid_ = getDefaultInstance().getUuid();
+    }
+    /**
+     * <code>string uuid = 1 [json_name = "uuid"];</code>
+     * @param value The bytes for uuid to set.
+     */
+    private void setUuidBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      uuid_ = value.toStringUtf8();
+
     }
 
     public static final int INIT_FIELD_NUMBER = 2;
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
-     * @return Whether the init field is set.
      */
     @java.lang.Override
     public boolean hasInit() {
@@ -10214,7 +5744,6 @@ public final class Signaling {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
-     * @return The init.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage getInit() {
@@ -10226,18 +5755,38 @@ public final class Signaling {
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStageOrBuilder getInitOrBuilder() {
-      if (stageCase_ == 2) {
-         return (proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage) stage_;
+    private void setInit(proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage value) {
+      value.getClass();
+  stage_ = value;
+      stageCase_ = 2;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
+     */
+    private void mergeInit(proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage value) {
+      value.getClass();
+  if (stageCase_ == 2 &&
+          stage_ != proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.getDefaultInstance()) {
+        stage_ = proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage) stage_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        stage_ = value;
       }
-      return proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.getDefaultInstance();
+      stageCase_ = 2;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
+     */
+    private void clearInit() {
+      if (stageCase_ == 2) {
+        stageCase_ = 0;
+        stage_ = null;
+      }
     }
 
     public static final int UPDATE_FIELD_NUMBER = 3;
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
-     * @return Whether the update field is set.
      */
     @java.lang.Override
     public boolean hasUpdate() {
@@ -10245,7 +5794,6 @@ public final class Signaling {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
-     * @return The update.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage getUpdate() {
@@ -10257,12 +5805,33 @@ public final class Signaling {
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStageOrBuilder getUpdateOrBuilder() {
-      if (stageCase_ == 3) {
-         return (proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage) stage_;
+    private void setUpdate(proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage value) {
+      value.getClass();
+  stage_ = value;
+      stageCase_ = 3;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
+     */
+    private void mergeUpdate(proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage value) {
+      value.getClass();
+  if (stageCase_ == 3 &&
+          stage_ != proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.getDefaultInstance()) {
+        stage_ = proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage) stage_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        stage_ = value;
       }
-      return proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.getDefaultInstance();
+      stageCase_ = 3;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
+     */
+    private void clearUpdate() {
+      if (stageCase_ == 3) {
+        stageCase_ = 0;
+        stage_ = null;
+      }
     }
 
     public static final int DONE_FIELD_NUMBER = 4;
@@ -10272,7 +5841,6 @@ public final class Signaling {
      * </pre>
      *
      * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
-     * @return Whether the done field is set.
      */
     @java.lang.Override
     public boolean hasDone() {
@@ -10284,7 +5852,6 @@ public final class Signaling {
      * </pre>
      *
      * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
-     * @return The done.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage getDone() {
@@ -10300,12 +5867,41 @@ public final class Signaling {
      *
      * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStageOrBuilder getDoneOrBuilder() {
-      if (stageCase_ == 4) {
-         return (proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) stage_;
+    private void setDone(proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage value) {
+      value.getClass();
+  stage_ = value;
+      stageCase_ = 4;
+    }
+    /**
+     * <pre>
+     * done is sent when the requester is done sending information
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
+     */
+    private void mergeDone(proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage value) {
+      value.getClass();
+  if (stageCase_ == 4 &&
+          stage_ != proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.getDefaultInstance()) {
+        stage_ = proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) stage_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        stage_ = value;
       }
-      return proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.getDefaultInstance();
+      stageCase_ = 4;
+    }
+    /**
+     * <pre>
+     * done is sent when the requester is done sending information
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
+     */
+    private void clearDone() {
+      if (stageCase_ == 4) {
+        stageCase_ = 0;
+        stage_ = null;
+      }
     }
 
     public static final int ERROR_FIELD_NUMBER = 5;
@@ -10315,7 +5911,6 @@ public final class Signaling {
      * </pre>
      *
      * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
-     * @return Whether the error field is set.
      */
     @java.lang.Override
     public boolean hasError() {
@@ -10327,7 +5922,6 @@ public final class Signaling {
      * </pre>
      *
      * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
-     * @return The error.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage getError() {
@@ -10343,239 +5937,126 @@ public final class Signaling {
      *
      * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStageOrBuilder getErrorOrBuilder() {
+    private void setError(proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage value) {
+      value.getClass();
+  stage_ = value;
+      stageCase_ = 5;
+    }
+    /**
+     * <pre>
+     * error is sent any time before done
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
+     */
+    private void mergeError(proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage value) {
+      value.getClass();
+  if (stageCase_ == 5 &&
+          stage_ != proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.getDefaultInstance()) {
+        stage_ = proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) stage_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        stage_ = value;
+      }
+      stageCase_ = 5;
+    }
+    /**
+     * <pre>
+     * error is sent any time before done
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
+     */
+    private void clearError() {
       if (stageCase_ == 5) {
-         return (proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) stage_;
+        stageCase_ = 0;
+        stage_ = null;
       }
-      return proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
-      }
-      if (stageCase_ == 2) {
-        output.writeMessage(2, (proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage) stage_);
-      }
-      if (stageCase_ == 3) {
-        output.writeMessage(3, (proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage) stage_);
-      }
-      if (stageCase_ == 4) {
-        output.writeMessage(4, (proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) stage_);
-      }
-      if (stageCase_ == 5) {
-        output.writeMessage(5, (proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) stage_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
-      }
-      if (stageCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage) stage_);
-      }
-      if (stageCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage) stage_);
-      }
-      if (stageCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) stage_);
-      }
-      if (stageCase_ == 5) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) stage_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.AnswerRequest)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.AnswerRequest other = (proto.rpc.webrtc.v1.Signaling.AnswerRequest) obj;
-
-      if (!getUuid()
-          .equals(other.getUuid())) return false;
-      if (!getStageCase().equals(other.getStageCase())) return false;
-      switch (stageCase_) {
-        case 2:
-          if (!getInit()
-              .equals(other.getInit())) return false;
-          break;
-        case 3:
-          if (!getUpdate()
-              .equals(other.getUpdate())) return false;
-          break;
-        case 4:
-          if (!getDone()
-              .equals(other.getDone())) return false;
-          break;
-        case 5:
-          if (!getError()
-              .equals(other.getError())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + UUID_FIELD_NUMBER;
-      hash = (53 * hash) + getUuid().hashCode();
-      switch (stageCase_) {
-        case 2:
-          hash = (37 * hash) + INIT_FIELD_NUMBER;
-          hash = (53 * hash) + getInit().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + UPDATE_FIELD_NUMBER;
-          hash = (53 * hash) + getUpdate().hashCode();
-          break;
-        case 4:
-          hash = (37 * hash) + DONE_FIELD_NUMBER;
-          hash = (53 * hash) + getDone().hashCode();
-          break;
-        case 5:
-          hash = (37 * hash) + ERROR_FIELD_NUMBER;
-          hash = (53 * hash) + getError().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.AnswerRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * AnswerRequest is the SDP offer that the controlling side is making via the answering
@@ -10585,305 +6066,44 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.AnswerRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.AnswerRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.AnswerRequest)
         proto.rpc.webrtc.v1.Signaling.AnswerRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.AnswerRequest.class, proto.rpc.webrtc.v1.Signaling.AnswerRequest.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerRequest.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        uuid_ = "";
-        if (initBuilder_ != null) {
-          initBuilder_.clear();
-        }
-        if (updateBuilder_ != null) {
-          updateBuilder_.clear();
-        }
-        if (doneBuilder_ != null) {
-          doneBuilder_.clear();
-        }
-        if (errorBuilder_ != null) {
-          errorBuilder_.clear();
-        }
-        stageCase_ = 0;
-        stage_ = null;
-        return this;
+        super(DEFAULT_INSTANCE);
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequest getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.AnswerRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequest build() {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequest buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.AnswerRequest result = new proto.rpc.webrtc.v1.Signaling.AnswerRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.AnswerRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.uuid_ = uuid_;
-        }
-      }
-
-      private void buildPartialOneofs(proto.rpc.webrtc.v1.Signaling.AnswerRequest result) {
-        result.stageCase_ = stageCase_;
-        result.stage_ = this.stage_;
-        if (stageCase_ == 2 &&
-            initBuilder_ != null) {
-          result.stage_ = initBuilder_.build();
-        }
-        if (stageCase_ == 3 &&
-            updateBuilder_ != null) {
-          result.stage_ = updateBuilder_.build();
-        }
-        if (stageCase_ == 4 &&
-            doneBuilder_ != null) {
-          result.stage_ = doneBuilder_.build();
-        }
-        if (stageCase_ == 5 &&
-            errorBuilder_ != null) {
-          result.stage_ = errorBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.AnswerRequest) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.AnswerRequest other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.AnswerRequest.getDefaultInstance()) return this;
-        if (!other.getUuid().isEmpty()) {
-          uuid_ = other.uuid_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        switch (other.getStageCase()) {
-          case INIT: {
-            mergeInit(other.getInit());
-            break;
-          }
-          case UPDATE: {
-            mergeUpdate(other.getUpdate());
-            break;
-          }
-          case DONE: {
-            mergeDone(other.getDone());
-            break;
-          }
-          case ERROR: {
-            mergeError(other.getError());
-            break;
-          }
-          case STAGE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                uuid_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getInitFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                stageCase_ = 2;
-                break;
-              } // case 18
-              case 26: {
-                input.readMessage(
-                    getUpdateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                stageCase_ = 3;
-                break;
-              } // case 26
-              case 34: {
-                input.readMessage(
-                    getDoneFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                stageCase_ = 4;
-                break;
-              } // case 34
-              case 42: {
-                input.readMessage(
-                    getErrorFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                stageCase_ = 5;
-                break;
-              } // case 42
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int stageCase_ = 0;
-      private java.lang.Object stage_;
       public StageCase
           getStageCase() {
-        return StageCase.forNumber(
-            stageCase_);
+        return instance.getStageCase();
       }
 
       public Builder clearStage() {
-        stageCase_ = 0;
-        stage_ = null;
-        onChanged();
+        copyOnWrite();
+        instance.clearStage();
         return this;
       }
 
-      private int bitField0_;
 
-      private java.lang.Object uuid_ = "";
       /**
        * <code>string uuid = 1 [json_name = "uuid"];</code>
        * @return The uuid.
        */
+      @java.lang.Override
       public java.lang.String getUuid() {
-        java.lang.Object ref = uuid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getUuid();
       }
       /**
        * <code>string uuid = 1 [json_name = "uuid"];</code>
        * @return The bytes for uuid.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUuidBytes() {
-        java.lang.Object ref = uuid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          uuid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getUuidBytes();
       }
       /**
        * <code>string uuid = 1 [json_name = "uuid"];</code>
@@ -10892,10 +6112,8 @@ public final class Signaling {
        */
       public Builder setUuid(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        uuid_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setUuid(value);
         return this;
       }
       /**
@@ -10903,9 +6121,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearUuid() {
-        uuid_ = getDefaultInstance().getUuid();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearUuid();
         return this;
       }
       /**
@@ -10915,56 +6132,31 @@ public final class Signaling {
        */
       public Builder setUuidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        uuid_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setUuidBytes(value);
         return this;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage, proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStageOrBuilder> initBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
-       * @return Whether the init field is set.
        */
       @java.lang.Override
       public boolean hasInit() {
-        return stageCase_ == 2;
+        return instance.hasInit();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
-       * @return The init.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage getInit() {
-        if (initBuilder_ == null) {
-          if (stageCase_ == 2) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.getDefaultInstance();
-        } else {
-          if (stageCase_ == 2) {
-            return initBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.getDefaultInstance();
-        }
+        return instance.getInit();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
        */
       public Builder setInit(proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage value) {
-        if (initBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          stage_ = value;
-          onChanged();
-        } else {
-          initBuilder_.setMessage(value);
-        }
-        stageCase_ = 2;
+        copyOnWrite();
+        instance.setInit(value);
         return this;
       }
       /**
@@ -10972,141 +6164,47 @@ public final class Signaling {
        */
       public Builder setInit(
           proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.Builder builderForValue) {
-        if (initBuilder_ == null) {
-          stage_ = builderForValue.build();
-          onChanged();
-        } else {
-          initBuilder_.setMessage(builderForValue.build());
-        }
-        stageCase_ = 2;
+        copyOnWrite();
+        instance.setInit(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
        */
       public Builder mergeInit(proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage value) {
-        if (initBuilder_ == null) {
-          if (stageCase_ == 2 &&
-              stage_ != proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.getDefaultInstance()) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage) stage_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            stage_ = value;
-          }
-          onChanged();
-        } else {
-          if (stageCase_ == 2) {
-            initBuilder_.mergeFrom(value);
-          } else {
-            initBuilder_.setMessage(value);
-          }
-        }
-        stageCase_ = 2;
+        copyOnWrite();
+        instance.mergeInit(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
        */
       public Builder clearInit() {
-        if (initBuilder_ == null) {
-          if (stageCase_ == 2) {
-            stageCase_ = 0;
-            stage_ = null;
-            onChanged();
-          }
-        } else {
-          if (stageCase_ == 2) {
-            stageCase_ = 0;
-            stage_ = null;
-          }
-          initBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearInit();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.Builder getInitBuilder() {
-        return getInitFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStageOrBuilder getInitOrBuilder() {
-        if ((stageCase_ == 2) && (initBuilder_ != null)) {
-          return initBuilder_.getMessageOrBuilder();
-        } else {
-          if (stageCase_ == 2) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.AnswerRequestInitStage init = 2 [json_name = "init"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage, proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStageOrBuilder> 
-          getInitFieldBuilder() {
-        if (initBuilder_ == null) {
-          if (!(stageCase_ == 2)) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.getDefaultInstance();
-          }
-          initBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage, proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStageOrBuilder>(
-                  (proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage) stage_,
-                  getParentForChildren(),
-                  isClean());
-          stage_ = null;
-        }
-        stageCase_ = 2;
-        onChanged();
-        return initBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage, proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStageOrBuilder> updateBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
-       * @return Whether the update field is set.
        */
       @java.lang.Override
       public boolean hasUpdate() {
-        return stageCase_ == 3;
+        return instance.hasUpdate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
-       * @return The update.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage getUpdate() {
-        if (updateBuilder_ == null) {
-          if (stageCase_ == 3) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.getDefaultInstance();
-        } else {
-          if (stageCase_ == 3) {
-            return updateBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.getDefaultInstance();
-        }
+        return instance.getUpdate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
        */
       public Builder setUpdate(proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage value) {
-        if (updateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          stage_ = value;
-          onChanged();
-        } else {
-          updateBuilder_.setMessage(value);
-        }
-        stageCase_ = 3;
+        copyOnWrite();
+        instance.setUpdate(value);
         return this;
       }
       /**
@@ -11114,112 +6212,37 @@ public final class Signaling {
        */
       public Builder setUpdate(
           proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.Builder builderForValue) {
-        if (updateBuilder_ == null) {
-          stage_ = builderForValue.build();
-          onChanged();
-        } else {
-          updateBuilder_.setMessage(builderForValue.build());
-        }
-        stageCase_ = 3;
+        copyOnWrite();
+        instance.setUpdate(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
        */
       public Builder mergeUpdate(proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage value) {
-        if (updateBuilder_ == null) {
-          if (stageCase_ == 3 &&
-              stage_ != proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.getDefaultInstance()) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage) stage_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            stage_ = value;
-          }
-          onChanged();
-        } else {
-          if (stageCase_ == 3) {
-            updateBuilder_.mergeFrom(value);
-          } else {
-            updateBuilder_.setMessage(value);
-          }
-        }
-        stageCase_ = 3;
+        copyOnWrite();
+        instance.mergeUpdate(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
        */
       public Builder clearUpdate() {
-        if (updateBuilder_ == null) {
-          if (stageCase_ == 3) {
-            stageCase_ = 0;
-            stage_ = null;
-            onChanged();
-          }
-        } else {
-          if (stageCase_ == 3) {
-            stageCase_ = 0;
-            stage_ = null;
-          }
-          updateBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearUpdate();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.Builder getUpdateBuilder() {
-        return getUpdateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStageOrBuilder getUpdateOrBuilder() {
-        if ((stageCase_ == 3) && (updateBuilder_ != null)) {
-          return updateBuilder_.getMessageOrBuilder();
-        } else {
-          if (stageCase_ == 3) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.AnswerRequestUpdateStage update = 3 [json_name = "update"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage, proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStageOrBuilder> 
-          getUpdateFieldBuilder() {
-        if (updateBuilder_ == null) {
-          if (!(stageCase_ == 3)) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.getDefaultInstance();
-          }
-          updateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage, proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStageOrBuilder>(
-                  (proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage) stage_,
-                  getParentForChildren(),
-                  isClean());
-          stage_ = null;
-        }
-        stageCase_ = 3;
-        onChanged();
-        return updateBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage, proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStageOrBuilder> doneBuilder_;
       /**
        * <pre>
        * done is sent when the requester is done sending information
        * </pre>
        *
        * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
-       * @return Whether the done field is set.
        */
       @java.lang.Override
       public boolean hasDone() {
-        return stageCase_ == 4;
+        return instance.hasDone();
       }
       /**
        * <pre>
@@ -11227,21 +6250,10 @@ public final class Signaling {
        * </pre>
        *
        * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
-       * @return The done.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage getDone() {
-        if (doneBuilder_ == null) {
-          if (stageCase_ == 4) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.getDefaultInstance();
-        } else {
-          if (stageCase_ == 4) {
-            return doneBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.getDefaultInstance();
-        }
+        return instance.getDone();
       }
       /**
        * <pre>
@@ -11251,16 +6263,8 @@ public final class Signaling {
        * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
        */
       public Builder setDone(proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage value) {
-        if (doneBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          stage_ = value;
-          onChanged();
-        } else {
-          doneBuilder_.setMessage(value);
-        }
-        stageCase_ = 4;
+        copyOnWrite();
+        instance.setDone(value);
         return this;
       }
       /**
@@ -11272,13 +6276,8 @@ public final class Signaling {
        */
       public Builder setDone(
           proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.Builder builderForValue) {
-        if (doneBuilder_ == null) {
-          stage_ = builderForValue.build();
-          onChanged();
-        } else {
-          doneBuilder_.setMessage(builderForValue.build());
-        }
-        stageCase_ = 4;
+        copyOnWrite();
+        instance.setDone(builderForValue.build());
         return this;
       }
       /**
@@ -11289,23 +6288,8 @@ public final class Signaling {
        * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
        */
       public Builder mergeDone(proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage value) {
-        if (doneBuilder_ == null) {
-          if (stageCase_ == 4 &&
-              stage_ != proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.getDefaultInstance()) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) stage_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            stage_ = value;
-          }
-          onChanged();
-        } else {
-          if (stageCase_ == 4) {
-            doneBuilder_.mergeFrom(value);
-          } else {
-            doneBuilder_.setMessage(value);
-          }
-        }
-        stageCase_ = 4;
+        copyOnWrite();
+        instance.mergeDone(value);
         return this;
       }
       /**
@@ -11316,88 +6300,21 @@ public final class Signaling {
        * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
        */
       public Builder clearDone() {
-        if (doneBuilder_ == null) {
-          if (stageCase_ == 4) {
-            stageCase_ = 0;
-            stage_ = null;
-            onChanged();
-          }
-        } else {
-          if (stageCase_ == 4) {
-            stageCase_ = 0;
-            stage_ = null;
-          }
-          doneBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearDone();
         return this;
       }
-      /**
-       * <pre>
-       * done is sent when the requester is done sending information
-       * </pre>
-       *
-       * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.Builder getDoneBuilder() {
-        return getDoneFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * done is sent when the requester is done sending information
-       * </pre>
-       *
-       * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStageOrBuilder getDoneOrBuilder() {
-        if ((stageCase_ == 4) && (doneBuilder_ != null)) {
-          return doneBuilder_.getMessageOrBuilder();
-        } else {
-          if (stageCase_ == 4) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * done is sent when the requester is done sending information
-       * </pre>
-       *
-       * <code>.proto.rpc.webrtc.v1.AnswerRequestDoneStage done = 4 [json_name = "done"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage, proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStageOrBuilder> 
-          getDoneFieldBuilder() {
-        if (doneBuilder_ == null) {
-          if (!(stageCase_ == 4)) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.getDefaultInstance();
-          }
-          doneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage, proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStageOrBuilder>(
-                  (proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage) stage_,
-                  getParentForChildren(),
-                  isClean());
-          stage_ = null;
-        }
-        stageCase_ = 4;
-        onChanged();
-        return doneBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage, proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStageOrBuilder> errorBuilder_;
       /**
        * <pre>
        * error is sent any time before done
        * </pre>
        *
        * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
-       * @return Whether the error field is set.
        */
       @java.lang.Override
       public boolean hasError() {
-        return stageCase_ == 5;
+        return instance.hasError();
       }
       /**
        * <pre>
@@ -11405,21 +6322,10 @@ public final class Signaling {
        * </pre>
        *
        * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
-       * @return The error.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage getError() {
-        if (errorBuilder_ == null) {
-          if (stageCase_ == 5) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.getDefaultInstance();
-        } else {
-          if (stageCase_ == 5) {
-            return errorBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.getDefaultInstance();
-        }
+        return instance.getError();
       }
       /**
        * <pre>
@@ -11429,16 +6335,8 @@ public final class Signaling {
        * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
        */
       public Builder setError(proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage value) {
-        if (errorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          stage_ = value;
-          onChanged();
-        } else {
-          errorBuilder_.setMessage(value);
-        }
-        stageCase_ = 5;
+        copyOnWrite();
+        instance.setError(value);
         return this;
       }
       /**
@@ -11450,13 +6348,8 @@ public final class Signaling {
        */
       public Builder setError(
           proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.Builder builderForValue) {
-        if (errorBuilder_ == null) {
-          stage_ = builderForValue.build();
-          onChanged();
-        } else {
-          errorBuilder_.setMessage(builderForValue.build());
-        }
-        stageCase_ = 5;
+        copyOnWrite();
+        instance.setError(builderForValue.build());
         return this;
       }
       /**
@@ -11467,23 +6360,8 @@ public final class Signaling {
        * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
        */
       public Builder mergeError(proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage value) {
-        if (errorBuilder_ == null) {
-          if (stageCase_ == 5 &&
-              stage_ != proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.getDefaultInstance()) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) stage_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            stage_ = value;
-          }
-          onChanged();
-        } else {
-          if (stageCase_ == 5) {
-            errorBuilder_.mergeFrom(value);
-          } else {
-            errorBuilder_.setMessage(value);
-          }
-        }
-        stageCase_ = 5;
+        copyOnWrite();
+        instance.mergeError(value);
         return this;
       }
       /**
@@ -11494,141 +6372,95 @@ public final class Signaling {
        * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
        */
       public Builder clearError() {
-        if (errorBuilder_ == null) {
-          if (stageCase_ == 5) {
-            stageCase_ = 0;
-            stage_ = null;
-            onChanged();
-          }
-        } else {
-          if (stageCase_ == 5) {
-            stageCase_ = 0;
-            stage_ = null;
-          }
-          errorBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearError();
         return this;
       }
-      /**
-       * <pre>
-       * error is sent any time before done
-       * </pre>
-       *
-       * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.Builder getErrorBuilder() {
-        return getErrorFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * error is sent any time before done
-       * </pre>
-       *
-       * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStageOrBuilder getErrorOrBuilder() {
-        if ((stageCase_ == 5) && (errorBuilder_ != null)) {
-          return errorBuilder_.getMessageOrBuilder();
-        } else {
-          if (stageCase_ == 5) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * error is sent any time before done
-       * </pre>
-       *
-       * <code>.proto.rpc.webrtc.v1.AnswerRequestErrorStage error = 5 [json_name = "error"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage, proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStageOrBuilder> 
-          getErrorFieldBuilder() {
-        if (errorBuilder_ == null) {
-          if (!(stageCase_ == 5)) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.getDefaultInstance();
-          }
-          errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage, proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStageOrBuilder>(
-                  (proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage) stage_,
-                  getParentForChildren(),
-                  isClean());
-          stage_ = null;
-        }
-        stageCase_ = 5;
-        onChanged();
-        return errorBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.AnswerRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "stage_",
+              "stageCase_",
+              "uuid_",
+              proto.rpc.webrtc.v1.Signaling.AnswerRequestInitStage.class,
+              proto.rpc.webrtc.v1.Signaling.AnswerRequestUpdateStage.class,
+              proto.rpc.webrtc.v1.Signaling.AnswerRequestDoneStage.class,
+              proto.rpc.webrtc.v1.Signaling.AnswerRequestErrorStage.class,
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002<\u0000" +
+                "\u0003<\u0000\u0004<\u0000\u0005<\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.AnswerRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.AnswerRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.AnswerRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.AnswerRequest)
     private static final proto.rpc.webrtc.v1.Signaling.AnswerRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.AnswerRequest();
+      AnswerRequest defaultInstance = new AnswerRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AnswerRequest.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AnswerRequest>
-        PARSER = new com.google.protobuf.AbstractParser<AnswerRequest>() {
-      @java.lang.Override
-      public AnswerRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AnswerRequest> PARSER;
 
     public static com.google.protobuf.Parser<AnswerRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AnswerRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AnswerResponseInitStageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.AnswerResponseInitStage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string sdp = 1 [json_name = "sdp"];</code>
@@ -11650,58 +6482,23 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.AnswerResponseInitStage}
    */
-  public static final class AnswerResponseInitStage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AnswerResponseInitStage extends
+      com.google.protobuf.GeneratedMessageLite<
+          AnswerResponseInitStage, AnswerResponseInitStage.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.AnswerResponseInitStage)
       AnswerResponseInitStageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AnswerResponseInitStage.newBuilder() to construct.
-    private AnswerResponseInitStage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AnswerResponseInitStage() {
       sdp_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AnswerResponseInitStage();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseInitStage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseInitStage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.class, proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.Builder.class);
-    }
-
     public static final int SDP_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object sdp_ = "";
+    private java.lang.String sdp_;
     /**
      * <code>string sdp = 1 [json_name = "sdp"];</code>
      * @return The sdp.
      */
     @java.lang.Override
     public java.lang.String getSdp() {
-      java.lang.Object ref = sdp_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sdp_ = s;
-        return s;
-      }
+      return sdp_;
     }
     /**
      * <code>string sdp = 1 [json_name = "sdp"];</code>
@@ -11710,174 +6507,119 @@ public final class Signaling {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSdpBytes() {
-      java.lang.Object ref = sdp_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sdp_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(sdp_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string sdp = 1 [json_name = "sdp"];</code>
+     * @param value The sdp to set.
+     */
+    private void setSdp(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      sdp_ = value;
     }
+    /**
+     * <code>string sdp = 1 [json_name = "sdp"];</code>
+     */
+    private void clearSdp() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sdp_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sdp_);
-      }
-      getUnknownFields().writeTo(output);
+      sdp_ = getDefaultInstance().getSdp();
     }
+    /**
+     * <code>string sdp = 1 [json_name = "sdp"];</code>
+     * @param value The bytes for sdp to set.
+     */
+    private void setSdpBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sdp_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sdp_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sdp_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage other = (proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage) obj;
-
-      if (!getSdp()
-          .equals(other.getSdp())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SDP_FIELD_NUMBER;
-      hash = (53 * hash) + getSdp().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * AnswerResponseInitStage is the first and a one time stage that represents the
@@ -11887,205 +6629,32 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.AnswerResponseInitStage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.AnswerResponseInitStage)
         proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseInitStage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseInitStage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.class, proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        sdp_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseInitStage_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage build() {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage result = new proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sdp_ = sdp_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.getDefaultInstance()) return this;
-        if (!other.getSdp().isEmpty()) {
-          sdp_ = other.sdp_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                sdp_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object sdp_ = "";
       /**
        * <code>string sdp = 1 [json_name = "sdp"];</code>
        * @return The sdp.
        */
+      @java.lang.Override
       public java.lang.String getSdp() {
-        java.lang.Object ref = sdp_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sdp_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSdp();
       }
       /**
        * <code>string sdp = 1 [json_name = "sdp"];</code>
        * @return The bytes for sdp.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSdpBytes() {
-        java.lang.Object ref = sdp_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sdp_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSdpBytes();
       }
       /**
        * <code>string sdp = 1 [json_name = "sdp"];</code>
@@ -12094,10 +6663,8 @@ public final class Signaling {
        */
       public Builder setSdp(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        sdp_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSdp(value);
         return this;
       }
       /**
@@ -12105,9 +6672,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearSdp() {
-        sdp_ = getDefaultInstance().getSdp();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearSdp();
         return this;
       }
       /**
@@ -12117,80 +6683,88 @@ public final class Signaling {
        */
       public Builder setSdpBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        sdp_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSdpBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerResponseInitStage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sdp_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.AnswerResponseInitStage)
     private static final proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage();
+      AnswerResponseInitStage defaultInstance = new AnswerResponseInitStage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AnswerResponseInitStage.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AnswerResponseInitStage>
-        PARSER = new com.google.protobuf.AbstractParser<AnswerResponseInitStage>() {
-      @java.lang.Override
-      public AnswerResponseInitStage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AnswerResponseInitStage> PARSER;
 
     public static com.google.protobuf.Parser<AnswerResponseInitStage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AnswerResponseInitStage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AnswerResponseUpdateStageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.AnswerResponseUpdateStage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
@@ -12202,10 +6776,6 @@ public final class Signaling {
      * @return The candidate.
      */
     proto.rpc.webrtc.v1.Signaling.ICECandidate getCandidate();
-    /**
-     * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder getCandidateOrBuilder();
   }
   /**
    * <pre>
@@ -12215,44 +6785,18 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.AnswerResponseUpdateStage}
    */
-  public static final class AnswerResponseUpdateStage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AnswerResponseUpdateStage extends
+      com.google.protobuf.GeneratedMessageLite<
+          AnswerResponseUpdateStage, AnswerResponseUpdateStage.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.AnswerResponseUpdateStage)
       AnswerResponseUpdateStageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AnswerResponseUpdateStage.newBuilder() to construct.
-    private AnswerResponseUpdateStage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AnswerResponseUpdateStage() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AnswerResponseUpdateStage();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseUpdateStage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseUpdateStage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.class, proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.Builder.class);
-    }
-
     private int bitField0_;
     public static final int CANDIDATE_FIELD_NUMBER = 1;
     private proto.rpc.webrtc.v1.Signaling.ICECandidate candidate_;
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-     * @return Whether the candidate field is set.
      */
     @java.lang.Override
     public boolean hasCandidate() {
@@ -12260,7 +6804,6 @@ public final class Signaling {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-     * @return The candidate.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.ICECandidate getCandidate() {
@@ -12269,173 +6812,116 @@ public final class Signaling {
     /**
      * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder getCandidateOrBuilder() {
-      return candidate_ == null ? proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance() : candidate_;
+    private void setCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
+      value.getClass();
+  candidate_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
+      value.getClass();
+  if (candidate_ != null &&
+          candidate_ != proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance()) {
+        candidate_ =
+          proto.rpc.webrtc.v1.Signaling.ICECandidate.newBuilder(candidate_).mergeFrom(value).buildPartial();
+      } else {
+        candidate_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getCandidate());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getCandidate());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage other = (proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage) obj;
-
-      if (hasCandidate() != other.hasCandidate()) return false;
-      if (hasCandidate()) {
-        if (!getCandidate()
-            .equals(other.getCandidate())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasCandidate()) {
-        hash = (37 * hash) + CANDIDATE_FIELD_NUMBER;
-        hash = (53 * hash) + getCandidate().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
+     */
+    private void clearCandidate() {  candidate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * AnswerResponseUpdateStage is multiply used to trickle in ICE candidates to
@@ -12445,374 +6931,141 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.AnswerResponseUpdateStage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.AnswerResponseUpdateStage)
         proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseUpdateStage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseUpdateStage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.class, proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCandidateFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        candidate_ = null;
-        if (candidateBuilder_ != null) {
-          candidateBuilder_.dispose();
-          candidateBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseUpdateStage_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage build() {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage result = new proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.candidate_ = candidateBuilder_ == null
-              ? candidate_
-              : candidateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.getDefaultInstance()) return this;
-        if (other.hasCandidate()) {
-          mergeCandidate(other.getCandidate());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getCandidateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private proto.rpc.webrtc.v1.Signaling.ICECandidate candidate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.ICECandidate, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder, proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder> candidateBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       * @return Whether the candidate field is set.
        */
+      @java.lang.Override
       public boolean hasCandidate() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasCandidate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       * @return The candidate.
        */
+      @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.ICECandidate getCandidate() {
-        if (candidateBuilder_ == null) {
-          return candidate_ == null ? proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance() : candidate_;
-        } else {
-          return candidateBuilder_.getMessage();
-        }
+        return instance.getCandidate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
        */
       public Builder setCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
-        if (candidateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          candidate_ = value;
-        } else {
-          candidateBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setCandidate(value);
         return this;
-      }
+        }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
        */
       public Builder setCandidate(
           proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder builderForValue) {
-        if (candidateBuilder_ == null) {
-          candidate_ = builderForValue.build();
-        } else {
-          candidateBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setCandidate(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
        */
       public Builder mergeCandidate(proto.rpc.webrtc.v1.Signaling.ICECandidate value) {
-        if (candidateBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            candidate_ != null &&
-            candidate_ != proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance()) {
-            getCandidateBuilder().mergeFrom(value);
-          } else {
-            candidate_ = value;
-          }
-        } else {
-          candidateBuilder_.mergeFrom(value);
-        }
-        if (candidate_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeCandidate(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
        */
-      public Builder clearCandidate() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        candidate_ = null;
-        if (candidateBuilder_ != null) {
-          candidateBuilder_.dispose();
-          candidateBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearCandidate() {  copyOnWrite();
+        instance.clearCandidate();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder getCandidateBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getCandidateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder getCandidateOrBuilder() {
-        if (candidateBuilder_ != null) {
-          return candidateBuilder_.getMessageOrBuilder();
-        } else {
-          return candidate_ == null ?
-              proto.rpc.webrtc.v1.Signaling.ICECandidate.getDefaultInstance() : candidate_;
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.ICECandidate candidate = 1 [json_name = "candidate"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.ICECandidate, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder, proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder> 
-          getCandidateFieldBuilder() {
-        if (candidateBuilder_ == null) {
-          candidateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.ICECandidate, proto.rpc.webrtc.v1.Signaling.ICECandidate.Builder, proto.rpc.webrtc.v1.Signaling.ICECandidateOrBuilder>(
-                  getCandidate(),
-                  getParentForChildren(),
-                  isClean());
-          candidate_ = null;
-        }
-        return candidateBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerResponseUpdateStage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "candidate_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.AnswerResponseUpdateStage)
     private static final proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage();
+      AnswerResponseUpdateStage defaultInstance = new AnswerResponseUpdateStage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AnswerResponseUpdateStage.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AnswerResponseUpdateStage>
-        PARSER = new com.google.protobuf.AbstractParser<AnswerResponseUpdateStage>() {
-      @java.lang.Override
-      public AnswerResponseUpdateStage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AnswerResponseUpdateStage> PARSER;
 
     public static com.google.protobuf.Parser<AnswerResponseUpdateStage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AnswerResponseUpdateStage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AnswerResponseDoneStageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.AnswerResponseDoneStage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * <pre>
@@ -12821,184 +7074,96 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.AnswerResponseDoneStage}
    */
-  public static final class AnswerResponseDoneStage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AnswerResponseDoneStage extends
+      com.google.protobuf.GeneratedMessageLite<
+          AnswerResponseDoneStage, AnswerResponseDoneStage.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.AnswerResponseDoneStage)
       AnswerResponseDoneStageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AnswerResponseDoneStage.newBuilder() to construct.
-    private AnswerResponseDoneStage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AnswerResponseDoneStage() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AnswerResponseDoneStage();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseDoneStage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseDoneStage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.class, proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage other = (proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * AnswerResponseDoneStage indicates the answerer is done responding with candidates.
@@ -13007,217 +7172,90 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.AnswerResponseDoneStage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.AnswerResponseDoneStage)
         proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseDoneStage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseDoneStage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.class, proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseDoneStage_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage build() {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage result = new proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerResponseDoneStage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.AnswerResponseDoneStage)
     private static final proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage();
+      AnswerResponseDoneStage defaultInstance = new AnswerResponseDoneStage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AnswerResponseDoneStage.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AnswerResponseDoneStage>
-        PARSER = new com.google.protobuf.AbstractParser<AnswerResponseDoneStage>() {
-      @java.lang.Override
-      public AnswerResponseDoneStage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AnswerResponseDoneStage> PARSER;
 
     public static com.google.protobuf.Parser<AnswerResponseDoneStage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AnswerResponseDoneStage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AnswerResponseErrorStageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.AnswerResponseErrorStage)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
@@ -13228,11 +7266,7 @@ public final class Signaling {
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      * @return The status.
      */
-    com.google.rpc.Status getStatus();
-    /**
-     * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-     */
-    com.google.rpc.StatusOrBuilder getStatusOrBuilder();
+    com.viam.shaded.com.google.rpc.Status getStatus();
   }
   /**
    * <pre>
@@ -13241,44 +7275,18 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.AnswerResponseErrorStage}
    */
-  public static final class AnswerResponseErrorStage extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AnswerResponseErrorStage extends
+      com.google.protobuf.GeneratedMessageLite<
+          AnswerResponseErrorStage, AnswerResponseErrorStage.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.AnswerResponseErrorStage)
       AnswerResponseErrorStageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AnswerResponseErrorStage.newBuilder() to construct.
-    private AnswerResponseErrorStage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AnswerResponseErrorStage() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AnswerResponseErrorStage();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseErrorStage_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseErrorStage_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.class, proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.Builder.class);
-    }
-
     private int bitField0_;
     public static final int STATUS_FIELD_NUMBER = 1;
-    private com.google.rpc.Status status_;
+    private com.viam.shaded.com.google.rpc.Status status_;
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-     * @return Whether the status field is set.
      */
     @java.lang.Override
     public boolean hasStatus() {
@@ -13286,182 +7294,124 @@ public final class Signaling {
     }
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-     * @return The status.
      */
     @java.lang.Override
-    public com.google.rpc.Status getStatus() {
-      return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
+    public com.viam.shaded.com.google.rpc.Status getStatus() {
+      return status_ == null ? com.viam.shaded.com.google.rpc.Status.getDefaultInstance() : status_;
     }
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
-    @java.lang.Override
-    public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
-      return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
+    private void setStatus(com.viam.shaded.com.google.rpc.Status value) {
+      value.getClass();
+  status_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeStatus(com.viam.shaded.com.google.rpc.Status value) {
+      value.getClass();
+  if (status_ != null &&
+          status_ != com.viam.shaded.com.google.rpc.Status.getDefaultInstance()) {
+        status_ =
+          com.viam.shaded.com.google.rpc.Status.newBuilder(status_).mergeFrom(value).buildPartial();
+      } else {
+        status_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getStatus());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getStatus());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage other = (proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) obj;
-
-      if (hasStatus() != other.hasStatus()) return false;
-      if (hasStatus()) {
-        if (!getStatus()
-            .equals(other.getStatus())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasStatus()) {
-        hash = (37 * hash) + STATUS_FIELD_NUMBER;
-        hash = (53 * hash) + getStatus().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
+     */
+    private void clearStatus() {  status_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * AnswerResponseErrorStage indicates the exchange has failed with an error.
@@ -13470,374 +7420,141 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.AnswerResponseErrorStage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.AnswerResponseErrorStage)
         proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseErrorStage_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseErrorStage_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.class, proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStatusFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        status_ = null;
-        if (statusBuilder_ != null) {
-          statusBuilder_.dispose();
-          statusBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponseErrorStage_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage build() {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage result = new proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.status_ = statusBuilder_ == null
-              ? status_
-              : statusBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.getDefaultInstance()) return this;
-        if (other.hasStatus()) {
-          mergeStatus(other.getStatus());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getStatusFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.rpc.Status status_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> statusBuilder_;
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       * @return Whether the status field is set.
        */
+      @java.lang.Override
       public boolean hasStatus() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       * @return The status.
-       */
-      public com.google.rpc.Status getStatus() {
-        if (statusBuilder_ == null) {
-          return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
-        } else {
-          return statusBuilder_.getMessage();
-        }
+        return instance.hasStatus();
       }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
-      public Builder setStatus(com.google.rpc.Status value) {
-        if (statusBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          status_ = value;
-        } else {
-          statusBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+      @java.lang.Override
+      public com.viam.shaded.com.google.rpc.Status getStatus() {
+        return instance.getStatus();
+      }
+      /**
+       * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
+       */
+      public Builder setStatus(com.viam.shaded.com.google.rpc.Status value) {
+        copyOnWrite();
+        instance.setStatus(value);
         return this;
-      }
+        }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
       public Builder setStatus(
-          com.google.rpc.Status.Builder builderForValue) {
-        if (statusBuilder_ == null) {
-          status_ = builderForValue.build();
-        } else {
-          statusBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+          com.viam.shaded.com.google.rpc.Status.Builder builderForValue) {
+        copyOnWrite();
+        instance.setStatus(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
-      public Builder mergeStatus(com.google.rpc.Status value) {
-        if (statusBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            status_ != null &&
-            status_ != com.google.rpc.Status.getDefaultInstance()) {
-            getStatusBuilder().mergeFrom(value);
-          } else {
-            status_ = value;
-          }
-        } else {
-          statusBuilder_.mergeFrom(value);
-        }
-        if (status_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+      public Builder mergeStatus(com.viam.shaded.com.google.rpc.Status value) {
+        copyOnWrite();
+        instance.mergeStatus(value);
         return this;
       }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
-      public Builder clearStatus() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        status_ = null;
-        if (statusBuilder_ != null) {
-          statusBuilder_.dispose();
-          statusBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearStatus() {  copyOnWrite();
+        instance.clearStatus();
         return this;
       }
-      /**
-       * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       */
-      public com.google.rpc.Status.Builder getStatusBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getStatusFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       */
-      public com.google.rpc.StatusOrBuilder getStatusOrBuilder() {
-        if (statusBuilder_ != null) {
-          return statusBuilder_.getMessageOrBuilder();
-        } else {
-          return status_ == null ?
-              com.google.rpc.Status.getDefaultInstance() : status_;
-        }
-      }
-      /**
-       * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder> 
-          getStatusFieldBuilder() {
-        if (statusBuilder_ == null) {
-          statusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.rpc.Status, com.google.rpc.Status.Builder, com.google.rpc.StatusOrBuilder>(
-                  getStatus(),
-                  getParentForChildren(),
-                  isClean());
-          status_ = null;
-        }
-        return statusBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerResponseErrorStage)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "status_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.AnswerResponseErrorStage)
     private static final proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage();
+      AnswerResponseErrorStage defaultInstance = new AnswerResponseErrorStage();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AnswerResponseErrorStage.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AnswerResponseErrorStage>
-        PARSER = new com.google.protobuf.AbstractParser<AnswerResponseErrorStage>() {
-      @java.lang.Override
-      public AnswerResponseErrorStage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AnswerResponseErrorStage> PARSER;
 
     public static com.google.protobuf.Parser<AnswerResponseErrorStage> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AnswerResponseErrorStage> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AnswerResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.AnswerResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string uuid = 1 [json_name = "uuid"];</code>
@@ -13861,10 +7578,6 @@ public final class Signaling {
      * @return The init.
      */
     proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage getInit();
-    /**
-     * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStageOrBuilder getInitOrBuilder();
 
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
@@ -13876,10 +7589,6 @@ public final class Signaling {
      * @return The update.
      */
     proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage getUpdate();
-    /**
-     * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStageOrBuilder getUpdateOrBuilder();
 
     /**
      * <pre>
@@ -13899,14 +7608,6 @@ public final class Signaling {
      * @return The done.
      */
     proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage getDone();
-    /**
-     * <pre>
-     * done is sent when the answerer is done sending information
-     * </pre>
-     *
-     * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStageOrBuilder getDoneOrBuilder();
 
     /**
      * <pre>
@@ -13926,16 +7627,8 @@ public final class Signaling {
      * @return The error.
      */
     proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage getError();
-    /**
-     * <pre>
-     * error is sent any time before done
-     * </pre>
-     *
-     * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStageOrBuilder getErrorOrBuilder();
 
-    proto.rpc.webrtc.v1.Signaling.AnswerResponse.StageCase getStageCase();
+    public proto.rpc.webrtc.v1.Signaling.AnswerResponse.StageCase getStageCase();
   }
   /**
    * <pre>
@@ -13944,45 +7637,17 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.AnswerResponse}
    */
-  public static final class AnswerResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AnswerResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          AnswerResponse, AnswerResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.AnswerResponse)
       AnswerResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AnswerResponse.newBuilder() to construct.
-    private AnswerResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AnswerResponse() {
       uuid_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AnswerResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.AnswerResponse.class, proto.rpc.webrtc.v1.Signaling.AnswerResponse.Builder.class);
-    }
-
     private int stageCase_ = 0;
-    @SuppressWarnings("serial")
     private java.lang.Object stage_;
-    public enum StageCase
-        implements com.google.protobuf.Internal.EnumLite,
-            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    public enum StageCase {
       INIT(2),
       UPDATE(3),
       DONE(4),
@@ -13993,8 +7658,6 @@ public final class Signaling {
         this.value = value;
       }
       /**
-       * @param value The number of the enum to look for.
-       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -14017,31 +7680,27 @@ public final class Signaling {
       }
     };
 
+    @java.lang.Override
     public StageCase
     getStageCase() {
       return StageCase.forNumber(
           stageCase_);
     }
 
+    private void clearStage() {
+      stageCase_ = 0;
+      stage_ = null;
+    }
+
     public static final int UUID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object uuid_ = "";
+    private java.lang.String uuid_;
     /**
      * <code>string uuid = 1 [json_name = "uuid"];</code>
      * @return The uuid.
      */
     @java.lang.Override
     public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
-        return s;
-      }
+      return uuid_;
     }
     /**
      * <code>string uuid = 1 [json_name = "uuid"];</code>
@@ -14050,22 +7709,39 @@ public final class Signaling {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getUuidBytes() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uuid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(uuid_);
+    }
+    /**
+     * <code>string uuid = 1 [json_name = "uuid"];</code>
+     * @param value The uuid to set.
+     */
+    private void setUuid(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      uuid_ = value;
+    }
+    /**
+     * <code>string uuid = 1 [json_name = "uuid"];</code>
+     */
+    private void clearUuid() {
+
+      uuid_ = getDefaultInstance().getUuid();
+    }
+    /**
+     * <code>string uuid = 1 [json_name = "uuid"];</code>
+     * @param value The bytes for uuid to set.
+     */
+    private void setUuidBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      uuid_ = value.toStringUtf8();
+
     }
 
     public static final int INIT_FIELD_NUMBER = 2;
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
-     * @return Whether the init field is set.
      */
     @java.lang.Override
     public boolean hasInit() {
@@ -14073,7 +7749,6 @@ public final class Signaling {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
-     * @return The init.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage getInit() {
@@ -14085,18 +7760,38 @@ public final class Signaling {
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStageOrBuilder getInitOrBuilder() {
-      if (stageCase_ == 2) {
-         return (proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage) stage_;
+    private void setInit(proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage value) {
+      value.getClass();
+  stage_ = value;
+      stageCase_ = 2;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
+     */
+    private void mergeInit(proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage value) {
+      value.getClass();
+  if (stageCase_ == 2 &&
+          stage_ != proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.getDefaultInstance()) {
+        stage_ = proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage) stage_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        stage_ = value;
       }
-      return proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.getDefaultInstance();
+      stageCase_ = 2;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
+     */
+    private void clearInit() {
+      if (stageCase_ == 2) {
+        stageCase_ = 0;
+        stage_ = null;
+      }
     }
 
     public static final int UPDATE_FIELD_NUMBER = 3;
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
-     * @return Whether the update field is set.
      */
     @java.lang.Override
     public boolean hasUpdate() {
@@ -14104,7 +7799,6 @@ public final class Signaling {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
-     * @return The update.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage getUpdate() {
@@ -14116,12 +7810,33 @@ public final class Signaling {
     /**
      * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStageOrBuilder getUpdateOrBuilder() {
-      if (stageCase_ == 3) {
-         return (proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage) stage_;
+    private void setUpdate(proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage value) {
+      value.getClass();
+  stage_ = value;
+      stageCase_ = 3;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
+     */
+    private void mergeUpdate(proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage value) {
+      value.getClass();
+  if (stageCase_ == 3 &&
+          stage_ != proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.getDefaultInstance()) {
+        stage_ = proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage) stage_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        stage_ = value;
       }
-      return proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.getDefaultInstance();
+      stageCase_ = 3;
+    }
+    /**
+     * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
+     */
+    private void clearUpdate() {
+      if (stageCase_ == 3) {
+        stageCase_ = 0;
+        stage_ = null;
+      }
     }
 
     public static final int DONE_FIELD_NUMBER = 4;
@@ -14131,7 +7846,6 @@ public final class Signaling {
      * </pre>
      *
      * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
-     * @return Whether the done field is set.
      */
     @java.lang.Override
     public boolean hasDone() {
@@ -14143,7 +7857,6 @@ public final class Signaling {
      * </pre>
      *
      * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
-     * @return The done.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage getDone() {
@@ -14159,12 +7872,41 @@ public final class Signaling {
      *
      * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStageOrBuilder getDoneOrBuilder() {
-      if (stageCase_ == 4) {
-         return (proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) stage_;
+    private void setDone(proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage value) {
+      value.getClass();
+  stage_ = value;
+      stageCase_ = 4;
+    }
+    /**
+     * <pre>
+     * done is sent when the answerer is done sending information
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
+     */
+    private void mergeDone(proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage value) {
+      value.getClass();
+  if (stageCase_ == 4 &&
+          stage_ != proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.getDefaultInstance()) {
+        stage_ = proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) stage_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        stage_ = value;
       }
-      return proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.getDefaultInstance();
+      stageCase_ = 4;
+    }
+    /**
+     * <pre>
+     * done is sent when the answerer is done sending information
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
+     */
+    private void clearDone() {
+      if (stageCase_ == 4) {
+        stageCase_ = 0;
+        stage_ = null;
+      }
     }
 
     public static final int ERROR_FIELD_NUMBER = 5;
@@ -14174,7 +7916,6 @@ public final class Signaling {
      * </pre>
      *
      * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
-     * @return Whether the error field is set.
      */
     @java.lang.Override
     public boolean hasError() {
@@ -14186,7 +7927,6 @@ public final class Signaling {
      * </pre>
      *
      * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
-     * @return The error.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage getError() {
@@ -14202,239 +7942,126 @@ public final class Signaling {
      *
      * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStageOrBuilder getErrorOrBuilder() {
+    private void setError(proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage value) {
+      value.getClass();
+  stage_ = value;
+      stageCase_ = 5;
+    }
+    /**
+     * <pre>
+     * error is sent any time before done
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
+     */
+    private void mergeError(proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage value) {
+      value.getClass();
+  if (stageCase_ == 5 &&
+          stage_ != proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.getDefaultInstance()) {
+        stage_ = proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) stage_)
+            .mergeFrom(value).buildPartial();
+      } else {
+        stage_ = value;
+      }
+      stageCase_ = 5;
+    }
+    /**
+     * <pre>
+     * error is sent any time before done
+     * </pre>
+     *
+     * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
+     */
+    private void clearError() {
       if (stageCase_ == 5) {
-         return (proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) stage_;
+        stageCase_ = 0;
+        stage_ = null;
       }
-      return proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
-      }
-      if (stageCase_ == 2) {
-        output.writeMessage(2, (proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage) stage_);
-      }
-      if (stageCase_ == 3) {
-        output.writeMessage(3, (proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage) stage_);
-      }
-      if (stageCase_ == 4) {
-        output.writeMessage(4, (proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) stage_);
-      }
-      if (stageCase_ == 5) {
-        output.writeMessage(5, (proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) stage_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uuid_);
-      }
-      if (stageCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage) stage_);
-      }
-      if (stageCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage) stage_);
-      }
-      if (stageCase_ == 4) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, (proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) stage_);
-      }
-      if (stageCase_ == 5) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, (proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) stage_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.AnswerResponse)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.AnswerResponse other = (proto.rpc.webrtc.v1.Signaling.AnswerResponse) obj;
-
-      if (!getUuid()
-          .equals(other.getUuid())) return false;
-      if (!getStageCase().equals(other.getStageCase())) return false;
-      switch (stageCase_) {
-        case 2:
-          if (!getInit()
-              .equals(other.getInit())) return false;
-          break;
-        case 3:
-          if (!getUpdate()
-              .equals(other.getUpdate())) return false;
-          break;
-        case 4:
-          if (!getDone()
-              .equals(other.getDone())) return false;
-          break;
-        case 5:
-          if (!getError()
-              .equals(other.getError())) return false;
-          break;
-        case 0:
-        default:
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + UUID_FIELD_NUMBER;
-      hash = (53 * hash) + getUuid().hashCode();
-      switch (stageCase_) {
-        case 2:
-          hash = (37 * hash) + INIT_FIELD_NUMBER;
-          hash = (53 * hash) + getInit().hashCode();
-          break;
-        case 3:
-          hash = (37 * hash) + UPDATE_FIELD_NUMBER;
-          hash = (53 * hash) + getUpdate().hashCode();
-          break;
-        case 4:
-          hash = (37 * hash) + DONE_FIELD_NUMBER;
-          hash = (53 * hash) + getDone().hashCode();
-          break;
-        case 5:
-          hash = (37 * hash) + ERROR_FIELD_NUMBER;
-          hash = (53 * hash) + getError().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.AnswerResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * AnswerResponse is the SDP answer that an answerer responds with.
@@ -14443,305 +8070,44 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.AnswerResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.AnswerResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.AnswerResponse)
         proto.rpc.webrtc.v1.Signaling.AnswerResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.AnswerResponse.class, proto.rpc.webrtc.v1.Signaling.AnswerResponse.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.AnswerResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        uuid_ = "";
-        if (initBuilder_ != null) {
-          initBuilder_.clear();
-        }
-        if (updateBuilder_ != null) {
-          updateBuilder_.clear();
-        }
-        if (doneBuilder_ != null) {
-          doneBuilder_.clear();
-        }
-        if (errorBuilder_ != null) {
-          errorBuilder_.clear();
-        }
-        stageCase_ = 0;
-        stage_ = null;
-        return this;
+        super(DEFAULT_INSTANCE);
       }
 
       @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_AnswerResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponse getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.AnswerResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponse build() {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponse buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.AnswerResponse result = new proto.rpc.webrtc.v1.Signaling.AnswerResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        buildPartialOneofs(result);
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.AnswerResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.uuid_ = uuid_;
-        }
-      }
-
-      private void buildPartialOneofs(proto.rpc.webrtc.v1.Signaling.AnswerResponse result) {
-        result.stageCase_ = stageCase_;
-        result.stage_ = this.stage_;
-        if (stageCase_ == 2 &&
-            initBuilder_ != null) {
-          result.stage_ = initBuilder_.build();
-        }
-        if (stageCase_ == 3 &&
-            updateBuilder_ != null) {
-          result.stage_ = updateBuilder_.build();
-        }
-        if (stageCase_ == 4 &&
-            doneBuilder_ != null) {
-          result.stage_ = doneBuilder_.build();
-        }
-        if (stageCase_ == 5 &&
-            errorBuilder_ != null) {
-          result.stage_ = errorBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.AnswerResponse) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.AnswerResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.AnswerResponse other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.AnswerResponse.getDefaultInstance()) return this;
-        if (!other.getUuid().isEmpty()) {
-          uuid_ = other.uuid_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        switch (other.getStageCase()) {
-          case INIT: {
-            mergeInit(other.getInit());
-            break;
-          }
-          case UPDATE: {
-            mergeUpdate(other.getUpdate());
-            break;
-          }
-          case DONE: {
-            mergeDone(other.getDone());
-            break;
-          }
-          case ERROR: {
-            mergeError(other.getError());
-            break;
-          }
-          case STAGE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                uuid_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getInitFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                stageCase_ = 2;
-                break;
-              } // case 18
-              case 26: {
-                input.readMessage(
-                    getUpdateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                stageCase_ = 3;
-                break;
-              } // case 26
-              case 34: {
-                input.readMessage(
-                    getDoneFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                stageCase_ = 4;
-                break;
-              } // case 34
-              case 42: {
-                input.readMessage(
-                    getErrorFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                stageCase_ = 5;
-                break;
-              } // case 42
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int stageCase_ = 0;
-      private java.lang.Object stage_;
       public StageCase
           getStageCase() {
-        return StageCase.forNumber(
-            stageCase_);
+        return instance.getStageCase();
       }
 
       public Builder clearStage() {
-        stageCase_ = 0;
-        stage_ = null;
-        onChanged();
+        copyOnWrite();
+        instance.clearStage();
         return this;
       }
 
-      private int bitField0_;
 
-      private java.lang.Object uuid_ = "";
       /**
        * <code>string uuid = 1 [json_name = "uuid"];</code>
        * @return The uuid.
        */
+      @java.lang.Override
       public java.lang.String getUuid() {
-        java.lang.Object ref = uuid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getUuid();
       }
       /**
        * <code>string uuid = 1 [json_name = "uuid"];</code>
        * @return The bytes for uuid.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUuidBytes() {
-        java.lang.Object ref = uuid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          uuid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getUuidBytes();
       }
       /**
        * <code>string uuid = 1 [json_name = "uuid"];</code>
@@ -14750,10 +8116,8 @@ public final class Signaling {
        */
       public Builder setUuid(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        uuid_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setUuid(value);
         return this;
       }
       /**
@@ -14761,9 +8125,8 @@ public final class Signaling {
        * @return This builder for chaining.
        */
       public Builder clearUuid() {
-        uuid_ = getDefaultInstance().getUuid();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearUuid();
         return this;
       }
       /**
@@ -14773,56 +8136,31 @@ public final class Signaling {
        */
       public Builder setUuidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        uuid_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setUuidBytes(value);
         return this;
       }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage, proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStageOrBuilder> initBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
-       * @return Whether the init field is set.
        */
       @java.lang.Override
       public boolean hasInit() {
-        return stageCase_ == 2;
+        return instance.hasInit();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
-       * @return The init.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage getInit() {
-        if (initBuilder_ == null) {
-          if (stageCase_ == 2) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.getDefaultInstance();
-        } else {
-          if (stageCase_ == 2) {
-            return initBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.getDefaultInstance();
-        }
+        return instance.getInit();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
        */
       public Builder setInit(proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage value) {
-        if (initBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          stage_ = value;
-          onChanged();
-        } else {
-          initBuilder_.setMessage(value);
-        }
-        stageCase_ = 2;
+        copyOnWrite();
+        instance.setInit(value);
         return this;
       }
       /**
@@ -14830,141 +8168,47 @@ public final class Signaling {
        */
       public Builder setInit(
           proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.Builder builderForValue) {
-        if (initBuilder_ == null) {
-          stage_ = builderForValue.build();
-          onChanged();
-        } else {
-          initBuilder_.setMessage(builderForValue.build());
-        }
-        stageCase_ = 2;
+        copyOnWrite();
+        instance.setInit(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
        */
       public Builder mergeInit(proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage value) {
-        if (initBuilder_ == null) {
-          if (stageCase_ == 2 &&
-              stage_ != proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.getDefaultInstance()) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage) stage_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            stage_ = value;
-          }
-          onChanged();
-        } else {
-          if (stageCase_ == 2) {
-            initBuilder_.mergeFrom(value);
-          } else {
-            initBuilder_.setMessage(value);
-          }
-        }
-        stageCase_ = 2;
+        copyOnWrite();
+        instance.mergeInit(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
        */
       public Builder clearInit() {
-        if (initBuilder_ == null) {
-          if (stageCase_ == 2) {
-            stageCase_ = 0;
-            stage_ = null;
-            onChanged();
-          }
-        } else {
-          if (stageCase_ == 2) {
-            stageCase_ = 0;
-            stage_ = null;
-          }
-          initBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearInit();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.Builder getInitBuilder() {
-        return getInitFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStageOrBuilder getInitOrBuilder() {
-        if ((stageCase_ == 2) && (initBuilder_ != null)) {
-          return initBuilder_.getMessageOrBuilder();
-        } else {
-          if (stageCase_ == 2) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.AnswerResponseInitStage init = 2 [json_name = "init"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage, proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStageOrBuilder> 
-          getInitFieldBuilder() {
-        if (initBuilder_ == null) {
-          if (!(stageCase_ == 2)) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.getDefaultInstance();
-          }
-          initBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage, proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStageOrBuilder>(
-                  (proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage) stage_,
-                  getParentForChildren(),
-                  isClean());
-          stage_ = null;
-        }
-        stageCase_ = 2;
-        onChanged();
-        return initBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage, proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStageOrBuilder> updateBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
-       * @return Whether the update field is set.
        */
       @java.lang.Override
       public boolean hasUpdate() {
-        return stageCase_ == 3;
+        return instance.hasUpdate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
-       * @return The update.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage getUpdate() {
-        if (updateBuilder_ == null) {
-          if (stageCase_ == 3) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.getDefaultInstance();
-        } else {
-          if (stageCase_ == 3) {
-            return updateBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.getDefaultInstance();
-        }
+        return instance.getUpdate();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
        */
       public Builder setUpdate(proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage value) {
-        if (updateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          stage_ = value;
-          onChanged();
-        } else {
-          updateBuilder_.setMessage(value);
-        }
-        stageCase_ = 3;
+        copyOnWrite();
+        instance.setUpdate(value);
         return this;
       }
       /**
@@ -14972,112 +8216,37 @@ public final class Signaling {
        */
       public Builder setUpdate(
           proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.Builder builderForValue) {
-        if (updateBuilder_ == null) {
-          stage_ = builderForValue.build();
-          onChanged();
-        } else {
-          updateBuilder_.setMessage(builderForValue.build());
-        }
-        stageCase_ = 3;
+        copyOnWrite();
+        instance.setUpdate(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
        */
       public Builder mergeUpdate(proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage value) {
-        if (updateBuilder_ == null) {
-          if (stageCase_ == 3 &&
-              stage_ != proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.getDefaultInstance()) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage) stage_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            stage_ = value;
-          }
-          onChanged();
-        } else {
-          if (stageCase_ == 3) {
-            updateBuilder_.mergeFrom(value);
-          } else {
-            updateBuilder_.setMessage(value);
-          }
-        }
-        stageCase_ = 3;
+        copyOnWrite();
+        instance.mergeUpdate(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
        */
       public Builder clearUpdate() {
-        if (updateBuilder_ == null) {
-          if (stageCase_ == 3) {
-            stageCase_ = 0;
-            stage_ = null;
-            onChanged();
-          }
-        } else {
-          if (stageCase_ == 3) {
-            stageCase_ = 0;
-            stage_ = null;
-          }
-          updateBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearUpdate();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.Builder getUpdateBuilder() {
-        return getUpdateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStageOrBuilder getUpdateOrBuilder() {
-        if ((stageCase_ == 3) && (updateBuilder_ != null)) {
-          return updateBuilder_.getMessageOrBuilder();
-        } else {
-          if (stageCase_ == 3) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.AnswerResponseUpdateStage update = 3 [json_name = "update"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage, proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStageOrBuilder> 
-          getUpdateFieldBuilder() {
-        if (updateBuilder_ == null) {
-          if (!(stageCase_ == 3)) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.getDefaultInstance();
-          }
-          updateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage, proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStageOrBuilder>(
-                  (proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage) stage_,
-                  getParentForChildren(),
-                  isClean());
-          stage_ = null;
-        }
-        stageCase_ = 3;
-        onChanged();
-        return updateBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage, proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStageOrBuilder> doneBuilder_;
       /**
        * <pre>
        * done is sent when the answerer is done sending information
        * </pre>
        *
        * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
-       * @return Whether the done field is set.
        */
       @java.lang.Override
       public boolean hasDone() {
-        return stageCase_ == 4;
+        return instance.hasDone();
       }
       /**
        * <pre>
@@ -15085,21 +8254,10 @@ public final class Signaling {
        * </pre>
        *
        * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
-       * @return The done.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage getDone() {
-        if (doneBuilder_ == null) {
-          if (stageCase_ == 4) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.getDefaultInstance();
-        } else {
-          if (stageCase_ == 4) {
-            return doneBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.getDefaultInstance();
-        }
+        return instance.getDone();
       }
       /**
        * <pre>
@@ -15109,16 +8267,8 @@ public final class Signaling {
        * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
        */
       public Builder setDone(proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage value) {
-        if (doneBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          stage_ = value;
-          onChanged();
-        } else {
-          doneBuilder_.setMessage(value);
-        }
-        stageCase_ = 4;
+        copyOnWrite();
+        instance.setDone(value);
         return this;
       }
       /**
@@ -15130,13 +8280,8 @@ public final class Signaling {
        */
       public Builder setDone(
           proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.Builder builderForValue) {
-        if (doneBuilder_ == null) {
-          stage_ = builderForValue.build();
-          onChanged();
-        } else {
-          doneBuilder_.setMessage(builderForValue.build());
-        }
-        stageCase_ = 4;
+        copyOnWrite();
+        instance.setDone(builderForValue.build());
         return this;
       }
       /**
@@ -15147,23 +8292,8 @@ public final class Signaling {
        * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
        */
       public Builder mergeDone(proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage value) {
-        if (doneBuilder_ == null) {
-          if (stageCase_ == 4 &&
-              stage_ != proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.getDefaultInstance()) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) stage_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            stage_ = value;
-          }
-          onChanged();
-        } else {
-          if (stageCase_ == 4) {
-            doneBuilder_.mergeFrom(value);
-          } else {
-            doneBuilder_.setMessage(value);
-          }
-        }
-        stageCase_ = 4;
+        copyOnWrite();
+        instance.mergeDone(value);
         return this;
       }
       /**
@@ -15174,88 +8304,21 @@ public final class Signaling {
        * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
        */
       public Builder clearDone() {
-        if (doneBuilder_ == null) {
-          if (stageCase_ == 4) {
-            stageCase_ = 0;
-            stage_ = null;
-            onChanged();
-          }
-        } else {
-          if (stageCase_ == 4) {
-            stageCase_ = 0;
-            stage_ = null;
-          }
-          doneBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearDone();
         return this;
       }
-      /**
-       * <pre>
-       * done is sent when the answerer is done sending information
-       * </pre>
-       *
-       * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.Builder getDoneBuilder() {
-        return getDoneFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * done is sent when the answerer is done sending information
-       * </pre>
-       *
-       * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStageOrBuilder getDoneOrBuilder() {
-        if ((stageCase_ == 4) && (doneBuilder_ != null)) {
-          return doneBuilder_.getMessageOrBuilder();
-        } else {
-          if (stageCase_ == 4) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * done is sent when the answerer is done sending information
-       * </pre>
-       *
-       * <code>.proto.rpc.webrtc.v1.AnswerResponseDoneStage done = 4 [json_name = "done"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage, proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStageOrBuilder> 
-          getDoneFieldBuilder() {
-        if (doneBuilder_ == null) {
-          if (!(stageCase_ == 4)) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.getDefaultInstance();
-          }
-          doneBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage, proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStageOrBuilder>(
-                  (proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage) stage_,
-                  getParentForChildren(),
-                  isClean());
-          stage_ = null;
-        }
-        stageCase_ = 4;
-        onChanged();
-        return doneBuilder_;
-      }
 
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage, proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStageOrBuilder> errorBuilder_;
       /**
        * <pre>
        * error is sent any time before done
        * </pre>
        *
        * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
-       * @return Whether the error field is set.
        */
       @java.lang.Override
       public boolean hasError() {
-        return stageCase_ == 5;
+        return instance.hasError();
       }
       /**
        * <pre>
@@ -15263,21 +8326,10 @@ public final class Signaling {
        * </pre>
        *
        * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
-       * @return The error.
        */
       @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage getError() {
-        if (errorBuilder_ == null) {
-          if (stageCase_ == 5) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.getDefaultInstance();
-        } else {
-          if (stageCase_ == 5) {
-            return errorBuilder_.getMessage();
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.getDefaultInstance();
-        }
+        return instance.getError();
       }
       /**
        * <pre>
@@ -15287,16 +8339,8 @@ public final class Signaling {
        * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
        */
       public Builder setError(proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage value) {
-        if (errorBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          stage_ = value;
-          onChanged();
-        } else {
-          errorBuilder_.setMessage(value);
-        }
-        stageCase_ = 5;
+        copyOnWrite();
+        instance.setError(value);
         return this;
       }
       /**
@@ -15308,13 +8352,8 @@ public final class Signaling {
        */
       public Builder setError(
           proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.Builder builderForValue) {
-        if (errorBuilder_ == null) {
-          stage_ = builderForValue.build();
-          onChanged();
-        } else {
-          errorBuilder_.setMessage(builderForValue.build());
-        }
-        stageCase_ = 5;
+        copyOnWrite();
+        instance.setError(builderForValue.build());
         return this;
       }
       /**
@@ -15325,23 +8364,8 @@ public final class Signaling {
        * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
        */
       public Builder mergeError(proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage value) {
-        if (errorBuilder_ == null) {
-          if (stageCase_ == 5 &&
-              stage_ != proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.getDefaultInstance()) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.newBuilder((proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) stage_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            stage_ = value;
-          }
-          onChanged();
-        } else {
-          if (stageCase_ == 5) {
-            errorBuilder_.mergeFrom(value);
-          } else {
-            errorBuilder_.setMessage(value);
-          }
-        }
-        stageCase_ = 5;
+        copyOnWrite();
+        instance.mergeError(value);
         return this;
       }
       /**
@@ -15352,141 +8376,95 @@ public final class Signaling {
        * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
        */
       public Builder clearError() {
-        if (errorBuilder_ == null) {
-          if (stageCase_ == 5) {
-            stageCase_ = 0;
-            stage_ = null;
-            onChanged();
-          }
-        } else {
-          if (stageCase_ == 5) {
-            stageCase_ = 0;
-            stage_ = null;
-          }
-          errorBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearError();
         return this;
       }
-      /**
-       * <pre>
-       * error is sent any time before done
-       * </pre>
-       *
-       * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.Builder getErrorBuilder() {
-        return getErrorFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * error is sent any time before done
-       * </pre>
-       *
-       * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
-       */
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStageOrBuilder getErrorOrBuilder() {
-        if ((stageCase_ == 5) && (errorBuilder_ != null)) {
-          return errorBuilder_.getMessageOrBuilder();
-        } else {
-          if (stageCase_ == 5) {
-            return (proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) stage_;
-          }
-          return proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.getDefaultInstance();
-        }
-      }
-      /**
-       * <pre>
-       * error is sent any time before done
-       * </pre>
-       *
-       * <code>.proto.rpc.webrtc.v1.AnswerResponseErrorStage error = 5 [json_name = "error"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage, proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStageOrBuilder> 
-          getErrorFieldBuilder() {
-        if (errorBuilder_ == null) {
-          if (!(stageCase_ == 5)) {
-            stage_ = proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.getDefaultInstance();
-          }
-          errorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage, proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.Builder, proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStageOrBuilder>(
-                  (proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage) stage_,
-                  getParentForChildren(),
-                  isClean());
-          stage_ = null;
-        }
-        stageCase_ = 5;
-        onChanged();
-        return errorBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.AnswerResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.AnswerResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "stage_",
+              "stageCase_",
+              "uuid_",
+              proto.rpc.webrtc.v1.Signaling.AnswerResponseInitStage.class,
+              proto.rpc.webrtc.v1.Signaling.AnswerResponseUpdateStage.class,
+              proto.rpc.webrtc.v1.Signaling.AnswerResponseDoneStage.class,
+              proto.rpc.webrtc.v1.Signaling.AnswerResponseErrorStage.class,
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0001\u0000\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u0208\u0002<\u0000" +
+                "\u0003<\u0000\u0004<\u0000\u0005<\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.AnswerResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.AnswerResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.AnswerResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.AnswerResponse)
     private static final proto.rpc.webrtc.v1.Signaling.AnswerResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.AnswerResponse();
+      AnswerResponse defaultInstance = new AnswerResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AnswerResponse.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.AnswerResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AnswerResponse>
-        PARSER = new com.google.protobuf.AbstractParser<AnswerResponse>() {
-      @java.lang.Override
-      public AnswerResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AnswerResponse> PARSER;
 
     public static com.google.protobuf.Parser<AnswerResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AnswerResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.AnswerResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface OptionalWebRTCConfigRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.OptionalWebRTCConfigRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * <pre>
@@ -15496,184 +8474,96 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.OptionalWebRTCConfigRequest}
    */
-  public static final class OptionalWebRTCConfigRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class OptionalWebRTCConfigRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          OptionalWebRTCConfigRequest, OptionalWebRTCConfigRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.OptionalWebRTCConfigRequest)
       OptionalWebRTCConfigRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use OptionalWebRTCConfigRequest.newBuilder() to construct.
-    private OptionalWebRTCConfigRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private OptionalWebRTCConfigRequest() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new OptionalWebRTCConfigRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest.class, proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest other = (proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * OptionalWebRTCConfigRequest is the request for getting an optional WebRTC config
@@ -15683,217 +8573,90 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.OptionalWebRTCConfigRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.OptionalWebRTCConfigRequest)
         proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest.class, proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest build() {
-        proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest result = new proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.OptionalWebRTCConfigRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.OptionalWebRTCConfigRequest)
     private static final proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest();
+      OptionalWebRTCConfigRequest defaultInstance = new OptionalWebRTCConfigRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        OptionalWebRTCConfigRequest.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<OptionalWebRTCConfigRequest>
-        PARSER = new com.google.protobuf.AbstractParser<OptionalWebRTCConfigRequest>() {
-      @java.lang.Override
-      public OptionalWebRTCConfigRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<OptionalWebRTCConfigRequest> PARSER;
 
     public static com.google.protobuf.Parser<OptionalWebRTCConfigRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<OptionalWebRTCConfigRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface OptionalWebRTCConfigResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:proto.rpc.webrtc.v1.OptionalWebRTCConfigResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
@@ -15905,10 +8668,6 @@ public final class Signaling {
      * @return The config.
      */
     proto.rpc.webrtc.v1.Signaling.WebRTCConfig getConfig();
-    /**
-     * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
-     */
-    proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder getConfigOrBuilder();
   }
   /**
    * <pre>
@@ -15918,44 +8677,18 @@ public final class Signaling {
    *
    * Protobuf type {@code proto.rpc.webrtc.v1.OptionalWebRTCConfigResponse}
    */
-  public static final class OptionalWebRTCConfigResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class OptionalWebRTCConfigResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          OptionalWebRTCConfigResponse, OptionalWebRTCConfigResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:proto.rpc.webrtc.v1.OptionalWebRTCConfigResponse)
       OptionalWebRTCConfigResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use OptionalWebRTCConfigResponse.newBuilder() to construct.
-    private OptionalWebRTCConfigResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private OptionalWebRTCConfigResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new OptionalWebRTCConfigResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse.class, proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int CONFIG_FIELD_NUMBER = 1;
     private proto.rpc.webrtc.v1.Signaling.WebRTCConfig config_;
     /**
      * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
-     * @return Whether the config field is set.
      */
     @java.lang.Override
     public boolean hasConfig() {
@@ -15963,7 +8696,6 @@ public final class Signaling {
     }
     /**
      * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
-     * @return The config.
      */
     @java.lang.Override
     public proto.rpc.webrtc.v1.Signaling.WebRTCConfig getConfig() {
@@ -15972,173 +8704,116 @@ public final class Signaling {
     /**
      * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
      */
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder getConfigOrBuilder() {
-      return config_ == null ? proto.rpc.webrtc.v1.Signaling.WebRTCConfig.getDefaultInstance() : config_;
+    private void setConfig(proto.rpc.webrtc.v1.Signaling.WebRTCConfig value) {
+      value.getClass();
+  config_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeConfig(proto.rpc.webrtc.v1.Signaling.WebRTCConfig value) {
+      value.getClass();
+  if (config_ != null &&
+          config_ != proto.rpc.webrtc.v1.Signaling.WebRTCConfig.getDefaultInstance()) {
+        config_ =
+          proto.rpc.webrtc.v1.Signaling.WebRTCConfig.newBuilder(config_).mergeFrom(value).buildPartial();
+      } else {
+        config_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getConfig());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getConfig());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse)) {
-        return super.equals(obj);
-      }
-      proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse other = (proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse) obj;
-
-      if (hasConfig() != other.hasConfig()) return false;
-      if (hasConfig()) {
-        if (!getConfig()
-            .equals(other.getConfig())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasConfig()) {
-        hash = (37 * hash) + CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getConfig().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
+     */
+    private void clearConfig() {  config_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * OptionalWebRTCConfigResponse contains the optional WebRTC config
@@ -16148,707 +8823,140 @@ public final class Signaling {
      * Protobuf type {@code proto.rpc.webrtc.v1.OptionalWebRTCConfigResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.rpc.webrtc.v1.OptionalWebRTCConfigResponse)
         proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse.class, proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse.Builder.class);
-      }
-
       // Construct using proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConfigFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        config_ = null;
-        if (configBuilder_ != null) {
-          configBuilder_.dispose();
-          configBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return proto.rpc.webrtc.v1.Signaling.internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse getDefaultInstanceForType() {
-        return proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse build() {
-        proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse buildPartial() {
-        proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse result = new proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.config_ = configBuilder_ == null
-              ? config_
-              : configBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse) {
-          return mergeFrom((proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse other) {
-        if (other == proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse.getDefaultInstance()) return this;
-        if (other.hasConfig()) {
-          mergeConfig(other.getConfig());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getConfigFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private proto.rpc.webrtc.v1.Signaling.WebRTCConfig config_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.WebRTCConfig, proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder, proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder> configBuilder_;
       /**
        * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
-       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasConfig();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
-       * @return The config.
        */
+      @java.lang.Override
       public proto.rpc.webrtc.v1.Signaling.WebRTCConfig getConfig() {
-        if (configBuilder_ == null) {
-          return config_ == null ? proto.rpc.webrtc.v1.Signaling.WebRTCConfig.getDefaultInstance() : config_;
-        } else {
-          return configBuilder_.getMessage();
-        }
+        return instance.getConfig();
       }
       /**
        * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
        */
       public Builder setConfig(proto.rpc.webrtc.v1.Signaling.WebRTCConfig value) {
-        if (configBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          config_ = value;
-        } else {
-          configBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setConfig(value);
         return this;
-      }
+        }
       /**
        * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
        */
       public Builder setConfig(
           proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder builderForValue) {
-        if (configBuilder_ == null) {
-          config_ = builderForValue.build();
-        } else {
-          configBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setConfig(builderForValue.build());
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
        */
       public Builder mergeConfig(proto.rpc.webrtc.v1.Signaling.WebRTCConfig value) {
-        if (configBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            config_ != null &&
-            config_ != proto.rpc.webrtc.v1.Signaling.WebRTCConfig.getDefaultInstance()) {
-            getConfigBuilder().mergeFrom(value);
-          } else {
-            config_ = value;
-          }
-        } else {
-          configBuilder_.mergeFrom(value);
-        }
-        if (config_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeConfig(value);
         return this;
       }
       /**
        * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
        */
-      public Builder clearConfig() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        config_ = null;
-        if (configBuilder_ != null) {
-          configBuilder_.dispose();
-          configBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearConfig() {  copyOnWrite();
+        instance.clearConfig();
         return this;
       }
-      /**
-       * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder getConfigBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getConfigFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
-       */
-      public proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder getConfigOrBuilder() {
-        if (configBuilder_ != null) {
-          return configBuilder_.getMessageOrBuilder();
-        } else {
-          return config_ == null ?
-              proto.rpc.webrtc.v1.Signaling.WebRTCConfig.getDefaultInstance() : config_;
-        }
-      }
-      /**
-       * <code>.proto.rpc.webrtc.v1.WebRTCConfig config = 1 [json_name = "config"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          proto.rpc.webrtc.v1.Signaling.WebRTCConfig, proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder, proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder> 
-          getConfigFieldBuilder() {
-        if (configBuilder_ == null) {
-          configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              proto.rpc.webrtc.v1.Signaling.WebRTCConfig, proto.rpc.webrtc.v1.Signaling.WebRTCConfig.Builder, proto.rpc.webrtc.v1.Signaling.WebRTCConfigOrBuilder>(
-                  getConfig(),
-                  getParentForChildren(),
-                  isClean());
-          config_ = null;
-        }
-        return configBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:proto.rpc.webrtc.v1.OptionalWebRTCConfigResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "config_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:proto.rpc.webrtc.v1.OptionalWebRTCConfigResponse)
     private static final proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse();
+      OptionalWebRTCConfigResponse defaultInstance = new OptionalWebRTCConfigResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        OptionalWebRTCConfigResponse.class, defaultInstance);
     }
 
     public static proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<OptionalWebRTCConfigResponse>
-        PARSER = new com.google.protobuf.AbstractParser<OptionalWebRTCConfigResponse>() {
-      @java.lang.Override
-      public OptionalWebRTCConfigResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<OptionalWebRTCConfigResponse> PARSER;
 
     public static com.google.protobuf.Parser<OptionalWebRTCConfigResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<OptionalWebRTCConfigResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public proto.rpc.webrtc.v1.Signaling.OptionalWebRTCConfigResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_ICECandidate_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_ICECandidate_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_CallRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_CallRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_CallResponseInitStage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_CallResponseInitStage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_CallResponseUpdateStage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_CallResponseUpdateStage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_CallResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_CallResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_CallUpdateRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_CallUpdateRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_CallUpdateResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_CallUpdateResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_ICEServer_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_ICEServer_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_WebRTCConfig_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_WebRTCConfig_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_AnswerRequestInitStage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_AnswerRequestInitStage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_AnswerRequestUpdateStage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_AnswerRequestUpdateStage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_AnswerRequestDoneStage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_AnswerRequestDoneStage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_AnswerRequestErrorStage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_AnswerRequestErrorStage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_AnswerRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_AnswerRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_AnswerResponseInitStage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_AnswerResponseInitStage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_AnswerResponseUpdateStage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_AnswerResponseUpdateStage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_AnswerResponseDoneStage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_AnswerResponseDoneStage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_AnswerResponseErrorStage_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_AnswerResponseErrorStage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_AnswerResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_AnswerResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n#proto/rpc/webrtc/v1/signaling.proto\022\023p" +
-      "roto.rpc.webrtc.v1\032\034google/api/annotatio" +
-      "ns.proto\032\037google/protobuf/timestamp.prot" +
-      "o\032\027google/rpc/status.proto\"\337\001\n\014ICECandid" +
-      "ate\022\034\n\tcandidate\030\001 \001(\tR\tcandidate\022\034\n\007sdp" +
-      "_mid\030\002 \001(\tH\000R\006sdpMid\210\001\001\022+\n\017sdpm_line_ind" +
-      "ex\030\003 \001(\rH\001R\rsdpmLineIndex\210\001\001\0220\n\021username" +
-      "_fragment\030\004 \001(\tH\002R\020usernameFragment\210\001\001B\n" +
-      "\n\010_sdp_midB\022\n\020_sdpm_line_indexB\024\n\022_usern" +
-      "ame_fragment\"H\n\013CallRequest\022\020\n\003sdp\030\001 \001(\t" +
-      "R\003sdp\022\'\n\017disable_trickle\030\002 \001(\010R\016disableT" +
-      "rickle\")\n\025CallResponseInitStage\022\020\n\003sdp\030\001" +
-      " \001(\tR\003sdp\"Z\n\027CallResponseUpdateStage\022?\n\t" +
-      "candidate\030\001 \001(\0132!.proto.rpc.webrtc.v1.IC" +
-      "ECandidateR\tcandidate\"\265\001\n\014CallResponse\022\022" +
-      "\n\004uuid\030\001 \001(\tR\004uuid\022@\n\004init\030\002 \001(\0132*.proto" +
-      ".rpc.webrtc.v1.CallResponseInitStageH\000R\004" +
-      "init\022F\n\006update\030\003 \001(\0132,.proto.rpc.webrtc." +
-      "v1.CallResponseUpdateStageH\000R\006updateB\007\n\005" +
-      "stage\"\266\001\n\021CallUpdateRequest\022\022\n\004uuid\030\001 \001(" +
-      "\tR\004uuid\022A\n\tcandidate\030\002 \001(\0132!.proto.rpc.w" +
-      "ebrtc.v1.ICECandidateH\000R\tcandidate\022\024\n\004do" +
-      "ne\030\003 \001(\010H\000R\004done\022*\n\005error\030\004 \001(\0132\022.google" +
-      ".rpc.StatusH\000R\005errorB\010\n\006update\"\024\n\022CallUp" +
-      "dateResponse\"[\n\tICEServer\022\022\n\004urls\030\001 \003(\tR" +
-      "\004urls\022\032\n\010username\030\002 \001(\tR\010username\022\036\n\ncre" +
-      "dential\030\003 \001(\tR\ncredential\"\215\001\n\014WebRTCConf" +
-      "ig\022T\n\026additional_ice_servers\030\001 \003(\0132\036.pro" +
-      "to.rpc.webrtc.v1.ICEServerR\024additionalIc" +
-      "eServers\022\'\n\017disable_trickle\030\002 \001(\010R\016disab" +
-      "leTrickle\"\300\001\n\026AnswerRequestInitStage\022\020\n\003" +
-      "sdp\030\001 \001(\tR\003sdp\022J\n\017optional_config\030\002 \001(\0132" +
-      "!.proto.rpc.webrtc.v1.WebRTCConfigR\016opti" +
-      "onalConfig\022;\n\010deadline\030\003 \001(\0132\032.google.pr" +
-      "otobuf.TimestampH\000R\010deadline\210\001\001B\013\n\t_dead" +
-      "line\"[\n\030AnswerRequestUpdateStage\022?\n\tcand" +
-      "idate\030\001 \001(\0132!.proto.rpc.webrtc.v1.ICECan" +
-      "didateR\tcandidate\"\030\n\026AnswerRequestDoneSt" +
-      "age\"E\n\027AnswerRequestErrorStage\022*\n\006status" +
-      "\030\001 \001(\0132\022.google.rpc.StatusR\006status\"\301\002\n\rA" +
-      "nswerRequest\022\022\n\004uuid\030\001 \001(\tR\004uuid\022A\n\004init" +
-      "\030\002 \001(\0132+.proto.rpc.webrtc.v1.AnswerReque" +
-      "stInitStageH\000R\004init\022G\n\006update\030\003 \001(\0132-.pr" +
-      "oto.rpc.webrtc.v1.AnswerRequestUpdateSta" +
-      "geH\000R\006update\022A\n\004done\030\004 \001(\0132+.proto.rpc.w" +
-      "ebrtc.v1.AnswerRequestDoneStageH\000R\004done\022" +
-      "D\n\005error\030\005 \001(\0132,.proto.rpc.webrtc.v1.Ans" +
-      "werRequestErrorStageH\000R\005errorB\007\n\005stage\"+" +
-      "\n\027AnswerResponseInitStage\022\020\n\003sdp\030\001 \001(\tR\003" +
-      "sdp\"\\\n\031AnswerResponseUpdateStage\022?\n\tcand" +
-      "idate\030\001 \001(\0132!.proto.rpc.webrtc.v1.ICECan" +
-      "didateR\tcandidate\"\031\n\027AnswerResponseDoneS" +
-      "tage\"F\n\030AnswerResponseErrorStage\022*\n\006stat" +
-      "us\030\001 \001(\0132\022.google.rpc.StatusR\006status\"\306\002\n" +
-      "\016AnswerResponse\022\022\n\004uuid\030\001 \001(\tR\004uuid\022B\n\004i" +
-      "nit\030\002 \001(\0132,.proto.rpc.webrtc.v1.AnswerRe" +
-      "sponseInitStageH\000R\004init\022H\n\006update\030\003 \001(\0132" +
-      "..proto.rpc.webrtc.v1.AnswerResponseUpda" +
-      "teStageH\000R\006update\022B\n\004done\030\004 \001(\0132,.proto." +
-      "rpc.webrtc.v1.AnswerResponseDoneStageH\000R" +
-      "\004done\022E\n\005error\030\005 \001(\0132-.proto.rpc.webrtc." +
-      "v1.AnswerResponseErrorStageH\000R\005errorB\007\n\005" +
-      "stage\"\035\n\033OptionalWebRTCConfigRequest\"Y\n\034" +
-      "OptionalWebRTCConfigResponse\0229\n\006config\030\001" +
-      " \001(\0132!.proto.rpc.webrtc.v1.WebRTCConfigR" +
-      "\006config2\206\004\n\020SignalingService\022j\n\004Call\022 .p" +
-      "roto.rpc.webrtc.v1.CallRequest\032!.proto.r" +
-      "pc.webrtc.v1.CallResponse\"\033\202\323\344\223\002\025\"\023/rpc/" +
-      "webrtc/v1/call0\001\022\201\001\n\nCallUpdate\022&.proto." +
-      "rpc.webrtc.v1.CallUpdateRequest\032\'.proto." +
-      "rpc.webrtc.v1.CallUpdateResponse\"\"\202\323\344\223\002\034" +
-      "\032\032/rpc/webrtc/v1/call_update\022U\n\006Answer\022#" +
-      ".proto.rpc.webrtc.v1.AnswerResponse\032\".pr" +
-      "oto.rpc.webrtc.v1.AnswerRequest(\0010\001\022\252\001\n\024" +
-      "OptionalWebRTCConfig\0220.proto.rpc.webrtc." +
-      "v1.OptionalWebRTCConfigRequest\0321.proto.r" +
-      "pc.webrtc.v1.OptionalWebRTCConfigRespons" +
-      "e\"-\202\323\344\223\002\'\022%/rpc/webrtc/v1/optional_webrt" +
-      "c_configB\'Z%go.viam.com/utils/proto/rpc/" +
-      "webrtc/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
-          com.google.rpc.StatusProto.getDescriptor(),
-        });
-    internal_static_proto_rpc_webrtc_v1_ICECandidate_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_proto_rpc_webrtc_v1_ICECandidate_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_ICECandidate_descriptor,
-        new java.lang.String[] { "Candidate", "SdpMid", "SdpmLineIndex", "UsernameFragment", });
-    internal_static_proto_rpc_webrtc_v1_CallRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_proto_rpc_webrtc_v1_CallRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_CallRequest_descriptor,
-        new java.lang.String[] { "Sdp", "DisableTrickle", });
-    internal_static_proto_rpc_webrtc_v1_CallResponseInitStage_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_proto_rpc_webrtc_v1_CallResponseInitStage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_CallResponseInitStage_descriptor,
-        new java.lang.String[] { "Sdp", });
-    internal_static_proto_rpc_webrtc_v1_CallResponseUpdateStage_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_proto_rpc_webrtc_v1_CallResponseUpdateStage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_CallResponseUpdateStage_descriptor,
-        new java.lang.String[] { "Candidate", });
-    internal_static_proto_rpc_webrtc_v1_CallResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_proto_rpc_webrtc_v1_CallResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_CallResponse_descriptor,
-        new java.lang.String[] { "Uuid", "Init", "Update", "Stage", });
-    internal_static_proto_rpc_webrtc_v1_CallUpdateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_proto_rpc_webrtc_v1_CallUpdateRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_CallUpdateRequest_descriptor,
-        new java.lang.String[] { "Uuid", "Candidate", "Done", "Error", "Update", });
-    internal_static_proto_rpc_webrtc_v1_CallUpdateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_proto_rpc_webrtc_v1_CallUpdateResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_CallUpdateResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_proto_rpc_webrtc_v1_ICEServer_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_proto_rpc_webrtc_v1_ICEServer_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_ICEServer_descriptor,
-        new java.lang.String[] { "Urls", "Username", "Credential", });
-    internal_static_proto_rpc_webrtc_v1_WebRTCConfig_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_proto_rpc_webrtc_v1_WebRTCConfig_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_WebRTCConfig_descriptor,
-        new java.lang.String[] { "AdditionalIceServers", "DisableTrickle", });
-    internal_static_proto_rpc_webrtc_v1_AnswerRequestInitStage_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_proto_rpc_webrtc_v1_AnswerRequestInitStage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_AnswerRequestInitStage_descriptor,
-        new java.lang.String[] { "Sdp", "OptionalConfig", "Deadline", });
-    internal_static_proto_rpc_webrtc_v1_AnswerRequestUpdateStage_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_proto_rpc_webrtc_v1_AnswerRequestUpdateStage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_AnswerRequestUpdateStage_descriptor,
-        new java.lang.String[] { "Candidate", });
-    internal_static_proto_rpc_webrtc_v1_AnswerRequestDoneStage_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_proto_rpc_webrtc_v1_AnswerRequestDoneStage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_AnswerRequestDoneStage_descriptor,
-        new java.lang.String[] { });
-    internal_static_proto_rpc_webrtc_v1_AnswerRequestErrorStage_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_proto_rpc_webrtc_v1_AnswerRequestErrorStage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_AnswerRequestErrorStage_descriptor,
-        new java.lang.String[] { "Status", });
-    internal_static_proto_rpc_webrtc_v1_AnswerRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_proto_rpc_webrtc_v1_AnswerRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_AnswerRequest_descriptor,
-        new java.lang.String[] { "Uuid", "Init", "Update", "Done", "Error", "Stage", });
-    internal_static_proto_rpc_webrtc_v1_AnswerResponseInitStage_descriptor =
-      getDescriptor().getMessageTypes().get(14);
-    internal_static_proto_rpc_webrtc_v1_AnswerResponseInitStage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_AnswerResponseInitStage_descriptor,
-        new java.lang.String[] { "Sdp", });
-    internal_static_proto_rpc_webrtc_v1_AnswerResponseUpdateStage_descriptor =
-      getDescriptor().getMessageTypes().get(15);
-    internal_static_proto_rpc_webrtc_v1_AnswerResponseUpdateStage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_AnswerResponseUpdateStage_descriptor,
-        new java.lang.String[] { "Candidate", });
-    internal_static_proto_rpc_webrtc_v1_AnswerResponseDoneStage_descriptor =
-      getDescriptor().getMessageTypes().get(16);
-    internal_static_proto_rpc_webrtc_v1_AnswerResponseDoneStage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_AnswerResponseDoneStage_descriptor,
-        new java.lang.String[] { });
-    internal_static_proto_rpc_webrtc_v1_AnswerResponseErrorStage_descriptor =
-      getDescriptor().getMessageTypes().get(17);
-    internal_static_proto_rpc_webrtc_v1_AnswerResponseErrorStage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_AnswerResponseErrorStage_descriptor,
-        new java.lang.String[] { "Status", });
-    internal_static_proto_rpc_webrtc_v1_AnswerResponse_descriptor =
-      getDescriptor().getMessageTypes().get(18);
-    internal_static_proto_rpc_webrtc_v1_AnswerResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_AnswerResponse_descriptor,
-        new java.lang.String[] { "Uuid", "Init", "Update", "Done", "Error", "Stage", });
-    internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigRequest_descriptor =
-      getDescriptor().getMessageTypes().get(19);
-    internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigResponse_descriptor =
-      getDescriptor().getMessageTypes().get(20);
-    internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_proto_rpc_webrtc_v1_OptionalWebRTCConfigResponse_descriptor,
-        new java.lang.String[] { "Config", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
-    com.google.rpc.StatusProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -9,17 +9,11 @@ public final class Billing {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   /**
    * Protobuf enum {@code viam.app.v1.PaymentMethodType}
    */
   public enum PaymentMethodType
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>PAYMENT_METHOD_TYPE_UNSPECIFIED = 0;</code>
      */
@@ -41,6 +35,7 @@ public final class Billing {
     public static final int PAYMENT_METHOD_TYPE_CARD_VALUE = 1;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -50,8 +45,8 @@ public final class Billing {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -59,10 +54,6 @@ public final class Billing {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static PaymentMethodType forNumber(int value) {
       switch (value) {
         case 0: return PAYMENT_METHOD_TYPE_UNSPECIFIED;
@@ -78,41 +69,25 @@ public final class Billing {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         PaymentMethodType> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<PaymentMethodType>() {
+            @java.lang.Override
             public PaymentMethodType findValueByNumber(int number) {
               return PaymentMethodType.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return viam.app.v1.Billing.getDescriptor().getEnumTypes().get(0);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return PaymentMethodTypeVerifier.INSTANCE;
     }
 
-    private static final PaymentMethodType[] VALUES = values();
-
-    public static PaymentMethodType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class PaymentMethodTypeVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new PaymentMethodTypeVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return PaymentMethodType.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -125,7 +100,7 @@ public final class Billing {
 
   public interface InvoiceSummaryOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.InvoiceSummary)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -149,10 +124,6 @@ public final class Billing {
      * @return The invoiceDate.
      */
     com.google.protobuf.Timestamp getInvoiceDate();
-    /**
-     * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getInvoiceDateOrBuilder();
 
     /**
      * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
@@ -182,10 +153,6 @@ public final class Billing {
      * @return The dueDate.
      */
     com.google.protobuf.Timestamp getDueDate();
-    /**
-     * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getDueDateOrBuilder();
 
     /**
      * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
@@ -197,68 +164,29 @@ public final class Billing {
      * @return The paidDate.
      */
     com.google.protobuf.Timestamp getPaidDate();
-    /**
-     * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getPaidDateOrBuilder();
   }
   /**
    * Protobuf type {@code viam.app.v1.InvoiceSummary}
    */
-  public static final class InvoiceSummary extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class InvoiceSummary extends
+      com.google.protobuf.GeneratedMessageLite<
+          InvoiceSummary, InvoiceSummary.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.InvoiceSummary)
       InvoiceSummaryOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use InvoiceSummary.newBuilder() to construct.
-    private InvoiceSummary(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private InvoiceSummary() {
       id_ = "";
       status_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new InvoiceSummary();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_InvoiceSummary_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_InvoiceSummary_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.Billing.InvoiceSummary.class, viam.app.v1.Billing.InvoiceSummary.Builder.class);
-    }
-
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -267,23 +195,40 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
     }
 
     public static final int INVOICE_DATE_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp invoiceDate_;
     /**
      * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-     * @return Whether the invoiceDate field is set.
      */
     @java.lang.Override
     public boolean hasInvoiceDate() {
@@ -291,7 +236,6 @@ public final class Billing {
     }
     /**
      * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-     * @return The invoiceDate.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getInvoiceDate() {
@@ -300,13 +244,35 @@ public final class Billing {
     /**
      * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getInvoiceDateOrBuilder() {
-      return invoiceDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : invoiceDate_;
+    private void setInvoiceDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  invoiceDate_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeInvoiceDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (invoiceDate_ != null &&
+          invoiceDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        invoiceDate_ =
+          com.google.protobuf.Timestamp.newBuilder(invoiceDate_).mergeFrom(value).buildPartial();
+      } else {
+        invoiceDate_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
+     */
+    private void clearInvoiceDate() {  invoiceDate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int INVOICE_AMOUNT_FIELD_NUMBER = 3;
-    private double invoiceAmount_ = 0D;
+    private double invoiceAmount_;
     /**
      * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
      * @return The invoiceAmount.
@@ -315,26 +281,31 @@ public final class Billing {
     public double getInvoiceAmount() {
       return invoiceAmount_;
     }
+    /**
+     * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
+     * @param value The invoiceAmount to set.
+     */
+    private void setInvoiceAmount(double value) {
+      
+      invoiceAmount_ = value;
+    }
+    /**
+     * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
+     */
+    private void clearInvoiceAmount() {
+
+      invoiceAmount_ = 0D;
+    }
 
     public static final int STATUS_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object status_ = "";
+    private java.lang.String status_;
     /**
      * <code>string status = 4 [json_name = "status"];</code>
      * @return The status.
      */
     @java.lang.Override
     public java.lang.String getStatus() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        status_ = s;
-        return s;
-      }
+      return status_;
     }
     /**
      * <code>string status = 4 [json_name = "status"];</code>
@@ -343,23 +314,40 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getStatusBytes() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        status_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(status_);
+    }
+    /**
+     * <code>string status = 4 [json_name = "status"];</code>
+     * @param value The status to set.
+     */
+    private void setStatus(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      status_ = value;
+    }
+    /**
+     * <code>string status = 4 [json_name = "status"];</code>
+     */
+    private void clearStatus() {
+
+      status_ = getDefaultInstance().getStatus();
+    }
+    /**
+     * <code>string status = 4 [json_name = "status"];</code>
+     * @param value The bytes for status to set.
+     */
+    private void setStatusBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      status_ = value.toStringUtf8();
+
     }
 
     public static final int DUE_DATE_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp dueDate_;
     /**
      * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-     * @return Whether the dueDate field is set.
      */
     @java.lang.Override
     public boolean hasDueDate() {
@@ -367,7 +355,6 @@ public final class Billing {
     }
     /**
      * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-     * @return The dueDate.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getDueDate() {
@@ -376,16 +363,37 @@ public final class Billing {
     /**
      * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getDueDateOrBuilder() {
-      return dueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dueDate_;
+    private void setDueDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  dueDate_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDueDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (dueDate_ != null &&
+          dueDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        dueDate_ =
+          com.google.protobuf.Timestamp.newBuilder(dueDate_).mergeFrom(value).buildPartial();
+      } else {
+        dueDate_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
+     */
+    private void clearDueDate() {  dueDate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static final int PAID_DATE_FIELD_NUMBER = 6;
     private com.google.protobuf.Timestamp paidDate_;
     /**
      * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
-     * @return Whether the paidDate field is set.
      */
     @java.lang.Override
     public boolean hasPaidDate() {
@@ -393,7 +401,6 @@ public final class Billing {
     }
     /**
      * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
-     * @return The paidDate.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getPaidDate() {
@@ -402,540 +409,146 @@ public final class Billing {
     /**
      * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getPaidDateOrBuilder() {
-      return paidDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : paidDate_;
+    private void setPaidDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  paidDate_ = value;
+      bitField0_ |= 0x00000004;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePaidDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (paidDate_ != null &&
+          paidDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        paidDate_ =
+          com.google.protobuf.Timestamp.newBuilder(paidDate_).mergeFrom(value).buildPartial();
+      } else {
+        paidDate_ = value;
+      }
+      bitField0_ |= 0x00000004;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getInvoiceDate());
-      }
-      if (java.lang.Double.doubleToRawLongBits(invoiceAmount_) != 0) {
-        output.writeDouble(3, invoiceAmount_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, status_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(5, getDueDate());
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeMessage(6, getPaidDate());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getInvoiceDate());
-      }
-      if (java.lang.Double.doubleToRawLongBits(invoiceAmount_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(3, invoiceAmount_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, status_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getDueDate());
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getPaidDate());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.Billing.InvoiceSummary)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.Billing.InvoiceSummary other = (viam.app.v1.Billing.InvoiceSummary) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (hasInvoiceDate() != other.hasInvoiceDate()) return false;
-      if (hasInvoiceDate()) {
-        if (!getInvoiceDate()
-            .equals(other.getInvoiceDate())) return false;
-      }
-      if (java.lang.Double.doubleToLongBits(getInvoiceAmount())
-          != java.lang.Double.doubleToLongBits(
-              other.getInvoiceAmount())) return false;
-      if (!getStatus()
-          .equals(other.getStatus())) return false;
-      if (hasDueDate() != other.hasDueDate()) return false;
-      if (hasDueDate()) {
-        if (!getDueDate()
-            .equals(other.getDueDate())) return false;
-      }
-      if (hasPaidDate() != other.hasPaidDate()) return false;
-      if (hasPaidDate()) {
-        if (!getPaidDate()
-            .equals(other.getPaidDate())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      if (hasInvoiceDate()) {
-        hash = (37 * hash) + INVOICE_DATE_FIELD_NUMBER;
-        hash = (53 * hash) + getInvoiceDate().hashCode();
-      }
-      hash = (37 * hash) + INVOICE_AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getInvoiceAmount()));
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + getStatus().hashCode();
-      if (hasDueDate()) {
-        hash = (37 * hash) + DUE_DATE_FIELD_NUMBER;
-        hash = (53 * hash) + getDueDate().hashCode();
-      }
-      if (hasPaidDate()) {
-        hash = (37 * hash) + PAID_DATE_FIELD_NUMBER;
-        hash = (53 * hash) + getPaidDate().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
+     */
+    private void clearPaidDate() {  paidDate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
     }
 
     public static viam.app.v1.Billing.InvoiceSummary parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.InvoiceSummary parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.InvoiceSummary parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.InvoiceSummary parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.InvoiceSummary parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.InvoiceSummary parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.InvoiceSummary parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.InvoiceSummary parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.Billing.InvoiceSummary parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.Billing.InvoiceSummary parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.Billing.InvoiceSummary parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.InvoiceSummary parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.Billing.InvoiceSummary prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.InvoiceSummary}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.InvoiceSummary, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.InvoiceSummary)
         viam.app.v1.Billing.InvoiceSummaryOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_InvoiceSummary_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_InvoiceSummary_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.Billing.InvoiceSummary.class, viam.app.v1.Billing.InvoiceSummary.Builder.class);
-      }
-
       // Construct using viam.app.v1.Billing.InvoiceSummary.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getInvoiceDateFieldBuilder();
-          getDueDateFieldBuilder();
-          getPaidDateFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        invoiceDate_ = null;
-        if (invoiceDateBuilder_ != null) {
-          invoiceDateBuilder_.dispose();
-          invoiceDateBuilder_ = null;
-        }
-        invoiceAmount_ = 0D;
-        status_ = "";
-        dueDate_ = null;
-        if (dueDateBuilder_ != null) {
-          dueDateBuilder_.dispose();
-          dueDateBuilder_ = null;
-        }
-        paidDate_ = null;
-        if (paidDateBuilder_ != null) {
-          paidDateBuilder_.dispose();
-          paidDateBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_InvoiceSummary_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.InvoiceSummary getDefaultInstanceForType() {
-        return viam.app.v1.Billing.InvoiceSummary.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.InvoiceSummary build() {
-        viam.app.v1.Billing.InvoiceSummary result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.InvoiceSummary buildPartial() {
-        viam.app.v1.Billing.InvoiceSummary result = new viam.app.v1.Billing.InvoiceSummary(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.Billing.InvoiceSummary result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.invoiceDate_ = invoiceDateBuilder_ == null
-              ? invoiceDate_
-              : invoiceDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.invoiceAmount_ = invoiceAmount_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.status_ = status_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.dueDate_ = dueDateBuilder_ == null
-              ? dueDate_
-              : dueDateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.paidDate_ = paidDateBuilder_ == null
-              ? paidDate_
-              : paidDateBuilder_.build();
-          to_bitField0_ |= 0x00000004;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.Billing.InvoiceSummary) {
-          return mergeFrom((viam.app.v1.Billing.InvoiceSummary)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.Billing.InvoiceSummary other) {
-        if (other == viam.app.v1.Billing.InvoiceSummary.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasInvoiceDate()) {
-          mergeInvoiceDate(other.getInvoiceDate());
-        }
-        if (other.getInvoiceAmount() != 0D) {
-          setInvoiceAmount(other.getInvoiceAmount());
-        }
-        if (!other.getStatus().isEmpty()) {
-          status_ = other.status_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        if (other.hasDueDate()) {
-          mergeDueDate(other.getDueDate());
-        }
-        if (other.hasPaidDate()) {
-          mergePaidDate(other.getPaidDate());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getInvoiceDateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 25: {
-                invoiceAmount_ = input.readDouble();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 25
-              case 34: {
-                status_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 42: {
-                input.readMessage(
-                    getDueDateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              case 50: {
-                input.readMessage(
-                    getPaidDateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 50
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -944,10 +557,8 @@ public final class Billing {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -955,9 +566,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -967,143 +577,65 @@ public final class Billing {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Timestamp invoiceDate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> invoiceDateBuilder_;
       /**
        * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       * @return Whether the invoiceDate field is set.
        */
+      @java.lang.Override
       public boolean hasInvoiceDate() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasInvoiceDate();
       }
       /**
        * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       * @return The invoiceDate.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getInvoiceDate() {
-        if (invoiceDateBuilder_ == null) {
-          return invoiceDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : invoiceDate_;
-        } else {
-          return invoiceDateBuilder_.getMessage();
-        }
+        return instance.getInvoiceDate();
       }
       /**
        * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
        */
       public Builder setInvoiceDate(com.google.protobuf.Timestamp value) {
-        if (invoiceDateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          invoiceDate_ = value;
-        } else {
-          invoiceDateBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setInvoiceDate(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
        */
       public Builder setInvoiceDate(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (invoiceDateBuilder_ == null) {
-          invoiceDate_ = builderForValue.build();
-        } else {
-          invoiceDateBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setInvoiceDate(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
        */
       public Builder mergeInvoiceDate(com.google.protobuf.Timestamp value) {
-        if (invoiceDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            invoiceDate_ != null &&
-            invoiceDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getInvoiceDateBuilder().mergeFrom(value);
-          } else {
-            invoiceDate_ = value;
-          }
-        } else {
-          invoiceDateBuilder_.mergeFrom(value);
-        }
-        if (invoiceDate_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeInvoiceDate(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
        */
-      public Builder clearInvoiceDate() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        invoiceDate_ = null;
-        if (invoiceDateBuilder_ != null) {
-          invoiceDateBuilder_.dispose();
-          invoiceDateBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearInvoiceDate() {  copyOnWrite();
+        instance.clearInvoiceDate();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getInvoiceDateBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getInvoiceDateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getInvoiceDateOrBuilder() {
-        if (invoiceDateBuilder_ != null) {
-          return invoiceDateBuilder_.getMessageOrBuilder();
-        } else {
-          return invoiceDate_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : invoiceDate_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getInvoiceDateFieldBuilder() {
-        if (invoiceDateBuilder_ == null) {
-          invoiceDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getInvoiceDate(),
-                  getParentForChildren(),
-                  isClean());
-          invoiceDate_ = null;
-        }
-        return invoiceDateBuilder_;
       }
 
-      private double invoiceAmount_ ;
       /**
        * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
        * @return The invoiceAmount.
        */
       @java.lang.Override
       public double getInvoiceAmount() {
-        return invoiceAmount_;
+        return instance.getInvoiceAmount();
       }
       /**
        * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
@@ -1111,10 +643,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder setInvoiceAmount(double value) {
-
-        invoiceAmount_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setInvoiceAmount(value);
         return this;
       }
       /**
@@ -1122,45 +652,27 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearInvoiceAmount() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        invoiceAmount_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearInvoiceAmount();
         return this;
       }
 
-      private java.lang.Object status_ = "";
       /**
        * <code>string status = 4 [json_name = "status"];</code>
        * @return The status.
        */
+      @java.lang.Override
       public java.lang.String getStatus() {
-        java.lang.Object ref = status_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          status_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getStatus();
       }
       /**
        * <code>string status = 4 [json_name = "status"];</code>
        * @return The bytes for status.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getStatusBytes() {
-        java.lang.Object ref = status_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          status_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getStatusBytes();
       }
       /**
        * <code>string status = 4 [json_name = "status"];</code>
@@ -1169,10 +681,8 @@ public final class Billing {
        */
       public Builder setStatus(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        status_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setStatus(value);
         return this;
       }
       /**
@@ -1180,9 +690,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        status_ = getDefaultInstance().getStatus();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+        copyOnWrite();
+        instance.clearStatus();
         return this;
       }
       /**
@@ -1192,322 +701,189 @@ public final class Billing {
        */
       public Builder setStatusBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        status_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setStatusBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Timestamp dueDate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dueDateBuilder_;
       /**
        * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       * @return Whether the dueDate field is set.
        */
+      @java.lang.Override
       public boolean hasDueDate() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return instance.hasDueDate();
       }
       /**
        * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       * @return The dueDate.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getDueDate() {
-        if (dueDateBuilder_ == null) {
-          return dueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dueDate_;
-        } else {
-          return dueDateBuilder_.getMessage();
-        }
+        return instance.getDueDate();
       }
       /**
        * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
        */
       public Builder setDueDate(com.google.protobuf.Timestamp value) {
-        if (dueDateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          dueDate_ = value;
-        } else {
-          dueDateBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setDueDate(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
        */
       public Builder setDueDate(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (dueDateBuilder_ == null) {
-          dueDate_ = builderForValue.build();
-        } else {
-          dueDateBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setDueDate(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
        */
       public Builder mergeDueDate(com.google.protobuf.Timestamp value) {
-        if (dueDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
-            dueDate_ != null &&
-            dueDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getDueDateBuilder().mergeFrom(value);
-          } else {
-            dueDate_ = value;
-          }
-        } else {
-          dueDateBuilder_.mergeFrom(value);
-        }
-        if (dueDate_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeDueDate(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
        */
-      public Builder clearDueDate() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        dueDate_ = null;
-        if (dueDateBuilder_ != null) {
-          dueDateBuilder_.dispose();
-          dueDateBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearDueDate() {  copyOnWrite();
+        instance.clearDueDate();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getDueDateBuilder() {
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return getDueDateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getDueDateOrBuilder() {
-        if (dueDateBuilder_ != null) {
-          return dueDateBuilder_.getMessageOrBuilder();
-        } else {
-          return dueDate_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : dueDate_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getDueDateFieldBuilder() {
-        if (dueDateBuilder_ == null) {
-          dueDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getDueDate(),
-                  getParentForChildren(),
-                  isClean());
-          dueDate_ = null;
-        }
-        return dueDateBuilder_;
       }
 
-      private com.google.protobuf.Timestamp paidDate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> paidDateBuilder_;
       /**
        * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
-       * @return Whether the paidDate field is set.
        */
+      @java.lang.Override
       public boolean hasPaidDate() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return instance.hasPaidDate();
       }
       /**
        * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
-       * @return The paidDate.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getPaidDate() {
-        if (paidDateBuilder_ == null) {
-          return paidDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : paidDate_;
-        } else {
-          return paidDateBuilder_.getMessage();
-        }
+        return instance.getPaidDate();
       }
       /**
        * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
        */
       public Builder setPaidDate(com.google.protobuf.Timestamp value) {
-        if (paidDateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          paidDate_ = value;
-        } else {
-          paidDateBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setPaidDate(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
        */
       public Builder setPaidDate(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (paidDateBuilder_ == null) {
-          paidDate_ = builderForValue.build();
-        } else {
-          paidDateBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setPaidDate(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
        */
       public Builder mergePaidDate(com.google.protobuf.Timestamp value) {
-        if (paidDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0) &&
-            paidDate_ != null &&
-            paidDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getPaidDateBuilder().mergeFrom(value);
-          } else {
-            paidDate_ = value;
-          }
-        } else {
-          paidDateBuilder_.mergeFrom(value);
-        }
-        if (paidDate_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergePaidDate(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
        */
-      public Builder clearPaidDate() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        paidDate_ = null;
-        if (paidDateBuilder_ != null) {
-          paidDateBuilder_.dispose();
-          paidDateBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearPaidDate() {  copyOnWrite();
+        instance.clearPaidDate();
         return this;
       }
-      /**
-       * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getPaidDateBuilder() {
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return getPaidDateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getPaidDateOrBuilder() {
-        if (paidDateBuilder_ != null) {
-          return paidDateBuilder_.getMessageOrBuilder();
-        } else {
-          return paidDate_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : paidDate_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp paid_date = 6 [json_name = "paidDate"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getPaidDateFieldBuilder() {
-        if (paidDateBuilder_ == null) {
-          paidDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getPaidDate(),
-                  getParentForChildren(),
-                  isClean());
-          paidDate_ = null;
-        }
-        return paidDateBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.InvoiceSummary)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.InvoiceSummary();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "id_",
+              "invoiceDate_",
+              "invoiceAmount_",
+              "status_",
+              "dueDate_",
+              "paidDate_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u0000\u0004\u0208\u0005\u1009\u0001\u0006\u1009\u0002";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.InvoiceSummary> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.InvoiceSummary.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.InvoiceSummary>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.InvoiceSummary)
     private static final viam.app.v1.Billing.InvoiceSummary DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.Billing.InvoiceSummary();
+      InvoiceSummary defaultInstance = new InvoiceSummary();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        InvoiceSummary.class, defaultInstance);
     }
 
     public static viam.app.v1.Billing.InvoiceSummary getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<InvoiceSummary>
-        PARSER = new com.google.protobuf.AbstractParser<InvoiceSummary>() {
-      @java.lang.Override
-      public InvoiceSummary parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<InvoiceSummary> PARSER;
 
     public static com.google.protobuf.Parser<InvoiceSummary> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<InvoiceSummary> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.Billing.InvoiceSummary getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface BillableResourceEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.BillableResourceEvent)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -1573,10 +949,6 @@ public final class Billing {
      * @return The occurredAt.
      */
     com.google.protobuf.Timestamp getOccurredAt();
-    /**
-     * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getOccurredAtOrBuilder();
 
     /**
      * <code>string user_name = 7 [json_name = "userName"];</code>
@@ -1593,15 +965,11 @@ public final class Billing {
   /**
    * Protobuf type {@code viam.app.v1.BillableResourceEvent}
    */
-  public static final class BillableResourceEvent extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class BillableResourceEvent extends
+      com.google.protobuf.GeneratedMessageLite<
+          BillableResourceEvent, BillableResourceEvent.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.BillableResourceEvent)
       BillableResourceEventOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use BillableResourceEvent.newBuilder() to construct.
-    private BillableResourceEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private BillableResourceEvent() {
       id_ = "";
       type_ = "";
@@ -1609,47 +977,16 @@ public final class Billing {
       usageCost_ = "";
       userName_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new BillableResourceEvent();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_BillableResourceEvent_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_BillableResourceEvent_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.Billing.BillableResourceEvent.class, viam.app.v1.Billing.BillableResourceEvent.Builder.class);
-    }
-
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -1658,37 +995,45 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
     }
 
     public static final int TYPE_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object type_ = "";
+    private java.lang.String type_;
     /**
      * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
      */
     @java.lang.Override
     public java.lang.String getType() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        type_ = s;
-        return s;
-      }
+      return type_;
     }
     /**
      * <code>string type = 2 [json_name = "type"];</code>
@@ -1697,20 +1042,38 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
-      java.lang.Object ref = type_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        type_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(type_);
+    }
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      type_ = value;
+    }
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = getDefaultInstance().getType();
+    }
+    /**
+     * <code>string type = 2 [json_name = "type"];</code>
+     * @param value The bytes for type to set.
+     */
+    private void setTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      type_ = value.toStringUtf8();
+
     }
 
     public static final int USAGE_QUANTITY_FIELD_NUMBER = 3;
-    private double usageQuantity_ = 0D;
+    private double usageQuantity_;
     /**
      * <code>double usage_quantity = 3 [json_name = "usageQuantity"];</code>
      * @return The usageQuantity.
@@ -1719,26 +1082,31 @@ public final class Billing {
     public double getUsageQuantity() {
       return usageQuantity_;
     }
+    /**
+     * <code>double usage_quantity = 3 [json_name = "usageQuantity"];</code>
+     * @param value The usageQuantity to set.
+     */
+    private void setUsageQuantity(double value) {
+      
+      usageQuantity_ = value;
+    }
+    /**
+     * <code>double usage_quantity = 3 [json_name = "usageQuantity"];</code>
+     */
+    private void clearUsageQuantity() {
+
+      usageQuantity_ = 0D;
+    }
 
     public static final int USAGE_QUANTITY_UNIT_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object usageQuantityUnit_ = "";
+    private java.lang.String usageQuantityUnit_;
     /**
      * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
      * @return The usageQuantityUnit.
      */
     @java.lang.Override
     public java.lang.String getUsageQuantityUnit() {
-      java.lang.Object ref = usageQuantityUnit_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        usageQuantityUnit_ = s;
-        return s;
-      }
+      return usageQuantityUnit_;
     }
     /**
      * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
@@ -1747,37 +1115,45 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getUsageQuantityUnitBytes() {
-      java.lang.Object ref = usageQuantityUnit_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        usageQuantityUnit_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(usageQuantityUnit_);
+    }
+    /**
+     * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
+     * @param value The usageQuantityUnit to set.
+     */
+    private void setUsageQuantityUnit(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      usageQuantityUnit_ = value;
+    }
+    /**
+     * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
+     */
+    private void clearUsageQuantityUnit() {
+
+      usageQuantityUnit_ = getDefaultInstance().getUsageQuantityUnit();
+    }
+    /**
+     * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
+     * @param value The bytes for usageQuantityUnit to set.
+     */
+    private void setUsageQuantityUnitBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      usageQuantityUnit_ = value.toStringUtf8();
+
     }
 
     public static final int USAGE_COST_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object usageCost_ = "";
+    private java.lang.String usageCost_;
     /**
      * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
      * @return The usageCost.
      */
     @java.lang.Override
     public java.lang.String getUsageCost() {
-      java.lang.Object ref = usageCost_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        usageCost_ = s;
-        return s;
-      }
+      return usageCost_;
     }
     /**
      * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
@@ -1786,23 +1162,40 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getUsageCostBytes() {
-      java.lang.Object ref = usageCost_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        usageCost_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(usageCost_);
+    }
+    /**
+     * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
+     * @param value The usageCost to set.
+     */
+    private void setUsageCost(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      usageCost_ = value;
+    }
+    /**
+     * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
+     */
+    private void clearUsageCost() {
+
+      usageCost_ = getDefaultInstance().getUsageCost();
+    }
+    /**
+     * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
+     * @param value The bytes for usageCost to set.
+     */
+    private void setUsageCostBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      usageCost_ = value.toStringUtf8();
+
     }
 
     public static final int OCCURRED_AT_FIELD_NUMBER = 6;
     private com.google.protobuf.Timestamp occurredAt_;
     /**
      * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-     * @return Whether the occurredAt field is set.
      */
     @java.lang.Override
     public boolean hasOccurredAt() {
@@ -1810,7 +1203,6 @@ public final class Billing {
     }
     /**
      * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-     * @return The occurredAt.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getOccurredAt() {
@@ -1819,30 +1211,42 @@ public final class Billing {
     /**
      * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getOccurredAtOrBuilder() {
-      return occurredAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : occurredAt_;
+    private void setOccurredAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  occurredAt_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeOccurredAt(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (occurredAt_ != null &&
+          occurredAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        occurredAt_ =
+          com.google.protobuf.Timestamp.newBuilder(occurredAt_).mergeFrom(value).buildPartial();
+      } else {
+        occurredAt_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
+     */
+    private void clearOccurredAt() {  occurredAt_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int USER_NAME_FIELD_NUMBER = 7;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object userName_ = "";
+    private java.lang.String userName_;
     /**
      * <code>string user_name = 7 [json_name = "userName"];</code>
      * @return The userName.
      */
     @java.lang.Override
     public java.lang.String getUserName() {
-      java.lang.Object ref = userName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        userName_ = s;
-        return s;
-      }
+      return userName_;
     }
     /**
      * <code>string user_name = 7 [json_name = "userName"];</code>
@@ -1851,543 +1255,149 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getUserNameBytes() {
-      java.lang.Object ref = userName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        userName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(userName_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string user_name = 7 [json_name = "userName"];</code>
+     * @param value The userName to set.
+     */
+    private void setUserName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      userName_ = value;
     }
+    /**
+     * <code>string user_name = 7 [json_name = "userName"];</code>
+     */
+    private void clearUserName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(usageQuantity_) != 0) {
-        output.writeDouble(3, usageQuantity_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(usageQuantityUnit_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, usageQuantityUnit_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(usageCost_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, usageCost_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(6, getOccurredAt());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, userName_);
-      }
-      getUnknownFields().writeTo(output);
+      userName_ = getDefaultInstance().getUserName();
     }
+    /**
+     * <code>string user_name = 7 [json_name = "userName"];</code>
+     * @param value The bytes for userName to set.
+     */
+    private void setUserNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      userName_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(usageQuantity_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(3, usageQuantity_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(usageQuantityUnit_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, usageQuantityUnit_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(usageCost_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, usageCost_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getOccurredAt());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, userName_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.Billing.BillableResourceEvent)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.Billing.BillableResourceEvent other = (viam.app.v1.Billing.BillableResourceEvent) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getType()
-          .equals(other.getType())) return false;
-      if (java.lang.Double.doubleToLongBits(getUsageQuantity())
-          != java.lang.Double.doubleToLongBits(
-              other.getUsageQuantity())) return false;
-      if (!getUsageQuantityUnit()
-          .equals(other.getUsageQuantityUnit())) return false;
-      if (!getUsageCost()
-          .equals(other.getUsageCost())) return false;
-      if (hasOccurredAt() != other.hasOccurredAt()) return false;
-      if (hasOccurredAt()) {
-        if (!getOccurredAt()
-            .equals(other.getOccurredAt())) return false;
-      }
-      if (!getUserName()
-          .equals(other.getUserName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getType().hashCode();
-      hash = (37 * hash) + USAGE_QUANTITY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getUsageQuantity()));
-      hash = (37 * hash) + USAGE_QUANTITY_UNIT_FIELD_NUMBER;
-      hash = (53 * hash) + getUsageQuantityUnit().hashCode();
-      hash = (37 * hash) + USAGE_COST_FIELD_NUMBER;
-      hash = (53 * hash) + getUsageCost().hashCode();
-      if (hasOccurredAt()) {
-        hash = (37 * hash) + OCCURRED_AT_FIELD_NUMBER;
-        hash = (53 * hash) + getOccurredAt().hashCode();
-      }
-      hash = (37 * hash) + USER_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getUserName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.BillableResourceEvent parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.BillableResourceEvent parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.Billing.BillableResourceEvent parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.Billing.BillableResourceEvent parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.BillableResourceEvent parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.Billing.BillableResourceEvent prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.BillableResourceEvent}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.BillableResourceEvent, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.BillableResourceEvent)
         viam.app.v1.Billing.BillableResourceEventOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_BillableResourceEvent_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_BillableResourceEvent_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.Billing.BillableResourceEvent.class, viam.app.v1.Billing.BillableResourceEvent.Builder.class);
-      }
-
       // Construct using viam.app.v1.Billing.BillableResourceEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOccurredAtFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        type_ = "";
-        usageQuantity_ = 0D;
-        usageQuantityUnit_ = "";
-        usageCost_ = "";
-        occurredAt_ = null;
-        if (occurredAtBuilder_ != null) {
-          occurredAtBuilder_.dispose();
-          occurredAtBuilder_ = null;
-        }
-        userName_ = "";
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_BillableResourceEvent_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.BillableResourceEvent getDefaultInstanceForType() {
-        return viam.app.v1.Billing.BillableResourceEvent.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.BillableResourceEvent build() {
-        viam.app.v1.Billing.BillableResourceEvent result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.BillableResourceEvent buildPartial() {
-        viam.app.v1.Billing.BillableResourceEvent result = new viam.app.v1.Billing.BillableResourceEvent(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.Billing.BillableResourceEvent result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.type_ = type_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.usageQuantity_ = usageQuantity_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.usageQuantityUnit_ = usageQuantityUnit_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.usageCost_ = usageCost_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.occurredAt_ = occurredAtBuilder_ == null
-              ? occurredAt_
-              : occurredAtBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.userName_ = userName_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.Billing.BillableResourceEvent) {
-          return mergeFrom((viam.app.v1.Billing.BillableResourceEvent)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.Billing.BillableResourceEvent other) {
-        if (other == viam.app.v1.Billing.BillableResourceEvent.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getType().isEmpty()) {
-          type_ = other.type_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.getUsageQuantity() != 0D) {
-          setUsageQuantity(other.getUsageQuantity());
-        }
-        if (!other.getUsageQuantityUnit().isEmpty()) {
-          usageQuantityUnit_ = other.usageQuantityUnit_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        if (!other.getUsageCost().isEmpty()) {
-          usageCost_ = other.usageCost_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        if (other.hasOccurredAt()) {
-          mergeOccurredAt(other.getOccurredAt());
-        }
-        if (!other.getUserName().isEmpty()) {
-          userName_ = other.userName_;
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                type_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 25: {
-                usageQuantity_ = input.readDouble();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 25
-              case 34: {
-                usageQuantityUnit_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 42: {
-                usageCost_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              case 50: {
-                input.readMessage(
-                    getOccurredAtFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 50
-              case 58: {
-                userName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 58
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -2396,10 +1406,8 @@ public final class Billing {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -2407,9 +1415,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -2419,47 +1426,27 @@ public final class Billing {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
 
-      private java.lang.Object type_ = "";
       /**
        * <code>string type = 2 [json_name = "type"];</code>
        * @return The type.
        */
+      @java.lang.Override
       public java.lang.String getType() {
-        java.lang.Object ref = type_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          type_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getType();
       }
       /**
        * <code>string type = 2 [json_name = "type"];</code>
        * @return The bytes for type.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTypeBytes() {
-        java.lang.Object ref = type_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          type_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getTypeBytes();
       }
       /**
        * <code>string type = 2 [json_name = "type"];</code>
@@ -2468,10 +1455,8 @@ public final class Billing {
        */
       public Builder setType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        type_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setType(value);
         return this;
       }
       /**
@@ -2479,9 +1464,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        type_ = getDefaultInstance().getType();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
       /**
@@ -2491,22 +1475,18 @@ public final class Billing {
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        type_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setTypeBytes(value);
         return this;
       }
 
-      private double usageQuantity_ ;
       /**
        * <code>double usage_quantity = 3 [json_name = "usageQuantity"];</code>
        * @return The usageQuantity.
        */
       @java.lang.Override
       public double getUsageQuantity() {
-        return usageQuantity_;
+        return instance.getUsageQuantity();
       }
       /**
        * <code>double usage_quantity = 3 [json_name = "usageQuantity"];</code>
@@ -2514,10 +1494,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder setUsageQuantity(double value) {
-
-        usageQuantity_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setUsageQuantity(value);
         return this;
       }
       /**
@@ -2525,45 +1503,27 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearUsageQuantity() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        usageQuantity_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearUsageQuantity();
         return this;
       }
 
-      private java.lang.Object usageQuantityUnit_ = "";
       /**
        * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
        * @return The usageQuantityUnit.
        */
+      @java.lang.Override
       public java.lang.String getUsageQuantityUnit() {
-        java.lang.Object ref = usageQuantityUnit_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          usageQuantityUnit_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getUsageQuantityUnit();
       }
       /**
        * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
        * @return The bytes for usageQuantityUnit.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUsageQuantityUnitBytes() {
-        java.lang.Object ref = usageQuantityUnit_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          usageQuantityUnit_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getUsageQuantityUnitBytes();
       }
       /**
        * <code>string usage_quantity_unit = 4 [json_name = "usageQuantityUnit"];</code>
@@ -2572,10 +1532,8 @@ public final class Billing {
        */
       public Builder setUsageQuantityUnit(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        usageQuantityUnit_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setUsageQuantityUnit(value);
         return this;
       }
       /**
@@ -2583,9 +1541,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearUsageQuantityUnit() {
-        usageQuantityUnit_ = getDefaultInstance().getUsageQuantityUnit();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+        copyOnWrite();
+        instance.clearUsageQuantityUnit();
         return this;
       }
       /**
@@ -2595,47 +1552,27 @@ public final class Billing {
        */
       public Builder setUsageQuantityUnitBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        usageQuantityUnit_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setUsageQuantityUnitBytes(value);
         return this;
       }
 
-      private java.lang.Object usageCost_ = "";
       /**
        * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
        * @return The usageCost.
        */
+      @java.lang.Override
       public java.lang.String getUsageCost() {
-        java.lang.Object ref = usageCost_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          usageCost_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getUsageCost();
       }
       /**
        * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
        * @return The bytes for usageCost.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUsageCostBytes() {
-        java.lang.Object ref = usageCost_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          usageCost_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getUsageCostBytes();
       }
       /**
        * <code>string usage_cost = 5 [json_name = "usageCost"];</code>
@@ -2644,10 +1581,8 @@ public final class Billing {
        */
       public Builder setUsageCost(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        usageCost_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setUsageCost(value);
         return this;
       }
       /**
@@ -2655,9 +1590,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearUsageCost() {
-        usageCost_ = getDefaultInstance().getUsageCost();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
+        copyOnWrite();
+        instance.clearUsageCost();
         return this;
       }
       /**
@@ -2667,168 +1601,74 @@ public final class Billing {
        */
       public Builder setUsageCostBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        usageCost_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setUsageCostBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Timestamp occurredAt_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> occurredAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-       * @return Whether the occurredAt field is set.
        */
+      @java.lang.Override
       public boolean hasOccurredAt() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return instance.hasOccurredAt();
       }
       /**
        * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-       * @return The occurredAt.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getOccurredAt() {
-        if (occurredAtBuilder_ == null) {
-          return occurredAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : occurredAt_;
-        } else {
-          return occurredAtBuilder_.getMessage();
-        }
+        return instance.getOccurredAt();
       }
       /**
        * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
        */
       public Builder setOccurredAt(com.google.protobuf.Timestamp value) {
-        if (occurredAtBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          occurredAt_ = value;
-        } else {
-          occurredAtBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setOccurredAt(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
        */
       public Builder setOccurredAt(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (occurredAtBuilder_ == null) {
-          occurredAt_ = builderForValue.build();
-        } else {
-          occurredAtBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setOccurredAt(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
        */
       public Builder mergeOccurredAt(com.google.protobuf.Timestamp value) {
-        if (occurredAtBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0) &&
-            occurredAt_ != null &&
-            occurredAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getOccurredAtBuilder().mergeFrom(value);
-          } else {
-            occurredAt_ = value;
-          }
-        } else {
-          occurredAtBuilder_.mergeFrom(value);
-        }
-        if (occurredAt_ != null) {
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeOccurredAt(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
        */
-      public Builder clearOccurredAt() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        occurredAt_ = null;
-        if (occurredAtBuilder_ != null) {
-          occurredAtBuilder_.dispose();
-          occurredAtBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearOccurredAt() {  copyOnWrite();
+        instance.clearOccurredAt();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getOccurredAtBuilder() {
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return getOccurredAtFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getOccurredAtOrBuilder() {
-        if (occurredAtBuilder_ != null) {
-          return occurredAtBuilder_.getMessageOrBuilder();
-        } else {
-          return occurredAt_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : occurredAt_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp occurred_at = 6 [json_name = "occurredAt"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getOccurredAtFieldBuilder() {
-        if (occurredAtBuilder_ == null) {
-          occurredAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getOccurredAt(),
-                  getParentForChildren(),
-                  isClean());
-          occurredAt_ = null;
-        }
-        return occurredAtBuilder_;
       }
 
-      private java.lang.Object userName_ = "";
       /**
        * <code>string user_name = 7 [json_name = "userName"];</code>
        * @return The userName.
        */
+      @java.lang.Override
       public java.lang.String getUserName() {
-        java.lang.Object ref = userName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getUserName();
       }
       /**
        * <code>string user_name = 7 [json_name = "userName"];</code>
        * @return The bytes for userName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getUserNameBytes() {
-        java.lang.Object ref = userName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getUserNameBytes();
       }
       /**
        * <code>string user_name = 7 [json_name = "userName"];</code>
@@ -2837,10 +1677,8 @@ public final class Billing {
        */
       public Builder setUserName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        userName_ = value;
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setUserName(value);
         return this;
       }
       /**
@@ -2848,9 +1686,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearUserName() {
-        userName_ = getDefaultInstance().getUserName();
-        bitField0_ = (bitField0_ & ~0x00000040);
-        onChanged();
+        copyOnWrite();
+        instance.clearUserName();
         return this;
       }
       /**
@@ -2860,80 +1697,96 @@ public final class Billing {
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        userName_ = value;
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setUserNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.BillableResourceEvent)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.BillableResourceEvent();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "id_",
+              "type_",
+              "usageQuantity_",
+              "usageQuantityUnit_",
+              "usageCost_",
+              "occurredAt_",
+              "userName_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0000\u0004\u0208\u0005\u0208\u0006\u1009\u0000\u0007\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.BillableResourceEvent> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.BillableResourceEvent.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.BillableResourceEvent>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.BillableResourceEvent)
     private static final viam.app.v1.Billing.BillableResourceEvent DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.Billing.BillableResourceEvent();
+      BillableResourceEvent defaultInstance = new BillableResourceEvent();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        BillableResourceEvent.class, defaultInstance);
     }
 
     public static viam.app.v1.Billing.BillableResourceEvent getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<BillableResourceEvent>
-        PARSER = new com.google.protobuf.AbstractParser<BillableResourceEvent>() {
-      @java.lang.Override
-      public BillableResourceEvent parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<BillableResourceEvent> PARSER;
 
     public static com.google.protobuf.Parser<BillableResourceEvent> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<BillableResourceEvent> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.Billing.BillableResourceEvent getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface InvoiceOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.Invoice)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -2957,10 +1810,6 @@ public final class Billing {
      * @return The invoiceDate.
      */
     com.google.protobuf.Timestamp getInvoiceDate();
-    /**
-     * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getInvoiceDateOrBuilder();
 
     /**
      * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
@@ -2990,10 +1839,6 @@ public final class Billing {
      * @return The dueDate.
      */
     com.google.protobuf.Timestamp getDueDate();
-    /**
-     * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getDueDateOrBuilder();
 
     /**
      * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
@@ -3008,16 +1853,6 @@ public final class Billing {
      * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
      */
     int getItemsCount();
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    java.util.List<? extends viam.app.v1.Billing.BillableResourceEventOrBuilder> 
-        getItemsOrBuilderList();
-    /**
-     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-     */
-    viam.app.v1.Billing.BillableResourceEventOrBuilder getItemsOrBuilder(
-        int index);
 
     /**
      * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
@@ -3034,62 +1869,27 @@ public final class Billing {
   /**
    * Protobuf type {@code viam.app.v1.Invoice}
    */
-  public static final class Invoice extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Invoice extends
+      com.google.protobuf.GeneratedMessageLite<
+          Invoice, Invoice.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.Invoice)
       InvoiceOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Invoice.newBuilder() to construct.
-    private Invoice(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Invoice() {
       id_ = "";
       status_ = "";
-      items_ = java.util.Collections.emptyList();
+      items_ = emptyProtobufList();
       emailedTo_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Invoice();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_Invoice_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_Invoice_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.Billing.Invoice.class, viam.app.v1.Billing.Invoice.Builder.class);
-    }
-
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -3098,23 +1898,40 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
     }
 
     public static final int INVOICE_DATE_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp invoiceDate_;
     /**
      * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-     * @return Whether the invoiceDate field is set.
      */
     @java.lang.Override
     public boolean hasInvoiceDate() {
@@ -3122,7 +1939,6 @@ public final class Billing {
     }
     /**
      * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-     * @return The invoiceDate.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getInvoiceDate() {
@@ -3131,13 +1947,35 @@ public final class Billing {
     /**
      * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getInvoiceDateOrBuilder() {
-      return invoiceDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : invoiceDate_;
+    private void setInvoiceDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  invoiceDate_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeInvoiceDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (invoiceDate_ != null &&
+          invoiceDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        invoiceDate_ =
+          com.google.protobuf.Timestamp.newBuilder(invoiceDate_).mergeFrom(value).buildPartial();
+      } else {
+        invoiceDate_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
+     */
+    private void clearInvoiceDate() {  invoiceDate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int INVOICE_AMOUNT_FIELD_NUMBER = 3;
-    private double invoiceAmount_ = 0D;
+    private double invoiceAmount_;
     /**
      * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
      * @return The invoiceAmount.
@@ -3146,26 +1984,31 @@ public final class Billing {
     public double getInvoiceAmount() {
       return invoiceAmount_;
     }
+    /**
+     * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
+     * @param value The invoiceAmount to set.
+     */
+    private void setInvoiceAmount(double value) {
+      
+      invoiceAmount_ = value;
+    }
+    /**
+     * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
+     */
+    private void clearInvoiceAmount() {
+
+      invoiceAmount_ = 0D;
+    }
 
     public static final int STATUS_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object status_ = "";
+    private java.lang.String status_;
     /**
      * <code>string status = 4 [json_name = "status"];</code>
      * @return The status.
      */
     @java.lang.Override
     public java.lang.String getStatus() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        status_ = s;
-        return s;
-      }
+      return status_;
     }
     /**
      * <code>string status = 4 [json_name = "status"];</code>
@@ -3174,23 +2017,40 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getStatusBytes() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        status_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(status_);
+    }
+    /**
+     * <code>string status = 4 [json_name = "status"];</code>
+     * @param value The status to set.
+     */
+    private void setStatus(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      status_ = value;
+    }
+    /**
+     * <code>string status = 4 [json_name = "status"];</code>
+     */
+    private void clearStatus() {
+
+      status_ = getDefaultInstance().getStatus();
+    }
+    /**
+     * <code>string status = 4 [json_name = "status"];</code>
+     * @param value The bytes for status to set.
+     */
+    private void setStatusBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      status_ = value.toStringUtf8();
+
     }
 
     public static final int DUE_DATE_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp dueDate_;
     /**
      * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-     * @return Whether the dueDate field is set.
      */
     @java.lang.Override
     public boolean hasDueDate() {
@@ -3198,7 +2058,6 @@ public final class Billing {
     }
     /**
      * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-     * @return The dueDate.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getDueDate() {
@@ -3207,14 +2066,35 @@ public final class Billing {
     /**
      * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getDueDateOrBuilder() {
-      return dueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dueDate_;
+    private void setDueDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  dueDate_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDueDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (dueDate_ != null &&
+          dueDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        dueDate_ =
+          com.google.protobuf.Timestamp.newBuilder(dueDate_).mergeFrom(value).buildPartial();
+      } else {
+        dueDate_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
+     */
+    private void clearDueDate() {  dueDate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static final int ITEMS_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
-    private java.util.List<viam.app.v1.Billing.BillableResourceEvent> items_;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Billing.BillableResourceEvent> items_;
     /**
      * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
      */
@@ -3225,7 +2105,6 @@ public final class Billing {
     /**
      * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends viam.app.v1.Billing.BillableResourceEventOrBuilder> 
         getItemsOrBuilderList() {
       return items_;
@@ -3247,31 +2126,76 @@ public final class Billing {
     /**
      * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
      */
-    @java.lang.Override
     public viam.app.v1.Billing.BillableResourceEventOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
     }
+    private void ensureItemsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Billing.BillableResourceEvent> tmp = items_;
+      if (!tmp.isModifiable()) {
+        items_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
+     */
+    private void setItems(
+        int index, viam.app.v1.Billing.BillableResourceEvent value) {
+      value.getClass();
+  ensureItemsIsMutable();
+      items_.set(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
+     */
+    private void addItems(viam.app.v1.Billing.BillableResourceEvent value) {
+      value.getClass();
+  ensureItemsIsMutable();
+      items_.add(value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
+     */
+    private void addItems(
+        int index, viam.app.v1.Billing.BillableResourceEvent value) {
+      value.getClass();
+  ensureItemsIsMutable();
+      items_.add(index, value);
+    }
+    /**
+     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
+     */
+    private void addAllItems(
+        java.lang.Iterable<? extends viam.app.v1.Billing.BillableResourceEvent> values) {
+      ensureItemsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, items_);
+    }
+    /**
+     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
+     */
+    private void clearItems() {
+      items_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
+     */
+    private void removeItems(int index) {
+      ensureItemsIsMutable();
+      items_.remove(index);
+    }
 
     public static final int EMAILED_TO_FIELD_NUMBER = 7;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object emailedTo_ = "";
+    private java.lang.String emailedTo_;
     /**
      * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
      * @return The emailedTo.
      */
     @java.lang.Override
     public java.lang.String getEmailedTo() {
-      java.lang.Object ref = emailedTo_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        emailedTo_ = s;
-        return s;
-      }
+      return emailedTo_;
     }
     /**
      * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
@@ -3280,606 +2204,149 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getEmailedToBytes() {
-      java.lang.Object ref = emailedTo_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        emailedTo_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(emailedTo_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
+     * @param value The emailedTo to set.
+     */
+    private void setEmailedTo(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      emailedTo_ = value;
     }
+    /**
+     * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
+     */
+    private void clearEmailedTo() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getInvoiceDate());
-      }
-      if (java.lang.Double.doubleToRawLongBits(invoiceAmount_) != 0) {
-        output.writeDouble(3, invoiceAmount_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, status_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(5, getDueDate());
-      }
-      for (int i = 0; i < items_.size(); i++) {
-        output.writeMessage(6, items_.get(i));
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailedTo_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, emailedTo_);
-      }
-      getUnknownFields().writeTo(output);
+      emailedTo_ = getDefaultInstance().getEmailedTo();
     }
+    /**
+     * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
+     * @param value The bytes for emailedTo to set.
+     */
+    private void setEmailedToBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      emailedTo_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getInvoiceDate());
-      }
-      if (java.lang.Double.doubleToRawLongBits(invoiceAmount_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(3, invoiceAmount_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, status_);
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getDueDate());
-      }
-      for (int i = 0; i < items_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, items_.get(i));
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailedTo_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, emailedTo_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.Billing.Invoice)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.Billing.Invoice other = (viam.app.v1.Billing.Invoice) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (hasInvoiceDate() != other.hasInvoiceDate()) return false;
-      if (hasInvoiceDate()) {
-        if (!getInvoiceDate()
-            .equals(other.getInvoiceDate())) return false;
-      }
-      if (java.lang.Double.doubleToLongBits(getInvoiceAmount())
-          != java.lang.Double.doubleToLongBits(
-              other.getInvoiceAmount())) return false;
-      if (!getStatus()
-          .equals(other.getStatus())) return false;
-      if (hasDueDate() != other.hasDueDate()) return false;
-      if (hasDueDate()) {
-        if (!getDueDate()
-            .equals(other.getDueDate())) return false;
-      }
-      if (!getItemsList()
-          .equals(other.getItemsList())) return false;
-      if (!getEmailedTo()
-          .equals(other.getEmailedTo())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      if (hasInvoiceDate()) {
-        hash = (37 * hash) + INVOICE_DATE_FIELD_NUMBER;
-        hash = (53 * hash) + getInvoiceDate().hashCode();
-      }
-      hash = (37 * hash) + INVOICE_AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getInvoiceAmount()));
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + getStatus().hashCode();
-      if (hasDueDate()) {
-        hash = (37 * hash) + DUE_DATE_FIELD_NUMBER;
-        hash = (53 * hash) + getDueDate().hashCode();
-      }
-      if (getItemsCount() > 0) {
-        hash = (37 * hash) + ITEMS_FIELD_NUMBER;
-        hash = (53 * hash) + getItemsList().hashCode();
-      }
-      hash = (37 * hash) + EMAILED_TO_FIELD_NUMBER;
-      hash = (53 * hash) + getEmailedTo().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.v1.Billing.Invoice parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.Invoice parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.Invoice parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.Invoice parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.Invoice parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.Invoice parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.Invoice parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.Invoice parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.Billing.Invoice parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.Billing.Invoice parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.Billing.Invoice parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.Invoice parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.Billing.Invoice prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.Invoice}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.Invoice, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.Invoice)
         viam.app.v1.Billing.InvoiceOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_Invoice_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_Invoice_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.Billing.Invoice.class, viam.app.v1.Billing.Invoice.Builder.class);
-      }
-
       // Construct using viam.app.v1.Billing.Invoice.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getInvoiceDateFieldBuilder();
-          getDueDateFieldBuilder();
-          getItemsFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        invoiceDate_ = null;
-        if (invoiceDateBuilder_ != null) {
-          invoiceDateBuilder_.dispose();
-          invoiceDateBuilder_ = null;
-        }
-        invoiceAmount_ = 0D;
-        status_ = "";
-        dueDate_ = null;
-        if (dueDateBuilder_ != null) {
-          dueDateBuilder_.dispose();
-          dueDateBuilder_ = null;
-        }
-        if (itemsBuilder_ == null) {
-          items_ = java.util.Collections.emptyList();
-        } else {
-          items_ = null;
-          itemsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000020);
-        emailedTo_ = "";
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_Invoice_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.Invoice getDefaultInstanceForType() {
-        return viam.app.v1.Billing.Invoice.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.Invoice build() {
-        viam.app.v1.Billing.Invoice result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.Invoice buildPartial() {
-        viam.app.v1.Billing.Invoice result = new viam.app.v1.Billing.Invoice(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(viam.app.v1.Billing.Invoice result) {
-        if (itemsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
-            items_ = java.util.Collections.unmodifiableList(items_);
-            bitField0_ = (bitField0_ & ~0x00000020);
-          }
-          result.items_ = items_;
-        } else {
-          result.items_ = itemsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(viam.app.v1.Billing.Invoice result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.invoiceDate_ = invoiceDateBuilder_ == null
-              ? invoiceDate_
-              : invoiceDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.invoiceAmount_ = invoiceAmount_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.status_ = status_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.dueDate_ = dueDateBuilder_ == null
-              ? dueDate_
-              : dueDateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.emailedTo_ = emailedTo_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.Billing.Invoice) {
-          return mergeFrom((viam.app.v1.Billing.Invoice)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.Billing.Invoice other) {
-        if (other == viam.app.v1.Billing.Invoice.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasInvoiceDate()) {
-          mergeInvoiceDate(other.getInvoiceDate());
-        }
-        if (other.getInvoiceAmount() != 0D) {
-          setInvoiceAmount(other.getInvoiceAmount());
-        }
-        if (!other.getStatus().isEmpty()) {
-          status_ = other.status_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        if (other.hasDueDate()) {
-          mergeDueDate(other.getDueDate());
-        }
-        if (itemsBuilder_ == null) {
-          if (!other.items_.isEmpty()) {
-            if (items_.isEmpty()) {
-              items_ = other.items_;
-              bitField0_ = (bitField0_ & ~0x00000020);
-            } else {
-              ensureItemsIsMutable();
-              items_.addAll(other.items_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.items_.isEmpty()) {
-            if (itemsBuilder_.isEmpty()) {
-              itemsBuilder_.dispose();
-              itemsBuilder_ = null;
-              items_ = other.items_;
-              bitField0_ = (bitField0_ & ~0x00000020);
-              itemsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getItemsFieldBuilder() : null;
-            } else {
-              itemsBuilder_.addAllMessages(other.items_);
-            }
-          }
-        }
-        if (!other.getEmailedTo().isEmpty()) {
-          emailedTo_ = other.emailedTo_;
-          bitField0_ |= 0x00000040;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getInvoiceDateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 25: {
-                invoiceAmount_ = input.readDouble();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 25
-              case 34: {
-                status_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 42: {
-                input.readMessage(
-                    getDueDateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              case 50: {
-                viam.app.v1.Billing.BillableResourceEvent m =
-                    input.readMessage(
-                        viam.app.v1.Billing.BillableResourceEvent.parser(),
-                        extensionRegistry);
-                if (itemsBuilder_ == null) {
-                  ensureItemsIsMutable();
-                  items_.add(m);
-                } else {
-                  itemsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 50
-              case 58: {
-                emailedTo_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 58
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -3888,10 +2355,8 @@ public final class Billing {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -3899,9 +2364,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -3911,143 +2375,65 @@ public final class Billing {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Timestamp invoiceDate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> invoiceDateBuilder_;
       /**
        * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       * @return Whether the invoiceDate field is set.
        */
+      @java.lang.Override
       public boolean hasInvoiceDate() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasInvoiceDate();
       }
       /**
        * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       * @return The invoiceDate.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getInvoiceDate() {
-        if (invoiceDateBuilder_ == null) {
-          return invoiceDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : invoiceDate_;
-        } else {
-          return invoiceDateBuilder_.getMessage();
-        }
+        return instance.getInvoiceDate();
       }
       /**
        * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
        */
       public Builder setInvoiceDate(com.google.protobuf.Timestamp value) {
-        if (invoiceDateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          invoiceDate_ = value;
-        } else {
-          invoiceDateBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setInvoiceDate(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
        */
       public Builder setInvoiceDate(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (invoiceDateBuilder_ == null) {
-          invoiceDate_ = builderForValue.build();
-        } else {
-          invoiceDateBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setInvoiceDate(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
        */
       public Builder mergeInvoiceDate(com.google.protobuf.Timestamp value) {
-        if (invoiceDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            invoiceDate_ != null &&
-            invoiceDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getInvoiceDateBuilder().mergeFrom(value);
-          } else {
-            invoiceDate_ = value;
-          }
-        } else {
-          invoiceDateBuilder_.mergeFrom(value);
-        }
-        if (invoiceDate_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeInvoiceDate(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
        */
-      public Builder clearInvoiceDate() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        invoiceDate_ = null;
-        if (invoiceDateBuilder_ != null) {
-          invoiceDateBuilder_.dispose();
-          invoiceDateBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearInvoiceDate() {  copyOnWrite();
+        instance.clearInvoiceDate();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getInvoiceDateBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getInvoiceDateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getInvoiceDateOrBuilder() {
-        if (invoiceDateBuilder_ != null) {
-          return invoiceDateBuilder_.getMessageOrBuilder();
-        } else {
-          return invoiceDate_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : invoiceDate_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp invoice_date = 2 [json_name = "invoiceDate"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getInvoiceDateFieldBuilder() {
-        if (invoiceDateBuilder_ == null) {
-          invoiceDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getInvoiceDate(),
-                  getParentForChildren(),
-                  isClean());
-          invoiceDate_ = null;
-        }
-        return invoiceDateBuilder_;
       }
 
-      private double invoiceAmount_ ;
       /**
        * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
        * @return The invoiceAmount.
        */
       @java.lang.Override
       public double getInvoiceAmount() {
-        return invoiceAmount_;
+        return instance.getInvoiceAmount();
       }
       /**
        * <code>double invoice_amount = 3 [json_name = "invoiceAmount"];</code>
@@ -4055,10 +2441,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder setInvoiceAmount(double value) {
-
-        invoiceAmount_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setInvoiceAmount(value);
         return this;
       }
       /**
@@ -4066,45 +2450,27 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearInvoiceAmount() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        invoiceAmount_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearInvoiceAmount();
         return this;
       }
 
-      private java.lang.Object status_ = "";
       /**
        * <code>string status = 4 [json_name = "status"];</code>
        * @return The status.
        */
+      @java.lang.Override
       public java.lang.String getStatus() {
-        java.lang.Object ref = status_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          status_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getStatus();
       }
       /**
        * <code>string status = 4 [json_name = "status"];</code>
        * @return The bytes for status.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getStatusBytes() {
-        java.lang.Object ref = status_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          status_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getStatusBytes();
       }
       /**
        * <code>string status = 4 [json_name = "status"];</code>
@@ -4113,10 +2479,8 @@ public final class Billing {
        */
       public Builder setStatus(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        status_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setStatus(value);
         return this;
       }
       /**
@@ -4124,9 +2488,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        status_ = getDefaultInstance().getStatus();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+        copyOnWrite();
+        instance.clearStatus();
         return this;
       }
       /**
@@ -4136,192 +2499,86 @@ public final class Billing {
        */
       public Builder setStatusBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        status_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setStatusBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Timestamp dueDate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dueDateBuilder_;
       /**
        * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       * @return Whether the dueDate field is set.
        */
+      @java.lang.Override
       public boolean hasDueDate() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return instance.hasDueDate();
       }
       /**
        * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       * @return The dueDate.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getDueDate() {
-        if (dueDateBuilder_ == null) {
-          return dueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dueDate_;
-        } else {
-          return dueDateBuilder_.getMessage();
-        }
+        return instance.getDueDate();
       }
       /**
        * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
        */
       public Builder setDueDate(com.google.protobuf.Timestamp value) {
-        if (dueDateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          dueDate_ = value;
-        } else {
-          dueDateBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setDueDate(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
        */
       public Builder setDueDate(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (dueDateBuilder_ == null) {
-          dueDate_ = builderForValue.build();
-        } else {
-          dueDateBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setDueDate(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
        */
       public Builder mergeDueDate(com.google.protobuf.Timestamp value) {
-        if (dueDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0) &&
-            dueDate_ != null &&
-            dueDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getDueDateBuilder().mergeFrom(value);
-          } else {
-            dueDate_ = value;
-          }
-        } else {
-          dueDateBuilder_.mergeFrom(value);
-        }
-        if (dueDate_ != null) {
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeDueDate(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
        */
-      public Builder clearDueDate() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        dueDate_ = null;
-        if (dueDateBuilder_ != null) {
-          dueDateBuilder_.dispose();
-          dueDateBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearDueDate() {  copyOnWrite();
+        instance.clearDueDate();
         return this;
       }
-      /**
-       * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getDueDateBuilder() {
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return getDueDateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getDueDateOrBuilder() {
-        if (dueDateBuilder_ != null) {
-          return dueDateBuilder_.getMessageOrBuilder();
-        } else {
-          return dueDate_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : dueDate_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp due_date = 5 [json_name = "dueDate"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getDueDateFieldBuilder() {
-        if (dueDateBuilder_ == null) {
-          dueDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getDueDate(),
-                  getParentForChildren(),
-                  isClean());
-          dueDate_ = null;
-        }
-        return dueDateBuilder_;
-      }
-
-      private java.util.List<viam.app.v1.Billing.BillableResourceEvent> items_ =
-        java.util.Collections.emptyList();
-      private void ensureItemsIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
-          items_ = new java.util.ArrayList<viam.app.v1.Billing.BillableResourceEvent>(items_);
-          bitField0_ |= 0x00000020;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.v1.Billing.BillableResourceEvent, viam.app.v1.Billing.BillableResourceEvent.Builder, viam.app.v1.Billing.BillableResourceEventOrBuilder> itemsBuilder_;
 
       /**
        * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
        */
+      @java.lang.Override
       public java.util.List<viam.app.v1.Billing.BillableResourceEvent> getItemsList() {
-        if (itemsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(items_);
-        } else {
-          return itemsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getItemsList());
       }
       /**
        * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
        */
+      @java.lang.Override
       public int getItemsCount() {
-        if (itemsBuilder_ == null) {
-          return items_.size();
-        } else {
-          return itemsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getItemsCount();
+      }/**
        * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
        */
+      @java.lang.Override
       public viam.app.v1.Billing.BillableResourceEvent getItems(int index) {
-        if (itemsBuilder_ == null) {
-          return items_.get(index);
-        } else {
-          return itemsBuilder_.getMessage(index);
-        }
+        return instance.getItems(index);
       }
       /**
        * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
        */
       public Builder setItems(
           int index, viam.app.v1.Billing.BillableResourceEvent value) {
-        if (itemsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureItemsIsMutable();
-          items_.set(index, value);
-          onChanged();
-        } else {
-          itemsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setItems(index, value);
         return this;
       }
       /**
@@ -4329,29 +2586,17 @@ public final class Billing {
        */
       public Builder setItems(
           int index, viam.app.v1.Billing.BillableResourceEvent.Builder builderForValue) {
-        if (itemsBuilder_ == null) {
-          ensureItemsIsMutable();
-          items_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          itemsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setItems(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
        */
       public Builder addItems(viam.app.v1.Billing.BillableResourceEvent value) {
-        if (itemsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureItemsIsMutable();
-          items_.add(value);
-          onChanged();
-        } else {
-          itemsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addItems(value);
         return this;
       }
       /**
@@ -4359,16 +2604,8 @@ public final class Billing {
        */
       public Builder addItems(
           int index, viam.app.v1.Billing.BillableResourceEvent value) {
-        if (itemsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureItemsIsMutable();
-          items_.add(index, value);
-          onChanged();
-        } else {
-          itemsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addItems(index, value);
         return this;
       }
       /**
@@ -4376,13 +2613,8 @@ public final class Billing {
        */
       public Builder addItems(
           viam.app.v1.Billing.BillableResourceEvent.Builder builderForValue) {
-        if (itemsBuilder_ == null) {
-          ensureItemsIsMutable();
-          items_.add(builderForValue.build());
-          onChanged();
-        } else {
-          itemsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addItems(builderForValue.build());
         return this;
       }
       /**
@@ -4390,13 +2622,9 @@ public final class Billing {
        */
       public Builder addItems(
           int index, viam.app.v1.Billing.BillableResourceEvent.Builder builderForValue) {
-        if (itemsBuilder_ == null) {
-          ensureItemsIsMutable();
-          items_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          itemsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addItems(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -4404,140 +2632,43 @@ public final class Billing {
        */
       public Builder addAllItems(
           java.lang.Iterable<? extends viam.app.v1.Billing.BillableResourceEvent> values) {
-        if (itemsBuilder_ == null) {
-          ensureItemsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, items_);
-          onChanged();
-        } else {
-          itemsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllItems(values);
         return this;
       }
       /**
        * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
        */
       public Builder clearItems() {
-        if (itemsBuilder_ == null) {
-          items_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
-          onChanged();
-        } else {
-          itemsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearItems();
         return this;
       }
       /**
        * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
        */
       public Builder removeItems(int index) {
-        if (itemsBuilder_ == null) {
-          ensureItemsIsMutable();
-          items_.remove(index);
-          onChanged();
-        } else {
-          itemsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeItems(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public viam.app.v1.Billing.BillableResourceEvent.Builder getItemsBuilder(
-          int index) {
-        return getItemsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public viam.app.v1.Billing.BillableResourceEventOrBuilder getItemsOrBuilder(
-          int index) {
-        if (itemsBuilder_ == null) {
-          return items_.get(index);  } else {
-          return itemsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public java.util.List<? extends viam.app.v1.Billing.BillableResourceEventOrBuilder> 
-           getItemsOrBuilderList() {
-        if (itemsBuilder_ != null) {
-          return itemsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(items_);
-        }
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public viam.app.v1.Billing.BillableResourceEvent.Builder addItemsBuilder() {
-        return getItemsFieldBuilder().addBuilder(
-            viam.app.v1.Billing.BillableResourceEvent.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public viam.app.v1.Billing.BillableResourceEvent.Builder addItemsBuilder(
-          int index) {
-        return getItemsFieldBuilder().addBuilder(
-            index, viam.app.v1.Billing.BillableResourceEvent.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.app.v1.BillableResourceEvent items = 6 [json_name = "items"];</code>
-       */
-      public java.util.List<viam.app.v1.Billing.BillableResourceEvent.Builder> 
-           getItemsBuilderList() {
-        return getItemsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.v1.Billing.BillableResourceEvent, viam.app.v1.Billing.BillableResourceEvent.Builder, viam.app.v1.Billing.BillableResourceEventOrBuilder> 
-          getItemsFieldBuilder() {
-        if (itemsBuilder_ == null) {
-          itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              viam.app.v1.Billing.BillableResourceEvent, viam.app.v1.Billing.BillableResourceEvent.Builder, viam.app.v1.Billing.BillableResourceEventOrBuilder>(
-                  items_,
-                  ((bitField0_ & 0x00000020) != 0),
-                  getParentForChildren(),
-                  isClean());
-          items_ = null;
-        }
-        return itemsBuilder_;
-      }
 
-      private java.lang.Object emailedTo_ = "";
       /**
        * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
        * @return The emailedTo.
        */
+      @java.lang.Override
       public java.lang.String getEmailedTo() {
-        java.lang.Object ref = emailedTo_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          emailedTo_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getEmailedTo();
       }
       /**
        * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
        * @return The bytes for emailedTo.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getEmailedToBytes() {
-        java.lang.Object ref = emailedTo_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          emailedTo_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getEmailedToBytes();
       }
       /**
        * <code>string emailed_to = 7 [json_name = "emailedTo"];</code>
@@ -4546,10 +2677,8 @@ public final class Billing {
        */
       public Builder setEmailedTo(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        emailedTo_ = value;
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setEmailedTo(value);
         return this;
       }
       /**
@@ -4557,9 +2686,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearEmailedTo() {
-        emailedTo_ = getDefaultInstance().getEmailedTo();
-        bitField0_ = (bitField0_ & ~0x00000040);
-        onChanged();
+        copyOnWrite();
+        instance.clearEmailedTo();
         return this;
       }
       /**
@@ -4569,80 +2697,97 @@ public final class Billing {
        */
       public Builder setEmailedToBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        emailedTo_ = value;
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setEmailedToBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.Invoice)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.Invoice();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "id_",
+              "invoiceDate_",
+              "invoiceAmount_",
+              "status_",
+              "dueDate_",
+              "items_",
+              viam.app.v1.Billing.BillableResourceEvent.class,
+              "emailedTo_",
+            };
+            java.lang.String info =
+                "\u0000\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0001\u0000\u0001\u0208\u0002\u1009" +
+                "\u0000\u0003\u0000\u0004\u0208\u0005\u1009\u0001\u0006\u001b\u0007\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.Invoice> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.Invoice.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.Invoice>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.Invoice)
     private static final viam.app.v1.Billing.Invoice DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.Billing.Invoice();
+      Invoice defaultInstance = new Invoice();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Invoice.class, defaultInstance);
     }
 
     public static viam.app.v1.Billing.Invoice getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Invoice>
-        PARSER = new com.google.protobuf.AbstractParser<Invoice>() {
-      @java.lang.Override
-      public Invoice parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Invoice> PARSER;
 
     public static com.google.protobuf.Parser<Invoice> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Invoice> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.Billing.Invoice getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface PaymentMethodCardOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.PaymentMethodCard)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string brand = 1 [json_name = "brand"];</code>
@@ -4671,59 +2816,24 @@ public final class Billing {
   /**
    * Protobuf type {@code viam.app.v1.PaymentMethodCard}
    */
-  public static final class PaymentMethodCard extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class PaymentMethodCard extends
+      com.google.protobuf.GeneratedMessageLite<
+          PaymentMethodCard, PaymentMethodCard.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.PaymentMethodCard)
       PaymentMethodCardOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use PaymentMethodCard.newBuilder() to construct.
-    private PaymentMethodCard(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private PaymentMethodCard() {
       brand_ = "";
       lastFourDigits_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new PaymentMethodCard();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_PaymentMethodCard_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_PaymentMethodCard_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.Billing.PaymentMethodCard.class, viam.app.v1.Billing.PaymentMethodCard.Builder.class);
-    }
-
     public static final int BRAND_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object brand_ = "";
+    private java.lang.String brand_;
     /**
      * <code>string brand = 1 [json_name = "brand"];</code>
      * @return The brand.
      */
     @java.lang.Override
     public java.lang.String getBrand() {
-      java.lang.Object ref = brand_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        brand_ = s;
-        return s;
-      }
+      return brand_;
     }
     /**
      * <code>string brand = 1 [json_name = "brand"];</code>
@@ -4732,37 +2842,45 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getBrandBytes() {
-      java.lang.Object ref = brand_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        brand_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(brand_);
+    }
+    /**
+     * <code>string brand = 1 [json_name = "brand"];</code>
+     * @param value The brand to set.
+     */
+    private void setBrand(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      brand_ = value;
+    }
+    /**
+     * <code>string brand = 1 [json_name = "brand"];</code>
+     */
+    private void clearBrand() {
+
+      brand_ = getDefaultInstance().getBrand();
+    }
+    /**
+     * <code>string brand = 1 [json_name = "brand"];</code>
+     * @param value The bytes for brand to set.
+     */
+    private void setBrandBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      brand_ = value.toStringUtf8();
+
     }
 
     public static final int LAST_FOUR_DIGITS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object lastFourDigits_ = "";
+    private java.lang.String lastFourDigits_;
     /**
      * <code>string last_four_digits = 2 [json_name = "lastFourDigits"];</code>
      * @return The lastFourDigits.
      */
     @java.lang.Override
     public java.lang.String getLastFourDigits() {
-      java.lang.Object ref = lastFourDigits_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        lastFourDigits_ = s;
-        return s;
-      }
+      return lastFourDigits_;
     }
     /**
      * <code>string last_four_digits = 2 [json_name = "lastFourDigits"];</code>
@@ -4771,401 +2889,149 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getLastFourDigitsBytes() {
-      java.lang.Object ref = lastFourDigits_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        lastFourDigits_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(lastFourDigits_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string last_four_digits = 2 [json_name = "lastFourDigits"];</code>
+     * @param value The lastFourDigits to set.
+     */
+    private void setLastFourDigits(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      lastFourDigits_ = value;
     }
+    /**
+     * <code>string last_four_digits = 2 [json_name = "lastFourDigits"];</code>
+     */
+    private void clearLastFourDigits() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(brand_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, brand_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastFourDigits_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, lastFourDigits_);
-      }
-      getUnknownFields().writeTo(output);
+      lastFourDigits_ = getDefaultInstance().getLastFourDigits();
     }
+    /**
+     * <code>string last_four_digits = 2 [json_name = "lastFourDigits"];</code>
+     * @param value The bytes for lastFourDigits to set.
+     */
+    private void setLastFourDigitsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      lastFourDigits_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(brand_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, brand_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastFourDigits_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, lastFourDigits_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.Billing.PaymentMethodCard)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.Billing.PaymentMethodCard other = (viam.app.v1.Billing.PaymentMethodCard) obj;
-
-      if (!getBrand()
-          .equals(other.getBrand())) return false;
-      if (!getLastFourDigits()
-          .equals(other.getLastFourDigits())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + BRAND_FIELD_NUMBER;
-      hash = (53 * hash) + getBrand().hashCode();
-      hash = (37 * hash) + LAST_FOUR_DIGITS_FIELD_NUMBER;
-      hash = (53 * hash) + getLastFourDigits().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.v1.Billing.PaymentMethodCard parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.PaymentMethodCard parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.PaymentMethodCard parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.PaymentMethodCard parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.PaymentMethodCard parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.PaymentMethodCard parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.PaymentMethodCard parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.PaymentMethodCard parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.Billing.PaymentMethodCard parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.Billing.PaymentMethodCard parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.Billing.PaymentMethodCard parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.PaymentMethodCard parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.Billing.PaymentMethodCard prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.PaymentMethodCard}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.PaymentMethodCard, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.PaymentMethodCard)
         viam.app.v1.Billing.PaymentMethodCardOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_PaymentMethodCard_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_PaymentMethodCard_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.Billing.PaymentMethodCard.class, viam.app.v1.Billing.PaymentMethodCard.Builder.class);
-      }
-
       // Construct using viam.app.v1.Billing.PaymentMethodCard.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        brand_ = "";
-        lastFourDigits_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_PaymentMethodCard_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.PaymentMethodCard getDefaultInstanceForType() {
-        return viam.app.v1.Billing.PaymentMethodCard.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.PaymentMethodCard build() {
-        viam.app.v1.Billing.PaymentMethodCard result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.PaymentMethodCard buildPartial() {
-        viam.app.v1.Billing.PaymentMethodCard result = new viam.app.v1.Billing.PaymentMethodCard(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.Billing.PaymentMethodCard result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.brand_ = brand_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.lastFourDigits_ = lastFourDigits_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.Billing.PaymentMethodCard) {
-          return mergeFrom((viam.app.v1.Billing.PaymentMethodCard)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.Billing.PaymentMethodCard other) {
-        if (other == viam.app.v1.Billing.PaymentMethodCard.getDefaultInstance()) return this;
-        if (!other.getBrand().isEmpty()) {
-          brand_ = other.brand_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getLastFourDigits().isEmpty()) {
-          lastFourDigits_ = other.lastFourDigits_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                brand_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                lastFourDigits_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object brand_ = "";
       /**
        * <code>string brand = 1 [json_name = "brand"];</code>
        * @return The brand.
        */
+      @java.lang.Override
       public java.lang.String getBrand() {
-        java.lang.Object ref = brand_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          brand_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getBrand();
       }
       /**
        * <code>string brand = 1 [json_name = "brand"];</code>
        * @return The bytes for brand.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getBrandBytes() {
-        java.lang.Object ref = brand_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          brand_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getBrandBytes();
       }
       /**
        * <code>string brand = 1 [json_name = "brand"];</code>
@@ -5174,10 +3040,8 @@ public final class Billing {
        */
       public Builder setBrand(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        brand_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setBrand(value);
         return this;
       }
       /**
@@ -5185,9 +3049,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearBrand() {
-        brand_ = getDefaultInstance().getBrand();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearBrand();
         return this;
       }
       /**
@@ -5197,47 +3060,27 @@ public final class Billing {
        */
       public Builder setBrandBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        brand_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setBrandBytes(value);
         return this;
       }
 
-      private java.lang.Object lastFourDigits_ = "";
       /**
        * <code>string last_four_digits = 2 [json_name = "lastFourDigits"];</code>
        * @return The lastFourDigits.
        */
+      @java.lang.Override
       public java.lang.String getLastFourDigits() {
-        java.lang.Object ref = lastFourDigits_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          lastFourDigits_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getLastFourDigits();
       }
       /**
        * <code>string last_four_digits = 2 [json_name = "lastFourDigits"];</code>
        * @return The bytes for lastFourDigits.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getLastFourDigitsBytes() {
-        java.lang.Object ref = lastFourDigits_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          lastFourDigits_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getLastFourDigitsBytes();
       }
       /**
        * <code>string last_four_digits = 2 [json_name = "lastFourDigits"];</code>
@@ -5246,10 +3089,8 @@ public final class Billing {
        */
       public Builder setLastFourDigits(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        lastFourDigits_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setLastFourDigits(value);
         return this;
       }
       /**
@@ -5257,9 +3098,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearLastFourDigits() {
-        lastFourDigits_ = getDefaultInstance().getLastFourDigits();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearLastFourDigits();
         return this;
       }
       /**
@@ -5269,80 +3109,90 @@ public final class Billing {
        */
       public Builder setLastFourDigitsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        lastFourDigits_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setLastFourDigitsBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.PaymentMethodCard)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.PaymentMethodCard();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "brand_",
+              "lastFourDigits_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.PaymentMethodCard> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.PaymentMethodCard.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.PaymentMethodCard>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.PaymentMethodCard)
     private static final viam.app.v1.Billing.PaymentMethodCard DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.Billing.PaymentMethodCard();
+      PaymentMethodCard defaultInstance = new PaymentMethodCard();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        PaymentMethodCard.class, defaultInstance);
     }
 
     public static viam.app.v1.Billing.PaymentMethodCard getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PaymentMethodCard>
-        PARSER = new com.google.protobuf.AbstractParser<PaymentMethodCard>() {
-      @java.lang.Override
-      public PaymentMethodCard parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<PaymentMethodCard> PARSER;
 
     public static com.google.protobuf.Parser<PaymentMethodCard> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PaymentMethodCard> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.Billing.PaymentMethodCard getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetCurrentMonthUsageRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.GetCurrentMonthUsageRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string org_id = 1 [json_name = "orgId"];</code>
@@ -5359,58 +3209,23 @@ public final class Billing {
   /**
    * Protobuf type {@code viam.app.v1.GetCurrentMonthUsageRequest}
    */
-  public static final class GetCurrentMonthUsageRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetCurrentMonthUsageRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetCurrentMonthUsageRequest, GetCurrentMonthUsageRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.GetCurrentMonthUsageRequest)
       GetCurrentMonthUsageRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetCurrentMonthUsageRequest.newBuilder() to construct.
-    private GetCurrentMonthUsageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetCurrentMonthUsageRequest() {
       orgId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetCurrentMonthUsageRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetCurrentMonthUsageRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetCurrentMonthUsageRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.Billing.GetCurrentMonthUsageRequest.class, viam.app.v1.Billing.GetCurrentMonthUsageRequest.Builder.class);
-    }
-
     public static final int ORG_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object orgId_ = "";
+    private java.lang.String orgId_;
     /**
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The orgId.
      */
     @java.lang.Override
     public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      }
+      return orgId_;
     }
     /**
      * <code>string org_id = 1 [json_name = "orgId"];</code>
@@ -5419,377 +3234,149 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      orgId_ = value;
     }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     */
+    private void clearOrgId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
-      }
-      getUnknownFields().writeTo(output);
+      orgId_ = getDefaultInstance().getOrgId();
     }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.Billing.GetCurrentMonthUsageRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.Billing.GetCurrentMonthUsageRequest other = (viam.app.v1.Billing.GetCurrentMonthUsageRequest) obj;
-
-      if (!getOrgId()
-          .equals(other.getOrgId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrgId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.v1.Billing.GetCurrentMonthUsageRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.Billing.GetCurrentMonthUsageRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.Billing.GetCurrentMonthUsageRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.Billing.GetCurrentMonthUsageRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.GetCurrentMonthUsageRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.GetCurrentMonthUsageRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.GetCurrentMonthUsageRequest)
         viam.app.v1.Billing.GetCurrentMonthUsageRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetCurrentMonthUsageRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetCurrentMonthUsageRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.Billing.GetCurrentMonthUsageRequest.class, viam.app.v1.Billing.GetCurrentMonthUsageRequest.Builder.class);
-      }
-
       // Construct using viam.app.v1.Billing.GetCurrentMonthUsageRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        orgId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetCurrentMonthUsageRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetCurrentMonthUsageRequest getDefaultInstanceForType() {
-        return viam.app.v1.Billing.GetCurrentMonthUsageRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetCurrentMonthUsageRequest build() {
-        viam.app.v1.Billing.GetCurrentMonthUsageRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetCurrentMonthUsageRequest buildPartial() {
-        viam.app.v1.Billing.GetCurrentMonthUsageRequest result = new viam.app.v1.Billing.GetCurrentMonthUsageRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.Billing.GetCurrentMonthUsageRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.orgId_ = orgId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.Billing.GetCurrentMonthUsageRequest) {
-          return mergeFrom((viam.app.v1.Billing.GetCurrentMonthUsageRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.Billing.GetCurrentMonthUsageRequest other) {
-        if (other == viam.app.v1.Billing.GetCurrentMonthUsageRequest.getDefaultInstance()) return this;
-        if (!other.getOrgId().isEmpty()) {
-          orgId_ = other.orgId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                orgId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object orgId_ = "";
       /**
        * <code>string org_id = 1 [json_name = "orgId"];</code>
        * @return The orgId.
        */
+      @java.lang.Override
       public java.lang.String getOrgId() {
-        java.lang.Object ref = orgId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          orgId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrgId();
       }
       /**
        * <code>string org_id = 1 [json_name = "orgId"];</code>
        * @return The bytes for orgId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrgIdBytes() {
-        java.lang.Object ref = orgId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          orgId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrgIdBytes();
       }
       /**
        * <code>string org_id = 1 [json_name = "orgId"];</code>
@@ -5798,10 +3385,8 @@ public final class Billing {
        */
       public Builder setOrgId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        orgId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgId(value);
         return this;
       }
       /**
@@ -5809,9 +3394,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearOrgId() {
-        orgId_ = getDefaultInstance().getOrgId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrgId();
         return this;
       }
       /**
@@ -5821,80 +3405,88 @@ public final class Billing {
        */
       public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        orgId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetCurrentMonthUsageRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.GetCurrentMonthUsageRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "orgId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.GetCurrentMonthUsageRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.GetCurrentMonthUsageRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.GetCurrentMonthUsageRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.GetCurrentMonthUsageRequest)
     private static final viam.app.v1.Billing.GetCurrentMonthUsageRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.Billing.GetCurrentMonthUsageRequest();
+      GetCurrentMonthUsageRequest defaultInstance = new GetCurrentMonthUsageRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetCurrentMonthUsageRequest.class, defaultInstance);
     }
 
     public static viam.app.v1.Billing.GetCurrentMonthUsageRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetCurrentMonthUsageRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetCurrentMonthUsageRequest>() {
-      @java.lang.Override
-      public GetCurrentMonthUsageRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetCurrentMonthUsageRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetCurrentMonthUsageRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetCurrentMonthUsageRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.Billing.GetCurrentMonthUsageRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetCurrentMonthUsageResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.GetCurrentMonthUsageResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
@@ -5906,10 +3498,6 @@ public final class Billing {
      * @return The startDate.
      */
     com.google.protobuf.Timestamp getStartDate();
-    /**
-     * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder();
 
     /**
      * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
@@ -5921,10 +3509,6 @@ public final class Billing {
      * @return The endDate.
      */
     com.google.protobuf.Timestamp getEndDate();
-    /**
-     * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder();
 
     /**
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code>
@@ -5977,44 +3561,18 @@ public final class Billing {
   /**
    * Protobuf type {@code viam.app.v1.GetCurrentMonthUsageResponse}
    */
-  public static final class GetCurrentMonthUsageResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetCurrentMonthUsageResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetCurrentMonthUsageResponse, GetCurrentMonthUsageResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.GetCurrentMonthUsageResponse)
       GetCurrentMonthUsageResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetCurrentMonthUsageResponse.newBuilder() to construct.
-    private GetCurrentMonthUsageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetCurrentMonthUsageResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetCurrentMonthUsageResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetCurrentMonthUsageResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetCurrentMonthUsageResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.Billing.GetCurrentMonthUsageResponse.class, viam.app.v1.Billing.GetCurrentMonthUsageResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int START_DATE_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp startDate_;
     /**
      * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
-     * @return Whether the startDate field is set.
      */
     @java.lang.Override
     public boolean hasStartDate() {
@@ -6022,7 +3580,6 @@ public final class Billing {
     }
     /**
      * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
-     * @return The startDate.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getStartDate() {
@@ -6031,16 +3588,37 @@ public final class Billing {
     /**
      * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder() {
-      return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+    private void setStartDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  startDate_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeStartDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (startDate_ != null &&
+          startDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        startDate_ =
+          com.google.protobuf.Timestamp.newBuilder(startDate_).mergeFrom(value).buildPartial();
+      } else {
+        startDate_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
+     */
+    private void clearStartDate() {  startDate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int END_DATE_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp endDate_;
     /**
      * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
-     * @return Whether the endDate field is set.
      */
     @java.lang.Override
     public boolean hasEndDate() {
@@ -6048,7 +3626,6 @@ public final class Billing {
     }
     /**
      * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
-     * @return The endDate.
      */
     @java.lang.Override
     public com.google.protobuf.Timestamp getEndDate() {
@@ -6057,13 +3634,35 @@ public final class Billing {
     /**
      * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder() {
-      return endDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
+    private void setEndDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  endDate_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeEndDate(com.google.protobuf.Timestamp value) {
+      value.getClass();
+  if (endDate_ != null &&
+          endDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+        endDate_ =
+          com.google.protobuf.Timestamp.newBuilder(endDate_).mergeFrom(value).buildPartial();
+      } else {
+        endDate_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
+     */
+    private void clearEndDate() {  endDate_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static final int CLOUD_STORAGE_USAGE_COST_FIELD_NUMBER = 3;
-    private double cloudStorageUsageCost_ = 0D;
+    private double cloudStorageUsageCost_;
     /**
      * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code>
      * @return The cloudStorageUsageCost.
@@ -6072,9 +3671,24 @@ public final class Billing {
     public double getCloudStorageUsageCost() {
       return cloudStorageUsageCost_;
     }
+    /**
+     * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code>
+     * @param value The cloudStorageUsageCost to set.
+     */
+    private void setCloudStorageUsageCost(double value) {
+      
+      cloudStorageUsageCost_ = value;
+    }
+    /**
+     * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code>
+     */
+    private void clearCloudStorageUsageCost() {
+
+      cloudStorageUsageCost_ = 0D;
+    }
 
     public static final int DATA_UPLOAD_USAGE_COST_FIELD_NUMBER = 4;
-    private double dataUploadUsageCost_ = 0D;
+    private double dataUploadUsageCost_;
     /**
      * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code>
      * @return The dataUploadUsageCost.
@@ -6083,9 +3697,24 @@ public final class Billing {
     public double getDataUploadUsageCost() {
       return dataUploadUsageCost_;
     }
+    /**
+     * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code>
+     * @param value The dataUploadUsageCost to set.
+     */
+    private void setDataUploadUsageCost(double value) {
+      
+      dataUploadUsageCost_ = value;
+    }
+    /**
+     * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code>
+     */
+    private void clearDataUploadUsageCost() {
+
+      dataUploadUsageCost_ = 0D;
+    }
 
     public static final int DATA_EGRES_USAGE_COST_FIELD_NUMBER = 5;
-    private double dataEgresUsageCost_ = 0D;
+    private double dataEgresUsageCost_;
     /**
      * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code>
      * @return The dataEgresUsageCost.
@@ -6094,9 +3723,24 @@ public final class Billing {
     public double getDataEgresUsageCost() {
       return dataEgresUsageCost_;
     }
+    /**
+     * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code>
+     * @param value The dataEgresUsageCost to set.
+     */
+    private void setDataEgresUsageCost(double value) {
+      
+      dataEgresUsageCost_ = value;
+    }
+    /**
+     * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code>
+     */
+    private void clearDataEgresUsageCost() {
+
+      dataEgresUsageCost_ = 0D;
+    }
 
     public static final int REMOTE_CONTROL_USAGE_COST_FIELD_NUMBER = 6;
-    private double remoteControlUsageCost_ = 0D;
+    private double remoteControlUsageCost_;
     /**
      * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code>
      * @return The remoteControlUsageCost.
@@ -6105,9 +3749,24 @@ public final class Billing {
     public double getRemoteControlUsageCost() {
       return remoteControlUsageCost_;
     }
+    /**
+     * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code>
+     * @param value The remoteControlUsageCost to set.
+     */
+    private void setRemoteControlUsageCost(double value) {
+      
+      remoteControlUsageCost_ = value;
+    }
+    /**
+     * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code>
+     */
+    private void clearRemoteControlUsageCost() {
+
+      remoteControlUsageCost_ = 0D;
+    }
 
     public static final int STANDARD_COMPUTE_USAGE_COST_FIELD_NUMBER = 7;
-    private double standardComputeUsageCost_ = 0D;
+    private double standardComputeUsageCost_;
     /**
      * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code>
      * @return The standardComputeUsageCost.
@@ -6116,9 +3775,24 @@ public final class Billing {
     public double getStandardComputeUsageCost() {
       return standardComputeUsageCost_;
     }
+    /**
+     * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code>
+     * @param value The standardComputeUsageCost to set.
+     */
+    private void setStandardComputeUsageCost(double value) {
+      
+      standardComputeUsageCost_ = value;
+    }
+    /**
+     * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code>
+     */
+    private void clearStandardComputeUsageCost() {
+
+      standardComputeUsageCost_ = 0D;
+    }
 
     public static final int DISCOUNT_AMOUNT_FIELD_NUMBER = 8;
-    private double discountAmount_ = 0D;
+    private double discountAmount_;
     /**
      * <code>double discount_amount = 8 [json_name = "discountAmount"];</code>
      * @return The discountAmount.
@@ -6127,9 +3801,24 @@ public final class Billing {
     public double getDiscountAmount() {
       return discountAmount_;
     }
+    /**
+     * <code>double discount_amount = 8 [json_name = "discountAmount"];</code>
+     * @param value The discountAmount to set.
+     */
+    private void setDiscountAmount(double value) {
+      
+      discountAmount_ = value;
+    }
+    /**
+     * <code>double discount_amount = 8 [json_name = "discountAmount"];</code>
+     */
+    private void clearDiscountAmount() {
+
+      discountAmount_ = 0D;
+    }
 
     public static final int TOTAL_USAGE_WITH_DISCOUNT_FIELD_NUMBER = 9;
-    private double totalUsageWithDiscount_ = 0D;
+    private double totalUsageWithDiscount_;
     /**
      * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code>
      * @return The totalUsageWithDiscount.
@@ -6138,9 +3827,24 @@ public final class Billing {
     public double getTotalUsageWithDiscount() {
       return totalUsageWithDiscount_;
     }
+    /**
+     * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code>
+     * @param value The totalUsageWithDiscount to set.
+     */
+    private void setTotalUsageWithDiscount(double value) {
+      
+      totalUsageWithDiscount_ = value;
+    }
+    /**
+     * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code>
+     */
+    private void clearTotalUsageWithDiscount() {
+
+      totalUsageWithDiscount_ = 0D;
+    }
 
     public static final int TOTAL_USAGE_WITHOUT_DISCOUNT_FIELD_NUMBER = 10;
-    private double totalUsageWithoutDiscount_ = 0D;
+    private double totalUsageWithoutDiscount_;
     /**
      * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code>
      * @return The totalUsageWithoutDiscount.
@@ -6149,842 +3853,220 @@ public final class Billing {
     public double getTotalUsageWithoutDiscount() {
       return totalUsageWithoutDiscount_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code>
+     * @param value The totalUsageWithoutDiscount to set.
+     */
+    private void setTotalUsageWithoutDiscount(double value) {
+      
+      totalUsageWithoutDiscount_ = value;
     }
+    /**
+     * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code>
+     */
+    private void clearTotalUsageWithoutDiscount() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getStartDate());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(2, getEndDate());
-      }
-      if (java.lang.Double.doubleToRawLongBits(cloudStorageUsageCost_) != 0) {
-        output.writeDouble(3, cloudStorageUsageCost_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(dataUploadUsageCost_) != 0) {
-        output.writeDouble(4, dataUploadUsageCost_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(dataEgresUsageCost_) != 0) {
-        output.writeDouble(5, dataEgresUsageCost_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(remoteControlUsageCost_) != 0) {
-        output.writeDouble(6, remoteControlUsageCost_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(standardComputeUsageCost_) != 0) {
-        output.writeDouble(7, standardComputeUsageCost_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(discountAmount_) != 0) {
-        output.writeDouble(8, discountAmount_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(totalUsageWithDiscount_) != 0) {
-        output.writeDouble(9, totalUsageWithDiscount_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(totalUsageWithoutDiscount_) != 0) {
-        output.writeDouble(10, totalUsageWithoutDiscount_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getStartDate());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getEndDate());
-      }
-      if (java.lang.Double.doubleToRawLongBits(cloudStorageUsageCost_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(3, cloudStorageUsageCost_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(dataUploadUsageCost_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(4, dataUploadUsageCost_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(dataEgresUsageCost_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(5, dataEgresUsageCost_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(remoteControlUsageCost_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(6, remoteControlUsageCost_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(standardComputeUsageCost_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(7, standardComputeUsageCost_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(discountAmount_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(8, discountAmount_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(totalUsageWithDiscount_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(9, totalUsageWithDiscount_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(totalUsageWithoutDiscount_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(10, totalUsageWithoutDiscount_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.Billing.GetCurrentMonthUsageResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.Billing.GetCurrentMonthUsageResponse other = (viam.app.v1.Billing.GetCurrentMonthUsageResponse) obj;
-
-      if (hasStartDate() != other.hasStartDate()) return false;
-      if (hasStartDate()) {
-        if (!getStartDate()
-            .equals(other.getStartDate())) return false;
-      }
-      if (hasEndDate() != other.hasEndDate()) return false;
-      if (hasEndDate()) {
-        if (!getEndDate()
-            .equals(other.getEndDate())) return false;
-      }
-      if (java.lang.Double.doubleToLongBits(getCloudStorageUsageCost())
-          != java.lang.Double.doubleToLongBits(
-              other.getCloudStorageUsageCost())) return false;
-      if (java.lang.Double.doubleToLongBits(getDataUploadUsageCost())
-          != java.lang.Double.doubleToLongBits(
-              other.getDataUploadUsageCost())) return false;
-      if (java.lang.Double.doubleToLongBits(getDataEgresUsageCost())
-          != java.lang.Double.doubleToLongBits(
-              other.getDataEgresUsageCost())) return false;
-      if (java.lang.Double.doubleToLongBits(getRemoteControlUsageCost())
-          != java.lang.Double.doubleToLongBits(
-              other.getRemoteControlUsageCost())) return false;
-      if (java.lang.Double.doubleToLongBits(getStandardComputeUsageCost())
-          != java.lang.Double.doubleToLongBits(
-              other.getStandardComputeUsageCost())) return false;
-      if (java.lang.Double.doubleToLongBits(getDiscountAmount())
-          != java.lang.Double.doubleToLongBits(
-              other.getDiscountAmount())) return false;
-      if (java.lang.Double.doubleToLongBits(getTotalUsageWithDiscount())
-          != java.lang.Double.doubleToLongBits(
-              other.getTotalUsageWithDiscount())) return false;
-      if (java.lang.Double.doubleToLongBits(getTotalUsageWithoutDiscount())
-          != java.lang.Double.doubleToLongBits(
-              other.getTotalUsageWithoutDiscount())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasStartDate()) {
-        hash = (37 * hash) + START_DATE_FIELD_NUMBER;
-        hash = (53 * hash) + getStartDate().hashCode();
-      }
-      if (hasEndDate()) {
-        hash = (37 * hash) + END_DATE_FIELD_NUMBER;
-        hash = (53 * hash) + getEndDate().hashCode();
-      }
-      hash = (37 * hash) + CLOUD_STORAGE_USAGE_COST_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getCloudStorageUsageCost()));
-      hash = (37 * hash) + DATA_UPLOAD_USAGE_COST_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getDataUploadUsageCost()));
-      hash = (37 * hash) + DATA_EGRES_USAGE_COST_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getDataEgresUsageCost()));
-      hash = (37 * hash) + REMOTE_CONTROL_USAGE_COST_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getRemoteControlUsageCost()));
-      hash = (37 * hash) + STANDARD_COMPUTE_USAGE_COST_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getStandardComputeUsageCost()));
-      hash = (37 * hash) + DISCOUNT_AMOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getDiscountAmount()));
-      hash = (37 * hash) + TOTAL_USAGE_WITH_DISCOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getTotalUsageWithDiscount()));
-      hash = (37 * hash) + TOTAL_USAGE_WITHOUT_DISCOUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getTotalUsageWithoutDiscount()));
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      totalUsageWithoutDiscount_ = 0D;
     }
 
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.Billing.GetCurrentMonthUsageResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.GetCurrentMonthUsageResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.GetCurrentMonthUsageResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.GetCurrentMonthUsageResponse)
         viam.app.v1.Billing.GetCurrentMonthUsageResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetCurrentMonthUsageResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetCurrentMonthUsageResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.Billing.GetCurrentMonthUsageResponse.class, viam.app.v1.Billing.GetCurrentMonthUsageResponse.Builder.class);
-      }
-
       // Construct using viam.app.v1.Billing.GetCurrentMonthUsageResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getStartDateFieldBuilder();
-          getEndDateFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        startDate_ = null;
-        if (startDateBuilder_ != null) {
-          startDateBuilder_.dispose();
-          startDateBuilder_ = null;
-        }
-        endDate_ = null;
-        if (endDateBuilder_ != null) {
-          endDateBuilder_.dispose();
-          endDateBuilder_ = null;
-        }
-        cloudStorageUsageCost_ = 0D;
-        dataUploadUsageCost_ = 0D;
-        dataEgresUsageCost_ = 0D;
-        remoteControlUsageCost_ = 0D;
-        standardComputeUsageCost_ = 0D;
-        discountAmount_ = 0D;
-        totalUsageWithDiscount_ = 0D;
-        totalUsageWithoutDiscount_ = 0D;
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetCurrentMonthUsageResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetCurrentMonthUsageResponse getDefaultInstanceForType() {
-        return viam.app.v1.Billing.GetCurrentMonthUsageResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetCurrentMonthUsageResponse build() {
-        viam.app.v1.Billing.GetCurrentMonthUsageResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetCurrentMonthUsageResponse buildPartial() {
-        viam.app.v1.Billing.GetCurrentMonthUsageResponse result = new viam.app.v1.Billing.GetCurrentMonthUsageResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.Billing.GetCurrentMonthUsageResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.startDate_ = startDateBuilder_ == null
-              ? startDate_
-              : startDateBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.endDate_ = endDateBuilder_ == null
-              ? endDate_
-              : endDateBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.cloudStorageUsageCost_ = cloudStorageUsageCost_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.dataUploadUsageCost_ = dataUploadUsageCost_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.dataEgresUsageCost_ = dataEgresUsageCost_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.remoteControlUsageCost_ = remoteControlUsageCost_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.standardComputeUsageCost_ = standardComputeUsageCost_;
-        }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.discountAmount_ = discountAmount_;
-        }
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.totalUsageWithDiscount_ = totalUsageWithDiscount_;
-        }
-        if (((from_bitField0_ & 0x00000200) != 0)) {
-          result.totalUsageWithoutDiscount_ = totalUsageWithoutDiscount_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.Billing.GetCurrentMonthUsageResponse) {
-          return mergeFrom((viam.app.v1.Billing.GetCurrentMonthUsageResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.Billing.GetCurrentMonthUsageResponse other) {
-        if (other == viam.app.v1.Billing.GetCurrentMonthUsageResponse.getDefaultInstance()) return this;
-        if (other.hasStartDate()) {
-          mergeStartDate(other.getStartDate());
-        }
-        if (other.hasEndDate()) {
-          mergeEndDate(other.getEndDate());
-        }
-        if (other.getCloudStorageUsageCost() != 0D) {
-          setCloudStorageUsageCost(other.getCloudStorageUsageCost());
-        }
-        if (other.getDataUploadUsageCost() != 0D) {
-          setDataUploadUsageCost(other.getDataUploadUsageCost());
-        }
-        if (other.getDataEgresUsageCost() != 0D) {
-          setDataEgresUsageCost(other.getDataEgresUsageCost());
-        }
-        if (other.getRemoteControlUsageCost() != 0D) {
-          setRemoteControlUsageCost(other.getRemoteControlUsageCost());
-        }
-        if (other.getStandardComputeUsageCost() != 0D) {
-          setStandardComputeUsageCost(other.getStandardComputeUsageCost());
-        }
-        if (other.getDiscountAmount() != 0D) {
-          setDiscountAmount(other.getDiscountAmount());
-        }
-        if (other.getTotalUsageWithDiscount() != 0D) {
-          setTotalUsageWithDiscount(other.getTotalUsageWithDiscount());
-        }
-        if (other.getTotalUsageWithoutDiscount() != 0D) {
-          setTotalUsageWithoutDiscount(other.getTotalUsageWithoutDiscount());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getStartDateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getEndDateFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 25: {
-                cloudStorageUsageCost_ = input.readDouble();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 25
-              case 33: {
-                dataUploadUsageCost_ = input.readDouble();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 33
-              case 41: {
-                dataEgresUsageCost_ = input.readDouble();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 41
-              case 49: {
-                remoteControlUsageCost_ = input.readDouble();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 49
-              case 57: {
-                standardComputeUsageCost_ = input.readDouble();
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 57
-              case 65: {
-                discountAmount_ = input.readDouble();
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 65
-              case 73: {
-                totalUsageWithDiscount_ = input.readDouble();
-                bitField0_ |= 0x00000100;
-                break;
-              } // case 73
-              case 81: {
-                totalUsageWithoutDiscount_ = input.readDouble();
-                bitField0_ |= 0x00000200;
-                break;
-              } // case 81
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Timestamp startDate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startDateBuilder_;
       /**
        * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
-       * @return Whether the startDate field is set.
        */
+      @java.lang.Override
       public boolean hasStartDate() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasStartDate();
       }
       /**
        * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
-       * @return The startDate.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getStartDate() {
-        if (startDateBuilder_ == null) {
-          return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
-        } else {
-          return startDateBuilder_.getMessage();
-        }
+        return instance.getStartDate();
       }
       /**
        * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
        */
       public Builder setStartDate(com.google.protobuf.Timestamp value) {
-        if (startDateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          startDate_ = value;
-        } else {
-          startDateBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setStartDate(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
        */
       public Builder setStartDate(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (startDateBuilder_ == null) {
-          startDate_ = builderForValue.build();
-        } else {
-          startDateBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setStartDate(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
        */
       public Builder mergeStartDate(com.google.protobuf.Timestamp value) {
-        if (startDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            startDate_ != null &&
-            startDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getStartDateBuilder().mergeFrom(value);
-          } else {
-            startDate_ = value;
-          }
-        } else {
-          startDateBuilder_.mergeFrom(value);
-        }
-        if (startDate_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeStartDate(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
        */
-      public Builder clearStartDate() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        startDate_ = null;
-        if (startDateBuilder_ != null) {
-          startDateBuilder_.dispose();
-          startDateBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearStartDate() {  copyOnWrite();
+        instance.clearStartDate();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getStartDateBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getStartDateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder() {
-        if (startDateBuilder_ != null) {
-          return startDateBuilder_.getMessageOrBuilder();
-        } else {
-          return startDate_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp start_date = 1 [json_name = "startDate"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getStartDateFieldBuilder() {
-        if (startDateBuilder_ == null) {
-          startDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getStartDate(),
-                  getParentForChildren(),
-                  isClean());
-          startDate_ = null;
-        }
-        return startDateBuilder_;
       }
 
-      private com.google.protobuf.Timestamp endDate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endDateBuilder_;
       /**
        * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
-       * @return Whether the endDate field is set.
        */
+      @java.lang.Override
       public boolean hasEndDate() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasEndDate();
       }
       /**
        * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
-       * @return The endDate.
        */
+      @java.lang.Override
       public com.google.protobuf.Timestamp getEndDate() {
-        if (endDateBuilder_ == null) {
-          return endDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
-        } else {
-          return endDateBuilder_.getMessage();
-        }
+        return instance.getEndDate();
       }
       /**
        * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
        */
       public Builder setEndDate(com.google.protobuf.Timestamp value) {
-        if (endDateBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          endDate_ = value;
-        } else {
-          endDateBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setEndDate(value);
         return this;
-      }
+        }
       /**
        * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
        */
       public Builder setEndDate(
           com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (endDateBuilder_ == null) {
-          endDate_ = builderForValue.build();
-        } else {
-          endDateBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setEndDate(builderForValue.build());
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
        */
       public Builder mergeEndDate(com.google.protobuf.Timestamp value) {
-        if (endDateBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            endDate_ != null &&
-            endDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
-            getEndDateBuilder().mergeFrom(value);
-          } else {
-            endDate_ = value;
-          }
-        } else {
-          endDateBuilder_.mergeFrom(value);
-        }
-        if (endDate_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeEndDate(value);
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
        */
-      public Builder clearEndDate() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        endDate_ = null;
-        if (endDateBuilder_ != null) {
-          endDateBuilder_.dispose();
-          endDateBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearEndDate() {  copyOnWrite();
+        instance.clearEndDate();
         return this;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getEndDateBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getEndDateFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder() {
-        if (endDateBuilder_ != null) {
-          return endDateBuilder_.getMessageOrBuilder();
-        } else {
-          return endDate_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Timestamp end_date = 2 [json_name = "endDate"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getEndDateFieldBuilder() {
-        if (endDateBuilder_ == null) {
-          endDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getEndDate(),
-                  getParentForChildren(),
-                  isClean());
-          endDate_ = null;
-        }
-        return endDateBuilder_;
       }
 
-      private double cloudStorageUsageCost_ ;
       /**
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code>
        * @return The cloudStorageUsageCost.
        */
       @java.lang.Override
       public double getCloudStorageUsageCost() {
-        return cloudStorageUsageCost_;
+        return instance.getCloudStorageUsageCost();
       }
       /**
        * <code>double cloud_storage_usage_cost = 3 [json_name = "cloudStorageUsageCost"];</code>
@@ -6992,10 +4074,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder setCloudStorageUsageCost(double value) {
-
-        cloudStorageUsageCost_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setCloudStorageUsageCost(value);
         return this;
       }
       /**
@@ -7003,20 +4083,18 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearCloudStorageUsageCost() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        cloudStorageUsageCost_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearCloudStorageUsageCost();
         return this;
       }
 
-      private double dataUploadUsageCost_ ;
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code>
        * @return The dataUploadUsageCost.
        */
       @java.lang.Override
       public double getDataUploadUsageCost() {
-        return dataUploadUsageCost_;
+        return instance.getDataUploadUsageCost();
       }
       /**
        * <code>double data_upload_usage_cost = 4 [json_name = "dataUploadUsageCost"];</code>
@@ -7024,10 +4102,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder setDataUploadUsageCost(double value) {
-
-        dataUploadUsageCost_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setDataUploadUsageCost(value);
         return this;
       }
       /**
@@ -7035,20 +4111,18 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearDataUploadUsageCost() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        dataUploadUsageCost_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearDataUploadUsageCost();
         return this;
       }
 
-      private double dataEgresUsageCost_ ;
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code>
        * @return The dataEgresUsageCost.
        */
       @java.lang.Override
       public double getDataEgresUsageCost() {
-        return dataEgresUsageCost_;
+        return instance.getDataEgresUsageCost();
       }
       /**
        * <code>double data_egres_usage_cost = 5 [json_name = "dataEgresUsageCost"];</code>
@@ -7056,10 +4130,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder setDataEgresUsageCost(double value) {
-
-        dataEgresUsageCost_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setDataEgresUsageCost(value);
         return this;
       }
       /**
@@ -7067,20 +4139,18 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearDataEgresUsageCost() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        dataEgresUsageCost_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearDataEgresUsageCost();
         return this;
       }
 
-      private double remoteControlUsageCost_ ;
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code>
        * @return The remoteControlUsageCost.
        */
       @java.lang.Override
       public double getRemoteControlUsageCost() {
-        return remoteControlUsageCost_;
+        return instance.getRemoteControlUsageCost();
       }
       /**
        * <code>double remote_control_usage_cost = 6 [json_name = "remoteControlUsageCost"];</code>
@@ -7088,10 +4158,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder setRemoteControlUsageCost(double value) {
-
-        remoteControlUsageCost_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setRemoteControlUsageCost(value);
         return this;
       }
       /**
@@ -7099,20 +4167,18 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearRemoteControlUsageCost() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        remoteControlUsageCost_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearRemoteControlUsageCost();
         return this;
       }
 
-      private double standardComputeUsageCost_ ;
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code>
        * @return The standardComputeUsageCost.
        */
       @java.lang.Override
       public double getStandardComputeUsageCost() {
-        return standardComputeUsageCost_;
+        return instance.getStandardComputeUsageCost();
       }
       /**
        * <code>double standard_compute_usage_cost = 7 [json_name = "standardComputeUsageCost"];</code>
@@ -7120,10 +4186,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder setStandardComputeUsageCost(double value) {
-
-        standardComputeUsageCost_ = value;
-        bitField0_ |= 0x00000040;
-        onChanged();
+        copyOnWrite();
+        instance.setStandardComputeUsageCost(value);
         return this;
       }
       /**
@@ -7131,20 +4195,18 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearStandardComputeUsageCost() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        standardComputeUsageCost_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearStandardComputeUsageCost();
         return this;
       }
 
-      private double discountAmount_ ;
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount"];</code>
        * @return The discountAmount.
        */
       @java.lang.Override
       public double getDiscountAmount() {
-        return discountAmount_;
+        return instance.getDiscountAmount();
       }
       /**
        * <code>double discount_amount = 8 [json_name = "discountAmount"];</code>
@@ -7152,10 +4214,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder setDiscountAmount(double value) {
-
-        discountAmount_ = value;
-        bitField0_ |= 0x00000080;
-        onChanged();
+        copyOnWrite();
+        instance.setDiscountAmount(value);
         return this;
       }
       /**
@@ -7163,20 +4223,18 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearDiscountAmount() {
-        bitField0_ = (bitField0_ & ~0x00000080);
-        discountAmount_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearDiscountAmount();
         return this;
       }
 
-      private double totalUsageWithDiscount_ ;
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code>
        * @return The totalUsageWithDiscount.
        */
       @java.lang.Override
       public double getTotalUsageWithDiscount() {
-        return totalUsageWithDiscount_;
+        return instance.getTotalUsageWithDiscount();
       }
       /**
        * <code>double total_usage_with_discount = 9 [json_name = "totalUsageWithDiscount"];</code>
@@ -7184,10 +4242,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder setTotalUsageWithDiscount(double value) {
-
-        totalUsageWithDiscount_ = value;
-        bitField0_ |= 0x00000100;
-        onChanged();
+        copyOnWrite();
+        instance.setTotalUsageWithDiscount(value);
         return this;
       }
       /**
@@ -7195,20 +4251,18 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearTotalUsageWithDiscount() {
-        bitField0_ = (bitField0_ & ~0x00000100);
-        totalUsageWithDiscount_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearTotalUsageWithDiscount();
         return this;
       }
 
-      private double totalUsageWithoutDiscount_ ;
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code>
        * @return The totalUsageWithoutDiscount.
        */
       @java.lang.Override
       public double getTotalUsageWithoutDiscount() {
-        return totalUsageWithoutDiscount_;
+        return instance.getTotalUsageWithoutDiscount();
       }
       /**
        * <code>double total_usage_without_discount = 10 [json_name = "totalUsageWithoutDiscount"];</code>
@@ -7216,10 +4270,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder setTotalUsageWithoutDiscount(double value) {
-
-        totalUsageWithoutDiscount_ = value;
-        bitField0_ |= 0x00000200;
-        onChanged();
+        copyOnWrite();
+        instance.setTotalUsageWithoutDiscount(value);
         return this;
       }
       /**
@@ -7227,78 +4279,100 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearTotalUsageWithoutDiscount() {
-        bitField0_ = (bitField0_ & ~0x00000200);
-        totalUsageWithoutDiscount_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearTotalUsageWithoutDiscount();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetCurrentMonthUsageResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.GetCurrentMonthUsageResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "startDate_",
+              "endDate_",
+              "cloudStorageUsageCost_",
+              "dataUploadUsageCost_",
+              "dataEgresUsageCost_",
+              "remoteControlUsageCost_",
+              "standardComputeUsageCost_",
+              "discountAmount_",
+              "totalUsageWithDiscount_",
+              "totalUsageWithoutDiscount_",
+            };
+            java.lang.String info =
+                "\u0000\n\u0000\u0001\u0001\n\n\u0000\u0000\u0000\u0001\u1009\u0000\u0002\u1009\u0001" +
+                "\u0003\u0000\u0004\u0000\u0005\u0000\u0006\u0000\u0007\u0000\b\u0000\t\u0000\n\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.GetCurrentMonthUsageResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.GetCurrentMonthUsageResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.GetCurrentMonthUsageResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.GetCurrentMonthUsageResponse)
     private static final viam.app.v1.Billing.GetCurrentMonthUsageResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.Billing.GetCurrentMonthUsageResponse();
+      GetCurrentMonthUsageResponse defaultInstance = new GetCurrentMonthUsageResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetCurrentMonthUsageResponse.class, defaultInstance);
     }
 
     public static viam.app.v1.Billing.GetCurrentMonthUsageResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetCurrentMonthUsageResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetCurrentMonthUsageResponse>() {
-      @java.lang.Override
-      public GetCurrentMonthUsageResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetCurrentMonthUsageResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetCurrentMonthUsageResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetCurrentMonthUsageResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.Billing.GetCurrentMonthUsageResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetOrgBillingInformationRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.GetOrgBillingInformationRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string org_id = 1 [json_name = "orgId"];</code>
@@ -7315,58 +4389,23 @@ public final class Billing {
   /**
    * Protobuf type {@code viam.app.v1.GetOrgBillingInformationRequest}
    */
-  public static final class GetOrgBillingInformationRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetOrgBillingInformationRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetOrgBillingInformationRequest, GetOrgBillingInformationRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.GetOrgBillingInformationRequest)
       GetOrgBillingInformationRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetOrgBillingInformationRequest.newBuilder() to construct.
-    private GetOrgBillingInformationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetOrgBillingInformationRequest() {
       orgId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetOrgBillingInformationRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetOrgBillingInformationRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetOrgBillingInformationRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.Billing.GetOrgBillingInformationRequest.class, viam.app.v1.Billing.GetOrgBillingInformationRequest.Builder.class);
-    }
-
     public static final int ORG_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object orgId_ = "";
+    private java.lang.String orgId_;
     /**
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The orgId.
      */
     @java.lang.Override
     public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      }
+      return orgId_;
     }
     /**
      * <code>string org_id = 1 [json_name = "orgId"];</code>
@@ -7375,377 +4414,149 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      orgId_ = value;
     }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     */
+    private void clearOrgId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
-      }
-      getUnknownFields().writeTo(output);
+      orgId_ = getDefaultInstance().getOrgId();
     }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.Billing.GetOrgBillingInformationRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.Billing.GetOrgBillingInformationRequest other = (viam.app.v1.Billing.GetOrgBillingInformationRequest) obj;
-
-      if (!getOrgId()
-          .equals(other.getOrgId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrgId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.v1.Billing.GetOrgBillingInformationRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.Billing.GetOrgBillingInformationRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.Billing.GetOrgBillingInformationRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.Billing.GetOrgBillingInformationRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.GetOrgBillingInformationRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.GetOrgBillingInformationRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.GetOrgBillingInformationRequest)
         viam.app.v1.Billing.GetOrgBillingInformationRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetOrgBillingInformationRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetOrgBillingInformationRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.Billing.GetOrgBillingInformationRequest.class, viam.app.v1.Billing.GetOrgBillingInformationRequest.Builder.class);
-      }
-
       // Construct using viam.app.v1.Billing.GetOrgBillingInformationRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        orgId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetOrgBillingInformationRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetOrgBillingInformationRequest getDefaultInstanceForType() {
-        return viam.app.v1.Billing.GetOrgBillingInformationRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetOrgBillingInformationRequest build() {
-        viam.app.v1.Billing.GetOrgBillingInformationRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetOrgBillingInformationRequest buildPartial() {
-        viam.app.v1.Billing.GetOrgBillingInformationRequest result = new viam.app.v1.Billing.GetOrgBillingInformationRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.Billing.GetOrgBillingInformationRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.orgId_ = orgId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.Billing.GetOrgBillingInformationRequest) {
-          return mergeFrom((viam.app.v1.Billing.GetOrgBillingInformationRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.Billing.GetOrgBillingInformationRequest other) {
-        if (other == viam.app.v1.Billing.GetOrgBillingInformationRequest.getDefaultInstance()) return this;
-        if (!other.getOrgId().isEmpty()) {
-          orgId_ = other.orgId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                orgId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object orgId_ = "";
       /**
        * <code>string org_id = 1 [json_name = "orgId"];</code>
        * @return The orgId.
        */
+      @java.lang.Override
       public java.lang.String getOrgId() {
-        java.lang.Object ref = orgId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          orgId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrgId();
       }
       /**
        * <code>string org_id = 1 [json_name = "orgId"];</code>
        * @return The bytes for orgId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrgIdBytes() {
-        java.lang.Object ref = orgId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          orgId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrgIdBytes();
       }
       /**
        * <code>string org_id = 1 [json_name = "orgId"];</code>
@@ -7754,10 +4565,8 @@ public final class Billing {
        */
       public Builder setOrgId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        orgId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgId(value);
         return this;
       }
       /**
@@ -7765,9 +4574,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearOrgId() {
-        orgId_ = getDefaultInstance().getOrgId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrgId();
         return this;
       }
       /**
@@ -7777,80 +4585,88 @@ public final class Billing {
        */
       public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        orgId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetOrgBillingInformationRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.GetOrgBillingInformationRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "orgId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.GetOrgBillingInformationRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.GetOrgBillingInformationRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.GetOrgBillingInformationRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.GetOrgBillingInformationRequest)
     private static final viam.app.v1.Billing.GetOrgBillingInformationRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.Billing.GetOrgBillingInformationRequest();
+      GetOrgBillingInformationRequest defaultInstance = new GetOrgBillingInformationRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetOrgBillingInformationRequest.class, defaultInstance);
     }
 
     public static viam.app.v1.Billing.GetOrgBillingInformationRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetOrgBillingInformationRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetOrgBillingInformationRequest>() {
-      @java.lang.Override
-      public GetOrgBillingInformationRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetOrgBillingInformationRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetOrgBillingInformationRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetOrgBillingInformationRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.Billing.GetOrgBillingInformationRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetOrgBillingInformationResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.GetOrgBillingInformationResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.v1.PaymentMethodType type = 1 [json_name = "type"];</code>
@@ -7893,14 +4709,6 @@ public final class Billing {
      * @return The method.
      */
     viam.app.v1.Billing.PaymentMethodCard getMethod();
-    /**
-     * <pre>
-     * defined if type is PAYMENT_METHOD_TYPE_CARD
-     * </pre>
-     *
-     * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
-     */
-    viam.app.v1.Billing.PaymentMethodCardOrBuilder getMethodOrBuilder();
 
     /**
      * <pre>
@@ -7934,79 +4742,67 @@ public final class Billing {
   /**
    * Protobuf type {@code viam.app.v1.GetOrgBillingInformationResponse}
    */
-  public static final class GetOrgBillingInformationResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetOrgBillingInformationResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetOrgBillingInformationResponse, GetOrgBillingInformationResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.GetOrgBillingInformationResponse)
       GetOrgBillingInformationResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetOrgBillingInformationResponse.newBuilder() to construct.
-    private GetOrgBillingInformationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetOrgBillingInformationResponse() {
-      type_ = 0;
       billingEmail_ = "";
       billingTier_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetOrgBillingInformationResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetOrgBillingInformationResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetOrgBillingInformationResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.Billing.GetOrgBillingInformationResponse.class, viam.app.v1.Billing.GetOrgBillingInformationResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int TYPE_FIELD_NUMBER = 1;
-    private int type_ = 0;
+    private int type_;
     /**
      * <code>.viam.app.v1.PaymentMethodType type = 1 [json_name = "type"];</code>
      * @return The enum numeric value on the wire for type.
      */
-    @java.lang.Override public int getTypeValue() {
+    @java.lang.Override
+    public int getTypeValue() {
       return type_;
     }
     /**
      * <code>.viam.app.v1.PaymentMethodType type = 1 [json_name = "type"];</code>
      * @return The type.
      */
-    @java.lang.Override public viam.app.v1.Billing.PaymentMethodType getType() {
+    @java.lang.Override
+    public viam.app.v1.Billing.PaymentMethodType getType() {
       viam.app.v1.Billing.PaymentMethodType result = viam.app.v1.Billing.PaymentMethodType.forNumber(type_);
       return result == null ? viam.app.v1.Billing.PaymentMethodType.UNRECOGNIZED : result;
     }
+    /**
+     * <code>.viam.app.v1.PaymentMethodType type = 1 [json_name = "type"];</code>
+     * @param value The enum numeric value on the wire for type to set.
+     */
+    private void setTypeValue(int value) {
+        type_ = value;
+    }
+    /**
+     * <code>.viam.app.v1.PaymentMethodType type = 1 [json_name = "type"];</code>
+     * @param value The type to set.
+     */
+    private void setType(viam.app.v1.Billing.PaymentMethodType value) {
+      type_ = value.getNumber();
+
+    }
+    /**
+     * <code>.viam.app.v1.PaymentMethodType type = 1 [json_name = "type"];</code>
+     */
+    private void clearType() {
+
+      type_ = 0;
+    }
 
     public static final int BILLING_EMAIL_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object billingEmail_ = "";
+    private java.lang.String billingEmail_;
     /**
      * <code>string billing_email = 2 [json_name = "billingEmail"];</code>
      * @return The billingEmail.
      */
     @java.lang.Override
     public java.lang.String getBillingEmail() {
-      java.lang.Object ref = billingEmail_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        billingEmail_ = s;
-        return s;
-      }
+      return billingEmail_;
     }
     /**
      * <code>string billing_email = 2 [json_name = "billingEmail"];</code>
@@ -8015,16 +4811,34 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getBillingEmailBytes() {
-      java.lang.Object ref = billingEmail_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        billingEmail_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(billingEmail_);
+    }
+    /**
+     * <code>string billing_email = 2 [json_name = "billingEmail"];</code>
+     * @param value The billingEmail to set.
+     */
+    private void setBillingEmail(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      billingEmail_ = value;
+    }
+    /**
+     * <code>string billing_email = 2 [json_name = "billingEmail"];</code>
+     */
+    private void clearBillingEmail() {
+
+      billingEmail_ = getDefaultInstance().getBillingEmail();
+    }
+    /**
+     * <code>string billing_email = 2 [json_name = "billingEmail"];</code>
+     * @param value The bytes for billingEmail to set.
+     */
+    private void setBillingEmailBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      billingEmail_ = value.toStringUtf8();
+
     }
 
     public static final int METHOD_FIELD_NUMBER = 3;
@@ -8035,7 +4849,6 @@ public final class Billing {
      * </pre>
      *
      * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
-     * @return Whether the method field is set.
      */
     @java.lang.Override
     public boolean hasMethod() {
@@ -8047,7 +4860,6 @@ public final class Billing {
      * </pre>
      *
      * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
-     * @return The method.
      */
     @java.lang.Override
     public viam.app.v1.Billing.PaymentMethodCard getMethod() {
@@ -8060,14 +4872,43 @@ public final class Billing {
      *
      * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
      */
-    @java.lang.Override
-    public viam.app.v1.Billing.PaymentMethodCardOrBuilder getMethodOrBuilder() {
-      return method_ == null ? viam.app.v1.Billing.PaymentMethodCard.getDefaultInstance() : method_;
+    private void setMethod(viam.app.v1.Billing.PaymentMethodCard value) {
+      value.getClass();
+  method_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * defined if type is PAYMENT_METHOD_TYPE_CARD
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeMethod(viam.app.v1.Billing.PaymentMethodCard value) {
+      value.getClass();
+  if (method_ != null &&
+          method_ != viam.app.v1.Billing.PaymentMethodCard.getDefaultInstance()) {
+        method_ =
+          viam.app.v1.Billing.PaymentMethodCard.newBuilder(method_).mergeFrom(value).buildPartial();
+      } else {
+        method_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * defined if type is PAYMENT_METHOD_TYPE_CARD
+     * </pre>
+     *
+     * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
+     */
+    private void clearMethod() {  method_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int BILLING_TIER_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object billingTier_ = "";
+    private java.lang.String billingTier_;
     /**
      * <pre>
      * Only return billing_tier for billing dashboard admin users
@@ -8090,16 +4931,7 @@ public final class Billing {
      */
     @java.lang.Override
     public java.lang.String getBillingTier() {
-      java.lang.Object ref = billingTier_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        billingTier_ = s;
-        return s;
-      }
+      return billingTier_;
     }
     /**
      * <pre>
@@ -8112,458 +4944,161 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getBillingTierBytes() {
-      java.lang.Object ref = billingTier_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        billingTier_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(billingTier_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Only return billing_tier for billing dashboard admin users
+     * </pre>
+     *
+     * <code>optional string billing_tier = 4 [json_name = "billingTier"];</code>
+     * @param value The billingTier to set.
+     */
+    private void setBillingTier(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  bitField0_ |= 0x00000002;
+      billingTier_ = value;
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (type_ != viam.app.v1.Billing.PaymentMethodType.PAYMENT_METHOD_TYPE_UNSPECIFIED.getNumber()) {
-        output.writeEnum(1, type_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingEmail_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, billingEmail_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(3, getMethod());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, billingTier_);
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * Only return billing_tier for billing dashboard admin users
+     * </pre>
+     *
+     * <code>optional string billing_tier = 4 [json_name = "billingTier"];</code>
+     */
+    private void clearBillingTier() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      billingTier_ = getDefaultInstance().getBillingTier();
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (type_ != viam.app.v1.Billing.PaymentMethodType.PAYMENT_METHOD_TYPE_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, type_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(billingEmail_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, billingEmail_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getMethod());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, billingTier_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.Billing.GetOrgBillingInformationResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.Billing.GetOrgBillingInformationResponse other = (viam.app.v1.Billing.GetOrgBillingInformationResponse) obj;
-
-      if (type_ != other.type_) return false;
-      if (!getBillingEmail()
-          .equals(other.getBillingEmail())) return false;
-      if (hasMethod() != other.hasMethod()) return false;
-      if (hasMethod()) {
-        if (!getMethod()
-            .equals(other.getMethod())) return false;
-      }
-      if (hasBillingTier() != other.hasBillingTier()) return false;
-      if (hasBillingTier()) {
-        if (!getBillingTier()
-            .equals(other.getBillingTier())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + type_;
-      hash = (37 * hash) + BILLING_EMAIL_FIELD_NUMBER;
-      hash = (53 * hash) + getBillingEmail().hashCode();
-      if (hasMethod()) {
-        hash = (37 * hash) + METHOD_FIELD_NUMBER;
-        hash = (53 * hash) + getMethod().hashCode();
-      }
-      if (hasBillingTier()) {
-        hash = (37 * hash) + BILLING_TIER_FIELD_NUMBER;
-        hash = (53 * hash) + getBillingTier().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Only return billing_tier for billing dashboard admin users
+     * </pre>
+     *
+     * <code>optional string billing_tier = 4 [json_name = "billingTier"];</code>
+     * @param value The bytes for billingTier to set.
+     */
+    private void setBillingTierBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      billingTier_ = value.toStringUtf8();
+      bitField0_ |= 0x00000002;
     }
 
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.Billing.GetOrgBillingInformationResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.GetOrgBillingInformationResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.GetOrgBillingInformationResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.GetOrgBillingInformationResponse)
         viam.app.v1.Billing.GetOrgBillingInformationResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetOrgBillingInformationResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetOrgBillingInformationResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.Billing.GetOrgBillingInformationResponse.class, viam.app.v1.Billing.GetOrgBillingInformationResponse.Builder.class);
-      }
-
       // Construct using viam.app.v1.Billing.GetOrgBillingInformationResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMethodFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        type_ = 0;
-        billingEmail_ = "";
-        method_ = null;
-        if (methodBuilder_ != null) {
-          methodBuilder_.dispose();
-          methodBuilder_ = null;
-        }
-        billingTier_ = "";
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetOrgBillingInformationResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetOrgBillingInformationResponse getDefaultInstanceForType() {
-        return viam.app.v1.Billing.GetOrgBillingInformationResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetOrgBillingInformationResponse build() {
-        viam.app.v1.Billing.GetOrgBillingInformationResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetOrgBillingInformationResponse buildPartial() {
-        viam.app.v1.Billing.GetOrgBillingInformationResponse result = new viam.app.v1.Billing.GetOrgBillingInformationResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.Billing.GetOrgBillingInformationResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.type_ = type_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.billingEmail_ = billingEmail_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.method_ = methodBuilder_ == null
-              ? method_
-              : methodBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.billingTier_ = billingTier_;
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.Billing.GetOrgBillingInformationResponse) {
-          return mergeFrom((viam.app.v1.Billing.GetOrgBillingInformationResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.Billing.GetOrgBillingInformationResponse other) {
-        if (other == viam.app.v1.Billing.GetOrgBillingInformationResponse.getDefaultInstance()) return this;
-        if (other.type_ != 0) {
-          setTypeValue(other.getTypeValue());
-        }
-        if (!other.getBillingEmail().isEmpty()) {
-          billingEmail_ = other.billingEmail_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.hasMethod()) {
-          mergeMethod(other.getMethod());
-        }
-        if (other.hasBillingTier()) {
-          billingTier_ = other.billingTier_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                type_ = input.readEnum();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 18: {
-                billingEmail_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                input.readMessage(
-                    getMethodFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 34: {
-                billingTier_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int type_ = 0;
       /**
        * <code>.viam.app.v1.PaymentMethodType type = 1 [json_name = "type"];</code>
        * @return The enum numeric value on the wire for type.
        */
-      @java.lang.Override public int getTypeValue() {
-        return type_;
+      @java.lang.Override
+      public int getTypeValue() {
+        return instance.getTypeValue();
       }
       /**
        * <code>.viam.app.v1.PaymentMethodType type = 1 [json_name = "type"];</code>
-       * @param value The enum numeric value on the wire for type to set.
+       * @param value The type to set.
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
-        type_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setTypeValue(value);
         return this;
       }
       /**
@@ -8572,21 +5107,16 @@ public final class Billing {
        */
       @java.lang.Override
       public viam.app.v1.Billing.PaymentMethodType getType() {
-        viam.app.v1.Billing.PaymentMethodType result = viam.app.v1.Billing.PaymentMethodType.forNumber(type_);
-        return result == null ? viam.app.v1.Billing.PaymentMethodType.UNRECOGNIZED : result;
+        return instance.getType();
       }
       /**
        * <code>.viam.app.v1.PaymentMethodType type = 1 [json_name = "type"];</code>
-       * @param value The type to set.
+       * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
        */
       public Builder setType(viam.app.v1.Billing.PaymentMethodType value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        type_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setType(value);
         return this;
       }
       /**
@@ -8594,45 +5124,27 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        type_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearType();
         return this;
       }
 
-      private java.lang.Object billingEmail_ = "";
       /**
        * <code>string billing_email = 2 [json_name = "billingEmail"];</code>
        * @return The billingEmail.
        */
+      @java.lang.Override
       public java.lang.String getBillingEmail() {
-        java.lang.Object ref = billingEmail_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          billingEmail_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getBillingEmail();
       }
       /**
        * <code>string billing_email = 2 [json_name = "billingEmail"];</code>
        * @return The bytes for billingEmail.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getBillingEmailBytes() {
-        java.lang.Object ref = billingEmail_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          billingEmail_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getBillingEmailBytes();
       }
       /**
        * <code>string billing_email = 2 [json_name = "billingEmail"];</code>
@@ -8641,10 +5153,8 @@ public final class Billing {
        */
       public Builder setBillingEmail(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        billingEmail_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setBillingEmail(value);
         return this;
       }
       /**
@@ -8652,9 +5162,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearBillingEmail() {
-        billingEmail_ = getDefaultInstance().getBillingEmail();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearBillingEmail();
         return this;
       }
       /**
@@ -8664,27 +5173,21 @@ public final class Billing {
        */
       public Builder setBillingEmailBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        billingEmail_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setBillingEmailBytes(value);
         return this;
       }
 
-      private viam.app.v1.Billing.PaymentMethodCard method_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.v1.Billing.PaymentMethodCard, viam.app.v1.Billing.PaymentMethodCard.Builder, viam.app.v1.Billing.PaymentMethodCardOrBuilder> methodBuilder_;
       /**
        * <pre>
        * defined if type is PAYMENT_METHOD_TYPE_CARD
        * </pre>
        *
        * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
-       * @return Whether the method field is set.
        */
+      @java.lang.Override
       public boolean hasMethod() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasMethod();
       }
       /**
        * <pre>
@@ -8692,14 +5195,10 @@ public final class Billing {
        * </pre>
        *
        * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
-       * @return The method.
        */
+      @java.lang.Override
       public viam.app.v1.Billing.PaymentMethodCard getMethod() {
-        if (methodBuilder_ == null) {
-          return method_ == null ? viam.app.v1.Billing.PaymentMethodCard.getDefaultInstance() : method_;
-        } else {
-          return methodBuilder_.getMessage();
-        }
+        return instance.getMethod();
       }
       /**
        * <pre>
@@ -8709,18 +5208,10 @@ public final class Billing {
        * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
        */
       public Builder setMethod(viam.app.v1.Billing.PaymentMethodCard value) {
-        if (methodBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          method_ = value;
-        } else {
-          methodBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setMethod(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * defined if type is PAYMENT_METHOD_TYPE_CARD
@@ -8730,13 +5221,8 @@ public final class Billing {
        */
       public Builder setMethod(
           viam.app.v1.Billing.PaymentMethodCard.Builder builderForValue) {
-        if (methodBuilder_ == null) {
-          method_ = builderForValue.build();
-        } else {
-          methodBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setMethod(builderForValue.build());
         return this;
       }
       /**
@@ -8747,21 +5233,8 @@ public final class Billing {
        * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
        */
       public Builder mergeMethod(viam.app.v1.Billing.PaymentMethodCard value) {
-        if (methodBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            method_ != null &&
-            method_ != viam.app.v1.Billing.PaymentMethodCard.getDefaultInstance()) {
-            getMethodBuilder().mergeFrom(value);
-          } else {
-            method_ = value;
-          }
-        } else {
-          methodBuilder_.mergeFrom(value);
-        }
-        if (method_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeMethod(value);
         return this;
       }
       /**
@@ -8771,65 +5244,11 @@ public final class Billing {
        *
        * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
        */
-      public Builder clearMethod() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        method_ = null;
-        if (methodBuilder_ != null) {
-          methodBuilder_.dispose();
-          methodBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearMethod() {  copyOnWrite();
+        instance.clearMethod();
         return this;
-      }
-      /**
-       * <pre>
-       * defined if type is PAYMENT_METHOD_TYPE_CARD
-       * </pre>
-       *
-       * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
-       */
-      public viam.app.v1.Billing.PaymentMethodCard.Builder getMethodBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getMethodFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * defined if type is PAYMENT_METHOD_TYPE_CARD
-       * </pre>
-       *
-       * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
-       */
-      public viam.app.v1.Billing.PaymentMethodCardOrBuilder getMethodOrBuilder() {
-        if (methodBuilder_ != null) {
-          return methodBuilder_.getMessageOrBuilder();
-        } else {
-          return method_ == null ?
-              viam.app.v1.Billing.PaymentMethodCard.getDefaultInstance() : method_;
-        }
-      }
-      /**
-       * <pre>
-       * defined if type is PAYMENT_METHOD_TYPE_CARD
-       * </pre>
-       *
-       * <code>optional .viam.app.v1.PaymentMethodCard method = 3 [json_name = "method"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.v1.Billing.PaymentMethodCard, viam.app.v1.Billing.PaymentMethodCard.Builder, viam.app.v1.Billing.PaymentMethodCardOrBuilder> 
-          getMethodFieldBuilder() {
-        if (methodBuilder_ == null) {
-          methodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.v1.Billing.PaymentMethodCard, viam.app.v1.Billing.PaymentMethodCard.Builder, viam.app.v1.Billing.PaymentMethodCardOrBuilder>(
-                  getMethod(),
-                  getParentForChildren(),
-                  isClean());
-          method_ = null;
-        }
-        return methodBuilder_;
       }
 
-      private java.lang.Object billingTier_ = "";
       /**
        * <pre>
        * Only return billing_tier for billing dashboard admin users
@@ -8838,8 +5257,9 @@ public final class Billing {
        * <code>optional string billing_tier = 4 [json_name = "billingTier"];</code>
        * @return Whether the billingTier field is set.
        */
+      @java.lang.Override
       public boolean hasBillingTier() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return instance.hasBillingTier();
       }
       /**
        * <pre>
@@ -8849,17 +5269,9 @@ public final class Billing {
        * <code>optional string billing_tier = 4 [json_name = "billingTier"];</code>
        * @return The billingTier.
        */
+      @java.lang.Override
       public java.lang.String getBillingTier() {
-        java.lang.Object ref = billingTier_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          billingTier_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getBillingTier();
       }
       /**
        * <pre>
@@ -8869,18 +5281,10 @@ public final class Billing {
        * <code>optional string billing_tier = 4 [json_name = "billingTier"];</code>
        * @return The bytes for billingTier.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getBillingTierBytes() {
-        java.lang.Object ref = billingTier_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          billingTier_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getBillingTierBytes();
       }
       /**
        * <pre>
@@ -8893,10 +5297,8 @@ public final class Billing {
        */
       public Builder setBillingTier(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        billingTier_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setBillingTier(value);
         return this;
       }
       /**
@@ -8908,9 +5310,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearBillingTier() {
-        billingTier_ = getDefaultInstance().getBillingTier();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+        copyOnWrite();
+        instance.clearBillingTier();
         return this;
       }
       /**
@@ -8924,80 +5325,93 @@ public final class Billing {
        */
       public Builder setBillingTierBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        billingTier_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setBillingTierBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetOrgBillingInformationResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.GetOrgBillingInformationResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "type_",
+              "billingEmail_",
+              "method_",
+              "billingTier_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\f\u0002\u0208" +
+                "\u0003\u1009\u0000\u0004\u1208\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.GetOrgBillingInformationResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.GetOrgBillingInformationResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.GetOrgBillingInformationResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.GetOrgBillingInformationResponse)
     private static final viam.app.v1.Billing.GetOrgBillingInformationResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.Billing.GetOrgBillingInformationResponse();
+      GetOrgBillingInformationResponse defaultInstance = new GetOrgBillingInformationResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetOrgBillingInformationResponse.class, defaultInstance);
     }
 
     public static viam.app.v1.Billing.GetOrgBillingInformationResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetOrgBillingInformationResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetOrgBillingInformationResponse>() {
-      @java.lang.Override
-      public GetOrgBillingInformationResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetOrgBillingInformationResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetOrgBillingInformationResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetOrgBillingInformationResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.Billing.GetOrgBillingInformationResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetInvoicesSummaryRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.GetInvoicesSummaryRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string org_id = 1 [json_name = "orgId"];</code>
@@ -9014,58 +5428,23 @@ public final class Billing {
   /**
    * Protobuf type {@code viam.app.v1.GetInvoicesSummaryRequest}
    */
-  public static final class GetInvoicesSummaryRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetInvoicesSummaryRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetInvoicesSummaryRequest, GetInvoicesSummaryRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.GetInvoicesSummaryRequest)
       GetInvoicesSummaryRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetInvoicesSummaryRequest.newBuilder() to construct.
-    private GetInvoicesSummaryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetInvoicesSummaryRequest() {
       orgId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetInvoicesSummaryRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicesSummaryRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicesSummaryRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.Billing.GetInvoicesSummaryRequest.class, viam.app.v1.Billing.GetInvoicesSummaryRequest.Builder.class);
-    }
-
     public static final int ORG_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object orgId_ = "";
+    private java.lang.String orgId_;
     /**
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The orgId.
      */
     @java.lang.Override
     public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      }
+      return orgId_;
     }
     /**
      * <code>string org_id = 1 [json_name = "orgId"];</code>
@@ -9074,377 +5453,149 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      orgId_ = value;
     }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     */
+    private void clearOrgId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
-      }
-      getUnknownFields().writeTo(output);
+      orgId_ = getDefaultInstance().getOrgId();
     }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.Billing.GetInvoicesSummaryRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.Billing.GetInvoicesSummaryRequest other = (viam.app.v1.Billing.GetInvoicesSummaryRequest) obj;
-
-      if (!getOrgId()
-          .equals(other.getOrgId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrgId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.v1.Billing.GetInvoicesSummaryRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.Billing.GetInvoicesSummaryRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.Billing.GetInvoicesSummaryRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.Billing.GetInvoicesSummaryRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.GetInvoicesSummaryRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.GetInvoicesSummaryRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.GetInvoicesSummaryRequest)
         viam.app.v1.Billing.GetInvoicesSummaryRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicesSummaryRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicesSummaryRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.Billing.GetInvoicesSummaryRequest.class, viam.app.v1.Billing.GetInvoicesSummaryRequest.Builder.class);
-      }
-
       // Construct using viam.app.v1.Billing.GetInvoicesSummaryRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        orgId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicesSummaryRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetInvoicesSummaryRequest getDefaultInstanceForType() {
-        return viam.app.v1.Billing.GetInvoicesSummaryRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetInvoicesSummaryRequest build() {
-        viam.app.v1.Billing.GetInvoicesSummaryRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetInvoicesSummaryRequest buildPartial() {
-        viam.app.v1.Billing.GetInvoicesSummaryRequest result = new viam.app.v1.Billing.GetInvoicesSummaryRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.Billing.GetInvoicesSummaryRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.orgId_ = orgId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.Billing.GetInvoicesSummaryRequest) {
-          return mergeFrom((viam.app.v1.Billing.GetInvoicesSummaryRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.Billing.GetInvoicesSummaryRequest other) {
-        if (other == viam.app.v1.Billing.GetInvoicesSummaryRequest.getDefaultInstance()) return this;
-        if (!other.getOrgId().isEmpty()) {
-          orgId_ = other.orgId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                orgId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object orgId_ = "";
       /**
        * <code>string org_id = 1 [json_name = "orgId"];</code>
        * @return The orgId.
        */
+      @java.lang.Override
       public java.lang.String getOrgId() {
-        java.lang.Object ref = orgId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          orgId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrgId();
       }
       /**
        * <code>string org_id = 1 [json_name = "orgId"];</code>
        * @return The bytes for orgId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrgIdBytes() {
-        java.lang.Object ref = orgId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          orgId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrgIdBytes();
       }
       /**
        * <code>string org_id = 1 [json_name = "orgId"];</code>
@@ -9453,10 +5604,8 @@ public final class Billing {
        */
       public Builder setOrgId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        orgId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgId(value);
         return this;
       }
       /**
@@ -9464,9 +5613,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearOrgId() {
-        orgId_ = getDefaultInstance().getOrgId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrgId();
         return this;
       }
       /**
@@ -9476,80 +5624,88 @@ public final class Billing {
        */
       public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        orgId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetInvoicesSummaryRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.GetInvoicesSummaryRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "orgId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.GetInvoicesSummaryRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.GetInvoicesSummaryRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.GetInvoicesSummaryRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.GetInvoicesSummaryRequest)
     private static final viam.app.v1.Billing.GetInvoicesSummaryRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.Billing.GetInvoicesSummaryRequest();
+      GetInvoicesSummaryRequest defaultInstance = new GetInvoicesSummaryRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetInvoicesSummaryRequest.class, defaultInstance);
     }
 
     public static viam.app.v1.Billing.GetInvoicesSummaryRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetInvoicesSummaryRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetInvoicesSummaryRequest>() {
-      @java.lang.Override
-      public GetInvoicesSummaryRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetInvoicesSummaryRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetInvoicesSummaryRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetInvoicesSummaryRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.Billing.GetInvoicesSummaryRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetInvoicesSummaryResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.GetInvoicesSummaryResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -9586,63 +5742,20 @@ public final class Billing {
      * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
      */
     int getInvoicesCount();
-    /**
-     * <pre>
-     * all previous invoices
-     * </pre>
-     *
-     * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
-     */
-    java.util.List<? extends viam.app.v1.Billing.InvoiceSummaryOrBuilder> 
-        getInvoicesOrBuilderList();
-    /**
-     * <pre>
-     * all previous invoices
-     * </pre>
-     *
-     * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
-     */
-    viam.app.v1.Billing.InvoiceSummaryOrBuilder getInvoicesOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.app.v1.GetInvoicesSummaryResponse}
    */
-  public static final class GetInvoicesSummaryResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetInvoicesSummaryResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetInvoicesSummaryResponse, GetInvoicesSummaryResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.GetInvoicesSummaryResponse)
       GetInvoicesSummaryResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetInvoicesSummaryResponse.newBuilder() to construct.
-    private GetInvoicesSummaryResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetInvoicesSummaryResponse() {
-      invoices_ = java.util.Collections.emptyList();
+      invoices_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetInvoicesSummaryResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicesSummaryResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicesSummaryResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.Billing.GetInvoicesSummaryResponse.class, viam.app.v1.Billing.GetInvoicesSummaryResponse.Builder.class);
-    }
-
     public static final int OUTSTANDING_BALANCE_FIELD_NUMBER = 1;
-    private double outstandingBalance_ = 0D;
+    private double outstandingBalance_;
     /**
      * <pre>
      * all unpaid balances at the end of the last billing cycle
@@ -9655,10 +5768,32 @@ public final class Billing {
     public double getOutstandingBalance() {
       return outstandingBalance_;
     }
+    /**
+     * <pre>
+     * all unpaid balances at the end of the last billing cycle
+     * </pre>
+     *
+     * <code>double outstanding_balance = 1 [json_name = "outstandingBalance"];</code>
+     * @param value The outstandingBalance to set.
+     */
+    private void setOutstandingBalance(double value) {
+      
+      outstandingBalance_ = value;
+    }
+    /**
+     * <pre>
+     * all unpaid balances at the end of the last billing cycle
+     * </pre>
+     *
+     * <code>double outstanding_balance = 1 [json_name = "outstandingBalance"];</code>
+     */
+    private void clearOutstandingBalance() {
+
+      outstandingBalance_ = 0D;
+    }
 
     public static final int INVOICES_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private java.util.List<viam.app.v1.Billing.InvoiceSummary> invoices_;
+    private com.google.protobuf.Internal.ProtobufList<viam.app.v1.Billing.InvoiceSummary> invoices_;
     /**
      * <pre>
      * all previous invoices
@@ -9677,7 +5812,6 @@ public final class Billing {
      *
      * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends viam.app.v1.Billing.InvoiceSummaryOrBuilder> 
         getInvoicesOrBuilderList() {
       return invoices_;
@@ -9711,412 +5845,188 @@ public final class Billing {
      *
      * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
      */
-    @java.lang.Override
     public viam.app.v1.Billing.InvoiceSummaryOrBuilder getInvoicesOrBuilder(
         int index) {
       return invoices_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureInvoicesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.app.v1.Billing.InvoiceSummary> tmp = invoices_;
+      if (!tmp.isModifiable()) {
+        invoices_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (java.lang.Double.doubleToRawLongBits(outstandingBalance_) != 0) {
-        output.writeDouble(1, outstandingBalance_);
-      }
-      for (int i = 0; i < invoices_.size(); i++) {
-        output.writeMessage(2, invoices_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * all previous invoices
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
+     */
+    private void setInvoices(
+        int index, viam.app.v1.Billing.InvoiceSummary value) {
+      value.getClass();
+  ensureInvoicesIsMutable();
+      invoices_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (java.lang.Double.doubleToRawLongBits(outstandingBalance_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(1, outstandingBalance_);
-      }
-      for (int i = 0; i < invoices_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, invoices_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <pre>
+     * all previous invoices
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
+     */
+    private void addInvoices(viam.app.v1.Billing.InvoiceSummary value) {
+      value.getClass();
+  ensureInvoicesIsMutable();
+      invoices_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.Billing.GetInvoicesSummaryResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.Billing.GetInvoicesSummaryResponse other = (viam.app.v1.Billing.GetInvoicesSummaryResponse) obj;
-
-      if (java.lang.Double.doubleToLongBits(getOutstandingBalance())
-          != java.lang.Double.doubleToLongBits(
-              other.getOutstandingBalance())) return false;
-      if (!getInvoicesList()
-          .equals(other.getInvoicesList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <pre>
+     * all previous invoices
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
+     */
+    private void addInvoices(
+        int index, viam.app.v1.Billing.InvoiceSummary value) {
+      value.getClass();
+  ensureInvoicesIsMutable();
+      invoices_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + OUTSTANDING_BALANCE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getOutstandingBalance()));
-      if (getInvoicesCount() > 0) {
-        hash = (37 * hash) + INVOICES_FIELD_NUMBER;
-        hash = (53 * hash) + getInvoicesList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * all previous invoices
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
+     */
+    private void addAllInvoices(
+        java.lang.Iterable<? extends viam.app.v1.Billing.InvoiceSummary> values) {
+      ensureInvoicesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, invoices_);
+    }
+    /**
+     * <pre>
+     * all previous invoices
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
+     */
+    private void clearInvoices() {
+      invoices_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * all previous invoices
+     * </pre>
+     *
+     * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
+     */
+    private void removeInvoices(int index) {
+      ensureInvoicesIsMutable();
+      invoices_.remove(index);
     }
 
     public static viam.app.v1.Billing.GetInvoicesSummaryResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.Billing.GetInvoicesSummaryResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.Billing.GetInvoicesSummaryResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetInvoicesSummaryResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.Billing.GetInvoicesSummaryResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.GetInvoicesSummaryResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.GetInvoicesSummaryResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.GetInvoicesSummaryResponse)
         viam.app.v1.Billing.GetInvoicesSummaryResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicesSummaryResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicesSummaryResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.Billing.GetInvoicesSummaryResponse.class, viam.app.v1.Billing.GetInvoicesSummaryResponse.Builder.class);
-      }
-
       // Construct using viam.app.v1.Billing.GetInvoicesSummaryResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        outstandingBalance_ = 0D;
-        if (invoicesBuilder_ == null) {
-          invoices_ = java.util.Collections.emptyList();
-        } else {
-          invoices_ = null;
-          invoicesBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicesSummaryResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetInvoicesSummaryResponse getDefaultInstanceForType() {
-        return viam.app.v1.Billing.GetInvoicesSummaryResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetInvoicesSummaryResponse build() {
-        viam.app.v1.Billing.GetInvoicesSummaryResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetInvoicesSummaryResponse buildPartial() {
-        viam.app.v1.Billing.GetInvoicesSummaryResponse result = new viam.app.v1.Billing.GetInvoicesSummaryResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(viam.app.v1.Billing.GetInvoicesSummaryResponse result) {
-        if (invoicesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
-            invoices_ = java.util.Collections.unmodifiableList(invoices_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.invoices_ = invoices_;
-        } else {
-          result.invoices_ = invoicesBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(viam.app.v1.Billing.GetInvoicesSummaryResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.outstandingBalance_ = outstandingBalance_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.Billing.GetInvoicesSummaryResponse) {
-          return mergeFrom((viam.app.v1.Billing.GetInvoicesSummaryResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.Billing.GetInvoicesSummaryResponse other) {
-        if (other == viam.app.v1.Billing.GetInvoicesSummaryResponse.getDefaultInstance()) return this;
-        if (other.getOutstandingBalance() != 0D) {
-          setOutstandingBalance(other.getOutstandingBalance());
-        }
-        if (invoicesBuilder_ == null) {
-          if (!other.invoices_.isEmpty()) {
-            if (invoices_.isEmpty()) {
-              invoices_ = other.invoices_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureInvoicesIsMutable();
-              invoices_.addAll(other.invoices_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.invoices_.isEmpty()) {
-            if (invoicesBuilder_.isEmpty()) {
-              invoicesBuilder_.dispose();
-              invoicesBuilder_ = null;
-              invoices_ = other.invoices_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              invoicesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getInvoicesFieldBuilder() : null;
-            } else {
-              invoicesBuilder_.addAllMessages(other.invoices_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 9: {
-                outstandingBalance_ = input.readDouble();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 9
-              case 18: {
-                viam.app.v1.Billing.InvoiceSummary m =
-                    input.readMessage(
-                        viam.app.v1.Billing.InvoiceSummary.parser(),
-                        extensionRegistry);
-                if (invoicesBuilder_ == null) {
-                  ensureInvoicesIsMutable();
-                  invoices_.add(m);
-                } else {
-                  invoicesBuilder_.addMessage(m);
-                }
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private double outstandingBalance_ ;
       /**
        * <pre>
        * all unpaid balances at the end of the last billing cycle
@@ -10127,7 +6037,7 @@ public final class Billing {
        */
       @java.lang.Override
       public double getOutstandingBalance() {
-        return outstandingBalance_;
+        return instance.getOutstandingBalance();
       }
       /**
        * <pre>
@@ -10139,10 +6049,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder setOutstandingBalance(double value) {
-
-        outstandingBalance_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOutstandingBalance(value);
         return this;
       }
       /**
@@ -10154,24 +6062,11 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearOutstandingBalance() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        outstandingBalance_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearOutstandingBalance();
         return this;
       }
 
-      private java.util.List<viam.app.v1.Billing.InvoiceSummary> invoices_ =
-        java.util.Collections.emptyList();
-      private void ensureInvoicesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          invoices_ = new java.util.ArrayList<viam.app.v1.Billing.InvoiceSummary>(invoices_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.v1.Billing.InvoiceSummary, viam.app.v1.Billing.InvoiceSummary.Builder, viam.app.v1.Billing.InvoiceSummaryOrBuilder> invoicesBuilder_;
-
       /**
        * <pre>
        * all previous invoices
@@ -10179,12 +6074,10 @@ public final class Billing {
        *
        * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
        */
+      @java.lang.Override
       public java.util.List<viam.app.v1.Billing.InvoiceSummary> getInvoicesList() {
-        if (invoicesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(invoices_);
-        } else {
-          return invoicesBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getInvoicesList());
       }
       /**
        * <pre>
@@ -10193,26 +6086,19 @@ public final class Billing {
        *
        * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
        */
+      @java.lang.Override
       public int getInvoicesCount() {
-        if (invoicesBuilder_ == null) {
-          return invoices_.size();
-        } else {
-          return invoicesBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getInvoicesCount();
+      }/**
        * <pre>
        * all previous invoices
        * </pre>
        *
        * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
        */
+      @java.lang.Override
       public viam.app.v1.Billing.InvoiceSummary getInvoices(int index) {
-        if (invoicesBuilder_ == null) {
-          return invoices_.get(index);
-        } else {
-          return invoicesBuilder_.getMessage(index);
-        }
+        return instance.getInvoices(index);
       }
       /**
        * <pre>
@@ -10223,16 +6109,8 @@ public final class Billing {
        */
       public Builder setInvoices(
           int index, viam.app.v1.Billing.InvoiceSummary value) {
-        if (invoicesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureInvoicesIsMutable();
-          invoices_.set(index, value);
-          onChanged();
-        } else {
-          invoicesBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setInvoices(index, value);
         return this;
       }
       /**
@@ -10244,13 +6122,9 @@ public final class Billing {
        */
       public Builder setInvoices(
           int index, viam.app.v1.Billing.InvoiceSummary.Builder builderForValue) {
-        if (invoicesBuilder_ == null) {
-          ensureInvoicesIsMutable();
-          invoices_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          invoicesBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setInvoices(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -10261,16 +6135,8 @@ public final class Billing {
        * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
        */
       public Builder addInvoices(viam.app.v1.Billing.InvoiceSummary value) {
-        if (invoicesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureInvoicesIsMutable();
-          invoices_.add(value);
-          onChanged();
-        } else {
-          invoicesBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addInvoices(value);
         return this;
       }
       /**
@@ -10282,16 +6148,8 @@ public final class Billing {
        */
       public Builder addInvoices(
           int index, viam.app.v1.Billing.InvoiceSummary value) {
-        if (invoicesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureInvoicesIsMutable();
-          invoices_.add(index, value);
-          onChanged();
-        } else {
-          invoicesBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addInvoices(index, value);
         return this;
       }
       /**
@@ -10303,13 +6161,8 @@ public final class Billing {
        */
       public Builder addInvoices(
           viam.app.v1.Billing.InvoiceSummary.Builder builderForValue) {
-        if (invoicesBuilder_ == null) {
-          ensureInvoicesIsMutable();
-          invoices_.add(builderForValue.build());
-          onChanged();
-        } else {
-          invoicesBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addInvoices(builderForValue.build());
         return this;
       }
       /**
@@ -10321,13 +6174,9 @@ public final class Billing {
        */
       public Builder addInvoices(
           int index, viam.app.v1.Billing.InvoiceSummary.Builder builderForValue) {
-        if (invoicesBuilder_ == null) {
-          ensureInvoicesIsMutable();
-          invoices_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          invoicesBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addInvoices(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -10339,14 +6188,8 @@ public final class Billing {
        */
       public Builder addAllInvoices(
           java.lang.Iterable<? extends viam.app.v1.Billing.InvoiceSummary> values) {
-        if (invoicesBuilder_ == null) {
-          ensureInvoicesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, invoices_);
-          onChanged();
-        } else {
-          invoicesBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllInvoices(values);
         return this;
       }
       /**
@@ -10357,13 +6200,8 @@ public final class Billing {
        * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
        */
       public Builder clearInvoices() {
-        if (invoicesBuilder_ == null) {
-          invoices_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          invoicesBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearInvoices();
         return this;
       }
       /**
@@ -10374,170 +6212,91 @@ public final class Billing {
        * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
        */
       public Builder removeInvoices(int index) {
-        if (invoicesBuilder_ == null) {
-          ensureInvoicesIsMutable();
-          invoices_.remove(index);
-          onChanged();
-        } else {
-          invoicesBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeInvoices(index);
         return this;
       }
-      /**
-       * <pre>
-       * all previous invoices
-       * </pre>
-       *
-       * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
-       */
-      public viam.app.v1.Billing.InvoiceSummary.Builder getInvoicesBuilder(
-          int index) {
-        return getInvoicesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * all previous invoices
-       * </pre>
-       *
-       * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
-       */
-      public viam.app.v1.Billing.InvoiceSummaryOrBuilder getInvoicesOrBuilder(
-          int index) {
-        if (invoicesBuilder_ == null) {
-          return invoices_.get(index);  } else {
-          return invoicesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * all previous invoices
-       * </pre>
-       *
-       * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
-       */
-      public java.util.List<? extends viam.app.v1.Billing.InvoiceSummaryOrBuilder> 
-           getInvoicesOrBuilderList() {
-        if (invoicesBuilder_ != null) {
-          return invoicesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(invoices_);
-        }
-      }
-      /**
-       * <pre>
-       * all previous invoices
-       * </pre>
-       *
-       * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
-       */
-      public viam.app.v1.Billing.InvoiceSummary.Builder addInvoicesBuilder() {
-        return getInvoicesFieldBuilder().addBuilder(
-            viam.app.v1.Billing.InvoiceSummary.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * all previous invoices
-       * </pre>
-       *
-       * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
-       */
-      public viam.app.v1.Billing.InvoiceSummary.Builder addInvoicesBuilder(
-          int index) {
-        return getInvoicesFieldBuilder().addBuilder(
-            index, viam.app.v1.Billing.InvoiceSummary.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * all previous invoices
-       * </pre>
-       *
-       * <code>repeated .viam.app.v1.InvoiceSummary invoices = 2 [json_name = "invoices"];</code>
-       */
-      public java.util.List<viam.app.v1.Billing.InvoiceSummary.Builder> 
-           getInvoicesBuilderList() {
-        return getInvoicesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.app.v1.Billing.InvoiceSummary, viam.app.v1.Billing.InvoiceSummary.Builder, viam.app.v1.Billing.InvoiceSummaryOrBuilder> 
-          getInvoicesFieldBuilder() {
-        if (invoicesBuilder_ == null) {
-          invoicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              viam.app.v1.Billing.InvoiceSummary, viam.app.v1.Billing.InvoiceSummary.Builder, viam.app.v1.Billing.InvoiceSummaryOrBuilder>(
-                  invoices_,
-                  ((bitField0_ & 0x00000002) != 0),
-                  getParentForChildren(),
-                  isClean());
-          invoices_ = null;
-        }
-        return invoicesBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetInvoicesSummaryResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.GetInvoicesSummaryResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "outstandingBalance_",
+              "invoices_",
+              viam.app.v1.Billing.InvoiceSummary.class,
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u0000\u0002\u001b" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.GetInvoicesSummaryResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.GetInvoicesSummaryResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.GetInvoicesSummaryResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.GetInvoicesSummaryResponse)
     private static final viam.app.v1.Billing.GetInvoicesSummaryResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.Billing.GetInvoicesSummaryResponse();
+      GetInvoicesSummaryResponse defaultInstance = new GetInvoicesSummaryResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetInvoicesSummaryResponse.class, defaultInstance);
     }
 
     public static viam.app.v1.Billing.GetInvoicesSummaryResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetInvoicesSummaryResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetInvoicesSummaryResponse>() {
-      @java.lang.Override
-      public GetInvoicesSummaryResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetInvoicesSummaryResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetInvoicesSummaryResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetInvoicesSummaryResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.Billing.GetInvoicesSummaryResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetInvoicePdfRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.GetInvoicePdfRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -10566,59 +6325,24 @@ public final class Billing {
   /**
    * Protobuf type {@code viam.app.v1.GetInvoicePdfRequest}
    */
-  public static final class GetInvoicePdfRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetInvoicePdfRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetInvoicePdfRequest, GetInvoicePdfRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.GetInvoicePdfRequest)
       GetInvoicePdfRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetInvoicePdfRequest.newBuilder() to construct.
-    private GetInvoicePdfRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetInvoicePdfRequest() {
       id_ = "";
       orgId_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetInvoicePdfRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicePdfRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicePdfRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.Billing.GetInvoicePdfRequest.class, viam.app.v1.Billing.GetInvoicePdfRequest.Builder.class);
-    }
-
     public static final int ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <code>string id = 1 [json_name = "id"];</code>
@@ -10627,37 +6351,45 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     */
+    private void clearId() {
+
+      id_ = getDefaultInstance().getId();
+    }
+    /**
+     * <code>string id = 1 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
+
     }
 
     public static final int ORG_ID_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object orgId_ = "";
+    private java.lang.String orgId_;
     /**
      * <code>string org_id = 2 [json_name = "orgId"];</code>
      * @return The orgId.
      */
     @java.lang.Override
     public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      }
+      return orgId_;
     }
     /**
      * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -10666,401 +6398,149 @@ public final class Billing {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      orgId_ = value;
     }
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     */
+    private void clearOrgId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
-      }
-      getUnknownFields().writeTo(output);
+      orgId_ = getDefaultInstance().getOrgId();
     }
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.Billing.GetInvoicePdfRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.Billing.GetInvoicePdfRequest other = (viam.app.v1.Billing.GetInvoicePdfRequest) obj;
-
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getOrgId()
-          .equals(other.getOrgId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrgId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.v1.Billing.GetInvoicePdfRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetInvoicePdfRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicePdfRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetInvoicePdfRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicePdfRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetInvoicePdfRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicePdfRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetInvoicePdfRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.Billing.GetInvoicePdfRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.Billing.GetInvoicePdfRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicePdfRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetInvoicePdfRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.Billing.GetInvoicePdfRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.GetInvoicePdfRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.GetInvoicePdfRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.GetInvoicePdfRequest)
         viam.app.v1.Billing.GetInvoicePdfRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicePdfRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicePdfRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.Billing.GetInvoicePdfRequest.class, viam.app.v1.Billing.GetInvoicePdfRequest.Builder.class);
-      }
-
       // Construct using viam.app.v1.Billing.GetInvoicePdfRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        id_ = "";
-        orgId_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicePdfRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetInvoicePdfRequest getDefaultInstanceForType() {
-        return viam.app.v1.Billing.GetInvoicePdfRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetInvoicePdfRequest build() {
-        viam.app.v1.Billing.GetInvoicePdfRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetInvoicePdfRequest buildPartial() {
-        viam.app.v1.Billing.GetInvoicePdfRequest result = new viam.app.v1.Billing.GetInvoicePdfRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.Billing.GetInvoicePdfRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.id_ = id_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.orgId_ = orgId_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.Billing.GetInvoicePdfRequest) {
-          return mergeFrom((viam.app.v1.Billing.GetInvoicePdfRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.Billing.GetInvoicePdfRequest other) {
-        if (other == viam.app.v1.Billing.GetInvoicePdfRequest.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getOrgId().isEmpty()) {
-          orgId_ = other.orgId_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                orgId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object id_ = "";
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <code>string id = 1 [json_name = "id"];</code>
@@ -11069,10 +6549,8 @@ public final class Billing {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -11080,9 +6558,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -11092,47 +6569,27 @@ public final class Billing {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
 
-      private java.lang.Object orgId_ = "";
       /**
        * <code>string org_id = 2 [json_name = "orgId"];</code>
        * @return The orgId.
        */
+      @java.lang.Override
       public java.lang.String getOrgId() {
-        java.lang.Object ref = orgId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          orgId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrgId();
       }
       /**
        * <code>string org_id = 2 [json_name = "orgId"];</code>
        * @return The bytes for orgId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrgIdBytes() {
-        java.lang.Object ref = orgId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          orgId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrgIdBytes();
       }
       /**
        * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -11141,10 +6598,8 @@ public final class Billing {
        */
       public Builder setOrgId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        orgId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgId(value);
         return this;
       }
       /**
@@ -11152,9 +6607,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearOrgId() {
-        orgId_ = getDefaultInstance().getOrgId();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrgId();
         return this;
       }
       /**
@@ -11164,80 +6618,90 @@ public final class Billing {
        */
       public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        orgId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetInvoicePdfRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.GetInvoicePdfRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "id_",
+              "orgId_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.GetInvoicePdfRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.GetInvoicePdfRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.GetInvoicePdfRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.GetInvoicePdfRequest)
     private static final viam.app.v1.Billing.GetInvoicePdfRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.Billing.GetInvoicePdfRequest();
+      GetInvoicePdfRequest defaultInstance = new GetInvoicePdfRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetInvoicePdfRequest.class, defaultInstance);
     }
 
     public static viam.app.v1.Billing.GetInvoicePdfRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetInvoicePdfRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetInvoicePdfRequest>() {
-      @java.lang.Override
-      public GetInvoicePdfRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetInvoicePdfRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetInvoicePdfRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetInvoicePdfRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.Billing.GetInvoicePdfRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetInvoicePdfResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.GetInvoicePdfResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>bytes chunk = 1 [json_name = "chunk"];</code>
@@ -11248,41 +6712,16 @@ public final class Billing {
   /**
    * Protobuf type {@code viam.app.v1.GetInvoicePdfResponse}
    */
-  public static final class GetInvoicePdfResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetInvoicePdfResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetInvoicePdfResponse, GetInvoicePdfResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.GetInvoicePdfResponse)
       GetInvoicePdfResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetInvoicePdfResponse.newBuilder() to construct.
-    private GetInvoicePdfResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetInvoicePdfResponse() {
       chunk_ = com.google.protobuf.ByteString.EMPTY;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetInvoicePdfResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicePdfResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicePdfResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.Billing.GetInvoicePdfResponse.class, viam.app.v1.Billing.GetInvoicePdfResponse.Builder.class);
-    }
-
     public static final int CHUNK_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString chunk_ = com.google.protobuf.ByteString.EMPTY;
+    private com.google.protobuf.ByteString chunk_;
     /**
      * <code>bytes chunk = 1 [json_name = "chunk"];</code>
      * @return The chunk.
@@ -11291,340 +6730,127 @@ public final class Billing {
     public com.google.protobuf.ByteString getChunk() {
       return chunk_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bytes chunk = 1 [json_name = "chunk"];</code>
+     * @param value The chunk to set.
+     */
+    private void setChunk(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      chunk_ = value;
     }
+    /**
+     * <code>bytes chunk = 1 [json_name = "chunk"];</code>
+     */
+    private void clearChunk() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!chunk_.isEmpty()) {
-        output.writeBytes(1, chunk_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!chunk_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, chunk_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.Billing.GetInvoicePdfResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.Billing.GetInvoicePdfResponse other = (viam.app.v1.Billing.GetInvoicePdfResponse) obj;
-
-      if (!getChunk()
-          .equals(other.getChunk())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CHUNK_FIELD_NUMBER;
-      hash = (53 * hash) + getChunk().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      chunk_ = getDefaultInstance().getChunk();
     }
 
     public static viam.app.v1.Billing.GetInvoicePdfResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetInvoicePdfResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicePdfResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetInvoicePdfResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicePdfResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.Billing.GetInvoicePdfResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicePdfResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetInvoicePdfResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.Billing.GetInvoicePdfResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.Billing.GetInvoicePdfResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.Billing.GetInvoicePdfResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.Billing.GetInvoicePdfResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.Billing.GetInvoicePdfResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.GetInvoicePdfResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.Billing.GetInvoicePdfResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.GetInvoicePdfResponse)
         viam.app.v1.Billing.GetInvoicePdfResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicePdfResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicePdfResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.Billing.GetInvoicePdfResponse.class, viam.app.v1.Billing.GetInvoicePdfResponse.Builder.class);
-      }
-
       // Construct using viam.app.v1.Billing.GetInvoicePdfResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        chunk_ = com.google.protobuf.ByteString.EMPTY;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.Billing.internal_static_viam_app_v1_GetInvoicePdfResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetInvoicePdfResponse getDefaultInstanceForType() {
-        return viam.app.v1.Billing.GetInvoicePdfResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetInvoicePdfResponse build() {
-        viam.app.v1.Billing.GetInvoicePdfResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.Billing.GetInvoicePdfResponse buildPartial() {
-        viam.app.v1.Billing.GetInvoicePdfResponse result = new viam.app.v1.Billing.GetInvoicePdfResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.Billing.GetInvoicePdfResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.chunk_ = chunk_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.Billing.GetInvoicePdfResponse) {
-          return mergeFrom((viam.app.v1.Billing.GetInvoicePdfResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.Billing.GetInvoicePdfResponse other) {
-        if (other == viam.app.v1.Billing.GetInvoicePdfResponse.getDefaultInstance()) return this;
-        if (other.getChunk() != com.google.protobuf.ByteString.EMPTY) {
-          setChunk(other.getChunk());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                chunk_ = input.readBytes();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.ByteString chunk_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes chunk = 1 [json_name = "chunk"];</code>
        * @return The chunk.
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getChunk() {
-        return chunk_;
+        return instance.getChunk();
       }
       /**
        * <code>bytes chunk = 1 [json_name = "chunk"];</code>
@@ -11632,10 +6858,8 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder setChunk(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        chunk_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setChunk(value);
         return this;
       }
       /**
@@ -11643,294 +6867,87 @@ public final class Billing {
        * @return This builder for chaining.
        */
       public Builder clearChunk() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        chunk_ = getDefaultInstance().getChunk();
-        onChanged();
+        copyOnWrite();
+        instance.clearChunk();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.GetInvoicePdfResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.Billing.GetInvoicePdfResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "chunk_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\n";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.Billing.GetInvoicePdfResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.Billing.GetInvoicePdfResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.Billing.GetInvoicePdfResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.GetInvoicePdfResponse)
     private static final viam.app.v1.Billing.GetInvoicePdfResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.Billing.GetInvoicePdfResponse();
+      GetInvoicePdfResponse defaultInstance = new GetInvoicePdfResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetInvoicePdfResponse.class, defaultInstance);
     }
 
     public static viam.app.v1.Billing.GetInvoicePdfResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetInvoicePdfResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetInvoicePdfResponse>() {
-      @java.lang.Override
-      public GetInvoicePdfResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetInvoicePdfResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetInvoicePdfResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetInvoicePdfResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.Billing.GetInvoicePdfResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_InvoiceSummary_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_InvoiceSummary_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_BillableResourceEvent_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_BillableResourceEvent_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_Invoice_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_Invoice_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_PaymentMethodCard_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_PaymentMethodCard_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_GetCurrentMonthUsageRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_GetCurrentMonthUsageRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_GetCurrentMonthUsageResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_GetCurrentMonthUsageResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_GetOrgBillingInformationRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_GetOrgBillingInformationRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_GetOrgBillingInformationResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_GetOrgBillingInformationResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_GetInvoicesSummaryRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_GetInvoicesSummaryRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_GetInvoicesSummaryResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_GetInvoicesSummaryResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_GetInvoicePdfRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_GetInvoicePdfRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_GetInvoicePdfResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_GetInvoicePdfResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\024app/v1/billing.proto\022\013viam.app.v1\032\037goo" +
-      "gle/protobuf/timestamp.proto\"\216\002\n\016Invoice" +
-      "Summary\022\016\n\002id\030\001 \001(\tR\002id\022=\n\014invoice_date\030" +
-      "\002 \001(\0132\032.google.protobuf.TimestampR\013invoi" +
-      "ceDate\022%\n\016invoice_amount\030\003 \001(\001R\rinvoiceA" +
-      "mount\022\026\n\006status\030\004 \001(\tR\006status\0225\n\010due_dat" +
-      "e\030\005 \001(\0132\032.google.protobuf.TimestampR\007due" +
-      "Date\0227\n\tpaid_date\030\006 \001(\0132\032.google.protobu" +
-      "f.TimestampR\010paidDate\"\213\002\n\025BillableResour" +
-      "ceEvent\022\016\n\002id\030\001 \001(\tR\002id\022\022\n\004type\030\002 \001(\tR\004t" +
-      "ype\022%\n\016usage_quantity\030\003 \001(\001R\rusageQuanti" +
-      "ty\022.\n\023usage_quantity_unit\030\004 \001(\tR\021usageQu" +
-      "antityUnit\022\035\n\nusage_cost\030\005 \001(\tR\tusageCos" +
-      "t\022;\n\013occurred_at\030\006 \001(\0132\032.google.protobuf" +
-      ".TimestampR\noccurredAt\022\033\n\tuser_name\030\007 \001(" +
-      "\tR\010userName\"\247\002\n\007Invoice\022\016\n\002id\030\001 \001(\tR\002id\022" +
-      "=\n\014invoice_date\030\002 \001(\0132\032.google.protobuf." +
-      "TimestampR\013invoiceDate\022%\n\016invoice_amount" +
-      "\030\003 \001(\001R\rinvoiceAmount\022\026\n\006status\030\004 \001(\tR\006s" +
-      "tatus\0225\n\010due_date\030\005 \001(\0132\032.google.protobu" +
-      "f.TimestampR\007dueDate\0228\n\005items\030\006 \003(\0132\".vi" +
-      "am.app.v1.BillableResourceEventR\005items\022\035" +
-      "\n\nemailed_to\030\007 \001(\tR\temailedTo\"S\n\021Payment" +
-      "MethodCard\022\024\n\005brand\030\001 \001(\tR\005brand\022(\n\020last" +
-      "_four_digits\030\002 \001(\tR\016lastFourDigits\"4\n\033Ge" +
-      "tCurrentMonthUsageRequest\022\025\n\006org_id\030\001 \001(" +
-      "\tR\005orgId\"\320\004\n\034GetCurrentMonthUsageRespons" +
-      "e\0229\n\nstart_date\030\001 \001(\0132\032.google.protobuf." +
-      "TimestampR\tstartDate\0225\n\010end_date\030\002 \001(\0132\032" +
-      ".google.protobuf.TimestampR\007endDate\0227\n\030c" +
-      "loud_storage_usage_cost\030\003 \001(\001R\025cloudStor" +
-      "ageUsageCost\0223\n\026data_upload_usage_cost\030\004" +
-      " \001(\001R\023dataUploadUsageCost\0221\n\025data_egres_" +
-      "usage_cost\030\005 \001(\001R\022dataEgresUsageCost\0229\n\031" +
-      "remote_control_usage_cost\030\006 \001(\001R\026remoteC" +
-      "ontrolUsageCost\022=\n\033standard_compute_usag" +
-      "e_cost\030\007 \001(\001R\030standardComputeUsageCost\022\'" +
-      "\n\017discount_amount\030\010 \001(\001R\016discountAmount\022" +
-      "9\n\031total_usage_with_discount\030\t \001(\001R\026tota" +
-      "lUsageWithDiscount\022?\n\034total_usage_withou" +
-      "t_discount\030\n \001(\001R\031totalUsageWithoutDisco" +
-      "unt\"8\n\037GetOrgBillingInformationRequest\022\025" +
-      "\n\006org_id\030\001 \001(\tR\005orgId\"\374\001\n GetOrgBillingI" +
-      "nformationResponse\0222\n\004type\030\001 \001(\0162\036.viam." +
-      "app.v1.PaymentMethodTypeR\004type\022#\n\rbillin" +
-      "g_email\030\002 \001(\tR\014billingEmail\022;\n\006method\030\003 " +
-      "\001(\0132\036.viam.app.v1.PaymentMethodCardH\000R\006m" +
-      "ethod\210\001\001\022&\n\014billing_tier\030\004 \001(\tH\001R\013billin" +
-      "gTier\210\001\001B\t\n\007_methodB\017\n\r_billing_tier\"2\n\031" +
-      "GetInvoicesSummaryRequest\022\025\n\006org_id\030\001 \001(" +
-      "\tR\005orgId\"\206\001\n\032GetInvoicesSummaryResponse\022" +
-      "/\n\023outstanding_balance\030\001 \001(\001R\022outstandin" +
-      "gBalance\0227\n\010invoices\030\002 \003(\0132\033.viam.app.v1" +
-      ".InvoiceSummaryR\010invoices\"=\n\024GetInvoiceP" +
-      "dfRequest\022\016\n\002id\030\001 \001(\tR\002id\022\025\n\006org_id\030\002 \001(" +
-      "\tR\005orgId\"-\n\025GetInvoicePdfResponse\022\024\n\005chu" +
-      "nk\030\001 \001(\014R\005chunk*V\n\021PaymentMethodType\022#\n\037" +
-      "PAYMENT_METHOD_TYPE_UNSPECIFIED\020\000\022\034\n\030PAY" +
-      "MENT_METHOD_TYPE_CARD\020\0012\267\003\n\016BillingServi" +
-      "ce\022k\n\024GetCurrentMonthUsage\022(.viam.app.v1" +
-      ".GetCurrentMonthUsageRequest\032).viam.app." +
-      "v1.GetCurrentMonthUsageResponse\022w\n\030GetOr" +
-      "gBillingInformation\022,.viam.app.v1.GetOrg" +
-      "BillingInformationRequest\032-.viam.app.v1." +
-      "GetOrgBillingInformationResponse\022e\n\022GetI" +
-      "nvoicesSummary\022&.viam.app.v1.GetInvoices" +
-      "SummaryRequest\032\'.viam.app.v1.GetInvoices" +
-      "SummaryResponse\022X\n\rGetInvoicePdf\022!.viam." +
-      "app.v1.GetInvoicePdfRequest\032\".viam.app.v" +
-      "1.GetInvoicePdfResponse0\001B\030Z\026go.viam.com" +
-      "/api/app/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.TimestampProto.getDescriptor(),
-        });
-    internal_static_viam_app_v1_InvoiceSummary_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_app_v1_InvoiceSummary_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_InvoiceSummary_descriptor,
-        new java.lang.String[] { "Id", "InvoiceDate", "InvoiceAmount", "Status", "DueDate", "PaidDate", });
-    internal_static_viam_app_v1_BillableResourceEvent_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_app_v1_BillableResourceEvent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_BillableResourceEvent_descriptor,
-        new java.lang.String[] { "Id", "Type", "UsageQuantity", "UsageQuantityUnit", "UsageCost", "OccurredAt", "UserName", });
-    internal_static_viam_app_v1_Invoice_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_app_v1_Invoice_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_Invoice_descriptor,
-        new java.lang.String[] { "Id", "InvoiceDate", "InvoiceAmount", "Status", "DueDate", "Items", "EmailedTo", });
-    internal_static_viam_app_v1_PaymentMethodCard_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_app_v1_PaymentMethodCard_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_PaymentMethodCard_descriptor,
-        new java.lang.String[] { "Brand", "LastFourDigits", });
-    internal_static_viam_app_v1_GetCurrentMonthUsageRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_app_v1_GetCurrentMonthUsageRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_GetCurrentMonthUsageRequest_descriptor,
-        new java.lang.String[] { "OrgId", });
-    internal_static_viam_app_v1_GetCurrentMonthUsageResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_app_v1_GetCurrentMonthUsageResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_GetCurrentMonthUsageResponse_descriptor,
-        new java.lang.String[] { "StartDate", "EndDate", "CloudStorageUsageCost", "DataUploadUsageCost", "DataEgresUsageCost", "RemoteControlUsageCost", "StandardComputeUsageCost", "DiscountAmount", "TotalUsageWithDiscount", "TotalUsageWithoutDiscount", });
-    internal_static_viam_app_v1_GetOrgBillingInformationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_app_v1_GetOrgBillingInformationRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_GetOrgBillingInformationRequest_descriptor,
-        new java.lang.String[] { "OrgId", });
-    internal_static_viam_app_v1_GetOrgBillingInformationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_app_v1_GetOrgBillingInformationResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_GetOrgBillingInformationResponse_descriptor,
-        new java.lang.String[] { "Type", "BillingEmail", "Method", "BillingTier", });
-    internal_static_viam_app_v1_GetInvoicesSummaryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_app_v1_GetInvoicesSummaryRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_GetInvoicesSummaryRequest_descriptor,
-        new java.lang.String[] { "OrgId", });
-    internal_static_viam_app_v1_GetInvoicesSummaryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_app_v1_GetInvoicesSummaryResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_GetInvoicesSummaryResponse_descriptor,
-        new java.lang.String[] { "OutstandingBalance", "Invoices", });
-    internal_static_viam_app_v1_GetInvoicePdfRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_viam_app_v1_GetInvoicePdfRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_GetInvoicePdfRequest_descriptor,
-        new java.lang.String[] { "Id", "OrgId", });
-    internal_static_viam_app_v1_GetInvoicePdfResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_viam_app_v1_GetInvoicePdfResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_GetInvoicePdfResponse_descriptor,
-        new java.lang.String[] { "Chunk", });
-    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

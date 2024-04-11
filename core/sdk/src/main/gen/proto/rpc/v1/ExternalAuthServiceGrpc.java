@@ -42,11 +42,10 @@ public final class ExternalAuthServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AuthenticateTo"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.v1.Auth.AuthenticateToRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   proto.rpc.v1.Auth.AuthenticateToResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ExternalAuthServiceMethodDescriptorSupplier("AuthenticateTo"))
               .build();
         }
       }
@@ -322,41 +321,6 @@ public final class ExternalAuthServiceGrpc {
         .build();
   }
 
-  private static abstract class ExternalAuthServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    ExternalAuthServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return proto.rpc.v1.Auth.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("ExternalAuthService");
-    }
-  }
-
-  private static final class ExternalAuthServiceFileDescriptorSupplier
-      extends ExternalAuthServiceBaseDescriptorSupplier {
-    ExternalAuthServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class ExternalAuthServiceMethodDescriptorSupplier
-      extends ExternalAuthServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    ExternalAuthServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -366,7 +330,6 @@ public final class ExternalAuthServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new ExternalAuthServiceFileDescriptorSupplier())
               .addMethod(getAuthenticateToMethod())
               .build();
         }

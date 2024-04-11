@@ -37,11 +37,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetUserIDByEmail"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetUserIDByEmailRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetUserIDByEmailResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetUserIDByEmail"))
               .build();
         }
       }
@@ -68,11 +67,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateOrganization"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateOrganizationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateOrganizationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("CreateOrganization"))
               .build();
         }
       }
@@ -99,11 +97,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOrganizations"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListOrganizationsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListOrganizationsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("ListOrganizations"))
               .build();
         }
       }
@@ -130,11 +127,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrganizationsWithAccessToLocation"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetOrganizationsWithAccessToLocationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetOrganizationsWithAccessToLocationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetOrganizationsWithAccessToLocation"))
               .build();
         }
       }
@@ -161,11 +157,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOrganizationsByUser"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListOrganizationsByUserRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListOrganizationsByUserResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("ListOrganizationsByUser"))
               .build();
         }
       }
@@ -192,11 +187,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrganization"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetOrganizationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetOrganizationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetOrganization"))
               .build();
         }
       }
@@ -223,11 +217,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrganizationNamespaceAvailability"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetOrganizationNamespaceAvailabilityRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetOrganizationNamespaceAvailabilityResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetOrganizationNamespaceAvailability"))
               .build();
         }
       }
@@ -254,11 +247,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateOrganization"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateOrganizationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateOrganizationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("UpdateOrganization"))
               .build();
         }
       }
@@ -285,11 +277,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteOrganization"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteOrganizationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteOrganizationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("DeleteOrganization"))
               .build();
         }
       }
@@ -316,11 +307,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOrganizationMembers"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListOrganizationMembersRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListOrganizationMembersResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("ListOrganizationMembers"))
               .build();
         }
       }
@@ -347,11 +337,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateOrganizationInvite"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateOrganizationInviteRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateOrganizationInviteResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("CreateOrganizationInvite"))
               .build();
         }
       }
@@ -378,11 +367,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateOrganizationInviteAuthorizations"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateOrganizationInviteAuthorizationsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateOrganizationInviteAuthorizationsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("UpdateOrganizationInviteAuthorizations"))
               .build();
         }
       }
@@ -409,11 +397,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteOrganizationMember"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteOrganizationMemberRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteOrganizationMemberResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("DeleteOrganizationMember"))
               .build();
         }
       }
@@ -440,11 +427,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteOrganizationInvite"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteOrganizationInviteRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteOrganizationInviteResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("DeleteOrganizationInvite"))
               .build();
         }
       }
@@ -471,11 +457,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResendOrganizationInvite"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ResendOrganizationInviteRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ResendOrganizationInviteResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("ResendOrganizationInvite"))
               .build();
         }
       }
@@ -502,11 +487,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateLocation"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateLocationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateLocationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("CreateLocation"))
               .build();
         }
       }
@@ -533,11 +517,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLocation"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetLocationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetLocationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetLocation"))
               .build();
         }
       }
@@ -564,11 +547,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateLocation"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateLocationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateLocationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("UpdateLocation"))
               .build();
         }
       }
@@ -595,11 +577,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteLocation"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteLocationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteLocationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("DeleteLocation"))
               .build();
         }
       }
@@ -626,11 +607,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListLocations"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListLocationsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListLocationsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("ListLocations"))
               .build();
         }
       }
@@ -657,11 +637,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ShareLocation"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ShareLocationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ShareLocationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("ShareLocation"))
               .build();
         }
       }
@@ -688,11 +667,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UnshareLocation"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UnshareLocationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UnshareLocationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("UnshareLocation"))
               .build();
         }
       }
@@ -719,11 +697,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "LocationAuth"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.LocationAuthRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.LocationAuthResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("LocationAuth"))
               .build();
         }
       }
@@ -750,11 +727,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateLocationSecret"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateLocationSecretRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateLocationSecretResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("CreateLocationSecret"))
               .build();
         }
       }
@@ -781,11 +757,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteLocationSecret"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteLocationSecretRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteLocationSecretResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("DeleteLocationSecret"))
               .build();
         }
       }
@@ -812,11 +787,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRobot"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRobotRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRobotResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetRobot"))
               .build();
         }
       }
@@ -843,11 +817,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRoverRentalRobots"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRoverRentalRobotsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRoverRentalRobotsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetRoverRentalRobots"))
               .build();
         }
       }
@@ -874,11 +847,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRobotParts"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRobotPartsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRobotPartsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetRobotParts"))
               .build();
         }
       }
@@ -905,11 +877,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRobotPart"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRobotPartRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRobotPartResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetRobotPart"))
               .build();
         }
       }
@@ -936,11 +907,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRobotPartLogs"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRobotPartLogsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRobotPartLogsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetRobotPartLogs"))
               .build();
         }
       }
@@ -967,11 +937,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TailRobotPartLogs"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.TailRobotPartLogsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.TailRobotPartLogsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("TailRobotPartLogs"))
               .build();
         }
       }
@@ -998,11 +967,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRobotPartHistory"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRobotPartHistoryRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRobotPartHistoryResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetRobotPartHistory"))
               .build();
         }
       }
@@ -1029,11 +997,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateRobotPart"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateRobotPartRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateRobotPartResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("UpdateRobotPart"))
               .build();
         }
       }
@@ -1060,11 +1027,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "NewRobotPart"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.NewRobotPartRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.NewRobotPartResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("NewRobotPart"))
               .build();
         }
       }
@@ -1091,11 +1057,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteRobotPart"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteRobotPartRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteRobotPartResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("DeleteRobotPart"))
               .build();
         }
       }
@@ -1122,11 +1087,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRobotAPIKeys"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRobotAPIKeysRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRobotAPIKeysResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetRobotAPIKeys"))
               .build();
         }
       }
@@ -1153,11 +1117,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MarkPartAsMain"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.MarkPartAsMainRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.MarkPartAsMainResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("MarkPartAsMain"))
               .build();
         }
       }
@@ -1184,11 +1147,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "MarkPartForRestart"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.MarkPartForRestartRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.MarkPartForRestartResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("MarkPartForRestart"))
               .build();
         }
       }
@@ -1215,11 +1177,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateRobotPartSecret"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateRobotPartSecretRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateRobotPartSecretResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("CreateRobotPartSecret"))
               .build();
         }
       }
@@ -1246,11 +1207,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteRobotPartSecret"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteRobotPartSecretRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteRobotPartSecretResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("DeleteRobotPartSecret"))
               .build();
         }
       }
@@ -1277,11 +1237,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRobots"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListRobotsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListRobotsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("ListRobots"))
               .build();
         }
       }
@@ -1308,11 +1267,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "NewRobot"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.NewRobotRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.NewRobotResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("NewRobot"))
               .build();
         }
       }
@@ -1339,11 +1297,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateRobot"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateRobotRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateRobotResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("UpdateRobot"))
               .build();
         }
       }
@@ -1370,11 +1327,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteRobot"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteRobotRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteRobotResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("DeleteRobot"))
               .build();
         }
       }
@@ -1401,11 +1357,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListFragments"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListFragmentsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListFragmentsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("ListFragments"))
               .build();
         }
       }
@@ -1432,11 +1387,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetFragment"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetFragmentRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetFragmentResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetFragment"))
               .build();
         }
       }
@@ -1463,11 +1417,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateFragment"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateFragmentRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateFragmentResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("CreateFragment"))
               .build();
         }
       }
@@ -1494,11 +1447,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateFragment"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateFragmentRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateFragmentResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("UpdateFragment"))
               .build();
         }
       }
@@ -1525,11 +1477,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteFragment"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteFragmentRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteFragmentResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("DeleteFragment"))
               .build();
         }
       }
@@ -1556,11 +1507,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddRole"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.AddRoleRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.AddRoleResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("AddRole"))
               .build();
         }
       }
@@ -1587,11 +1537,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveRole"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.RemoveRoleRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.RemoveRoleResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("RemoveRole"))
               .build();
         }
       }
@@ -1618,11 +1567,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ChangeRole"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ChangeRoleRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ChangeRoleResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("ChangeRole"))
               .build();
         }
       }
@@ -1649,11 +1597,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAuthorizations"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListAuthorizationsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListAuthorizationsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("ListAuthorizations"))
               .build();
         }
       }
@@ -1680,11 +1627,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CheckPermissions"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CheckPermissionsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CheckPermissionsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("CheckPermissions"))
               .build();
         }
       }
@@ -1711,11 +1657,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRegistryItem"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRegistryItemRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetRegistryItemResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetRegistryItem"))
               .build();
         }
       }
@@ -1742,11 +1687,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateRegistryItem"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateRegistryItemRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateRegistryItemResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("CreateRegistryItem"))
               .build();
         }
       }
@@ -1773,11 +1717,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateRegistryItem"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateRegistryItemRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateRegistryItemResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("UpdateRegistryItem"))
               .build();
         }
       }
@@ -1804,11 +1747,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListRegistryItems"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListRegistryItemsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListRegistryItemsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("ListRegistryItems"))
               .build();
         }
       }
@@ -1835,11 +1777,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteRegistryItem"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteRegistryItemRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteRegistryItemResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("DeleteRegistryItem"))
               .build();
         }
       }
@@ -1866,11 +1807,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateModule"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateModuleRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateModuleResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("CreateModule"))
               .build();
         }
       }
@@ -1897,11 +1837,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateModule"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateModuleRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UpdateModuleResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("UpdateModule"))
               .build();
         }
       }
@@ -1928,11 +1867,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UploadModuleFile"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UploadModuleFileRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.UploadModuleFileResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("UploadModuleFile"))
               .build();
         }
       }
@@ -1959,11 +1897,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetModule"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetModuleRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.GetModuleResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("GetModule"))
               .build();
         }
       }
@@ -1990,11 +1927,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListModules"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListModulesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListModulesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("ListModules"))
               .build();
         }
       }
@@ -2021,11 +1957,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateKey"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateKeyRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateKeyResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("CreateKey"))
               .build();
         }
       }
@@ -2052,11 +1987,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteKey"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteKeyRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.DeleteKeyResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("DeleteKey"))
               .build();
         }
       }
@@ -2083,11 +2017,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListKeys"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListKeysRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.ListKeysResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("ListKeys"))
               .build();
         }
       }
@@ -2114,11 +2047,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RotateKey"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.RotateKeyRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.RotateKeyResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("RotateKey"))
               .build();
         }
       }
@@ -2145,11 +2077,10 @@ public final class AppServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateKeyFromExistingKeyAuthorizations"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateKeyFromExistingKeyAuthorizationsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.v1.App.CreateKeyFromExistingKeyAuthorizationsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new AppServiceMethodDescriptorSupplier("CreateKeyFromExistingKeyAuthorizations"))
               .build();
         }
       }
@@ -5833,41 +5764,6 @@ public final class AppServiceGrpc {
         .build();
   }
 
-  private static abstract class AppServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    AppServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.app.v1.App.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("AppService");
-    }
-  }
-
-  private static final class AppServiceFileDescriptorSupplier
-      extends AppServiceBaseDescriptorSupplier {
-    AppServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class AppServiceMethodDescriptorSupplier
-      extends AppServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    AppServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -5877,7 +5773,6 @@ public final class AppServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new AppServiceFileDescriptorSupplier())
               .addMethod(getGetUserIDByEmailMethod())
               .addMethod(getCreateOrganizationMethod())
               .addMethod(getListOrganizationsMethod())

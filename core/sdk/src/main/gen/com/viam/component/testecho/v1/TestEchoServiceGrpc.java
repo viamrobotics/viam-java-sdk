@@ -34,11 +34,10 @@ public final class TestEchoServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Echo"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.testecho.v1.Testecho.EchoRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.testecho.v1.Testecho.EchoResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new TestEchoServiceMethodDescriptorSupplier("Echo"))
               .build();
         }
       }
@@ -65,11 +64,10 @@ public final class TestEchoServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EchoMultiple"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.testecho.v1.Testecho.EchoMultipleRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.testecho.v1.Testecho.EchoMultipleResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new TestEchoServiceMethodDescriptorSupplier("EchoMultiple"))
               .build();
         }
       }
@@ -96,11 +94,10 @@ public final class TestEchoServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EchoBiDi"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.testecho.v1.Testecho.EchoBiDiRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.testecho.v1.Testecho.EchoBiDiResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new TestEchoServiceMethodDescriptorSupplier("EchoBiDi"))
               .build();
         }
       }
@@ -127,11 +124,10 @@ public final class TestEchoServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Stop"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.testecho.v1.Testecho.StopRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.component.testecho.v1.Testecho.StopResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new TestEchoServiceMethodDescriptorSupplier("Stop"))
               .build();
         }
       }
@@ -434,41 +430,6 @@ public final class TestEchoServiceGrpc {
         .build();
   }
 
-  private static abstract class TestEchoServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    TestEchoServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.viam.component.testecho.v1.Testecho.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("TestEchoService");
-    }
-  }
-
-  private static final class TestEchoServiceFileDescriptorSupplier
-      extends TestEchoServiceBaseDescriptorSupplier {
-    TestEchoServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class TestEchoServiceMethodDescriptorSupplier
-      extends TestEchoServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    TestEchoServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -478,7 +439,6 @@ public final class TestEchoServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new TestEchoServiceFileDescriptorSupplier())
               .addMethod(getEchoMethod())
               .addMethod(getEchoMultipleMethod())
               .addMethod(getEchoBiDiMethod())

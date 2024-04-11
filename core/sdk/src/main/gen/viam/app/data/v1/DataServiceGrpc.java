@@ -37,11 +37,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TabularDataByFilter"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.TabularDataByFilterRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.TabularDataByFilterResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("TabularDataByFilter"))
               .build();
         }
       }
@@ -68,11 +67,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TabularDataBySQL"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.TabularDataBySQLRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.TabularDataBySQLResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("TabularDataBySQL"))
               .build();
         }
       }
@@ -99,11 +97,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TabularDataByMQL"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.TabularDataByMQLRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.TabularDataByMQLResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("TabularDataByMQL"))
               .build();
         }
       }
@@ -130,11 +127,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BinaryDataByFilter"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.BinaryDataByFilterRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.BinaryDataByFilterResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("BinaryDataByFilter"))
               .build();
         }
       }
@@ -161,11 +157,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BinaryDataByIDs"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.BinaryDataByIDsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.BinaryDataByIDsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("BinaryDataByIDs"))
               .build();
         }
       }
@@ -192,11 +187,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteTabularData"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.DeleteTabularDataRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.DeleteTabularDataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("DeleteTabularData"))
               .build();
         }
       }
@@ -223,11 +217,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteBinaryDataByFilter"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.DeleteBinaryDataByFilterRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.DeleteBinaryDataByFilterResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("DeleteBinaryDataByFilter"))
               .build();
         }
       }
@@ -254,11 +247,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteBinaryDataByIDs"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.DeleteBinaryDataByIDsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.DeleteBinaryDataByIDsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("DeleteBinaryDataByIDs"))
               .build();
         }
       }
@@ -285,11 +277,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddTagsToBinaryDataByIDs"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.AddTagsToBinaryDataByIDsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.AddTagsToBinaryDataByIDsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("AddTagsToBinaryDataByIDs"))
               .build();
         }
       }
@@ -316,11 +307,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddTagsToBinaryDataByFilter"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.AddTagsToBinaryDataByFilterRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.AddTagsToBinaryDataByFilterResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("AddTagsToBinaryDataByFilter"))
               .build();
         }
       }
@@ -347,11 +337,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveTagsFromBinaryDataByIDs"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.RemoveTagsFromBinaryDataByIDsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("RemoveTagsFromBinaryDataByIDs"))
               .build();
         }
       }
@@ -378,11 +367,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveTagsFromBinaryDataByFilter"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.RemoveTagsFromBinaryDataByFilterResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("RemoveTagsFromBinaryDataByFilter"))
               .build();
         }
       }
@@ -409,11 +397,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TagsByFilter"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.TagsByFilterRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.TagsByFilterResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("TagsByFilter"))
               .build();
         }
       }
@@ -440,11 +427,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddBoundingBoxToImageByID"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.AddBoundingBoxToImageByIDRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.AddBoundingBoxToImageByIDResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("AddBoundingBoxToImageByID"))
               .build();
         }
       }
@@ -471,11 +457,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveBoundingBoxFromImageByID"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.RemoveBoundingBoxFromImageByIDResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("RemoveBoundingBoxFromImageByID"))
               .build();
         }
       }
@@ -502,11 +487,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BoundingBoxLabelsByFilter"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.BoundingBoxLabelsByFilterRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.BoundingBoxLabelsByFilterResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("BoundingBoxLabelsByFilter"))
               .build();
         }
       }
@@ -533,11 +517,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDatabaseConnection"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.GetDatabaseConnectionRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.GetDatabaseConnectionResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("GetDatabaseConnection"))
               .build();
         }
       }
@@ -564,11 +547,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ConfigureDatabaseUser"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.ConfigureDatabaseUserRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.ConfigureDatabaseUserResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("ConfigureDatabaseUser"))
               .build();
         }
       }
@@ -595,11 +577,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddBinaryDataToDatasetByIDs"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.AddBinaryDataToDatasetByIDsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("AddBinaryDataToDatasetByIDs"))
               .build();
         }
       }
@@ -626,11 +607,10 @@ public final class DataServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveBinaryDataFromDatasetByIDs"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.app.data.v1.Data.RemoveBinaryDataFromDatasetByIDsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("RemoveBinaryDataFromDatasetByIDs"))
               .build();
         }
       }
@@ -1891,41 +1871,6 @@ public final class DataServiceGrpc {
         .build();
   }
 
-  private static abstract class DataServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    DataServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.app.data.v1.Data.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("DataService");
-    }
-  }
-
-  private static final class DataServiceFileDescriptorSupplier
-      extends DataServiceBaseDescriptorSupplier {
-    DataServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class DataServiceMethodDescriptorSupplier
-      extends DataServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    DataServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -1935,7 +1880,6 @@ public final class DataServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new DataServiceFileDescriptorSupplier())
               .addMethod(getTabularDataByFilterMethod())
               .addMethod(getTabularDataBySQLMethod())
               .addMethod(getTabularDataByMQLMethod())

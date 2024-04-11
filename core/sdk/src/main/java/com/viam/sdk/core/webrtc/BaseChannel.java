@@ -1,5 +1,6 @@
 package com.viam.sdk.core.webrtc;
 
+import com.google.protobuf.MessageLite;
 import java.nio.ByteBuffer;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
@@ -55,7 +56,7 @@ public class BaseChannel implements DataChannel.Observer {
     this.closeWithReason(new Exception("data channel closed"));
   }
 
-  protected void write(final com.google.protobuf.GeneratedMessageV3 msg) {
+  protected void write(final MessageLite msg) {
     final DataChannel.Buffer buf = new DataChannel.Buffer(ByteBuffer.wrap(msg.toByteArray()), true);
     try {
       this.rpcConn.dataChannel.send(buf);

@@ -37,11 +37,10 @@ public final class ModuleServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddResource"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.module.v1.Module.AddResourceRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.module.v1.Module.AddResourceResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ModuleServiceMethodDescriptorSupplier("AddResource"))
               .build();
         }
       }
@@ -68,11 +67,10 @@ public final class ModuleServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReconfigureResource"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.module.v1.Module.ReconfigureResourceRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.module.v1.Module.ReconfigureResourceResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ModuleServiceMethodDescriptorSupplier("ReconfigureResource"))
               .build();
         }
       }
@@ -99,11 +97,10 @@ public final class ModuleServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveResource"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.module.v1.Module.RemoveResourceRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.module.v1.Module.RemoveResourceResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ModuleServiceMethodDescriptorSupplier("RemoveResource"))
               .build();
         }
       }
@@ -130,11 +127,10 @@ public final class ModuleServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Ready"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.module.v1.Module.ReadyRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.module.v1.Module.ReadyResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ModuleServiceMethodDescriptorSupplier("Ready"))
               .build();
         }
       }
@@ -161,11 +157,10 @@ public final class ModuleServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ValidateConfig"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.module.v1.Module.ValidateConfigRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   viam.module.v1.Module.ValidateConfigResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ModuleServiceMethodDescriptorSupplier("ValidateConfig"))
               .build();
         }
       }
@@ -612,41 +607,6 @@ public final class ModuleServiceGrpc {
         .build();
   }
 
-  private static abstract class ModuleServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    ModuleServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return viam.module.v1.Module.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("ModuleService");
-    }
-  }
-
-  private static final class ModuleServiceFileDescriptorSupplier
-      extends ModuleServiceBaseDescriptorSupplier {
-    ModuleServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class ModuleServiceMethodDescriptorSupplier
-      extends ModuleServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    ModuleServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -656,7 +616,6 @@ public final class ModuleServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new ModuleServiceFileDescriptorSupplier())
               .addMethod(getAddResourceMethod())
               .addMethod(getReconfigureResourceMethod())
               .addMethod(getRemoveResourceMethod())

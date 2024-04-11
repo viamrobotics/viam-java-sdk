@@ -38,11 +38,10 @@ public final class MLModelServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Infer"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.mlmodel.v1.Mlmodel.InferRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.mlmodel.v1.Mlmodel.InferResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MLModelServiceMethodDescriptorSupplier("Infer"))
               .build();
         }
       }
@@ -69,11 +68,10 @@ public final class MLModelServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Metadata"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.mlmodel.v1.Mlmodel.MetadataRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.mlmodel.v1.Mlmodel.MetadataResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new MLModelServiceMethodDescriptorSupplier("Metadata"))
               .build();
         }
       }
@@ -359,41 +357,6 @@ public final class MLModelServiceGrpc {
         .build();
   }
 
-  private static abstract class MLModelServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    MLModelServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.viam.service.mlmodel.v1.Mlmodel.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("MLModelService");
-    }
-  }
-
-  private static final class MLModelServiceFileDescriptorSupplier
-      extends MLModelServiceBaseDescriptorSupplier {
-    MLModelServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class MLModelServiceMethodDescriptorSupplier
-      extends MLModelServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    MLModelServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -403,7 +366,6 @@ public final class MLModelServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new MLModelServiceFileDescriptorSupplier())
               .addMethod(getInferMethod())
               .addMethod(getMetadataMethod())
               .build();

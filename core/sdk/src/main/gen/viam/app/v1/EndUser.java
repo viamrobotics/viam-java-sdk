@@ -9,412 +9,191 @@ public final class EndUser {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   public interface IsLegalAcceptedRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.IsLegalAcceptedRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.app.v1.IsLegalAcceptedRequest}
    */
-  public static final class IsLegalAcceptedRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class IsLegalAcceptedRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          IsLegalAcceptedRequest, IsLegalAcceptedRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.IsLegalAcceptedRequest)
       IsLegalAcceptedRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use IsLegalAcceptedRequest.newBuilder() to construct.
-    private IsLegalAcceptedRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private IsLegalAcceptedRequest() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new IsLegalAcceptedRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_IsLegalAcceptedRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_IsLegalAcceptedRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.EndUser.IsLegalAcceptedRequest.class, viam.app.v1.EndUser.IsLegalAcceptedRequest.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.EndUser.IsLegalAcceptedRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.EndUser.IsLegalAcceptedRequest other = (viam.app.v1.EndUser.IsLegalAcceptedRequest) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static viam.app.v1.EndUser.IsLegalAcceptedRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.EndUser.IsLegalAcceptedRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.EndUser.IsLegalAcceptedRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.EndUser.IsLegalAcceptedRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.IsLegalAcceptedRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.EndUser.IsLegalAcceptedRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.IsLegalAcceptedRequest)
         viam.app.v1.EndUser.IsLegalAcceptedRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_IsLegalAcceptedRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_IsLegalAcceptedRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.EndUser.IsLegalAcceptedRequest.class, viam.app.v1.EndUser.IsLegalAcceptedRequest.Builder.class);
-      }
-
       // Construct using viam.app.v1.EndUser.IsLegalAcceptedRequest.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_IsLegalAcceptedRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.IsLegalAcceptedRequest getDefaultInstanceForType() {
-        return viam.app.v1.EndUser.IsLegalAcceptedRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.IsLegalAcceptedRequest build() {
-        viam.app.v1.EndUser.IsLegalAcceptedRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.IsLegalAcceptedRequest buildPartial() {
-        viam.app.v1.EndUser.IsLegalAcceptedRequest result = new viam.app.v1.EndUser.IsLegalAcceptedRequest(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.EndUser.IsLegalAcceptedRequest) {
-          return mergeFrom((viam.app.v1.EndUser.IsLegalAcceptedRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.EndUser.IsLegalAcceptedRequest other) {
-        if (other == viam.app.v1.EndUser.IsLegalAcceptedRequest.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.IsLegalAcceptedRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.EndUser.IsLegalAcceptedRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.EndUser.IsLegalAcceptedRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.EndUser.IsLegalAcceptedRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.EndUser.IsLegalAcceptedRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.IsLegalAcceptedRequest)
     private static final viam.app.v1.EndUser.IsLegalAcceptedRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.EndUser.IsLegalAcceptedRequest();
+      IsLegalAcceptedRequest defaultInstance = new IsLegalAcceptedRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        IsLegalAcceptedRequest.class, defaultInstance);
     }
 
     public static viam.app.v1.EndUser.IsLegalAcceptedRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<IsLegalAcceptedRequest>
-        PARSER = new com.google.protobuf.AbstractParser<IsLegalAcceptedRequest>() {
-      @java.lang.Override
-      public IsLegalAcceptedRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<IsLegalAcceptedRequest> PARSER;
 
     public static com.google.protobuf.Parser<IsLegalAcceptedRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<IsLegalAcceptedRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.EndUser.IsLegalAcceptedRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface IsLegalAcceptedResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.IsLegalAcceptedResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -429,40 +208,15 @@ public final class EndUser {
   /**
    * Protobuf type {@code viam.app.v1.IsLegalAcceptedResponse}
    */
-  public static final class IsLegalAcceptedResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class IsLegalAcceptedResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          IsLegalAcceptedResponse, IsLegalAcceptedResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.IsLegalAcceptedResponse)
       IsLegalAcceptedResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use IsLegalAcceptedResponse.newBuilder() to construct.
-    private IsLegalAcceptedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private IsLegalAcceptedResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new IsLegalAcceptedResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_IsLegalAcceptedResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_IsLegalAcceptedResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.EndUser.IsLegalAcceptedResponse.class, viam.app.v1.EndUser.IsLegalAcceptedResponse.Builder.class);
-    }
-
     public static final int ACCEPTED_LEGAL_FIELD_NUMBER = 1;
-    private boolean acceptedLegal_ = false;
+    private boolean acceptedLegal_;
     /**
      * <pre>
      * If false, the user should not be able to use the application.
@@ -475,334 +229,127 @@ public final class EndUser {
     public boolean getAcceptedLegal() {
       return acceptedLegal_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * If false, the user should not be able to use the application.
+     * </pre>
+     *
+     * <code>bool accepted_legal = 1 [json_name = "acceptedLegal"];</code>
+     * @param value The acceptedLegal to set.
+     */
+    private void setAcceptedLegal(boolean value) {
+      
+      acceptedLegal_ = value;
     }
+    /**
+     * <pre>
+     * If false, the user should not be able to use the application.
+     * </pre>
+     *
+     * <code>bool accepted_legal = 1 [json_name = "acceptedLegal"];</code>
+     */
+    private void clearAcceptedLegal() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (acceptedLegal_ != false) {
-        output.writeBool(1, acceptedLegal_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (acceptedLegal_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, acceptedLegal_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.EndUser.IsLegalAcceptedResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.EndUser.IsLegalAcceptedResponse other = (viam.app.v1.EndUser.IsLegalAcceptedResponse) obj;
-
-      if (getAcceptedLegal()
-          != other.getAcceptedLegal()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ACCEPTED_LEGAL_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getAcceptedLegal());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      acceptedLegal_ = false;
     }
 
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.EndUser.IsLegalAcceptedResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.IsLegalAcceptedResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.EndUser.IsLegalAcceptedResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.IsLegalAcceptedResponse)
         viam.app.v1.EndUser.IsLegalAcceptedResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_IsLegalAcceptedResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_IsLegalAcceptedResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.EndUser.IsLegalAcceptedResponse.class, viam.app.v1.EndUser.IsLegalAcceptedResponse.Builder.class);
-      }
-
       // Construct using viam.app.v1.EndUser.IsLegalAcceptedResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        acceptedLegal_ = false;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_IsLegalAcceptedResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.IsLegalAcceptedResponse getDefaultInstanceForType() {
-        return viam.app.v1.EndUser.IsLegalAcceptedResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.IsLegalAcceptedResponse build() {
-        viam.app.v1.EndUser.IsLegalAcceptedResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.IsLegalAcceptedResponse buildPartial() {
-        viam.app.v1.EndUser.IsLegalAcceptedResponse result = new viam.app.v1.EndUser.IsLegalAcceptedResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.EndUser.IsLegalAcceptedResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.acceptedLegal_ = acceptedLegal_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.EndUser.IsLegalAcceptedResponse) {
-          return mergeFrom((viam.app.v1.EndUser.IsLegalAcceptedResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.EndUser.IsLegalAcceptedResponse other) {
-        if (other == viam.app.v1.EndUser.IsLegalAcceptedResponse.getDefaultInstance()) return this;
-        if (other.getAcceptedLegal() != false) {
-          setAcceptedLegal(other.getAcceptedLegal());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                acceptedLegal_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean acceptedLegal_ ;
       /**
        * <pre>
        * If false, the user should not be able to use the application.
@@ -813,7 +360,7 @@ public final class EndUser {
        */
       @java.lang.Override
       public boolean getAcceptedLegal() {
-        return acceptedLegal_;
+        return instance.getAcceptedLegal();
       }
       /**
        * <pre>
@@ -825,10 +372,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder setAcceptedLegal(boolean value) {
-
-        acceptedLegal_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setAcceptedLegal(value);
         return this;
       }
       /**
@@ -840,872 +385,452 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearAcceptedLegal() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        acceptedLegal_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearAcceptedLegal();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.IsLegalAcceptedResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.EndUser.IsLegalAcceptedResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "acceptedLegal_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0007";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.EndUser.IsLegalAcceptedResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.EndUser.IsLegalAcceptedResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.EndUser.IsLegalAcceptedResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.IsLegalAcceptedResponse)
     private static final viam.app.v1.EndUser.IsLegalAcceptedResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.EndUser.IsLegalAcceptedResponse();
+      IsLegalAcceptedResponse defaultInstance = new IsLegalAcceptedResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        IsLegalAcceptedResponse.class, defaultInstance);
     }
 
     public static viam.app.v1.EndUser.IsLegalAcceptedResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<IsLegalAcceptedResponse>
-        PARSER = new com.google.protobuf.AbstractParser<IsLegalAcceptedResponse>() {
-      @java.lang.Override
-      public IsLegalAcceptedResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<IsLegalAcceptedResponse> PARSER;
 
     public static com.google.protobuf.Parser<IsLegalAcceptedResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<IsLegalAcceptedResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.EndUser.IsLegalAcceptedResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AcceptLegalRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.AcceptLegalRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.app.v1.AcceptLegalRequest}
    */
-  public static final class AcceptLegalRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AcceptLegalRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          AcceptLegalRequest, AcceptLegalRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.AcceptLegalRequest)
       AcceptLegalRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AcceptLegalRequest.newBuilder() to construct.
-    private AcceptLegalRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AcceptLegalRequest() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AcceptLegalRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_AcceptLegalRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_AcceptLegalRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.EndUser.AcceptLegalRequest.class, viam.app.v1.EndUser.AcceptLegalRequest.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.EndUser.AcceptLegalRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.EndUser.AcceptLegalRequest other = (viam.app.v1.EndUser.AcceptLegalRequest) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static viam.app.v1.EndUser.AcceptLegalRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.AcceptLegalRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.AcceptLegalRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.AcceptLegalRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.AcceptLegalRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.AcceptLegalRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.AcceptLegalRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.AcceptLegalRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.EndUser.AcceptLegalRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.EndUser.AcceptLegalRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.EndUser.AcceptLegalRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.AcceptLegalRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.EndUser.AcceptLegalRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.AcceptLegalRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.EndUser.AcceptLegalRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.AcceptLegalRequest)
         viam.app.v1.EndUser.AcceptLegalRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_AcceptLegalRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_AcceptLegalRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.EndUser.AcceptLegalRequest.class, viam.app.v1.EndUser.AcceptLegalRequest.Builder.class);
-      }
-
       // Construct using viam.app.v1.EndUser.AcceptLegalRequest.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_AcceptLegalRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.AcceptLegalRequest getDefaultInstanceForType() {
-        return viam.app.v1.EndUser.AcceptLegalRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.AcceptLegalRequest build() {
-        viam.app.v1.EndUser.AcceptLegalRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.AcceptLegalRequest buildPartial() {
-        viam.app.v1.EndUser.AcceptLegalRequest result = new viam.app.v1.EndUser.AcceptLegalRequest(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.EndUser.AcceptLegalRequest) {
-          return mergeFrom((viam.app.v1.EndUser.AcceptLegalRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.EndUser.AcceptLegalRequest other) {
-        if (other == viam.app.v1.EndUser.AcceptLegalRequest.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.AcceptLegalRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.EndUser.AcceptLegalRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.EndUser.AcceptLegalRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.EndUser.AcceptLegalRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.EndUser.AcceptLegalRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.AcceptLegalRequest)
     private static final viam.app.v1.EndUser.AcceptLegalRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.EndUser.AcceptLegalRequest();
+      AcceptLegalRequest defaultInstance = new AcceptLegalRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AcceptLegalRequest.class, defaultInstance);
     }
 
     public static viam.app.v1.EndUser.AcceptLegalRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AcceptLegalRequest>
-        PARSER = new com.google.protobuf.AbstractParser<AcceptLegalRequest>() {
-      @java.lang.Override
-      public AcceptLegalRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AcceptLegalRequest> PARSER;
 
     public static com.google.protobuf.Parser<AcceptLegalRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AcceptLegalRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.EndUser.AcceptLegalRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AcceptLegalResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.AcceptLegalResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.app.v1.AcceptLegalResponse}
    */
-  public static final class AcceptLegalResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AcceptLegalResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          AcceptLegalResponse, AcceptLegalResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.AcceptLegalResponse)
       AcceptLegalResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AcceptLegalResponse.newBuilder() to construct.
-    private AcceptLegalResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AcceptLegalResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AcceptLegalResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_AcceptLegalResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_AcceptLegalResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.EndUser.AcceptLegalResponse.class, viam.app.v1.EndUser.AcceptLegalResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.EndUser.AcceptLegalResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.EndUser.AcceptLegalResponse other = (viam.app.v1.EndUser.AcceptLegalResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static viam.app.v1.EndUser.AcceptLegalResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.AcceptLegalResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.AcceptLegalResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.AcceptLegalResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.AcceptLegalResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.AcceptLegalResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.AcceptLegalResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.AcceptLegalResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.EndUser.AcceptLegalResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.EndUser.AcceptLegalResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.EndUser.AcceptLegalResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.AcceptLegalResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.EndUser.AcceptLegalResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.AcceptLegalResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.EndUser.AcceptLegalResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.AcceptLegalResponse)
         viam.app.v1.EndUser.AcceptLegalResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_AcceptLegalResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_AcceptLegalResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.EndUser.AcceptLegalResponse.class, viam.app.v1.EndUser.AcceptLegalResponse.Builder.class);
-      }
-
       // Construct using viam.app.v1.EndUser.AcceptLegalResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_AcceptLegalResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.AcceptLegalResponse getDefaultInstanceForType() {
-        return viam.app.v1.EndUser.AcceptLegalResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.AcceptLegalResponse build() {
-        viam.app.v1.EndUser.AcceptLegalResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.AcceptLegalResponse buildPartial() {
-        viam.app.v1.EndUser.AcceptLegalResponse result = new viam.app.v1.EndUser.AcceptLegalResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.EndUser.AcceptLegalResponse) {
-          return mergeFrom((viam.app.v1.EndUser.AcceptLegalResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.EndUser.AcceptLegalResponse other) {
-        if (other == viam.app.v1.EndUser.AcceptLegalResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.AcceptLegalResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.EndUser.AcceptLegalResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.EndUser.AcceptLegalResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.EndUser.AcceptLegalResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.EndUser.AcceptLegalResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.AcceptLegalResponse)
     private static final viam.app.v1.EndUser.AcceptLegalResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.EndUser.AcceptLegalResponse();
+      AcceptLegalResponse defaultInstance = new AcceptLegalResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AcceptLegalResponse.class, defaultInstance);
     }
 
     public static viam.app.v1.EndUser.AcceptLegalResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AcceptLegalResponse>
-        PARSER = new com.google.protobuf.AbstractParser<AcceptLegalResponse>() {
-      @java.lang.Override
-      public AcceptLegalResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AcceptLegalResponse> PARSER;
 
     public static com.google.protobuf.Parser<AcceptLegalResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AcceptLegalResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.EndUser.AcceptLegalResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface RegisterAuthApplicationRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.RegisterAuthApplicationRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string application_name = 1 [json_name = "applicationName"];</code>
@@ -1750,8 +875,8 @@ public final class EndUser {
     java.lang.String getOriginUris(int index);
     /**
      * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the originUris at the given index.
+     * @param index The index of the element to return.
+     * @return The originUris at the given index.
      */
     com.google.protobuf.ByteString
         getOriginUrisBytes(int index);
@@ -1775,8 +900,8 @@ public final class EndUser {
     java.lang.String getRedirectUris(int index);
     /**
      * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the redirectUris at the given index.
+     * @param index The index of the element to return.
+     * @return The redirectUris at the given index.
      */
     com.google.protobuf.ByteString
         getRedirectUrisBytes(int index);
@@ -1796,64 +921,27 @@ public final class EndUser {
   /**
    * Protobuf type {@code viam.app.v1.RegisterAuthApplicationRequest}
    */
-  public static final class RegisterAuthApplicationRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class RegisterAuthApplicationRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          RegisterAuthApplicationRequest, RegisterAuthApplicationRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.RegisterAuthApplicationRequest)
       RegisterAuthApplicationRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RegisterAuthApplicationRequest.newBuilder() to construct.
-    private RegisterAuthApplicationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private RegisterAuthApplicationRequest() {
       applicationName_ = "";
       orgId_ = "";
-      originUris_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      redirectUris_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      originUris_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      redirectUris_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       logoutUri_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RegisterAuthApplicationRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.EndUser.RegisterAuthApplicationRequest.class, viam.app.v1.EndUser.RegisterAuthApplicationRequest.Builder.class);
-    }
-
     public static final int APPLICATION_NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object applicationName_ = "";
+    private java.lang.String applicationName_;
     /**
      * <code>string application_name = 1 [json_name = "applicationName"];</code>
      * @return The applicationName.
      */
     @java.lang.Override
     public java.lang.String getApplicationName() {
-      java.lang.Object ref = applicationName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        applicationName_ = s;
-        return s;
-      }
+      return applicationName_;
     }
     /**
      * <code>string application_name = 1 [json_name = "applicationName"];</code>
@@ -1862,37 +950,45 @@ public final class EndUser {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getApplicationNameBytes() {
-      java.lang.Object ref = applicationName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        applicationName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(applicationName_);
+    }
+    /**
+     * <code>string application_name = 1 [json_name = "applicationName"];</code>
+     * @param value The applicationName to set.
+     */
+    private void setApplicationName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      applicationName_ = value;
+    }
+    /**
+     * <code>string application_name = 1 [json_name = "applicationName"];</code>
+     */
+    private void clearApplicationName() {
+
+      applicationName_ = getDefaultInstance().getApplicationName();
+    }
+    /**
+     * <code>string application_name = 1 [json_name = "applicationName"];</code>
+     * @param value The bytes for applicationName to set.
+     */
+    private void setApplicationNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      applicationName_ = value.toStringUtf8();
+
     }
 
     public static final int ORG_ID_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object orgId_ = "";
+    private java.lang.String orgId_;
     /**
      * <code>string org_id = 2 [json_name = "orgId"];</code>
      * @return The orgId.
      */
     @java.lang.Override
     public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      }
+      return orgId_;
     }
     /**
      * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -1901,34 +997,51 @@ public final class EndUser {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     */
+    private void clearOrgId() {
+
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 2 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+
     }
 
     public static final int ORIGIN_URIS_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList originUris_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> originUris_;
     /**
      * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
      * @return A list containing the originUris.
      */
-    public com.google.protobuf.ProtocolStringList
-        getOriginUrisList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getOriginUrisList() {
       return originUris_;
     }
     /**
      * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
      * @return The count of originUris.
      */
+    @java.lang.Override
     public int getOriginUrisCount() {
       return originUris_.size();
     }
@@ -1937,6 +1050,7 @@ public final class EndUser {
      * @param index The index of the element to return.
      * @return The originUris at the given index.
      */
+    @java.lang.Override
     public java.lang.String getOriginUris(int index) {
       return originUris_.get(index);
     }
@@ -1945,27 +1059,82 @@ public final class EndUser {
      * @param index The index of the value to return.
      * @return The bytes of the originUris at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getOriginUrisBytes(int index) {
-      return originUris_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          originUris_.get(index));
+    }
+    private void ensureOriginUrisIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          originUris_;  if (!tmp.isModifiable()) {
+        originUris_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+     * @param index The index to set the value at.
+     * @param value The originUris to set.
+     */
+    private void setOriginUris(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureOriginUrisIsMutable();
+      originUris_.set(index, value);
+    }
+    /**
+     * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+     * @param value The originUris to add.
+     */
+    private void addOriginUris(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureOriginUrisIsMutable();
+      originUris_.add(value);
+    }
+    /**
+     * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+     * @param values The originUris to add.
+     */
+    private void addAllOriginUris(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureOriginUrisIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, originUris_);
+    }
+    /**
+     * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+     */
+    private void clearOriginUris() {
+      originUris_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
+     * @param value The bytes of the originUris to add.
+     */
+    private void addOriginUrisBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureOriginUrisIsMutable();
+      originUris_.add(value.toStringUtf8());
     }
 
     public static final int REDIRECT_URIS_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList redirectUris_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> redirectUris_;
     /**
      * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
      * @return A list containing the redirectUris.
      */
-    public com.google.protobuf.ProtocolStringList
-        getRedirectUrisList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getRedirectUrisList() {
       return redirectUris_;
     }
     /**
      * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
      * @return The count of redirectUris.
      */
+    @java.lang.Override
     public int getRedirectUrisCount() {
       return redirectUris_.size();
     }
@@ -1974,6 +1143,7 @@ public final class EndUser {
      * @param index The index of the element to return.
      * @return The redirectUris at the given index.
      */
+    @java.lang.Override
     public java.lang.String getRedirectUris(int index) {
       return redirectUris_.get(index);
     }
@@ -1982,30 +1152,76 @@ public final class EndUser {
      * @param index The index of the value to return.
      * @return The bytes of the redirectUris at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRedirectUrisBytes(int index) {
-      return redirectUris_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          redirectUris_.get(index));
+    }
+    private void ensureRedirectUrisIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          redirectUris_;  if (!tmp.isModifiable()) {
+        redirectUris_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+     * @param index The index to set the value at.
+     * @param value The redirectUris to set.
+     */
+    private void setRedirectUris(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureRedirectUrisIsMutable();
+      redirectUris_.set(index, value);
+    }
+    /**
+     * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+     * @param value The redirectUris to add.
+     */
+    private void addRedirectUris(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureRedirectUrisIsMutable();
+      redirectUris_.add(value);
+    }
+    /**
+     * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+     * @param values The redirectUris to add.
+     */
+    private void addAllRedirectUris(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureRedirectUrisIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, redirectUris_);
+    }
+    /**
+     * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+     */
+    private void clearRedirectUris() {
+      redirectUris_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
+     * @param value The bytes of the redirectUris to add.
+     */
+    private void addRedirectUrisBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureRedirectUrisIsMutable();
+      redirectUris_.add(value.toStringUtf8());
     }
 
     public static final int LOGOUT_URI_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object logoutUri_ = "";
+    private java.lang.String logoutUri_;
     /**
      * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
      * @return The logoutUri.
      */
     @java.lang.Override
     public java.lang.String getLogoutUri() {
-      java.lang.Object ref = logoutUri_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        logoutUri_ = s;
-        return s;
-      }
+      return logoutUri_;
     }
     /**
      * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
@@ -2014,503 +1230,149 @@ public final class EndUser {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getLogoutUriBytes() {
-      java.lang.Object ref = logoutUri_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        logoutUri_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(logoutUri_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
+     * @param value The logoutUri to set.
+     */
+    private void setLogoutUri(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      logoutUri_ = value;
     }
+    /**
+     * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
+     */
+    private void clearLogoutUri() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, applicationName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orgId_);
-      }
-      for (int i = 0; i < originUris_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, originUris_.getRaw(i));
-      }
-      for (int i = 0; i < redirectUris_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, redirectUris_.getRaw(i));
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logoutUri_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, logoutUri_);
-      }
-      getUnknownFields().writeTo(output);
+      logoutUri_ = getDefaultInstance().getLogoutUri();
     }
+    /**
+     * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
+     * @param value The bytes for logoutUri to set.
+     */
+    private void setLogoutUriBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      logoutUri_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, applicationName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orgId_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < originUris_.size(); i++) {
-          dataSize += computeStringSizeNoTag(originUris_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getOriginUrisList().size();
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < redirectUris_.size(); i++) {
-          dataSize += computeStringSizeNoTag(redirectUris_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getRedirectUrisList().size();
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logoutUri_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, logoutUri_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.EndUser.RegisterAuthApplicationRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.EndUser.RegisterAuthApplicationRequest other = (viam.app.v1.EndUser.RegisterAuthApplicationRequest) obj;
-
-      if (!getApplicationName()
-          .equals(other.getApplicationName())) return false;
-      if (!getOrgId()
-          .equals(other.getOrgId())) return false;
-      if (!getOriginUrisList()
-          .equals(other.getOriginUrisList())) return false;
-      if (!getRedirectUrisList()
-          .equals(other.getRedirectUrisList())) return false;
-      if (!getLogoutUri()
-          .equals(other.getLogoutUri())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + APPLICATION_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getApplicationName().hashCode();
-      hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrgId().hashCode();
-      if (getOriginUrisCount() > 0) {
-        hash = (37 * hash) + ORIGIN_URIS_FIELD_NUMBER;
-        hash = (53 * hash) + getOriginUrisList().hashCode();
-      }
-      if (getRedirectUrisCount() > 0) {
-        hash = (37 * hash) + REDIRECT_URIS_FIELD_NUMBER;
-        hash = (53 * hash) + getRedirectUrisList().hashCode();
-      }
-      hash = (37 * hash) + LOGOUT_URI_FIELD_NUMBER;
-      hash = (53 * hash) + getLogoutUri().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.EndUser.RegisterAuthApplicationRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.RegisterAuthApplicationRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.EndUser.RegisterAuthApplicationRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.RegisterAuthApplicationRequest)
         viam.app.v1.EndUser.RegisterAuthApplicationRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.EndUser.RegisterAuthApplicationRequest.class, viam.app.v1.EndUser.RegisterAuthApplicationRequest.Builder.class);
-      }
-
       // Construct using viam.app.v1.EndUser.RegisterAuthApplicationRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        applicationName_ = "";
-        orgId_ = "";
-        originUris_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        redirectUris_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        logoutUri_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.RegisterAuthApplicationRequest getDefaultInstanceForType() {
-        return viam.app.v1.EndUser.RegisterAuthApplicationRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.RegisterAuthApplicationRequest build() {
-        viam.app.v1.EndUser.RegisterAuthApplicationRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.RegisterAuthApplicationRequest buildPartial() {
-        viam.app.v1.EndUser.RegisterAuthApplicationRequest result = new viam.app.v1.EndUser.RegisterAuthApplicationRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.EndUser.RegisterAuthApplicationRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.applicationName_ = applicationName_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.orgId_ = orgId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          originUris_.makeImmutable();
-          result.originUris_ = originUris_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          redirectUris_.makeImmutable();
-          result.redirectUris_ = redirectUris_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.logoutUri_ = logoutUri_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.EndUser.RegisterAuthApplicationRequest) {
-          return mergeFrom((viam.app.v1.EndUser.RegisterAuthApplicationRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.EndUser.RegisterAuthApplicationRequest other) {
-        if (other == viam.app.v1.EndUser.RegisterAuthApplicationRequest.getDefaultInstance()) return this;
-        if (!other.getApplicationName().isEmpty()) {
-          applicationName_ = other.applicationName_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getOrgId().isEmpty()) {
-          orgId_ = other.orgId_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.originUris_.isEmpty()) {
-          if (originUris_.isEmpty()) {
-            originUris_ = other.originUris_;
-            bitField0_ |= 0x00000004;
-          } else {
-            ensureOriginUrisIsMutable();
-            originUris_.addAll(other.originUris_);
-          }
-          onChanged();
-        }
-        if (!other.redirectUris_.isEmpty()) {
-          if (redirectUris_.isEmpty()) {
-            redirectUris_ = other.redirectUris_;
-            bitField0_ |= 0x00000008;
-          } else {
-            ensureRedirectUrisIsMutable();
-            redirectUris_.addAll(other.redirectUris_);
-          }
-          onChanged();
-        }
-        if (!other.getLogoutUri().isEmpty()) {
-          logoutUri_ = other.logoutUri_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                applicationName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                orgId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureOriginUrisIsMutable();
-                originUris_.add(s);
-                break;
-              } // case 26
-              case 34: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureRedirectUrisIsMutable();
-                redirectUris_.add(s);
-                break;
-              } // case 34
-              case 42: {
-                logoutUri_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object applicationName_ = "";
       /**
        * <code>string application_name = 1 [json_name = "applicationName"];</code>
        * @return The applicationName.
        */
+      @java.lang.Override
       public java.lang.String getApplicationName() {
-        java.lang.Object ref = applicationName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          applicationName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getApplicationName();
       }
       /**
        * <code>string application_name = 1 [json_name = "applicationName"];</code>
        * @return The bytes for applicationName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getApplicationNameBytes() {
-        java.lang.Object ref = applicationName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          applicationName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getApplicationNameBytes();
       }
       /**
        * <code>string application_name = 1 [json_name = "applicationName"];</code>
@@ -2519,10 +1381,8 @@ public final class EndUser {
        */
       public Builder setApplicationName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        applicationName_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationName(value);
         return this;
       }
       /**
@@ -2530,9 +1390,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearApplicationName() {
-        applicationName_ = getDefaultInstance().getApplicationName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearApplicationName();
         return this;
       }
       /**
@@ -2542,47 +1401,27 @@ public final class EndUser {
        */
       public Builder setApplicationNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        applicationName_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationNameBytes(value);
         return this;
       }
 
-      private java.lang.Object orgId_ = "";
       /**
        * <code>string org_id = 2 [json_name = "orgId"];</code>
        * @return The orgId.
        */
+      @java.lang.Override
       public java.lang.String getOrgId() {
-        java.lang.Object ref = orgId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          orgId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrgId();
       }
       /**
        * <code>string org_id = 2 [json_name = "orgId"];</code>
        * @return The bytes for orgId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrgIdBytes() {
-        java.lang.Object ref = orgId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          orgId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrgIdBytes();
       }
       /**
        * <code>string org_id = 2 [json_name = "orgId"];</code>
@@ -2591,10 +1430,8 @@ public final class EndUser {
        */
       public Builder setOrgId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        orgId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgId(value);
         return this;
       }
       /**
@@ -2602,9 +1439,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearOrgId() {
-        orgId_ = getDefaultInstance().getOrgId();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrgId();
         return this;
       }
       /**
@@ -2614,54 +1450,47 @@ public final class EndUser {
        */
       public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        orgId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList originUris_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureOriginUrisIsMutable() {
-        if (!originUris_.isModifiable()) {
-          originUris_ = new com.google.protobuf.LazyStringArrayList(originUris_);
-        }
-        bitField0_ |= 0x00000004;
-      }
       /**
        * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
        * @return A list containing the originUris.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getOriginUrisList() {
-        originUris_.makeImmutable();
-        return originUris_;
+        return java.util.Collections.unmodifiableList(
+            instance.getOriginUrisList());
       }
       /**
        * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
        * @return The count of originUris.
        */
+      @java.lang.Override
       public int getOriginUrisCount() {
-        return originUris_.size();
+        return instance.getOriginUrisCount();
       }
       /**
        * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
        * @param index The index of the element to return.
        * @return The originUris at the given index.
        */
+      @java.lang.Override
       public java.lang.String getOriginUris(int index) {
-        return originUris_.get(index);
+        return instance.getOriginUris(index);
       }
       /**
        * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the originUris at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOriginUrisBytes(int index) {
-        return originUris_.getByteString(index);
+        return instance.getOriginUrisBytes(index);
       }
       /**
        * <code>repeated string origin_uris = 3 [json_name = "originUris"];</code>
@@ -2671,11 +1500,8 @@ public final class EndUser {
        */
       public Builder setOriginUris(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureOriginUrisIsMutable();
-        originUris_.set(index, value);
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setOriginUris(index, value);
         return this;
       }
       /**
@@ -2685,11 +1511,8 @@ public final class EndUser {
        */
       public Builder addOriginUris(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureOriginUrisIsMutable();
-        originUris_.add(value);
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.addOriginUris(value);
         return this;
       }
       /**
@@ -2699,11 +1522,8 @@ public final class EndUser {
        */
       public Builder addAllOriginUris(
           java.lang.Iterable<java.lang.String> values) {
-        ensureOriginUrisIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, originUris_);
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.addAllOriginUris(values);
         return this;
       }
       /**
@@ -2711,10 +1531,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearOriginUris() {
-        originUris_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);;
-        onChanged();
+        copyOnWrite();
+        instance.clearOriginUris();
         return this;
       }
       /**
@@ -2724,55 +1542,47 @@ public final class EndUser {
        */
       public Builder addOriginUrisBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureOriginUrisIsMutable();
-        originUris_.add(value);
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.addOriginUrisBytes(value);
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList redirectUris_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureRedirectUrisIsMutable() {
-        if (!redirectUris_.isModifiable()) {
-          redirectUris_ = new com.google.protobuf.LazyStringArrayList(redirectUris_);
-        }
-        bitField0_ |= 0x00000008;
-      }
       /**
        * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
        * @return A list containing the redirectUris.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getRedirectUrisList() {
-        redirectUris_.makeImmutable();
-        return redirectUris_;
+        return java.util.Collections.unmodifiableList(
+            instance.getRedirectUrisList());
       }
       /**
        * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
        * @return The count of redirectUris.
        */
+      @java.lang.Override
       public int getRedirectUrisCount() {
-        return redirectUris_.size();
+        return instance.getRedirectUrisCount();
       }
       /**
        * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
        * @param index The index of the element to return.
        * @return The redirectUris at the given index.
        */
+      @java.lang.Override
       public java.lang.String getRedirectUris(int index) {
-        return redirectUris_.get(index);
+        return instance.getRedirectUris(index);
       }
       /**
        * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the redirectUris at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getRedirectUrisBytes(int index) {
-        return redirectUris_.getByteString(index);
+        return instance.getRedirectUrisBytes(index);
       }
       /**
        * <code>repeated string redirect_uris = 4 [json_name = "redirectUris"];</code>
@@ -2782,11 +1592,8 @@ public final class EndUser {
        */
       public Builder setRedirectUris(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureRedirectUrisIsMutable();
-        redirectUris_.set(index, value);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setRedirectUris(index, value);
         return this;
       }
       /**
@@ -2796,11 +1603,8 @@ public final class EndUser {
        */
       public Builder addRedirectUris(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureRedirectUrisIsMutable();
-        redirectUris_.add(value);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.addRedirectUris(value);
         return this;
       }
       /**
@@ -2810,11 +1614,8 @@ public final class EndUser {
        */
       public Builder addAllRedirectUris(
           java.lang.Iterable<java.lang.String> values) {
-        ensureRedirectUrisIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, redirectUris_);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.addAllRedirectUris(values);
         return this;
       }
       /**
@@ -2822,10 +1623,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearRedirectUris() {
-        redirectUris_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);;
-        onChanged();
+        copyOnWrite();
+        instance.clearRedirectUris();
         return this;
       }
       /**
@@ -2835,48 +1634,27 @@ public final class EndUser {
        */
       public Builder addRedirectUrisBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureRedirectUrisIsMutable();
-        redirectUris_.add(value);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.addRedirectUrisBytes(value);
         return this;
       }
 
-      private java.lang.Object logoutUri_ = "";
       /**
        * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
        * @return The logoutUri.
        */
+      @java.lang.Override
       public java.lang.String getLogoutUri() {
-        java.lang.Object ref = logoutUri_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          logoutUri_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getLogoutUri();
       }
       /**
        * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
        * @return The bytes for logoutUri.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getLogoutUriBytes() {
-        java.lang.Object ref = logoutUri_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          logoutUri_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getLogoutUriBytes();
       }
       /**
        * <code>string logout_uri = 5 [json_name = "logoutUri"];</code>
@@ -2885,10 +1663,8 @@ public final class EndUser {
        */
       public Builder setLogoutUri(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        logoutUri_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setLogoutUri(value);
         return this;
       }
       /**
@@ -2896,9 +1672,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearLogoutUri() {
-        logoutUri_ = getDefaultInstance().getLogoutUri();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
+        copyOnWrite();
+        instance.clearLogoutUri();
         return this;
       }
       /**
@@ -2908,80 +1683,93 @@ public final class EndUser {
        */
       public Builder setLogoutUriBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        logoutUri_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setLogoutUriBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RegisterAuthApplicationRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.EndUser.RegisterAuthApplicationRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "applicationName_",
+              "orgId_",
+              "originUris_",
+              "redirectUris_",
+              "logoutUri_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0002\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u021a\u0004\u021a\u0005\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.EndUser.RegisterAuthApplicationRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.EndUser.RegisterAuthApplicationRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.EndUser.RegisterAuthApplicationRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.RegisterAuthApplicationRequest)
     private static final viam.app.v1.EndUser.RegisterAuthApplicationRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.EndUser.RegisterAuthApplicationRequest();
+      RegisterAuthApplicationRequest defaultInstance = new RegisterAuthApplicationRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RegisterAuthApplicationRequest.class, defaultInstance);
     }
 
     public static viam.app.v1.EndUser.RegisterAuthApplicationRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RegisterAuthApplicationRequest>
-        PARSER = new com.google.protobuf.AbstractParser<RegisterAuthApplicationRequest>() {
-      @java.lang.Override
-      public RegisterAuthApplicationRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<RegisterAuthApplicationRequest> PARSER;
 
     public static com.google.protobuf.Parser<RegisterAuthApplicationRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RegisterAuthApplicationRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.EndUser.RegisterAuthApplicationRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface RegisterAuthApplicationResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.RegisterAuthApplicationResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string application_id = 1 [json_name = "applicationId"];</code>
@@ -3022,60 +1810,25 @@ public final class EndUser {
   /**
    * Protobuf type {@code viam.app.v1.RegisterAuthApplicationResponse}
    */
-  public static final class RegisterAuthApplicationResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class RegisterAuthApplicationResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          RegisterAuthApplicationResponse, RegisterAuthApplicationResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.RegisterAuthApplicationResponse)
       RegisterAuthApplicationResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RegisterAuthApplicationResponse.newBuilder() to construct.
-    private RegisterAuthApplicationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private RegisterAuthApplicationResponse() {
       applicationId_ = "";
       applicationName_ = "";
       secret_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RegisterAuthApplicationResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.EndUser.RegisterAuthApplicationResponse.class, viam.app.v1.EndUser.RegisterAuthApplicationResponse.Builder.class);
-    }
-
     public static final int APPLICATION_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object applicationId_ = "";
+    private java.lang.String applicationId_;
     /**
      * <code>string application_id = 1 [json_name = "applicationId"];</code>
      * @return The applicationId.
      */
     @java.lang.Override
     public java.lang.String getApplicationId() {
-      java.lang.Object ref = applicationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        applicationId_ = s;
-        return s;
-      }
+      return applicationId_;
     }
     /**
      * <code>string application_id = 1 [json_name = "applicationId"];</code>
@@ -3084,37 +1837,45 @@ public final class EndUser {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getApplicationIdBytes() {
-      java.lang.Object ref = applicationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        applicationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(applicationId_);
+    }
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     * @param value The applicationId to set.
+     */
+    private void setApplicationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      applicationId_ = value;
+    }
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     */
+    private void clearApplicationId() {
+
+      applicationId_ = getDefaultInstance().getApplicationId();
+    }
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     * @param value The bytes for applicationId to set.
+     */
+    private void setApplicationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      applicationId_ = value.toStringUtf8();
+
     }
 
     public static final int APPLICATION_NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object applicationName_ = "";
+    private java.lang.String applicationName_;
     /**
      * <code>string application_name = 2 [json_name = "applicationName"];</code>
      * @return The applicationName.
      */
     @java.lang.Override
     public java.lang.String getApplicationName() {
-      java.lang.Object ref = applicationName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        applicationName_ = s;
-        return s;
-      }
+      return applicationName_;
     }
     /**
      * <code>string application_name = 2 [json_name = "applicationName"];</code>
@@ -3123,37 +1884,45 @@ public final class EndUser {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getApplicationNameBytes() {
-      java.lang.Object ref = applicationName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        applicationName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(applicationName_);
+    }
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     * @param value The applicationName to set.
+     */
+    private void setApplicationName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      applicationName_ = value;
+    }
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     */
+    private void clearApplicationName() {
+
+      applicationName_ = getDefaultInstance().getApplicationName();
+    }
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     * @param value The bytes for applicationName to set.
+     */
+    private void setApplicationNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      applicationName_ = value.toStringUtf8();
+
     }
 
     public static final int SECRET_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object secret_ = "";
+    private java.lang.String secret_;
     /**
      * <code>string secret = 3 [json_name = "secret"];</code>
      * @return The secret.
      */
     @java.lang.Override
     public java.lang.String getSecret() {
-      java.lang.Object ref = secret_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        secret_ = s;
-        return s;
-      }
+      return secret_;
     }
     /**
      * <code>string secret = 3 [json_name = "secret"];</code>
@@ -3162,425 +1931,149 @@ public final class EndUser {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSecretBytes() {
-      java.lang.Object ref = secret_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        secret_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(secret_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string secret = 3 [json_name = "secret"];</code>
+     * @param value The secret to set.
+     */
+    private void setSecret(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      secret_ = value;
     }
+    /**
+     * <code>string secret = 3 [json_name = "secret"];</code>
+     */
+    private void clearSecret() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, applicationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, applicationName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, secret_);
-      }
-      getUnknownFields().writeTo(output);
+      secret_ = getDefaultInstance().getSecret();
     }
+    /**
+     * <code>string secret = 3 [json_name = "secret"];</code>
+     * @param value The bytes for secret to set.
+     */
+    private void setSecretBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      secret_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, applicationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, applicationName_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, secret_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.EndUser.RegisterAuthApplicationResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.EndUser.RegisterAuthApplicationResponse other = (viam.app.v1.EndUser.RegisterAuthApplicationResponse) obj;
-
-      if (!getApplicationId()
-          .equals(other.getApplicationId())) return false;
-      if (!getApplicationName()
-          .equals(other.getApplicationName())) return false;
-      if (!getSecret()
-          .equals(other.getSecret())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + APPLICATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getApplicationId().hashCode();
-      hash = (37 * hash) + APPLICATION_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getApplicationName().hashCode();
-      hash = (37 * hash) + SECRET_FIELD_NUMBER;
-      hash = (53 * hash) + getSecret().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.RegisterAuthApplicationResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.EndUser.RegisterAuthApplicationResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.RegisterAuthApplicationResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.EndUser.RegisterAuthApplicationResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.RegisterAuthApplicationResponse)
         viam.app.v1.EndUser.RegisterAuthApplicationResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.EndUser.RegisterAuthApplicationResponse.class, viam.app.v1.EndUser.RegisterAuthApplicationResponse.Builder.class);
-      }
-
       // Construct using viam.app.v1.EndUser.RegisterAuthApplicationResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        applicationId_ = "";
-        applicationName_ = "";
-        secret_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_RegisterAuthApplicationResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.RegisterAuthApplicationResponse getDefaultInstanceForType() {
-        return viam.app.v1.EndUser.RegisterAuthApplicationResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.RegisterAuthApplicationResponse build() {
-        viam.app.v1.EndUser.RegisterAuthApplicationResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.RegisterAuthApplicationResponse buildPartial() {
-        viam.app.v1.EndUser.RegisterAuthApplicationResponse result = new viam.app.v1.EndUser.RegisterAuthApplicationResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.EndUser.RegisterAuthApplicationResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.applicationId_ = applicationId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.applicationName_ = applicationName_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.secret_ = secret_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.EndUser.RegisterAuthApplicationResponse) {
-          return mergeFrom((viam.app.v1.EndUser.RegisterAuthApplicationResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.EndUser.RegisterAuthApplicationResponse other) {
-        if (other == viam.app.v1.EndUser.RegisterAuthApplicationResponse.getDefaultInstance()) return this;
-        if (!other.getApplicationId().isEmpty()) {
-          applicationId_ = other.applicationId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getApplicationName().isEmpty()) {
-          applicationName_ = other.applicationName_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getSecret().isEmpty()) {
-          secret_ = other.secret_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                applicationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                applicationName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                secret_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object applicationId_ = "";
       /**
        * <code>string application_id = 1 [json_name = "applicationId"];</code>
        * @return The applicationId.
        */
+      @java.lang.Override
       public java.lang.String getApplicationId() {
-        java.lang.Object ref = applicationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          applicationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getApplicationId();
       }
       /**
        * <code>string application_id = 1 [json_name = "applicationId"];</code>
        * @return The bytes for applicationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getApplicationIdBytes() {
-        java.lang.Object ref = applicationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          applicationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getApplicationIdBytes();
       }
       /**
        * <code>string application_id = 1 [json_name = "applicationId"];</code>
@@ -3589,10 +2082,8 @@ public final class EndUser {
        */
       public Builder setApplicationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        applicationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationId(value);
         return this;
       }
       /**
@@ -3600,9 +2091,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearApplicationId() {
-        applicationId_ = getDefaultInstance().getApplicationId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearApplicationId();
         return this;
       }
       /**
@@ -3612,47 +2102,27 @@ public final class EndUser {
        */
       public Builder setApplicationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        applicationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationIdBytes(value);
         return this;
       }
 
-      private java.lang.Object applicationName_ = "";
       /**
        * <code>string application_name = 2 [json_name = "applicationName"];</code>
        * @return The applicationName.
        */
+      @java.lang.Override
       public java.lang.String getApplicationName() {
-        java.lang.Object ref = applicationName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          applicationName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getApplicationName();
       }
       /**
        * <code>string application_name = 2 [json_name = "applicationName"];</code>
        * @return The bytes for applicationName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getApplicationNameBytes() {
-        java.lang.Object ref = applicationName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          applicationName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getApplicationNameBytes();
       }
       /**
        * <code>string application_name = 2 [json_name = "applicationName"];</code>
@@ -3661,10 +2131,8 @@ public final class EndUser {
        */
       public Builder setApplicationName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        applicationName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationName(value);
         return this;
       }
       /**
@@ -3672,9 +2140,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearApplicationName() {
-        applicationName_ = getDefaultInstance().getApplicationName();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearApplicationName();
         return this;
       }
       /**
@@ -3684,47 +2151,27 @@ public final class EndUser {
        */
       public Builder setApplicationNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        applicationName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationNameBytes(value);
         return this;
       }
 
-      private java.lang.Object secret_ = "";
       /**
        * <code>string secret = 3 [json_name = "secret"];</code>
        * @return The secret.
        */
+      @java.lang.Override
       public java.lang.String getSecret() {
-        java.lang.Object ref = secret_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          secret_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSecret();
       }
       /**
        * <code>string secret = 3 [json_name = "secret"];</code>
        * @return The bytes for secret.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSecretBytes() {
-        java.lang.Object ref = secret_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          secret_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSecretBytes();
       }
       /**
        * <code>string secret = 3 [json_name = "secret"];</code>
@@ -3733,10 +2180,8 @@ public final class EndUser {
        */
       public Builder setSecret(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        secret_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setSecret(value);
         return this;
       }
       /**
@@ -3744,9 +2189,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearSecret() {
-        secret_ = getDefaultInstance().getSecret();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearSecret();
         return this;
       }
       /**
@@ -3756,80 +2200,91 @@ public final class EndUser {
        */
       public Builder setSecretBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        secret_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setSecretBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.RegisterAuthApplicationResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.EndUser.RegisterAuthApplicationResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "applicationId_",
+              "applicationName_",
+              "secret_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.EndUser.RegisterAuthApplicationResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.EndUser.RegisterAuthApplicationResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.EndUser.RegisterAuthApplicationResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.RegisterAuthApplicationResponse)
     private static final viam.app.v1.EndUser.RegisterAuthApplicationResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.EndUser.RegisterAuthApplicationResponse();
+      RegisterAuthApplicationResponse defaultInstance = new RegisterAuthApplicationResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RegisterAuthApplicationResponse.class, defaultInstance);
     }
 
     public static viam.app.v1.EndUser.RegisterAuthApplicationResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RegisterAuthApplicationResponse>
-        PARSER = new com.google.protobuf.AbstractParser<RegisterAuthApplicationResponse>() {
-      @java.lang.Override
-      public RegisterAuthApplicationResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<RegisterAuthApplicationResponse> PARSER;
 
     public static com.google.protobuf.Parser<RegisterAuthApplicationResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RegisterAuthApplicationResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.EndUser.RegisterAuthApplicationResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface UpdateAuthApplicationRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateAuthApplicationRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string org_id = 1 [json_name = "orgId"];</code>
@@ -3886,8 +2341,8 @@ public final class EndUser {
     java.lang.String getOriginUris(int index);
     /**
      * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the originUris at the given index.
+     * @param index The index of the element to return.
+     * @return The originUris at the given index.
      */
     com.google.protobuf.ByteString
         getOriginUrisBytes(int index);
@@ -3911,8 +2366,8 @@ public final class EndUser {
     java.lang.String getRedirectUris(int index);
     /**
      * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the redirectUris at the given index.
+     * @param index The index of the element to return.
+     * @return The redirectUris at the given index.
      */
     com.google.protobuf.ByteString
         getRedirectUrisBytes(int index);
@@ -3932,65 +2387,28 @@ public final class EndUser {
   /**
    * Protobuf type {@code viam.app.v1.UpdateAuthApplicationRequest}
    */
-  public static final class UpdateAuthApplicationRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class UpdateAuthApplicationRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateAuthApplicationRequest, UpdateAuthApplicationRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateAuthApplicationRequest)
       UpdateAuthApplicationRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use UpdateAuthApplicationRequest.newBuilder() to construct.
-    private UpdateAuthApplicationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private UpdateAuthApplicationRequest() {
       orgId_ = "";
       applicationId_ = "";
       applicationName_ = "";
-      originUris_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      redirectUris_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      originUris_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+      redirectUris_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
       logoutUri_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new UpdateAuthApplicationRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.EndUser.UpdateAuthApplicationRequest.class, viam.app.v1.EndUser.UpdateAuthApplicationRequest.Builder.class);
-    }
-
     public static final int ORG_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object orgId_ = "";
+    private java.lang.String orgId_;
     /**
      * <code>string org_id = 1 [json_name = "orgId"];</code>
      * @return The orgId.
      */
     @java.lang.Override
     public java.lang.String getOrgId() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        orgId_ = s;
-        return s;
-      }
+      return orgId_;
     }
     /**
      * <code>string org_id = 1 [json_name = "orgId"];</code>
@@ -3999,37 +2417,45 @@ public final class EndUser {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getOrgIdBytes() {
-      java.lang.Object ref = orgId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        orgId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(orgId_);
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The orgId to set.
+     */
+    private void setOrgId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      orgId_ = value;
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     */
+    private void clearOrgId() {
+
+      orgId_ = getDefaultInstance().getOrgId();
+    }
+    /**
+     * <code>string org_id = 1 [json_name = "orgId"];</code>
+     * @param value The bytes for orgId to set.
+     */
+    private void setOrgIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      orgId_ = value.toStringUtf8();
+
     }
 
     public static final int APPLICATION_ID_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object applicationId_ = "";
+    private java.lang.String applicationId_;
     /**
      * <code>string application_id = 2 [json_name = "applicationId"];</code>
      * @return The applicationId.
      */
     @java.lang.Override
     public java.lang.String getApplicationId() {
-      java.lang.Object ref = applicationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        applicationId_ = s;
-        return s;
-      }
+      return applicationId_;
     }
     /**
      * <code>string application_id = 2 [json_name = "applicationId"];</code>
@@ -4038,37 +2464,45 @@ public final class EndUser {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getApplicationIdBytes() {
-      java.lang.Object ref = applicationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        applicationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(applicationId_);
+    }
+    /**
+     * <code>string application_id = 2 [json_name = "applicationId"];</code>
+     * @param value The applicationId to set.
+     */
+    private void setApplicationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      applicationId_ = value;
+    }
+    /**
+     * <code>string application_id = 2 [json_name = "applicationId"];</code>
+     */
+    private void clearApplicationId() {
+
+      applicationId_ = getDefaultInstance().getApplicationId();
+    }
+    /**
+     * <code>string application_id = 2 [json_name = "applicationId"];</code>
+     * @param value The bytes for applicationId to set.
+     */
+    private void setApplicationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      applicationId_ = value.toStringUtf8();
+
     }
 
     public static final int APPLICATION_NAME_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object applicationName_ = "";
+    private java.lang.String applicationName_;
     /**
      * <code>string application_name = 3 [json_name = "applicationName"];</code>
      * @return The applicationName.
      */
     @java.lang.Override
     public java.lang.String getApplicationName() {
-      java.lang.Object ref = applicationName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        applicationName_ = s;
-        return s;
-      }
+      return applicationName_;
     }
     /**
      * <code>string application_name = 3 [json_name = "applicationName"];</code>
@@ -4077,34 +2511,51 @@ public final class EndUser {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getApplicationNameBytes() {
-      java.lang.Object ref = applicationName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        applicationName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(applicationName_);
+    }
+    /**
+     * <code>string application_name = 3 [json_name = "applicationName"];</code>
+     * @param value The applicationName to set.
+     */
+    private void setApplicationName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      applicationName_ = value;
+    }
+    /**
+     * <code>string application_name = 3 [json_name = "applicationName"];</code>
+     */
+    private void clearApplicationName() {
+
+      applicationName_ = getDefaultInstance().getApplicationName();
+    }
+    /**
+     * <code>string application_name = 3 [json_name = "applicationName"];</code>
+     * @param value The bytes for applicationName to set.
+     */
+    private void setApplicationNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      applicationName_ = value.toStringUtf8();
+
     }
 
     public static final int ORIGIN_URIS_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList originUris_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> originUris_;
     /**
      * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
      * @return A list containing the originUris.
      */
-    public com.google.protobuf.ProtocolStringList
-        getOriginUrisList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getOriginUrisList() {
       return originUris_;
     }
     /**
      * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
      * @return The count of originUris.
      */
+    @java.lang.Override
     public int getOriginUrisCount() {
       return originUris_.size();
     }
@@ -4113,6 +2564,7 @@ public final class EndUser {
      * @param index The index of the element to return.
      * @return The originUris at the given index.
      */
+    @java.lang.Override
     public java.lang.String getOriginUris(int index) {
       return originUris_.get(index);
     }
@@ -4121,27 +2573,82 @@ public final class EndUser {
      * @param index The index of the value to return.
      * @return The bytes of the originUris at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getOriginUrisBytes(int index) {
-      return originUris_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          originUris_.get(index));
+    }
+    private void ensureOriginUrisIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          originUris_;  if (!tmp.isModifiable()) {
+        originUris_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+     * @param index The index to set the value at.
+     * @param value The originUris to set.
+     */
+    private void setOriginUris(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureOriginUrisIsMutable();
+      originUris_.set(index, value);
+    }
+    /**
+     * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+     * @param value The originUris to add.
+     */
+    private void addOriginUris(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureOriginUrisIsMutable();
+      originUris_.add(value);
+    }
+    /**
+     * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+     * @param values The originUris to add.
+     */
+    private void addAllOriginUris(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureOriginUrisIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, originUris_);
+    }
+    /**
+     * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+     */
+    private void clearOriginUris() {
+      originUris_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
+     * @param value The bytes of the originUris to add.
+     */
+    private void addOriginUrisBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureOriginUrisIsMutable();
+      originUris_.add(value.toStringUtf8());
     }
 
     public static final int REDIRECT_URIS_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList redirectUris_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> redirectUris_;
     /**
      * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
      * @return A list containing the redirectUris.
      */
-    public com.google.protobuf.ProtocolStringList
-        getRedirectUrisList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getRedirectUrisList() {
       return redirectUris_;
     }
     /**
      * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
      * @return The count of redirectUris.
      */
+    @java.lang.Override
     public int getRedirectUrisCount() {
       return redirectUris_.size();
     }
@@ -4150,6 +2657,7 @@ public final class EndUser {
      * @param index The index of the element to return.
      * @return The redirectUris at the given index.
      */
+    @java.lang.Override
     public java.lang.String getRedirectUris(int index) {
       return redirectUris_.get(index);
     }
@@ -4158,30 +2666,76 @@ public final class EndUser {
      * @param index The index of the value to return.
      * @return The bytes of the redirectUris at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getRedirectUrisBytes(int index) {
-      return redirectUris_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          redirectUris_.get(index));
+    }
+    private void ensureRedirectUrisIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          redirectUris_;  if (!tmp.isModifiable()) {
+        redirectUris_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+    /**
+     * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+     * @param index The index to set the value at.
+     * @param value The redirectUris to set.
+     */
+    private void setRedirectUris(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureRedirectUrisIsMutable();
+      redirectUris_.set(index, value);
+    }
+    /**
+     * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+     * @param value The redirectUris to add.
+     */
+    private void addRedirectUris(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureRedirectUrisIsMutable();
+      redirectUris_.add(value);
+    }
+    /**
+     * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+     * @param values The redirectUris to add.
+     */
+    private void addAllRedirectUris(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureRedirectUrisIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, redirectUris_);
+    }
+    /**
+     * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+     */
+    private void clearRedirectUris() {
+      redirectUris_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
+     * @param value The bytes of the redirectUris to add.
+     */
+    private void addRedirectUrisBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureRedirectUrisIsMutable();
+      redirectUris_.add(value.toStringUtf8());
     }
 
     public static final int LOGOUT_URI_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object logoutUri_ = "";
+    private java.lang.String logoutUri_;
     /**
      * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
      * @return The logoutUri.
      */
     @java.lang.Override
     public java.lang.String getLogoutUri() {
-      java.lang.Object ref = logoutUri_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        logoutUri_ = s;
-        return s;
-      }
+      return logoutUri_;
     }
     /**
      * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
@@ -4190,527 +2744,149 @@ public final class EndUser {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getLogoutUriBytes() {
-      java.lang.Object ref = logoutUri_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        logoutUri_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(logoutUri_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
+     * @param value The logoutUri to set.
+     */
+    private void setLogoutUri(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      logoutUri_ = value;
     }
+    /**
+     * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
+     */
+    private void clearLogoutUri() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orgId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, applicationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, applicationName_);
-      }
-      for (int i = 0; i < originUris_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, originUris_.getRaw(i));
-      }
-      for (int i = 0; i < redirectUris_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, redirectUris_.getRaw(i));
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logoutUri_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, logoutUri_);
-      }
-      getUnknownFields().writeTo(output);
+      logoutUri_ = getDefaultInstance().getLogoutUri();
     }
+    /**
+     * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
+     * @param value The bytes for logoutUri to set.
+     */
+    private void setLogoutUriBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      logoutUri_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orgId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orgId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, applicationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, applicationName_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < originUris_.size(); i++) {
-          dataSize += computeStringSizeNoTag(originUris_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getOriginUrisList().size();
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < redirectUris_.size(); i++) {
-          dataSize += computeStringSizeNoTag(redirectUris_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getRedirectUrisList().size();
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(logoutUri_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, logoutUri_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.EndUser.UpdateAuthApplicationRequest)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.EndUser.UpdateAuthApplicationRequest other = (viam.app.v1.EndUser.UpdateAuthApplicationRequest) obj;
-
-      if (!getOrgId()
-          .equals(other.getOrgId())) return false;
-      if (!getApplicationId()
-          .equals(other.getApplicationId())) return false;
-      if (!getApplicationName()
-          .equals(other.getApplicationName())) return false;
-      if (!getOriginUrisList()
-          .equals(other.getOriginUrisList())) return false;
-      if (!getRedirectUrisList()
-          .equals(other.getRedirectUrisList())) return false;
-      if (!getLogoutUri()
-          .equals(other.getLogoutUri())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ORG_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getOrgId().hashCode();
-      hash = (37 * hash) + APPLICATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getApplicationId().hashCode();
-      hash = (37 * hash) + APPLICATION_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getApplicationName().hashCode();
-      if (getOriginUrisCount() > 0) {
-        hash = (37 * hash) + ORIGIN_URIS_FIELD_NUMBER;
-        hash = (53 * hash) + getOriginUrisList().hashCode();
-      }
-      if (getRedirectUrisCount() > 0) {
-        hash = (37 * hash) + REDIRECT_URIS_FIELD_NUMBER;
-        hash = (53 * hash) + getRedirectUrisList().hashCode();
-      }
-      hash = (37 * hash) + LOGOUT_URI_FIELD_NUMBER;
-      hash = (53 * hash) + getLogoutUri().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.EndUser.UpdateAuthApplicationRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.UpdateAuthApplicationRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.EndUser.UpdateAuthApplicationRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateAuthApplicationRequest)
         viam.app.v1.EndUser.UpdateAuthApplicationRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.EndUser.UpdateAuthApplicationRequest.class, viam.app.v1.EndUser.UpdateAuthApplicationRequest.Builder.class);
-      }
-
       // Construct using viam.app.v1.EndUser.UpdateAuthApplicationRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        orgId_ = "";
-        applicationId_ = "";
-        applicationName_ = "";
-        originUris_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        redirectUris_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        logoutUri_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.UpdateAuthApplicationRequest getDefaultInstanceForType() {
-        return viam.app.v1.EndUser.UpdateAuthApplicationRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.UpdateAuthApplicationRequest build() {
-        viam.app.v1.EndUser.UpdateAuthApplicationRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.UpdateAuthApplicationRequest buildPartial() {
-        viam.app.v1.EndUser.UpdateAuthApplicationRequest result = new viam.app.v1.EndUser.UpdateAuthApplicationRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.EndUser.UpdateAuthApplicationRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.orgId_ = orgId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.applicationId_ = applicationId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.applicationName_ = applicationName_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          originUris_.makeImmutable();
-          result.originUris_ = originUris_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          redirectUris_.makeImmutable();
-          result.redirectUris_ = redirectUris_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.logoutUri_ = logoutUri_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.EndUser.UpdateAuthApplicationRequest) {
-          return mergeFrom((viam.app.v1.EndUser.UpdateAuthApplicationRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.EndUser.UpdateAuthApplicationRequest other) {
-        if (other == viam.app.v1.EndUser.UpdateAuthApplicationRequest.getDefaultInstance()) return this;
-        if (!other.getOrgId().isEmpty()) {
-          orgId_ = other.orgId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getApplicationId().isEmpty()) {
-          applicationId_ = other.applicationId_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (!other.getApplicationName().isEmpty()) {
-          applicationName_ = other.applicationName_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (!other.originUris_.isEmpty()) {
-          if (originUris_.isEmpty()) {
-            originUris_ = other.originUris_;
-            bitField0_ |= 0x00000008;
-          } else {
-            ensureOriginUrisIsMutable();
-            originUris_.addAll(other.originUris_);
-          }
-          onChanged();
-        }
-        if (!other.redirectUris_.isEmpty()) {
-          if (redirectUris_.isEmpty()) {
-            redirectUris_ = other.redirectUris_;
-            bitField0_ |= 0x00000010;
-          } else {
-            ensureRedirectUrisIsMutable();
-            redirectUris_.addAll(other.redirectUris_);
-          }
-          onChanged();
-        }
-        if (!other.getLogoutUri().isEmpty()) {
-          logoutUri_ = other.logoutUri_;
-          bitField0_ |= 0x00000020;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                orgId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                applicationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                applicationName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 34: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureOriginUrisIsMutable();
-                originUris_.add(s);
-                break;
-              } // case 34
-              case 42: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureRedirectUrisIsMutable();
-                redirectUris_.add(s);
-                break;
-              } // case 42
-              case 50: {
-                logoutUri_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 50
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object orgId_ = "";
       /**
        * <code>string org_id = 1 [json_name = "orgId"];</code>
        * @return The orgId.
        */
+      @java.lang.Override
       public java.lang.String getOrgId() {
-        java.lang.Object ref = orgId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          orgId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getOrgId();
       }
       /**
        * <code>string org_id = 1 [json_name = "orgId"];</code>
        * @return The bytes for orgId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOrgIdBytes() {
-        java.lang.Object ref = orgId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          orgId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getOrgIdBytes();
       }
       /**
        * <code>string org_id = 1 [json_name = "orgId"];</code>
@@ -4719,10 +2895,8 @@ public final class EndUser {
        */
       public Builder setOrgId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        orgId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgId(value);
         return this;
       }
       /**
@@ -4730,9 +2904,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearOrgId() {
-        orgId_ = getDefaultInstance().getOrgId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearOrgId();
         return this;
       }
       /**
@@ -4742,47 +2915,27 @@ public final class EndUser {
        */
       public Builder setOrgIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        orgId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setOrgIdBytes(value);
         return this;
       }
 
-      private java.lang.Object applicationId_ = "";
       /**
        * <code>string application_id = 2 [json_name = "applicationId"];</code>
        * @return The applicationId.
        */
+      @java.lang.Override
       public java.lang.String getApplicationId() {
-        java.lang.Object ref = applicationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          applicationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getApplicationId();
       }
       /**
        * <code>string application_id = 2 [json_name = "applicationId"];</code>
        * @return The bytes for applicationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getApplicationIdBytes() {
-        java.lang.Object ref = applicationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          applicationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getApplicationIdBytes();
       }
       /**
        * <code>string application_id = 2 [json_name = "applicationId"];</code>
@@ -4791,10 +2944,8 @@ public final class EndUser {
        */
       public Builder setApplicationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        applicationId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationId(value);
         return this;
       }
       /**
@@ -4802,9 +2953,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearApplicationId() {
-        applicationId_ = getDefaultInstance().getApplicationId();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearApplicationId();
         return this;
       }
       /**
@@ -4814,47 +2964,27 @@ public final class EndUser {
        */
       public Builder setApplicationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        applicationId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationIdBytes(value);
         return this;
       }
 
-      private java.lang.Object applicationName_ = "";
       /**
        * <code>string application_name = 3 [json_name = "applicationName"];</code>
        * @return The applicationName.
        */
+      @java.lang.Override
       public java.lang.String getApplicationName() {
-        java.lang.Object ref = applicationName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          applicationName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getApplicationName();
       }
       /**
        * <code>string application_name = 3 [json_name = "applicationName"];</code>
        * @return The bytes for applicationName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getApplicationNameBytes() {
-        java.lang.Object ref = applicationName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          applicationName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getApplicationNameBytes();
       }
       /**
        * <code>string application_name = 3 [json_name = "applicationName"];</code>
@@ -4863,10 +2993,8 @@ public final class EndUser {
        */
       public Builder setApplicationName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        applicationName_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationName(value);
         return this;
       }
       /**
@@ -4874,9 +3002,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearApplicationName() {
-        applicationName_ = getDefaultInstance().getApplicationName();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearApplicationName();
         return this;
       }
       /**
@@ -4886,54 +3013,47 @@ public final class EndUser {
        */
       public Builder setApplicationNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        applicationName_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList originUris_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureOriginUrisIsMutable() {
-        if (!originUris_.isModifiable()) {
-          originUris_ = new com.google.protobuf.LazyStringArrayList(originUris_);
-        }
-        bitField0_ |= 0x00000008;
-      }
       /**
        * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
        * @return A list containing the originUris.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getOriginUrisList() {
-        originUris_.makeImmutable();
-        return originUris_;
+        return java.util.Collections.unmodifiableList(
+            instance.getOriginUrisList());
       }
       /**
        * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
        * @return The count of originUris.
        */
+      @java.lang.Override
       public int getOriginUrisCount() {
-        return originUris_.size();
+        return instance.getOriginUrisCount();
       }
       /**
        * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
        * @param index The index of the element to return.
        * @return The originUris at the given index.
        */
+      @java.lang.Override
       public java.lang.String getOriginUris(int index) {
-        return originUris_.get(index);
+        return instance.getOriginUris(index);
       }
       /**
        * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the originUris at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getOriginUrisBytes(int index) {
-        return originUris_.getByteString(index);
+        return instance.getOriginUrisBytes(index);
       }
       /**
        * <code>repeated string origin_uris = 4 [json_name = "originUris"];</code>
@@ -4943,11 +3063,8 @@ public final class EndUser {
        */
       public Builder setOriginUris(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureOriginUrisIsMutable();
-        originUris_.set(index, value);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setOriginUris(index, value);
         return this;
       }
       /**
@@ -4957,11 +3074,8 @@ public final class EndUser {
        */
       public Builder addOriginUris(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureOriginUrisIsMutable();
-        originUris_.add(value);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.addOriginUris(value);
         return this;
       }
       /**
@@ -4971,11 +3085,8 @@ public final class EndUser {
        */
       public Builder addAllOriginUris(
           java.lang.Iterable<java.lang.String> values) {
-        ensureOriginUrisIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, originUris_);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.addAllOriginUris(values);
         return this;
       }
       /**
@@ -4983,10 +3094,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearOriginUris() {
-        originUris_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);;
-        onChanged();
+        copyOnWrite();
+        instance.clearOriginUris();
         return this;
       }
       /**
@@ -4996,55 +3105,47 @@ public final class EndUser {
        */
       public Builder addOriginUrisBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureOriginUrisIsMutable();
-        originUris_.add(value);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.addOriginUrisBytes(value);
         return this;
       }
 
-      private com.google.protobuf.LazyStringArrayList redirectUris_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureRedirectUrisIsMutable() {
-        if (!redirectUris_.isModifiable()) {
-          redirectUris_ = new com.google.protobuf.LazyStringArrayList(redirectUris_);
-        }
-        bitField0_ |= 0x00000010;
-      }
       /**
        * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
        * @return A list containing the redirectUris.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getRedirectUrisList() {
-        redirectUris_.makeImmutable();
-        return redirectUris_;
+        return java.util.Collections.unmodifiableList(
+            instance.getRedirectUrisList());
       }
       /**
        * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
        * @return The count of redirectUris.
        */
+      @java.lang.Override
       public int getRedirectUrisCount() {
-        return redirectUris_.size();
+        return instance.getRedirectUrisCount();
       }
       /**
        * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
        * @param index The index of the element to return.
        * @return The redirectUris at the given index.
        */
+      @java.lang.Override
       public java.lang.String getRedirectUris(int index) {
-        return redirectUris_.get(index);
+        return instance.getRedirectUris(index);
       }
       /**
        * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the redirectUris at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getRedirectUrisBytes(int index) {
-        return redirectUris_.getByteString(index);
+        return instance.getRedirectUrisBytes(index);
       }
       /**
        * <code>repeated string redirect_uris = 5 [json_name = "redirectUris"];</code>
@@ -5054,11 +3155,8 @@ public final class EndUser {
        */
       public Builder setRedirectUris(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureRedirectUrisIsMutable();
-        redirectUris_.set(index, value);
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setRedirectUris(index, value);
         return this;
       }
       /**
@@ -5068,11 +3166,8 @@ public final class EndUser {
        */
       public Builder addRedirectUris(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureRedirectUrisIsMutable();
-        redirectUris_.add(value);
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.addRedirectUris(value);
         return this;
       }
       /**
@@ -5082,11 +3177,8 @@ public final class EndUser {
        */
       public Builder addAllRedirectUris(
           java.lang.Iterable<java.lang.String> values) {
-        ensureRedirectUrisIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, redirectUris_);
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.addAllRedirectUris(values);
         return this;
       }
       /**
@@ -5094,10 +3186,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearRedirectUris() {
-        redirectUris_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);;
-        onChanged();
+        copyOnWrite();
+        instance.clearRedirectUris();
         return this;
       }
       /**
@@ -5107,48 +3197,27 @@ public final class EndUser {
        */
       public Builder addRedirectUrisBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureRedirectUrisIsMutable();
-        redirectUris_.add(value);
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.addRedirectUrisBytes(value);
         return this;
       }
 
-      private java.lang.Object logoutUri_ = "";
       /**
        * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
        * @return The logoutUri.
        */
+      @java.lang.Override
       public java.lang.String getLogoutUri() {
-        java.lang.Object ref = logoutUri_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          logoutUri_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getLogoutUri();
       }
       /**
        * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
        * @return The bytes for logoutUri.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getLogoutUriBytes() {
-        java.lang.Object ref = logoutUri_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          logoutUri_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getLogoutUriBytes();
       }
       /**
        * <code>string logout_uri = 6 [json_name = "logoutUri"];</code>
@@ -5157,10 +3226,8 @@ public final class EndUser {
        */
       public Builder setLogoutUri(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        logoutUri_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setLogoutUri(value);
         return this;
       }
       /**
@@ -5168,9 +3235,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearLogoutUri() {
-        logoutUri_ = getDefaultInstance().getLogoutUri();
-        bitField0_ = (bitField0_ & ~0x00000020);
-        onChanged();
+        copyOnWrite();
+        instance.clearLogoutUri();
         return this;
       }
       /**
@@ -5180,80 +3246,94 @@ public final class EndUser {
        */
       public Builder setLogoutUriBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        logoutUri_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setLogoutUriBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateAuthApplicationRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.EndUser.UpdateAuthApplicationRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "orgId_",
+              "applicationId_",
+              "applicationName_",
+              "originUris_",
+              "redirectUris_",
+              "logoutUri_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0002\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u0208\u0004\u021a\u0005\u021a\u0006\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.EndUser.UpdateAuthApplicationRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.EndUser.UpdateAuthApplicationRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.EndUser.UpdateAuthApplicationRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateAuthApplicationRequest)
     private static final viam.app.v1.EndUser.UpdateAuthApplicationRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.EndUser.UpdateAuthApplicationRequest();
+      UpdateAuthApplicationRequest defaultInstance = new UpdateAuthApplicationRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateAuthApplicationRequest.class, defaultInstance);
     }
 
     public static viam.app.v1.EndUser.UpdateAuthApplicationRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<UpdateAuthApplicationRequest>
-        PARSER = new com.google.protobuf.AbstractParser<UpdateAuthApplicationRequest>() {
-      @java.lang.Override
-      public UpdateAuthApplicationRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<UpdateAuthApplicationRequest> PARSER;
 
     public static com.google.protobuf.Parser<UpdateAuthApplicationRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<UpdateAuthApplicationRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.EndUser.UpdateAuthApplicationRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface UpdateAuthApplicationResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.app.v1.UpdateAuthApplicationResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string application_id = 1 [json_name = "applicationId"];</code>
@@ -5282,59 +3362,24 @@ public final class EndUser {
   /**
    * Protobuf type {@code viam.app.v1.UpdateAuthApplicationResponse}
    */
-  public static final class UpdateAuthApplicationResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class UpdateAuthApplicationResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          UpdateAuthApplicationResponse, UpdateAuthApplicationResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.app.v1.UpdateAuthApplicationResponse)
       UpdateAuthApplicationResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use UpdateAuthApplicationResponse.newBuilder() to construct.
-    private UpdateAuthApplicationResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private UpdateAuthApplicationResponse() {
       applicationId_ = "";
       applicationName_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new UpdateAuthApplicationResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.app.v1.EndUser.UpdateAuthApplicationResponse.class, viam.app.v1.EndUser.UpdateAuthApplicationResponse.Builder.class);
-    }
-
     public static final int APPLICATION_ID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object applicationId_ = "";
+    private java.lang.String applicationId_;
     /**
      * <code>string application_id = 1 [json_name = "applicationId"];</code>
      * @return The applicationId.
      */
     @java.lang.Override
     public java.lang.String getApplicationId() {
-      java.lang.Object ref = applicationId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        applicationId_ = s;
-        return s;
-      }
+      return applicationId_;
     }
     /**
      * <code>string application_id = 1 [json_name = "applicationId"];</code>
@@ -5343,37 +3388,45 @@ public final class EndUser {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getApplicationIdBytes() {
-      java.lang.Object ref = applicationId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        applicationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(applicationId_);
+    }
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     * @param value The applicationId to set.
+     */
+    private void setApplicationId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      applicationId_ = value;
+    }
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     */
+    private void clearApplicationId() {
+
+      applicationId_ = getDefaultInstance().getApplicationId();
+    }
+    /**
+     * <code>string application_id = 1 [json_name = "applicationId"];</code>
+     * @param value The bytes for applicationId to set.
+     */
+    private void setApplicationIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      applicationId_ = value.toStringUtf8();
+
     }
 
     public static final int APPLICATION_NAME_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object applicationName_ = "";
+    private java.lang.String applicationName_;
     /**
      * <code>string application_name = 2 [json_name = "applicationName"];</code>
      * @return The applicationName.
      */
     @java.lang.Override
     public java.lang.String getApplicationName() {
-      java.lang.Object ref = applicationName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        applicationName_ = s;
-        return s;
-      }
+      return applicationName_;
     }
     /**
      * <code>string application_name = 2 [json_name = "applicationName"];</code>
@@ -5382,401 +3435,149 @@ public final class EndUser {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getApplicationNameBytes() {
-      java.lang.Object ref = applicationName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        applicationName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(applicationName_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     * @param value The applicationName to set.
+     */
+    private void setApplicationName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      applicationName_ = value;
     }
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     */
+    private void clearApplicationName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationId_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, applicationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, applicationName_);
-      }
-      getUnknownFields().writeTo(output);
+      applicationName_ = getDefaultInstance().getApplicationName();
     }
+    /**
+     * <code>string application_name = 2 [json_name = "applicationName"];</code>
+     * @param value The bytes for applicationName to set.
+     */
+    private void setApplicationNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      applicationName_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationId_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, applicationId_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(applicationName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, applicationName_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.app.v1.EndUser.UpdateAuthApplicationResponse)) {
-        return super.equals(obj);
-      }
-      viam.app.v1.EndUser.UpdateAuthApplicationResponse other = (viam.app.v1.EndUser.UpdateAuthApplicationResponse) obj;
-
-      if (!getApplicationId()
-          .equals(other.getApplicationId())) return false;
-      if (!getApplicationName()
-          .equals(other.getApplicationName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + APPLICATION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getApplicationId().hashCode();
-      hash = (37 * hash) + APPLICATION_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getApplicationName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.app.v1.EndUser.UpdateAuthApplicationResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.app.v1.EndUser.UpdateAuthApplicationResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.app.v1.UpdateAuthApplicationResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.app.v1.EndUser.UpdateAuthApplicationResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.app.v1.UpdateAuthApplicationResponse)
         viam.app.v1.EndUser.UpdateAuthApplicationResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.app.v1.EndUser.UpdateAuthApplicationResponse.class, viam.app.v1.EndUser.UpdateAuthApplicationResponse.Builder.class);
-      }
-
       // Construct using viam.app.v1.EndUser.UpdateAuthApplicationResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        applicationId_ = "";
-        applicationName_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.app.v1.EndUser.internal_static_viam_app_v1_UpdateAuthApplicationResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.UpdateAuthApplicationResponse getDefaultInstanceForType() {
-        return viam.app.v1.EndUser.UpdateAuthApplicationResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.UpdateAuthApplicationResponse build() {
-        viam.app.v1.EndUser.UpdateAuthApplicationResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.app.v1.EndUser.UpdateAuthApplicationResponse buildPartial() {
-        viam.app.v1.EndUser.UpdateAuthApplicationResponse result = new viam.app.v1.EndUser.UpdateAuthApplicationResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.app.v1.EndUser.UpdateAuthApplicationResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.applicationId_ = applicationId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.applicationName_ = applicationName_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.app.v1.EndUser.UpdateAuthApplicationResponse) {
-          return mergeFrom((viam.app.v1.EndUser.UpdateAuthApplicationResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.app.v1.EndUser.UpdateAuthApplicationResponse other) {
-        if (other == viam.app.v1.EndUser.UpdateAuthApplicationResponse.getDefaultInstance()) return this;
-        if (!other.getApplicationId().isEmpty()) {
-          applicationId_ = other.applicationId_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getApplicationName().isEmpty()) {
-          applicationName_ = other.applicationName_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                applicationId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                applicationName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object applicationId_ = "";
       /**
        * <code>string application_id = 1 [json_name = "applicationId"];</code>
        * @return The applicationId.
        */
+      @java.lang.Override
       public java.lang.String getApplicationId() {
-        java.lang.Object ref = applicationId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          applicationId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getApplicationId();
       }
       /**
        * <code>string application_id = 1 [json_name = "applicationId"];</code>
        * @return The bytes for applicationId.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getApplicationIdBytes() {
-        java.lang.Object ref = applicationId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          applicationId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getApplicationIdBytes();
       }
       /**
        * <code>string application_id = 1 [json_name = "applicationId"];</code>
@@ -5785,10 +3586,8 @@ public final class EndUser {
        */
       public Builder setApplicationId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        applicationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationId(value);
         return this;
       }
       /**
@@ -5796,9 +3595,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearApplicationId() {
-        applicationId_ = getDefaultInstance().getApplicationId();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearApplicationId();
         return this;
       }
       /**
@@ -5808,47 +3606,27 @@ public final class EndUser {
        */
       public Builder setApplicationIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        applicationId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationIdBytes(value);
         return this;
       }
 
-      private java.lang.Object applicationName_ = "";
       /**
        * <code>string application_name = 2 [json_name = "applicationName"];</code>
        * @return The applicationName.
        */
+      @java.lang.Override
       public java.lang.String getApplicationName() {
-        java.lang.Object ref = applicationName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          applicationName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getApplicationName();
       }
       /**
        * <code>string application_name = 2 [json_name = "applicationName"];</code>
        * @return The bytes for applicationName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getApplicationNameBytes() {
-        java.lang.Object ref = applicationName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          applicationName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getApplicationNameBytes();
       }
       /**
        * <code>string application_name = 2 [json_name = "applicationName"];</code>
@@ -5857,10 +3635,8 @@ public final class EndUser {
        */
       public Builder setApplicationName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        applicationName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationName(value);
         return this;
       }
       /**
@@ -5868,9 +3644,8 @@ public final class EndUser {
        * @return This builder for chaining.
        */
       public Builder clearApplicationName() {
-        applicationName_ = getDefaultInstance().getApplicationName();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearApplicationName();
         return this;
       }
       /**
@@ -5880,213 +3655,89 @@ public final class EndUser {
        */
       public Builder setApplicationNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        applicationName_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setApplicationNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.app.v1.UpdateAuthApplicationResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.app.v1.EndUser.UpdateAuthApplicationResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "applicationId_",
+              "applicationName_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.app.v1.EndUser.UpdateAuthApplicationResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.app.v1.EndUser.UpdateAuthApplicationResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.app.v1.EndUser.UpdateAuthApplicationResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.app.v1.UpdateAuthApplicationResponse)
     private static final viam.app.v1.EndUser.UpdateAuthApplicationResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.app.v1.EndUser.UpdateAuthApplicationResponse();
+      UpdateAuthApplicationResponse defaultInstance = new UpdateAuthApplicationResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        UpdateAuthApplicationResponse.class, defaultInstance);
     }
 
     public static viam.app.v1.EndUser.UpdateAuthApplicationResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<UpdateAuthApplicationResponse>
-        PARSER = new com.google.protobuf.AbstractParser<UpdateAuthApplicationResponse>() {
-      @java.lang.Override
-      public UpdateAuthApplicationResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<UpdateAuthApplicationResponse> PARSER;
 
     public static com.google.protobuf.Parser<UpdateAuthApplicationResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<UpdateAuthApplicationResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.app.v1.EndUser.UpdateAuthApplicationResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_IsLegalAcceptedRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_IsLegalAcceptedRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_IsLegalAcceptedResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_IsLegalAcceptedResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_AcceptLegalRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_AcceptLegalRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_AcceptLegalResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_AcceptLegalResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_RegisterAuthApplicationRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_RegisterAuthApplicationRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_RegisterAuthApplicationResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_RegisterAuthApplicationResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_UpdateAuthApplicationRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_UpdateAuthApplicationRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_app_v1_UpdateAuthApplicationResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_app_v1_UpdateAuthApplicationResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\025app/v1/end_user.proto\022\013viam.app.v1\"\030\n\026" +
-      "IsLegalAcceptedRequest\"@\n\027IsLegalAccepte" +
-      "dResponse\022%\n\016accepted_legal\030\001 \001(\010R\raccep" +
-      "tedLegal\"\024\n\022AcceptLegalRequest\"\025\n\023Accept" +
-      "LegalResponse\"\307\001\n\036RegisterAuthApplicatio" +
-      "nRequest\022)\n\020application_name\030\001 \001(\tR\017appl" +
-      "icationName\022\025\n\006org_id\030\002 \001(\tR\005orgId\022\037\n\013or" +
-      "igin_uris\030\003 \003(\tR\noriginUris\022#\n\rredirect_" +
-      "uris\030\004 \003(\tR\014redirectUris\022\035\n\nlogout_uri\030\005" +
-      " \001(\tR\tlogoutUri\"\213\001\n\037RegisterAuthApplicat" +
-      "ionResponse\022%\n\016application_id\030\001 \001(\tR\rapp" +
-      "licationId\022)\n\020application_name\030\002 \001(\tR\017ap" +
-      "plicationName\022\026\n\006secret\030\003 \001(\tR\006secret\"\354\001" +
-      "\n\034UpdateAuthApplicationRequest\022\025\n\006org_id" +
-      "\030\001 \001(\tR\005orgId\022%\n\016application_id\030\002 \001(\tR\ra" +
-      "pplicationId\022)\n\020application_name\030\003 \001(\tR\017" +
-      "applicationName\022\037\n\013origin_uris\030\004 \003(\tR\nor" +
-      "iginUris\022#\n\rredirect_uris\030\005 \003(\tR\014redirec" +
-      "tUris\022\035\n\nlogout_uri\030\006 \001(\tR\tlogoutUri\"q\n\035" +
-      "UpdateAuthApplicationResponse\022%\n\016applica" +
-      "tion_id\030\001 \001(\tR\rapplicationId\022)\n\020applicat" +
-      "ion_name\030\002 \001(\tR\017applicationName2\246\003\n\016EndU" +
-      "serService\022\\\n\017IsLegalAccepted\022#.viam.app" +
-      ".v1.IsLegalAcceptedRequest\032$.viam.app.v1" +
-      ".IsLegalAcceptedResponse\022P\n\013AcceptLegal\022" +
-      "\037.viam.app.v1.AcceptLegalRequest\032 .viam." +
-      "app.v1.AcceptLegalResponse\022t\n\027RegisterAu" +
-      "thApplication\022+.viam.app.v1.RegisterAuth" +
-      "ApplicationRequest\032,.viam.app.v1.Registe" +
-      "rAuthApplicationResponse\022n\n\025UpdateAuthAp" +
-      "plication\022).viam.app.v1.UpdateAuthApplic" +
-      "ationRequest\032*.viam.app.v1.UpdateAuthApp" +
-      "licationResponseB\030Z\026go.viam.com/api/app/" +
-      "v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
-    internal_static_viam_app_v1_IsLegalAcceptedRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_app_v1_IsLegalAcceptedRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_IsLegalAcceptedRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_app_v1_IsLegalAcceptedResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_app_v1_IsLegalAcceptedResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_IsLegalAcceptedResponse_descriptor,
-        new java.lang.String[] { "AcceptedLegal", });
-    internal_static_viam_app_v1_AcceptLegalRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_app_v1_AcceptLegalRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_AcceptLegalRequest_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_app_v1_AcceptLegalResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_app_v1_AcceptLegalResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_AcceptLegalResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_app_v1_RegisterAuthApplicationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_app_v1_RegisterAuthApplicationRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_RegisterAuthApplicationRequest_descriptor,
-        new java.lang.String[] { "ApplicationName", "OrgId", "OriginUris", "RedirectUris", "LogoutUri", });
-    internal_static_viam_app_v1_RegisterAuthApplicationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_app_v1_RegisterAuthApplicationResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_RegisterAuthApplicationResponse_descriptor,
-        new java.lang.String[] { "ApplicationId", "ApplicationName", "Secret", });
-    internal_static_viam_app_v1_UpdateAuthApplicationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_app_v1_UpdateAuthApplicationRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_UpdateAuthApplicationRequest_descriptor,
-        new java.lang.String[] { "OrgId", "ApplicationId", "ApplicationName", "OriginUris", "RedirectUris", "LogoutUri", });
-    internal_static_viam_app_v1_UpdateAuthApplicationResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_app_v1_UpdateAuthApplicationResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_app_v1_UpdateAuthApplicationResponse_descriptor,
-        new java.lang.String[] { "ApplicationId", "ApplicationName", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

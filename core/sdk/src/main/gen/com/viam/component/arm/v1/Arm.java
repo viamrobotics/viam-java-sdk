@@ -9,15 +9,9 @@ public final class Arm {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   public interface GetEndPositionRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.GetEndPositionRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -57,55 +51,21 @@ public final class Arm {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.arm.v1.GetEndPositionRequest}
    */
-  public static final class GetEndPositionRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetEndPositionRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetEndPositionRequest, GetEndPositionRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.GetEndPositionRequest)
       GetEndPositionRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetEndPositionRequest.newBuilder() to construct.
-    private GetEndPositionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetEndPositionRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetEndPositionRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetEndPositionRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetEndPositionRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.GetEndPositionRequest.class, com.viam.component.arm.v1.Arm.GetEndPositionRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of an arm
@@ -116,16 +76,7 @@ public final class Arm {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -138,16 +89,46 @@ public final class Arm {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -158,7 +139,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -170,7 +150,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -183,383 +162,138 @@ public final class Arm {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.GetEndPositionRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.GetEndPositionRequest other = (com.viam.component.arm.v1.Arm.GetEndPositionRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.arm.v1.Arm.GetEndPositionRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.GetEndPositionRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.GetEndPositionRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.GetEndPositionRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.arm.v1.GetEndPositionRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.GetEndPositionRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.GetEndPositionRequest)
         com.viam.component.arm.v1.Arm.GetEndPositionRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetEndPositionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetEndPositionRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.GetEndPositionRequest.class, com.viam.component.arm.v1.Arm.GetEndPositionRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.GetEndPositionRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetEndPositionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.GetEndPositionRequest getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.GetEndPositionRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.GetEndPositionRequest build() {
-        com.viam.component.arm.v1.Arm.GetEndPositionRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.GetEndPositionRequest buildPartial() {
-        com.viam.component.arm.v1.Arm.GetEndPositionRequest result = new com.viam.component.arm.v1.Arm.GetEndPositionRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.arm.v1.Arm.GetEndPositionRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.GetEndPositionRequest) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.GetEndPositionRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.GetEndPositionRequest other) {
-        if (other == com.viam.component.arm.v1.Arm.GetEndPositionRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of an arm
@@ -568,17 +302,9 @@ public final class Arm {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -588,18 +314,10 @@ public final class Arm {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -612,10 +330,8 @@ public final class Arm {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -627,9 +343,8 @@ public final class Arm {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -643,27 +358,21 @@ public final class Arm {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -671,14 +380,10 @@ public final class Arm {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -688,18 +393,10 @@ public final class Arm {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -709,13 +406,8 @@ public final class Arm {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -726,21 +418,8 @@ public final class Arm {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -750,130 +429,91 @@ public final class Arm {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.GetEndPositionRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.GetEndPositionRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.GetEndPositionRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.GetEndPositionRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.GetEndPositionRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.GetEndPositionRequest)
     private static final com.viam.component.arm.v1.Arm.GetEndPositionRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.GetEndPositionRequest();
+      GetEndPositionRequest defaultInstance = new GetEndPositionRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetEndPositionRequest.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.GetEndPositionRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetEndPositionRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetEndPositionRequest>() {
-      @java.lang.Override
-      public GetEndPositionRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetEndPositionRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetEndPositionRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetEndPositionRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.GetEndPositionRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetEndPositionResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.GetEndPositionResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -895,51 +535,17 @@ public final class Arm {
      * @return The pose.
      */
     com.viam.common.v1.Common.Pose getPose();
-    /**
-     * <pre>
-     * Returns 6d pose of the end effector relative to the base, represented by X,Y,Z coordinates which express
-     * millimeters and theta, ox, oy, oz coordinates which express an orientation vector
-     * </pre>
-     *
-     * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-     */
-    com.viam.common.v1.Common.PoseOrBuilder getPoseOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.arm.v1.GetEndPositionResponse}
    */
-  public static final class GetEndPositionResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetEndPositionResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetEndPositionResponse, GetEndPositionResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.GetEndPositionResponse)
       GetEndPositionResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetEndPositionResponse.newBuilder() to construct.
-    private GetEndPositionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetEndPositionResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetEndPositionResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetEndPositionResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetEndPositionResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.GetEndPositionResponse.class, com.viam.component.arm.v1.Arm.GetEndPositionResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int POSE_FIELD_NUMBER = 1;
     private com.viam.common.v1.Common.Pose pose_;
@@ -950,7 +556,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-     * @return Whether the pose field is set.
      */
     @java.lang.Override
     public boolean hasPose() {
@@ -963,7 +568,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-     * @return The pose.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.Pose getPose() {
@@ -977,361 +581,140 @@ public final class Arm {
      *
      * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.PoseOrBuilder getPoseOrBuilder() {
-      return pose_ == null ? com.viam.common.v1.Common.Pose.getDefaultInstance() : pose_;
+    private void setPose(com.viam.common.v1.Common.Pose value) {
+      value.getClass();
+  pose_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Returns 6d pose of the end effector relative to the base, represented by X,Y,Z coordinates which express
+     * millimeters and theta, ox, oy, oz coordinates which express an orientation vector
+     * </pre>
+     *
+     * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePose(com.viam.common.v1.Common.Pose value) {
+      value.getClass();
+  if (pose_ != null &&
+          pose_ != com.viam.common.v1.Common.Pose.getDefaultInstance()) {
+        pose_ =
+          com.viam.common.v1.Common.Pose.newBuilder(pose_).mergeFrom(value).buildPartial();
+      } else {
+        pose_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getPose());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getPose());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.GetEndPositionResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.GetEndPositionResponse other = (com.viam.component.arm.v1.Arm.GetEndPositionResponse) obj;
-
-      if (hasPose() != other.hasPose()) return false;
-      if (hasPose()) {
-        if (!getPose()
-            .equals(other.getPose())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasPose()) {
-        hash = (37 * hash) + POSE_FIELD_NUMBER;
-        hash = (53 * hash) + getPose().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Returns 6d pose of the end effector relative to the base, represented by X,Y,Z coordinates which express
+     * millimeters and theta, ox, oy, oz coordinates which express an orientation vector
+     * </pre>
+     *
+     * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
+     */
+    private void clearPose() {  pose_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.arm.v1.Arm.GetEndPositionResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.GetEndPositionResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.GetEndPositionResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.GetEndPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.GetEndPositionResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.arm.v1.GetEndPositionResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.GetEndPositionResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.GetEndPositionResponse)
         com.viam.component.arm.v1.Arm.GetEndPositionResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetEndPositionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetEndPositionResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.GetEndPositionResponse.class, com.viam.component.arm.v1.Arm.GetEndPositionResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.GetEndPositionResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPoseFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        pose_ = null;
-        if (poseBuilder_ != null) {
-          poseBuilder_.dispose();
-          poseBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetEndPositionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.GetEndPositionResponse getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.GetEndPositionResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.GetEndPositionResponse build() {
-        com.viam.component.arm.v1.Arm.GetEndPositionResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.GetEndPositionResponse buildPartial() {
-        com.viam.component.arm.v1.Arm.GetEndPositionResponse result = new com.viam.component.arm.v1.Arm.GetEndPositionResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.arm.v1.Arm.GetEndPositionResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.pose_ = poseBuilder_ == null
-              ? pose_
-              : poseBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.GetEndPositionResponse) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.GetEndPositionResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.GetEndPositionResponse other) {
-        if (other == com.viam.component.arm.v1.Arm.GetEndPositionResponse.getDefaultInstance()) return this;
-        if (other.hasPose()) {
-          mergePose(other.getPose());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getPoseFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.common.v1.Common.Pose pose_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder> poseBuilder_;
       /**
        * <pre>
        * Returns 6d pose of the end effector relative to the base, represented by X,Y,Z coordinates which express
@@ -1339,10 +722,10 @@ public final class Arm {
        * </pre>
        *
        * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-       * @return Whether the pose field is set.
        */
+      @java.lang.Override
       public boolean hasPose() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasPose();
       }
       /**
        * <pre>
@@ -1351,14 +734,10 @@ public final class Arm {
        * </pre>
        *
        * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-       * @return The pose.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.Pose getPose() {
-        if (poseBuilder_ == null) {
-          return pose_ == null ? com.viam.common.v1.Common.Pose.getDefaultInstance() : pose_;
-        } else {
-          return poseBuilder_.getMessage();
-        }
+        return instance.getPose();
       }
       /**
        * <pre>
@@ -1369,18 +748,10 @@ public final class Arm {
        * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
        */
       public Builder setPose(com.viam.common.v1.Common.Pose value) {
-        if (poseBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pose_ = value;
-        } else {
-          poseBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPose(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Returns 6d pose of the end effector relative to the base, represented by X,Y,Z coordinates which express
@@ -1391,13 +762,8 @@ public final class Arm {
        */
       public Builder setPose(
           com.viam.common.v1.Common.Pose.Builder builderForValue) {
-        if (poseBuilder_ == null) {
-          pose_ = builderForValue.build();
-        } else {
-          poseBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPose(builderForValue.build());
         return this;
       }
       /**
@@ -1409,21 +775,8 @@ public final class Arm {
        * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
        */
       public Builder mergePose(com.viam.common.v1.Common.Pose value) {
-        if (poseBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            pose_ != null &&
-            pose_ != com.viam.common.v1.Common.Pose.getDefaultInstance()) {
-            getPoseBuilder().mergeFrom(value);
-          } else {
-            pose_ = value;
-          }
-        } else {
-          poseBuilder_.mergeFrom(value);
-        }
-        if (pose_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergePose(value);
         return this;
       }
       /**
@@ -1434,133 +787,89 @@ public final class Arm {
        *
        * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
        */
-      public Builder clearPose() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        pose_ = null;
-        if (poseBuilder_ != null) {
-          poseBuilder_.dispose();
-          poseBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearPose() {  copyOnWrite();
+        instance.clearPose();
         return this;
       }
-      /**
-       * <pre>
-       * Returns 6d pose of the end effector relative to the base, represented by X,Y,Z coordinates which express
-       * millimeters and theta, ox, oy, oz coordinates which express an orientation vector
-       * </pre>
-       *
-       * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-       */
-      public com.viam.common.v1.Common.Pose.Builder getPoseBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getPoseFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Returns 6d pose of the end effector relative to the base, represented by X,Y,Z coordinates which express
-       * millimeters and theta, ox, oy, oz coordinates which express an orientation vector
-       * </pre>
-       *
-       * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-       */
-      public com.viam.common.v1.Common.PoseOrBuilder getPoseOrBuilder() {
-        if (poseBuilder_ != null) {
-          return poseBuilder_.getMessageOrBuilder();
-        } else {
-          return pose_ == null ?
-              com.viam.common.v1.Common.Pose.getDefaultInstance() : pose_;
-        }
-      }
-      /**
-       * <pre>
-       * Returns 6d pose of the end effector relative to the base, represented by X,Y,Z coordinates which express
-       * millimeters and theta, ox, oy, oz coordinates which express an orientation vector
-       * </pre>
-       *
-       * <code>.viam.common.v1.Pose pose = 1 [json_name = "pose"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder> 
-          getPoseFieldBuilder() {
-        if (poseBuilder_ == null) {
-          poseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder>(
-                  getPose(),
-                  getParentForChildren(),
-                  isClean());
-          pose_ = null;
-        }
-        return poseBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.GetEndPositionResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.GetEndPositionResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "pose_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.GetEndPositionResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.GetEndPositionResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.GetEndPositionResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.GetEndPositionResponse)
     private static final com.viam.component.arm.v1.Arm.GetEndPositionResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.GetEndPositionResponse();
+      GetEndPositionResponse defaultInstance = new GetEndPositionResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetEndPositionResponse.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.GetEndPositionResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetEndPositionResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetEndPositionResponse>() {
-      @java.lang.Override
-      public GetEndPositionResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetEndPositionResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetEndPositionResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetEndPositionResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.GetEndPositionResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface JointPositionsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.JointPositions)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -1600,43 +909,16 @@ public final class Arm {
   /**
    * Protobuf type {@code viam.component.arm.v1.JointPositions}
    */
-  public static final class JointPositions extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class JointPositions extends
+      com.google.protobuf.GeneratedMessageLite<
+          JointPositions, JointPositions.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.JointPositions)
       JointPositionsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use JointPositions.newBuilder() to construct.
-    private JointPositions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private JointPositions() {
       values_ = emptyDoubleList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new JointPositions();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_JointPositions_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_JointPositions_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.JointPositions.class, com.viam.component.arm.v1.Arm.JointPositions.Builder.class);
-    }
-
     public static final int VALUES_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.DoubleList values_ =
-        emptyDoubleList();
+    private com.google.protobuf.Internal.DoubleList values_;
     /**
      * <pre>
      * A list of joint positions. Rotations values are in degrees, translational values in mm.
@@ -1662,6 +944,7 @@ public final class Arm {
      * <code>repeated double values = 1 [json_name = "values"];</code>
      * @return The count of values.
      */
+    @java.lang.Override
     public int getValuesCount() {
       return values_.size();
     }
@@ -1676,384 +959,174 @@ public final class Arm {
      * @param index The index of the element to return.
      * @return The values at the given index.
      */
+    @java.lang.Override
     public double getValues(int index) {
       return values_.getDouble(index);
     }
     private int valuesMemoizedSerializedSize = -1;
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureValuesIsMutable() {
+      com.google.protobuf.Internal.DoubleList tmp = values_;
+      if (!tmp.isModifiable()) {
+        values_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (getValuesList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(valuesMemoizedSerializedSize);
-      }
-      for (int i = 0; i < values_.size(); i++) {
-        output.writeDoubleNoTag(values_.getDouble(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * A list of joint positions. Rotations values are in degrees, translational values in mm.
+     * The numbers are ordered spatially from the base toward the end effector
+     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     * @param index The index to set the value at.
+     * @param value The values to set.
+     */
+    private void setValues(
+        int index, double value) {
+      ensureValuesIsMutable();
+      values_.setDouble(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        dataSize = 8 * getValuesList().size();
-        size += dataSize;
-        if (!getValuesList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        valuesMemoizedSerializedSize = dataSize;
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <pre>
+     * A list of joint positions. Rotations values are in degrees, translational values in mm.
+     * The numbers are ordered spatially from the base toward the end effector
+     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     * @param value The values to add.
+     */
+    private void addValues(double value) {
+      ensureValuesIsMutable();
+      values_.addDouble(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.JointPositions)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.JointPositions other = (com.viam.component.arm.v1.Arm.JointPositions) obj;
-
-      if (!getValuesList()
-          .equals(other.getValuesList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <pre>
+     * A list of joint positions. Rotations values are in degrees, translational values in mm.
+     * The numbers are ordered spatially from the base toward the end effector
+     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     * @param values The values to add.
+     */
+    private void addAllValues(
+        java.lang.Iterable<? extends java.lang.Double> values) {
+      ensureValuesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, values_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getValuesCount() > 0) {
-        hash = (37 * hash) + VALUES_FIELD_NUMBER;
-        hash = (53 * hash) + getValuesList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * A list of joint positions. Rotations values are in degrees, translational values in mm.
+     * The numbers are ordered spatially from the base toward the end effector
+     * This is used in GetJointPositionsResponse and MoveToJointPositionsRequest
+     * </pre>
+     *
+     * <code>repeated double values = 1 [json_name = "values"];</code>
+     */
+    private void clearValues() {
+      values_ = emptyDoubleList();
     }
 
     public static com.viam.component.arm.v1.Arm.JointPositions parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.JointPositions parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.JointPositions parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.JointPositions parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.JointPositions parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.JointPositions parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.JointPositions parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.JointPositions parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.JointPositions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.JointPositions parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.JointPositions parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.JointPositions parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.JointPositions prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.arm.v1.JointPositions}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.JointPositions, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.JointPositions)
         com.viam.component.arm.v1.Arm.JointPositionsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_JointPositions_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_JointPositions_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.JointPositions.class, com.viam.component.arm.v1.Arm.JointPositions.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.JointPositions.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        values_ = emptyDoubleList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_JointPositions_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.JointPositions getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.JointPositions build() {
-        com.viam.component.arm.v1.Arm.JointPositions result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.JointPositions buildPartial() {
-        com.viam.component.arm.v1.Arm.JointPositions result = new com.viam.component.arm.v1.Arm.JointPositions(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.arm.v1.Arm.JointPositions result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          values_.makeImmutable();
-          result.values_ = values_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.JointPositions) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.JointPositions)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.JointPositions other) {
-        if (other == com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance()) return this;
-        if (!other.values_.isEmpty()) {
-          if (values_.isEmpty()) {
-            values_ = other.values_;
-            values_.makeImmutable();
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureValuesIsMutable();
-            values_.addAll(other.values_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 9: {
-                double v = input.readDouble();
-                ensureValuesIsMutable();
-                values_.addDouble(v);
-                break;
-              } // case 9
-              case 10: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                int alloc = length > 4096 ? 4096 : length;
-                ensureValuesIsMutable(alloc / 8);
-                while (input.getBytesUntilLimit() > 0) {
-                  values_.addDouble(input.readDouble());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Internal.DoubleList values_ = emptyDoubleList();
-      private void ensureValuesIsMutable() {
-        if (!values_.isModifiable()) {
-          values_ = makeMutableCopy(values_);
-        }
-        bitField0_ |= 0x00000001;
-      }
-      private void ensureValuesIsMutable(int capacity) {
-        if (!values_.isModifiable()) {
-          values_ = makeMutableCopy(values_, capacity);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <pre>
        * A list of joint positions. Rotations values are in degrees, translational values in mm.
@@ -2064,10 +1137,11 @@ public final class Arm {
        * <code>repeated double values = 1 [json_name = "values"];</code>
        * @return A list containing the values.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Double>
           getValuesList() {
-        values_.makeImmutable();
-        return values_;
+        return java.util.Collections.unmodifiableList(
+            instance.getValuesList());
       }
       /**
        * <pre>
@@ -2079,8 +1153,9 @@ public final class Arm {
        * <code>repeated double values = 1 [json_name = "values"];</code>
        * @return The count of values.
        */
+      @java.lang.Override
       public int getValuesCount() {
-        return values_.size();
+        return instance.getValuesCount();
       }
       /**
        * <pre>
@@ -2093,8 +1168,9 @@ public final class Arm {
        * @param index The index of the element to return.
        * @return The values at the given index.
        */
+      @java.lang.Override
       public double getValues(int index) {
-        return values_.getDouble(index);
+        return instance.getValues(index);
       }
       /**
        * <pre>
@@ -2104,17 +1180,13 @@ public final class Arm {
        * </pre>
        *
        * <code>repeated double values = 1 [json_name = "values"];</code>
-       * @param index The index to set the value at.
        * @param value The values to set.
        * @return This builder for chaining.
        */
       public Builder setValues(
           int index, double value) {
-
-        ensureValuesIsMutable();
-        values_.setDouble(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setValues(index, value);
         return this;
       }
       /**
@@ -2129,11 +1201,8 @@ public final class Arm {
        * @return This builder for chaining.
        */
       public Builder addValues(double value) {
-
-        ensureValuesIsMutable();
-        values_.addDouble(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addValues(value);
         return this;
       }
       /**
@@ -2149,11 +1218,8 @@ public final class Arm {
        */
       public Builder addAllValues(
           java.lang.Iterable<? extends java.lang.Double> values) {
-        ensureValuesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, values_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllValues(values);
         return this;
       }
       /**
@@ -2167,78 +1233,88 @@ public final class Arm {
        * @return This builder for chaining.
        */
       public Builder clearValues() {
-        values_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearValues();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.JointPositions)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.JointPositions();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "values_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001#";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.JointPositions> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.JointPositions.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.JointPositions>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.JointPositions)
     private static final com.viam.component.arm.v1.Arm.JointPositions DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.JointPositions();
+      JointPositions defaultInstance = new JointPositions();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        JointPositions.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.JointPositions getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<JointPositions>
-        PARSER = new com.google.protobuf.AbstractParser<JointPositions>() {
-      @java.lang.Override
-      public JointPositions parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<JointPositions> PARSER;
 
     public static com.google.protobuf.Parser<JointPositions> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<JointPositions> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.JointPositions getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetJointPositionsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.GetJointPositionsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -2278,55 +1354,21 @@ public final class Arm {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.arm.v1.GetJointPositionsRequest}
    */
-  public static final class GetJointPositionsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetJointPositionsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetJointPositionsRequest, GetJointPositionsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.GetJointPositionsRequest)
       GetJointPositionsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetJointPositionsRequest.newBuilder() to construct.
-    private GetJointPositionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetJointPositionsRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetJointPositionsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetJointPositionsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetJointPositionsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.GetJointPositionsRequest.class, com.viam.component.arm.v1.Arm.GetJointPositionsRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of an arm
@@ -2337,16 +1379,7 @@ public final class Arm {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -2359,16 +1392,46 @@ public final class Arm {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -2379,7 +1442,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -2391,7 +1453,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -2404,383 +1465,138 @@ public final class Arm {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.GetJointPositionsRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.GetJointPositionsRequest other = (com.viam.component.arm.v1.Arm.GetJointPositionsRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.arm.v1.Arm.GetJointPositionsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.GetJointPositionsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.GetJointPositionsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.GetJointPositionsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.arm.v1.GetJointPositionsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.GetJointPositionsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.GetJointPositionsRequest)
         com.viam.component.arm.v1.Arm.GetJointPositionsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetJointPositionsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetJointPositionsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.GetJointPositionsRequest.class, com.viam.component.arm.v1.Arm.GetJointPositionsRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.GetJointPositionsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetJointPositionsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.GetJointPositionsRequest getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.GetJointPositionsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.GetJointPositionsRequest build() {
-        com.viam.component.arm.v1.Arm.GetJointPositionsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.GetJointPositionsRequest buildPartial() {
-        com.viam.component.arm.v1.Arm.GetJointPositionsRequest result = new com.viam.component.arm.v1.Arm.GetJointPositionsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.arm.v1.Arm.GetJointPositionsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.GetJointPositionsRequest) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.GetJointPositionsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.GetJointPositionsRequest other) {
-        if (other == com.viam.component.arm.v1.Arm.GetJointPositionsRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of an arm
@@ -2789,17 +1605,9 @@ public final class Arm {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -2809,18 +1617,10 @@ public final class Arm {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -2833,10 +1633,8 @@ public final class Arm {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -2848,9 +1646,8 @@ public final class Arm {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -2864,27 +1661,21 @@ public final class Arm {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -2892,14 +1683,10 @@ public final class Arm {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -2909,18 +1696,10 @@ public final class Arm {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -2930,13 +1709,8 @@ public final class Arm {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -2947,21 +1721,8 @@ public final class Arm {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -2971,130 +1732,91 @@ public final class Arm {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.GetJointPositionsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.GetJointPositionsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.GetJointPositionsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.GetJointPositionsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.GetJointPositionsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.GetJointPositionsRequest)
     private static final com.viam.component.arm.v1.Arm.GetJointPositionsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.GetJointPositionsRequest();
+      GetJointPositionsRequest defaultInstance = new GetJointPositionsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetJointPositionsRequest.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.GetJointPositionsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetJointPositionsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetJointPositionsRequest>() {
-      @java.lang.Override
-      public GetJointPositionsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetJointPositionsRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetJointPositionsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetJointPositionsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.GetJointPositionsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetJointPositionsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.GetJointPositionsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -3114,50 +1836,17 @@ public final class Arm {
      * @return The positions.
      */
     com.viam.component.arm.v1.Arm.JointPositions getPositions();
-    /**
-     * <pre>
-     *a list JointPositions
-     * </pre>
-     *
-     * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
-     */
-    com.viam.component.arm.v1.Arm.JointPositionsOrBuilder getPositionsOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.arm.v1.GetJointPositionsResponse}
    */
-  public static final class GetJointPositionsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetJointPositionsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetJointPositionsResponse, GetJointPositionsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.GetJointPositionsResponse)
       GetJointPositionsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetJointPositionsResponse.newBuilder() to construct.
-    private GetJointPositionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetJointPositionsResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetJointPositionsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetJointPositionsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetJointPositionsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.GetJointPositionsResponse.class, com.viam.component.arm.v1.Arm.GetJointPositionsResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int POSITIONS_FIELD_NUMBER = 1;
     private com.viam.component.arm.v1.Arm.JointPositions positions_;
@@ -3167,7 +1856,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
-     * @return Whether the positions field is set.
      */
     @java.lang.Override
     public boolean hasPositions() {
@@ -3179,7 +1867,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
-     * @return The positions.
      */
     @java.lang.Override
     public com.viam.component.arm.v1.Arm.JointPositions getPositions() {
@@ -3192,371 +1879,148 @@ public final class Arm {
      *
      * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
      */
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.JointPositionsOrBuilder getPositionsOrBuilder() {
-      return positions_ == null ? com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance() : positions_;
+    private void setPositions(com.viam.component.arm.v1.Arm.JointPositions value) {
+      value.getClass();
+  positions_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     *a list JointPositions
+     * </pre>
+     *
+     * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePositions(com.viam.component.arm.v1.Arm.JointPositions value) {
+      value.getClass();
+  if (positions_ != null &&
+          positions_ != com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance()) {
+        positions_ =
+          com.viam.component.arm.v1.Arm.JointPositions.newBuilder(positions_).mergeFrom(value).buildPartial();
+      } else {
+        positions_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getPositions());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getPositions());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.GetJointPositionsResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.GetJointPositionsResponse other = (com.viam.component.arm.v1.Arm.GetJointPositionsResponse) obj;
-
-      if (hasPositions() != other.hasPositions()) return false;
-      if (hasPositions()) {
-        if (!getPositions()
-            .equals(other.getPositions())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasPositions()) {
-        hash = (37 * hash) + POSITIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getPositions().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     *a list JointPositions
+     * </pre>
+     *
+     * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
+     */
+    private void clearPositions() {  positions_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.arm.v1.Arm.GetJointPositionsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.GetJointPositionsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.GetJointPositionsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.GetJointPositionsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.GetJointPositionsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.arm.v1.GetJointPositionsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.GetJointPositionsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.GetJointPositionsResponse)
         com.viam.component.arm.v1.Arm.GetJointPositionsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetJointPositionsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetJointPositionsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.GetJointPositionsResponse.class, com.viam.component.arm.v1.Arm.GetJointPositionsResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.GetJointPositionsResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPositionsFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        positions_ = null;
-        if (positionsBuilder_ != null) {
-          positionsBuilder_.dispose();
-          positionsBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_GetJointPositionsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.GetJointPositionsResponse getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.GetJointPositionsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.GetJointPositionsResponse build() {
-        com.viam.component.arm.v1.Arm.GetJointPositionsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.GetJointPositionsResponse buildPartial() {
-        com.viam.component.arm.v1.Arm.GetJointPositionsResponse result = new com.viam.component.arm.v1.Arm.GetJointPositionsResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.arm.v1.Arm.GetJointPositionsResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.positions_ = positionsBuilder_ == null
-              ? positions_
-              : positionsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.GetJointPositionsResponse) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.GetJointPositionsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.GetJointPositionsResponse other) {
-        if (other == com.viam.component.arm.v1.Arm.GetJointPositionsResponse.getDefaultInstance()) return this;
-        if (other.hasPositions()) {
-          mergePositions(other.getPositions());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getPositionsFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.component.arm.v1.Arm.JointPositions positions_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.arm.v1.Arm.JointPositions, com.viam.component.arm.v1.Arm.JointPositions.Builder, com.viam.component.arm.v1.Arm.JointPositionsOrBuilder> positionsBuilder_;
       /**
        * <pre>
        *a list JointPositions
        * </pre>
        *
        * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
-       * @return Whether the positions field is set.
        */
+      @java.lang.Override
       public boolean hasPositions() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasPositions();
       }
       /**
        * <pre>
@@ -3564,14 +2028,10 @@ public final class Arm {
        * </pre>
        *
        * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
-       * @return The positions.
        */
+      @java.lang.Override
       public com.viam.component.arm.v1.Arm.JointPositions getPositions() {
-        if (positionsBuilder_ == null) {
-          return positions_ == null ? com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance() : positions_;
-        } else {
-          return positionsBuilder_.getMessage();
-        }
+        return instance.getPositions();
       }
       /**
        * <pre>
@@ -3581,18 +2041,10 @@ public final class Arm {
        * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
        */
       public Builder setPositions(com.viam.component.arm.v1.Arm.JointPositions value) {
-        if (positionsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          positions_ = value;
-        } else {
-          positionsBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPositions(value);
         return this;
-      }
+        }
       /**
        * <pre>
        *a list JointPositions
@@ -3602,13 +2054,8 @@ public final class Arm {
        */
       public Builder setPositions(
           com.viam.component.arm.v1.Arm.JointPositions.Builder builderForValue) {
-        if (positionsBuilder_ == null) {
-          positions_ = builderForValue.build();
-        } else {
-          positionsBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setPositions(builderForValue.build());
         return this;
       }
       /**
@@ -3619,21 +2066,8 @@ public final class Arm {
        * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
        */
       public Builder mergePositions(com.viam.component.arm.v1.Arm.JointPositions value) {
-        if (positionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            positions_ != null &&
-            positions_ != com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance()) {
-            getPositionsBuilder().mergeFrom(value);
-          } else {
-            positions_ = value;
-          }
-        } else {
-          positionsBuilder_.mergeFrom(value);
-        }
-        if (positions_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergePositions(value);
         return this;
       }
       /**
@@ -3643,130 +2077,89 @@ public final class Arm {
        *
        * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
        */
-      public Builder clearPositions() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        positions_ = null;
-        if (positionsBuilder_ != null) {
-          positionsBuilder_.dispose();
-          positionsBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearPositions() {  copyOnWrite();
+        instance.clearPositions();
         return this;
       }
-      /**
-       * <pre>
-       *a list JointPositions
-       * </pre>
-       *
-       * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
-       */
-      public com.viam.component.arm.v1.Arm.JointPositions.Builder getPositionsBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getPositionsFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       *a list JointPositions
-       * </pre>
-       *
-       * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
-       */
-      public com.viam.component.arm.v1.Arm.JointPositionsOrBuilder getPositionsOrBuilder() {
-        if (positionsBuilder_ != null) {
-          return positionsBuilder_.getMessageOrBuilder();
-        } else {
-          return positions_ == null ?
-              com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance() : positions_;
-        }
-      }
-      /**
-       * <pre>
-       *a list JointPositions
-       * </pre>
-       *
-       * <code>.viam.component.arm.v1.JointPositions positions = 1 [json_name = "positions"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.arm.v1.Arm.JointPositions, com.viam.component.arm.v1.Arm.JointPositions.Builder, com.viam.component.arm.v1.Arm.JointPositionsOrBuilder> 
-          getPositionsFieldBuilder() {
-        if (positionsBuilder_ == null) {
-          positionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.component.arm.v1.Arm.JointPositions, com.viam.component.arm.v1.Arm.JointPositions.Builder, com.viam.component.arm.v1.Arm.JointPositionsOrBuilder>(
-                  getPositions(),
-                  getParentForChildren(),
-                  isClean());
-          positions_ = null;
-        }
-        return positionsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.GetJointPositionsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.GetJointPositionsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "positions_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.GetJointPositionsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.GetJointPositionsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.GetJointPositionsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.GetJointPositionsResponse)
     private static final com.viam.component.arm.v1.Arm.GetJointPositionsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.GetJointPositionsResponse();
+      GetJointPositionsResponse defaultInstance = new GetJointPositionsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetJointPositionsResponse.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.GetJointPositionsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetJointPositionsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetJointPositionsResponse>() {
-      @java.lang.Override
-      public GetJointPositionsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetJointPositionsResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetJointPositionsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetJointPositionsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.GetJointPositionsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface MoveToPositionRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.MoveToPositionRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -3806,14 +2199,6 @@ public final class Arm {
      * @return The to.
      */
     com.viam.common.v1.Common.Pose getTo();
-    /**
-     * <pre>
-     * The destination to move the arm to; this is from the reference frame of the arm.
-     * </pre>
-     *
-     * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
-     */
-    com.viam.common.v1.Common.PoseOrBuilder getToOrBuilder();
 
     /**
      * <pre>
@@ -3833,14 +2218,6 @@ public final class Arm {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * <pre>
@@ -3851,43 +2228,17 @@ public final class Arm {
    *
    * Protobuf type {@code viam.component.arm.v1.MoveToPositionRequest}
    */
-  public static final class MoveToPositionRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class MoveToPositionRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          MoveToPositionRequest, MoveToPositionRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.MoveToPositionRequest)
       MoveToPositionRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MoveToPositionRequest.newBuilder() to construct.
-    private MoveToPositionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private MoveToPositionRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MoveToPositionRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToPositionRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToPositionRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.MoveToPositionRequest.class, com.viam.component.arm.v1.Arm.MoveToPositionRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of an arm
@@ -3898,16 +2249,7 @@ public final class Arm {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -3920,16 +2262,46 @@ public final class Arm {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int TO_FIELD_NUMBER = 2;
@@ -3940,7 +2312,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
-     * @return Whether the to field is set.
      */
     @java.lang.Override
     public boolean hasTo() {
@@ -3952,7 +2323,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
-     * @return The to.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.Pose getTo() {
@@ -3965,9 +2335,39 @@ public final class Arm {
      *
      * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.PoseOrBuilder getToOrBuilder() {
-      return to_ == null ? com.viam.common.v1.Common.Pose.getDefaultInstance() : to_;
+    private void setTo(com.viam.common.v1.Common.Pose value) {
+      value.getClass();
+  to_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * The destination to move the arm to; this is from the reference frame of the arm.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeTo(com.viam.common.v1.Common.Pose value) {
+      value.getClass();
+  if (to_ != null &&
+          to_ != com.viam.common.v1.Common.Pose.getDefaultInstance()) {
+        to_ =
+          com.viam.common.v1.Common.Pose.newBuilder(to_).mergeFrom(value).buildPartial();
+      } else {
+        to_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * The destination to move the arm to; this is from the reference frame of the arm.
+     * </pre>
+     *
+     * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
+     */
+    private void clearTo() {  to_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -3978,7 +2378,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -3990,7 +2389,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -4003,199 +2401,124 @@ public final class Arm {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getTo());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getTo());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.MoveToPositionRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.MoveToPositionRequest other = (com.viam.component.arm.v1.Arm.MoveToPositionRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasTo() != other.hasTo()) return false;
-      if (hasTo()) {
-        if (!getTo()
-            .equals(other.getTo())) return false;
-      }
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasTo()) {
-        hash = (37 * hash) + TO_FIELD_NUMBER;
-        hash = (53 * hash) + getTo().hashCode();
-      }
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToPositionRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToPositionRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToPositionRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.MoveToPositionRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * <pre>
      * Moves an arm to the specified pose that is within the reference frame of the arm.
@@ -4206,224 +2529,16 @@ public final class Arm {
      * Protobuf type {@code viam.component.arm.v1.MoveToPositionRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.MoveToPositionRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.MoveToPositionRequest)
         com.viam.component.arm.v1.Arm.MoveToPositionRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToPositionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToPositionRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.MoveToPositionRequest.class, com.viam.component.arm.v1.Arm.MoveToPositionRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.MoveToPositionRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getToFieldBuilder();
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        to_ = null;
-        if (toBuilder_ != null) {
-          toBuilder_.dispose();
-          toBuilder_ = null;
-        }
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToPositionRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.MoveToPositionRequest getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.MoveToPositionRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.MoveToPositionRequest build() {
-        com.viam.component.arm.v1.Arm.MoveToPositionRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.MoveToPositionRequest buildPartial() {
-        com.viam.component.arm.v1.Arm.MoveToPositionRequest result = new com.viam.component.arm.v1.Arm.MoveToPositionRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.arm.v1.Arm.MoveToPositionRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.to_ = toBuilder_ == null
-              ? to_
-              : toBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.MoveToPositionRequest) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.MoveToPositionRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.MoveToPositionRequest other) {
-        if (other == com.viam.component.arm.v1.Arm.MoveToPositionRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasTo()) {
-          mergeTo(other.getTo());
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getToFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of an arm
@@ -4432,17 +2547,9 @@ public final class Arm {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -4452,18 +2559,10 @@ public final class Arm {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -4476,10 +2575,8 @@ public final class Arm {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -4491,9 +2588,8 @@ public final class Arm {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -4507,27 +2603,21 @@ public final class Arm {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.viam.common.v1.Common.Pose to_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder> toBuilder_;
       /**
        * <pre>
        * The destination to move the arm to; this is from the reference frame of the arm.
        * </pre>
        *
        * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
-       * @return Whether the to field is set.
        */
+      @java.lang.Override
       public boolean hasTo() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasTo();
       }
       /**
        * <pre>
@@ -4535,14 +2625,10 @@ public final class Arm {
        * </pre>
        *
        * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
-       * @return The to.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.Pose getTo() {
-        if (toBuilder_ == null) {
-          return to_ == null ? com.viam.common.v1.Common.Pose.getDefaultInstance() : to_;
-        } else {
-          return toBuilder_.getMessage();
-        }
+        return instance.getTo();
       }
       /**
        * <pre>
@@ -4552,18 +2638,10 @@ public final class Arm {
        * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
        */
       public Builder setTo(com.viam.common.v1.Common.Pose value) {
-        if (toBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          to_ = value;
-        } else {
-          toBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setTo(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * The destination to move the arm to; this is from the reference frame of the arm.
@@ -4573,13 +2651,8 @@ public final class Arm {
        */
       public Builder setTo(
           com.viam.common.v1.Common.Pose.Builder builderForValue) {
-        if (toBuilder_ == null) {
-          to_ = builderForValue.build();
-        } else {
-          toBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setTo(builderForValue.build());
         return this;
       }
       /**
@@ -4590,21 +2663,8 @@ public final class Arm {
        * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
        */
       public Builder mergeTo(com.viam.common.v1.Common.Pose value) {
-        if (toBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            to_ != null &&
-            to_ != com.viam.common.v1.Common.Pose.getDefaultInstance()) {
-            getToBuilder().mergeFrom(value);
-          } else {
-            to_ = value;
-          }
-        } else {
-          toBuilder_.mergeFrom(value);
-        }
-        if (to_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeTo(value);
         return this;
       }
       /**
@@ -4614,77 +2674,21 @@ public final class Arm {
        *
        * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
        */
-      public Builder clearTo() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        to_ = null;
-        if (toBuilder_ != null) {
-          toBuilder_.dispose();
-          toBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearTo() {  copyOnWrite();
+        instance.clearTo();
         return this;
-      }
-      /**
-       * <pre>
-       * The destination to move the arm to; this is from the reference frame of the arm.
-       * </pre>
-       *
-       * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
-       */
-      public com.viam.common.v1.Common.Pose.Builder getToBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getToFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * The destination to move the arm to; this is from the reference frame of the arm.
-       * </pre>
-       *
-       * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
-       */
-      public com.viam.common.v1.Common.PoseOrBuilder getToOrBuilder() {
-        if (toBuilder_ != null) {
-          return toBuilder_.getMessageOrBuilder();
-        } else {
-          return to_ == null ?
-              com.viam.common.v1.Common.Pose.getDefaultInstance() : to_;
-        }
-      }
-      /**
-       * <pre>
-       * The destination to move the arm to; this is from the reference frame of the arm.
-       * </pre>
-       *
-       * <code>.viam.common.v1.Pose to = 2 [json_name = "to"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder> 
-          getToFieldBuilder() {
-        if (toBuilder_ == null) {
-          toBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder>(
-                  getTo(),
-                  getParentForChildren(),
-                  isClean());
-          to_ = null;
-        }
-        return toBuilder_;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -4692,14 +2696,10 @@ public final class Arm {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -4709,18 +2709,10 @@ public final class Arm {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -4730,13 +2722,8 @@ public final class Arm {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -4747,21 +2734,8 @@ public final class Arm {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -4771,527 +2745,274 @@ public final class Arm {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.MoveToPositionRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.MoveToPositionRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "to_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000" +
+                "c\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.MoveToPositionRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.MoveToPositionRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.MoveToPositionRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.MoveToPositionRequest)
     private static final com.viam.component.arm.v1.Arm.MoveToPositionRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.MoveToPositionRequest();
+      MoveToPositionRequest defaultInstance = new MoveToPositionRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MoveToPositionRequest.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToPositionRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MoveToPositionRequest>
-        PARSER = new com.google.protobuf.AbstractParser<MoveToPositionRequest>() {
-      @java.lang.Override
-      public MoveToPositionRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<MoveToPositionRequest> PARSER;
 
     public static com.google.protobuf.Parser<MoveToPositionRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MoveToPositionRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.MoveToPositionRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface MoveToPositionResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.MoveToPositionResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.component.arm.v1.MoveToPositionResponse}
    */
-  public static final class MoveToPositionResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class MoveToPositionResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          MoveToPositionResponse, MoveToPositionResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.MoveToPositionResponse)
       MoveToPositionResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MoveToPositionResponse.newBuilder() to construct.
-    private MoveToPositionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private MoveToPositionResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MoveToPositionResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToPositionResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToPositionResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.MoveToPositionResponse.class, com.viam.component.arm.v1.Arm.MoveToPositionResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.MoveToPositionResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.MoveToPositionResponse other = (com.viam.component.arm.v1.Arm.MoveToPositionResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static com.viam.component.arm.v1.Arm.MoveToPositionResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToPositionResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToPositionResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.MoveToPositionResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.MoveToPositionResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.arm.v1.MoveToPositionResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.MoveToPositionResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.MoveToPositionResponse)
         com.viam.component.arm.v1.Arm.MoveToPositionResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToPositionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToPositionResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.MoveToPositionResponse.class, com.viam.component.arm.v1.Arm.MoveToPositionResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.MoveToPositionResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToPositionResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.MoveToPositionResponse getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.MoveToPositionResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.MoveToPositionResponse build() {
-        com.viam.component.arm.v1.Arm.MoveToPositionResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.MoveToPositionResponse buildPartial() {
-        com.viam.component.arm.v1.Arm.MoveToPositionResponse result = new com.viam.component.arm.v1.Arm.MoveToPositionResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.MoveToPositionResponse) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.MoveToPositionResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.MoveToPositionResponse other) {
-        if (other == com.viam.component.arm.v1.Arm.MoveToPositionResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.MoveToPositionResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.MoveToPositionResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.MoveToPositionResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.MoveToPositionResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.MoveToPositionResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.MoveToPositionResponse)
     private static final com.viam.component.arm.v1.Arm.MoveToPositionResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.MoveToPositionResponse();
+      MoveToPositionResponse defaultInstance = new MoveToPositionResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MoveToPositionResponse.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToPositionResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MoveToPositionResponse>
-        PARSER = new com.google.protobuf.AbstractParser<MoveToPositionResponse>() {
-      @java.lang.Override
-      public MoveToPositionResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<MoveToPositionResponse> PARSER;
 
     public static com.google.protobuf.Parser<MoveToPositionResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MoveToPositionResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.MoveToPositionResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface MoveToJointPositionsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.MoveToJointPositionsRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -5333,15 +3054,6 @@ public final class Arm {
      * @return The positions.
      */
     com.viam.component.arm.v1.Arm.JointPositions getPositions();
-    /**
-     * <pre>
-     * A list of joint positions
-     * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector
-     * </pre>
-     *
-     * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
-     */
-    com.viam.component.arm.v1.Arm.JointPositionsOrBuilder getPositionsOrBuilder();
 
     /**
      * <pre>
@@ -5361,55 +3073,21 @@ public final class Arm {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.arm.v1.MoveToJointPositionsRequest}
    */
-  public static final class MoveToJointPositionsRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class MoveToJointPositionsRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          MoveToJointPositionsRequest, MoveToJointPositionsRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.MoveToJointPositionsRequest)
       MoveToJointPositionsRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MoveToJointPositionsRequest.newBuilder() to construct.
-    private MoveToJointPositionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private MoveToJointPositionsRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MoveToJointPositionsRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToJointPositionsRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToJointPositionsRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest.class, com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of an arm
@@ -5420,16 +3098,7 @@ public final class Arm {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -5442,16 +3111,46 @@ public final class Arm {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int POSITIONS_FIELD_NUMBER = 2;
@@ -5463,7 +3162,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
-     * @return Whether the positions field is set.
      */
     @java.lang.Override
     public boolean hasPositions() {
@@ -5476,7 +3174,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
-     * @return The positions.
      */
     @java.lang.Override
     public com.viam.component.arm.v1.Arm.JointPositions getPositions() {
@@ -5490,9 +3187,41 @@ public final class Arm {
      *
      * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
      */
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.JointPositionsOrBuilder getPositionsOrBuilder() {
-      return positions_ == null ? com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance() : positions_;
+    private void setPositions(com.viam.component.arm.v1.Arm.JointPositions value) {
+      value.getClass();
+  positions_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * A list of joint positions
+     * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector
+     * </pre>
+     *
+     * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergePositions(com.viam.component.arm.v1.Arm.JointPositions value) {
+      value.getClass();
+  if (positions_ != null &&
+          positions_ != com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance()) {
+        positions_ =
+          com.viam.component.arm.v1.Arm.JointPositions.newBuilder(positions_).mergeFrom(value).buildPartial();
+      } else {
+        positions_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * A list of joint positions
+     * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector
+     * </pre>
+     *
+     * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
+     */
+    private void clearPositions() {  positions_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -5503,7 +3232,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -5515,7 +3243,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -5528,421 +3255,138 @@ public final class Arm {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000002;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getPositions());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPositions());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest other = (com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasPositions() != other.hasPositions()) return false;
-      if (hasPositions()) {
-        if (!getPositions()
-            .equals(other.getPositions())) return false;
-      }
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasPositions()) {
-        hash = (37 * hash) + POSITIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getPositions().hashCode();
-      }
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.arm.v1.MoveToJointPositionsRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.MoveToJointPositionsRequest)
         com.viam.component.arm.v1.Arm.MoveToJointPositionsRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToJointPositionsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToJointPositionsRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest.class, com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getPositionsFieldBuilder();
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        positions_ = null;
-        if (positionsBuilder_ != null) {
-          positionsBuilder_.dispose();
-          positionsBuilder_ = null;
-        }
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToJointPositionsRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest build() {
-        com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest buildPartial() {
-        com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest result = new com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.positions_ = positionsBuilder_ == null
-              ? positions_
-              : positionsBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest other) {
-        if (other == com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasPositions()) {
-          mergePositions(other.getPositions());
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getPositionsFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of an arm
@@ -5951,17 +3395,9 @@ public final class Arm {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -5971,18 +3407,10 @@ public final class Arm {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -5995,10 +3423,8 @@ public final class Arm {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -6010,9 +3436,8 @@ public final class Arm {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -6026,17 +3451,11 @@ public final class Arm {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.viam.component.arm.v1.Arm.JointPositions positions_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.arm.v1.Arm.JointPositions, com.viam.component.arm.v1.Arm.JointPositions.Builder, com.viam.component.arm.v1.Arm.JointPositionsOrBuilder> positionsBuilder_;
       /**
        * <pre>
        * A list of joint positions
@@ -6044,10 +3463,10 @@ public final class Arm {
        * </pre>
        *
        * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
-       * @return Whether the positions field is set.
        */
+      @java.lang.Override
       public boolean hasPositions() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasPositions();
       }
       /**
        * <pre>
@@ -6056,14 +3475,10 @@ public final class Arm {
        * </pre>
        *
        * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
-       * @return The positions.
        */
+      @java.lang.Override
       public com.viam.component.arm.v1.Arm.JointPositions getPositions() {
-        if (positionsBuilder_ == null) {
-          return positions_ == null ? com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance() : positions_;
-        } else {
-          return positionsBuilder_.getMessage();
-        }
+        return instance.getPositions();
       }
       /**
        * <pre>
@@ -6074,18 +3489,10 @@ public final class Arm {
        * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
        */
       public Builder setPositions(com.viam.component.arm.v1.Arm.JointPositions value) {
-        if (positionsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          positions_ = value;
-        } else {
-          positionsBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setPositions(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * A list of joint positions
@@ -6096,13 +3503,8 @@ public final class Arm {
        */
       public Builder setPositions(
           com.viam.component.arm.v1.Arm.JointPositions.Builder builderForValue) {
-        if (positionsBuilder_ == null) {
-          positions_ = builderForValue.build();
-        } else {
-          positionsBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setPositions(builderForValue.build());
         return this;
       }
       /**
@@ -6114,21 +3516,8 @@ public final class Arm {
        * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
        */
       public Builder mergePositions(com.viam.component.arm.v1.Arm.JointPositions value) {
-        if (positionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            positions_ != null &&
-            positions_ != com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance()) {
-            getPositionsBuilder().mergeFrom(value);
-          } else {
-            positions_ = value;
-          }
-        } else {
-          positionsBuilder_.mergeFrom(value);
-        }
-        if (positions_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergePositions(value);
         return this;
       }
       /**
@@ -6139,80 +3528,21 @@ public final class Arm {
        *
        * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
        */
-      public Builder clearPositions() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        positions_ = null;
-        if (positionsBuilder_ != null) {
-          positionsBuilder_.dispose();
-          positionsBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearPositions() {  copyOnWrite();
+        instance.clearPositions();
         return this;
-      }
-      /**
-       * <pre>
-       * A list of joint positions
-       * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector
-       * </pre>
-       *
-       * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
-       */
-      public com.viam.component.arm.v1.Arm.JointPositions.Builder getPositionsBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getPositionsFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * A list of joint positions
-       * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector
-       * </pre>
-       *
-       * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
-       */
-      public com.viam.component.arm.v1.Arm.JointPositionsOrBuilder getPositionsOrBuilder() {
-        if (positionsBuilder_ != null) {
-          return positionsBuilder_.getMessageOrBuilder();
-        } else {
-          return positions_ == null ?
-              com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance() : positions_;
-        }
-      }
-      /**
-       * <pre>
-       * A list of joint positions
-       * There should be 1 entry in the list per joint DOF, ordered spatially from the base toward the end effector
-       * </pre>
-       *
-       * <code>.viam.component.arm.v1.JointPositions positions = 2 [json_name = "positions"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.arm.v1.Arm.JointPositions, com.viam.component.arm.v1.Arm.JointPositions.Builder, com.viam.component.arm.v1.Arm.JointPositionsOrBuilder> 
-          getPositionsFieldBuilder() {
-        if (positionsBuilder_ == null) {
-          positionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.component.arm.v1.Arm.JointPositions, com.viam.component.arm.v1.Arm.JointPositions.Builder, com.viam.component.arm.v1.Arm.JointPositionsOrBuilder>(
-                  getPositions(),
-                  getParentForChildren(),
-                  isClean());
-          positions_ = null;
-        }
-        return positionsBuilder_;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -6220,14 +3550,10 @@ public final class Arm {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -6237,18 +3563,10 @@ public final class Arm {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -6258,13 +3576,8 @@ public final class Arm {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -6275,21 +3588,8 @@ public final class Arm {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -6299,527 +3599,274 @@ public final class Arm {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.MoveToJointPositionsRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "positions_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u1009\u0000" +
+                "c\u1009\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.MoveToJointPositionsRequest)
     private static final com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest();
+      MoveToJointPositionsRequest defaultInstance = new MoveToJointPositionsRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MoveToJointPositionsRequest.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MoveToJointPositionsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<MoveToJointPositionsRequest>() {
-      @java.lang.Override
-      public MoveToJointPositionsRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<MoveToJointPositionsRequest> PARSER;
 
     public static com.google.protobuf.Parser<MoveToJointPositionsRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MoveToJointPositionsRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.MoveToJointPositionsRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface MoveToJointPositionsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.MoveToJointPositionsResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.component.arm.v1.MoveToJointPositionsResponse}
    */
-  public static final class MoveToJointPositionsResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class MoveToJointPositionsResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          MoveToJointPositionsResponse, MoveToJointPositionsResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.MoveToJointPositionsResponse)
       MoveToJointPositionsResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use MoveToJointPositionsResponse.newBuilder() to construct.
-    private MoveToJointPositionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private MoveToJointPositionsResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new MoveToJointPositionsResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToJointPositionsResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToJointPositionsResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse.class, com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse other = (com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.arm.v1.MoveToJointPositionsResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.MoveToJointPositionsResponse)
         com.viam.component.arm.v1.Arm.MoveToJointPositionsResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToJointPositionsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToJointPositionsResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse.class, com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_MoveToJointPositionsResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse build() {
-        com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse buildPartial() {
-        com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse result = new com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse other) {
-        if (other == com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.MoveToJointPositionsResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.MoveToJointPositionsResponse)
     private static final com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse();
+      MoveToJointPositionsResponse defaultInstance = new MoveToJointPositionsResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        MoveToJointPositionsResponse.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<MoveToJointPositionsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<MoveToJointPositionsResponse>() {
-      @java.lang.Override
-      public MoveToJointPositionsResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<MoveToJointPositionsResponse> PARSER;
 
     public static com.google.protobuf.Parser<MoveToJointPositionsResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<MoveToJointPositionsResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.MoveToJointPositionsResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StopRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.StopRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -6859,55 +3906,21 @@ public final class Arm {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.arm.v1.StopRequest}
    */
-  public static final class StopRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class StopRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          StopRequest, StopRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.StopRequest)
       StopRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StopRequest.newBuilder() to construct.
-    private StopRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private StopRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StopRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_StopRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_StopRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.StopRequest.class, com.viam.component.arm.v1.Arm.StopRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of an arm
@@ -6918,16 +3931,7 @@ public final class Arm {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -6940,16 +3944,46 @@ public final class Arm {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of an arm
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -6960,7 +3994,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -6972,7 +4005,6 @@ public final class Arm {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -6985,383 +4017,138 @@ public final class Arm {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.StopRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.StopRequest other = (com.viam.component.arm.v1.Arm.StopRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.arm.v1.Arm.StopRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.StopRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.StopRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.StopRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.StopRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.StopRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.StopRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.StopRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.StopRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.StopRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.StopRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.StopRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.StopRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.arm.v1.StopRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.StopRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.StopRequest)
         com.viam.component.arm.v1.Arm.StopRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_StopRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_StopRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.StopRequest.class, com.viam.component.arm.v1.Arm.StopRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.StopRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_StopRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.StopRequest getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.StopRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.StopRequest build() {
-        com.viam.component.arm.v1.Arm.StopRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.StopRequest buildPartial() {
-        com.viam.component.arm.v1.Arm.StopRequest result = new com.viam.component.arm.v1.Arm.StopRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.arm.v1.Arm.StopRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.StopRequest) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.StopRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.StopRequest other) {
-        if (other == com.viam.component.arm.v1.Arm.StopRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of an arm
@@ -7370,17 +4157,9 @@ public final class Arm {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -7390,18 +4169,10 @@ public final class Arm {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -7414,10 +4185,8 @@ public final class Arm {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -7429,9 +4198,8 @@ public final class Arm {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -7445,27 +4213,21 @@ public final class Arm {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -7473,14 +4235,10 @@ public final class Arm {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -7490,18 +4248,10 @@ public final class Arm {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -7511,13 +4261,8 @@ public final class Arm {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -7528,21 +4273,8 @@ public final class Arm {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -7552,527 +4284,273 @@ public final class Arm {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.StopRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.StopRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001c\u0002\u0000\u0000\u0000\u0001\u0208c\u1009\u0000" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.StopRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.StopRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.StopRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.StopRequest)
     private static final com.viam.component.arm.v1.Arm.StopRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.StopRequest();
+      StopRequest defaultInstance = new StopRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StopRequest.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.StopRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<StopRequest>
-        PARSER = new com.google.protobuf.AbstractParser<StopRequest>() {
-      @java.lang.Override
-      public StopRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<StopRequest> PARSER;
 
     public static com.google.protobuf.Parser<StopRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StopRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.StopRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StopResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.StopResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.component.arm.v1.StopResponse}
    */
-  public static final class StopResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class StopResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          StopResponse, StopResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.StopResponse)
       StopResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use StopResponse.newBuilder() to construct.
-    private StopResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private StopResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new StopResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_StopResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_StopResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.StopResponse.class, com.viam.component.arm.v1.Arm.StopResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.StopResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.StopResponse other = (com.viam.component.arm.v1.Arm.StopResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static com.viam.component.arm.v1.Arm.StopResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.StopResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.StopResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.StopResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.StopResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.StopResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.StopResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.StopResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.StopResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.StopResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.StopResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.StopResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.StopResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.arm.v1.StopResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.StopResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.StopResponse)
         com.viam.component.arm.v1.Arm.StopResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_StopResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_StopResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.StopResponse.class, com.viam.component.arm.v1.Arm.StopResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.StopResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_StopResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.StopResponse getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.StopResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.StopResponse build() {
-        com.viam.component.arm.v1.Arm.StopResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.StopResponse buildPartial() {
-        com.viam.component.arm.v1.Arm.StopResponse result = new com.viam.component.arm.v1.Arm.StopResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.StopResponse) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.StopResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.StopResponse other) {
-        if (other == com.viam.component.arm.v1.Arm.StopResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.StopResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.StopResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.StopResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.StopResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.StopResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.StopResponse)
     private static final com.viam.component.arm.v1.Arm.StopResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.StopResponse();
+      StopResponse defaultInstance = new StopResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        StopResponse.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.StopResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<StopResponse>
-        PARSER = new com.google.protobuf.AbstractParser<StopResponse>() {
-      @java.lang.Override
-      public StopResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<StopResponse> PARSER;
 
     public static com.google.protobuf.Parser<StopResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<StopResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.StopResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface StatusOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.Status)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
@@ -8084,10 +4562,6 @@ public final class Arm {
      * @return The endPosition.
      */
     com.viam.common.v1.Common.Pose getEndPosition();
-    /**
-     * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
-     */
-    com.viam.common.v1.Common.PoseOrBuilder getEndPositionOrBuilder();
 
     /**
      * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
@@ -8099,10 +4573,6 @@ public final class Arm {
      * @return The jointPositions.
      */
     com.viam.component.arm.v1.Arm.JointPositions getJointPositions();
-    /**
-     * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
-     */
-    com.viam.component.arm.v1.Arm.JointPositionsOrBuilder getJointPositionsOrBuilder();
 
     /**
      * <code>bool is_moving = 3 [json_name = "isMoving"];</code>
@@ -8113,44 +4583,18 @@ public final class Arm {
   /**
    * Protobuf type {@code viam.component.arm.v1.Status}
    */
-  public static final class Status extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Status extends
+      com.google.protobuf.GeneratedMessageLite<
+          Status, Status.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.Status)
       StatusOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Status.newBuilder() to construct.
-    private Status(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Status() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Status();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_Status_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_Status_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.Status.class, com.viam.component.arm.v1.Arm.Status.Builder.class);
-    }
-
     private int bitField0_;
     public static final int END_POSITION_FIELD_NUMBER = 1;
     private com.viam.common.v1.Common.Pose endPosition_;
     /**
      * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
-     * @return Whether the endPosition field is set.
      */
     @java.lang.Override
     public boolean hasEndPosition() {
@@ -8158,7 +4602,6 @@ public final class Arm {
     }
     /**
      * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
-     * @return The endPosition.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.Pose getEndPosition() {
@@ -8167,16 +4610,37 @@ public final class Arm {
     /**
      * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.PoseOrBuilder getEndPositionOrBuilder() {
-      return endPosition_ == null ? com.viam.common.v1.Common.Pose.getDefaultInstance() : endPosition_;
+    private void setEndPosition(com.viam.common.v1.Common.Pose value) {
+      value.getClass();
+  endPosition_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeEndPosition(com.viam.common.v1.Common.Pose value) {
+      value.getClass();
+  if (endPosition_ != null &&
+          endPosition_ != com.viam.common.v1.Common.Pose.getDefaultInstance()) {
+        endPosition_ =
+          com.viam.common.v1.Common.Pose.newBuilder(endPosition_).mergeFrom(value).buildPartial();
+      } else {
+        endPosition_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
+     */
+    private void clearEndPosition() {  endPosition_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int JOINT_POSITIONS_FIELD_NUMBER = 2;
     private com.viam.component.arm.v1.Arm.JointPositions jointPositions_;
     /**
      * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
-     * @return Whether the jointPositions field is set.
      */
     @java.lang.Override
     public boolean hasJointPositions() {
@@ -8184,7 +4648,6 @@ public final class Arm {
     }
     /**
      * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
-     * @return The jointPositions.
      */
     @java.lang.Override
     public com.viam.component.arm.v1.Arm.JointPositions getJointPositions() {
@@ -8193,13 +4656,35 @@ public final class Arm {
     /**
      * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
      */
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.JointPositionsOrBuilder getJointPositionsOrBuilder() {
-      return jointPositions_ == null ? com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance() : jointPositions_;
+    private void setJointPositions(com.viam.component.arm.v1.Arm.JointPositions value) {
+      value.getClass();
+  jointPositions_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeJointPositions(com.viam.component.arm.v1.Arm.JointPositions value) {
+      value.getClass();
+  if (jointPositions_ != null &&
+          jointPositions_ != com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance()) {
+        jointPositions_ =
+          com.viam.component.arm.v1.Arm.JointPositions.newBuilder(jointPositions_).mergeFrom(value).buildPartial();
+      } else {
+        jointPositions_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
+     */
+    private void clearJointPositions() {  jointPositions_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static final int IS_MOVING_FIELD_NUMBER = 3;
-    private boolean isMoving_ = false;
+    private boolean isMoving_;
     /**
      * <code>bool is_moving = 3 [json_name = "isMoving"];</code>
      * @return The isMoving.
@@ -8208,666 +4693,220 @@ public final class Arm {
     public boolean getIsMoving() {
       return isMoving_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bool is_moving = 3 [json_name = "isMoving"];</code>
+     * @param value The isMoving to set.
+     */
+    private void setIsMoving(boolean value) {
+      
+      isMoving_ = value;
     }
+    /**
+     * <code>bool is_moving = 3 [json_name = "isMoving"];</code>
+     */
+    private void clearIsMoving() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getEndPosition());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(2, getJointPositions());
-      }
-      if (isMoving_ != false) {
-        output.writeBool(3, isMoving_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getEndPosition());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getJointPositions());
-      }
-      if (isMoving_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isMoving_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.Status)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.Status other = (com.viam.component.arm.v1.Arm.Status) obj;
-
-      if (hasEndPosition() != other.hasEndPosition()) return false;
-      if (hasEndPosition()) {
-        if (!getEndPosition()
-            .equals(other.getEndPosition())) return false;
-      }
-      if (hasJointPositions() != other.hasJointPositions()) return false;
-      if (hasJointPositions()) {
-        if (!getJointPositions()
-            .equals(other.getJointPositions())) return false;
-      }
-      if (getIsMoving()
-          != other.getIsMoving()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasEndPosition()) {
-        hash = (37 * hash) + END_POSITION_FIELD_NUMBER;
-        hash = (53 * hash) + getEndPosition().hashCode();
-      }
-      if (hasJointPositions()) {
-        hash = (37 * hash) + JOINT_POSITIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getJointPositions().hashCode();
-      }
-      hash = (37 * hash) + IS_MOVING_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsMoving());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      isMoving_ = false;
     }
 
     public static com.viam.component.arm.v1.Arm.Status parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.Status parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.Status parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.Status parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.Status parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.Status parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.Status parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.Status parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.Status parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.Status parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.Status parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.Status parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.Status prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.arm.v1.Status}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.Status, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.Status)
         com.viam.component.arm.v1.Arm.StatusOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_Status_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_Status_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.Status.class, com.viam.component.arm.v1.Arm.Status.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.Status.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getEndPositionFieldBuilder();
-          getJointPositionsFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        endPosition_ = null;
-        if (endPositionBuilder_ != null) {
-          endPositionBuilder_.dispose();
-          endPositionBuilder_ = null;
-        }
-        jointPositions_ = null;
-        if (jointPositionsBuilder_ != null) {
-          jointPositionsBuilder_.dispose();
-          jointPositionsBuilder_ = null;
-        }
-        isMoving_ = false;
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_Status_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.Status getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.Status.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.Status build() {
-        com.viam.component.arm.v1.Arm.Status result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.Status buildPartial() {
-        com.viam.component.arm.v1.Arm.Status result = new com.viam.component.arm.v1.Arm.Status(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.arm.v1.Arm.Status result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.endPosition_ = endPositionBuilder_ == null
-              ? endPosition_
-              : endPositionBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.jointPositions_ = jointPositionsBuilder_ == null
-              ? jointPositions_
-              : jointPositionsBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.isMoving_ = isMoving_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.Status) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.Status)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.Status other) {
-        if (other == com.viam.component.arm.v1.Arm.Status.getDefaultInstance()) return this;
-        if (other.hasEndPosition()) {
-          mergeEndPosition(other.getEndPosition());
-        }
-        if (other.hasJointPositions()) {
-          mergeJointPositions(other.getJointPositions());
-        }
-        if (other.getIsMoving() != false) {
-          setIsMoving(other.getIsMoving());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getEndPositionFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                input.readMessage(
-                    getJointPositionsFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 24: {
-                isMoving_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.common.v1.Common.Pose endPosition_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder> endPositionBuilder_;
       /**
        * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
-       * @return Whether the endPosition field is set.
        */
+      @java.lang.Override
       public boolean hasEndPosition() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasEndPosition();
       }
       /**
        * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
-       * @return The endPosition.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.Pose getEndPosition() {
-        if (endPositionBuilder_ == null) {
-          return endPosition_ == null ? com.viam.common.v1.Common.Pose.getDefaultInstance() : endPosition_;
-        } else {
-          return endPositionBuilder_.getMessage();
-        }
+        return instance.getEndPosition();
       }
       /**
        * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
        */
       public Builder setEndPosition(com.viam.common.v1.Common.Pose value) {
-        if (endPositionBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          endPosition_ = value;
-        } else {
-          endPositionBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setEndPosition(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
        */
       public Builder setEndPosition(
           com.viam.common.v1.Common.Pose.Builder builderForValue) {
-        if (endPositionBuilder_ == null) {
-          endPosition_ = builderForValue.build();
-        } else {
-          endPositionBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setEndPosition(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
        */
       public Builder mergeEndPosition(com.viam.common.v1.Common.Pose value) {
-        if (endPositionBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            endPosition_ != null &&
-            endPosition_ != com.viam.common.v1.Common.Pose.getDefaultInstance()) {
-            getEndPositionBuilder().mergeFrom(value);
-          } else {
-            endPosition_ = value;
-          }
-        } else {
-          endPositionBuilder_.mergeFrom(value);
-        }
-        if (endPosition_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeEndPosition(value);
         return this;
       }
       /**
        * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
        */
-      public Builder clearEndPosition() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        endPosition_ = null;
-        if (endPositionBuilder_ != null) {
-          endPositionBuilder_.dispose();
-          endPositionBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearEndPosition() {  copyOnWrite();
+        instance.clearEndPosition();
         return this;
-      }
-      /**
-       * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
-       */
-      public com.viam.common.v1.Common.Pose.Builder getEndPositionBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getEndPositionFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
-       */
-      public com.viam.common.v1.Common.PoseOrBuilder getEndPositionOrBuilder() {
-        if (endPositionBuilder_ != null) {
-          return endPositionBuilder_.getMessageOrBuilder();
-        } else {
-          return endPosition_ == null ?
-              com.viam.common.v1.Common.Pose.getDefaultInstance() : endPosition_;
-        }
-      }
-      /**
-       * <code>.viam.common.v1.Pose end_position = 1 [json_name = "endPosition"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder> 
-          getEndPositionFieldBuilder() {
-        if (endPositionBuilder_ == null) {
-          endPositionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.Pose, com.viam.common.v1.Common.Pose.Builder, com.viam.common.v1.Common.PoseOrBuilder>(
-                  getEndPosition(),
-                  getParentForChildren(),
-                  isClean());
-          endPosition_ = null;
-        }
-        return endPositionBuilder_;
       }
 
-      private com.viam.component.arm.v1.Arm.JointPositions jointPositions_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.arm.v1.Arm.JointPositions, com.viam.component.arm.v1.Arm.JointPositions.Builder, com.viam.component.arm.v1.Arm.JointPositionsOrBuilder> jointPositionsBuilder_;
       /**
        * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
-       * @return Whether the jointPositions field is set.
        */
+      @java.lang.Override
       public boolean hasJointPositions() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasJointPositions();
       }
       /**
        * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
-       * @return The jointPositions.
        */
+      @java.lang.Override
       public com.viam.component.arm.v1.Arm.JointPositions getJointPositions() {
-        if (jointPositionsBuilder_ == null) {
-          return jointPositions_ == null ? com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance() : jointPositions_;
-        } else {
-          return jointPositionsBuilder_.getMessage();
-        }
+        return instance.getJointPositions();
       }
       /**
        * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
        */
       public Builder setJointPositions(com.viam.component.arm.v1.Arm.JointPositions value) {
-        if (jointPositionsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          jointPositions_ = value;
-        } else {
-          jointPositionsBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setJointPositions(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
        */
       public Builder setJointPositions(
           com.viam.component.arm.v1.Arm.JointPositions.Builder builderForValue) {
-        if (jointPositionsBuilder_ == null) {
-          jointPositions_ = builderForValue.build();
-        } else {
-          jointPositionsBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setJointPositions(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
        */
       public Builder mergeJointPositions(com.viam.component.arm.v1.Arm.JointPositions value) {
-        if (jointPositionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            jointPositions_ != null &&
-            jointPositions_ != com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance()) {
-            getJointPositionsBuilder().mergeFrom(value);
-          } else {
-            jointPositions_ = value;
-          }
-        } else {
-          jointPositionsBuilder_.mergeFrom(value);
-        }
-        if (jointPositions_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeJointPositions(value);
         return this;
       }
       /**
        * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
        */
-      public Builder clearJointPositions() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        jointPositions_ = null;
-        if (jointPositionsBuilder_ != null) {
-          jointPositionsBuilder_.dispose();
-          jointPositionsBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearJointPositions() {  copyOnWrite();
+        instance.clearJointPositions();
         return this;
-      }
-      /**
-       * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
-       */
-      public com.viam.component.arm.v1.Arm.JointPositions.Builder getJointPositionsBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getJointPositionsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
-       */
-      public com.viam.component.arm.v1.Arm.JointPositionsOrBuilder getJointPositionsOrBuilder() {
-        if (jointPositionsBuilder_ != null) {
-          return jointPositionsBuilder_.getMessageOrBuilder();
-        } else {
-          return jointPositions_ == null ?
-              com.viam.component.arm.v1.Arm.JointPositions.getDefaultInstance() : jointPositions_;
-        }
-      }
-      /**
-       * <code>.viam.component.arm.v1.JointPositions joint_positions = 2 [json_name = "jointPositions"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.arm.v1.Arm.JointPositions, com.viam.component.arm.v1.Arm.JointPositions.Builder, com.viam.component.arm.v1.Arm.JointPositionsOrBuilder> 
-          getJointPositionsFieldBuilder() {
-        if (jointPositionsBuilder_ == null) {
-          jointPositionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.component.arm.v1.Arm.JointPositions, com.viam.component.arm.v1.Arm.JointPositions.Builder, com.viam.component.arm.v1.Arm.JointPositionsOrBuilder>(
-                  getJointPositions(),
-                  getParentForChildren(),
-                  isClean());
-          jointPositions_ = null;
-        }
-        return jointPositionsBuilder_;
       }
 
-      private boolean isMoving_ ;
       /**
        * <code>bool is_moving = 3 [json_name = "isMoving"];</code>
        * @return The isMoving.
        */
       @java.lang.Override
       public boolean getIsMoving() {
-        return isMoving_;
+        return instance.getIsMoving();
       }
       /**
        * <code>bool is_moving = 3 [json_name = "isMoving"];</code>
@@ -8875,10 +4914,8 @@ public final class Arm {
        * @return This builder for chaining.
        */
       public Builder setIsMoving(boolean value) {
-
-        isMoving_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setIsMoving(value);
         return this;
       }
       /**
@@ -8886,78 +4923,92 @@ public final class Arm {
        * @return This builder for chaining.
        */
       public Builder clearIsMoving() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        isMoving_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearIsMoving();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.Status)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.Status();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "endPosition_",
+              "jointPositions_",
+              "isMoving_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u1009\u0000\u0002" +
+                "\u1009\u0001\u0003\u0007";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.Status> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.Status.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.Status>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.Status)
     private static final com.viam.component.arm.v1.Arm.Status DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.Status();
+      Status defaultInstance = new Status();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Status.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.Status getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Status>
-        PARSER = new com.google.protobuf.AbstractParser<Status>() {
-      @java.lang.Override
-      public Status parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Status> PARSER;
 
     public static com.google.protobuf.Parser<Status> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Status> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.Status getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface IsMovingRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.IsMovingRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -8974,58 +5025,23 @@ public final class Arm {
   /**
    * Protobuf type {@code viam.component.arm.v1.IsMovingRequest}
    */
-  public static final class IsMovingRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class IsMovingRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          IsMovingRequest, IsMovingRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.IsMovingRequest)
       IsMovingRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use IsMovingRequest.newBuilder() to construct.
-    private IsMovingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private IsMovingRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new IsMovingRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_IsMovingRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_IsMovingRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.IsMovingRequest.class, com.viam.component.arm.v1.Arm.IsMovingRequest.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -9034,377 +5050,149 @@ public final class Arm {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
     }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      getUnknownFields().writeTo(output);
+      name_ = getDefaultInstance().getName();
     }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.IsMovingRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.IsMovingRequest other = (com.viam.component.arm.v1.Arm.IsMovingRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static com.viam.component.arm.v1.Arm.IsMovingRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.IsMovingRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.IsMovingRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.IsMovingRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.arm.v1.IsMovingRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.IsMovingRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.IsMovingRequest)
         com.viam.component.arm.v1.Arm.IsMovingRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_IsMovingRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_IsMovingRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.IsMovingRequest.class, com.viam.component.arm.v1.Arm.IsMovingRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.IsMovingRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_IsMovingRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.IsMovingRequest getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.IsMovingRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.IsMovingRequest build() {
-        com.viam.component.arm.v1.Arm.IsMovingRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.IsMovingRequest buildPartial() {
-        com.viam.component.arm.v1.Arm.IsMovingRequest result = new com.viam.component.arm.v1.Arm.IsMovingRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.arm.v1.Arm.IsMovingRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.IsMovingRequest) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.IsMovingRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.IsMovingRequest other) {
-        if (other == com.viam.component.arm.v1.Arm.IsMovingRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -9413,10 +5201,8 @@ public final class Arm {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -9424,9 +5210,8 @@ public final class Arm {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -9436,80 +5221,88 @@ public final class Arm {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.IsMovingRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.IsMovingRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.IsMovingRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.IsMovingRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.IsMovingRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.IsMovingRequest)
     private static final com.viam.component.arm.v1.Arm.IsMovingRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.IsMovingRequest();
+      IsMovingRequest defaultInstance = new IsMovingRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        IsMovingRequest.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.IsMovingRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<IsMovingRequest>
-        PARSER = new com.google.protobuf.AbstractParser<IsMovingRequest>() {
-      @java.lang.Override
-      public IsMovingRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<IsMovingRequest> PARSER;
 
     public static com.google.protobuf.Parser<IsMovingRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<IsMovingRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.IsMovingRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface IsMovingResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.arm.v1.IsMovingResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>bool is_moving = 1 [json_name = "isMoving"];</code>
@@ -9520,40 +5313,15 @@ public final class Arm {
   /**
    * Protobuf type {@code viam.component.arm.v1.IsMovingResponse}
    */
-  public static final class IsMovingResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class IsMovingResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          IsMovingResponse, IsMovingResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.arm.v1.IsMovingResponse)
       IsMovingResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use IsMovingResponse.newBuilder() to construct.
-    private IsMovingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private IsMovingResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new IsMovingResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_IsMovingResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_IsMovingResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.arm.v1.Arm.IsMovingResponse.class, com.viam.component.arm.v1.Arm.IsMovingResponse.Builder.class);
-    }
-
     public static final int IS_MOVING_FIELD_NUMBER = 1;
-    private boolean isMoving_ = false;
+    private boolean isMoving_;
     /**
      * <code>bool is_moving = 1 [json_name = "isMoving"];</code>
      * @return The isMoving.
@@ -9562,341 +5330,126 @@ public final class Arm {
     public boolean getIsMoving() {
       return isMoving_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>bool is_moving = 1 [json_name = "isMoving"];</code>
+     * @param value The isMoving to set.
+     */
+    private void setIsMoving(boolean value) {
+      
+      isMoving_ = value;
     }
+    /**
+     * <code>bool is_moving = 1 [json_name = "isMoving"];</code>
+     */
+    private void clearIsMoving() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (isMoving_ != false) {
-        output.writeBool(1, isMoving_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (isMoving_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isMoving_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.arm.v1.Arm.IsMovingResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.arm.v1.Arm.IsMovingResponse other = (com.viam.component.arm.v1.Arm.IsMovingResponse) obj;
-
-      if (getIsMoving()
-          != other.getIsMoving()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + IS_MOVING_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsMoving());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      isMoving_ = false;
     }
 
     public static com.viam.component.arm.v1.Arm.IsMovingResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.arm.v1.Arm.IsMovingResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.arm.v1.Arm.IsMovingResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.arm.v1.Arm.IsMovingResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.arm.v1.Arm.IsMovingResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.arm.v1.IsMovingResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.arm.v1.Arm.IsMovingResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.arm.v1.IsMovingResponse)
         com.viam.component.arm.v1.Arm.IsMovingResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_IsMovingResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_IsMovingResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.arm.v1.Arm.IsMovingResponse.class, com.viam.component.arm.v1.Arm.IsMovingResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.arm.v1.Arm.IsMovingResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        isMoving_ = false;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.arm.v1.Arm.internal_static_viam_component_arm_v1_IsMovingResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.IsMovingResponse getDefaultInstanceForType() {
-        return com.viam.component.arm.v1.Arm.IsMovingResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.IsMovingResponse build() {
-        com.viam.component.arm.v1.Arm.IsMovingResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.arm.v1.Arm.IsMovingResponse buildPartial() {
-        com.viam.component.arm.v1.Arm.IsMovingResponse result = new com.viam.component.arm.v1.Arm.IsMovingResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.arm.v1.Arm.IsMovingResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isMoving_ = isMoving_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.arm.v1.Arm.IsMovingResponse) {
-          return mergeFrom((com.viam.component.arm.v1.Arm.IsMovingResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.arm.v1.Arm.IsMovingResponse other) {
-        if (other == com.viam.component.arm.v1.Arm.IsMovingResponse.getDefaultInstance()) return this;
-        if (other.getIsMoving() != false) {
-          setIsMoving(other.getIsMoving());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                isMoving_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean isMoving_ ;
       /**
        * <code>bool is_moving = 1 [json_name = "isMoving"];</code>
        * @return The isMoving.
        */
       @java.lang.Override
       public boolean getIsMoving() {
-        return isMoving_;
+        return instance.getIsMoving();
       }
       /**
        * <code>bool is_moving = 1 [json_name = "isMoving"];</code>
@@ -9904,10 +5457,8 @@ public final class Arm {
        * @return This builder for chaining.
        */
       public Builder setIsMoving(boolean value) {
-
-        isMoving_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setIsMoving(value);
         return this;
       }
       /**
@@ -9915,324 +5466,87 @@ public final class Arm {
        * @return This builder for chaining.
        */
       public Builder clearIsMoving() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        isMoving_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearIsMoving();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.arm.v1.IsMovingResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.arm.v1.Arm.IsMovingResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "isMoving_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0007";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.arm.v1.Arm.IsMovingResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.arm.v1.Arm.IsMovingResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.arm.v1.Arm.IsMovingResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.arm.v1.IsMovingResponse)
     private static final com.viam.component.arm.v1.Arm.IsMovingResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.arm.v1.Arm.IsMovingResponse();
+      IsMovingResponse defaultInstance = new IsMovingResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        IsMovingResponse.class, defaultInstance);
     }
 
     public static com.viam.component.arm.v1.Arm.IsMovingResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<IsMovingResponse>
-        PARSER = new com.google.protobuf.AbstractParser<IsMovingResponse>() {
-      @java.lang.Override
-      public IsMovingResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<IsMovingResponse> PARSER;
 
     public static com.google.protobuf.Parser<IsMovingResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<IsMovingResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.arm.v1.Arm.IsMovingResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_GetEndPositionRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_GetEndPositionRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_GetEndPositionResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_GetEndPositionResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_JointPositions_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_JointPositions_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_GetJointPositionsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_GetJointPositionsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_GetJointPositionsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_GetJointPositionsResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_MoveToPositionRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_MoveToPositionRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_MoveToPositionResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_MoveToPositionResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_MoveToJointPositionsRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_MoveToJointPositionsRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_MoveToJointPositionsResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_MoveToJointPositionsResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_StopRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_StopRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_StopResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_StopResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_Status_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_Status_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_IsMovingRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_IsMovingRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_arm_v1_IsMovingResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_arm_v1_IsMovingResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\032component/arm/v1/arm.proto\022\025viam.compo" +
-      "nent.arm.v1\032\026common/v1/common.proto\032\034goo" +
-      "gle/api/annotations.proto\032\034google/protob" +
-      "uf/struct.proto\"Z\n\025GetEndPositionRequest" +
-      "\022\022\n\004name\030\001 \001(\tR\004name\022-\n\005extra\030c \001(\0132\027.go" +
-      "ogle.protobuf.StructR\005extra\"B\n\026GetEndPos" +
-      "itionResponse\022(\n\004pose\030\001 \001(\0132\024.viam.commo" +
-      "n.v1.PoseR\004pose\"(\n\016JointPositions\022\026\n\006val" +
-      "ues\030\001 \003(\001R\006values\"]\n\030GetJointPositionsRe" +
-      "quest\022\022\n\004name\030\001 \001(\tR\004name\022-\n\005extra\030c \001(\013" +
-      "2\027.google.protobuf.StructR\005extra\"`\n\031GetJ" +
-      "ointPositionsResponse\022C\n\tpositions\030\001 \001(\013" +
-      "2%.viam.component.arm.v1.JointPositionsR" +
-      "\tpositions\"\200\001\n\025MoveToPositionRequest\022\022\n\004" +
-      "name\030\001 \001(\tR\004name\022$\n\002to\030\002 \001(\0132\024.viam.comm" +
-      "on.v1.PoseR\002to\022-\n\005extra\030c \001(\0132\027.google.p" +
-      "rotobuf.StructR\005extra\"\030\n\026MoveToPositionR" +
-      "esponse\"\245\001\n\033MoveToJointPositionsRequest\022" +
-      "\022\n\004name\030\001 \001(\tR\004name\022C\n\tpositions\030\002 \001(\0132%" +
-      ".viam.component.arm.v1.JointPositionsR\tp" +
-      "ositions\022-\n\005extra\030c \001(\0132\027.google.protobu" +
-      "f.StructR\005extra\"\036\n\034MoveToJointPositionsR" +
-      "esponse\"P\n\013StopRequest\022\022\n\004name\030\001 \001(\tR\004na" +
-      "me\022-\n\005extra\030c \001(\0132\027.google.protobuf.Stru" +
-      "ctR\005extra\"\016\n\014StopResponse\"\256\001\n\006Status\0227\n\014" +
-      "end_position\030\001 \001(\0132\024.viam.common.v1.Pose" +
-      "R\013endPosition\022N\n\017joint_positions\030\002 \001(\0132%" +
-      ".viam.component.arm.v1.JointPositionsR\016j" +
-      "ointPositions\022\033\n\tis_moving\030\003 \001(\010R\010isMovi" +
-      "ng\"%\n\017IsMovingRequest\022\022\n\004name\030\001 \001(\tR\004nam" +
-      "e\"/\n\020IsMovingResponse\022\033\n\tis_moving\030\001 \001(\010" +
-      "R\010isMoving2\224\013\n\nArmService\022\241\001\n\016GetEndPosi" +
-      "tion\022,.viam.component.arm.v1.GetEndPosit" +
-      "ionRequest\032-.viam.component.arm.v1.GetEn" +
-      "dPositionResponse\"2\202\323\344\223\002,\022*/viam/api/v1/" +
-      "component/arm/{name}/position\022\245\001\n\016MoveTo" +
-      "Position\022,.viam.component.arm.v1.MoveToP" +
-      "ositionRequest\032-.viam.component.arm.v1.M" +
-      "oveToPositionResponse\"6\240\222)\001\202\323\344\223\002,\032*/viam" +
-      "/api/v1/component/arm/{name}/position\022\261\001" +
-      "\n\021GetJointPositions\022/.viam.component.arm" +
-      ".v1.GetJointPositionsRequest\0320.viam.comp" +
-      "onent.arm.v1.GetJointPositionsResponse\"9" +
-      "\202\323\344\223\0023\0221/viam/api/v1/component/arm/{name" +
-      "}/joint_positions\022\276\001\n\024MoveToJointPositio" +
-      "ns\0222.viam.component.arm.v1.MoveToJointPo" +
-      "sitionsRequest\0323.viam.component.arm.v1.M" +
-      "oveToJointPositionsResponse\"=\240\222)\001\202\323\344\223\0023\032" +
-      "1/viam/api/v1/component/arm/{name}/joint" +
-      "_positions\022\177\n\004Stop\022\".viam.component.arm." +
-      "v1.StopRequest\032#.viam.component.arm.v1.S" +
-      "topResponse\".\202\323\344\223\002(\"&/viam/api/v1/compon" +
-      "ent/arm/{name}/stop\022\220\001\n\010IsMoving\022&.viam." +
-      "component.arm.v1.IsMovingRequest\032\'.viam." +
-      "component.arm.v1.IsMovingResponse\"3\202\323\344\223\002" +
-      "-\022+/viam/api/v1/component/arm/{name}/is_" +
-      "moving\022\206\001\n\tDoCommand\022 .viam.common.v1.Do" +
-      "CommandRequest\032!.viam.common.v1.DoComman" +
-      "dResponse\"4\202\323\344\223\002.\",/viam/api/v1/componen" +
-      "t/arm/{name}/do_command\022\222\001\n\rGetKinematic" +
-      "s\022$.viam.common.v1.GetKinematicsRequest\032" +
-      "%.viam.common.v1.GetKinematicsResponse\"4" +
-      "\202\323\344\223\002.\022,/viam/api/v1/component/arm/{name" +
-      "}/kinematics\022\222\001\n\rGetGeometries\022$.viam.co" +
-      "mmon.v1.GetGeometriesRequest\032%.viam.comm" +
-      "on.v1.GetGeometriesResponse\"4\202\323\344\223\002.\022,/vi" +
-      "am/api/v1/component/arm/{name}/geometrie" +
-      "sB=\n\031com.viam.component.arm.v1Z go.viam." +
-      "com/api/component/arm/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-        });
-    internal_static_viam_component_arm_v1_GetEndPositionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_component_arm_v1_GetEndPositionRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_GetEndPositionRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_component_arm_v1_GetEndPositionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_component_arm_v1_GetEndPositionResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_GetEndPositionResponse_descriptor,
-        new java.lang.String[] { "Pose", });
-    internal_static_viam_component_arm_v1_JointPositions_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_component_arm_v1_JointPositions_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_JointPositions_descriptor,
-        new java.lang.String[] { "Values", });
-    internal_static_viam_component_arm_v1_GetJointPositionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_component_arm_v1_GetJointPositionsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_GetJointPositionsRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_component_arm_v1_GetJointPositionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_component_arm_v1_GetJointPositionsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_GetJointPositionsResponse_descriptor,
-        new java.lang.String[] { "Positions", });
-    internal_static_viam_component_arm_v1_MoveToPositionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_component_arm_v1_MoveToPositionRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_MoveToPositionRequest_descriptor,
-        new java.lang.String[] { "Name", "To", "Extra", });
-    internal_static_viam_component_arm_v1_MoveToPositionResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_component_arm_v1_MoveToPositionResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_MoveToPositionResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_component_arm_v1_MoveToJointPositionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_component_arm_v1_MoveToJointPositionsRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_MoveToJointPositionsRequest_descriptor,
-        new java.lang.String[] { "Name", "Positions", "Extra", });
-    internal_static_viam_component_arm_v1_MoveToJointPositionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_component_arm_v1_MoveToJointPositionsResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_MoveToJointPositionsResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_component_arm_v1_StopRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_component_arm_v1_StopRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_StopRequest_descriptor,
-        new java.lang.String[] { "Name", "Extra", });
-    internal_static_viam_component_arm_v1_StopResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_viam_component_arm_v1_StopResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_StopResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_component_arm_v1_Status_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_viam_component_arm_v1_Status_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_Status_descriptor,
-        new java.lang.String[] { "EndPosition", "JointPositions", "IsMoving", });
-    internal_static_viam_component_arm_v1_IsMovingRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_viam_component_arm_v1_IsMovingRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_IsMovingRequest_descriptor,
-        new java.lang.String[] { "Name", });
-    internal_static_viam_component_arm_v1_IsMovingResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_viam_component_arm_v1_IsMovingResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_arm_v1_IsMovingResponse_descriptor,
-        new java.lang.String[] { "IsMoving", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(com.viam.common.v1.Common.safetyHeartbeatMonitored);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

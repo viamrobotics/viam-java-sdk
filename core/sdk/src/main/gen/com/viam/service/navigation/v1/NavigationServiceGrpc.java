@@ -37,11 +37,10 @@ public final class NavigationServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMode"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.GetModeRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.GetModeResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new NavigationServiceMethodDescriptorSupplier("GetMode"))
               .build();
         }
       }
@@ -68,11 +67,10 @@ public final class NavigationServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetMode"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.SetModeRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.SetModeResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new NavigationServiceMethodDescriptorSupplier("SetMode"))
               .build();
         }
       }
@@ -99,11 +97,10 @@ public final class NavigationServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetLocation"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.GetLocationRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.GetLocationResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new NavigationServiceMethodDescriptorSupplier("GetLocation"))
               .build();
         }
       }
@@ -130,11 +127,10 @@ public final class NavigationServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetWaypoints"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.GetWaypointsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.GetWaypointsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new NavigationServiceMethodDescriptorSupplier("GetWaypoints"))
               .build();
         }
       }
@@ -161,11 +157,10 @@ public final class NavigationServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddWaypoint"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.AddWaypointRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.AddWaypointResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new NavigationServiceMethodDescriptorSupplier("AddWaypoint"))
               .build();
         }
       }
@@ -192,11 +187,10 @@ public final class NavigationServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveWaypoint"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.RemoveWaypointRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.RemoveWaypointResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new NavigationServiceMethodDescriptorSupplier("RemoveWaypoint"))
               .build();
         }
       }
@@ -223,11 +217,10 @@ public final class NavigationServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetObstacles"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.GetObstaclesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.GetObstaclesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new NavigationServiceMethodDescriptorSupplier("GetObstacles"))
               .build();
         }
       }
@@ -254,11 +247,10 @@ public final class NavigationServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPaths"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.GetPathsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.GetPathsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new NavigationServiceMethodDescriptorSupplier("GetPaths"))
               .build();
         }
       }
@@ -285,11 +277,10 @@ public final class NavigationServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProperties"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.GetPropertiesRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.service.navigation.v1.Navigation.GetPropertiesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new NavigationServiceMethodDescriptorSupplier("GetProperties"))
               .build();
         }
       }
@@ -316,11 +307,10 @@ public final class NavigationServiceGrpc {
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DoCommand"))
               .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setRequestMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+              .setResponseMarshaller(io.grpc.protobuf.lite.ProtoLiteUtils.marshaller(
                   com.viam.common.v1.Common.DoCommandResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new NavigationServiceMethodDescriptorSupplier("DoCommand"))
               .build();
         }
       }
@@ -941,41 +931,6 @@ public final class NavigationServiceGrpc {
         .build();
   }
 
-  private static abstract class NavigationServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    NavigationServiceBaseDescriptorSupplier() {}
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.viam.service.navigation.v1.Navigation.getDescriptor();
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("NavigationService");
-    }
-  }
-
-  private static final class NavigationServiceFileDescriptorSupplier
-      extends NavigationServiceBaseDescriptorSupplier {
-    NavigationServiceFileDescriptorSupplier() {}
-  }
-
-  private static final class NavigationServiceMethodDescriptorSupplier
-      extends NavigationServiceBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
-
-    NavigationServiceMethodDescriptorSupplier(java.lang.String methodName) {
-      this.methodName = methodName;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
-      return getServiceDescriptor().findMethodByName(methodName);
-    }
-  }
-
   private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
@@ -985,7 +940,6 @@ public final class NavigationServiceGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new NavigationServiceFileDescriptorSupplier())
               .addMethod(getGetModeMethod())
               .addMethod(getSetModeMethod())
               .addMethod(getGetLocationMethod())

@@ -10,47 +10,7 @@ public final class Generic {
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
-
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\"component/generic/v1/generic.proto\022\031vi" +
-      "am.component.generic.v1\032\026common/v1/commo" +
-      "n.proto\032\034google/api/annotations.proto2\266\002" +
-      "\n\016GenericService\022\212\001\n\tDoCommand\022 .viam.co" +
-      "mmon.v1.DoCommandRequest\032!.viam.common.v" +
-      "1.DoCommandResponse\"8\202\323\344\223\0022\"0/viam/api/v" +
-      "1/component/generic/{name}/do_command\022\226\001" +
-      "\n\rGetGeometries\022$.viam.common.v1.GetGeom" +
-      "etriesRequest\032%.viam.common.v1.GetGeomet" +
-      "riesResponse\"8\202\323\344\223\0022\0220/viam/api/v1/compo" +
-      "nent/generic/{name}/geometriesBE\n\035com.vi" +
-      "am.component.generic.v1Z$go.viam.com/api" +
-      "/component/generic/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-        });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

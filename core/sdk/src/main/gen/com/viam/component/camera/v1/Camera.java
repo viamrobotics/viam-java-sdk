@@ -9,17 +9,11 @@ public final class Camera {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   /**
    * Protobuf enum {@code viam.component.camera.v1.Format}
    */
   public enum Format
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.Internal.EnumLite {
     /**
      * <code>FORMAT_UNSPECIFIED = 0;</code>
      */
@@ -65,6 +59,7 @@ public final class Camera {
     public static final int FORMAT_PNG_VALUE = 4;
 
 
+    @java.lang.Override
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
@@ -74,8 +69,8 @@ public final class Camera {
     }
 
     /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -83,10 +78,6 @@ public final class Camera {
       return forNumber(value);
     }
 
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
     public static Format forNumber(int value) {
       switch (value) {
         case 0: return FORMAT_UNSPECIFIED;
@@ -105,41 +96,25 @@ public final class Camera {
     private static final com.google.protobuf.Internal.EnumLiteMap<
         Format> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<Format>() {
+            @java.lang.Override
             public Format findValueByNumber(int number) {
               return Format.forNumber(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.getDescriptor().getEnumTypes().get(0);
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return FormatVerifier.INSTANCE;
     }
 
-    private static final Format[] VALUES = values();
-
-    public static Format valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
+    private static final class FormatVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new FormatVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return Format.forNumber(number) != null;
+            }
+          };
 
     private final int value;
 
@@ -152,7 +127,7 @@ public final class Camera {
 
   public interface GetImageRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.GetImageRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -212,56 +187,22 @@ public final class Camera {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.camera.v1.GetImageRequest}
    */
-  public static final class GetImageRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetImageRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetImageRequest, GetImageRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.GetImageRequest)
       GetImageRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetImageRequest.newBuilder() to construct.
-    private GetImageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetImageRequest() {
       name_ = "";
       mimeType_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetImageRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImageRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImageRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.GetImageRequest.class, com.viam.component.camera.v1.Camera.GetImageRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a camera
@@ -272,16 +213,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -294,21 +226,50 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int MIME_TYPE_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object mimeType_ = "";
+    private java.lang.String mimeType_;
     /**
      * <pre>
      * Requested MIME type of response
@@ -319,16 +280,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getMimeType() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mimeType_ = s;
-        return s;
-      }
+      return mimeType_;
     }
     /**
      * <pre>
@@ -341,16 +293,46 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMimeTypeBytes() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mimeType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
+    }
+    /**
+     * <pre>
+     * Requested MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    private void setMimeType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mimeType_ = value;
+    }
+    /**
+     * <pre>
+     * Requested MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = getDefaultInstance().getMimeType();
+    }
+    /**
+     * <pre>
+     * Requested MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
+     * @param value The bytes for mimeType to set.
+     */
+    private void setMimeTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mimeType_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -361,7 +343,6 @@ public final class Camera {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -373,7 +354,6 @@ public final class Camera {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -386,407 +366,138 @@ public final class Camera {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mimeType_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mimeType_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.GetImageRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.GetImageRequest other = (com.viam.component.camera.v1.Camera.GetImageRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getMimeType()
-          .equals(other.getMimeType())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + MIME_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getMimeType().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImageRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImageRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetImageRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.GetImageRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.GetImageRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.GetImageRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.GetImageRequest)
         com.viam.component.camera.v1.Camera.GetImageRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImageRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImageRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.GetImageRequest.class, com.viam.component.camera.v1.Camera.GetImageRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.GetImageRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        mimeType_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImageRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetImageRequest getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.GetImageRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetImageRequest build() {
-        com.viam.component.camera.v1.Camera.GetImageRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetImageRequest buildPartial() {
-        com.viam.component.camera.v1.Camera.GetImageRequest result = new com.viam.component.camera.v1.Camera.GetImageRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.GetImageRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.mimeType_ = mimeType_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.GetImageRequest) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.GetImageRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.GetImageRequest other) {
-        if (other == com.viam.component.camera.v1.Camera.GetImageRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getMimeType().isEmpty()) {
-          mimeType_ = other.mimeType_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                mimeType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a camera
@@ -795,17 +506,9 @@ public final class Camera {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -815,18 +518,10 @@ public final class Camera {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -839,10 +534,8 @@ public final class Camera {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -854,9 +547,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -870,15 +562,11 @@ public final class Camera {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object mimeType_ = "";
       /**
        * <pre>
        * Requested MIME type of response
@@ -887,17 +575,9 @@ public final class Camera {
        * <code>string mime_type = 2 [json_name = "mimeType"];</code>
        * @return The mimeType.
        */
+      @java.lang.Override
       public java.lang.String getMimeType() {
-        java.lang.Object ref = mimeType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mimeType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMimeType();
       }
       /**
        * <pre>
@@ -907,18 +587,10 @@ public final class Camera {
        * <code>string mime_type = 2 [json_name = "mimeType"];</code>
        * @return The bytes for mimeType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMimeTypeBytes() {
-        java.lang.Object ref = mimeType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mimeType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMimeTypeBytes();
       }
       /**
        * <pre>
@@ -931,10 +603,8 @@ public final class Camera {
        */
       public Builder setMimeType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        mimeType_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeType(value);
         return this;
       }
       /**
@@ -946,9 +616,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearMimeType() {
-        mimeType_ = getDefaultInstance().getMimeType();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearMimeType();
         return this;
       }
       /**
@@ -962,27 +631,21 @@ public final class Camera {
        */
       public Builder setMimeTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        mimeType_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeTypeBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -990,14 +653,10 @@ public final class Camera {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -1007,18 +666,10 @@ public final class Camera {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -1028,13 +679,8 @@ public final class Camera {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -1045,21 +691,8 @@ public final class Camera {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -1069,130 +702,92 @@ public final class Camera {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetImageRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.GetImageRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "mimeType_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208c" +
+                "\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.GetImageRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.GetImageRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.GetImageRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.GetImageRequest)
     private static final com.viam.component.camera.v1.Camera.GetImageRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.GetImageRequest();
+      GetImageRequest defaultInstance = new GetImageRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetImageRequest.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImageRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetImageRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetImageRequest>() {
-      @java.lang.Override
-      public GetImageRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetImageRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetImageRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetImageRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.GetImageRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetImageResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.GetImageResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -1227,43 +822,17 @@ public final class Camera {
   /**
    * Protobuf type {@code viam.component.camera.v1.GetImageResponse}
    */
-  public static final class GetImageResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetImageResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetImageResponse, GetImageResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.GetImageResponse)
       GetImageResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetImageResponse.newBuilder() to construct.
-    private GetImageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetImageResponse() {
       mimeType_ = "";
       image_ = com.google.protobuf.ByteString.EMPTY;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetImageResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImageResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImageResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.GetImageResponse.class, com.viam.component.camera.v1.Camera.GetImageResponse.Builder.class);
-    }
-
     public static final int MIME_TYPE_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object mimeType_ = "";
+    private java.lang.String mimeType_;
     /**
      * <pre>
      * Actual MIME type of response
@@ -1274,16 +843,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getMimeType() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mimeType_ = s;
-        return s;
-      }
+      return mimeType_;
     }
     /**
      * <pre>
@@ -1296,20 +856,50 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMimeTypeBytes() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mimeType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
+    }
+    /**
+     * <pre>
+     * Actual MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    private void setMimeType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mimeType_ = value;
+    }
+    /**
+     * <pre>
+     * Actual MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = getDefaultInstance().getMimeType();
+    }
+    /**
+     * <pre>
+     * Actual MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
+     * @param value The bytes for mimeType to set.
+     */
+    private void setMimeTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mimeType_ = value.toStringUtf8();
+
     }
 
     public static final int IMAGE_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
+    private com.google.protobuf.ByteString image_;
     /**
      * <pre>
      * Frame in bytes
@@ -1322,357 +912,128 @@ public final class Camera {
     public com.google.protobuf.ByteString getImage() {
       return image_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Frame in bytes
+     * </pre>
+     *
+     * <code>bytes image = 2 [json_name = "image"];</code>
+     * @param value The image to set.
+     */
+    private void setImage(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      image_ = value;
     }
+    /**
+     * <pre>
+     * Frame in bytes
+     * </pre>
+     *
+     * <code>bytes image = 2 [json_name = "image"];</code>
+     */
+    private void clearImage() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mimeType_);
-      }
-      if (!image_.isEmpty()) {
-        output.writeBytes(2, image_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mimeType_);
-      }
-      if (!image_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, image_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.GetImageResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.GetImageResponse other = (com.viam.component.camera.v1.Camera.GetImageResponse) obj;
-
-      if (!getMimeType()
-          .equals(other.getMimeType())) return false;
-      if (!getImage()
-          .equals(other.getImage())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MIME_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getMimeType().hashCode();
-      hash = (37 * hash) + IMAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getImage().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      image_ = getDefaultInstance().getImage();
     }
 
     public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImageResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImageResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetImageResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.GetImageResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.GetImageResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.GetImageResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.GetImageResponse)
         com.viam.component.camera.v1.Camera.GetImageResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImageResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImageResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.GetImageResponse.class, com.viam.component.camera.v1.Camera.GetImageResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.GetImageResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        mimeType_ = "";
-        image_ = com.google.protobuf.ByteString.EMPTY;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImageResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetImageResponse getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.GetImageResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetImageResponse build() {
-        com.viam.component.camera.v1.Camera.GetImageResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetImageResponse buildPartial() {
-        com.viam.component.camera.v1.Camera.GetImageResponse result = new com.viam.component.camera.v1.Camera.GetImageResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.GetImageResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.mimeType_ = mimeType_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.image_ = image_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.GetImageResponse) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.GetImageResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.GetImageResponse other) {
-        if (other == com.viam.component.camera.v1.Camera.GetImageResponse.getDefaultInstance()) return this;
-        if (!other.getMimeType().isEmpty()) {
-          mimeType_ = other.mimeType_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.getImage() != com.google.protobuf.ByteString.EMPTY) {
-          setImage(other.getImage());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                mimeType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                image_ = input.readBytes();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object mimeType_ = "";
       /**
        * <pre>
        * Actual MIME type of response
@@ -1681,17 +1042,9 @@ public final class Camera {
        * <code>string mime_type = 1 [json_name = "mimeType"];</code>
        * @return The mimeType.
        */
+      @java.lang.Override
       public java.lang.String getMimeType() {
-        java.lang.Object ref = mimeType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mimeType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMimeType();
       }
       /**
        * <pre>
@@ -1701,18 +1054,10 @@ public final class Camera {
        * <code>string mime_type = 1 [json_name = "mimeType"];</code>
        * @return The bytes for mimeType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMimeTypeBytes() {
-        java.lang.Object ref = mimeType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mimeType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMimeTypeBytes();
       }
       /**
        * <pre>
@@ -1725,10 +1070,8 @@ public final class Camera {
        */
       public Builder setMimeType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        mimeType_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeType(value);
         return this;
       }
       /**
@@ -1740,9 +1083,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearMimeType() {
-        mimeType_ = getDefaultInstance().getMimeType();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearMimeType();
         return this;
       }
       /**
@@ -1756,15 +1098,11 @@ public final class Camera {
        */
       public Builder setMimeTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        mimeType_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeTypeBytes(value);
         return this;
       }
 
-      private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
        * Frame in bytes
@@ -1775,7 +1113,7 @@ public final class Camera {
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getImage() {
-        return image_;
+        return instance.getImage();
       }
       /**
        * <pre>
@@ -1787,10 +1125,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder setImage(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        image_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setImage(value);
         return this;
       }
       /**
@@ -1802,78 +1138,90 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearImage() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        image_ = getDefaultInstance().getImage();
-        onChanged();
+        copyOnWrite();
+        instance.clearImage();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetImageResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.GetImageResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "mimeType_",
+              "image_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\n" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.GetImageResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.GetImageResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.GetImageResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.GetImageResponse)
     private static final com.viam.component.camera.v1.Camera.GetImageResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.GetImageResponse();
+      GetImageResponse defaultInstance = new GetImageResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetImageResponse.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImageResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetImageResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetImageResponse>() {
-      @java.lang.Override
-      public GetImageResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetImageResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetImageResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetImageResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.GetImageResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetImagesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.GetImagesRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -1898,42 +1246,16 @@ public final class Camera {
   /**
    * Protobuf type {@code viam.component.camera.v1.GetImagesRequest}
    */
-  public static final class GetImagesRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetImagesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetImagesRequest, GetImagesRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.GetImagesRequest)
       GetImagesRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetImagesRequest.newBuilder() to construct.
-    private GetImagesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetImagesRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetImagesRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImagesRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImagesRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.GetImagesRequest.class, com.viam.component.camera.v1.Camera.GetImagesRequest.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a camera
@@ -1944,16 +1266,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -1966,345 +1279,145 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
     }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      getUnknownFields().writeTo(output);
+      name_ = getDefaultInstance().getName();
     }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.GetImagesRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.GetImagesRequest other = (com.viam.component.camera.v1.Camera.GetImagesRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.GetImagesRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.GetImagesRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.GetImagesRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.GetImagesRequest)
         com.viam.component.camera.v1.Camera.GetImagesRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImagesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImagesRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.GetImagesRequest.class, com.viam.component.camera.v1.Camera.GetImagesRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.GetImagesRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImagesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetImagesRequest getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.GetImagesRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetImagesRequest build() {
-        com.viam.component.camera.v1.Camera.GetImagesRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetImagesRequest buildPartial() {
-        com.viam.component.camera.v1.Camera.GetImagesRequest result = new com.viam.component.camera.v1.Camera.GetImagesRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.GetImagesRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.GetImagesRequest) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.GetImagesRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.GetImagesRequest other) {
-        if (other == com.viam.component.camera.v1.Camera.GetImagesRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a camera
@@ -2313,17 +1426,9 @@ public final class Camera {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -2333,18 +1438,10 @@ public final class Camera {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -2357,10 +1454,8 @@ public final class Camera {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -2372,9 +1467,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -2388,80 +1482,88 @@ public final class Camera {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetImagesRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.GetImagesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.GetImagesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.GetImagesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.GetImagesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.GetImagesRequest)
     private static final com.viam.component.camera.v1.Camera.GetImagesRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.GetImagesRequest();
+      GetImagesRequest defaultInstance = new GetImagesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetImagesRequest.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImagesRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetImagesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetImagesRequest>() {
-      @java.lang.Override
-      public GetImagesRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetImagesRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetImagesRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetImagesRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.GetImagesRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetImagesResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.GetImagesResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -2488,24 +1590,6 @@ public final class Camera {
      * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
      */
     int getImagesCount();
-    /**
-     * <pre>
-     * list of images returned from the camera system
-     * </pre>
-     *
-     * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
-     */
-    java.util.List<? extends com.viam.component.camera.v1.Camera.ImageOrBuilder> 
-        getImagesOrBuilderList();
-    /**
-     * <pre>
-     * list of images returned from the camera system
-     * </pre>
-     *
-     * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
-     */
-    com.viam.component.camera.v1.Camera.ImageOrBuilder getImagesOrBuilder(
-        int index);
 
     /**
      * <pre>
@@ -2525,55 +1609,21 @@ public final class Camera {
      * @return The responseMetadata.
      */
     com.viam.common.v1.Common.ResponseMetadata getResponseMetadata();
-    /**
-     * <pre>
-     * contains timestamp data
-     * </pre>
-     *
-     * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
-     */
-    com.viam.common.v1.Common.ResponseMetadataOrBuilder getResponseMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.camera.v1.GetImagesResponse}
    */
-  public static final class GetImagesResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetImagesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetImagesResponse, GetImagesResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.GetImagesResponse)
       GetImagesResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetImagesResponse.newBuilder() to construct.
-    private GetImagesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetImagesResponse() {
-      images_ = java.util.Collections.emptyList();
+      images_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetImagesResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImagesResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImagesResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.GetImagesResponse.class, com.viam.component.camera.v1.Camera.GetImagesResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int IMAGES_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.component.camera.v1.Camera.Image> images_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.component.camera.v1.Camera.Image> images_;
     /**
      * <pre>
      * list of images returned from the camera system
@@ -2592,7 +1642,6 @@ public final class Camera {
      *
      * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.component.camera.v1.Camera.ImageOrBuilder> 
         getImagesOrBuilderList() {
       return images_;
@@ -2626,10 +1675,89 @@ public final class Camera {
      *
      * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
      */
-    @java.lang.Override
     public com.viam.component.camera.v1.Camera.ImageOrBuilder getImagesOrBuilder(
         int index) {
       return images_.get(index);
+    }
+    private void ensureImagesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.component.camera.v1.Camera.Image> tmp = images_;
+      if (!tmp.isModifiable()) {
+        images_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * list of images returned from the camera system
+     * </pre>
+     *
+     * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
+     */
+    private void setImages(
+        int index, com.viam.component.camera.v1.Camera.Image value) {
+      value.getClass();
+  ensureImagesIsMutable();
+      images_.set(index, value);
+    }
+    /**
+     * <pre>
+     * list of images returned from the camera system
+     * </pre>
+     *
+     * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
+     */
+    private void addImages(com.viam.component.camera.v1.Camera.Image value) {
+      value.getClass();
+  ensureImagesIsMutable();
+      images_.add(value);
+    }
+    /**
+     * <pre>
+     * list of images returned from the camera system
+     * </pre>
+     *
+     * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
+     */
+    private void addImages(
+        int index, com.viam.component.camera.v1.Camera.Image value) {
+      value.getClass();
+  ensureImagesIsMutable();
+      images_.add(index, value);
+    }
+    /**
+     * <pre>
+     * list of images returned from the camera system
+     * </pre>
+     *
+     * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
+     */
+    private void addAllImages(
+        java.lang.Iterable<? extends com.viam.component.camera.v1.Camera.Image> values) {
+      ensureImagesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, images_);
+    }
+    /**
+     * <pre>
+     * list of images returned from the camera system
+     * </pre>
+     *
+     * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
+     */
+    private void clearImages() {
+      images_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * list of images returned from the camera system
+     * </pre>
+     *
+     * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
+     */
+    private void removeImages(int index) {
+      ensureImagesIsMutable();
+      images_.remove(index);
     }
 
     public static final int RESPONSE_METADATA_FIELD_NUMBER = 84260;
@@ -2640,7 +1768,6 @@ public final class Camera {
      * </pre>
      *
      * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
-     * @return Whether the responseMetadata field is set.
      */
     @java.lang.Override
     public boolean hasResponseMetadata() {
@@ -2652,7 +1779,6 @@ public final class Camera {
      * </pre>
      *
      * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
-     * @return The responseMetadata.
      */
     @java.lang.Override
     public com.viam.common.v1.Common.ResponseMetadata getResponseMetadata() {
@@ -2665,442 +1791,137 @@ public final class Camera {
      *
      * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
      */
-    @java.lang.Override
-    public com.viam.common.v1.Common.ResponseMetadataOrBuilder getResponseMetadataOrBuilder() {
-      return responseMetadata_ == null ? com.viam.common.v1.Common.ResponseMetadata.getDefaultInstance() : responseMetadata_;
+    private void setResponseMetadata(com.viam.common.v1.Common.ResponseMetadata value) {
+      value.getClass();
+  responseMetadata_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * contains timestamp data
+     * </pre>
+     *
+     * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeResponseMetadata(com.viam.common.v1.Common.ResponseMetadata value) {
+      value.getClass();
+  if (responseMetadata_ != null &&
+          responseMetadata_ != com.viam.common.v1.Common.ResponseMetadata.getDefaultInstance()) {
+        responseMetadata_ =
+          com.viam.common.v1.Common.ResponseMetadata.newBuilder(responseMetadata_).mergeFrom(value).buildPartial();
+      } else {
+        responseMetadata_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < images_.size(); i++) {
-        output.writeMessage(1, images_.get(i));
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(84260, getResponseMetadata());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < images_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, images_.get(i));
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(84260, getResponseMetadata());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.GetImagesResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.GetImagesResponse other = (com.viam.component.camera.v1.Camera.GetImagesResponse) obj;
-
-      if (!getImagesList()
-          .equals(other.getImagesList())) return false;
-      if (hasResponseMetadata() != other.hasResponseMetadata()) return false;
-      if (hasResponseMetadata()) {
-        if (!getResponseMetadata()
-            .equals(other.getResponseMetadata())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getImagesCount() > 0) {
-        hash = (37 * hash) + IMAGES_FIELD_NUMBER;
-        hash = (53 * hash) + getImagesList().hashCode();
-      }
-      if (hasResponseMetadata()) {
-        hash = (37 * hash) + RESPONSE_METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getResponseMetadata().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * contains timestamp data
+     * </pre>
+     *
+     * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
+     */
+    private void clearResponseMetadata() {  responseMetadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImagesResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImagesResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImagesResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetImagesResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.GetImagesResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.GetImagesResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.GetImagesResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.GetImagesResponse)
         com.viam.component.camera.v1.Camera.GetImagesResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImagesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImagesResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.GetImagesResponse.class, com.viam.component.camera.v1.Camera.GetImagesResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.GetImagesResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getImagesFieldBuilder();
-          getResponseMetadataFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (imagesBuilder_ == null) {
-          images_ = java.util.Collections.emptyList();
-        } else {
-          images_ = null;
-          imagesBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        responseMetadata_ = null;
-        if (responseMetadataBuilder_ != null) {
-          responseMetadataBuilder_.dispose();
-          responseMetadataBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetImagesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetImagesResponse getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.GetImagesResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetImagesResponse build() {
-        com.viam.component.camera.v1.Camera.GetImagesResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetImagesResponse buildPartial() {
-        com.viam.component.camera.v1.Camera.GetImagesResponse result = new com.viam.component.camera.v1.Camera.GetImagesResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.component.camera.v1.Camera.GetImagesResponse result) {
-        if (imagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            images_ = java.util.Collections.unmodifiableList(images_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.images_ = images_;
-        } else {
-          result.images_ = imagesBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.GetImagesResponse result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.responseMetadata_ = responseMetadataBuilder_ == null
-              ? responseMetadata_
-              : responseMetadataBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.GetImagesResponse) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.GetImagesResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.GetImagesResponse other) {
-        if (other == com.viam.component.camera.v1.Camera.GetImagesResponse.getDefaultInstance()) return this;
-        if (imagesBuilder_ == null) {
-          if (!other.images_.isEmpty()) {
-            if (images_.isEmpty()) {
-              images_ = other.images_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureImagesIsMutable();
-              images_.addAll(other.images_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.images_.isEmpty()) {
-            if (imagesBuilder_.isEmpty()) {
-              imagesBuilder_.dispose();
-              imagesBuilder_ = null;
-              images_ = other.images_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              imagesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getImagesFieldBuilder() : null;
-            } else {
-              imagesBuilder_.addAllMessages(other.images_);
-            }
-          }
-        }
-        if (other.hasResponseMetadata()) {
-          mergeResponseMetadata(other.getResponseMetadata());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.viam.component.camera.v1.Camera.Image m =
-                    input.readMessage(
-                        com.viam.component.camera.v1.Camera.Image.parser(),
-                        extensionRegistry);
-                if (imagesBuilder_ == null) {
-                  ensureImagesIsMutable();
-                  images_.add(m);
-                } else {
-                  imagesBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              case 674082: {
-                input.readMessage(
-                    getResponseMetadataFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 674082
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.viam.component.camera.v1.Camera.Image> images_ =
-        java.util.Collections.emptyList();
-      private void ensureImagesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          images_ = new java.util.ArrayList<com.viam.component.camera.v1.Camera.Image>(images_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.component.camera.v1.Camera.Image, com.viam.component.camera.v1.Camera.Image.Builder, com.viam.component.camera.v1.Camera.ImageOrBuilder> imagesBuilder_;
 
       /**
        * <pre>
@@ -3109,12 +1930,10 @@ public final class Camera {
        *
        * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.component.camera.v1.Camera.Image> getImagesList() {
-        if (imagesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(images_);
-        } else {
-          return imagesBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getImagesList());
       }
       /**
        * <pre>
@@ -3123,26 +1942,19 @@ public final class Camera {
        *
        * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
        */
+      @java.lang.Override
       public int getImagesCount() {
-        if (imagesBuilder_ == null) {
-          return images_.size();
-        } else {
-          return imagesBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getImagesCount();
+      }/**
        * <pre>
        * list of images returned from the camera system
        * </pre>
        *
        * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
        */
+      @java.lang.Override
       public com.viam.component.camera.v1.Camera.Image getImages(int index) {
-        if (imagesBuilder_ == null) {
-          return images_.get(index);
-        } else {
-          return imagesBuilder_.getMessage(index);
-        }
+        return instance.getImages(index);
       }
       /**
        * <pre>
@@ -3153,16 +1965,8 @@ public final class Camera {
        */
       public Builder setImages(
           int index, com.viam.component.camera.v1.Camera.Image value) {
-        if (imagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureImagesIsMutable();
-          images_.set(index, value);
-          onChanged();
-        } else {
-          imagesBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setImages(index, value);
         return this;
       }
       /**
@@ -3174,13 +1978,9 @@ public final class Camera {
        */
       public Builder setImages(
           int index, com.viam.component.camera.v1.Camera.Image.Builder builderForValue) {
-        if (imagesBuilder_ == null) {
-          ensureImagesIsMutable();
-          images_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          imagesBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setImages(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -3191,16 +1991,8 @@ public final class Camera {
        * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
        */
       public Builder addImages(com.viam.component.camera.v1.Camera.Image value) {
-        if (imagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureImagesIsMutable();
-          images_.add(value);
-          onChanged();
-        } else {
-          imagesBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addImages(value);
         return this;
       }
       /**
@@ -3212,16 +2004,8 @@ public final class Camera {
        */
       public Builder addImages(
           int index, com.viam.component.camera.v1.Camera.Image value) {
-        if (imagesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureImagesIsMutable();
-          images_.add(index, value);
-          onChanged();
-        } else {
-          imagesBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addImages(index, value);
         return this;
       }
       /**
@@ -3233,13 +2017,8 @@ public final class Camera {
        */
       public Builder addImages(
           com.viam.component.camera.v1.Camera.Image.Builder builderForValue) {
-        if (imagesBuilder_ == null) {
-          ensureImagesIsMutable();
-          images_.add(builderForValue.build());
-          onChanged();
-        } else {
-          imagesBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addImages(builderForValue.build());
         return this;
       }
       /**
@@ -3251,13 +2030,9 @@ public final class Camera {
        */
       public Builder addImages(
           int index, com.viam.component.camera.v1.Camera.Image.Builder builderForValue) {
-        if (imagesBuilder_ == null) {
-          ensureImagesIsMutable();
-          images_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          imagesBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addImages(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -3269,14 +2044,8 @@ public final class Camera {
        */
       public Builder addAllImages(
           java.lang.Iterable<? extends com.viam.component.camera.v1.Camera.Image> values) {
-        if (imagesBuilder_ == null) {
-          ensureImagesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, images_);
-          onChanged();
-        } else {
-          imagesBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllImages(values);
         return this;
       }
       /**
@@ -3287,13 +2056,8 @@ public final class Camera {
        * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
        */
       public Builder clearImages() {
-        if (imagesBuilder_ == null) {
-          images_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          imagesBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearImages();
         return this;
       }
       /**
@@ -3304,117 +2068,21 @@ public final class Camera {
        * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
        */
       public Builder removeImages(int index) {
-        if (imagesBuilder_ == null) {
-          ensureImagesIsMutable();
-          images_.remove(index);
-          onChanged();
-        } else {
-          imagesBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeImages(index);
         return this;
       }
-      /**
-       * <pre>
-       * list of images returned from the camera system
-       * </pre>
-       *
-       * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.Image.Builder getImagesBuilder(
-          int index) {
-        return getImagesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * list of images returned from the camera system
-       * </pre>
-       *
-       * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.ImageOrBuilder getImagesOrBuilder(
-          int index) {
-        if (imagesBuilder_ == null) {
-          return images_.get(index);  } else {
-          return imagesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * list of images returned from the camera system
-       * </pre>
-       *
-       * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
-       */
-      public java.util.List<? extends com.viam.component.camera.v1.Camera.ImageOrBuilder> 
-           getImagesOrBuilderList() {
-        if (imagesBuilder_ != null) {
-          return imagesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(images_);
-        }
-      }
-      /**
-       * <pre>
-       * list of images returned from the camera system
-       * </pre>
-       *
-       * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.Image.Builder addImagesBuilder() {
-        return getImagesFieldBuilder().addBuilder(
-            com.viam.component.camera.v1.Camera.Image.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * list of images returned from the camera system
-       * </pre>
-       *
-       * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.Image.Builder addImagesBuilder(
-          int index) {
-        return getImagesFieldBuilder().addBuilder(
-            index, com.viam.component.camera.v1.Camera.Image.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * list of images returned from the camera system
-       * </pre>
-       *
-       * <code>repeated .viam.component.camera.v1.Image images = 1 [json_name = "images"];</code>
-       */
-      public java.util.List<com.viam.component.camera.v1.Camera.Image.Builder> 
-           getImagesBuilderList() {
-        return getImagesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.component.camera.v1.Camera.Image, com.viam.component.camera.v1.Camera.Image.Builder, com.viam.component.camera.v1.Camera.ImageOrBuilder> 
-          getImagesFieldBuilder() {
-        if (imagesBuilder_ == null) {
-          imagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.component.camera.v1.Camera.Image, com.viam.component.camera.v1.Camera.Image.Builder, com.viam.component.camera.v1.Camera.ImageOrBuilder>(
-                  images_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          images_ = null;
-        }
-        return imagesBuilder_;
-      }
 
-      private com.viam.common.v1.Common.ResponseMetadata responseMetadata_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.ResponseMetadata, com.viam.common.v1.Common.ResponseMetadata.Builder, com.viam.common.v1.Common.ResponseMetadataOrBuilder> responseMetadataBuilder_;
       /**
        * <pre>
        * contains timestamp data
        * </pre>
        *
        * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
-       * @return Whether the responseMetadata field is set.
        */
+      @java.lang.Override
       public boolean hasResponseMetadata() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasResponseMetadata();
       }
       /**
        * <pre>
@@ -3422,14 +2090,10 @@ public final class Camera {
        * </pre>
        *
        * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
-       * @return The responseMetadata.
        */
+      @java.lang.Override
       public com.viam.common.v1.Common.ResponseMetadata getResponseMetadata() {
-        if (responseMetadataBuilder_ == null) {
-          return responseMetadata_ == null ? com.viam.common.v1.Common.ResponseMetadata.getDefaultInstance() : responseMetadata_;
-        } else {
-          return responseMetadataBuilder_.getMessage();
-        }
+        return instance.getResponseMetadata();
       }
       /**
        * <pre>
@@ -3439,18 +2103,10 @@ public final class Camera {
        * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
        */
       public Builder setResponseMetadata(com.viam.common.v1.Common.ResponseMetadata value) {
-        if (responseMetadataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          responseMetadata_ = value;
-        } else {
-          responseMetadataBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setResponseMetadata(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * contains timestamp data
@@ -3460,13 +2116,8 @@ public final class Camera {
        */
       public Builder setResponseMetadata(
           com.viam.common.v1.Common.ResponseMetadata.Builder builderForValue) {
-        if (responseMetadataBuilder_ == null) {
-          responseMetadata_ = builderForValue.build();
-        } else {
-          responseMetadataBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setResponseMetadata(builderForValue.build());
         return this;
       }
       /**
@@ -3477,21 +2128,8 @@ public final class Camera {
        * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
        */
       public Builder mergeResponseMetadata(com.viam.common.v1.Common.ResponseMetadata value) {
-        if (responseMetadataBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            responseMetadata_ != null &&
-            responseMetadata_ != com.viam.common.v1.Common.ResponseMetadata.getDefaultInstance()) {
-            getResponseMetadataBuilder().mergeFrom(value);
-          } else {
-            responseMetadata_ = value;
-          }
-        } else {
-          responseMetadataBuilder_.mergeFrom(value);
-        }
-        if (responseMetadata_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeResponseMetadata(value);
         return this;
       }
       /**
@@ -3501,130 +2139,92 @@ public final class Camera {
        *
        * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
        */
-      public Builder clearResponseMetadata() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        responseMetadata_ = null;
-        if (responseMetadataBuilder_ != null) {
-          responseMetadataBuilder_.dispose();
-          responseMetadataBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearResponseMetadata() {  copyOnWrite();
+        instance.clearResponseMetadata();
         return this;
       }
-      /**
-       * <pre>
-       * contains timestamp data
-       * </pre>
-       *
-       * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
-       */
-      public com.viam.common.v1.Common.ResponseMetadata.Builder getResponseMetadataBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getResponseMetadataFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * contains timestamp data
-       * </pre>
-       *
-       * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
-       */
-      public com.viam.common.v1.Common.ResponseMetadataOrBuilder getResponseMetadataOrBuilder() {
-        if (responseMetadataBuilder_ != null) {
-          return responseMetadataBuilder_.getMessageOrBuilder();
-        } else {
-          return responseMetadata_ == null ?
-              com.viam.common.v1.Common.ResponseMetadata.getDefaultInstance() : responseMetadata_;
-        }
-      }
-      /**
-       * <pre>
-       * contains timestamp data
-       * </pre>
-       *
-       * <code>.viam.common.v1.ResponseMetadata response_metadata = 84260 [json_name = "responseMetadata"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.common.v1.Common.ResponseMetadata, com.viam.common.v1.Common.ResponseMetadata.Builder, com.viam.common.v1.Common.ResponseMetadataOrBuilder> 
-          getResponseMetadataFieldBuilder() {
-        if (responseMetadataBuilder_ == null) {
-          responseMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.common.v1.Common.ResponseMetadata, com.viam.common.v1.Common.ResponseMetadata.Builder, com.viam.common.v1.Common.ResponseMetadataOrBuilder>(
-                  getResponseMetadata(),
-                  getParentForChildren(),
-                  isClean());
-          responseMetadata_ = null;
-        }
-        return responseMetadataBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetImagesResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.GetImagesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "images_",
+              com.viam.component.camera.v1.Camera.Image.class,
+              "responseMetadata_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\ue924\n\u0002\u0000\u0001\u0000\u0001\u001b\ue924" +
+                "\n\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.GetImagesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.GetImagesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.GetImagesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.GetImagesResponse)
     private static final com.viam.component.camera.v1.Camera.GetImagesResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.GetImagesResponse();
+      GetImagesResponse defaultInstance = new GetImagesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetImagesResponse.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.GetImagesResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetImagesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetImagesResponse>() {
-      @java.lang.Override
-      public GetImagesResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetImagesResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetImagesResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetImagesResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.GetImagesResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ImageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.Image)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -3678,44 +2278,17 @@ public final class Camera {
   /**
    * Protobuf type {@code viam.component.camera.v1.Image}
    */
-  public static final class Image extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Image extends
+      com.google.protobuf.GeneratedMessageLite<
+          Image, Image.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.Image)
       ImageOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Image.newBuilder() to construct.
-    private Image(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Image() {
       sourceName_ = "";
-      format_ = 0;
       image_ = com.google.protobuf.ByteString.EMPTY;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Image();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Image_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Image_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.Image.class, com.viam.component.camera.v1.Camera.Image.Builder.class);
-    }
-
     public static final int SOURCE_NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object sourceName_ = "";
+    private java.lang.String sourceName_;
     /**
      * <pre>
      * the name of the sensor where the image came from
@@ -3726,16 +2299,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getSourceName() {
-      java.lang.Object ref = sourceName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        sourceName_ = s;
-        return s;
-      }
+      return sourceName_;
     }
     /**
      * <pre>
@@ -3748,20 +2312,50 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getSourceNameBytes() {
-      java.lang.Object ref = sourceName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        sourceName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(sourceName_);
+    }
+    /**
+     * <pre>
+     * the name of the sensor where the image came from
+     * </pre>
+     *
+     * <code>string source_name = 1 [json_name = "sourceName"];</code>
+     * @param value The sourceName to set.
+     */
+    private void setSourceName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      sourceName_ = value;
+    }
+    /**
+     * <pre>
+     * the name of the sensor where the image came from
+     * </pre>
+     *
+     * <code>string source_name = 1 [json_name = "sourceName"];</code>
+     */
+    private void clearSourceName() {
+
+      sourceName_ = getDefaultInstance().getSourceName();
+    }
+    /**
+     * <pre>
+     * the name of the sensor where the image came from
+     * </pre>
+     *
+     * <code>string source_name = 1 [json_name = "sourceName"];</code>
+     * @param value The bytes for sourceName to set.
+     */
+    private void setSourceNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      sourceName_ = value.toStringUtf8();
+
     }
 
     public static final int FORMAT_FIELD_NUMBER = 2;
-    private int format_ = 0;
+    private int format_;
     /**
      * <pre>
      * format of the response image bytes
@@ -3770,7 +2364,8 @@ public final class Camera {
      * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
      * @return The enum numeric value on the wire for format.
      */
-    @java.lang.Override public int getFormatValue() {
+    @java.lang.Override
+    public int getFormatValue() {
       return format_;
     }
     /**
@@ -3781,13 +2376,48 @@ public final class Camera {
      * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
      * @return The format.
      */
-    @java.lang.Override public com.viam.component.camera.v1.Camera.Format getFormat() {
+    @java.lang.Override
+    public com.viam.component.camera.v1.Camera.Format getFormat() {
       com.viam.component.camera.v1.Camera.Format result = com.viam.component.camera.v1.Camera.Format.forNumber(format_);
       return result == null ? com.viam.component.camera.v1.Camera.Format.UNRECOGNIZED : result;
     }
+    /**
+     * <pre>
+     * format of the response image bytes
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
+     * @param value The enum numeric value on the wire for format to set.
+     */
+    private void setFormatValue(int value) {
+        format_ = value;
+    }
+    /**
+     * <pre>
+     * format of the response image bytes
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
+     * @param value The format to set.
+     */
+    private void setFormat(com.viam.component.camera.v1.Camera.Format value) {
+      format_ = value.getNumber();
+
+    }
+    /**
+     * <pre>
+     * format of the response image bytes
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
+     */
+    private void clearFormat() {
+
+      format_ = 0;
+    }
 
     public static final int IMAGE_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
+    private com.google.protobuf.ByteString image_;
     /**
      * <pre>
      * image in bytes
@@ -3800,379 +2430,128 @@ public final class Camera {
     public com.google.protobuf.ByteString getImage() {
       return image_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * image in bytes
+     * </pre>
+     *
+     * <code>bytes image = 3 [json_name = "image"];</code>
+     * @param value The image to set.
+     */
+    private void setImage(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      image_ = value;
     }
+    /**
+     * <pre>
+     * image in bytes
+     * </pre>
+     *
+     * <code>bytes image = 3 [json_name = "image"];</code>
+     */
+    private void clearImage() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sourceName_);
-      }
-      if (format_ != com.viam.component.camera.v1.Camera.Format.FORMAT_UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, format_);
-      }
-      if (!image_.isEmpty()) {
-        output.writeBytes(3, image_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sourceName_);
-      }
-      if (format_ != com.viam.component.camera.v1.Camera.Format.FORMAT_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, format_);
-      }
-      if (!image_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(3, image_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.Image)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.Image other = (com.viam.component.camera.v1.Camera.Image) obj;
-
-      if (!getSourceName()
-          .equals(other.getSourceName())) return false;
-      if (format_ != other.format_) return false;
-      if (!getImage()
-          .equals(other.getImage())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SOURCE_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getSourceName().hashCode();
-      hash = (37 * hash) + FORMAT_FIELD_NUMBER;
-      hash = (53 * hash) + format_;
-      hash = (37 * hash) + IMAGE_FIELD_NUMBER;
-      hash = (53 * hash) + getImage().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      image_ = getDefaultInstance().getImage();
     }
 
     public static com.viam.component.camera.v1.Camera.Image parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.Image parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Image parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.Image parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Image parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.Image parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Image parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.Image parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.Image parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.Image parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Image parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.Image parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.Image prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.Image}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.Image, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.Image)
         com.viam.component.camera.v1.Camera.ImageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Image_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Image_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.Image.class, com.viam.component.camera.v1.Camera.Image.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.Image.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        sourceName_ = "";
-        format_ = 0;
-        image_ = com.google.protobuf.ByteString.EMPTY;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Image_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.Image getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.Image.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.Image build() {
-        com.viam.component.camera.v1.Camera.Image result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.Image buildPartial() {
-        com.viam.component.camera.v1.Camera.Image result = new com.viam.component.camera.v1.Camera.Image(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.Image result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.sourceName_ = sourceName_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.format_ = format_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.image_ = image_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.Image) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.Image)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.Image other) {
-        if (other == com.viam.component.camera.v1.Camera.Image.getDefaultInstance()) return this;
-        if (!other.getSourceName().isEmpty()) {
-          sourceName_ = other.sourceName_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.format_ != 0) {
-          setFormatValue(other.getFormatValue());
-        }
-        if (other.getImage() != com.google.protobuf.ByteString.EMPTY) {
-          setImage(other.getImage());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                sourceName_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 16: {
-                format_ = input.readEnum();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 26: {
-                image_ = input.readBytes();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object sourceName_ = "";
       /**
        * <pre>
        * the name of the sensor where the image came from
@@ -4181,17 +2560,9 @@ public final class Camera {
        * <code>string source_name = 1 [json_name = "sourceName"];</code>
        * @return The sourceName.
        */
+      @java.lang.Override
       public java.lang.String getSourceName() {
-        java.lang.Object ref = sourceName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sourceName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getSourceName();
       }
       /**
        * <pre>
@@ -4201,18 +2572,10 @@ public final class Camera {
        * <code>string source_name = 1 [json_name = "sourceName"];</code>
        * @return The bytes for sourceName.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getSourceNameBytes() {
-        java.lang.Object ref = sourceName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sourceName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getSourceNameBytes();
       }
       /**
        * <pre>
@@ -4225,10 +2588,8 @@ public final class Camera {
        */
       public Builder setSourceName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        sourceName_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSourceName(value);
         return this;
       }
       /**
@@ -4240,9 +2601,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearSourceName() {
-        sourceName_ = getDefaultInstance().getSourceName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearSourceName();
         return this;
       }
       /**
@@ -4256,15 +2616,11 @@ public final class Camera {
        */
       public Builder setSourceNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        sourceName_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSourceNameBytes(value);
         return this;
       }
 
-      private int format_ = 0;
       /**
        * <pre>
        * format of the response image bytes
@@ -4273,8 +2629,9 @@ public final class Camera {
        * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
        * @return The enum numeric value on the wire for format.
        */
-      @java.lang.Override public int getFormatValue() {
-        return format_;
+      @java.lang.Override
+      public int getFormatValue() {
+        return instance.getFormatValue();
       }
       /**
        * <pre>
@@ -4282,13 +2639,12 @@ public final class Camera {
        * </pre>
        *
        * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-       * @param value The enum numeric value on the wire for format to set.
+       * @param value The format to set.
        * @return This builder for chaining.
        */
       public Builder setFormatValue(int value) {
-        format_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setFormatValue(value);
         return this;
       }
       /**
@@ -4301,8 +2657,7 @@ public final class Camera {
        */
       @java.lang.Override
       public com.viam.component.camera.v1.Camera.Format getFormat() {
-        com.viam.component.camera.v1.Camera.Format result = com.viam.component.camera.v1.Camera.Format.forNumber(format_);
-        return result == null ? com.viam.component.camera.v1.Camera.Format.UNRECOGNIZED : result;
+        return instance.getFormat();
       }
       /**
        * <pre>
@@ -4310,16 +2665,12 @@ public final class Camera {
        * </pre>
        *
        * <code>.viam.component.camera.v1.Format format = 2 [json_name = "format"];</code>
-       * @param value The format to set.
+       * @param value The enum numeric value on the wire for format to set.
        * @return This builder for chaining.
        */
       public Builder setFormat(com.viam.component.camera.v1.Camera.Format value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        format_ = value.getNumber();
-        onChanged();
+        copyOnWrite();
+        instance.setFormat(value);
         return this;
       }
       /**
@@ -4331,13 +2682,11 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearFormat() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        format_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearFormat();
         return this;
       }
 
-      private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
        * image in bytes
@@ -4348,7 +2697,7 @@ public final class Camera {
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getImage() {
-        return image_;
+        return instance.getImage();
       }
       /**
        * <pre>
@@ -4360,10 +2709,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder setImage(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        image_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setImage(value);
         return this;
       }
       /**
@@ -4375,78 +2722,91 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearImage() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        image_ = getDefaultInstance().getImage();
-        onChanged();
+        copyOnWrite();
+        instance.clearImage();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.Image)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.Image();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "sourceName_",
+              "format_",
+              "image_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\f" +
+                "\u0003\n";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.Image> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.Image.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.Image>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.Image)
     private static final com.viam.component.camera.v1.Camera.Image DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.Image();
+      Image defaultInstance = new Image();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Image.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.Image getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Image>
-        PARSER = new com.google.protobuf.AbstractParser<Image>() {
-      @java.lang.Override
-      public Image parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Image> PARSER;
 
     public static com.google.protobuf.Parser<Image> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Image> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.Image getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface RenderFrameRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.RenderFrameRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -4506,56 +2866,22 @@ public final class Camera {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.camera.v1.RenderFrameRequest}
    */
-  public static final class RenderFrameRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class RenderFrameRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          RenderFrameRequest, RenderFrameRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.RenderFrameRequest)
       RenderFrameRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RenderFrameRequest.newBuilder() to construct.
-    private RenderFrameRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private RenderFrameRequest() {
       name_ = "";
       mimeType_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RenderFrameRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_RenderFrameRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_RenderFrameRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.RenderFrameRequest.class, com.viam.component.camera.v1.Camera.RenderFrameRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a camera
@@ -4566,16 +2892,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -4588,21 +2905,50 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int MIME_TYPE_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object mimeType_ = "";
+    private java.lang.String mimeType_;
     /**
      * <pre>
      * Requested MIME type of response
@@ -4613,16 +2959,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getMimeType() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mimeType_ = s;
-        return s;
-      }
+      return mimeType_;
     }
     /**
      * <pre>
@@ -4635,16 +2972,46 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMimeTypeBytes() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mimeType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
+    }
+    /**
+     * <pre>
+     * Requested MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    private void setMimeType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mimeType_ = value;
+    }
+    /**
+     * <pre>
+     * Requested MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = getDefaultInstance().getMimeType();
+    }
+    /**
+     * <pre>
+     * Requested MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
+     * @param value The bytes for mimeType to set.
+     */
+    private void setMimeTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mimeType_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -4655,7 +3022,6 @@ public final class Camera {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -4667,7 +3033,6 @@ public final class Camera {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -4680,407 +3045,138 @@ public final class Camera {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mimeType_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mimeType_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.RenderFrameRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.RenderFrameRequest other = (com.viam.component.camera.v1.Camera.RenderFrameRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getMimeType()
-          .equals(other.getMimeType())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + MIME_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getMimeType().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.RenderFrameRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.RenderFrameRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.RenderFrameRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.RenderFrameRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.RenderFrameRequest)
         com.viam.component.camera.v1.Camera.RenderFrameRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_RenderFrameRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_RenderFrameRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.RenderFrameRequest.class, com.viam.component.camera.v1.Camera.RenderFrameRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.RenderFrameRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        mimeType_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_RenderFrameRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.RenderFrameRequest getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.RenderFrameRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.RenderFrameRequest build() {
-        com.viam.component.camera.v1.Camera.RenderFrameRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.RenderFrameRequest buildPartial() {
-        com.viam.component.camera.v1.Camera.RenderFrameRequest result = new com.viam.component.camera.v1.Camera.RenderFrameRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.RenderFrameRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.mimeType_ = mimeType_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.RenderFrameRequest) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.RenderFrameRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.RenderFrameRequest other) {
-        if (other == com.viam.component.camera.v1.Camera.RenderFrameRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getMimeType().isEmpty()) {
-          mimeType_ = other.mimeType_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                mimeType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a camera
@@ -5089,17 +3185,9 @@ public final class Camera {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -5109,18 +3197,10 @@ public final class Camera {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -5133,10 +3213,8 @@ public final class Camera {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -5148,9 +3226,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -5164,15 +3241,11 @@ public final class Camera {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object mimeType_ = "";
       /**
        * <pre>
        * Requested MIME type of response
@@ -5181,17 +3254,9 @@ public final class Camera {
        * <code>string mime_type = 2 [json_name = "mimeType"];</code>
        * @return The mimeType.
        */
+      @java.lang.Override
       public java.lang.String getMimeType() {
-        java.lang.Object ref = mimeType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mimeType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMimeType();
       }
       /**
        * <pre>
@@ -5201,18 +3266,10 @@ public final class Camera {
        * <code>string mime_type = 2 [json_name = "mimeType"];</code>
        * @return The bytes for mimeType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMimeTypeBytes() {
-        java.lang.Object ref = mimeType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mimeType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMimeTypeBytes();
       }
       /**
        * <pre>
@@ -5225,10 +3282,8 @@ public final class Camera {
        */
       public Builder setMimeType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        mimeType_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeType(value);
         return this;
       }
       /**
@@ -5240,9 +3295,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearMimeType() {
-        mimeType_ = getDefaultInstance().getMimeType();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearMimeType();
         return this;
       }
       /**
@@ -5256,27 +3310,21 @@ public final class Camera {
        */
       public Builder setMimeTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        mimeType_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeTypeBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -5284,14 +3332,10 @@ public final class Camera {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -5301,18 +3345,10 @@ public final class Camera {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -5322,13 +3358,8 @@ public final class Camera {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -5339,21 +3370,8 @@ public final class Camera {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -5363,130 +3381,92 @@ public final class Camera {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.RenderFrameRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.RenderFrameRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "mimeType_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208c" +
+                "\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.RenderFrameRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.RenderFrameRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.RenderFrameRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.RenderFrameRequest)
     private static final com.viam.component.camera.v1.Camera.RenderFrameRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.RenderFrameRequest();
+      RenderFrameRequest defaultInstance = new RenderFrameRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RenderFrameRequest.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.RenderFrameRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RenderFrameRequest>
-        PARSER = new com.google.protobuf.AbstractParser<RenderFrameRequest>() {
-      @java.lang.Override
-      public RenderFrameRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<RenderFrameRequest> PARSER;
 
     public static com.google.protobuf.Parser<RenderFrameRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RenderFrameRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.RenderFrameRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPointCloudRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.GetPointCloudRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -5546,56 +3526,22 @@ public final class Camera {
      * @return The extra.
      */
     com.google.protobuf.Struct getExtra();
-    /**
-     * <pre>
-     * Additional arguments to the method
-     * </pre>
-     *
-     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     */
-    com.google.protobuf.StructOrBuilder getExtraOrBuilder();
   }
   /**
    * Protobuf type {@code viam.component.camera.v1.GetPointCloudRequest}
    */
-  public static final class GetPointCloudRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPointCloudRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPointCloudRequest, GetPointCloudRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.GetPointCloudRequest)
       GetPointCloudRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPointCloudRequest.newBuilder() to construct.
-    private GetPointCloudRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPointCloudRequest() {
       name_ = "";
       mimeType_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPointCloudRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPointCloudRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPointCloudRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.GetPointCloudRequest.class, com.viam.component.camera.v1.Camera.GetPointCloudRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a camera
@@ -5606,16 +3552,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -5628,21 +3565,50 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int MIME_TYPE_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object mimeType_ = "";
+    private java.lang.String mimeType_;
     /**
      * <pre>
      * Requested MIME type of response
@@ -5653,16 +3619,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getMimeType() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mimeType_ = s;
-        return s;
-      }
+      return mimeType_;
     }
     /**
      * <pre>
@@ -5675,16 +3632,46 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMimeTypeBytes() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mimeType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
+    }
+    /**
+     * <pre>
+     * Requested MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    private void setMimeType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mimeType_ = value;
+    }
+    /**
+     * <pre>
+     * Requested MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = getDefaultInstance().getMimeType();
+    }
+    /**
+     * <pre>
+     * Requested MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 2 [json_name = "mimeType"];</code>
+     * @param value The bytes for mimeType to set.
+     */
+    private void setMimeTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mimeType_ = value.toStringUtf8();
+
     }
 
     public static final int EXTRA_FIELD_NUMBER = 99;
@@ -5695,7 +3682,6 @@ public final class Camera {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return Whether the extra field is set.
      */
     @java.lang.Override
     public boolean hasExtra() {
@@ -5707,7 +3693,6 @@ public final class Camera {
      * </pre>
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-     * @return The extra.
      */
     @java.lang.Override
     public com.google.protobuf.Struct getExtra() {
@@ -5720,407 +3705,138 @@ public final class Camera {
      *
      * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
      */
-    @java.lang.Override
-    public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-      return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
+    private void setExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  extra_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeExtra(com.google.protobuf.Struct value) {
+      value.getClass();
+  if (extra_ != null &&
+          extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
+        extra_ =
+          com.google.protobuf.Struct.newBuilder(extra_).mergeFrom(value).buildPartial();
+      } else {
+        extra_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mimeType_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(99, getExtra());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mimeType_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(99, getExtra());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.GetPointCloudRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.GetPointCloudRequest other = (com.viam.component.camera.v1.Camera.GetPointCloudRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getMimeType()
-          .equals(other.getMimeType())) return false;
-      if (hasExtra() != other.hasExtra()) return false;
-      if (hasExtra()) {
-        if (!getExtra()
-            .equals(other.getExtra())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + MIME_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getMimeType().hashCode();
-      if (hasExtra()) {
-        hash = (37 * hash) + EXTRA_FIELD_NUMBER;
-        hash = (53 * hash) + getExtra().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Additional arguments to the method
+     * </pre>
+     *
+     * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
+     */
+    private void clearExtra() {  extra_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPointCloudRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPointCloudRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPointCloudRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.GetPointCloudRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.GetPointCloudRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.GetPointCloudRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.GetPointCloudRequest)
         com.viam.component.camera.v1.Camera.GetPointCloudRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPointCloudRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPointCloudRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.GetPointCloudRequest.class, com.viam.component.camera.v1.Camera.GetPointCloudRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.GetPointCloudRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getExtraFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        mimeType_ = "";
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPointCloudRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetPointCloudRequest getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.GetPointCloudRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetPointCloudRequest build() {
-        com.viam.component.camera.v1.Camera.GetPointCloudRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetPointCloudRequest buildPartial() {
-        com.viam.component.camera.v1.Camera.GetPointCloudRequest result = new com.viam.component.camera.v1.Camera.GetPointCloudRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.GetPointCloudRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.mimeType_ = mimeType_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.extra_ = extraBuilder_ == null
-              ? extra_
-              : extraBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.GetPointCloudRequest) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.GetPointCloudRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.GetPointCloudRequest other) {
-        if (other == com.viam.component.camera.v1.Camera.GetPointCloudRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getMimeType().isEmpty()) {
-          mimeType_ = other.mimeType_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (other.hasExtra()) {
-          mergeExtra(other.getExtra());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                mimeType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 794: {
-                input.readMessage(
-                    getExtraFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 794
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a camera
@@ -6129,17 +3845,9 @@ public final class Camera {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -6149,18 +3857,10 @@ public final class Camera {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -6173,10 +3873,8 @@ public final class Camera {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -6188,9 +3886,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -6204,15 +3901,11 @@ public final class Camera {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object mimeType_ = "";
       /**
        * <pre>
        * Requested MIME type of response
@@ -6221,17 +3914,9 @@ public final class Camera {
        * <code>string mime_type = 2 [json_name = "mimeType"];</code>
        * @return The mimeType.
        */
+      @java.lang.Override
       public java.lang.String getMimeType() {
-        java.lang.Object ref = mimeType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mimeType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMimeType();
       }
       /**
        * <pre>
@@ -6241,18 +3926,10 @@ public final class Camera {
        * <code>string mime_type = 2 [json_name = "mimeType"];</code>
        * @return The bytes for mimeType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMimeTypeBytes() {
-        java.lang.Object ref = mimeType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mimeType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMimeTypeBytes();
       }
       /**
        * <pre>
@@ -6265,10 +3942,8 @@ public final class Camera {
        */
       public Builder setMimeType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        mimeType_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeType(value);
         return this;
       }
       /**
@@ -6280,9 +3955,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearMimeType() {
-        mimeType_ = getDefaultInstance().getMimeType();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearMimeType();
         return this;
       }
       /**
@@ -6296,27 +3970,21 @@ public final class Camera {
        */
       public Builder setMimeTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        mimeType_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeTypeBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Struct extra_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> extraBuilder_;
       /**
        * <pre>
        * Additional arguments to the method
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return Whether the extra field is set.
        */
+      @java.lang.Override
       public boolean hasExtra() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasExtra();
       }
       /**
        * <pre>
@@ -6324,14 +3992,10 @@ public final class Camera {
        * </pre>
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       * @return The extra.
        */
+      @java.lang.Override
       public com.google.protobuf.Struct getExtra() {
-        if (extraBuilder_ == null) {
-          return extra_ == null ? com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        } else {
-          return extraBuilder_.getMessage();
-        }
+        return instance.getExtra();
       }
       /**
        * <pre>
@@ -6341,18 +4005,10 @@ public final class Camera {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder setExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          extra_ = value;
-        } else {
-          extraBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Additional arguments to the method
@@ -6362,13 +4018,8 @@ public final class Camera {
        */
       public Builder setExtra(
           com.google.protobuf.Struct.Builder builderForValue) {
-        if (extraBuilder_ == null) {
-          extra_ = builderForValue.build();
-        } else {
-          extraBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setExtra(builderForValue.build());
         return this;
       }
       /**
@@ -6379,21 +4030,8 @@ public final class Camera {
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
       public Builder mergeExtra(com.google.protobuf.Struct value) {
-        if (extraBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            extra_ != null &&
-            extra_ != com.google.protobuf.Struct.getDefaultInstance()) {
-            getExtraBuilder().mergeFrom(value);
-          } else {
-            extra_ = value;
-          }
-        } else {
-          extraBuilder_.mergeFrom(value);
-        }
-        if (extra_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeExtra(value);
         return this;
       }
       /**
@@ -6403,130 +4041,92 @@ public final class Camera {
        *
        * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
        */
-      public Builder clearExtra() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        extra_ = null;
-        if (extraBuilder_ != null) {
-          extraBuilder_.dispose();
-          extraBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearExtra() {  copyOnWrite();
+        instance.clearExtra();
         return this;
       }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.Struct.Builder getExtraBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getExtraFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      public com.google.protobuf.StructOrBuilder getExtraOrBuilder() {
-        if (extraBuilder_ != null) {
-          return extraBuilder_.getMessageOrBuilder();
-        } else {
-          return extra_ == null ?
-              com.google.protobuf.Struct.getDefaultInstance() : extra_;
-        }
-      }
-      /**
-       * <pre>
-       * Additional arguments to the method
-       * </pre>
-       *
-       * <code>.google.protobuf.Struct extra = 99 [json_name = "extra"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder> 
-          getExtraFieldBuilder() {
-        if (extraBuilder_ == null) {
-          extraBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Struct, com.google.protobuf.Struct.Builder, com.google.protobuf.StructOrBuilder>(
-                  getExtra(),
-                  getParentForChildren(),
-                  isClean());
-          extra_ = null;
-        }
-        return extraBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetPointCloudRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.GetPointCloudRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "name_",
+              "mimeType_",
+              "extra_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001c\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0208c" +
+                "\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.GetPointCloudRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.GetPointCloudRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.GetPointCloudRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.GetPointCloudRequest)
     private static final com.viam.component.camera.v1.Camera.GetPointCloudRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.GetPointCloudRequest();
+      GetPointCloudRequest defaultInstance = new GetPointCloudRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPointCloudRequest.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPointCloudRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPointCloudRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetPointCloudRequest>() {
-      @java.lang.Override
-      public GetPointCloudRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPointCloudRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetPointCloudRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPointCloudRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.GetPointCloudRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPointCloudResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.GetPointCloudResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -6561,43 +4161,17 @@ public final class Camera {
   /**
    * Protobuf type {@code viam.component.camera.v1.GetPointCloudResponse}
    */
-  public static final class GetPointCloudResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPointCloudResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPointCloudResponse, GetPointCloudResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.GetPointCloudResponse)
       GetPointCloudResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPointCloudResponse.newBuilder() to construct.
-    private GetPointCloudResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPointCloudResponse() {
       mimeType_ = "";
       pointCloud_ = com.google.protobuf.ByteString.EMPTY;
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPointCloudResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPointCloudResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPointCloudResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.GetPointCloudResponse.class, com.viam.component.camera.v1.Camera.GetPointCloudResponse.Builder.class);
-    }
-
     public static final int MIME_TYPE_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object mimeType_ = "";
+    private java.lang.String mimeType_;
     /**
      * <pre>
      * Actual MIME type of response
@@ -6608,16 +4182,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getMimeType() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mimeType_ = s;
-        return s;
-      }
+      return mimeType_;
     }
     /**
      * <pre>
@@ -6630,20 +4195,50 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getMimeTypeBytes() {
-      java.lang.Object ref = mimeType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mimeType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(mimeType_);
+    }
+    /**
+     * <pre>
+     * Actual MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
+     * @param value The mimeType to set.
+     */
+    private void setMimeType(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      mimeType_ = value;
+    }
+    /**
+     * <pre>
+     * Actual MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
+     */
+    private void clearMimeType() {
+
+      mimeType_ = getDefaultInstance().getMimeType();
+    }
+    /**
+     * <pre>
+     * Actual MIME type of response
+     * </pre>
+     *
+     * <code>string mime_type = 1 [json_name = "mimeType"];</code>
+     * @param value The bytes for mimeType to set.
+     */
+    private void setMimeTypeBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      mimeType_ = value.toStringUtf8();
+
     }
 
     public static final int POINT_CLOUD_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString pointCloud_ = com.google.protobuf.ByteString.EMPTY;
+    private com.google.protobuf.ByteString pointCloud_;
     /**
      * <pre>
      * Frame in bytes
@@ -6656,357 +4251,128 @@ public final class Camera {
     public com.google.protobuf.ByteString getPointCloud() {
       return pointCloud_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Frame in bytes
+     * </pre>
+     *
+     * <code>bytes point_cloud = 2 [json_name = "pointCloud"];</code>
+     * @param value The pointCloud to set.
+     */
+    private void setPointCloud(com.google.protobuf.ByteString value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      pointCloud_ = value;
     }
+    /**
+     * <pre>
+     * Frame in bytes
+     * </pre>
+     *
+     * <code>bytes point_cloud = 2 [json_name = "pointCloud"];</code>
+     */
+    private void clearPointCloud() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, mimeType_);
-      }
-      if (!pointCloud_.isEmpty()) {
-        output.writeBytes(2, pointCloud_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mimeType_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, mimeType_);
-      }
-      if (!pointCloud_.isEmpty()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, pointCloud_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.GetPointCloudResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.GetPointCloudResponse other = (com.viam.component.camera.v1.Camera.GetPointCloudResponse) obj;
-
-      if (!getMimeType()
-          .equals(other.getMimeType())) return false;
-      if (!getPointCloud()
-          .equals(other.getPointCloud())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MIME_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getMimeType().hashCode();
-      hash = (37 * hash) + POINT_CLOUD_FIELD_NUMBER;
-      hash = (53 * hash) + getPointCloud().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      pointCloud_ = getDefaultInstance().getPointCloud();
     }
 
     public static com.viam.component.camera.v1.Camera.GetPointCloudResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPointCloudResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPointCloudResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetPointCloudResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.GetPointCloudResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.GetPointCloudResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.GetPointCloudResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.GetPointCloudResponse)
         com.viam.component.camera.v1.Camera.GetPointCloudResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPointCloudResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPointCloudResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.GetPointCloudResponse.class, com.viam.component.camera.v1.Camera.GetPointCloudResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.GetPointCloudResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        mimeType_ = "";
-        pointCloud_ = com.google.protobuf.ByteString.EMPTY;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPointCloudResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetPointCloudResponse getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.GetPointCloudResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetPointCloudResponse build() {
-        com.viam.component.camera.v1.Camera.GetPointCloudResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetPointCloudResponse buildPartial() {
-        com.viam.component.camera.v1.Camera.GetPointCloudResponse result = new com.viam.component.camera.v1.Camera.GetPointCloudResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.GetPointCloudResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.mimeType_ = mimeType_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.pointCloud_ = pointCloud_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.GetPointCloudResponse) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.GetPointCloudResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.GetPointCloudResponse other) {
-        if (other == com.viam.component.camera.v1.Camera.GetPointCloudResponse.getDefaultInstance()) return this;
-        if (!other.getMimeType().isEmpty()) {
-          mimeType_ = other.mimeType_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (other.getPointCloud() != com.google.protobuf.ByteString.EMPTY) {
-          setPointCloud(other.getPointCloud());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                mimeType_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                pointCloud_ = input.readBytes();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object mimeType_ = "";
       /**
        * <pre>
        * Actual MIME type of response
@@ -7015,17 +4381,9 @@ public final class Camera {
        * <code>string mime_type = 1 [json_name = "mimeType"];</code>
        * @return The mimeType.
        */
+      @java.lang.Override
       public java.lang.String getMimeType() {
-        java.lang.Object ref = mimeType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mimeType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getMimeType();
       }
       /**
        * <pre>
@@ -7035,18 +4393,10 @@ public final class Camera {
        * <code>string mime_type = 1 [json_name = "mimeType"];</code>
        * @return The bytes for mimeType.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMimeTypeBytes() {
-        java.lang.Object ref = mimeType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mimeType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getMimeTypeBytes();
       }
       /**
        * <pre>
@@ -7059,10 +4409,8 @@ public final class Camera {
        */
       public Builder setMimeType(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        mimeType_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeType(value);
         return this;
       }
       /**
@@ -7074,9 +4422,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearMimeType() {
-        mimeType_ = getDefaultInstance().getMimeType();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearMimeType();
         return this;
       }
       /**
@@ -7090,15 +4437,11 @@ public final class Camera {
        */
       public Builder setMimeTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        mimeType_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeTypeBytes(value);
         return this;
       }
 
-      private com.google.protobuf.ByteString pointCloud_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <pre>
        * Frame in bytes
@@ -7109,7 +4452,7 @@ public final class Camera {
        */
       @java.lang.Override
       public com.google.protobuf.ByteString getPointCloud() {
-        return pointCloud_;
+        return instance.getPointCloud();
       }
       /**
        * <pre>
@@ -7121,10 +4464,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder setPointCloud(com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        pointCloud_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setPointCloud(value);
         return this;
       }
       /**
@@ -7136,78 +4477,90 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearPointCloud() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        pointCloud_ = getDefaultInstance().getPointCloud();
-        onChanged();
+        copyOnWrite();
+        instance.clearPointCloud();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetPointCloudResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.GetPointCloudResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "mimeType_",
+              "pointCloud_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\n" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.GetPointCloudResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.GetPointCloudResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.GetPointCloudResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.GetPointCloudResponse)
     private static final com.viam.component.camera.v1.Camera.GetPointCloudResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.GetPointCloudResponse();
+      GetPointCloudResponse defaultInstance = new GetPointCloudResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPointCloudResponse.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPointCloudResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPointCloudResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetPointCloudResponse>() {
-      @java.lang.Override
-      public GetPointCloudResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPointCloudResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetPointCloudResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPointCloudResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.GetPointCloudResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPropertiesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.GetPropertiesRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -7232,42 +4585,16 @@ public final class Camera {
   /**
    * Protobuf type {@code viam.component.camera.v1.GetPropertiesRequest}
    */
-  public static final class GetPropertiesRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPropertiesRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPropertiesRequest, GetPropertiesRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.GetPropertiesRequest)
       GetPropertiesRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPropertiesRequest.newBuilder() to construct.
-    private GetPropertiesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPropertiesRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPropertiesRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPropertiesRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPropertiesRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.GetPropertiesRequest.class, com.viam.component.camera.v1.Camera.GetPropertiesRequest.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Name of a camera
@@ -7278,16 +4605,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -7300,345 +4618,145 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
     }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      getUnknownFields().writeTo(output);
+      name_ = getDefaultInstance().getName();
     }
+    /**
+     * <pre>
+     * Name of a camera
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.GetPropertiesRequest)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.GetPropertiesRequest other = (com.viam.component.camera.v1.Camera.GetPropertiesRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static com.viam.component.camera.v1.Camera.GetPropertiesRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPropertiesRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPropertiesRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.GetPropertiesRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.GetPropertiesRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.GetPropertiesRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.GetPropertiesRequest)
         com.viam.component.camera.v1.Camera.GetPropertiesRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPropertiesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPropertiesRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.GetPropertiesRequest.class, com.viam.component.camera.v1.Camera.GetPropertiesRequest.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.GetPropertiesRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPropertiesRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetPropertiesRequest getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.GetPropertiesRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetPropertiesRequest build() {
-        com.viam.component.camera.v1.Camera.GetPropertiesRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetPropertiesRequest buildPartial() {
-        com.viam.component.camera.v1.Camera.GetPropertiesRequest result = new com.viam.component.camera.v1.Camera.GetPropertiesRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.GetPropertiesRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.GetPropertiesRequest) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.GetPropertiesRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.GetPropertiesRequest other) {
-        if (other == com.viam.component.camera.v1.Camera.GetPropertiesRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Name of a camera
@@ -7647,17 +4765,9 @@ public final class Camera {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -7667,18 +4777,10 @@ public final class Camera {
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -7691,10 +4793,8 @@ public final class Camera {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -7706,9 +4806,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -7722,80 +4821,88 @@ public final class Camera {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetPropertiesRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.GetPropertiesRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.GetPropertiesRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.GetPropertiesRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.GetPropertiesRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.GetPropertiesRequest)
     private static final com.viam.component.camera.v1.Camera.GetPropertiesRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.GetPropertiesRequest();
+      GetPropertiesRequest defaultInstance = new GetPropertiesRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPropertiesRequest.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPropertiesRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPropertiesRequest>
-        PARSER = new com.google.protobuf.AbstractParser<GetPropertiesRequest>() {
-      @java.lang.Override
-      public GetPropertiesRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPropertiesRequest> PARSER;
 
     public static com.google.protobuf.Parser<GetPropertiesRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPropertiesRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.GetPropertiesRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface GetPropertiesResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.GetPropertiesResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -7829,16 +4936,6 @@ public final class Camera {
      * @return The intrinsicParameters.
      */
     com.viam.component.camera.v1.Camera.IntrinsicParameters getIntrinsicParameters();
-    /**
-     * <pre>
-     * Parameters for doing a perspective of a 3D scene to a 2D plane
-     * If camera does not provide intrinsic parameters, leave the field empty
-     * Initializing the parameters with 0-values is considered an error
-     * </pre>
-     *
-     * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
-     */
-    com.viam.component.camera.v1.Camera.IntrinsicParametersOrBuilder getIntrinsicParametersOrBuilder();
 
     /**
      * <pre>
@@ -7862,16 +4959,6 @@ public final class Camera {
      * @return The distortionParameters.
      */
     com.viam.component.camera.v1.Camera.DistortionParameters getDistortionParameters();
-    /**
-     * <pre>
-     * Parameters for modeling lens distortion in cameras
-     * If camera does not provide distortion parameters, leave the field empty
-     * Initializing the parameters with 0-values is considered an error
-     * </pre>
-     *
-     * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
-     */
-    com.viam.component.camera.v1.Camera.DistortionParametersOrBuilder getDistortionParametersOrBuilder();
 
     /**
      * <pre>
@@ -7908,8 +4995,8 @@ public final class Camera {
      * </pre>
      *
      * <code>repeated string mime_types = 4 [json_name = "mimeTypes"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the mimeTypes at the given index.
+     * @param index The index of the element to return.
+     * @return The mimeTypes at the given index.
      */
     com.google.protobuf.ByteString
         getMimeTypesBytes(int index);
@@ -7917,43 +5004,17 @@ public final class Camera {
   /**
    * Protobuf type {@code viam.component.camera.v1.GetPropertiesResponse}
    */
-  public static final class GetPropertiesResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class GetPropertiesResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetPropertiesResponse, GetPropertiesResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.GetPropertiesResponse)
       GetPropertiesResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use GetPropertiesResponse.newBuilder() to construct.
-    private GetPropertiesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private GetPropertiesResponse() {
-      mimeTypes_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      mimeTypes_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new GetPropertiesResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPropertiesResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPropertiesResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.GetPropertiesResponse.class, com.viam.component.camera.v1.Camera.GetPropertiesResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int SUPPORTS_PCD_FIELD_NUMBER = 1;
-    private boolean supportsPcd_ = false;
+    private boolean supportsPcd_;
     /**
      * <pre>
      * A boolean property determining whether the camera supports the return of pointcloud data
@@ -7966,6 +5027,29 @@ public final class Camera {
     public boolean getSupportsPcd() {
       return supportsPcd_;
     }
+    /**
+     * <pre>
+     * A boolean property determining whether the camera supports the return of pointcloud data
+     * </pre>
+     *
+     * <code>bool supports_pcd = 1 [json_name = "supportsPcd"];</code>
+     * @param value The supportsPcd to set.
+     */
+    private void setSupportsPcd(boolean value) {
+      
+      supportsPcd_ = value;
+    }
+    /**
+     * <pre>
+     * A boolean property determining whether the camera supports the return of pointcloud data
+     * </pre>
+     *
+     * <code>bool supports_pcd = 1 [json_name = "supportsPcd"];</code>
+     */
+    private void clearSupportsPcd() {
+
+      supportsPcd_ = false;
+    }
 
     public static final int INTRINSIC_PARAMETERS_FIELD_NUMBER = 2;
     private com.viam.component.camera.v1.Camera.IntrinsicParameters intrinsicParameters_;
@@ -7977,7 +5061,6 @@ public final class Camera {
      * </pre>
      *
      * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
-     * @return Whether the intrinsicParameters field is set.
      */
     @java.lang.Override
     public boolean hasIntrinsicParameters() {
@@ -7991,7 +5074,6 @@ public final class Camera {
      * </pre>
      *
      * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
-     * @return The intrinsicParameters.
      */
     @java.lang.Override
     public com.viam.component.camera.v1.Camera.IntrinsicParameters getIntrinsicParameters() {
@@ -8006,9 +5088,43 @@ public final class Camera {
      *
      * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
      */
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.IntrinsicParametersOrBuilder getIntrinsicParametersOrBuilder() {
-      return intrinsicParameters_ == null ? com.viam.component.camera.v1.Camera.IntrinsicParameters.getDefaultInstance() : intrinsicParameters_;
+    private void setIntrinsicParameters(com.viam.component.camera.v1.Camera.IntrinsicParameters value) {
+      value.getClass();
+  intrinsicParameters_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <pre>
+     * Parameters for doing a perspective of a 3D scene to a 2D plane
+     * If camera does not provide intrinsic parameters, leave the field empty
+     * Initializing the parameters with 0-values is considered an error
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeIntrinsicParameters(com.viam.component.camera.v1.Camera.IntrinsicParameters value) {
+      value.getClass();
+  if (intrinsicParameters_ != null &&
+          intrinsicParameters_ != com.viam.component.camera.v1.Camera.IntrinsicParameters.getDefaultInstance()) {
+        intrinsicParameters_ =
+          com.viam.component.camera.v1.Camera.IntrinsicParameters.newBuilder(intrinsicParameters_).mergeFrom(value).buildPartial();
+      } else {
+        intrinsicParameters_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <pre>
+     * Parameters for doing a perspective of a 3D scene to a 2D plane
+     * If camera does not provide intrinsic parameters, leave the field empty
+     * Initializing the parameters with 0-values is considered an error
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
+     */
+    private void clearIntrinsicParameters() {  intrinsicParameters_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int DISTORTION_PARAMETERS_FIELD_NUMBER = 3;
@@ -8021,7 +5137,6 @@ public final class Camera {
      * </pre>
      *
      * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
-     * @return Whether the distortionParameters field is set.
      */
     @java.lang.Override
     public boolean hasDistortionParameters() {
@@ -8035,7 +5150,6 @@ public final class Camera {
      * </pre>
      *
      * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
-     * @return The distortionParameters.
      */
     @java.lang.Override
     public com.viam.component.camera.v1.Camera.DistortionParameters getDistortionParameters() {
@@ -8050,15 +5164,47 @@ public final class Camera {
      *
      * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
      */
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.DistortionParametersOrBuilder getDistortionParametersOrBuilder() {
-      return distortionParameters_ == null ? com.viam.component.camera.v1.Camera.DistortionParameters.getDefaultInstance() : distortionParameters_;
+    private void setDistortionParameters(com.viam.component.camera.v1.Camera.DistortionParameters value) {
+      value.getClass();
+  distortionParameters_ = value;
+      bitField0_ |= 0x00000002;
+      }
+    /**
+     * <pre>
+     * Parameters for modeling lens distortion in cameras
+     * If camera does not provide distortion parameters, leave the field empty
+     * Initializing the parameters with 0-values is considered an error
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeDistortionParameters(com.viam.component.camera.v1.Camera.DistortionParameters value) {
+      value.getClass();
+  if (distortionParameters_ != null &&
+          distortionParameters_ != com.viam.component.camera.v1.Camera.DistortionParameters.getDefaultInstance()) {
+        distortionParameters_ =
+          com.viam.component.camera.v1.Camera.DistortionParameters.newBuilder(distortionParameters_).mergeFrom(value).buildPartial();
+      } else {
+        distortionParameters_ = value;
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <pre>
+     * Parameters for modeling lens distortion in cameras
+     * If camera does not provide distortion parameters, leave the field empty
+     * Initializing the parameters with 0-values is considered an error
+     * </pre>
+     *
+     * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
+     */
+    private void clearDistortionParameters() {  distortionParameters_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
     }
 
     public static final int MIME_TYPES_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList mimeTypes_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> mimeTypes_;
     /**
      * <pre>
      * Supported MIME types by the camera
@@ -8067,8 +5213,8 @@ public final class Camera {
      * <code>repeated string mime_types = 4 [json_name = "mimeTypes"];</code>
      * @return A list containing the mimeTypes.
      */
-    public com.google.protobuf.ProtocolStringList
-        getMimeTypesList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getMimeTypesList() {
       return mimeTypes_;
     }
     /**
@@ -8079,6 +5225,7 @@ public final class Camera {
      * <code>repeated string mime_types = 4 [json_name = "mimeTypes"];</code>
      * @return The count of mimeTypes.
      */
+    @java.lang.Override
     public int getMimeTypesCount() {
       return mimeTypes_.size();
     }
@@ -8091,6 +5238,7 @@ public final class Camera {
      * @param index The index of the element to return.
      * @return The mimeTypes at the given index.
      */
+    @java.lang.Override
     public java.lang.String getMimeTypes(int index) {
       return mimeTypes_.get(index);
     }
@@ -8103,460 +5251,184 @@ public final class Camera {
      * @param index The index of the value to return.
      * @return The bytes of the mimeTypes at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getMimeTypesBytes(int index) {
-      return mimeTypes_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          mimeTypes_.get(index));
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureMimeTypesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          mimeTypes_;  if (!tmp.isModifiable()) {
+        mimeTypes_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (supportsPcd_ != false) {
-        output.writeBool(1, supportsPcd_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getIntrinsicParameters());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(3, getDistortionParameters());
-      }
-      for (int i = 0; i < mimeTypes_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, mimeTypes_.getRaw(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <pre>
+     * Supported MIME types by the camera
+     * </pre>
+     *
+     * <code>repeated string mime_types = 4 [json_name = "mimeTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The mimeTypes to set.
+     */
+    private void setMimeTypes(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureMimeTypesIsMutable();
+      mimeTypes_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (supportsPcd_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, supportsPcd_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getIntrinsicParameters());
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getDistortionParameters());
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < mimeTypes_.size(); i++) {
-          dataSize += computeStringSizeNoTag(mimeTypes_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getMimeTypesList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <pre>
+     * Supported MIME types by the camera
+     * </pre>
+     *
+     * <code>repeated string mime_types = 4 [json_name = "mimeTypes"];</code>
+     * @param value The mimeTypes to add.
+     */
+    private void addMimeTypes(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureMimeTypesIsMutable();
+      mimeTypes_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.GetPropertiesResponse)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.GetPropertiesResponse other = (com.viam.component.camera.v1.Camera.GetPropertiesResponse) obj;
-
-      if (getSupportsPcd()
-          != other.getSupportsPcd()) return false;
-      if (hasIntrinsicParameters() != other.hasIntrinsicParameters()) return false;
-      if (hasIntrinsicParameters()) {
-        if (!getIntrinsicParameters()
-            .equals(other.getIntrinsicParameters())) return false;
-      }
-      if (hasDistortionParameters() != other.hasDistortionParameters()) return false;
-      if (hasDistortionParameters()) {
-        if (!getDistortionParameters()
-            .equals(other.getDistortionParameters())) return false;
-      }
-      if (!getMimeTypesList()
-          .equals(other.getMimeTypesList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <pre>
+     * Supported MIME types by the camera
+     * </pre>
+     *
+     * <code>repeated string mime_types = 4 [json_name = "mimeTypes"];</code>
+     * @param values The mimeTypes to add.
+     */
+    private void addAllMimeTypes(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureMimeTypesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, mimeTypes_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SUPPORTS_PCD_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getSupportsPcd());
-      if (hasIntrinsicParameters()) {
-        hash = (37 * hash) + INTRINSIC_PARAMETERS_FIELD_NUMBER;
-        hash = (53 * hash) + getIntrinsicParameters().hashCode();
-      }
-      if (hasDistortionParameters()) {
-        hash = (37 * hash) + DISTORTION_PARAMETERS_FIELD_NUMBER;
-        hash = (53 * hash) + getDistortionParameters().hashCode();
-      }
-      if (getMimeTypesCount() > 0) {
-        hash = (37 * hash) + MIME_TYPES_FIELD_NUMBER;
-        hash = (53 * hash) + getMimeTypesList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <pre>
+     * Supported MIME types by the camera
+     * </pre>
+     *
+     * <code>repeated string mime_types = 4 [json_name = "mimeTypes"];</code>
+     */
+    private void clearMimeTypes() {
+      mimeTypes_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Supported MIME types by the camera
+     * </pre>
+     *
+     * <code>repeated string mime_types = 4 [json_name = "mimeTypes"];</code>
+     * @param value The bytes of the mimeTypes to add.
+     */
+    private void addMimeTypesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureMimeTypesIsMutable();
+      mimeTypes_.add(value.toStringUtf8());
     }
 
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.GetPropertiesResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.GetPropertiesResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.GetPropertiesResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.GetPropertiesResponse)
         com.viam.component.camera.v1.Camera.GetPropertiesResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPropertiesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPropertiesResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.GetPropertiesResponse.class, com.viam.component.camera.v1.Camera.GetPropertiesResponse.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.GetPropertiesResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getIntrinsicParametersFieldBuilder();
-          getDistortionParametersFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        supportsPcd_ = false;
-        intrinsicParameters_ = null;
-        if (intrinsicParametersBuilder_ != null) {
-          intrinsicParametersBuilder_.dispose();
-          intrinsicParametersBuilder_ = null;
-        }
-        distortionParameters_ = null;
-        if (distortionParametersBuilder_ != null) {
-          distortionParametersBuilder_.dispose();
-          distortionParametersBuilder_ = null;
-        }
-        mimeTypes_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_GetPropertiesResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetPropertiesResponse getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.GetPropertiesResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetPropertiesResponse build() {
-        com.viam.component.camera.v1.Camera.GetPropertiesResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.GetPropertiesResponse buildPartial() {
-        com.viam.component.camera.v1.Camera.GetPropertiesResponse result = new com.viam.component.camera.v1.Camera.GetPropertiesResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.GetPropertiesResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.supportsPcd_ = supportsPcd_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.intrinsicParameters_ = intrinsicParametersBuilder_ == null
-              ? intrinsicParameters_
-              : intrinsicParametersBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.distortionParameters_ = distortionParametersBuilder_ == null
-              ? distortionParameters_
-              : distortionParametersBuilder_.build();
-          to_bitField0_ |= 0x00000002;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          mimeTypes_.makeImmutable();
-          result.mimeTypes_ = mimeTypes_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.GetPropertiesResponse) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.GetPropertiesResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.GetPropertiesResponse other) {
-        if (other == com.viam.component.camera.v1.Camera.GetPropertiesResponse.getDefaultInstance()) return this;
-        if (other.getSupportsPcd() != false) {
-          setSupportsPcd(other.getSupportsPcd());
-        }
-        if (other.hasIntrinsicParameters()) {
-          mergeIntrinsicParameters(other.getIntrinsicParameters());
-        }
-        if (other.hasDistortionParameters()) {
-          mergeDistortionParameters(other.getDistortionParameters());
-        }
-        if (!other.mimeTypes_.isEmpty()) {
-          if (mimeTypes_.isEmpty()) {
-            mimeTypes_ = other.mimeTypes_;
-            bitField0_ |= 0x00000008;
-          } else {
-            ensureMimeTypesIsMutable();
-            mimeTypes_.addAll(other.mimeTypes_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                supportsPcd_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 18: {
-                input.readMessage(
-                    getIntrinsicParametersFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                input.readMessage(
-                    getDistortionParametersFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 34: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureMimeTypesIsMutable();
-                mimeTypes_.add(s);
-                break;
-              } // case 34
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean supportsPcd_ ;
       /**
        * <pre>
        * A boolean property determining whether the camera supports the return of pointcloud data
@@ -8567,7 +5439,7 @@ public final class Camera {
        */
       @java.lang.Override
       public boolean getSupportsPcd() {
-        return supportsPcd_;
+        return instance.getSupportsPcd();
       }
       /**
        * <pre>
@@ -8579,10 +5451,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder setSupportsPcd(boolean value) {
-
-        supportsPcd_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSupportsPcd(value);
         return this;
       }
       /**
@@ -8594,15 +5464,11 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearSupportsPcd() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        supportsPcd_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearSupportsPcd();
         return this;
       }
 
-      private com.viam.component.camera.v1.Camera.IntrinsicParameters intrinsicParameters_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.camera.v1.Camera.IntrinsicParameters, com.viam.component.camera.v1.Camera.IntrinsicParameters.Builder, com.viam.component.camera.v1.Camera.IntrinsicParametersOrBuilder> intrinsicParametersBuilder_;
       /**
        * <pre>
        * Parameters for doing a perspective of a 3D scene to a 2D plane
@@ -8611,10 +5477,10 @@ public final class Camera {
        * </pre>
        *
        * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
-       * @return Whether the intrinsicParameters field is set.
        */
+      @java.lang.Override
       public boolean hasIntrinsicParameters() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasIntrinsicParameters();
       }
       /**
        * <pre>
@@ -8624,14 +5490,10 @@ public final class Camera {
        * </pre>
        *
        * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
-       * @return The intrinsicParameters.
        */
+      @java.lang.Override
       public com.viam.component.camera.v1.Camera.IntrinsicParameters getIntrinsicParameters() {
-        if (intrinsicParametersBuilder_ == null) {
-          return intrinsicParameters_ == null ? com.viam.component.camera.v1.Camera.IntrinsicParameters.getDefaultInstance() : intrinsicParameters_;
-        } else {
-          return intrinsicParametersBuilder_.getMessage();
-        }
+        return instance.getIntrinsicParameters();
       }
       /**
        * <pre>
@@ -8643,18 +5505,10 @@ public final class Camera {
        * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
        */
       public Builder setIntrinsicParameters(com.viam.component.camera.v1.Camera.IntrinsicParameters value) {
-        if (intrinsicParametersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          intrinsicParameters_ = value;
-        } else {
-          intrinsicParametersBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setIntrinsicParameters(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Parameters for doing a perspective of a 3D scene to a 2D plane
@@ -8666,13 +5520,8 @@ public final class Camera {
        */
       public Builder setIntrinsicParameters(
           com.viam.component.camera.v1.Camera.IntrinsicParameters.Builder builderForValue) {
-        if (intrinsicParametersBuilder_ == null) {
-          intrinsicParameters_ = builderForValue.build();
-        } else {
-          intrinsicParametersBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setIntrinsicParameters(builderForValue.build());
         return this;
       }
       /**
@@ -8685,21 +5534,8 @@ public final class Camera {
        * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
        */
       public Builder mergeIntrinsicParameters(com.viam.component.camera.v1.Camera.IntrinsicParameters value) {
-        if (intrinsicParametersBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            intrinsicParameters_ != null &&
-            intrinsicParameters_ != com.viam.component.camera.v1.Camera.IntrinsicParameters.getDefaultInstance()) {
-            getIntrinsicParametersBuilder().mergeFrom(value);
-          } else {
-            intrinsicParameters_ = value;
-          }
-        } else {
-          intrinsicParametersBuilder_.mergeFrom(value);
-        }
-        if (intrinsicParameters_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeIntrinsicParameters(value);
         return this;
       }
       /**
@@ -8711,73 +5547,11 @@ public final class Camera {
        *
        * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
        */
-      public Builder clearIntrinsicParameters() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        intrinsicParameters_ = null;
-        if (intrinsicParametersBuilder_ != null) {
-          intrinsicParametersBuilder_.dispose();
-          intrinsicParametersBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearIntrinsicParameters() {  copyOnWrite();
+        instance.clearIntrinsicParameters();
         return this;
-      }
-      /**
-       * <pre>
-       * Parameters for doing a perspective of a 3D scene to a 2D plane
-       * If camera does not provide intrinsic parameters, leave the field empty
-       * Initializing the parameters with 0-values is considered an error
-       * </pre>
-       *
-       * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.IntrinsicParameters.Builder getIntrinsicParametersBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getIntrinsicParametersFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Parameters for doing a perspective of a 3D scene to a 2D plane
-       * If camera does not provide intrinsic parameters, leave the field empty
-       * Initializing the parameters with 0-values is considered an error
-       * </pre>
-       *
-       * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.IntrinsicParametersOrBuilder getIntrinsicParametersOrBuilder() {
-        if (intrinsicParametersBuilder_ != null) {
-          return intrinsicParametersBuilder_.getMessageOrBuilder();
-        } else {
-          return intrinsicParameters_ == null ?
-              com.viam.component.camera.v1.Camera.IntrinsicParameters.getDefaultInstance() : intrinsicParameters_;
-        }
-      }
-      /**
-       * <pre>
-       * Parameters for doing a perspective of a 3D scene to a 2D plane
-       * If camera does not provide intrinsic parameters, leave the field empty
-       * Initializing the parameters with 0-values is considered an error
-       * </pre>
-       *
-       * <code>.viam.component.camera.v1.IntrinsicParameters intrinsic_parameters = 2 [json_name = "intrinsicParameters"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.camera.v1.Camera.IntrinsicParameters, com.viam.component.camera.v1.Camera.IntrinsicParameters.Builder, com.viam.component.camera.v1.Camera.IntrinsicParametersOrBuilder> 
-          getIntrinsicParametersFieldBuilder() {
-        if (intrinsicParametersBuilder_ == null) {
-          intrinsicParametersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.component.camera.v1.Camera.IntrinsicParameters, com.viam.component.camera.v1.Camera.IntrinsicParameters.Builder, com.viam.component.camera.v1.Camera.IntrinsicParametersOrBuilder>(
-                  getIntrinsicParameters(),
-                  getParentForChildren(),
-                  isClean());
-          intrinsicParameters_ = null;
-        }
-        return intrinsicParametersBuilder_;
       }
 
-      private com.viam.component.camera.v1.Camera.DistortionParameters distortionParameters_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.camera.v1.Camera.DistortionParameters, com.viam.component.camera.v1.Camera.DistortionParameters.Builder, com.viam.component.camera.v1.Camera.DistortionParametersOrBuilder> distortionParametersBuilder_;
       /**
        * <pre>
        * Parameters for modeling lens distortion in cameras
@@ -8786,10 +5560,10 @@ public final class Camera {
        * </pre>
        *
        * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
-       * @return Whether the distortionParameters field is set.
        */
+      @java.lang.Override
       public boolean hasDistortionParameters() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return instance.hasDistortionParameters();
       }
       /**
        * <pre>
@@ -8799,14 +5573,10 @@ public final class Camera {
        * </pre>
        *
        * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
-       * @return The distortionParameters.
        */
+      @java.lang.Override
       public com.viam.component.camera.v1.Camera.DistortionParameters getDistortionParameters() {
-        if (distortionParametersBuilder_ == null) {
-          return distortionParameters_ == null ? com.viam.component.camera.v1.Camera.DistortionParameters.getDefaultInstance() : distortionParameters_;
-        } else {
-          return distortionParametersBuilder_.getMessage();
-        }
+        return instance.getDistortionParameters();
       }
       /**
        * <pre>
@@ -8818,18 +5588,10 @@ public final class Camera {
        * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
        */
       public Builder setDistortionParameters(com.viam.component.camera.v1.Camera.DistortionParameters value) {
-        if (distortionParametersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          distortionParameters_ = value;
-        } else {
-          distortionParametersBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setDistortionParameters(value);
         return this;
-      }
+        }
       /**
        * <pre>
        * Parameters for modeling lens distortion in cameras
@@ -8841,13 +5603,8 @@ public final class Camera {
        */
       public Builder setDistortionParameters(
           com.viam.component.camera.v1.Camera.DistortionParameters.Builder builderForValue) {
-        if (distortionParametersBuilder_ == null) {
-          distortionParameters_ = builderForValue.build();
-        } else {
-          distortionParametersBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setDistortionParameters(builderForValue.build());
         return this;
       }
       /**
@@ -8860,21 +5617,8 @@ public final class Camera {
        * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
        */
       public Builder mergeDistortionParameters(com.viam.component.camera.v1.Camera.DistortionParameters value) {
-        if (distortionParametersBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            distortionParameters_ != null &&
-            distortionParameters_ != com.viam.component.camera.v1.Camera.DistortionParameters.getDefaultInstance()) {
-            getDistortionParametersBuilder().mergeFrom(value);
-          } else {
-            distortionParameters_ = value;
-          }
-        } else {
-          distortionParametersBuilder_.mergeFrom(value);
-        }
-        if (distortionParameters_ != null) {
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeDistortionParameters(value);
         return this;
       }
       /**
@@ -8886,78 +5630,11 @@ public final class Camera {
        *
        * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
        */
-      public Builder clearDistortionParameters() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        distortionParameters_ = null;
-        if (distortionParametersBuilder_ != null) {
-          distortionParametersBuilder_.dispose();
-          distortionParametersBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearDistortionParameters() {  copyOnWrite();
+        instance.clearDistortionParameters();
         return this;
-      }
-      /**
-       * <pre>
-       * Parameters for modeling lens distortion in cameras
-       * If camera does not provide distortion parameters, leave the field empty
-       * Initializing the parameters with 0-values is considered an error
-       * </pre>
-       *
-       * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.DistortionParameters.Builder getDistortionParametersBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getDistortionParametersFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Parameters for modeling lens distortion in cameras
-       * If camera does not provide distortion parameters, leave the field empty
-       * Initializing the parameters with 0-values is considered an error
-       * </pre>
-       *
-       * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.DistortionParametersOrBuilder getDistortionParametersOrBuilder() {
-        if (distortionParametersBuilder_ != null) {
-          return distortionParametersBuilder_.getMessageOrBuilder();
-        } else {
-          return distortionParameters_ == null ?
-              com.viam.component.camera.v1.Camera.DistortionParameters.getDefaultInstance() : distortionParameters_;
-        }
-      }
-      /**
-       * <pre>
-       * Parameters for modeling lens distortion in cameras
-       * If camera does not provide distortion parameters, leave the field empty
-       * Initializing the parameters with 0-values is considered an error
-       * </pre>
-       *
-       * <code>.viam.component.camera.v1.DistortionParameters distortion_parameters = 3 [json_name = "distortionParameters"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.component.camera.v1.Camera.DistortionParameters, com.viam.component.camera.v1.Camera.DistortionParameters.Builder, com.viam.component.camera.v1.Camera.DistortionParametersOrBuilder> 
-          getDistortionParametersFieldBuilder() {
-        if (distortionParametersBuilder_ == null) {
-          distortionParametersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.component.camera.v1.Camera.DistortionParameters, com.viam.component.camera.v1.Camera.DistortionParameters.Builder, com.viam.component.camera.v1.Camera.DistortionParametersOrBuilder>(
-                  getDistortionParameters(),
-                  getParentForChildren(),
-                  isClean());
-          distortionParameters_ = null;
-        }
-        return distortionParametersBuilder_;
       }
 
-      private com.google.protobuf.LazyStringArrayList mimeTypes_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureMimeTypesIsMutable() {
-        if (!mimeTypes_.isModifiable()) {
-          mimeTypes_ = new com.google.protobuf.LazyStringArrayList(mimeTypes_);
-        }
-        bitField0_ |= 0x00000008;
-      }
       /**
        * <pre>
        * Supported MIME types by the camera
@@ -8966,10 +5643,11 @@ public final class Camera {
        * <code>repeated string mime_types = 4 [json_name = "mimeTypes"];</code>
        * @return A list containing the mimeTypes.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getMimeTypesList() {
-        mimeTypes_.makeImmutable();
-        return mimeTypes_;
+        return java.util.Collections.unmodifiableList(
+            instance.getMimeTypesList());
       }
       /**
        * <pre>
@@ -8979,8 +5657,9 @@ public final class Camera {
        * <code>repeated string mime_types = 4 [json_name = "mimeTypes"];</code>
        * @return The count of mimeTypes.
        */
+      @java.lang.Override
       public int getMimeTypesCount() {
-        return mimeTypes_.size();
+        return instance.getMimeTypesCount();
       }
       /**
        * <pre>
@@ -8991,8 +5670,9 @@ public final class Camera {
        * @param index The index of the element to return.
        * @return The mimeTypes at the given index.
        */
+      @java.lang.Override
       public java.lang.String getMimeTypes(int index) {
-        return mimeTypes_.get(index);
+        return instance.getMimeTypes(index);
       }
       /**
        * <pre>
@@ -9003,9 +5683,10 @@ public final class Camera {
        * @param index The index of the value to return.
        * @return The bytes of the mimeTypes at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getMimeTypesBytes(int index) {
-        return mimeTypes_.getByteString(index);
+        return instance.getMimeTypesBytes(index);
       }
       /**
        * <pre>
@@ -9019,11 +5700,8 @@ public final class Camera {
        */
       public Builder setMimeTypes(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureMimeTypesIsMutable();
-        mimeTypes_.set(index, value);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setMimeTypes(index, value);
         return this;
       }
       /**
@@ -9037,11 +5715,8 @@ public final class Camera {
        */
       public Builder addMimeTypes(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureMimeTypesIsMutable();
-        mimeTypes_.add(value);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.addMimeTypes(value);
         return this;
       }
       /**
@@ -9055,11 +5730,8 @@ public final class Camera {
        */
       public Builder addAllMimeTypes(
           java.lang.Iterable<java.lang.String> values) {
-        ensureMimeTypesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, mimeTypes_);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.addAllMimeTypes(values);
         return this;
       }
       /**
@@ -9071,10 +5743,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearMimeTypes() {
-        mimeTypes_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);;
-        onChanged();
+        copyOnWrite();
+        instance.clearMimeTypes();
         return this;
       }
       /**
@@ -9088,81 +5758,93 @@ public final class Camera {
        */
       public Builder addMimeTypesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureMimeTypesIsMutable();
-        mimeTypes_.add(value);
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.addMimeTypesBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.GetPropertiesResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.GetPropertiesResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "supportsPcd_",
+              "intrinsicParameters_",
+              "distortionParameters_",
+              "mimeTypes_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0001\u0000\u0001\u0007\u0002\u1009" +
+                "\u0000\u0003\u1009\u0001\u0004\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.GetPropertiesResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.GetPropertiesResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.GetPropertiesResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.GetPropertiesResponse)
     private static final com.viam.component.camera.v1.Camera.GetPropertiesResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.GetPropertiesResponse();
+      GetPropertiesResponse defaultInstance = new GetPropertiesResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetPropertiesResponse.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.GetPropertiesResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<GetPropertiesResponse>
-        PARSER = new com.google.protobuf.AbstractParser<GetPropertiesResponse>() {
-      @java.lang.Override
-      public GetPropertiesResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<GetPropertiesResponse> PARSER;
 
     public static com.google.protobuf.Parser<GetPropertiesResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<GetPropertiesResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.GetPropertiesResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface WebcamsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.Webcams)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
@@ -9177,56 +5859,20 @@ public final class Camera {
      * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
      */
     int getWebcamsCount();
-    /**
-     * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
-     */
-    java.util.List<? extends com.viam.component.camera.v1.Camera.WebcamOrBuilder> 
-        getWebcamsOrBuilderList();
-    /**
-     * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
-     */
-    com.viam.component.camera.v1.Camera.WebcamOrBuilder getWebcamsOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.component.camera.v1.Webcams}
    */
-  public static final class Webcams extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Webcams extends
+      com.google.protobuf.GeneratedMessageLite<
+          Webcams, Webcams.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.Webcams)
       WebcamsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Webcams.newBuilder() to construct.
-    private Webcams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Webcams() {
-      webcams_ = java.util.Collections.emptyList();
+      webcams_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Webcams();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Webcams_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Webcams_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.Webcams.class, com.viam.component.camera.v1.Camera.Webcams.Builder.class);
-    }
-
     public static final int WEBCAMS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.component.camera.v1.Camera.Webcam> webcams_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.component.camera.v1.Camera.Webcam> webcams_;
     /**
      * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
      */
@@ -9237,7 +5883,6 @@ public final class Camera {
     /**
      * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.component.camera.v1.Camera.WebcamOrBuilder> 
         getWebcamsOrBuilderList() {
       return webcams_;
@@ -9259,443 +5904,192 @@ public final class Camera {
     /**
      * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
      */
-    @java.lang.Override
     public com.viam.component.camera.v1.Camera.WebcamOrBuilder getWebcamsOrBuilder(
         int index) {
       return webcams_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureWebcamsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.component.camera.v1.Camera.Webcam> tmp = webcams_;
+      if (!tmp.isModifiable()) {
+        webcams_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < webcams_.size(); i++) {
-        output.writeMessage(1, webcams_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
+     */
+    private void setWebcams(
+        int index, com.viam.component.camera.v1.Camera.Webcam value) {
+      value.getClass();
+  ensureWebcamsIsMutable();
+      webcams_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < webcams_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, webcams_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
+     */
+    private void addWebcams(com.viam.component.camera.v1.Camera.Webcam value) {
+      value.getClass();
+  ensureWebcamsIsMutable();
+      webcams_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.Webcams)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.Webcams other = (com.viam.component.camera.v1.Camera.Webcams) obj;
-
-      if (!getWebcamsList()
-          .equals(other.getWebcamsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
+     */
+    private void addWebcams(
+        int index, com.viam.component.camera.v1.Camera.Webcam value) {
+      value.getClass();
+  ensureWebcamsIsMutable();
+      webcams_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getWebcamsCount() > 0) {
-        hash = (37 * hash) + WEBCAMS_FIELD_NUMBER;
-        hash = (53 * hash) + getWebcamsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
+     */
+    private void addAllWebcams(
+        java.lang.Iterable<? extends com.viam.component.camera.v1.Camera.Webcam> values) {
+      ensureWebcamsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, webcams_);
+    }
+    /**
+     * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
+     */
+    private void clearWebcams() {
+      webcams_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
+     */
+    private void removeWebcams(int index) {
+      ensureWebcamsIsMutable();
+      webcams_.remove(index);
     }
 
     public static com.viam.component.camera.v1.Camera.Webcams parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.Webcams parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Webcams parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.Webcams parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Webcams parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.Webcams parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Webcams parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.Webcams parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.Webcams parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.Webcams parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Webcams parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.Webcams parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.Webcams prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.Webcams}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.Webcams, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.Webcams)
         com.viam.component.camera.v1.Camera.WebcamsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Webcams_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Webcams_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.Webcams.class, com.viam.component.camera.v1.Camera.Webcams.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.Webcams.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (webcamsBuilder_ == null) {
-          webcams_ = java.util.Collections.emptyList();
-        } else {
-          webcams_ = null;
-          webcamsBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Webcams_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.Webcams getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.Webcams.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.Webcams build() {
-        com.viam.component.camera.v1.Camera.Webcams result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.Webcams buildPartial() {
-        com.viam.component.camera.v1.Camera.Webcams result = new com.viam.component.camera.v1.Camera.Webcams(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.component.camera.v1.Camera.Webcams result) {
-        if (webcamsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            webcams_ = java.util.Collections.unmodifiableList(webcams_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.webcams_ = webcams_;
-        } else {
-          result.webcams_ = webcamsBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.Webcams result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.Webcams) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.Webcams)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.Webcams other) {
-        if (other == com.viam.component.camera.v1.Camera.Webcams.getDefaultInstance()) return this;
-        if (webcamsBuilder_ == null) {
-          if (!other.webcams_.isEmpty()) {
-            if (webcams_.isEmpty()) {
-              webcams_ = other.webcams_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureWebcamsIsMutable();
-              webcams_.addAll(other.webcams_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.webcams_.isEmpty()) {
-            if (webcamsBuilder_.isEmpty()) {
-              webcamsBuilder_.dispose();
-              webcamsBuilder_ = null;
-              webcams_ = other.webcams_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              webcamsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getWebcamsFieldBuilder() : null;
-            } else {
-              webcamsBuilder_.addAllMessages(other.webcams_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.viam.component.camera.v1.Camera.Webcam m =
-                    input.readMessage(
-                        com.viam.component.camera.v1.Camera.Webcam.parser(),
-                        extensionRegistry);
-                if (webcamsBuilder_ == null) {
-                  ensureWebcamsIsMutable();
-                  webcams_.add(m);
-                } else {
-                  webcamsBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.viam.component.camera.v1.Camera.Webcam> webcams_ =
-        java.util.Collections.emptyList();
-      private void ensureWebcamsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          webcams_ = new java.util.ArrayList<com.viam.component.camera.v1.Camera.Webcam>(webcams_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.component.camera.v1.Camera.Webcam, com.viam.component.camera.v1.Camera.Webcam.Builder, com.viam.component.camera.v1.Camera.WebcamOrBuilder> webcamsBuilder_;
 
       /**
        * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.component.camera.v1.Camera.Webcam> getWebcamsList() {
-        if (webcamsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(webcams_);
-        } else {
-          return webcamsBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getWebcamsList());
       }
       /**
        * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
        */
+      @java.lang.Override
       public int getWebcamsCount() {
-        if (webcamsBuilder_ == null) {
-          return webcams_.size();
-        } else {
-          return webcamsBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getWebcamsCount();
+      }/**
        * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
        */
+      @java.lang.Override
       public com.viam.component.camera.v1.Camera.Webcam getWebcams(int index) {
-        if (webcamsBuilder_ == null) {
-          return webcams_.get(index);
-        } else {
-          return webcamsBuilder_.getMessage(index);
-        }
+        return instance.getWebcams(index);
       }
       /**
        * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
        */
       public Builder setWebcams(
           int index, com.viam.component.camera.v1.Camera.Webcam value) {
-        if (webcamsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureWebcamsIsMutable();
-          webcams_.set(index, value);
-          onChanged();
-        } else {
-          webcamsBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setWebcams(index, value);
         return this;
       }
       /**
@@ -9703,29 +6097,17 @@ public final class Camera {
        */
       public Builder setWebcams(
           int index, com.viam.component.camera.v1.Camera.Webcam.Builder builderForValue) {
-        if (webcamsBuilder_ == null) {
-          ensureWebcamsIsMutable();
-          webcams_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          webcamsBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setWebcams(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
        */
       public Builder addWebcams(com.viam.component.camera.v1.Camera.Webcam value) {
-        if (webcamsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureWebcamsIsMutable();
-          webcams_.add(value);
-          onChanged();
-        } else {
-          webcamsBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addWebcams(value);
         return this;
       }
       /**
@@ -9733,16 +6115,8 @@ public final class Camera {
        */
       public Builder addWebcams(
           int index, com.viam.component.camera.v1.Camera.Webcam value) {
-        if (webcamsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureWebcamsIsMutable();
-          webcams_.add(index, value);
-          onChanged();
-        } else {
-          webcamsBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addWebcams(index, value);
         return this;
       }
       /**
@@ -9750,13 +6124,8 @@ public final class Camera {
        */
       public Builder addWebcams(
           com.viam.component.camera.v1.Camera.Webcam.Builder builderForValue) {
-        if (webcamsBuilder_ == null) {
-          ensureWebcamsIsMutable();
-          webcams_.add(builderForValue.build());
-          onChanged();
-        } else {
-          webcamsBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addWebcams(builderForValue.build());
         return this;
       }
       /**
@@ -9764,13 +6133,9 @@ public final class Camera {
        */
       public Builder addWebcams(
           int index, com.viam.component.camera.v1.Camera.Webcam.Builder builderForValue) {
-        if (webcamsBuilder_ == null) {
-          ensureWebcamsIsMutable();
-          webcams_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          webcamsBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addWebcams(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -9778,173 +6143,105 @@ public final class Camera {
        */
       public Builder addAllWebcams(
           java.lang.Iterable<? extends com.viam.component.camera.v1.Camera.Webcam> values) {
-        if (webcamsBuilder_ == null) {
-          ensureWebcamsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, webcams_);
-          onChanged();
-        } else {
-          webcamsBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllWebcams(values);
         return this;
       }
       /**
        * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
        */
       public Builder clearWebcams() {
-        if (webcamsBuilder_ == null) {
-          webcams_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          webcamsBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearWebcams();
         return this;
       }
       /**
        * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
        */
       public Builder removeWebcams(int index) {
-        if (webcamsBuilder_ == null) {
-          ensureWebcamsIsMutable();
-          webcams_.remove(index);
-          onChanged();
-        } else {
-          webcamsBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeWebcams(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.Webcam.Builder getWebcamsBuilder(
-          int index) {
-        return getWebcamsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.WebcamOrBuilder getWebcamsOrBuilder(
-          int index) {
-        if (webcamsBuilder_ == null) {
-          return webcams_.get(index);  } else {
-          return webcamsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
-       */
-      public java.util.List<? extends com.viam.component.camera.v1.Camera.WebcamOrBuilder> 
-           getWebcamsOrBuilderList() {
-        if (webcamsBuilder_ != null) {
-          return webcamsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(webcams_);
-        }
-      }
-      /**
-       * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.Webcam.Builder addWebcamsBuilder() {
-        return getWebcamsFieldBuilder().addBuilder(
-            com.viam.component.camera.v1.Camera.Webcam.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.Webcam.Builder addWebcamsBuilder(
-          int index) {
-        return getWebcamsFieldBuilder().addBuilder(
-            index, com.viam.component.camera.v1.Camera.Webcam.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.component.camera.v1.Webcam webcams = 1 [json_name = "webcams"];</code>
-       */
-      public java.util.List<com.viam.component.camera.v1.Camera.Webcam.Builder> 
-           getWebcamsBuilderList() {
-        return getWebcamsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.component.camera.v1.Camera.Webcam, com.viam.component.camera.v1.Camera.Webcam.Builder, com.viam.component.camera.v1.Camera.WebcamOrBuilder> 
-          getWebcamsFieldBuilder() {
-        if (webcamsBuilder_ == null) {
-          webcamsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.component.camera.v1.Camera.Webcam, com.viam.component.camera.v1.Camera.Webcam.Builder, com.viam.component.camera.v1.Camera.WebcamOrBuilder>(
-                  webcams_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          webcams_ = null;
-        }
-        return webcamsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.Webcams)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.Webcams();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "webcams_",
+              com.viam.component.camera.v1.Camera.Webcam.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.Webcams> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.Webcams.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.Webcams>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.Webcams)
     private static final com.viam.component.camera.v1.Camera.Webcams DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.Webcams();
+      Webcams defaultInstance = new Webcams();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Webcams.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.Webcams getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Webcams>
-        PARSER = new com.google.protobuf.AbstractParser<Webcams>() {
-      @java.lang.Override
-      public Webcams parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Webcams> PARSER;
 
     public static com.google.protobuf.Parser<Webcams> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Webcams> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.Webcams getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface WebcamOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.Webcam)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -10011,24 +6308,6 @@ public final class Camera {
      * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
      */
     int getPropertiesCount();
-    /**
-     * <pre>
-     * Camera properties
-     * </pre>
-     *
-     * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
-     */
-    java.util.List<? extends com.viam.component.camera.v1.Camera.PropertyOrBuilder> 
-        getPropertiesOrBuilderList();
-    /**
-     * <pre>
-     * Camera properties
-     * </pre>
-     *
-     * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
-     */
-    com.viam.component.camera.v1.Camera.PropertyOrBuilder getPropertiesOrBuilder(
-        int index);
 
     /**
      * <pre>
@@ -10073,46 +6352,20 @@ public final class Camera {
   /**
    * Protobuf type {@code viam.component.camera.v1.Webcam}
    */
-  public static final class Webcam extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Webcam extends
+      com.google.protobuf.GeneratedMessageLite<
+          Webcam, Webcam.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.Webcam)
       WebcamOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Webcam.newBuilder() to construct.
-    private Webcam(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Webcam() {
       label_ = "";
       status_ = "";
-      properties_ = java.util.Collections.emptyList();
+      properties_ = emptyProtobufList();
       name_ = "";
       id_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Webcam();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Webcam_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Webcam_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.Webcam.class, com.viam.component.camera.v1.Camera.Webcam.Builder.class);
-    }
-
     public static final int LABEL_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object label_ = "";
+    private java.lang.String label_;
     /**
      * <pre>
      * Camera driver label (for internal use only)
@@ -10123,16 +6376,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getLabel() {
-      java.lang.Object ref = label_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        label_ = s;
-        return s;
-      }
+      return label_;
     }
     /**
      * <pre>
@@ -10145,21 +6389,50 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getLabelBytes() {
-      java.lang.Object ref = label_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        label_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(label_);
+    }
+    /**
+     * <pre>
+     * Camera driver label (for internal use only)
+     * </pre>
+     *
+     * <code>string label = 1 [json_name = "label"];</code>
+     * @param value The label to set.
+     */
+    private void setLabel(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      label_ = value;
+    }
+    /**
+     * <pre>
+     * Camera driver label (for internal use only)
+     * </pre>
+     *
+     * <code>string label = 1 [json_name = "label"];</code>
+     */
+    private void clearLabel() {
+
+      label_ = getDefaultInstance().getLabel();
+    }
+    /**
+     * <pre>
+     * Camera driver label (for internal use only)
+     * </pre>
+     *
+     * <code>string label = 1 [json_name = "label"];</code>
+     * @param value The bytes for label to set.
+     */
+    private void setLabelBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      label_ = value.toStringUtf8();
+
     }
 
     public static final int STATUS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object status_ = "";
+    private java.lang.String status_;
     /**
      * <pre>
      * Camera driver status
@@ -10170,16 +6443,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getStatus() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        status_ = s;
-        return s;
-      }
+      return status_;
     }
     /**
      * <pre>
@@ -10192,21 +6456,50 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getStatusBytes() {
-      java.lang.Object ref = status_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        status_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(status_);
+    }
+    /**
+     * <pre>
+     * Camera driver status
+     * </pre>
+     *
+     * <code>string status = 2 [json_name = "status"];</code>
+     * @param value The status to set.
+     */
+    private void setStatus(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      status_ = value;
+    }
+    /**
+     * <pre>
+     * Camera driver status
+     * </pre>
+     *
+     * <code>string status = 2 [json_name = "status"];</code>
+     */
+    private void clearStatus() {
+
+      status_ = getDefaultInstance().getStatus();
+    }
+    /**
+     * <pre>
+     * Camera driver status
+     * </pre>
+     *
+     * <code>string status = 2 [json_name = "status"];</code>
+     * @param value The bytes for status to set.
+     */
+    private void setStatusBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      status_ = value.toStringUtf8();
+
     }
 
     public static final int PROPERTIES_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private java.util.List<com.viam.component.camera.v1.Camera.Property> properties_;
+    private com.google.protobuf.Internal.ProtobufList<com.viam.component.camera.v1.Camera.Property> properties_;
     /**
      * <pre>
      * Camera properties
@@ -10225,7 +6518,6 @@ public final class Camera {
      *
      * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends com.viam.component.camera.v1.Camera.PropertyOrBuilder> 
         getPropertiesOrBuilderList() {
       return properties_;
@@ -10259,15 +6551,93 @@ public final class Camera {
      *
      * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
      */
-    @java.lang.Override
     public com.viam.component.camera.v1.Camera.PropertyOrBuilder getPropertiesOrBuilder(
         int index) {
       return properties_.get(index);
     }
+    private void ensurePropertiesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<com.viam.component.camera.v1.Camera.Property> tmp = properties_;
+      if (!tmp.isModifiable()) {
+        properties_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
+    }
+
+    /**
+     * <pre>
+     * Camera properties
+     * </pre>
+     *
+     * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
+     */
+    private void setProperties(
+        int index, com.viam.component.camera.v1.Camera.Property value) {
+      value.getClass();
+  ensurePropertiesIsMutable();
+      properties_.set(index, value);
+    }
+    /**
+     * <pre>
+     * Camera properties
+     * </pre>
+     *
+     * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
+     */
+    private void addProperties(com.viam.component.camera.v1.Camera.Property value) {
+      value.getClass();
+  ensurePropertiesIsMutable();
+      properties_.add(value);
+    }
+    /**
+     * <pre>
+     * Camera properties
+     * </pre>
+     *
+     * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
+     */
+    private void addProperties(
+        int index, com.viam.component.camera.v1.Camera.Property value) {
+      value.getClass();
+  ensurePropertiesIsMutable();
+      properties_.add(index, value);
+    }
+    /**
+     * <pre>
+     * Camera properties
+     * </pre>
+     *
+     * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
+     */
+    private void addAllProperties(
+        java.lang.Iterable<? extends com.viam.component.camera.v1.Camera.Property> values) {
+      ensurePropertiesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, properties_);
+    }
+    /**
+     * <pre>
+     * Camera properties
+     * </pre>
+     *
+     * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
+     */
+    private void clearProperties() {
+      properties_ = emptyProtobufList();
+    }
+    /**
+     * <pre>
+     * Camera properties
+     * </pre>
+     *
+     * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
+     */
+    private void removeProperties(int index) {
+      ensurePropertiesIsMutable();
+      properties_.remove(index);
+    }
 
     public static final int NAME_FIELD_NUMBER = 4;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <pre>
      * Camera human-readable driver name
@@ -10278,16 +6648,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <pre>
@@ -10300,21 +6661,50 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
+    }
+    /**
+     * <pre>
+     * Camera human-readable driver name
+     * </pre>
+     *
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
+    }
+    /**
+     * <pre>
+     * Camera human-readable driver name
+     * </pre>
+     *
+     * <code>string name = 4 [json_name = "name"];</code>
+     */
+    private void clearName() {
+
+      name_ = getDefaultInstance().getName();
+    }
+    /**
+     * <pre>
+     * Camera human-readable driver name
+     * </pre>
+     *
+     * <code>string name = 4 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
+
     }
 
     public static final int ID_FIELD_NUMBER = 5;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object id_ = "";
+    private java.lang.String id_;
     /**
      * <pre>
      * Camera unique identifier
@@ -10325,16 +6715,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
+      return id_;
     }
     /**
      * <pre>
@@ -10347,489 +6728,145 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(id_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Camera unique identifier
+     * </pre>
+     *
+     * <code>string id = 5 [json_name = "id"];</code>
+     * @param value The id to set.
+     */
+    private void setId(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      id_ = value;
     }
+    /**
+     * <pre>
+     * Camera unique identifier
+     * </pre>
+     *
+     * <code>string id = 5 [json_name = "id"];</code>
+     */
+    private void clearId() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, label_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, status_);
-      }
-      for (int i = 0; i < properties_.size(); i++) {
-        output.writeMessage(3, properties_.get(i));
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, id_);
-      }
-      getUnknownFields().writeTo(output);
+      id_ = getDefaultInstance().getId();
     }
+    /**
+     * <pre>
+     * Camera unique identifier
+     * </pre>
+     *
+     * <code>string id = 5 [json_name = "id"];</code>
+     * @param value The bytes for id to set.
+     */
+    private void setIdBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      id_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, label_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, status_);
-      }
-      for (int i = 0; i < properties_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, properties_.get(i));
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, id_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.Webcam)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.Webcam other = (com.viam.component.camera.v1.Camera.Webcam) obj;
-
-      if (!getLabel()
-          .equals(other.getLabel())) return false;
-      if (!getStatus()
-          .equals(other.getStatus())) return false;
-      if (!getPropertiesList()
-          .equals(other.getPropertiesList())) return false;
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getId()
-          .equals(other.getId())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + LABEL_FIELD_NUMBER;
-      hash = (53 * hash) + getLabel().hashCode();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + getStatus().hashCode();
-      if (getPropertiesCount() > 0) {
-        hash = (37 * hash) + PROPERTIES_FIELD_NUMBER;
-        hash = (53 * hash) + getPropertiesList().hashCode();
-      }
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static com.viam.component.camera.v1.Camera.Webcam parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.Webcam parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Webcam parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.Webcam parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Webcam parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.Webcam parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Webcam parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.Webcam parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.Webcam parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.Webcam parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Webcam parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.Webcam parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.Webcam prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.Webcam}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.Webcam, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.Webcam)
         com.viam.component.camera.v1.Camera.WebcamOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Webcam_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Webcam_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.Webcam.class, com.viam.component.camera.v1.Camera.Webcam.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.Webcam.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        label_ = "";
-        status_ = "";
-        if (propertiesBuilder_ == null) {
-          properties_ = java.util.Collections.emptyList();
-        } else {
-          properties_ = null;
-          propertiesBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        name_ = "";
-        id_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Webcam_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.Webcam getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.Webcam.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.Webcam build() {
-        com.viam.component.camera.v1.Camera.Webcam result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.Webcam buildPartial() {
-        com.viam.component.camera.v1.Camera.Webcam result = new com.viam.component.camera.v1.Camera.Webcam(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(com.viam.component.camera.v1.Camera.Webcam result) {
-        if (propertiesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
-            properties_ = java.util.Collections.unmodifiableList(properties_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.properties_ = properties_;
-        } else {
-          result.properties_ = propertiesBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.Webcam result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.label_ = label_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.status_ = status_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.name_ = name_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.id_ = id_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.Webcam) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.Webcam)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.Webcam other) {
-        if (other == com.viam.component.camera.v1.Camera.Webcam.getDefaultInstance()) return this;
-        if (!other.getLabel().isEmpty()) {
-          label_ = other.label_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getStatus().isEmpty()) {
-          status_ = other.status_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        if (propertiesBuilder_ == null) {
-          if (!other.properties_.isEmpty()) {
-            if (properties_.isEmpty()) {
-              properties_ = other.properties_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensurePropertiesIsMutable();
-              properties_.addAll(other.properties_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.properties_.isEmpty()) {
-            if (propertiesBuilder_.isEmpty()) {
-              propertiesBuilder_.dispose();
-              propertiesBuilder_ = null;
-              properties_ = other.properties_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              propertiesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getPropertiesFieldBuilder() : null;
-            } else {
-              propertiesBuilder_.addAllMessages(other.properties_);
-            }
-          }
-        }
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000008;
-          onChanged();
-        }
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          bitField0_ |= 0x00000010;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                label_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                status_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                com.viam.component.camera.v1.Camera.Property m =
-                    input.readMessage(
-                        com.viam.component.camera.v1.Camera.Property.parser(),
-                        extensionRegistry);
-                if (propertiesBuilder_ == null) {
-                  ensurePropertiesIsMutable();
-                  properties_.add(m);
-                } else {
-                  propertiesBuilder_.addMessage(m);
-                }
-                break;
-              } // case 26
-              case 34: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 34
-              case 42: {
-                id_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 42
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object label_ = "";
       /**
        * <pre>
        * Camera driver label (for internal use only)
@@ -10838,17 +6875,9 @@ public final class Camera {
        * <code>string label = 1 [json_name = "label"];</code>
        * @return The label.
        */
+      @java.lang.Override
       public java.lang.String getLabel() {
-        java.lang.Object ref = label_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          label_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getLabel();
       }
       /**
        * <pre>
@@ -10858,18 +6887,10 @@ public final class Camera {
        * <code>string label = 1 [json_name = "label"];</code>
        * @return The bytes for label.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getLabelBytes() {
-        java.lang.Object ref = label_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          label_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getLabelBytes();
       }
       /**
        * <pre>
@@ -10882,10 +6903,8 @@ public final class Camera {
        */
       public Builder setLabel(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        label_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setLabel(value);
         return this;
       }
       /**
@@ -10897,9 +6916,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearLabel() {
-        label_ = getDefaultInstance().getLabel();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearLabel();
         return this;
       }
       /**
@@ -10913,15 +6931,11 @@ public final class Camera {
        */
       public Builder setLabelBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        label_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setLabelBytes(value);
         return this;
       }
 
-      private java.lang.Object status_ = "";
       /**
        * <pre>
        * Camera driver status
@@ -10930,17 +6944,9 @@ public final class Camera {
        * <code>string status = 2 [json_name = "status"];</code>
        * @return The status.
        */
+      @java.lang.Override
       public java.lang.String getStatus() {
-        java.lang.Object ref = status_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          status_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getStatus();
       }
       /**
        * <pre>
@@ -10950,18 +6956,10 @@ public final class Camera {
        * <code>string status = 2 [json_name = "status"];</code>
        * @return The bytes for status.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getStatusBytes() {
-        java.lang.Object ref = status_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          status_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getStatusBytes();
       }
       /**
        * <pre>
@@ -10974,10 +6972,8 @@ public final class Camera {
        */
       public Builder setStatus(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        status_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setStatus(value);
         return this;
       }
       /**
@@ -10989,9 +6985,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        status_ = getDefaultInstance().getStatus();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearStatus();
         return this;
       }
       /**
@@ -11005,26 +7000,11 @@ public final class Camera {
        */
       public Builder setStatusBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        status_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setStatusBytes(value);
         return this;
       }
 
-      private java.util.List<com.viam.component.camera.v1.Camera.Property> properties_ =
-        java.util.Collections.emptyList();
-      private void ensurePropertiesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          properties_ = new java.util.ArrayList<com.viam.component.camera.v1.Camera.Property>(properties_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.component.camera.v1.Camera.Property, com.viam.component.camera.v1.Camera.Property.Builder, com.viam.component.camera.v1.Camera.PropertyOrBuilder> propertiesBuilder_;
-
       /**
        * <pre>
        * Camera properties
@@ -11032,12 +7012,10 @@ public final class Camera {
        *
        * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
        */
+      @java.lang.Override
       public java.util.List<com.viam.component.camera.v1.Camera.Property> getPropertiesList() {
-        if (propertiesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(properties_);
-        } else {
-          return propertiesBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getPropertiesList());
       }
       /**
        * <pre>
@@ -11046,26 +7024,19 @@ public final class Camera {
        *
        * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
        */
+      @java.lang.Override
       public int getPropertiesCount() {
-        if (propertiesBuilder_ == null) {
-          return properties_.size();
-        } else {
-          return propertiesBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getPropertiesCount();
+      }/**
        * <pre>
        * Camera properties
        * </pre>
        *
        * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
        */
+      @java.lang.Override
       public com.viam.component.camera.v1.Camera.Property getProperties(int index) {
-        if (propertiesBuilder_ == null) {
-          return properties_.get(index);
-        } else {
-          return propertiesBuilder_.getMessage(index);
-        }
+        return instance.getProperties(index);
       }
       /**
        * <pre>
@@ -11076,16 +7047,8 @@ public final class Camera {
        */
       public Builder setProperties(
           int index, com.viam.component.camera.v1.Camera.Property value) {
-        if (propertiesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePropertiesIsMutable();
-          properties_.set(index, value);
-          onChanged();
-        } else {
-          propertiesBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setProperties(index, value);
         return this;
       }
       /**
@@ -11097,13 +7060,9 @@ public final class Camera {
        */
       public Builder setProperties(
           int index, com.viam.component.camera.v1.Camera.Property.Builder builderForValue) {
-        if (propertiesBuilder_ == null) {
-          ensurePropertiesIsMutable();
-          properties_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          propertiesBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setProperties(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -11114,16 +7073,8 @@ public final class Camera {
        * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
        */
       public Builder addProperties(com.viam.component.camera.v1.Camera.Property value) {
-        if (propertiesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePropertiesIsMutable();
-          properties_.add(value);
-          onChanged();
-        } else {
-          propertiesBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addProperties(value);
         return this;
       }
       /**
@@ -11135,16 +7086,8 @@ public final class Camera {
        */
       public Builder addProperties(
           int index, com.viam.component.camera.v1.Camera.Property value) {
-        if (propertiesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensurePropertiesIsMutable();
-          properties_.add(index, value);
-          onChanged();
-        } else {
-          propertiesBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addProperties(index, value);
         return this;
       }
       /**
@@ -11156,13 +7099,8 @@ public final class Camera {
        */
       public Builder addProperties(
           com.viam.component.camera.v1.Camera.Property.Builder builderForValue) {
-        if (propertiesBuilder_ == null) {
-          ensurePropertiesIsMutable();
-          properties_.add(builderForValue.build());
-          onChanged();
-        } else {
-          propertiesBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addProperties(builderForValue.build());
         return this;
       }
       /**
@@ -11174,13 +7112,9 @@ public final class Camera {
        */
       public Builder addProperties(
           int index, com.viam.component.camera.v1.Camera.Property.Builder builderForValue) {
-        if (propertiesBuilder_ == null) {
-          ensurePropertiesIsMutable();
-          properties_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          propertiesBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addProperties(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -11192,14 +7126,8 @@ public final class Camera {
        */
       public Builder addAllProperties(
           java.lang.Iterable<? extends com.viam.component.camera.v1.Camera.Property> values) {
-        if (propertiesBuilder_ == null) {
-          ensurePropertiesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, properties_);
-          onChanged();
-        } else {
-          propertiesBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllProperties(values);
         return this;
       }
       /**
@@ -11210,13 +7138,8 @@ public final class Camera {
        * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
        */
       public Builder clearProperties() {
-        if (propertiesBuilder_ == null) {
-          properties_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          propertiesBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearProperties();
         return this;
       }
       /**
@@ -11227,105 +7150,11 @@ public final class Camera {
        * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
        */
       public Builder removeProperties(int index) {
-        if (propertiesBuilder_ == null) {
-          ensurePropertiesIsMutable();
-          properties_.remove(index);
-          onChanged();
-        } else {
-          propertiesBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeProperties(index);
         return this;
       }
-      /**
-       * <pre>
-       * Camera properties
-       * </pre>
-       *
-       * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.Property.Builder getPropertiesBuilder(
-          int index) {
-        return getPropertiesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * Camera properties
-       * </pre>
-       *
-       * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.PropertyOrBuilder getPropertiesOrBuilder(
-          int index) {
-        if (propertiesBuilder_ == null) {
-          return properties_.get(index);  } else {
-          return propertiesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * Camera properties
-       * </pre>
-       *
-       * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
-       */
-      public java.util.List<? extends com.viam.component.camera.v1.Camera.PropertyOrBuilder> 
-           getPropertiesOrBuilderList() {
-        if (propertiesBuilder_ != null) {
-          return propertiesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(properties_);
-        }
-      }
-      /**
-       * <pre>
-       * Camera properties
-       * </pre>
-       *
-       * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.Property.Builder addPropertiesBuilder() {
-        return getPropertiesFieldBuilder().addBuilder(
-            com.viam.component.camera.v1.Camera.Property.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Camera properties
-       * </pre>
-       *
-       * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
-       */
-      public com.viam.component.camera.v1.Camera.Property.Builder addPropertiesBuilder(
-          int index) {
-        return getPropertiesFieldBuilder().addBuilder(
-            index, com.viam.component.camera.v1.Camera.Property.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Camera properties
-       * </pre>
-       *
-       * <code>repeated .viam.component.camera.v1.Property properties = 3 [json_name = "properties"];</code>
-       */
-      public java.util.List<com.viam.component.camera.v1.Camera.Property.Builder> 
-           getPropertiesBuilderList() {
-        return getPropertiesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.viam.component.camera.v1.Camera.Property, com.viam.component.camera.v1.Camera.Property.Builder, com.viam.component.camera.v1.Camera.PropertyOrBuilder> 
-          getPropertiesFieldBuilder() {
-        if (propertiesBuilder_ == null) {
-          propertiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.viam.component.camera.v1.Camera.Property, com.viam.component.camera.v1.Camera.Property.Builder, com.viam.component.camera.v1.Camera.PropertyOrBuilder>(
-                  properties_,
-                  ((bitField0_ & 0x00000004) != 0),
-                  getParentForChildren(),
-                  isClean());
-          properties_ = null;
-        }
-        return propertiesBuilder_;
-      }
 
-      private java.lang.Object name_ = "";
       /**
        * <pre>
        * Camera human-readable driver name
@@ -11334,17 +7163,9 @@ public final class Camera {
        * <code>string name = 4 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <pre>
@@ -11354,18 +7175,10 @@ public final class Camera {
        * <code>string name = 4 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <pre>
@@ -11378,10 +7191,8 @@ public final class Camera {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -11393,9 +7204,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -11409,15 +7219,11 @@ public final class Camera {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
 
-      private java.lang.Object id_ = "";
       /**
        * <pre>
        * Camera unique identifier
@@ -11426,17 +7232,9 @@ public final class Camera {
        * <code>string id = 5 [json_name = "id"];</code>
        * @return The id.
        */
+      @java.lang.Override
       public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getId();
       }
       /**
        * <pre>
@@ -11446,18 +7244,10 @@ public final class Camera {
        * <code>string id = 5 [json_name = "id"];</code>
        * @return The bytes for id.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getIdBytes();
       }
       /**
        * <pre>
@@ -11470,10 +7260,8 @@ public final class Camera {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        id_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setId(value);
         return this;
       }
       /**
@@ -11485,9 +7273,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        id_ = getDefaultInstance().getId();
-        bitField0_ = (bitField0_ & ~0x00000010);
-        onChanged();
+        copyOnWrite();
+        instance.clearId();
         return this;
       }
       /**
@@ -11501,80 +7288,94 @@ public final class Camera {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        id_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setIdBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.Webcam)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.Webcam();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "label_",
+              "status_",
+              "properties_",
+              com.viam.component.camera.v1.Camera.Property.class,
+              "name_",
+              "id_",
+            };
+            java.lang.String info =
+                "\u0000\u0005\u0000\u0000\u0001\u0005\u0005\u0000\u0001\u0000\u0001\u0208\u0002\u0208" +
+                "\u0003\u001b\u0004\u0208\u0005\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.Webcam> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.Webcam.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.Webcam>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.Webcam)
     private static final com.viam.component.camera.v1.Camera.Webcam DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.Webcam();
+      Webcam defaultInstance = new Webcam();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Webcam.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.Webcam getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Webcam>
-        PARSER = new com.google.protobuf.AbstractParser<Webcam>() {
-      @java.lang.Override
-      public Webcam parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Webcam> PARSER;
 
     public static com.google.protobuf.Parser<Webcam> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Webcam> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.Webcam getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface PropertyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.Property)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <pre>
@@ -11629,41 +7430,16 @@ public final class Camera {
   /**
    * Protobuf type {@code viam.component.camera.v1.Property}
    */
-  public static final class Property extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class Property extends
+      com.google.protobuf.GeneratedMessageLite<
+          Property, Property.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.Property)
       PropertyOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Property.newBuilder() to construct.
-    private Property(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private Property() {
       frameFormat_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Property();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Property_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Property_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.Property.class, com.viam.component.camera.v1.Camera.Property.Builder.class);
-    }
-
     public static final int WIDTH_PX_FIELD_NUMBER = 1;
-    private int widthPx_ = 0;
+    private int widthPx_;
     /**
      * <pre>
      * Video resolution width in px
@@ -11676,9 +7452,32 @@ public final class Camera {
     public int getWidthPx() {
       return widthPx_;
     }
+    /**
+     * <pre>
+     * Video resolution width in px
+     * </pre>
+     *
+     * <code>int32 width_px = 1 [json_name = "widthPx"];</code>
+     * @param value The widthPx to set.
+     */
+    private void setWidthPx(int value) {
+      
+      widthPx_ = value;
+    }
+    /**
+     * <pre>
+     * Video resolution width in px
+     * </pre>
+     *
+     * <code>int32 width_px = 1 [json_name = "widthPx"];</code>
+     */
+    private void clearWidthPx() {
+
+      widthPx_ = 0;
+    }
 
     public static final int HEIGHT_PX_FIELD_NUMBER = 2;
-    private int heightPx_ = 0;
+    private int heightPx_;
     /**
      * <pre>
      * Video resolution height in px
@@ -11691,10 +7490,32 @@ public final class Camera {
     public int getHeightPx() {
       return heightPx_;
     }
+    /**
+     * <pre>
+     * Video resolution height in px
+     * </pre>
+     *
+     * <code>int32 height_px = 2 [json_name = "heightPx"];</code>
+     * @param value The heightPx to set.
+     */
+    private void setHeightPx(int value) {
+      
+      heightPx_ = value;
+    }
+    /**
+     * <pre>
+     * Video resolution height in px
+     * </pre>
+     *
+     * <code>int32 height_px = 2 [json_name = "heightPx"];</code>
+     */
+    private void clearHeightPx() {
+
+      heightPx_ = 0;
+    }
 
     public static final int FRAME_FORMAT_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object frameFormat_ = "";
+    private java.lang.String frameFormat_;
     /**
      * <pre>
      * Video frame format
@@ -11705,16 +7526,7 @@ public final class Camera {
      */
     @java.lang.Override
     public java.lang.String getFrameFormat() {
-      java.lang.Object ref = frameFormat_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        frameFormat_ = s;
-        return s;
-      }
+      return frameFormat_;
     }
     /**
      * <pre>
@@ -11727,20 +7539,50 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getFrameFormatBytes() {
-      java.lang.Object ref = frameFormat_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        frameFormat_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(frameFormat_);
+    }
+    /**
+     * <pre>
+     * Video frame format
+     * </pre>
+     *
+     * <code>string frame_format = 3 [json_name = "frameFormat"];</code>
+     * @param value The frameFormat to set.
+     */
+    private void setFrameFormat(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      frameFormat_ = value;
+    }
+    /**
+     * <pre>
+     * Video frame format
+     * </pre>
+     *
+     * <code>string frame_format = 3 [json_name = "frameFormat"];</code>
+     */
+    private void clearFrameFormat() {
+
+      frameFormat_ = getDefaultInstance().getFrameFormat();
+    }
+    /**
+     * <pre>
+     * Video frame format
+     * </pre>
+     *
+     * <code>string frame_format = 3 [json_name = "frameFormat"];</code>
+     * @param value The bytes for frameFormat to set.
+     */
+    private void setFrameFormatBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      frameFormat_ = value.toStringUtf8();
+
     }
 
     public static final int FRAME_RATE_FIELD_NUMBER = 4;
-    private float frameRate_ = 0F;
+    private float frameRate_;
     /**
      * <pre>
      * Video frame rate in fps
@@ -11753,405 +7595,127 @@ public final class Camera {
     public float getFrameRate() {
       return frameRate_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <pre>
+     * Video frame rate in fps
+     * </pre>
+     *
+     * <code>float frame_rate = 4 [json_name = "frameRate"];</code>
+     * @param value The frameRate to set.
+     */
+    private void setFrameRate(float value) {
+      
+      frameRate_ = value;
     }
+    /**
+     * <pre>
+     * Video frame rate in fps
+     * </pre>
+     *
+     * <code>float frame_rate = 4 [json_name = "frameRate"];</code>
+     */
+    private void clearFrameRate() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (widthPx_ != 0) {
-        output.writeInt32(1, widthPx_);
-      }
-      if (heightPx_ != 0) {
-        output.writeInt32(2, heightPx_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(frameFormat_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, frameFormat_);
-      }
-      if (java.lang.Float.floatToRawIntBits(frameRate_) != 0) {
-        output.writeFloat(4, frameRate_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (widthPx_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, widthPx_);
-      }
-      if (heightPx_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, heightPx_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(frameFormat_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, frameFormat_);
-      }
-      if (java.lang.Float.floatToRawIntBits(frameRate_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(4, frameRate_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.Property)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.Property other = (com.viam.component.camera.v1.Camera.Property) obj;
-
-      if (getWidthPx()
-          != other.getWidthPx()) return false;
-      if (getHeightPx()
-          != other.getHeightPx()) return false;
-      if (!getFrameFormat()
-          .equals(other.getFrameFormat())) return false;
-      if (java.lang.Float.floatToIntBits(getFrameRate())
-          != java.lang.Float.floatToIntBits(
-              other.getFrameRate())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + WIDTH_PX_FIELD_NUMBER;
-      hash = (53 * hash) + getWidthPx();
-      hash = (37 * hash) + HEIGHT_PX_FIELD_NUMBER;
-      hash = (53 * hash) + getHeightPx();
-      hash = (37 * hash) + FRAME_FORMAT_FIELD_NUMBER;
-      hash = (53 * hash) + getFrameFormat().hashCode();
-      hash = (37 * hash) + FRAME_RATE_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getFrameRate());
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      frameRate_ = 0F;
     }
 
     public static com.viam.component.camera.v1.Camera.Property parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.Property parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Property parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.Property parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Property parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.Property parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Property parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.Property parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.Property parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.Property parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.Property parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.Property parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.Property prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.Property}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.Property, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.Property)
         com.viam.component.camera.v1.Camera.PropertyOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Property_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Property_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.Property.class, com.viam.component.camera.v1.Camera.Property.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.Property.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        widthPx_ = 0;
-        heightPx_ = 0;
-        frameFormat_ = "";
-        frameRate_ = 0F;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_Property_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.Property getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.Property.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.Property build() {
-        com.viam.component.camera.v1.Camera.Property result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.Property buildPartial() {
-        com.viam.component.camera.v1.Camera.Property result = new com.viam.component.camera.v1.Camera.Property(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.Property result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.widthPx_ = widthPx_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.heightPx_ = heightPx_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.frameFormat_ = frameFormat_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.frameRate_ = frameRate_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.Property) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.Property)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.Property other) {
-        if (other == com.viam.component.camera.v1.Camera.Property.getDefaultInstance()) return this;
-        if (other.getWidthPx() != 0) {
-          setWidthPx(other.getWidthPx());
-        }
-        if (other.getHeightPx() != 0) {
-          setHeightPx(other.getHeightPx());
-        }
-        if (!other.getFrameFormat().isEmpty()) {
-          frameFormat_ = other.frameFormat_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (other.getFrameRate() != 0F) {
-          setFrameRate(other.getFrameRate());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                widthPx_ = input.readInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 16: {
-                heightPx_ = input.readInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 26: {
-                frameFormat_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 37: {
-                frameRate_ = input.readFloat();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 37
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int widthPx_ ;
       /**
        * <pre>
        * Video resolution width in px
@@ -12162,7 +7726,7 @@ public final class Camera {
        */
       @java.lang.Override
       public int getWidthPx() {
-        return widthPx_;
+        return instance.getWidthPx();
       }
       /**
        * <pre>
@@ -12174,10 +7738,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder setWidthPx(int value) {
-
-        widthPx_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setWidthPx(value);
         return this;
       }
       /**
@@ -12189,13 +7751,11 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearWidthPx() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        widthPx_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearWidthPx();
         return this;
       }
 
-      private int heightPx_ ;
       /**
        * <pre>
        * Video resolution height in px
@@ -12206,7 +7766,7 @@ public final class Camera {
        */
       @java.lang.Override
       public int getHeightPx() {
-        return heightPx_;
+        return instance.getHeightPx();
       }
       /**
        * <pre>
@@ -12218,10 +7778,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder setHeightPx(int value) {
-
-        heightPx_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setHeightPx(value);
         return this;
       }
       /**
@@ -12233,13 +7791,11 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearHeightPx() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        heightPx_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearHeightPx();
         return this;
       }
 
-      private java.lang.Object frameFormat_ = "";
       /**
        * <pre>
        * Video frame format
@@ -12248,17 +7804,9 @@ public final class Camera {
        * <code>string frame_format = 3 [json_name = "frameFormat"];</code>
        * @return The frameFormat.
        */
+      @java.lang.Override
       public java.lang.String getFrameFormat() {
-        java.lang.Object ref = frameFormat_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          frameFormat_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getFrameFormat();
       }
       /**
        * <pre>
@@ -12268,18 +7816,10 @@ public final class Camera {
        * <code>string frame_format = 3 [json_name = "frameFormat"];</code>
        * @return The bytes for frameFormat.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getFrameFormatBytes() {
-        java.lang.Object ref = frameFormat_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          frameFormat_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getFrameFormatBytes();
       }
       /**
        * <pre>
@@ -12292,10 +7832,8 @@ public final class Camera {
        */
       public Builder setFrameFormat(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        frameFormat_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setFrameFormat(value);
         return this;
       }
       /**
@@ -12307,9 +7845,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearFrameFormat() {
-        frameFormat_ = getDefaultInstance().getFrameFormat();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearFrameFormat();
         return this;
       }
       /**
@@ -12323,15 +7860,11 @@ public final class Camera {
        */
       public Builder setFrameFormatBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        frameFormat_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setFrameFormatBytes(value);
         return this;
       }
 
-      private float frameRate_ ;
       /**
        * <pre>
        * Video frame rate in fps
@@ -12342,7 +7875,7 @@ public final class Camera {
        */
       @java.lang.Override
       public float getFrameRate() {
-        return frameRate_;
+        return instance.getFrameRate();
       }
       /**
        * <pre>
@@ -12354,10 +7887,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder setFrameRate(float value) {
-
-        frameRate_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setFrameRate(value);
         return this;
       }
       /**
@@ -12369,78 +7900,92 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearFrameRate() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        frameRate_ = 0F;
-        onChanged();
+        copyOnWrite();
+        instance.clearFrameRate();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.Property)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.Property();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "widthPx_",
+              "heightPx_",
+              "frameFormat_",
+              "frameRate_",
+            };
+            java.lang.String info =
+                "\u0000\u0004\u0000\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0004\u0002\u0004" +
+                "\u0003\u0208\u0004\u0001";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.Property> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.Property.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.Property>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.Property)
     private static final com.viam.component.camera.v1.Camera.Property DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.Property();
+      Property defaultInstance = new Property();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        Property.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.Property getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Property>
-        PARSER = new com.google.protobuf.AbstractParser<Property>() {
-      @java.lang.Override
-      public Property parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<Property> PARSER;
 
     public static com.google.protobuf.Parser<Property> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Property> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.Property getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface IntrinsicParametersOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.IntrinsicParameters)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>uint32 width_px = 1 [json_name = "widthPx"];</code>
@@ -12481,40 +8026,15 @@ public final class Camera {
   /**
    * Protobuf type {@code viam.component.camera.v1.IntrinsicParameters}
    */
-  public static final class IntrinsicParameters extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class IntrinsicParameters extends
+      com.google.protobuf.GeneratedMessageLite<
+          IntrinsicParameters, IntrinsicParameters.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.IntrinsicParameters)
       IntrinsicParametersOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use IntrinsicParameters.newBuilder() to construct.
-    private IntrinsicParameters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private IntrinsicParameters() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new IntrinsicParameters();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_IntrinsicParameters_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_IntrinsicParameters_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.IntrinsicParameters.class, com.viam.component.camera.v1.Camera.IntrinsicParameters.Builder.class);
-    }
-
     public static final int WIDTH_PX_FIELD_NUMBER = 1;
-    private int widthPx_ = 0;
+    private int widthPx_;
     /**
      * <code>uint32 width_px = 1 [json_name = "widthPx"];</code>
      * @return The widthPx.
@@ -12523,9 +8043,24 @@ public final class Camera {
     public int getWidthPx() {
       return widthPx_;
     }
+    /**
+     * <code>uint32 width_px = 1 [json_name = "widthPx"];</code>
+     * @param value The widthPx to set.
+     */
+    private void setWidthPx(int value) {
+      
+      widthPx_ = value;
+    }
+    /**
+     * <code>uint32 width_px = 1 [json_name = "widthPx"];</code>
+     */
+    private void clearWidthPx() {
+
+      widthPx_ = 0;
+    }
 
     public static final int HEIGHT_PX_FIELD_NUMBER = 2;
-    private int heightPx_ = 0;
+    private int heightPx_;
     /**
      * <code>uint32 height_px = 2 [json_name = "heightPx"];</code>
      * @return The heightPx.
@@ -12534,9 +8069,24 @@ public final class Camera {
     public int getHeightPx() {
       return heightPx_;
     }
+    /**
+     * <code>uint32 height_px = 2 [json_name = "heightPx"];</code>
+     * @param value The heightPx to set.
+     */
+    private void setHeightPx(int value) {
+      
+      heightPx_ = value;
+    }
+    /**
+     * <code>uint32 height_px = 2 [json_name = "heightPx"];</code>
+     */
+    private void clearHeightPx() {
+
+      heightPx_ = 0;
+    }
 
     public static final int FOCAL_X_PX_FIELD_NUMBER = 3;
-    private double focalXPx_ = 0D;
+    private double focalXPx_;
     /**
      * <code>double focal_x_px = 3 [json_name = "focalXPx"];</code>
      * @return The focalXPx.
@@ -12545,9 +8095,24 @@ public final class Camera {
     public double getFocalXPx() {
       return focalXPx_;
     }
+    /**
+     * <code>double focal_x_px = 3 [json_name = "focalXPx"];</code>
+     * @param value The focalXPx to set.
+     */
+    private void setFocalXPx(double value) {
+      
+      focalXPx_ = value;
+    }
+    /**
+     * <code>double focal_x_px = 3 [json_name = "focalXPx"];</code>
+     */
+    private void clearFocalXPx() {
+
+      focalXPx_ = 0D;
+    }
 
     public static final int FOCAL_Y_PX_FIELD_NUMBER = 4;
-    private double focalYPx_ = 0D;
+    private double focalYPx_;
     /**
      * <code>double focal_y_px = 4 [json_name = "focalYPx"];</code>
      * @return The focalYPx.
@@ -12556,9 +8121,24 @@ public final class Camera {
     public double getFocalYPx() {
       return focalYPx_;
     }
+    /**
+     * <code>double focal_y_px = 4 [json_name = "focalYPx"];</code>
+     * @param value The focalYPx to set.
+     */
+    private void setFocalYPx(double value) {
+      
+      focalYPx_ = value;
+    }
+    /**
+     * <code>double focal_y_px = 4 [json_name = "focalYPx"];</code>
+     */
+    private void clearFocalYPx() {
+
+      focalYPx_ = 0D;
+    }
 
     public static final int CENTER_X_PX_FIELD_NUMBER = 5;
-    private double centerXPx_ = 0D;
+    private double centerXPx_;
     /**
      * <code>double center_x_px = 5 [json_name = "centerXPx"];</code>
      * @return The centerXPx.
@@ -12567,9 +8147,24 @@ public final class Camera {
     public double getCenterXPx() {
       return centerXPx_;
     }
+    /**
+     * <code>double center_x_px = 5 [json_name = "centerXPx"];</code>
+     * @param value The centerXPx to set.
+     */
+    private void setCenterXPx(double value) {
+      
+      centerXPx_ = value;
+    }
+    /**
+     * <code>double center_x_px = 5 [json_name = "centerXPx"];</code>
+     */
+    private void clearCenterXPx() {
+
+      centerXPx_ = 0D;
+    }
 
     public static final int CENTER_Y_PX_FIELD_NUMBER = 6;
-    private double centerYPx_ = 0D;
+    private double centerYPx_;
     /**
      * <code>double center_y_px = 6 [json_name = "centerYPx"];</code>
      * @return The centerYPx.
@@ -12578,463 +8173,126 @@ public final class Camera {
     public double getCenterYPx() {
       return centerYPx_;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>double center_y_px = 6 [json_name = "centerYPx"];</code>
+     * @param value The centerYPx to set.
+     */
+    private void setCenterYPx(double value) {
+      
+      centerYPx_ = value;
     }
+    /**
+     * <code>double center_y_px = 6 [json_name = "centerYPx"];</code>
+     */
+    private void clearCenterYPx() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (widthPx_ != 0) {
-        output.writeUInt32(1, widthPx_);
-      }
-      if (heightPx_ != 0) {
-        output.writeUInt32(2, heightPx_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(focalXPx_) != 0) {
-        output.writeDouble(3, focalXPx_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(focalYPx_) != 0) {
-        output.writeDouble(4, focalYPx_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(centerXPx_) != 0) {
-        output.writeDouble(5, centerXPx_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(centerYPx_) != 0) {
-        output.writeDouble(6, centerYPx_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (widthPx_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, widthPx_);
-      }
-      if (heightPx_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, heightPx_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(focalXPx_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(3, focalXPx_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(focalYPx_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(4, focalYPx_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(centerXPx_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(5, centerXPx_);
-      }
-      if (java.lang.Double.doubleToRawLongBits(centerYPx_) != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(6, centerYPx_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.IntrinsicParameters)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.IntrinsicParameters other = (com.viam.component.camera.v1.Camera.IntrinsicParameters) obj;
-
-      if (getWidthPx()
-          != other.getWidthPx()) return false;
-      if (getHeightPx()
-          != other.getHeightPx()) return false;
-      if (java.lang.Double.doubleToLongBits(getFocalXPx())
-          != java.lang.Double.doubleToLongBits(
-              other.getFocalXPx())) return false;
-      if (java.lang.Double.doubleToLongBits(getFocalYPx())
-          != java.lang.Double.doubleToLongBits(
-              other.getFocalYPx())) return false;
-      if (java.lang.Double.doubleToLongBits(getCenterXPx())
-          != java.lang.Double.doubleToLongBits(
-              other.getCenterXPx())) return false;
-      if (java.lang.Double.doubleToLongBits(getCenterYPx())
-          != java.lang.Double.doubleToLongBits(
-              other.getCenterYPx())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + WIDTH_PX_FIELD_NUMBER;
-      hash = (53 * hash) + getWidthPx();
-      hash = (37 * hash) + HEIGHT_PX_FIELD_NUMBER;
-      hash = (53 * hash) + getHeightPx();
-      hash = (37 * hash) + FOCAL_X_PX_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getFocalXPx()));
-      hash = (37 * hash) + FOCAL_Y_PX_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getFocalYPx()));
-      hash = (37 * hash) + CENTER_X_PX_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getCenterXPx()));
-      hash = (37 * hash) + CENTER_Y_PX_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getCenterYPx()));
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+      centerYPx_ = 0D;
     }
 
     public static com.viam.component.camera.v1.Camera.IntrinsicParameters parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.IntrinsicParameters parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.IntrinsicParameters parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.IntrinsicParameters parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.IntrinsicParameters parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.IntrinsicParameters parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.IntrinsicParameters parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.IntrinsicParameters parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.IntrinsicParameters parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.IntrinsicParameters parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.IntrinsicParameters parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.IntrinsicParameters parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.IntrinsicParameters prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.IntrinsicParameters}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.IntrinsicParameters, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.IntrinsicParameters)
         com.viam.component.camera.v1.Camera.IntrinsicParametersOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_IntrinsicParameters_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_IntrinsicParameters_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.IntrinsicParameters.class, com.viam.component.camera.v1.Camera.IntrinsicParameters.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.IntrinsicParameters.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        widthPx_ = 0;
-        heightPx_ = 0;
-        focalXPx_ = 0D;
-        focalYPx_ = 0D;
-        centerXPx_ = 0D;
-        centerYPx_ = 0D;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_IntrinsicParameters_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.IntrinsicParameters getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.IntrinsicParameters.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.IntrinsicParameters build() {
-        com.viam.component.camera.v1.Camera.IntrinsicParameters result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.IntrinsicParameters buildPartial() {
-        com.viam.component.camera.v1.Camera.IntrinsicParameters result = new com.viam.component.camera.v1.Camera.IntrinsicParameters(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.IntrinsicParameters result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.widthPx_ = widthPx_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.heightPx_ = heightPx_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.focalXPx_ = focalXPx_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.focalYPx_ = focalYPx_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.centerXPx_ = centerXPx_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          result.centerYPx_ = centerYPx_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.IntrinsicParameters) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.IntrinsicParameters)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.IntrinsicParameters other) {
-        if (other == com.viam.component.camera.v1.Camera.IntrinsicParameters.getDefaultInstance()) return this;
-        if (other.getWidthPx() != 0) {
-          setWidthPx(other.getWidthPx());
-        }
-        if (other.getHeightPx() != 0) {
-          setHeightPx(other.getHeightPx());
-        }
-        if (other.getFocalXPx() != 0D) {
-          setFocalXPx(other.getFocalXPx());
-        }
-        if (other.getFocalYPx() != 0D) {
-          setFocalYPx(other.getFocalYPx());
-        }
-        if (other.getCenterXPx() != 0D) {
-          setCenterXPx(other.getCenterXPx());
-        }
-        if (other.getCenterYPx() != 0D) {
-          setCenterYPx(other.getCenterYPx());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                widthPx_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 16: {
-                heightPx_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 25: {
-                focalXPx_ = input.readDouble();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 25
-              case 33: {
-                focalYPx_ = input.readDouble();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 33
-              case 41: {
-                centerXPx_ = input.readDouble();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 41
-              case 49: {
-                centerYPx_ = input.readDouble();
-                bitField0_ |= 0x00000020;
-                break;
-              } // case 49
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int widthPx_ ;
       /**
        * <code>uint32 width_px = 1 [json_name = "widthPx"];</code>
        * @return The widthPx.
        */
       @java.lang.Override
       public int getWidthPx() {
-        return widthPx_;
+        return instance.getWidthPx();
       }
       /**
        * <code>uint32 width_px = 1 [json_name = "widthPx"];</code>
@@ -13042,10 +8300,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder setWidthPx(int value) {
-
-        widthPx_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setWidthPx(value);
         return this;
       }
       /**
@@ -13053,20 +8309,18 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearWidthPx() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        widthPx_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearWidthPx();
         return this;
       }
 
-      private int heightPx_ ;
       /**
        * <code>uint32 height_px = 2 [json_name = "heightPx"];</code>
        * @return The heightPx.
        */
       @java.lang.Override
       public int getHeightPx() {
-        return heightPx_;
+        return instance.getHeightPx();
       }
       /**
        * <code>uint32 height_px = 2 [json_name = "heightPx"];</code>
@@ -13074,10 +8328,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder setHeightPx(int value) {
-
-        heightPx_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setHeightPx(value);
         return this;
       }
       /**
@@ -13085,20 +8337,18 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearHeightPx() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        heightPx_ = 0;
-        onChanged();
+        copyOnWrite();
+        instance.clearHeightPx();
         return this;
       }
 
-      private double focalXPx_ ;
       /**
        * <code>double focal_x_px = 3 [json_name = "focalXPx"];</code>
        * @return The focalXPx.
        */
       @java.lang.Override
       public double getFocalXPx() {
-        return focalXPx_;
+        return instance.getFocalXPx();
       }
       /**
        * <code>double focal_x_px = 3 [json_name = "focalXPx"];</code>
@@ -13106,10 +8356,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder setFocalXPx(double value) {
-
-        focalXPx_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setFocalXPx(value);
         return this;
       }
       /**
@@ -13117,20 +8365,18 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearFocalXPx() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        focalXPx_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearFocalXPx();
         return this;
       }
 
-      private double focalYPx_ ;
       /**
        * <code>double focal_y_px = 4 [json_name = "focalYPx"];</code>
        * @return The focalYPx.
        */
       @java.lang.Override
       public double getFocalYPx() {
-        return focalYPx_;
+        return instance.getFocalYPx();
       }
       /**
        * <code>double focal_y_px = 4 [json_name = "focalYPx"];</code>
@@ -13138,10 +8384,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder setFocalYPx(double value) {
-
-        focalYPx_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
+        copyOnWrite();
+        instance.setFocalYPx(value);
         return this;
       }
       /**
@@ -13149,20 +8393,18 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearFocalYPx() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        focalYPx_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearFocalYPx();
         return this;
       }
 
-      private double centerXPx_ ;
       /**
        * <code>double center_x_px = 5 [json_name = "centerXPx"];</code>
        * @return The centerXPx.
        */
       @java.lang.Override
       public double getCenterXPx() {
-        return centerXPx_;
+        return instance.getCenterXPx();
       }
       /**
        * <code>double center_x_px = 5 [json_name = "centerXPx"];</code>
@@ -13170,10 +8412,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder setCenterXPx(double value) {
-
-        centerXPx_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
+        copyOnWrite();
+        instance.setCenterXPx(value);
         return this;
       }
       /**
@@ -13181,20 +8421,18 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearCenterXPx() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        centerXPx_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearCenterXPx();
         return this;
       }
 
-      private double centerYPx_ ;
       /**
        * <code>double center_y_px = 6 [json_name = "centerYPx"];</code>
        * @return The centerYPx.
        */
       @java.lang.Override
       public double getCenterYPx() {
-        return centerYPx_;
+        return instance.getCenterYPx();
       }
       /**
        * <code>double center_y_px = 6 [json_name = "centerYPx"];</code>
@@ -13202,10 +8440,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder setCenterYPx(double value) {
-
-        centerYPx_ = value;
-        bitField0_ |= 0x00000020;
-        onChanged();
+        copyOnWrite();
+        instance.setCenterYPx(value);
         return this;
       }
       /**
@@ -13213,78 +8449,94 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearCenterYPx() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        centerYPx_ = 0D;
-        onChanged();
+        copyOnWrite();
+        instance.clearCenterYPx();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.IntrinsicParameters)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.IntrinsicParameters();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "widthPx_",
+              "heightPx_",
+              "focalXPx_",
+              "focalYPx_",
+              "centerXPx_",
+              "centerYPx_",
+            };
+            java.lang.String info =
+                "\u0000\u0006\u0000\u0000\u0001\u0006\u0006\u0000\u0000\u0000\u0001\u000b\u0002\u000b" +
+                "\u0003\u0000\u0004\u0000\u0005\u0000\u0006\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.IntrinsicParameters> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.IntrinsicParameters.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.IntrinsicParameters>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.IntrinsicParameters)
     private static final com.viam.component.camera.v1.Camera.IntrinsicParameters DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.IntrinsicParameters();
+      IntrinsicParameters defaultInstance = new IntrinsicParameters();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        IntrinsicParameters.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.IntrinsicParameters getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<IntrinsicParameters>
-        PARSER = new com.google.protobuf.AbstractParser<IntrinsicParameters>() {
-      @java.lang.Override
-      public IntrinsicParameters parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<IntrinsicParameters> PARSER;
 
     public static com.google.protobuf.Parser<IntrinsicParameters> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<IntrinsicParameters> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.IntrinsicParameters getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface DistortionParametersOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.component.camera.v1.DistortionParameters)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string model = 1 [json_name = "model"];</code>
@@ -13318,59 +8570,24 @@ public final class Camera {
   /**
    * Protobuf type {@code viam.component.camera.v1.DistortionParameters}
    */
-  public static final class DistortionParameters extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class DistortionParameters extends
+      com.google.protobuf.GeneratedMessageLite<
+          DistortionParameters, DistortionParameters.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.component.camera.v1.DistortionParameters)
       DistortionParametersOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use DistortionParameters.newBuilder() to construct.
-    private DistortionParameters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private DistortionParameters() {
       model_ = "";
       parameters_ = emptyDoubleList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DistortionParameters();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_DistortionParameters_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_DistortionParameters_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.viam.component.camera.v1.Camera.DistortionParameters.class, com.viam.component.camera.v1.Camera.DistortionParameters.Builder.class);
-    }
-
     public static final int MODEL_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object model_ = "";
+    private java.lang.String model_;
     /**
      * <code>string model = 1 [json_name = "model"];</code>
      * @return The model.
      */
     @java.lang.Override
     public java.lang.String getModel() {
-      java.lang.Object ref = model_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        model_ = s;
-        return s;
-      }
+      return model_;
     }
     /**
      * <code>string model = 1 [json_name = "model"];</code>
@@ -13379,22 +8596,38 @@ public final class Camera {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getModelBytes() {
-      java.lang.Object ref = model_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        model_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(model_);
+    }
+    /**
+     * <code>string model = 1 [json_name = "model"];</code>
+     * @param value The model to set.
+     */
+    private void setModel(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      model_ = value;
+    }
+    /**
+     * <code>string model = 1 [json_name = "model"];</code>
+     */
+    private void clearModel() {
+
+      model_ = getDefaultInstance().getModel();
+    }
+    /**
+     * <code>string model = 1 [json_name = "model"];</code>
+     * @param value The bytes for model to set.
+     */
+    private void setModelBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      model_ = value.toStringUtf8();
+
     }
 
     public static final int PARAMETERS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.DoubleList parameters_ =
-        emptyDoubleList();
+    private com.google.protobuf.Internal.DoubleList parameters_;
     /**
      * <code>repeated double parameters = 2 [json_name = "parameters"];</code>
      * @return A list containing the parameters.
@@ -13408,6 +8641,7 @@ public final class Camera {
      * <code>repeated double parameters = 2 [json_name = "parameters"];</code>
      * @return The count of parameters.
      */
+    @java.lang.Override
     public int getParametersCount() {
       return parameters_.size();
     }
@@ -13416,428 +8650,166 @@ public final class Camera {
      * @param index The index of the element to return.
      * @return The parameters at the given index.
      */
+    @java.lang.Override
     public double getParameters(int index) {
       return parameters_.getDouble(index);
     }
     private int parametersMemoizedSerializedSize = -1;
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureParametersIsMutable() {
+      com.google.protobuf.Internal.DoubleList tmp = parameters_;
+      if (!tmp.isModifiable()) {
+        parameters_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, model_);
-      }
-      if (getParametersList().size() > 0) {
-        output.writeUInt32NoTag(18);
-        output.writeUInt32NoTag(parametersMemoizedSerializedSize);
-      }
-      for (int i = 0; i < parameters_.size(); i++) {
-        output.writeDoubleNoTag(parameters_.getDouble(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated double parameters = 2 [json_name = "parameters"];</code>
+     * @param index The index to set the value at.
+     * @param value The parameters to set.
+     */
+    private void setParameters(
+        int index, double value) {
+      ensureParametersIsMutable();
+      parameters_.setDouble(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, model_);
-      }
-      {
-        int dataSize = 0;
-        dataSize = 8 * getParametersList().size();
-        size += dataSize;
-        if (!getParametersList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        parametersMemoizedSerializedSize = dataSize;
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated double parameters = 2 [json_name = "parameters"];</code>
+     * @param value The parameters to add.
+     */
+    private void addParameters(double value) {
+      ensureParametersIsMutable();
+      parameters_.addDouble(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.viam.component.camera.v1.Camera.DistortionParameters)) {
-        return super.equals(obj);
-      }
-      com.viam.component.camera.v1.Camera.DistortionParameters other = (com.viam.component.camera.v1.Camera.DistortionParameters) obj;
-
-      if (!getModel()
-          .equals(other.getModel())) return false;
-      if (!getParametersList()
-          .equals(other.getParametersList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated double parameters = 2 [json_name = "parameters"];</code>
+     * @param values The parameters to add.
+     */
+    private void addAllParameters(
+        java.lang.Iterable<? extends java.lang.Double> values) {
+      ensureParametersIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, parameters_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MODEL_FIELD_NUMBER;
-      hash = (53 * hash) + getModel().hashCode();
-      if (getParametersCount() > 0) {
-        hash = (37 * hash) + PARAMETERS_FIELD_NUMBER;
-        hash = (53 * hash) + getParametersList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated double parameters = 2 [json_name = "parameters"];</code>
+     */
+    private void clearParameters() {
+      parameters_ = emptyDoubleList();
     }
 
     public static com.viam.component.camera.v1.Camera.DistortionParameters parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.DistortionParameters parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.DistortionParameters parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.DistortionParameters parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.DistortionParameters parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static com.viam.component.camera.v1.Camera.DistortionParameters parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.DistortionParameters parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.DistortionParameters parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static com.viam.component.camera.v1.Camera.DistortionParameters parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static com.viam.component.camera.v1.Camera.DistortionParameters parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static com.viam.component.camera.v1.Camera.DistortionParameters parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static com.viam.component.camera.v1.Camera.DistortionParameters parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(com.viam.component.camera.v1.Camera.DistortionParameters prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.component.camera.v1.DistortionParameters}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.viam.component.camera.v1.Camera.DistortionParameters, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.component.camera.v1.DistortionParameters)
         com.viam.component.camera.v1.Camera.DistortionParametersOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_DistortionParameters_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_DistortionParameters_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.viam.component.camera.v1.Camera.DistortionParameters.class, com.viam.component.camera.v1.Camera.DistortionParameters.Builder.class);
-      }
-
       // Construct using com.viam.component.camera.v1.Camera.DistortionParameters.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        model_ = "";
-        parameters_ = emptyDoubleList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.viam.component.camera.v1.Camera.internal_static_viam_component_camera_v1_DistortionParameters_descriptor;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.DistortionParameters getDefaultInstanceForType() {
-        return com.viam.component.camera.v1.Camera.DistortionParameters.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.DistortionParameters build() {
-        com.viam.component.camera.v1.Camera.DistortionParameters result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.viam.component.camera.v1.Camera.DistortionParameters buildPartial() {
-        com.viam.component.camera.v1.Camera.DistortionParameters result = new com.viam.component.camera.v1.Camera.DistortionParameters(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(com.viam.component.camera.v1.Camera.DistortionParameters result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.model_ = model_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          parameters_.makeImmutable();
-          result.parameters_ = parameters_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.viam.component.camera.v1.Camera.DistortionParameters) {
-          return mergeFrom((com.viam.component.camera.v1.Camera.DistortionParameters)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.viam.component.camera.v1.Camera.DistortionParameters other) {
-        if (other == com.viam.component.camera.v1.Camera.DistortionParameters.getDefaultInstance()) return this;
-        if (!other.getModel().isEmpty()) {
-          model_ = other.model_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.parameters_.isEmpty()) {
-          if (parameters_.isEmpty()) {
-            parameters_ = other.parameters_;
-            parameters_.makeImmutable();
-            bitField0_ |= 0x00000002;
-          } else {
-            ensureParametersIsMutable();
-            parameters_.addAll(other.parameters_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                model_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 17: {
-                double v = input.readDouble();
-                ensureParametersIsMutable();
-                parameters_.addDouble(v);
-                break;
-              } // case 17
-              case 18: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                int alloc = length > 4096 ? 4096 : length;
-                ensureParametersIsMutable(alloc / 8);
-                while (input.getBytesUntilLimit() > 0) {
-                  parameters_.addDouble(input.readDouble());
-                }
-                input.popLimit(limit);
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object model_ = "";
       /**
        * <code>string model = 1 [json_name = "model"];</code>
        * @return The model.
        */
+      @java.lang.Override
       public java.lang.String getModel() {
-        java.lang.Object ref = model_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          model_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getModel();
       }
       /**
        * <code>string model = 1 [json_name = "model"];</code>
        * @return The bytes for model.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getModelBytes() {
-        java.lang.Object ref = model_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          model_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getModelBytes();
       }
       /**
        * <code>string model = 1 [json_name = "model"];</code>
@@ -13846,10 +8818,8 @@ public final class Camera {
        */
       public Builder setModel(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        model_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setModel(value);
         return this;
       }
       /**
@@ -13857,9 +8827,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearModel() {
-        model_ = getDefaultInstance().getModel();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearModel();
         return this;
       }
       /**
@@ -13869,64 +8838,47 @@ public final class Camera {
        */
       public Builder setModelBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        model_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setModelBytes(value);
         return this;
       }
 
-      private com.google.protobuf.Internal.DoubleList parameters_ = emptyDoubleList();
-      private void ensureParametersIsMutable() {
-        if (!parameters_.isModifiable()) {
-          parameters_ = makeMutableCopy(parameters_);
-        }
-        bitField0_ |= 0x00000002;
-      }
-      private void ensureParametersIsMutable(int capacity) {
-        if (!parameters_.isModifiable()) {
-          parameters_ = makeMutableCopy(parameters_, capacity);
-        }
-        bitField0_ |= 0x00000002;
-      }
       /**
        * <code>repeated double parameters = 2 [json_name = "parameters"];</code>
        * @return A list containing the parameters.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Double>
           getParametersList() {
-        parameters_.makeImmutable();
-        return parameters_;
+        return java.util.Collections.unmodifiableList(
+            instance.getParametersList());
       }
       /**
        * <code>repeated double parameters = 2 [json_name = "parameters"];</code>
        * @return The count of parameters.
        */
+      @java.lang.Override
       public int getParametersCount() {
-        return parameters_.size();
+        return instance.getParametersCount();
       }
       /**
        * <code>repeated double parameters = 2 [json_name = "parameters"];</code>
        * @param index The index of the element to return.
        * @return The parameters at the given index.
        */
+      @java.lang.Override
       public double getParameters(int index) {
-        return parameters_.getDouble(index);
+        return instance.getParameters(index);
       }
       /**
        * <code>repeated double parameters = 2 [json_name = "parameters"];</code>
-       * @param index The index to set the value at.
        * @param value The parameters to set.
        * @return This builder for chaining.
        */
       public Builder setParameters(
           int index, double value) {
-
-        ensureParametersIsMutable();
-        parameters_.setDouble(index, value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setParameters(index, value);
         return this;
       }
       /**
@@ -13935,11 +8887,8 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder addParameters(double value) {
-
-        ensureParametersIsMutable();
-        parameters_.addDouble(value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addParameters(value);
         return this;
       }
       /**
@@ -13949,11 +8898,8 @@ public final class Camera {
        */
       public Builder addAllParameters(
           java.lang.Iterable<? extends java.lang.Double> values) {
-        ensureParametersIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, parameters_);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addAllParameters(values);
         return this;
       }
       /**
@@ -13961,350 +8907,88 @@ public final class Camera {
        * @return This builder for chaining.
        */
       public Builder clearParameters() {
-        parameters_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearParameters();
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.component.camera.v1.DistortionParameters)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.viam.component.camera.v1.Camera.DistortionParameters();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "model_",
+              "parameters_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u0208\u0002#";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.viam.component.camera.v1.Camera.DistortionParameters> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.viam.component.camera.v1.Camera.DistortionParameters.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.viam.component.camera.v1.Camera.DistortionParameters>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.component.camera.v1.DistortionParameters)
     private static final com.viam.component.camera.v1.Camera.DistortionParameters DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.viam.component.camera.v1.Camera.DistortionParameters();
+      DistortionParameters defaultInstance = new DistortionParameters();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        DistortionParameters.class, defaultInstance);
     }
 
     public static com.viam.component.camera.v1.Camera.DistortionParameters getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DistortionParameters>
-        PARSER = new com.google.protobuf.AbstractParser<DistortionParameters>() {
-      @java.lang.Override
-      public DistortionParameters parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<DistortionParameters> PARSER;
 
     public static com.google.protobuf.Parser<DistortionParameters> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DistortionParameters> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.viam.component.camera.v1.Camera.DistortionParameters getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_GetImageRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_GetImageRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_GetImageResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_GetImageResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_GetImagesRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_GetImagesRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_GetImagesResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_GetImagesResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_Image_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_Image_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_RenderFrameRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_RenderFrameRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_GetPointCloudRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_GetPointCloudRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_GetPointCloudResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_GetPointCloudResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_GetPropertiesRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_GetPropertiesRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_GetPropertiesResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_GetPropertiesResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_Webcams_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_Webcams_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_Webcam_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_Webcam_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_Property_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_Property_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_IntrinsicParameters_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_IntrinsicParameters_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_component_camera_v1_DistortionParameters_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_component_camera_v1_DistortionParameters_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n component/camera/v1/camera.proto\022\030viam" +
-      ".component.camera.v1\032\026common/v1/common.p" +
-      "roto\032\034google/api/annotations.proto\032\031goog" +
-      "le/api/httpbody.proto\032\034google/protobuf/s" +
-      "truct.proto\"q\n\017GetImageRequest\022\022\n\004name\030\001" +
-      " \001(\tR\004name\022\033\n\tmime_type\030\002 \001(\tR\010mimeType\022" +
-      "-\n\005extra\030c \001(\0132\027.google.protobuf.StructR" +
-      "\005extra\"E\n\020GetImageResponse\022\033\n\tmime_type\030" +
-      "\001 \001(\tR\010mimeType\022\024\n\005image\030\002 \001(\014R\005image\"&\n" +
-      "\020GetImagesRequest\022\022\n\004name\030\001 \001(\tR\004name\"\235\001" +
-      "\n\021GetImagesResponse\0227\n\006images\030\001 \003(\0132\037.vi" +
-      "am.component.camera.v1.ImageR\006images\022O\n\021" +
-      "response_metadata\030\244\222\005 \001(\0132 .viam.common." +
-      "v1.ResponseMetadataR\020responseMetadata\"x\n" +
-      "\005Image\022\037\n\013source_name\030\001 \001(\tR\nsourceName\022" +
-      "8\n\006format\030\002 \001(\0162 .viam.component.camera." +
-      "v1.FormatR\006format\022\024\n\005image\030\003 \001(\014R\005image\"" +
-      "t\n\022RenderFrameRequest\022\022\n\004name\030\001 \001(\tR\004nam" +
-      "e\022\033\n\tmime_type\030\002 \001(\tR\010mimeType\022-\n\005extra\030" +
-      "c \001(\0132\027.google.protobuf.StructR\005extra\"v\n" +
-      "\024GetPointCloudRequest\022\022\n\004name\030\001 \001(\tR\004nam" +
-      "e\022\033\n\tmime_type\030\002 \001(\tR\010mimeType\022-\n\005extra\030" +
-      "c \001(\0132\027.google.protobuf.StructR\005extra\"U\n" +
-      "\025GetPointCloudResponse\022\033\n\tmime_type\030\001 \001(" +
-      "\tR\010mimeType\022\037\n\013point_cloud\030\002 \001(\014R\npointC" +
-      "loud\"*\n\024GetPropertiesRequest\022\022\n\004name\030\001 \001" +
-      "(\tR\004name\"\240\002\n\025GetPropertiesResponse\022!\n\014su" +
-      "pports_pcd\030\001 \001(\010R\013supportsPcd\022`\n\024intrins" +
-      "ic_parameters\030\002 \001(\0132-.viam.component.cam" +
-      "era.v1.IntrinsicParametersR\023intrinsicPar" +
-      "ameters\022c\n\025distortion_parameters\030\003 \001(\0132." +
-      ".viam.component.camera.v1.DistortionPara" +
-      "metersR\024distortionParameters\022\035\n\nmime_typ" +
-      "es\030\004 \003(\tR\tmimeTypes\"E\n\007Webcams\022:\n\007webcam" +
-      "s\030\001 \003(\0132 .viam.component.camera.v1.Webca" +
-      "mR\007webcams\"\236\001\n\006Webcam\022\024\n\005label\030\001 \001(\tR\005la" +
-      "bel\022\026\n\006status\030\002 \001(\tR\006status\022B\n\npropertie" +
-      "s\030\003 \003(\0132\".viam.component.camera.v1.Prope" +
-      "rtyR\nproperties\022\022\n\004name\030\004 \001(\tR\004name\022\016\n\002i" +
-      "d\030\005 \001(\tR\002id\"\204\001\n\010Property\022\031\n\010width_px\030\001 \001" +
-      "(\005R\007widthPx\022\033\n\theight_px\030\002 \001(\005R\010heightPx" +
-      "\022!\n\014frame_format\030\003 \001(\tR\013frameFormat\022\035\n\nf" +
-      "rame_rate\030\004 \001(\002R\tframeRate\"\311\001\n\023Intrinsic" +
-      "Parameters\022\031\n\010width_px\030\001 \001(\rR\007widthPx\022\033\n" +
-      "\theight_px\030\002 \001(\rR\010heightPx\022\034\n\nfocal_x_px" +
-      "\030\003 \001(\001R\010focalXPx\022\034\n\nfocal_y_px\030\004 \001(\001R\010fo" +
-      "calYPx\022\036\n\013center_x_px\030\005 \001(\001R\tcenterXPx\022\036" +
-      "\n\013center_y_px\030\006 \001(\001R\tcenterYPx\"L\n\024Distor" +
-      "tionParameters\022\024\n\005model\030\001 \001(\tR\005model\022\036\n\n" +
-      "parameters\030\002 \003(\001R\nparameters*l\n\006Format\022\026" +
-      "\n\022FORMAT_UNSPECIFIED\020\000\022\023\n\017FORMAT_RAW_RGB" +
-      "A\020\001\022\024\n\020FORMAT_RAW_DEPTH\020\002\022\017\n\013FORMAT_JPEG" +
-      "\020\003\022\016\n\nFORMAT_PNG\020\0042\317\010\n\rCameraService\022\225\001\n" +
-      "\010GetImage\022).viam.component.camera.v1.Get" +
-      "ImageRequest\032*.viam.component.camera.v1." +
-      "GetImageResponse\"2\202\323\344\223\002,\022*/viam/api/v1/c" +
-      "omponent/camera/{name}/image\022\231\001\n\tGetImag" +
-      "es\022*.viam.component.camera.v1.GetImagesR" +
-      "equest\032+.viam.component.camera.v1.GetIma" +
-      "gesResponse\"3\202\323\344\223\002-\022+/viam/api/v1/compon" +
-      "ent/camera/{name}/images\022\214\001\n\013RenderFrame" +
-      "\022,.viam.component.camera.v1.RenderFrameR" +
-      "equest\032\024.google.api.HttpBody\"9\202\323\344\223\0023\0221/v" +
-      "iam/api/v1/component/camera/{name}/rende" +
-      "r_frame\022\252\001\n\rGetPointCloud\022..viam.compone" +
-      "nt.camera.v1.GetPointCloudRequest\032/.viam" +
-      ".component.camera.v1.GetPointCloudRespon" +
-      "se\"8\202\323\344\223\0022\0220/viam/api/v1/component/camer" +
-      "a/{name}/point_cloud\022\251\001\n\rGetProperties\022." +
-      ".viam.component.camera.v1.GetPropertiesR" +
-      "equest\032/.viam.component.camera.v1.GetPro" +
-      "pertiesResponse\"7\202\323\344\223\0021\022//viam/api/v1/co" +
-      "mponent/camera/{name}/properties\022\211\001\n\tDoC" +
-      "ommand\022 .viam.common.v1.DoCommandRequest" +
-      "\032!.viam.common.v1.DoCommandResponse\"7\202\323\344" +
-      "\223\0021\"//viam/api/v1/component/camera/{name" +
-      "}/do_command\022\225\001\n\rGetGeometries\022$.viam.co" +
-      "mmon.v1.GetGeometriesRequest\032%.viam.comm" +
-      "on.v1.GetGeometriesResponse\"7\202\323\344\223\0021\022//vi" +
-      "am/api/v1/component/camera/{name}/geomet" +
-      "riesBC\n\034com.viam.component.camera.v1Z#go" +
-      ".viam.com/api/component/camera/v1b\006proto" +
-      "3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.viam.common.v1.Common.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.HttpBodyProto.getDescriptor(),
-          com.google.protobuf.StructProto.getDescriptor(),
-        });
-    internal_static_viam_component_camera_v1_GetImageRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_component_camera_v1_GetImageRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_GetImageRequest_descriptor,
-        new java.lang.String[] { "Name", "MimeType", "Extra", });
-    internal_static_viam_component_camera_v1_GetImageResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_component_camera_v1_GetImageResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_GetImageResponse_descriptor,
-        new java.lang.String[] { "MimeType", "Image", });
-    internal_static_viam_component_camera_v1_GetImagesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_component_camera_v1_GetImagesRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_GetImagesRequest_descriptor,
-        new java.lang.String[] { "Name", });
-    internal_static_viam_component_camera_v1_GetImagesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_component_camera_v1_GetImagesResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_GetImagesResponse_descriptor,
-        new java.lang.String[] { "Images", "ResponseMetadata", });
-    internal_static_viam_component_camera_v1_Image_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_component_camera_v1_Image_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_Image_descriptor,
-        new java.lang.String[] { "SourceName", "Format", "Image", });
-    internal_static_viam_component_camera_v1_RenderFrameRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_component_camera_v1_RenderFrameRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_RenderFrameRequest_descriptor,
-        new java.lang.String[] { "Name", "MimeType", "Extra", });
-    internal_static_viam_component_camera_v1_GetPointCloudRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_component_camera_v1_GetPointCloudRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_GetPointCloudRequest_descriptor,
-        new java.lang.String[] { "Name", "MimeType", "Extra", });
-    internal_static_viam_component_camera_v1_GetPointCloudResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_component_camera_v1_GetPointCloudResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_GetPointCloudResponse_descriptor,
-        new java.lang.String[] { "MimeType", "PointCloud", });
-    internal_static_viam_component_camera_v1_GetPropertiesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_component_camera_v1_GetPropertiesRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_GetPropertiesRequest_descriptor,
-        new java.lang.String[] { "Name", });
-    internal_static_viam_component_camera_v1_GetPropertiesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_component_camera_v1_GetPropertiesResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_GetPropertiesResponse_descriptor,
-        new java.lang.String[] { "SupportsPcd", "IntrinsicParameters", "DistortionParameters", "MimeTypes", });
-    internal_static_viam_component_camera_v1_Webcams_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_viam_component_camera_v1_Webcams_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_Webcams_descriptor,
-        new java.lang.String[] { "Webcams", });
-    internal_static_viam_component_camera_v1_Webcam_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_viam_component_camera_v1_Webcam_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_Webcam_descriptor,
-        new java.lang.String[] { "Label", "Status", "Properties", "Name", "Id", });
-    internal_static_viam_component_camera_v1_Property_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_viam_component_camera_v1_Property_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_Property_descriptor,
-        new java.lang.String[] { "WidthPx", "HeightPx", "FrameFormat", "FrameRate", });
-    internal_static_viam_component_camera_v1_IntrinsicParameters_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_viam_component_camera_v1_IntrinsicParameters_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_IntrinsicParameters_descriptor,
-        new java.lang.String[] { "WidthPx", "HeightPx", "FocalXPx", "FocalYPx", "CenterXPx", "CenterYPx", });
-    internal_static_viam_component_camera_v1_DistortionParameters_descriptor =
-      getDescriptor().getMessageTypes().get(14);
-    internal_static_viam_component_camera_v1_DistortionParameters_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_component_camera_v1_DistortionParameters_descriptor,
-        new java.lang.String[] { "Model", "Parameters", });
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(com.google.api.AnnotationsProto.http);
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalUpdateFileDescriptor(descriptor, registry);
-    com.viam.common.v1.Common.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.api.HttpBodyProto.getDescriptor();
-    com.google.protobuf.StructProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

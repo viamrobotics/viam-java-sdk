@@ -9,15 +9,9 @@ public final class Module {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
-
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-    registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
-  }
   public interface AddResourceRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.module.v1.AddResourceRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
@@ -29,10 +23,6 @@ public final class Module {
      * @return The config.
      */
     viam.app.v1.Robot.ComponentConfig getConfig();
-    /**
-     * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-     */
-    viam.app.v1.Robot.ComponentConfigOrBuilder getConfigOrBuilder();
 
     /**
      * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
@@ -53,8 +43,8 @@ public final class Module {
     java.lang.String getDependencies(int index);
     /**
      * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the dependencies at the given index.
+     * @param index The index of the element to return.
+     * @return The dependencies at the given index.
      */
     com.google.protobuf.ByteString
         getDependenciesBytes(int index);
@@ -62,46 +52,19 @@ public final class Module {
   /**
    * Protobuf type {@code viam.module.v1.AddResourceRequest}
    */
-  public static final class AddResourceRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AddResourceRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          AddResourceRequest, AddResourceRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.module.v1.AddResourceRequest)
       AddResourceRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AddResourceRequest.newBuilder() to construct.
-    private AddResourceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AddResourceRequest() {
-      dependencies_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      dependencies_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AddResourceRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_AddResourceRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_AddResourceRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.module.v1.Module.AddResourceRequest.class, viam.module.v1.Module.AddResourceRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int CONFIG_FIELD_NUMBER = 1;
     private viam.app.v1.Robot.ComponentConfig config_;
     /**
      * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-     * @return Whether the config field is set.
      */
     @java.lang.Override
     public boolean hasConfig() {
@@ -109,7 +72,6 @@ public final class Module {
     }
     /**
      * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-     * @return The config.
      */
     @java.lang.Override
     public viam.app.v1.Robot.ComponentConfig getConfig() {
@@ -118,27 +80,48 @@ public final class Module {
     /**
      * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
      */
-    @java.lang.Override
-    public viam.app.v1.Robot.ComponentConfigOrBuilder getConfigOrBuilder() {
-      return config_ == null ? viam.app.v1.Robot.ComponentConfig.getDefaultInstance() : config_;
+    private void setConfig(viam.app.v1.Robot.ComponentConfig value) {
+      value.getClass();
+  config_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeConfig(viam.app.v1.Robot.ComponentConfig value) {
+      value.getClass();
+  if (config_ != null &&
+          config_ != viam.app.v1.Robot.ComponentConfig.getDefaultInstance()) {
+        config_ =
+          viam.app.v1.Robot.ComponentConfig.newBuilder(config_).mergeFrom(value).buildPartial();
+      } else {
+        config_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
+     */
+    private void clearConfig() {  config_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int DEPENDENCIES_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList dependencies_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> dependencies_;
     /**
      * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
      * @return A list containing the dependencies.
      */
-    public com.google.protobuf.ProtocolStringList
-        getDependenciesList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getDependenciesList() {
       return dependencies_;
     }
     /**
      * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
      * @return The count of dependencies.
      */
+    @java.lang.Override
     public int getDependenciesCount() {
       return dependencies_.size();
     }
@@ -147,6 +130,7 @@ public final class Module {
      * @param index The index of the element to return.
      * @return The dependencies at the given index.
      */
+    @java.lang.Override
     public java.lang.String getDependencies(int index) {
       return dependencies_.get(index);
     }
@@ -155,558 +139,247 @@ public final class Module {
      * @param index The index of the value to return.
      * @return The bytes of the dependencies at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDependenciesBytes(int index) {
-      return dependencies_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          dependencies_.get(index));
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDependenciesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          dependencies_;  if (!tmp.isModifiable()) {
+        dependencies_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getConfig());
-      }
-      for (int i = 0; i < dependencies_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dependencies_.getRaw(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
+     * @param index The index to set the value at.
+     * @param value The dependencies to set.
+     */
+    private void setDependencies(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureDependenciesIsMutable();
+      dependencies_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getConfig());
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < dependencies_.size(); i++) {
-          dataSize += computeStringSizeNoTag(dependencies_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getDependenciesList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
+     * @param value The dependencies to add.
+     */
+    private void addDependencies(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureDependenciesIsMutable();
+      dependencies_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.module.v1.Module.AddResourceRequest)) {
-        return super.equals(obj);
-      }
-      viam.module.v1.Module.AddResourceRequest other = (viam.module.v1.Module.AddResourceRequest) obj;
-
-      if (hasConfig() != other.hasConfig()) return false;
-      if (hasConfig()) {
-        if (!getConfig()
-            .equals(other.getConfig())) return false;
-      }
-      if (!getDependenciesList()
-          .equals(other.getDependenciesList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
+     * @param values The dependencies to add.
+     */
+    private void addAllDependencies(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDependenciesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, dependencies_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasConfig()) {
-        hash = (37 * hash) + CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getConfig().hashCode();
-      }
-      if (getDependenciesCount() > 0) {
-        hash = (37 * hash) + DEPENDENCIES_FIELD_NUMBER;
-        hash = (53 * hash) + getDependenciesList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
+     */
+    private void clearDependencies() {
+      dependencies_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
+     * @param value The bytes of the dependencies to add.
+     */
+    private void addDependenciesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureDependenciesIsMutable();
+      dependencies_.add(value.toStringUtf8());
     }
 
     public static viam.module.v1.Module.AddResourceRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.AddResourceRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.AddResourceRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.AddResourceRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.AddResourceRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.AddResourceRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.AddResourceRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.AddResourceRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.module.v1.Module.AddResourceRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.module.v1.Module.AddResourceRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.module.v1.Module.AddResourceRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.AddResourceRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.module.v1.Module.AddResourceRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.module.v1.AddResourceRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.module.v1.Module.AddResourceRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.module.v1.AddResourceRequest)
         viam.module.v1.Module.AddResourceRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_AddResourceRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_AddResourceRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.module.v1.Module.AddResourceRequest.class, viam.module.v1.Module.AddResourceRequest.Builder.class);
-      }
-
       // Construct using viam.module.v1.Module.AddResourceRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConfigFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        config_ = null;
-        if (configBuilder_ != null) {
-          configBuilder_.dispose();
-          configBuilder_ = null;
-        }
-        dependencies_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_AddResourceRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.AddResourceRequest getDefaultInstanceForType() {
-        return viam.module.v1.Module.AddResourceRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.AddResourceRequest build() {
-        viam.module.v1.Module.AddResourceRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.AddResourceRequest buildPartial() {
-        viam.module.v1.Module.AddResourceRequest result = new viam.module.v1.Module.AddResourceRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.module.v1.Module.AddResourceRequest result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.config_ = configBuilder_ == null
-              ? config_
-              : configBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          dependencies_.makeImmutable();
-          result.dependencies_ = dependencies_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.module.v1.Module.AddResourceRequest) {
-          return mergeFrom((viam.module.v1.Module.AddResourceRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.module.v1.Module.AddResourceRequest other) {
-        if (other == viam.module.v1.Module.AddResourceRequest.getDefaultInstance()) return this;
-        if (other.hasConfig()) {
-          mergeConfig(other.getConfig());
-        }
-        if (!other.dependencies_.isEmpty()) {
-          if (dependencies_.isEmpty()) {
-            dependencies_ = other.dependencies_;
-            bitField0_ |= 0x00000002;
-          } else {
-            ensureDependenciesIsMutable();
-            dependencies_.addAll(other.dependencies_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getConfigFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureDependenciesIsMutable();
-                dependencies_.add(s);
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private viam.app.v1.Robot.ComponentConfig config_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.v1.Robot.ComponentConfig, viam.app.v1.Robot.ComponentConfig.Builder, viam.app.v1.Robot.ComponentConfigOrBuilder> configBuilder_;
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasConfig();
       }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       * @return The config.
        */
+      @java.lang.Override
       public viam.app.v1.Robot.ComponentConfig getConfig() {
-        if (configBuilder_ == null) {
-          return config_ == null ? viam.app.v1.Robot.ComponentConfig.getDefaultInstance() : config_;
-        } else {
-          return configBuilder_.getMessage();
-        }
+        return instance.getConfig();
       }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
        */
       public Builder setConfig(viam.app.v1.Robot.ComponentConfig value) {
-        if (configBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          config_ = value;
-        } else {
-          configBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setConfig(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
        */
       public Builder setConfig(
           viam.app.v1.Robot.ComponentConfig.Builder builderForValue) {
-        if (configBuilder_ == null) {
-          config_ = builderForValue.build();
-        } else {
-          configBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setConfig(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
        */
       public Builder mergeConfig(viam.app.v1.Robot.ComponentConfig value) {
-        if (configBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            config_ != null &&
-            config_ != viam.app.v1.Robot.ComponentConfig.getDefaultInstance()) {
-            getConfigBuilder().mergeFrom(value);
-          } else {
-            config_ = value;
-          }
-        } else {
-          configBuilder_.mergeFrom(value);
-        }
-        if (config_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeConfig(value);
         return this;
       }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
        */
-      public Builder clearConfig() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        config_ = null;
-        if (configBuilder_ != null) {
-          configBuilder_.dispose();
-          configBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearConfig() {  copyOnWrite();
+        instance.clearConfig();
         return this;
-      }
-      /**
-       * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       */
-      public viam.app.v1.Robot.ComponentConfig.Builder getConfigBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getConfigFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       */
-      public viam.app.v1.Robot.ComponentConfigOrBuilder getConfigOrBuilder() {
-        if (configBuilder_ != null) {
-          return configBuilder_.getMessageOrBuilder();
-        } else {
-          return config_ == null ?
-              viam.app.v1.Robot.ComponentConfig.getDefaultInstance() : config_;
-        }
-      }
-      /**
-       * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.v1.Robot.ComponentConfig, viam.app.v1.Robot.ComponentConfig.Builder, viam.app.v1.Robot.ComponentConfigOrBuilder> 
-          getConfigFieldBuilder() {
-        if (configBuilder_ == null) {
-          configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.v1.Robot.ComponentConfig, viam.app.v1.Robot.ComponentConfig.Builder, viam.app.v1.Robot.ComponentConfigOrBuilder>(
-                  getConfig(),
-                  getParentForChildren(),
-                  isClean());
-          config_ = null;
-        }
-        return configBuilder_;
       }
 
-      private com.google.protobuf.LazyStringArrayList dependencies_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureDependenciesIsMutable() {
-        if (!dependencies_.isModifiable()) {
-          dependencies_ = new com.google.protobuf.LazyStringArrayList(dependencies_);
-        }
-        bitField0_ |= 0x00000002;
-      }
       /**
        * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
        * @return A list containing the dependencies.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getDependenciesList() {
-        dependencies_.makeImmutable();
-        return dependencies_;
+        return java.util.Collections.unmodifiableList(
+            instance.getDependenciesList());
       }
       /**
        * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
        * @return The count of dependencies.
        */
+      @java.lang.Override
       public int getDependenciesCount() {
-        return dependencies_.size();
+        return instance.getDependenciesCount();
       }
       /**
        * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
        * @param index The index of the element to return.
        * @return The dependencies at the given index.
        */
+      @java.lang.Override
       public java.lang.String getDependencies(int index) {
-        return dependencies_.get(index);
+        return instance.getDependencies(index);
       }
       /**
        * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the dependencies at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDependenciesBytes(int index) {
-        return dependencies_.getByteString(index);
+        return instance.getDependenciesBytes(index);
       }
       /**
        * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
@@ -716,11 +389,8 @@ public final class Module {
        */
       public Builder setDependencies(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureDependenciesIsMutable();
-        dependencies_.set(index, value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setDependencies(index, value);
         return this;
       }
       /**
@@ -730,11 +400,8 @@ public final class Module {
        */
       public Builder addDependencies(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureDependenciesIsMutable();
-        dependencies_.add(value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addDependencies(value);
         return this;
       }
       /**
@@ -744,11 +411,8 @@ public final class Module {
        */
       public Builder addAllDependencies(
           java.lang.Iterable<java.lang.String> values) {
-        ensureDependenciesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, dependencies_);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addAllDependencies(values);
         return this;
       }
       /**
@@ -756,10 +420,8 @@ public final class Module {
        * @return This builder for chaining.
        */
       public Builder clearDependencies() {
-        dependencies_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);;
-        onChanged();
+        copyOnWrite();
+        instance.clearDependencies();
         return this;
       }
       /**
@@ -769,478 +431,273 @@ public final class Module {
        */
       public Builder addDependenciesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureDependenciesIsMutable();
-        dependencies_.add(value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addDependenciesBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.module.v1.AddResourceRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.module.v1.Module.AddResourceRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "config_",
+              "dependencies_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u1009\u0000\u0002" +
+                "\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.module.v1.Module.AddResourceRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.module.v1.Module.AddResourceRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.module.v1.Module.AddResourceRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.module.v1.AddResourceRequest)
     private static final viam.module.v1.Module.AddResourceRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.module.v1.Module.AddResourceRequest();
+      AddResourceRequest defaultInstance = new AddResourceRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AddResourceRequest.class, defaultInstance);
     }
 
     public static viam.module.v1.Module.AddResourceRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AddResourceRequest>
-        PARSER = new com.google.protobuf.AbstractParser<AddResourceRequest>() {
-      @java.lang.Override
-      public AddResourceRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AddResourceRequest> PARSER;
 
     public static com.google.protobuf.Parser<AddResourceRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AddResourceRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.module.v1.Module.AddResourceRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface AddResourceResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.module.v1.AddResourceResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.module.v1.AddResourceResponse}
    */
-  public static final class AddResourceResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class AddResourceResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          AddResourceResponse, AddResourceResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.module.v1.AddResourceResponse)
       AddResourceResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use AddResourceResponse.newBuilder() to construct.
-    private AddResourceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private AddResourceResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AddResourceResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_AddResourceResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_AddResourceResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.module.v1.Module.AddResourceResponse.class, viam.module.v1.Module.AddResourceResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.module.v1.Module.AddResourceResponse)) {
-        return super.equals(obj);
-      }
-      viam.module.v1.Module.AddResourceResponse other = (viam.module.v1.Module.AddResourceResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static viam.module.v1.Module.AddResourceResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.AddResourceResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.AddResourceResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.AddResourceResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.AddResourceResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.AddResourceResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.AddResourceResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.AddResourceResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.module.v1.Module.AddResourceResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.module.v1.Module.AddResourceResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.module.v1.Module.AddResourceResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.AddResourceResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.module.v1.Module.AddResourceResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.module.v1.AddResourceResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.module.v1.Module.AddResourceResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.module.v1.AddResourceResponse)
         viam.module.v1.Module.AddResourceResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_AddResourceResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_AddResourceResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.module.v1.Module.AddResourceResponse.class, viam.module.v1.Module.AddResourceResponse.Builder.class);
-      }
-
       // Construct using viam.module.v1.Module.AddResourceResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_AddResourceResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.AddResourceResponse getDefaultInstanceForType() {
-        return viam.module.v1.Module.AddResourceResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.AddResourceResponse build() {
-        viam.module.v1.Module.AddResourceResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.AddResourceResponse buildPartial() {
-        viam.module.v1.Module.AddResourceResponse result = new viam.module.v1.Module.AddResourceResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.module.v1.Module.AddResourceResponse) {
-          return mergeFrom((viam.module.v1.Module.AddResourceResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.module.v1.Module.AddResourceResponse other) {
-        if (other == viam.module.v1.Module.AddResourceResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.module.v1.AddResourceResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.module.v1.Module.AddResourceResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.module.v1.Module.AddResourceResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.module.v1.Module.AddResourceResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.module.v1.Module.AddResourceResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.module.v1.AddResourceResponse)
     private static final viam.module.v1.Module.AddResourceResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.module.v1.Module.AddResourceResponse();
+      AddResourceResponse defaultInstance = new AddResourceResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        AddResourceResponse.class, defaultInstance);
     }
 
     public static viam.module.v1.Module.AddResourceResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AddResourceResponse>
-        PARSER = new com.google.protobuf.AbstractParser<AddResourceResponse>() {
-      @java.lang.Override
-      public AddResourceResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<AddResourceResponse> PARSER;
 
     public static com.google.protobuf.Parser<AddResourceResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<AddResourceResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.module.v1.Module.AddResourceResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ReconfigureResourceRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.module.v1.ReconfigureResourceRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
@@ -1252,10 +709,6 @@ public final class Module {
      * @return The config.
      */
     viam.app.v1.Robot.ComponentConfig getConfig();
-    /**
-     * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-     */
-    viam.app.v1.Robot.ComponentConfigOrBuilder getConfigOrBuilder();
 
     /**
      * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
@@ -1276,8 +729,8 @@ public final class Module {
     java.lang.String getDependencies(int index);
     /**
      * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the dependencies at the given index.
+     * @param index The index of the element to return.
+     * @return The dependencies at the given index.
      */
     com.google.protobuf.ByteString
         getDependenciesBytes(int index);
@@ -1285,46 +738,19 @@ public final class Module {
   /**
    * Protobuf type {@code viam.module.v1.ReconfigureResourceRequest}
    */
-  public static final class ReconfigureResourceRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ReconfigureResourceRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ReconfigureResourceRequest, ReconfigureResourceRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.module.v1.ReconfigureResourceRequest)
       ReconfigureResourceRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ReconfigureResourceRequest.newBuilder() to construct.
-    private ReconfigureResourceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ReconfigureResourceRequest() {
-      dependencies_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      dependencies_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ReconfigureResourceRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_ReconfigureResourceRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_ReconfigureResourceRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.module.v1.Module.ReconfigureResourceRequest.class, viam.module.v1.Module.ReconfigureResourceRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int CONFIG_FIELD_NUMBER = 1;
     private viam.app.v1.Robot.ComponentConfig config_;
     /**
      * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-     * @return Whether the config field is set.
      */
     @java.lang.Override
     public boolean hasConfig() {
@@ -1332,7 +758,6 @@ public final class Module {
     }
     /**
      * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-     * @return The config.
      */
     @java.lang.Override
     public viam.app.v1.Robot.ComponentConfig getConfig() {
@@ -1341,27 +766,48 @@ public final class Module {
     /**
      * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
      */
-    @java.lang.Override
-    public viam.app.v1.Robot.ComponentConfigOrBuilder getConfigOrBuilder() {
-      return config_ == null ? viam.app.v1.Robot.ComponentConfig.getDefaultInstance() : config_;
+    private void setConfig(viam.app.v1.Robot.ComponentConfig value) {
+      value.getClass();
+  config_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeConfig(viam.app.v1.Robot.ComponentConfig value) {
+      value.getClass();
+  if (config_ != null &&
+          config_ != viam.app.v1.Robot.ComponentConfig.getDefaultInstance()) {
+        config_ =
+          viam.app.v1.Robot.ComponentConfig.newBuilder(config_).mergeFrom(value).buildPartial();
+      } else {
+        config_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
+     */
+    private void clearConfig() {  config_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int DEPENDENCIES_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList dependencies_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> dependencies_;
     /**
      * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
      * @return A list containing the dependencies.
      */
-    public com.google.protobuf.ProtocolStringList
-        getDependenciesList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getDependenciesList() {
       return dependencies_;
     }
     /**
      * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
      * @return The count of dependencies.
      */
+    @java.lang.Override
     public int getDependenciesCount() {
       return dependencies_.size();
     }
@@ -1370,6 +816,7 @@ public final class Module {
      * @param index The index of the element to return.
      * @return The dependencies at the given index.
      */
+    @java.lang.Override
     public java.lang.String getDependencies(int index) {
       return dependencies_.get(index);
     }
@@ -1378,558 +825,247 @@ public final class Module {
      * @param index The index of the value to return.
      * @return The bytes of the dependencies at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDependenciesBytes(int index) {
-      return dependencies_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          dependencies_.get(index));
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDependenciesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          dependencies_;  if (!tmp.isModifiable()) {
+        dependencies_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getConfig());
-      }
-      for (int i = 0; i < dependencies_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dependencies_.getRaw(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
+     * @param index The index to set the value at.
+     * @param value The dependencies to set.
+     */
+    private void setDependencies(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureDependenciesIsMutable();
+      dependencies_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getConfig());
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < dependencies_.size(); i++) {
-          dataSize += computeStringSizeNoTag(dependencies_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getDependenciesList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
+     * @param value The dependencies to add.
+     */
+    private void addDependencies(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureDependenciesIsMutable();
+      dependencies_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.module.v1.Module.ReconfigureResourceRequest)) {
-        return super.equals(obj);
-      }
-      viam.module.v1.Module.ReconfigureResourceRequest other = (viam.module.v1.Module.ReconfigureResourceRequest) obj;
-
-      if (hasConfig() != other.hasConfig()) return false;
-      if (hasConfig()) {
-        if (!getConfig()
-            .equals(other.getConfig())) return false;
-      }
-      if (!getDependenciesList()
-          .equals(other.getDependenciesList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
+     * @param values The dependencies to add.
+     */
+    private void addAllDependencies(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDependenciesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, dependencies_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasConfig()) {
-        hash = (37 * hash) + CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getConfig().hashCode();
-      }
-      if (getDependenciesCount() > 0) {
-        hash = (37 * hash) + DEPENDENCIES_FIELD_NUMBER;
-        hash = (53 * hash) + getDependenciesList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
+     */
+    private void clearDependencies() {
+      dependencies_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
+     * @param value The bytes of the dependencies to add.
+     */
+    private void addDependenciesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureDependenciesIsMutable();
+      dependencies_.add(value.toStringUtf8());
     }
 
     public static viam.module.v1.Module.ReconfigureResourceRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ReconfigureResourceRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ReconfigureResourceRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ReconfigureResourceRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ReconfigureResourceRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ReconfigureResourceRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ReconfigureResourceRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.ReconfigureResourceRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.module.v1.Module.ReconfigureResourceRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.module.v1.Module.ReconfigureResourceRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.module.v1.Module.ReconfigureResourceRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.ReconfigureResourceRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.module.v1.Module.ReconfigureResourceRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.module.v1.ReconfigureResourceRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.module.v1.Module.ReconfigureResourceRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.module.v1.ReconfigureResourceRequest)
         viam.module.v1.Module.ReconfigureResourceRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ReconfigureResourceRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ReconfigureResourceRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.module.v1.Module.ReconfigureResourceRequest.class, viam.module.v1.Module.ReconfigureResourceRequest.Builder.class);
-      }
-
       // Construct using viam.module.v1.Module.ReconfigureResourceRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConfigFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        config_ = null;
-        if (configBuilder_ != null) {
-          configBuilder_.dispose();
-          configBuilder_ = null;
-        }
-        dependencies_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ReconfigureResourceRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ReconfigureResourceRequest getDefaultInstanceForType() {
-        return viam.module.v1.Module.ReconfigureResourceRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ReconfigureResourceRequest build() {
-        viam.module.v1.Module.ReconfigureResourceRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ReconfigureResourceRequest buildPartial() {
-        viam.module.v1.Module.ReconfigureResourceRequest result = new viam.module.v1.Module.ReconfigureResourceRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.module.v1.Module.ReconfigureResourceRequest result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.config_ = configBuilder_ == null
-              ? config_
-              : configBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          dependencies_.makeImmutable();
-          result.dependencies_ = dependencies_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.module.v1.Module.ReconfigureResourceRequest) {
-          return mergeFrom((viam.module.v1.Module.ReconfigureResourceRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.module.v1.Module.ReconfigureResourceRequest other) {
-        if (other == viam.module.v1.Module.ReconfigureResourceRequest.getDefaultInstance()) return this;
-        if (other.hasConfig()) {
-          mergeConfig(other.getConfig());
-        }
-        if (!other.dependencies_.isEmpty()) {
-          if (dependencies_.isEmpty()) {
-            dependencies_ = other.dependencies_;
-            bitField0_ |= 0x00000002;
-          } else {
-            ensureDependenciesIsMutable();
-            dependencies_.addAll(other.dependencies_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getConfigFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureDependenciesIsMutable();
-                dependencies_.add(s);
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private viam.app.v1.Robot.ComponentConfig config_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.v1.Robot.ComponentConfig, viam.app.v1.Robot.ComponentConfig.Builder, viam.app.v1.Robot.ComponentConfigOrBuilder> configBuilder_;
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasConfig();
       }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       * @return The config.
        */
+      @java.lang.Override
       public viam.app.v1.Robot.ComponentConfig getConfig() {
-        if (configBuilder_ == null) {
-          return config_ == null ? viam.app.v1.Robot.ComponentConfig.getDefaultInstance() : config_;
-        } else {
-          return configBuilder_.getMessage();
-        }
+        return instance.getConfig();
       }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
        */
       public Builder setConfig(viam.app.v1.Robot.ComponentConfig value) {
-        if (configBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          config_ = value;
-        } else {
-          configBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setConfig(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
        */
       public Builder setConfig(
           viam.app.v1.Robot.ComponentConfig.Builder builderForValue) {
-        if (configBuilder_ == null) {
-          config_ = builderForValue.build();
-        } else {
-          configBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setConfig(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
        */
       public Builder mergeConfig(viam.app.v1.Robot.ComponentConfig value) {
-        if (configBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            config_ != null &&
-            config_ != viam.app.v1.Robot.ComponentConfig.getDefaultInstance()) {
-            getConfigBuilder().mergeFrom(value);
-          } else {
-            config_ = value;
-          }
-        } else {
-          configBuilder_.mergeFrom(value);
-        }
-        if (config_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeConfig(value);
         return this;
       }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
        */
-      public Builder clearConfig() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        config_ = null;
-        if (configBuilder_ != null) {
-          configBuilder_.dispose();
-          configBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearConfig() {  copyOnWrite();
+        instance.clearConfig();
         return this;
-      }
-      /**
-       * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       */
-      public viam.app.v1.Robot.ComponentConfig.Builder getConfigBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getConfigFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       */
-      public viam.app.v1.Robot.ComponentConfigOrBuilder getConfigOrBuilder() {
-        if (configBuilder_ != null) {
-          return configBuilder_.getMessageOrBuilder();
-        } else {
-          return config_ == null ?
-              viam.app.v1.Robot.ComponentConfig.getDefaultInstance() : config_;
-        }
-      }
-      /**
-       * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.v1.Robot.ComponentConfig, viam.app.v1.Robot.ComponentConfig.Builder, viam.app.v1.Robot.ComponentConfigOrBuilder> 
-          getConfigFieldBuilder() {
-        if (configBuilder_ == null) {
-          configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.v1.Robot.ComponentConfig, viam.app.v1.Robot.ComponentConfig.Builder, viam.app.v1.Robot.ComponentConfigOrBuilder>(
-                  getConfig(),
-                  getParentForChildren(),
-                  isClean());
-          config_ = null;
-        }
-        return configBuilder_;
       }
 
-      private com.google.protobuf.LazyStringArrayList dependencies_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureDependenciesIsMutable() {
-        if (!dependencies_.isModifiable()) {
-          dependencies_ = new com.google.protobuf.LazyStringArrayList(dependencies_);
-        }
-        bitField0_ |= 0x00000002;
-      }
       /**
        * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
        * @return A list containing the dependencies.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getDependenciesList() {
-        dependencies_.makeImmutable();
-        return dependencies_;
+        return java.util.Collections.unmodifiableList(
+            instance.getDependenciesList());
       }
       /**
        * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
        * @return The count of dependencies.
        */
+      @java.lang.Override
       public int getDependenciesCount() {
-        return dependencies_.size();
+        return instance.getDependenciesCount();
       }
       /**
        * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
        * @param index The index of the element to return.
        * @return The dependencies at the given index.
        */
+      @java.lang.Override
       public java.lang.String getDependencies(int index) {
-        return dependencies_.get(index);
+        return instance.getDependencies(index);
       }
       /**
        * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the dependencies at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDependenciesBytes(int index) {
-        return dependencies_.getByteString(index);
+        return instance.getDependenciesBytes(index);
       }
       /**
        * <code>repeated string dependencies = 2 [json_name = "dependencies"];</code>
@@ -1939,11 +1075,8 @@ public final class Module {
        */
       public Builder setDependencies(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureDependenciesIsMutable();
-        dependencies_.set(index, value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setDependencies(index, value);
         return this;
       }
       /**
@@ -1953,11 +1086,8 @@ public final class Module {
        */
       public Builder addDependencies(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureDependenciesIsMutable();
-        dependencies_.add(value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addDependencies(value);
         return this;
       }
       /**
@@ -1967,11 +1097,8 @@ public final class Module {
        */
       public Builder addAllDependencies(
           java.lang.Iterable<java.lang.String> values) {
-        ensureDependenciesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, dependencies_);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addAllDependencies(values);
         return this;
       }
       /**
@@ -1979,10 +1106,8 @@ public final class Module {
        * @return This builder for chaining.
        */
       public Builder clearDependencies() {
-        dependencies_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);;
-        onChanged();
+        copyOnWrite();
+        instance.clearDependencies();
         return this;
       }
       /**
@@ -1992,478 +1117,273 @@ public final class Module {
        */
       public Builder addDependenciesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureDependenciesIsMutable();
-        dependencies_.add(value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addDependenciesBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.module.v1.ReconfigureResourceRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.module.v1.Module.ReconfigureResourceRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "config_",
+              "dependencies_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u1009\u0000\u0002" +
+                "\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.module.v1.Module.ReconfigureResourceRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.module.v1.Module.ReconfigureResourceRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.module.v1.Module.ReconfigureResourceRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.module.v1.ReconfigureResourceRequest)
     private static final viam.module.v1.Module.ReconfigureResourceRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.module.v1.Module.ReconfigureResourceRequest();
+      ReconfigureResourceRequest defaultInstance = new ReconfigureResourceRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ReconfigureResourceRequest.class, defaultInstance);
     }
 
     public static viam.module.v1.Module.ReconfigureResourceRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ReconfigureResourceRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ReconfigureResourceRequest>() {
-      @java.lang.Override
-      public ReconfigureResourceRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ReconfigureResourceRequest> PARSER;
 
     public static com.google.protobuf.Parser<ReconfigureResourceRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ReconfigureResourceRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.module.v1.Module.ReconfigureResourceRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ReconfigureResourceResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.module.v1.ReconfigureResourceResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.module.v1.ReconfigureResourceResponse}
    */
-  public static final class ReconfigureResourceResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ReconfigureResourceResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ReconfigureResourceResponse, ReconfigureResourceResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.module.v1.ReconfigureResourceResponse)
       ReconfigureResourceResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ReconfigureResourceResponse.newBuilder() to construct.
-    private ReconfigureResourceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ReconfigureResourceResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ReconfigureResourceResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_ReconfigureResourceResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_ReconfigureResourceResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.module.v1.Module.ReconfigureResourceResponse.class, viam.module.v1.Module.ReconfigureResourceResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.module.v1.Module.ReconfigureResourceResponse)) {
-        return super.equals(obj);
-      }
-      viam.module.v1.Module.ReconfigureResourceResponse other = (viam.module.v1.Module.ReconfigureResourceResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static viam.module.v1.Module.ReconfigureResourceResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ReconfigureResourceResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ReconfigureResourceResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ReconfigureResourceResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ReconfigureResourceResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ReconfigureResourceResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ReconfigureResourceResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.ReconfigureResourceResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.module.v1.Module.ReconfigureResourceResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.module.v1.Module.ReconfigureResourceResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.module.v1.Module.ReconfigureResourceResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.ReconfigureResourceResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.module.v1.Module.ReconfigureResourceResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.module.v1.ReconfigureResourceResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.module.v1.Module.ReconfigureResourceResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.module.v1.ReconfigureResourceResponse)
         viam.module.v1.Module.ReconfigureResourceResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ReconfigureResourceResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ReconfigureResourceResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.module.v1.Module.ReconfigureResourceResponse.class, viam.module.v1.Module.ReconfigureResourceResponse.Builder.class);
-      }
-
       // Construct using viam.module.v1.Module.ReconfigureResourceResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ReconfigureResourceResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ReconfigureResourceResponse getDefaultInstanceForType() {
-        return viam.module.v1.Module.ReconfigureResourceResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ReconfigureResourceResponse build() {
-        viam.module.v1.Module.ReconfigureResourceResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ReconfigureResourceResponse buildPartial() {
-        viam.module.v1.Module.ReconfigureResourceResponse result = new viam.module.v1.Module.ReconfigureResourceResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.module.v1.Module.ReconfigureResourceResponse) {
-          return mergeFrom((viam.module.v1.Module.ReconfigureResourceResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.module.v1.Module.ReconfigureResourceResponse other) {
-        if (other == viam.module.v1.Module.ReconfigureResourceResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.module.v1.ReconfigureResourceResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.module.v1.Module.ReconfigureResourceResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.module.v1.Module.ReconfigureResourceResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.module.v1.Module.ReconfigureResourceResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.module.v1.Module.ReconfigureResourceResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.module.v1.ReconfigureResourceResponse)
     private static final viam.module.v1.Module.ReconfigureResourceResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.module.v1.Module.ReconfigureResourceResponse();
+      ReconfigureResourceResponse defaultInstance = new ReconfigureResourceResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ReconfigureResourceResponse.class, defaultInstance);
     }
 
     public static viam.module.v1.Module.ReconfigureResourceResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ReconfigureResourceResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ReconfigureResourceResponse>() {
-      @java.lang.Override
-      public ReconfigureResourceResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ReconfigureResourceResponse> PARSER;
 
     public static com.google.protobuf.Parser<ReconfigureResourceResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ReconfigureResourceResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.module.v1.Module.ReconfigureResourceResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface RemoveResourceRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.module.v1.RemoveResourceRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -2480,58 +1400,23 @@ public final class Module {
   /**
    * Protobuf type {@code viam.module.v1.RemoveResourceRequest}
    */
-  public static final class RemoveResourceRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class RemoveResourceRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          RemoveResourceRequest, RemoveResourceRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.module.v1.RemoveResourceRequest)
       RemoveResourceRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RemoveResourceRequest.newBuilder() to construct.
-    private RemoveResourceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private RemoveResourceRequest() {
       name_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RemoveResourceRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_RemoveResourceRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_RemoveResourceRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.module.v1.Module.RemoveResourceRequest.class, viam.module.v1.Module.RemoveResourceRequest.Builder.class);
-    }
-
     public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private java.lang.String name_;
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
      */
     @java.lang.Override
     public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+      return name_;
     }
     /**
      * <code>string name = 1 [json_name = "name"];</code>
@@ -2540,377 +1425,149 @@ public final class Module {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(name_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
+     */
+    private void setName(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      name_ = value;
     }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     */
+    private void clearName() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      getUnknownFields().writeTo(output);
+      name_ = getDefaultInstance().getName();
     }
+    /**
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
+     */
+    private void setNameBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      name_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.module.v1.Module.RemoveResourceRequest)) {
-        return super.equals(obj);
-      }
-      viam.module.v1.Module.RemoveResourceRequest other = (viam.module.v1.Module.RemoveResourceRequest) obj;
-
-      if (!getName()
-          .equals(other.getName())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.module.v1.Module.RemoveResourceRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.RemoveResourceRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.RemoveResourceRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.RemoveResourceRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.RemoveResourceRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.RemoveResourceRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.RemoveResourceRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.RemoveResourceRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.module.v1.Module.RemoveResourceRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.module.v1.Module.RemoveResourceRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.module.v1.Module.RemoveResourceRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.RemoveResourceRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.module.v1.Module.RemoveResourceRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.module.v1.RemoveResourceRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.module.v1.Module.RemoveResourceRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.module.v1.RemoveResourceRequest)
         viam.module.v1.Module.RemoveResourceRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_RemoveResourceRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_RemoveResourceRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.module.v1.Module.RemoveResourceRequest.class, viam.module.v1.Module.RemoveResourceRequest.Builder.class);
-      }
-
       // Construct using viam.module.v1.Module.RemoveResourceRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        name_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_RemoveResourceRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.RemoveResourceRequest getDefaultInstanceForType() {
-        return viam.module.v1.Module.RemoveResourceRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.RemoveResourceRequest build() {
-        viam.module.v1.Module.RemoveResourceRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.RemoveResourceRequest buildPartial() {
-        viam.module.v1.Module.RemoveResourceRequest result = new viam.module.v1.Module.RemoveResourceRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.module.v1.Module.RemoveResourceRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.module.v1.Module.RemoveResourceRequest) {
-          return mergeFrom((viam.module.v1.Module.RemoveResourceRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.module.v1.Module.RemoveResourceRequest other) {
-        if (other == viam.module.v1.Module.RemoveResourceRequest.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getName();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getNameBytes();
       }
       /**
        * <code>string name = 1 [json_name = "name"];</code>
@@ -2919,10 +1576,8 @@ public final class Module {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setName(value);
         return this;
       }
       /**
@@ -2930,9 +1585,8 @@ public final class Module {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        name_ = getDefaultInstance().getName();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearName();
         return this;
       }
       /**
@@ -2942,477 +1596,270 @@ public final class Module {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setNameBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.module.v1.RemoveResourceRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.module.v1.Module.RemoveResourceRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "name_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.module.v1.Module.RemoveResourceRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.module.v1.Module.RemoveResourceRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.module.v1.Module.RemoveResourceRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.module.v1.RemoveResourceRequest)
     private static final viam.module.v1.Module.RemoveResourceRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.module.v1.Module.RemoveResourceRequest();
+      RemoveResourceRequest defaultInstance = new RemoveResourceRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RemoveResourceRequest.class, defaultInstance);
     }
 
     public static viam.module.v1.Module.RemoveResourceRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RemoveResourceRequest>
-        PARSER = new com.google.protobuf.AbstractParser<RemoveResourceRequest>() {
-      @java.lang.Override
-      public RemoveResourceRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<RemoveResourceRequest> PARSER;
 
     public static com.google.protobuf.Parser<RemoveResourceRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RemoveResourceRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.module.v1.Module.RemoveResourceRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface RemoveResourceResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.module.v1.RemoveResourceResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
   }
   /**
    * Protobuf type {@code viam.module.v1.RemoveResourceResponse}
    */
-  public static final class RemoveResourceResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class RemoveResourceResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          RemoveResourceResponse, RemoveResourceResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.module.v1.RemoveResourceResponse)
       RemoveResourceResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use RemoveResourceResponse.newBuilder() to construct.
-    private RemoveResourceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private RemoveResourceResponse() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new RemoveResourceResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_RemoveResourceResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_RemoveResourceResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.module.v1.Module.RemoveResourceResponse.class, viam.module.v1.Module.RemoveResourceResponse.Builder.class);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.module.v1.Module.RemoveResourceResponse)) {
-        return super.equals(obj);
-      }
-      viam.module.v1.Module.RemoveResourceResponse other = (viam.module.v1.Module.RemoveResourceResponse) obj;
-
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
     public static viam.module.v1.Module.RemoveResourceResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.RemoveResourceResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.RemoveResourceResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.RemoveResourceResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.RemoveResourceResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.RemoveResourceResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.RemoveResourceResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.RemoveResourceResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.module.v1.Module.RemoveResourceResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.module.v1.Module.RemoveResourceResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.module.v1.Module.RemoveResourceResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.RemoveResourceResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.module.v1.Module.RemoveResourceResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.module.v1.RemoveResourceResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.module.v1.Module.RemoveResourceResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.module.v1.RemoveResourceResponse)
         viam.module.v1.Module.RemoveResourceResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_RemoveResourceResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_RemoveResourceResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.module.v1.Module.RemoveResourceResponse.class, viam.module.v1.Module.RemoveResourceResponse.Builder.class);
-      }
-
       // Construct using viam.module.v1.Module.RemoveResourceResponse.newBuilder()
       private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_RemoveResourceResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.RemoveResourceResponse getDefaultInstanceForType() {
-        return viam.module.v1.Module.RemoveResourceResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.RemoveResourceResponse build() {
-        viam.module.v1.Module.RemoveResourceResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.RemoveResourceResponse buildPartial() {
-        viam.module.v1.Module.RemoveResourceResponse result = new viam.module.v1.Module.RemoveResourceResponse(this);
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.module.v1.Module.RemoveResourceResponse) {
-          return mergeFrom((viam.module.v1.Module.RemoveResourceResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.module.v1.Module.RemoveResourceResponse other) {
-        if (other == viam.module.v1.Module.RemoveResourceResponse.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
+        super(DEFAULT_INSTANCE);
       }
 
 
       // @@protoc_insertion_point(builder_scope:viam.module.v1.RemoveResourceResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.module.v1.Module.RemoveResourceResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.module.v1.Module.RemoveResourceResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.module.v1.Module.RemoveResourceResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.module.v1.Module.RemoveResourceResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.module.v1.RemoveResourceResponse)
     private static final viam.module.v1.Module.RemoveResourceResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.module.v1.Module.RemoveResourceResponse();
+      RemoveResourceResponse defaultInstance = new RemoveResourceResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        RemoveResourceResponse.class, defaultInstance);
     }
 
     public static viam.module.v1.Module.RemoveResourceResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<RemoveResourceResponse>
-        PARSER = new com.google.protobuf.AbstractParser<RemoveResourceResponse>() {
-      @java.lang.Override
-      public RemoveResourceResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<RemoveResourceResponse> PARSER;
 
     public static com.google.protobuf.Parser<RemoveResourceResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RemoveResourceResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.module.v1.Module.RemoveResourceResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface HandlerDefinitionOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.module.v1.HandlerDefinition)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
@@ -3424,10 +1871,6 @@ public final class Module {
      * @return The subtype.
      */
     com.viam.robot.v1.Robot.ResourceRPCSubtype getSubtype();
-    /**
-     * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
-     */
-    com.viam.robot.v1.Robot.ResourceRPCSubtypeOrBuilder getSubtypeOrBuilder();
 
     /**
      * <code>repeated string models = 2 [json_name = "models"];</code>
@@ -3448,8 +1891,8 @@ public final class Module {
     java.lang.String getModels(int index);
     /**
      * <code>repeated string models = 2 [json_name = "models"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the models at the given index.
+     * @param index The index of the element to return.
+     * @return The models at the given index.
      */
     com.google.protobuf.ByteString
         getModelsBytes(int index);
@@ -3457,46 +1900,19 @@ public final class Module {
   /**
    * Protobuf type {@code viam.module.v1.HandlerDefinition}
    */
-  public static final class HandlerDefinition extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class HandlerDefinition extends
+      com.google.protobuf.GeneratedMessageLite<
+          HandlerDefinition, HandlerDefinition.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.module.v1.HandlerDefinition)
       HandlerDefinitionOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use HandlerDefinition.newBuilder() to construct.
-    private HandlerDefinition(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private HandlerDefinition() {
-      models_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      models_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new HandlerDefinition();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_HandlerDefinition_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_HandlerDefinition_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.module.v1.Module.HandlerDefinition.class, viam.module.v1.Module.HandlerDefinition.Builder.class);
-    }
-
     private int bitField0_;
     public static final int SUBTYPE_FIELD_NUMBER = 1;
     private com.viam.robot.v1.Robot.ResourceRPCSubtype subtype_;
     /**
      * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
-     * @return Whether the subtype field is set.
      */
     @java.lang.Override
     public boolean hasSubtype() {
@@ -3504,7 +1920,6 @@ public final class Module {
     }
     /**
      * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
-     * @return The subtype.
      */
     @java.lang.Override
     public com.viam.robot.v1.Robot.ResourceRPCSubtype getSubtype() {
@@ -3513,27 +1928,48 @@ public final class Module {
     /**
      * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
      */
-    @java.lang.Override
-    public com.viam.robot.v1.Robot.ResourceRPCSubtypeOrBuilder getSubtypeOrBuilder() {
-      return subtype_ == null ? com.viam.robot.v1.Robot.ResourceRPCSubtype.getDefaultInstance() : subtype_;
+    private void setSubtype(com.viam.robot.v1.Robot.ResourceRPCSubtype value) {
+      value.getClass();
+  subtype_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeSubtype(com.viam.robot.v1.Robot.ResourceRPCSubtype value) {
+      value.getClass();
+  if (subtype_ != null &&
+          subtype_ != com.viam.robot.v1.Robot.ResourceRPCSubtype.getDefaultInstance()) {
+        subtype_ =
+          com.viam.robot.v1.Robot.ResourceRPCSubtype.newBuilder(subtype_).mergeFrom(value).buildPartial();
+      } else {
+        subtype_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
+     */
+    private void clearSubtype() {  subtype_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int MODELS_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList models_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> models_;
     /**
      * <code>repeated string models = 2 [json_name = "models"];</code>
      * @return A list containing the models.
      */
-    public com.google.protobuf.ProtocolStringList
-        getModelsList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getModelsList() {
       return models_;
     }
     /**
      * <code>repeated string models = 2 [json_name = "models"];</code>
      * @return The count of models.
      */
+    @java.lang.Override
     public int getModelsCount() {
       return models_.size();
     }
@@ -3542,6 +1978,7 @@ public final class Module {
      * @param index The index of the element to return.
      * @return The models at the given index.
      */
+    @java.lang.Override
     public java.lang.String getModels(int index) {
       return models_.get(index);
     }
@@ -3550,558 +1987,247 @@ public final class Module {
      * @param index The index of the value to return.
      * @return The bytes of the models at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getModelsBytes(int index) {
-      return models_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          models_.get(index));
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureModelsIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          models_;  if (!tmp.isModifiable()) {
+        models_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getSubtype());
-      }
-      for (int i = 0; i < models_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, models_.getRaw(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated string models = 2 [json_name = "models"];</code>
+     * @param index The index to set the value at.
+     * @param value The models to set.
+     */
+    private void setModels(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureModelsIsMutable();
+      models_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getSubtype());
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < models_.size(); i++) {
-          dataSize += computeStringSizeNoTag(models_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getModelsList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated string models = 2 [json_name = "models"];</code>
+     * @param value The models to add.
+     */
+    private void addModels(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureModelsIsMutable();
+      models_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.module.v1.Module.HandlerDefinition)) {
-        return super.equals(obj);
-      }
-      viam.module.v1.Module.HandlerDefinition other = (viam.module.v1.Module.HandlerDefinition) obj;
-
-      if (hasSubtype() != other.hasSubtype()) return false;
-      if (hasSubtype()) {
-        if (!getSubtype()
-            .equals(other.getSubtype())) return false;
-      }
-      if (!getModelsList()
-          .equals(other.getModelsList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated string models = 2 [json_name = "models"];</code>
+     * @param values The models to add.
+     */
+    private void addAllModels(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureModelsIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, models_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasSubtype()) {
-        hash = (37 * hash) + SUBTYPE_FIELD_NUMBER;
-        hash = (53 * hash) + getSubtype().hashCode();
-      }
-      if (getModelsCount() > 0) {
-        hash = (37 * hash) + MODELS_FIELD_NUMBER;
-        hash = (53 * hash) + getModelsList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated string models = 2 [json_name = "models"];</code>
+     */
+    private void clearModels() {
+      models_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string models = 2 [json_name = "models"];</code>
+     * @param value The bytes of the models to add.
+     */
+    private void addModelsBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureModelsIsMutable();
+      models_.add(value.toStringUtf8());
     }
 
     public static viam.module.v1.Module.HandlerDefinition parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.HandlerDefinition parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.HandlerDefinition parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.HandlerDefinition parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.HandlerDefinition parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.HandlerDefinition parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.HandlerDefinition parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.HandlerDefinition parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.module.v1.Module.HandlerDefinition parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.module.v1.Module.HandlerDefinition parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.module.v1.Module.HandlerDefinition parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.HandlerDefinition parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.module.v1.Module.HandlerDefinition prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.module.v1.HandlerDefinition}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.module.v1.Module.HandlerDefinition, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.module.v1.HandlerDefinition)
         viam.module.v1.Module.HandlerDefinitionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_HandlerDefinition_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_HandlerDefinition_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.module.v1.Module.HandlerDefinition.class, viam.module.v1.Module.HandlerDefinition.Builder.class);
-      }
-
       // Construct using viam.module.v1.Module.HandlerDefinition.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getSubtypeFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        subtype_ = null;
-        if (subtypeBuilder_ != null) {
-          subtypeBuilder_.dispose();
-          subtypeBuilder_ = null;
-        }
-        models_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_HandlerDefinition_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.HandlerDefinition getDefaultInstanceForType() {
-        return viam.module.v1.Module.HandlerDefinition.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.HandlerDefinition build() {
-        viam.module.v1.Module.HandlerDefinition result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.HandlerDefinition buildPartial() {
-        viam.module.v1.Module.HandlerDefinition result = new viam.module.v1.Module.HandlerDefinition(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.module.v1.Module.HandlerDefinition result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.subtype_ = subtypeBuilder_ == null
-              ? subtype_
-              : subtypeBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          models_.makeImmutable();
-          result.models_ = models_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.module.v1.Module.HandlerDefinition) {
-          return mergeFrom((viam.module.v1.Module.HandlerDefinition)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.module.v1.Module.HandlerDefinition other) {
-        if (other == viam.module.v1.Module.HandlerDefinition.getDefaultInstance()) return this;
-        if (other.hasSubtype()) {
-          mergeSubtype(other.getSubtype());
-        }
-        if (!other.models_.isEmpty()) {
-          if (models_.isEmpty()) {
-            models_ = other.models_;
-            bitField0_ |= 0x00000002;
-          } else {
-            ensureModelsIsMutable();
-            models_.addAll(other.models_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getSubtypeFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureModelsIsMutable();
-                models_.add(s);
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.viam.robot.v1.Robot.ResourceRPCSubtype subtype_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.robot.v1.Robot.ResourceRPCSubtype, com.viam.robot.v1.Robot.ResourceRPCSubtype.Builder, com.viam.robot.v1.Robot.ResourceRPCSubtypeOrBuilder> subtypeBuilder_;
       /**
        * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
-       * @return Whether the subtype field is set.
        */
+      @java.lang.Override
       public boolean hasSubtype() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasSubtype();
       }
       /**
        * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
-       * @return The subtype.
        */
+      @java.lang.Override
       public com.viam.robot.v1.Robot.ResourceRPCSubtype getSubtype() {
-        if (subtypeBuilder_ == null) {
-          return subtype_ == null ? com.viam.robot.v1.Robot.ResourceRPCSubtype.getDefaultInstance() : subtype_;
-        } else {
-          return subtypeBuilder_.getMessage();
-        }
+        return instance.getSubtype();
       }
       /**
        * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
        */
       public Builder setSubtype(com.viam.robot.v1.Robot.ResourceRPCSubtype value) {
-        if (subtypeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          subtype_ = value;
-        } else {
-          subtypeBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSubtype(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
        */
       public Builder setSubtype(
           com.viam.robot.v1.Robot.ResourceRPCSubtype.Builder builderForValue) {
-        if (subtypeBuilder_ == null) {
-          subtype_ = builderForValue.build();
-        } else {
-          subtypeBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setSubtype(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
        */
       public Builder mergeSubtype(com.viam.robot.v1.Robot.ResourceRPCSubtype value) {
-        if (subtypeBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            subtype_ != null &&
-            subtype_ != com.viam.robot.v1.Robot.ResourceRPCSubtype.getDefaultInstance()) {
-            getSubtypeBuilder().mergeFrom(value);
-          } else {
-            subtype_ = value;
-          }
-        } else {
-          subtypeBuilder_.mergeFrom(value);
-        }
-        if (subtype_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeSubtype(value);
         return this;
       }
       /**
        * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
        */
-      public Builder clearSubtype() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        subtype_ = null;
-        if (subtypeBuilder_ != null) {
-          subtypeBuilder_.dispose();
-          subtypeBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearSubtype() {  copyOnWrite();
+        instance.clearSubtype();
         return this;
-      }
-      /**
-       * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
-       */
-      public com.viam.robot.v1.Robot.ResourceRPCSubtype.Builder getSubtypeBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getSubtypeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
-       */
-      public com.viam.robot.v1.Robot.ResourceRPCSubtypeOrBuilder getSubtypeOrBuilder() {
-        if (subtypeBuilder_ != null) {
-          return subtypeBuilder_.getMessageOrBuilder();
-        } else {
-          return subtype_ == null ?
-              com.viam.robot.v1.Robot.ResourceRPCSubtype.getDefaultInstance() : subtype_;
-        }
-      }
-      /**
-       * <code>.viam.robot.v1.ResourceRPCSubtype subtype = 1 [json_name = "subtype"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.viam.robot.v1.Robot.ResourceRPCSubtype, com.viam.robot.v1.Robot.ResourceRPCSubtype.Builder, com.viam.robot.v1.Robot.ResourceRPCSubtypeOrBuilder> 
-          getSubtypeFieldBuilder() {
-        if (subtypeBuilder_ == null) {
-          subtypeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.viam.robot.v1.Robot.ResourceRPCSubtype, com.viam.robot.v1.Robot.ResourceRPCSubtype.Builder, com.viam.robot.v1.Robot.ResourceRPCSubtypeOrBuilder>(
-                  getSubtype(),
-                  getParentForChildren(),
-                  isClean());
-          subtype_ = null;
-        }
-        return subtypeBuilder_;
       }
 
-      private com.google.protobuf.LazyStringArrayList models_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureModelsIsMutable() {
-        if (!models_.isModifiable()) {
-          models_ = new com.google.protobuf.LazyStringArrayList(models_);
-        }
-        bitField0_ |= 0x00000002;
-      }
       /**
        * <code>repeated string models = 2 [json_name = "models"];</code>
        * @return A list containing the models.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getModelsList() {
-        models_.makeImmutable();
-        return models_;
+        return java.util.Collections.unmodifiableList(
+            instance.getModelsList());
       }
       /**
        * <code>repeated string models = 2 [json_name = "models"];</code>
        * @return The count of models.
        */
+      @java.lang.Override
       public int getModelsCount() {
-        return models_.size();
+        return instance.getModelsCount();
       }
       /**
        * <code>repeated string models = 2 [json_name = "models"];</code>
        * @param index The index of the element to return.
        * @return The models at the given index.
        */
+      @java.lang.Override
       public java.lang.String getModels(int index) {
-        return models_.get(index);
+        return instance.getModels(index);
       }
       /**
        * <code>repeated string models = 2 [json_name = "models"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the models at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getModelsBytes(int index) {
-        return models_.getByteString(index);
+        return instance.getModelsBytes(index);
       }
       /**
        * <code>repeated string models = 2 [json_name = "models"];</code>
@@ -4111,11 +2237,8 @@ public final class Module {
        */
       public Builder setModels(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureModelsIsMutable();
-        models_.set(index, value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setModels(index, value);
         return this;
       }
       /**
@@ -4125,11 +2248,8 @@ public final class Module {
        */
       public Builder addModels(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureModelsIsMutable();
-        models_.add(value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addModels(value);
         return this;
       }
       /**
@@ -4139,11 +2259,8 @@ public final class Module {
        */
       public Builder addAllModels(
           java.lang.Iterable<java.lang.String> values) {
-        ensureModelsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, models_);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addAllModels(values);
         return this;
       }
       /**
@@ -4151,10 +2268,8 @@ public final class Module {
        * @return This builder for chaining.
        */
       public Builder clearModels() {
-        models_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);;
-        onChanged();
+        copyOnWrite();
+        instance.clearModels();
         return this;
       }
       /**
@@ -4164,81 +2279,91 @@ public final class Module {
        */
       public Builder addModelsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureModelsIsMutable();
-        models_.add(value);
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.addModelsBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.module.v1.HandlerDefinition)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.module.v1.Module.HandlerDefinition();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "subtype_",
+              "models_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u1009\u0000\u0002" +
+                "\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.module.v1.Module.HandlerDefinition> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.module.v1.Module.HandlerDefinition.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.module.v1.Module.HandlerDefinition>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.module.v1.HandlerDefinition)
     private static final viam.module.v1.Module.HandlerDefinition DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.module.v1.Module.HandlerDefinition();
+      HandlerDefinition defaultInstance = new HandlerDefinition();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        HandlerDefinition.class, defaultInstance);
     }
 
     public static viam.module.v1.Module.HandlerDefinition getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<HandlerDefinition>
-        PARSER = new com.google.protobuf.AbstractParser<HandlerDefinition>() {
-      @java.lang.Override
-      public HandlerDefinition parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<HandlerDefinition> PARSER;
 
     public static com.google.protobuf.Parser<HandlerDefinition> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<HandlerDefinition> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.module.v1.Module.HandlerDefinition getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface HandlerMapOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.module.v1.HandlerMap)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
@@ -4253,56 +2378,20 @@ public final class Module {
      * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
      */
     int getHandlersCount();
-    /**
-     * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
-     */
-    java.util.List<? extends viam.module.v1.Module.HandlerDefinitionOrBuilder> 
-        getHandlersOrBuilderList();
-    /**
-     * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
-     */
-    viam.module.v1.Module.HandlerDefinitionOrBuilder getHandlersOrBuilder(
-        int index);
   }
   /**
    * Protobuf type {@code viam.module.v1.HandlerMap}
    */
-  public static final class HandlerMap extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class HandlerMap extends
+      com.google.protobuf.GeneratedMessageLite<
+          HandlerMap, HandlerMap.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.module.v1.HandlerMap)
       HandlerMapOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use HandlerMap.newBuilder() to construct.
-    private HandlerMap(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private HandlerMap() {
-      handlers_ = java.util.Collections.emptyList();
+      handlers_ = emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new HandlerMap();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_HandlerMap_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_HandlerMap_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.module.v1.Module.HandlerMap.class, viam.module.v1.Module.HandlerMap.Builder.class);
-    }
-
     public static final int HANDLERS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<viam.module.v1.Module.HandlerDefinition> handlers_;
+    private com.google.protobuf.Internal.ProtobufList<viam.module.v1.Module.HandlerDefinition> handlers_;
     /**
      * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
      */
@@ -4313,7 +2402,6 @@ public final class Module {
     /**
      * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
      */
-    @java.lang.Override
     public java.util.List<? extends viam.module.v1.Module.HandlerDefinitionOrBuilder> 
         getHandlersOrBuilderList() {
       return handlers_;
@@ -4335,443 +2423,192 @@ public final class Module {
     /**
      * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
      */
-    @java.lang.Override
     public viam.module.v1.Module.HandlerDefinitionOrBuilder getHandlersOrBuilder(
         int index) {
       return handlers_.get(index);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureHandlersIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<viam.module.v1.Module.HandlerDefinition> tmp = handlers_;
+      if (!tmp.isModifiable()) {
+        handlers_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < handlers_.size(); i++) {
-        output.writeMessage(1, handlers_.get(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
+     */
+    private void setHandlers(
+        int index, viam.module.v1.Module.HandlerDefinition value) {
+      value.getClass();
+  ensureHandlersIsMutable();
+      handlers_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < handlers_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, handlers_.get(i));
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
+     */
+    private void addHandlers(viam.module.v1.Module.HandlerDefinition value) {
+      value.getClass();
+  ensureHandlersIsMutable();
+      handlers_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.module.v1.Module.HandlerMap)) {
-        return super.equals(obj);
-      }
-      viam.module.v1.Module.HandlerMap other = (viam.module.v1.Module.HandlerMap) obj;
-
-      if (!getHandlersList()
-          .equals(other.getHandlersList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
+     */
+    private void addHandlers(
+        int index, viam.module.v1.Module.HandlerDefinition value) {
+      value.getClass();
+  ensureHandlersIsMutable();
+      handlers_.add(index, value);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getHandlersCount() > 0) {
-        hash = (37 * hash) + HANDLERS_FIELD_NUMBER;
-        hash = (53 * hash) + getHandlersList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
+     */
+    private void addAllHandlers(
+        java.lang.Iterable<? extends viam.module.v1.Module.HandlerDefinition> values) {
+      ensureHandlersIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, handlers_);
+    }
+    /**
+     * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
+     */
+    private void clearHandlers() {
+      handlers_ = emptyProtobufList();
+    }
+    /**
+     * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
+     */
+    private void removeHandlers(int index) {
+      ensureHandlersIsMutable();
+      handlers_.remove(index);
     }
 
     public static viam.module.v1.Module.HandlerMap parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.HandlerMap parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.HandlerMap parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.HandlerMap parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.HandlerMap parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.HandlerMap parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.HandlerMap parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.HandlerMap parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.module.v1.Module.HandlerMap parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.module.v1.Module.HandlerMap parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.module.v1.Module.HandlerMap parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.HandlerMap parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.module.v1.Module.HandlerMap prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.module.v1.HandlerMap}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.module.v1.Module.HandlerMap, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.module.v1.HandlerMap)
         viam.module.v1.Module.HandlerMapOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_HandlerMap_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_HandlerMap_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.module.v1.Module.HandlerMap.class, viam.module.v1.Module.HandlerMap.Builder.class);
-      }
-
       // Construct using viam.module.v1.Module.HandlerMap.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        if (handlersBuilder_ == null) {
-          handlers_ = java.util.Collections.emptyList();
-        } else {
-          handlers_ = null;
-          handlersBuilder_.clear();
-        }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_HandlerMap_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.HandlerMap getDefaultInstanceForType() {
-        return viam.module.v1.Module.HandlerMap.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.HandlerMap build() {
-        viam.module.v1.Module.HandlerMap result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.HandlerMap buildPartial() {
-        viam.module.v1.Module.HandlerMap result = new viam.module.v1.Module.HandlerMap(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(viam.module.v1.Module.HandlerMap result) {
-        if (handlersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            handlers_ = java.util.Collections.unmodifiableList(handlers_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.handlers_ = handlers_;
-        } else {
-          result.handlers_ = handlersBuilder_.build();
-        }
-      }
-
-      private void buildPartial0(viam.module.v1.Module.HandlerMap result) {
-        int from_bitField0_ = bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.module.v1.Module.HandlerMap) {
-          return mergeFrom((viam.module.v1.Module.HandlerMap)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.module.v1.Module.HandlerMap other) {
-        if (other == viam.module.v1.Module.HandlerMap.getDefaultInstance()) return this;
-        if (handlersBuilder_ == null) {
-          if (!other.handlers_.isEmpty()) {
-            if (handlers_.isEmpty()) {
-              handlers_ = other.handlers_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureHandlersIsMutable();
-              handlers_.addAll(other.handlers_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.handlers_.isEmpty()) {
-            if (handlersBuilder_.isEmpty()) {
-              handlersBuilder_.dispose();
-              handlersBuilder_ = null;
-              handlers_ = other.handlers_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              handlersBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getHandlersFieldBuilder() : null;
-            } else {
-              handlersBuilder_.addAllMessages(other.handlers_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                viam.module.v1.Module.HandlerDefinition m =
-                    input.readMessage(
-                        viam.module.v1.Module.HandlerDefinition.parser(),
-                        extensionRegistry);
-                if (handlersBuilder_ == null) {
-                  ensureHandlersIsMutable();
-                  handlers_.add(m);
-                } else {
-                  handlersBuilder_.addMessage(m);
-                }
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<viam.module.v1.Module.HandlerDefinition> handlers_ =
-        java.util.Collections.emptyList();
-      private void ensureHandlersIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          handlers_ = new java.util.ArrayList<viam.module.v1.Module.HandlerDefinition>(handlers_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.module.v1.Module.HandlerDefinition, viam.module.v1.Module.HandlerDefinition.Builder, viam.module.v1.Module.HandlerDefinitionOrBuilder> handlersBuilder_;
 
       /**
        * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
        */
+      @java.lang.Override
       public java.util.List<viam.module.v1.Module.HandlerDefinition> getHandlersList() {
-        if (handlersBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(handlers_);
-        } else {
-          return handlersBuilder_.getMessageList();
-        }
+        return java.util.Collections.unmodifiableList(
+            instance.getHandlersList());
       }
       /**
        * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
        */
+      @java.lang.Override
       public int getHandlersCount() {
-        if (handlersBuilder_ == null) {
-          return handlers_.size();
-        } else {
-          return handlersBuilder_.getCount();
-        }
-      }
-      /**
+        return instance.getHandlersCount();
+      }/**
        * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
        */
+      @java.lang.Override
       public viam.module.v1.Module.HandlerDefinition getHandlers(int index) {
-        if (handlersBuilder_ == null) {
-          return handlers_.get(index);
-        } else {
-          return handlersBuilder_.getMessage(index);
-        }
+        return instance.getHandlers(index);
       }
       /**
        * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
        */
       public Builder setHandlers(
           int index, viam.module.v1.Module.HandlerDefinition value) {
-        if (handlersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureHandlersIsMutable();
-          handlers_.set(index, value);
-          onChanged();
-        } else {
-          handlersBuilder_.setMessage(index, value);
-        }
+        copyOnWrite();
+        instance.setHandlers(index, value);
         return this;
       }
       /**
@@ -4779,29 +2616,17 @@ public final class Module {
        */
       public Builder setHandlers(
           int index, viam.module.v1.Module.HandlerDefinition.Builder builderForValue) {
-        if (handlersBuilder_ == null) {
-          ensureHandlersIsMutable();
-          handlers_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          handlersBuilder_.setMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.setHandlers(index,
+            builderForValue.build());
         return this;
       }
       /**
        * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
        */
       public Builder addHandlers(viam.module.v1.Module.HandlerDefinition value) {
-        if (handlersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureHandlersIsMutable();
-          handlers_.add(value);
-          onChanged();
-        } else {
-          handlersBuilder_.addMessage(value);
-        }
+        copyOnWrite();
+        instance.addHandlers(value);
         return this;
       }
       /**
@@ -4809,16 +2634,8 @@ public final class Module {
        */
       public Builder addHandlers(
           int index, viam.module.v1.Module.HandlerDefinition value) {
-        if (handlersBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureHandlersIsMutable();
-          handlers_.add(index, value);
-          onChanged();
-        } else {
-          handlersBuilder_.addMessage(index, value);
-        }
+        copyOnWrite();
+        instance.addHandlers(index, value);
         return this;
       }
       /**
@@ -4826,13 +2643,8 @@ public final class Module {
        */
       public Builder addHandlers(
           viam.module.v1.Module.HandlerDefinition.Builder builderForValue) {
-        if (handlersBuilder_ == null) {
-          ensureHandlersIsMutable();
-          handlers_.add(builderForValue.build());
-          onChanged();
-        } else {
-          handlersBuilder_.addMessage(builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addHandlers(builderForValue.build());
         return this;
       }
       /**
@@ -4840,13 +2652,9 @@ public final class Module {
        */
       public Builder addHandlers(
           int index, viam.module.v1.Module.HandlerDefinition.Builder builderForValue) {
-        if (handlersBuilder_ == null) {
-          ensureHandlersIsMutable();
-          handlers_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          handlersBuilder_.addMessage(index, builderForValue.build());
-        }
+        copyOnWrite();
+        instance.addHandlers(index,
+            builderForValue.build());
         return this;
       }
       /**
@@ -4854,173 +2662,105 @@ public final class Module {
        */
       public Builder addAllHandlers(
           java.lang.Iterable<? extends viam.module.v1.Module.HandlerDefinition> values) {
-        if (handlersBuilder_ == null) {
-          ensureHandlersIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, handlers_);
-          onChanged();
-        } else {
-          handlersBuilder_.addAllMessages(values);
-        }
+        copyOnWrite();
+        instance.addAllHandlers(values);
         return this;
       }
       /**
        * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
        */
       public Builder clearHandlers() {
-        if (handlersBuilder_ == null) {
-          handlers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          handlersBuilder_.clear();
-        }
+        copyOnWrite();
+        instance.clearHandlers();
         return this;
       }
       /**
        * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
        */
       public Builder removeHandlers(int index) {
-        if (handlersBuilder_ == null) {
-          ensureHandlersIsMutable();
-          handlers_.remove(index);
-          onChanged();
-        } else {
-          handlersBuilder_.remove(index);
-        }
+        copyOnWrite();
+        instance.removeHandlers(index);
         return this;
       }
-      /**
-       * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
-       */
-      public viam.module.v1.Module.HandlerDefinition.Builder getHandlersBuilder(
-          int index) {
-        return getHandlersFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
-       */
-      public viam.module.v1.Module.HandlerDefinitionOrBuilder getHandlersOrBuilder(
-          int index) {
-        if (handlersBuilder_ == null) {
-          return handlers_.get(index);  } else {
-          return handlersBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
-       */
-      public java.util.List<? extends viam.module.v1.Module.HandlerDefinitionOrBuilder> 
-           getHandlersOrBuilderList() {
-        if (handlersBuilder_ != null) {
-          return handlersBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(handlers_);
-        }
-      }
-      /**
-       * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
-       */
-      public viam.module.v1.Module.HandlerDefinition.Builder addHandlersBuilder() {
-        return getHandlersFieldBuilder().addBuilder(
-            viam.module.v1.Module.HandlerDefinition.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
-       */
-      public viam.module.v1.Module.HandlerDefinition.Builder addHandlersBuilder(
-          int index) {
-        return getHandlersFieldBuilder().addBuilder(
-            index, viam.module.v1.Module.HandlerDefinition.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .viam.module.v1.HandlerDefinition handlers = 1 [json_name = "handlers"];</code>
-       */
-      public java.util.List<viam.module.v1.Module.HandlerDefinition.Builder> 
-           getHandlersBuilderList() {
-        return getHandlersFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          viam.module.v1.Module.HandlerDefinition, viam.module.v1.Module.HandlerDefinition.Builder, viam.module.v1.Module.HandlerDefinitionOrBuilder> 
-          getHandlersFieldBuilder() {
-        if (handlersBuilder_ == null) {
-          handlersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              viam.module.v1.Module.HandlerDefinition, viam.module.v1.Module.HandlerDefinition.Builder, viam.module.v1.Module.HandlerDefinitionOrBuilder>(
-                  handlers_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          handlers_ = null;
-        }
-        return handlersBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.module.v1.HandlerMap)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.module.v1.Module.HandlerMap();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "handlers_",
+              viam.module.v1.Module.HandlerDefinition.class,
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.module.v1.Module.HandlerMap> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.module.v1.Module.HandlerMap.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.module.v1.Module.HandlerMap>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.module.v1.HandlerMap)
     private static final viam.module.v1.Module.HandlerMap DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.module.v1.Module.HandlerMap();
+      HandlerMap defaultInstance = new HandlerMap();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        HandlerMap.class, defaultInstance);
     }
 
     public static viam.module.v1.Module.HandlerMap getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<HandlerMap>
-        PARSER = new com.google.protobuf.AbstractParser<HandlerMap>() {
-      @java.lang.Override
-      public HandlerMap parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<HandlerMap> PARSER;
 
     public static com.google.protobuf.Parser<HandlerMap> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<HandlerMap> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.module.v1.Module.HandlerMap getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ReadyRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.module.v1.ReadyRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
@@ -5049,59 +2789,24 @@ public final class Module {
   /**
    * Protobuf type {@code viam.module.v1.ReadyRequest}
    */
-  public static final class ReadyRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ReadyRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ReadyRequest, ReadyRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.module.v1.ReadyRequest)
       ReadyRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ReadyRequest.newBuilder() to construct.
-    private ReadyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ReadyRequest() {
       parentAddress_ = "";
       webrtcOffer_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ReadyRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_ReadyRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_ReadyRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.module.v1.Module.ReadyRequest.class, viam.module.v1.Module.ReadyRequest.Builder.class);
-    }
-
     public static final int PARENT_ADDRESS_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object parentAddress_ = "";
+    private java.lang.String parentAddress_;
     /**
      * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
      * @return The parentAddress.
      */
     @java.lang.Override
     public java.lang.String getParentAddress() {
-      java.lang.Object ref = parentAddress_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        parentAddress_ = s;
-        return s;
-      }
+      return parentAddress_;
     }
     /**
      * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
@@ -5110,37 +2815,45 @@ public final class Module {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getParentAddressBytes() {
-      java.lang.Object ref = parentAddress_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        parentAddress_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(parentAddress_);
+    }
+    /**
+     * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+     * @param value The parentAddress to set.
+     */
+    private void setParentAddress(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      parentAddress_ = value;
+    }
+    /**
+     * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+     */
+    private void clearParentAddress() {
+
+      parentAddress_ = getDefaultInstance().getParentAddress();
+    }
+    /**
+     * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
+     * @param value The bytes for parentAddress to set.
+     */
+    private void setParentAddressBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      parentAddress_ = value.toStringUtf8();
+
     }
 
     public static final int WEBRTC_OFFER_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object webrtcOffer_ = "";
+    private java.lang.String webrtcOffer_;
     /**
      * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
      * @return The webrtcOffer.
      */
     @java.lang.Override
     public java.lang.String getWebrtcOffer() {
-      java.lang.Object ref = webrtcOffer_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        webrtcOffer_ = s;
-        return s;
-      }
+      return webrtcOffer_;
     }
     /**
      * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
@@ -5149,401 +2862,149 @@ public final class Module {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getWebrtcOfferBytes() {
-      java.lang.Object ref = webrtcOffer_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        webrtcOffer_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(webrtcOffer_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
+     * @param value The webrtcOffer to set.
+     */
+    private void setWebrtcOffer(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      webrtcOffer_ = value;
     }
+    /**
+     * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
+     */
+    private void clearWebrtcOffer() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentAddress_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, parentAddress_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(webrtcOffer_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, webrtcOffer_);
-      }
-      getUnknownFields().writeTo(output);
+      webrtcOffer_ = getDefaultInstance().getWebrtcOffer();
     }
+    /**
+     * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
+     * @param value The bytes for webrtcOffer to set.
+     */
+    private void setWebrtcOfferBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      webrtcOffer_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentAddress_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, parentAddress_);
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(webrtcOffer_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, webrtcOffer_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.module.v1.Module.ReadyRequest)) {
-        return super.equals(obj);
-      }
-      viam.module.v1.Module.ReadyRequest other = (viam.module.v1.Module.ReadyRequest) obj;
-
-      if (!getParentAddress()
-          .equals(other.getParentAddress())) return false;
-      if (!getWebrtcOffer()
-          .equals(other.getWebrtcOffer())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PARENT_ADDRESS_FIELD_NUMBER;
-      hash = (53 * hash) + getParentAddress().hashCode();
-      hash = (37 * hash) + WEBRTC_OFFER_FIELD_NUMBER;
-      hash = (53 * hash) + getWebrtcOffer().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.module.v1.Module.ReadyRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ReadyRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ReadyRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ReadyRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ReadyRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ReadyRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ReadyRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.ReadyRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.module.v1.Module.ReadyRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.module.v1.Module.ReadyRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.module.v1.Module.ReadyRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.ReadyRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.module.v1.Module.ReadyRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.module.v1.ReadyRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.module.v1.Module.ReadyRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.module.v1.ReadyRequest)
         viam.module.v1.Module.ReadyRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ReadyRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ReadyRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.module.v1.Module.ReadyRequest.class, viam.module.v1.Module.ReadyRequest.Builder.class);
-      }
-
       // Construct using viam.module.v1.Module.ReadyRequest.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        parentAddress_ = "";
-        webrtcOffer_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ReadyRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ReadyRequest getDefaultInstanceForType() {
-        return viam.module.v1.Module.ReadyRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ReadyRequest build() {
-        viam.module.v1.Module.ReadyRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ReadyRequest buildPartial() {
-        viam.module.v1.Module.ReadyRequest result = new viam.module.v1.Module.ReadyRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.module.v1.Module.ReadyRequest result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.parentAddress_ = parentAddress_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.webrtcOffer_ = webrtcOffer_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.module.v1.Module.ReadyRequest) {
-          return mergeFrom((viam.module.v1.Module.ReadyRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.module.v1.Module.ReadyRequest other) {
-        if (other == viam.module.v1.Module.ReadyRequest.getDefaultInstance()) return this;
-        if (!other.getParentAddress().isEmpty()) {
-          parentAddress_ = other.parentAddress_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        if (!other.getWebrtcOffer().isEmpty()) {
-          webrtcOffer_ = other.webrtcOffer_;
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                parentAddress_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              case 18: {
-                webrtcOffer_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object parentAddress_ = "";
       /**
        * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
        * @return The parentAddress.
        */
+      @java.lang.Override
       public java.lang.String getParentAddress() {
-        java.lang.Object ref = parentAddress_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          parentAddress_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getParentAddress();
       }
       /**
        * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
        * @return The bytes for parentAddress.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getParentAddressBytes() {
-        java.lang.Object ref = parentAddress_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          parentAddress_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getParentAddressBytes();
       }
       /**
        * <code>string parent_address = 1 [json_name = "parentAddress"];</code>
@@ -5552,10 +3013,8 @@ public final class Module {
        */
       public Builder setParentAddress(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        parentAddress_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setParentAddress(value);
         return this;
       }
       /**
@@ -5563,9 +3022,8 @@ public final class Module {
        * @return This builder for chaining.
        */
       public Builder clearParentAddress() {
-        parentAddress_ = getDefaultInstance().getParentAddress();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
+        copyOnWrite();
+        instance.clearParentAddress();
         return this;
       }
       /**
@@ -5575,47 +3033,27 @@ public final class Module {
        */
       public Builder setParentAddressBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        parentAddress_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setParentAddressBytes(value);
         return this;
       }
 
-      private java.lang.Object webrtcOffer_ = "";
       /**
        * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
        * @return The webrtcOffer.
        */
+      @java.lang.Override
       public java.lang.String getWebrtcOffer() {
-        java.lang.Object ref = webrtcOffer_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          webrtcOffer_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getWebrtcOffer();
       }
       /**
        * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
        * @return The bytes for webrtcOffer.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getWebrtcOfferBytes() {
-        java.lang.Object ref = webrtcOffer_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          webrtcOffer_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getWebrtcOfferBytes();
       }
       /**
        * <code>string webrtc_offer = 2 [json_name = "webrtcOffer"];</code>
@@ -5624,10 +3062,8 @@ public final class Module {
        */
       public Builder setWebrtcOffer(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        webrtcOffer_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setWebrtcOffer(value);
         return this;
       }
       /**
@@ -5635,9 +3071,8 @@ public final class Module {
        * @return This builder for chaining.
        */
       public Builder clearWebrtcOffer() {
-        webrtcOffer_ = getDefaultInstance().getWebrtcOffer();
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+        copyOnWrite();
+        instance.clearWebrtcOffer();
         return this;
       }
       /**
@@ -5647,80 +3082,90 @@ public final class Module {
        */
       public Builder setWebrtcOfferBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        webrtcOffer_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setWebrtcOfferBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.module.v1.ReadyRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.module.v1.Module.ReadyRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "parentAddress_",
+              "webrtcOffer_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\u0208" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.module.v1.Module.ReadyRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.module.v1.Module.ReadyRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.module.v1.Module.ReadyRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.module.v1.ReadyRequest)
     private static final viam.module.v1.Module.ReadyRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.module.v1.Module.ReadyRequest();
+      ReadyRequest defaultInstance = new ReadyRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ReadyRequest.class, defaultInstance);
     }
 
     public static viam.module.v1.Module.ReadyRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ReadyRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ReadyRequest>() {
-      @java.lang.Override
-      public ReadyRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ReadyRequest> PARSER;
 
     public static com.google.protobuf.Parser<ReadyRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ReadyRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.module.v1.Module.ReadyRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ReadyResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.module.v1.ReadyResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>bool ready = 1 [json_name = "ready"];</code>
@@ -5738,10 +3183,6 @@ public final class Module {
      * @return The handlermap.
      */
     viam.module.v1.Module.HandlerMap getHandlermap();
-    /**
-     * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
-     */
-    viam.module.v1.Module.HandlerMapOrBuilder getHandlermapOrBuilder();
 
     /**
      * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
@@ -5758,42 +3199,17 @@ public final class Module {
   /**
    * Protobuf type {@code viam.module.v1.ReadyResponse}
    */
-  public static final class ReadyResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ReadyResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ReadyResponse, ReadyResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.module.v1.ReadyResponse)
       ReadyResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ReadyResponse.newBuilder() to construct.
-    private ReadyResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ReadyResponse() {
       webrtcAnswer_ = "";
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ReadyResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_ReadyResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_ReadyResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.module.v1.Module.ReadyResponse.class, viam.module.v1.Module.ReadyResponse.Builder.class);
-    }
-
     private int bitField0_;
     public static final int READY_FIELD_NUMBER = 1;
-    private boolean ready_ = false;
+    private boolean ready_;
     /**
      * <code>bool ready = 1 [json_name = "ready"];</code>
      * @return The ready.
@@ -5802,12 +3218,26 @@ public final class Module {
     public boolean getReady() {
       return ready_;
     }
+    /**
+     * <code>bool ready = 1 [json_name = "ready"];</code>
+     * @param value The ready to set.
+     */
+    private void setReady(boolean value) {
+      
+      ready_ = value;
+    }
+    /**
+     * <code>bool ready = 1 [json_name = "ready"];</code>
+     */
+    private void clearReady() {
+
+      ready_ = false;
+    }
 
     public static final int HANDLERMAP_FIELD_NUMBER = 2;
     private viam.module.v1.Module.HandlerMap handlermap_;
     /**
      * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
-     * @return Whether the handlermap field is set.
      */
     @java.lang.Override
     public boolean hasHandlermap() {
@@ -5815,7 +3245,6 @@ public final class Module {
     }
     /**
      * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
-     * @return The handlermap.
      */
     @java.lang.Override
     public viam.module.v1.Module.HandlerMap getHandlermap() {
@@ -5824,30 +3253,42 @@ public final class Module {
     /**
      * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
      */
-    @java.lang.Override
-    public viam.module.v1.Module.HandlerMapOrBuilder getHandlermapOrBuilder() {
-      return handlermap_ == null ? viam.module.v1.Module.HandlerMap.getDefaultInstance() : handlermap_;
+    private void setHandlermap(viam.module.v1.Module.HandlerMap value) {
+      value.getClass();
+  handlermap_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeHandlermap(viam.module.v1.Module.HandlerMap value) {
+      value.getClass();
+  if (handlermap_ != null &&
+          handlermap_ != viam.module.v1.Module.HandlerMap.getDefaultInstance()) {
+        handlermap_ =
+          viam.module.v1.Module.HandlerMap.newBuilder(handlermap_).mergeFrom(value).buildPartial();
+      } else {
+        handlermap_ = value;
+      }
+      bitField0_ |= 0x00000001;
+    }
+    /**
+     * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
+     */
+    private void clearHandlermap() {  handlermap_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static final int WEBRTC_ANSWER_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object webrtcAnswer_ = "";
+    private java.lang.String webrtcAnswer_;
     /**
      * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
      * @return The webrtcAnswer.
      */
     @java.lang.Override
     public java.lang.String getWebrtcAnswer() {
-      java.lang.Object ref = webrtcAnswer_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        webrtcAnswer_ = s;
-        return s;
-      }
+      return webrtcAnswer_;
     }
     /**
      * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
@@ -5856,421 +3297,140 @@ public final class Module {
     @java.lang.Override
     public com.google.protobuf.ByteString
         getWebrtcAnswerBytes() {
-      java.lang.Object ref = webrtcAnswer_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        webrtcAnswer_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return com.google.protobuf.ByteString.copyFromUtf8(webrtcAnswer_);
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    /**
+     * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
+     * @param value The webrtcAnswer to set.
+     */
+    private void setWebrtcAnswer(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  
+      webrtcAnswer_ = value;
     }
+    /**
+     * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
+     */
+    private void clearWebrtcAnswer() {
 
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (ready_ != false) {
-        output.writeBool(1, ready_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getHandlermap());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(webrtcAnswer_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, webrtcAnswer_);
-      }
-      getUnknownFields().writeTo(output);
+      webrtcAnswer_ = getDefaultInstance().getWebrtcAnswer();
     }
+    /**
+     * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
+     * @param value The bytes for webrtcAnswer to set.
+     */
+    private void setWebrtcAnswerBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      webrtcAnswer_ = value.toStringUtf8();
 
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (ready_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, ready_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getHandlermap());
-      }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(webrtcAnswer_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, webrtcAnswer_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.module.v1.Module.ReadyResponse)) {
-        return super.equals(obj);
-      }
-      viam.module.v1.Module.ReadyResponse other = (viam.module.v1.Module.ReadyResponse) obj;
-
-      if (getReady()
-          != other.getReady()) return false;
-      if (hasHandlermap() != other.hasHandlermap()) return false;
-      if (hasHandlermap()) {
-        if (!getHandlermap()
-            .equals(other.getHandlermap())) return false;
-      }
-      if (!getWebrtcAnswer()
-          .equals(other.getWebrtcAnswer())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + READY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getReady());
-      if (hasHandlermap()) {
-        hash = (37 * hash) + HANDLERMAP_FIELD_NUMBER;
-        hash = (53 * hash) + getHandlermap().hashCode();
-      }
-      hash = (37 * hash) + WEBRTC_ANSWER_FIELD_NUMBER;
-      hash = (53 * hash) + getWebrtcAnswer().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
     }
 
     public static viam.module.v1.Module.ReadyResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ReadyResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ReadyResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ReadyResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ReadyResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ReadyResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ReadyResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.ReadyResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.module.v1.Module.ReadyResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.module.v1.Module.ReadyResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.module.v1.Module.ReadyResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.ReadyResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.module.v1.Module.ReadyResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.module.v1.ReadyResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.module.v1.Module.ReadyResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.module.v1.ReadyResponse)
         viam.module.v1.Module.ReadyResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ReadyResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ReadyResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.module.v1.Module.ReadyResponse.class, viam.module.v1.Module.ReadyResponse.Builder.class);
-      }
-
       // Construct using viam.module.v1.Module.ReadyResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getHandlermapFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        ready_ = false;
-        handlermap_ = null;
-        if (handlermapBuilder_ != null) {
-          handlermapBuilder_.dispose();
-          handlermapBuilder_ = null;
-        }
-        webrtcAnswer_ = "";
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ReadyResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ReadyResponse getDefaultInstanceForType() {
-        return viam.module.v1.Module.ReadyResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ReadyResponse build() {
-        viam.module.v1.Module.ReadyResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ReadyResponse buildPartial() {
-        viam.module.v1.Module.ReadyResponse result = new viam.module.v1.Module.ReadyResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.module.v1.Module.ReadyResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.ready_ = ready_;
-        }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.handlermap_ = handlermapBuilder_ == null
-              ? handlermap_
-              : handlermapBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.webrtcAnswer_ = webrtcAnswer_;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.module.v1.Module.ReadyResponse) {
-          return mergeFrom((viam.module.v1.Module.ReadyResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.module.v1.Module.ReadyResponse other) {
-        if (other == viam.module.v1.Module.ReadyResponse.getDefaultInstance()) return this;
-        if (other.getReady() != false) {
-          setReady(other.getReady());
-        }
-        if (other.hasHandlermap()) {
-          mergeHandlermap(other.getHandlermap());
-        }
-        if (!other.getWebrtcAnswer().isEmpty()) {
-          webrtcAnswer_ = other.webrtcAnswer_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                ready_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 18: {
-                input.readMessage(
-                    getHandlermapFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                webrtcAnswer_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean ready_ ;
       /**
        * <code>bool ready = 1 [json_name = "ready"];</code>
        * @return The ready.
        */
       @java.lang.Override
       public boolean getReady() {
-        return ready_;
+        return instance.getReady();
       }
       /**
        * <code>bool ready = 1 [json_name = "ready"];</code>
@@ -6278,10 +3438,8 @@ public final class Module {
        * @return This builder for chaining.
        */
       public Builder setReady(boolean value) {
-
-        ready_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setReady(value);
         return this;
       }
       /**
@@ -6289,166 +3447,74 @@ public final class Module {
        * @return This builder for chaining.
        */
       public Builder clearReady() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        ready_ = false;
-        onChanged();
+        copyOnWrite();
+        instance.clearReady();
         return this;
       }
 
-      private viam.module.v1.Module.HandlerMap handlermap_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.module.v1.Module.HandlerMap, viam.module.v1.Module.HandlerMap.Builder, viam.module.v1.Module.HandlerMapOrBuilder> handlermapBuilder_;
       /**
        * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
-       * @return Whether the handlermap field is set.
        */
+      @java.lang.Override
       public boolean hasHandlermap() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return instance.hasHandlermap();
       }
       /**
        * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
-       * @return The handlermap.
        */
+      @java.lang.Override
       public viam.module.v1.Module.HandlerMap getHandlermap() {
-        if (handlermapBuilder_ == null) {
-          return handlermap_ == null ? viam.module.v1.Module.HandlerMap.getDefaultInstance() : handlermap_;
-        } else {
-          return handlermapBuilder_.getMessage();
-        }
+        return instance.getHandlermap();
       }
       /**
        * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
        */
       public Builder setHandlermap(viam.module.v1.Module.HandlerMap value) {
-        if (handlermapBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          handlermap_ = value;
-        } else {
-          handlermapBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setHandlermap(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
        */
       public Builder setHandlermap(
           viam.module.v1.Module.HandlerMap.Builder builderForValue) {
-        if (handlermapBuilder_ == null) {
-          handlermap_ = builderForValue.build();
-        } else {
-          handlermapBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
+        copyOnWrite();
+        instance.setHandlermap(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
        */
       public Builder mergeHandlermap(viam.module.v1.Module.HandlerMap value) {
-        if (handlermapBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            handlermap_ != null &&
-            handlermap_ != viam.module.v1.Module.HandlerMap.getDefaultInstance()) {
-            getHandlermapBuilder().mergeFrom(value);
-          } else {
-            handlermap_ = value;
-          }
-        } else {
-          handlermapBuilder_.mergeFrom(value);
-        }
-        if (handlermap_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeHandlermap(value);
         return this;
       }
       /**
        * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
        */
-      public Builder clearHandlermap() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        handlermap_ = null;
-        if (handlermapBuilder_ != null) {
-          handlermapBuilder_.dispose();
-          handlermapBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearHandlermap() {  copyOnWrite();
+        instance.clearHandlermap();
         return this;
-      }
-      /**
-       * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
-       */
-      public viam.module.v1.Module.HandlerMap.Builder getHandlermapBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getHandlermapFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
-       */
-      public viam.module.v1.Module.HandlerMapOrBuilder getHandlermapOrBuilder() {
-        if (handlermapBuilder_ != null) {
-          return handlermapBuilder_.getMessageOrBuilder();
-        } else {
-          return handlermap_ == null ?
-              viam.module.v1.Module.HandlerMap.getDefaultInstance() : handlermap_;
-        }
-      }
-      /**
-       * <code>.viam.module.v1.HandlerMap handlermap = 2 [json_name = "handlermap"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.module.v1.Module.HandlerMap, viam.module.v1.Module.HandlerMap.Builder, viam.module.v1.Module.HandlerMapOrBuilder> 
-          getHandlermapFieldBuilder() {
-        if (handlermapBuilder_ == null) {
-          handlermapBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.module.v1.Module.HandlerMap, viam.module.v1.Module.HandlerMap.Builder, viam.module.v1.Module.HandlerMapOrBuilder>(
-                  getHandlermap(),
-                  getParentForChildren(),
-                  isClean());
-          handlermap_ = null;
-        }
-        return handlermapBuilder_;
       }
 
-      private java.lang.Object webrtcAnswer_ = "";
       /**
        * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
        * @return The webrtcAnswer.
        */
+      @java.lang.Override
       public java.lang.String getWebrtcAnswer() {
-        java.lang.Object ref = webrtcAnswer_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          webrtcAnswer_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+        return instance.getWebrtcAnswer();
       }
       /**
        * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
        * @return The bytes for webrtcAnswer.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getWebrtcAnswerBytes() {
-        java.lang.Object ref = webrtcAnswer_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          webrtcAnswer_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+        return instance.getWebrtcAnswerBytes();
       }
       /**
        * <code>string webrtc_answer = 3 [json_name = "webrtcAnswer"];</code>
@@ -6457,10 +3523,8 @@ public final class Module {
        */
       public Builder setWebrtcAnswer(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        webrtcAnswer_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setWebrtcAnswer(value);
         return this;
       }
       /**
@@ -6468,9 +3532,8 @@ public final class Module {
        * @return This builder for chaining.
        */
       public Builder clearWebrtcAnswer() {
-        webrtcAnswer_ = getDefaultInstance().getWebrtcAnswer();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
+        copyOnWrite();
+        instance.clearWebrtcAnswer();
         return this;
       }
       /**
@@ -6480,80 +3543,92 @@ public final class Module {
        */
       public Builder setWebrtcAnswerBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        webrtcAnswer_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
+        copyOnWrite();
+        instance.setWebrtcAnswerBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.module.v1.ReadyResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.module.v1.Module.ReadyResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "ready_",
+              "handlermap_",
+              "webrtcAnswer_",
+            };
+            java.lang.String info =
+                "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0007\u0002\u1009" +
+                "\u0000\u0003\u0208";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.module.v1.Module.ReadyResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.module.v1.Module.ReadyResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.module.v1.Module.ReadyResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.module.v1.ReadyResponse)
     private static final viam.module.v1.Module.ReadyResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.module.v1.Module.ReadyResponse();
+      ReadyResponse defaultInstance = new ReadyResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ReadyResponse.class, defaultInstance);
     }
 
     public static viam.module.v1.Module.ReadyResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ReadyResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ReadyResponse>() {
-      @java.lang.Override
-      public ReadyResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ReadyResponse> PARSER;
 
     public static com.google.protobuf.Parser<ReadyResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ReadyResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.module.v1.Module.ReadyResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ValidateConfigRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.module.v1.ValidateConfigRequest)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
@@ -6565,52 +3640,22 @@ public final class Module {
      * @return The config.
      */
     viam.app.v1.Robot.ComponentConfig getConfig();
-    /**
-     * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-     */
-    viam.app.v1.Robot.ComponentConfigOrBuilder getConfigOrBuilder();
   }
   /**
    * Protobuf type {@code viam.module.v1.ValidateConfigRequest}
    */
-  public static final class ValidateConfigRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ValidateConfigRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          ValidateConfigRequest, ValidateConfigRequest.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.module.v1.ValidateConfigRequest)
       ValidateConfigRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ValidateConfigRequest.newBuilder() to construct.
-    private ValidateConfigRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ValidateConfigRequest() {
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ValidateConfigRequest();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_ValidateConfigRequest_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_ValidateConfigRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.module.v1.Module.ValidateConfigRequest.class, viam.module.v1.Module.ValidateConfigRequest.Builder.class);
-    }
-
     private int bitField0_;
     public static final int CONFIG_FIELD_NUMBER = 1;
     private viam.app.v1.Robot.ComponentConfig config_;
     /**
      * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-     * @return Whether the config field is set.
      */
     @java.lang.Override
     public boolean hasConfig() {
@@ -6618,7 +3663,6 @@ public final class Module {
     }
     /**
      * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-     * @return The config.
      */
     @java.lang.Override
     public viam.app.v1.Robot.ComponentConfig getConfig() {
@@ -6627,545 +3671,255 @@ public final class Module {
     /**
      * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
      */
-    @java.lang.Override
-    public viam.app.v1.Robot.ComponentConfigOrBuilder getConfigOrBuilder() {
-      return config_ == null ? viam.app.v1.Robot.ComponentConfig.getDefaultInstance() : config_;
+    private void setConfig(viam.app.v1.Robot.ComponentConfig value) {
+      value.getClass();
+  config_ = value;
+      bitField0_ |= 0x00000001;
+      }
+    /**
+     * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
+     */
+    @java.lang.SuppressWarnings({"ReferenceEquality"})
+    private void mergeConfig(viam.app.v1.Robot.ComponentConfig value) {
+      value.getClass();
+  if (config_ != null &&
+          config_ != viam.app.v1.Robot.ComponentConfig.getDefaultInstance()) {
+        config_ =
+          viam.app.v1.Robot.ComponentConfig.newBuilder(config_).mergeFrom(value).buildPartial();
+      } else {
+        config_ = value;
+      }
+      bitField0_ |= 0x00000001;
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(1, getConfig());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getConfig());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.module.v1.Module.ValidateConfigRequest)) {
-        return super.equals(obj);
-      }
-      viam.module.v1.Module.ValidateConfigRequest other = (viam.module.v1.Module.ValidateConfigRequest) obj;
-
-      if (hasConfig() != other.hasConfig()) return false;
-      if (hasConfig()) {
-        if (!getConfig()
-            .equals(other.getConfig())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasConfig()) {
-        hash = (37 * hash) + CONFIG_FIELD_NUMBER;
-        hash = (53 * hash) + getConfig().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
+     */
+    private void clearConfig() {  config_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
     }
 
     public static viam.module.v1.Module.ValidateConfigRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ValidateConfigRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ValidateConfigRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ValidateConfigRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ValidateConfigRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ValidateConfigRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ValidateConfigRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.ValidateConfigRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.module.v1.Module.ValidateConfigRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.module.v1.Module.ValidateConfigRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.module.v1.Module.ValidateConfigRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.ValidateConfigRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.module.v1.Module.ValidateConfigRequest prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.module.v1.ValidateConfigRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.module.v1.Module.ValidateConfigRequest, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.module.v1.ValidateConfigRequest)
         viam.module.v1.Module.ValidateConfigRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ValidateConfigRequest_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ValidateConfigRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.module.v1.Module.ValidateConfigRequest.class, viam.module.v1.Module.ValidateConfigRequest.Builder.class);
-      }
-
       // Construct using viam.module.v1.Module.ValidateConfigRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getConfigFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        config_ = null;
-        if (configBuilder_ != null) {
-          configBuilder_.dispose();
-          configBuilder_ = null;
-        }
-        return this;
-      }
 
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ValidateConfigRequest_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ValidateConfigRequest getDefaultInstanceForType() {
-        return viam.module.v1.Module.ValidateConfigRequest.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ValidateConfigRequest build() {
-        viam.module.v1.Module.ValidateConfigRequest result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ValidateConfigRequest buildPartial() {
-        viam.module.v1.Module.ValidateConfigRequest result = new viam.module.v1.Module.ValidateConfigRequest(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.module.v1.Module.ValidateConfigRequest result) {
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.config_ = configBuilder_ == null
-              ? config_
-              : configBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        result.bitField0_ |= to_bitField0_;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.module.v1.Module.ValidateConfigRequest) {
-          return mergeFrom((viam.module.v1.Module.ValidateConfigRequest)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.module.v1.Module.ValidateConfigRequest other) {
-        if (other == viam.module.v1.Module.ValidateConfigRequest.getDefaultInstance()) return this;
-        if (other.hasConfig()) {
-          mergeConfig(other.getConfig());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getConfigFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private viam.app.v1.Robot.ComponentConfig config_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.v1.Robot.ComponentConfig, viam.app.v1.Robot.ComponentConfig.Builder, viam.app.v1.Robot.ComponentConfigOrBuilder> configBuilder_;
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       * @return Whether the config field is set.
        */
+      @java.lang.Override
       public boolean hasConfig() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return instance.hasConfig();
       }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       * @return The config.
        */
+      @java.lang.Override
       public viam.app.v1.Robot.ComponentConfig getConfig() {
-        if (configBuilder_ == null) {
-          return config_ == null ? viam.app.v1.Robot.ComponentConfig.getDefaultInstance() : config_;
-        } else {
-          return configBuilder_.getMessage();
-        }
+        return instance.getConfig();
       }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
        */
       public Builder setConfig(viam.app.v1.Robot.ComponentConfig value) {
-        if (configBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          config_ = value;
-        } else {
-          configBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setConfig(value);
         return this;
-      }
+        }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
        */
       public Builder setConfig(
           viam.app.v1.Robot.ComponentConfig.Builder builderForValue) {
-        if (configBuilder_ == null) {
-          config_ = builderForValue.build();
-        } else {
-          configBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setConfig(builderForValue.build());
         return this;
       }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
        */
       public Builder mergeConfig(viam.app.v1.Robot.ComponentConfig value) {
-        if (configBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            config_ != null &&
-            config_ != viam.app.v1.Robot.ComponentConfig.getDefaultInstance()) {
-            getConfigBuilder().mergeFrom(value);
-          } else {
-            config_ = value;
-          }
-        } else {
-          configBuilder_.mergeFrom(value);
-        }
-        if (config_ != null) {
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
+        copyOnWrite();
+        instance.mergeConfig(value);
         return this;
       }
       /**
        * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
        */
-      public Builder clearConfig() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        config_ = null;
-        if (configBuilder_ != null) {
-          configBuilder_.dispose();
-          configBuilder_ = null;
-        }
-        onChanged();
+      public Builder clearConfig() {  copyOnWrite();
+        instance.clearConfig();
         return this;
       }
-      /**
-       * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       */
-      public viam.app.v1.Robot.ComponentConfig.Builder getConfigBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getConfigFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       */
-      public viam.app.v1.Robot.ComponentConfigOrBuilder getConfigOrBuilder() {
-        if (configBuilder_ != null) {
-          return configBuilder_.getMessageOrBuilder();
-        } else {
-          return config_ == null ?
-              viam.app.v1.Robot.ComponentConfig.getDefaultInstance() : config_;
-        }
-      }
-      /**
-       * <code>.viam.app.v1.ComponentConfig config = 1 [json_name = "config"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          viam.app.v1.Robot.ComponentConfig, viam.app.v1.Robot.ComponentConfig.Builder, viam.app.v1.Robot.ComponentConfigOrBuilder> 
-          getConfigFieldBuilder() {
-        if (configBuilder_ == null) {
-          configBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              viam.app.v1.Robot.ComponentConfig, viam.app.v1.Robot.ComponentConfig.Builder, viam.app.v1.Robot.ComponentConfigOrBuilder>(
-                  getConfig(),
-                  getParentForChildren(),
-                  isClean());
-          config_ = null;
-        }
-        return configBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.module.v1.ValidateConfigRequest)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.module.v1.Module.ValidateConfigRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bitField0_",
+              "config_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001\u1009\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.module.v1.Module.ValidateConfigRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.module.v1.Module.ValidateConfigRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.module.v1.Module.ValidateConfigRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.module.v1.ValidateConfigRequest)
     private static final viam.module.v1.Module.ValidateConfigRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.module.v1.Module.ValidateConfigRequest();
+      ValidateConfigRequest defaultInstance = new ValidateConfigRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ValidateConfigRequest.class, defaultInstance);
     }
 
     public static viam.module.v1.Module.ValidateConfigRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ValidateConfigRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ValidateConfigRequest>() {
-      @java.lang.Override
-      public ValidateConfigRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ValidateConfigRequest> PARSER;
 
     public static com.google.protobuf.Parser<ValidateConfigRequest> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ValidateConfigRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.module.v1.Module.ValidateConfigRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
   public interface ValidateConfigResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:viam.module.v1.ValidateConfigResponse)
-      com.google.protobuf.MessageOrBuilder {
+      com.google.protobuf.MessageLiteOrBuilder {
 
     /**
      * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
@@ -7186,8 +3940,8 @@ public final class Module {
     java.lang.String getDependencies(int index);
     /**
      * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the dependencies at the given index.
+     * @param index The index of the element to return.
+     * @return The dependencies at the given index.
      */
     com.google.protobuf.ByteString
         getDependenciesBytes(int index);
@@ -7195,56 +3949,29 @@ public final class Module {
   /**
    * Protobuf type {@code viam.module.v1.ValidateConfigResponse}
    */
-  public static final class ValidateConfigResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
+  public  static final class ValidateConfigResponse extends
+      com.google.protobuf.GeneratedMessageLite<
+          ValidateConfigResponse, ValidateConfigResponse.Builder> implements
       // @@protoc_insertion_point(message_implements:viam.module.v1.ValidateConfigResponse)
       ValidateConfigResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ValidateConfigResponse.newBuilder() to construct.
-    private ValidateConfigResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
     private ValidateConfigResponse() {
-      dependencies_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      dependencies_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
     }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ValidateConfigResponse();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_ValidateConfigResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return viam.module.v1.Module.internal_static_viam_module_v1_ValidateConfigResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              viam.module.v1.Module.ValidateConfigResponse.class, viam.module.v1.Module.ValidateConfigResponse.Builder.class);
-    }
-
     public static final int DEPENDENCIES_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList dependencies_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    private com.google.protobuf.Internal.ProtobufList<java.lang.String> dependencies_;
     /**
      * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
      * @return A list containing the dependencies.
      */
-    public com.google.protobuf.ProtocolStringList
-        getDependenciesList() {
+    @java.lang.Override
+    public java.util.List<java.lang.String> getDependenciesList() {
       return dependencies_;
     }
     /**
      * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
      * @return The count of dependencies.
      */
+    @java.lang.Override
     public int getDependenciesCount() {
       return dependencies_.size();
     }
@@ -7253,6 +3980,7 @@ public final class Module {
      * @param index The index of the element to return.
      * @return The dependencies at the given index.
      */
+    @java.lang.Override
     public java.lang.String getDependencies(int index) {
       return dependencies_.get(index);
     }
@@ -7261,392 +3989,200 @@ public final class Module {
      * @param index The index of the value to return.
      * @return The bytes of the dependencies at the given index.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDependenciesBytes(int index) {
-      return dependencies_.getByteString(index);
+      return com.google.protobuf.ByteString.copyFromUtf8(
+          dependencies_.get(index));
     }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
+    private void ensureDependenciesIsMutable() {
+      com.google.protobuf.Internal.ProtobufList<java.lang.String> tmp =
+          dependencies_;  if (!tmp.isModifiable()) {
+        dependencies_ =
+            com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
+       }
     }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < dependencies_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dependencies_.getRaw(i));
-      }
-      getUnknownFields().writeTo(output);
+    /**
+     * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
+     * @param index The index to set the value at.
+     * @param value The dependencies to set.
+     */
+    private void setDependencies(
+        int index, java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureDependenciesIsMutable();
+      dependencies_.set(index, value);
     }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < dependencies_.size(); i++) {
-          dataSize += computeStringSizeNoTag(dependencies_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getDependenciesList().size();
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
+    /**
+     * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
+     * @param value The dependencies to add.
+     */
+    private void addDependencies(
+        java.lang.String value) {
+      java.lang.Class<?> valueClass = value.getClass();
+  ensureDependenciesIsMutable();
+      dependencies_.add(value);
     }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof viam.module.v1.Module.ValidateConfigResponse)) {
-        return super.equals(obj);
-      }
-      viam.module.v1.Module.ValidateConfigResponse other = (viam.module.v1.Module.ValidateConfigResponse) obj;
-
-      if (!getDependenciesList()
-          .equals(other.getDependenciesList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
+    /**
+     * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
+     * @param values The dependencies to add.
+     */
+    private void addAllDependencies(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDependenciesIsMutable();
+      com.google.protobuf.AbstractMessageLite.addAll(
+          values, dependencies_);
     }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getDependenciesCount() > 0) {
-        hash = (37 * hash) + DEPENDENCIES_FIELD_NUMBER;
-        hash = (53 * hash) + getDependenciesList().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
+    /**
+     * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
+     */
+    private void clearDependencies() {
+      dependencies_ = com.google.protobuf.GeneratedMessageLite.emptyProtobufList();
+    }
+    /**
+     * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
+     * @param value The bytes of the dependencies to add.
+     */
+    private void addDependenciesBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      ensureDependenciesIsMutable();
+      dependencies_.add(value.toStringUtf8());
     }
 
     public static viam.module.v1.Module.ValidateConfigResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ValidateConfigResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ValidateConfigResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ValidateConfigResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ValidateConfigResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
     }
     public static viam.module.v1.Module.ValidateConfigResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
     }
     public static viam.module.v1.Module.ValidateConfigResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.ValidateConfigResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
     public static viam.module.v1.Module.ValidateConfigResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
     }
 
     public static viam.module.v1.Module.ValidateConfigResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
     }
     public static viam.module.v1.Module.ValidateConfigResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
     }
     public static viam.module.v1.Module.ValidateConfigResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
     }
     public static Builder newBuilder(viam.module.v1.Module.ValidateConfigResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+      return DEFAULT_INSTANCE.createBuilder(prototype);
     }
 
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
     /**
      * Protobuf type {@code viam.module.v1.ValidateConfigResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          viam.module.v1.Module.ValidateConfigResponse, Builder> implements
         // @@protoc_insertion_point(builder_implements:viam.module.v1.ValidateConfigResponse)
         viam.module.v1.Module.ValidateConfigResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ValidateConfigResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ValidateConfigResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                viam.module.v1.Module.ValidateConfigResponse.class, viam.module.v1.Module.ValidateConfigResponse.Builder.class);
-      }
-
       // Construct using viam.module.v1.Module.ValidateConfigResponse.newBuilder()
       private Builder() {
-
+        super(DEFAULT_INSTANCE);
       }
 
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
 
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        dependencies_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return viam.module.v1.Module.internal_static_viam_module_v1_ValidateConfigResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ValidateConfigResponse getDefaultInstanceForType() {
-        return viam.module.v1.Module.ValidateConfigResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ValidateConfigResponse build() {
-        viam.module.v1.Module.ValidateConfigResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public viam.module.v1.Module.ValidateConfigResponse buildPartial() {
-        viam.module.v1.Module.ValidateConfigResponse result = new viam.module.v1.Module.ValidateConfigResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(viam.module.v1.Module.ValidateConfigResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          dependencies_.makeImmutable();
-          result.dependencies_ = dependencies_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof viam.module.v1.Module.ValidateConfigResponse) {
-          return mergeFrom((viam.module.v1.Module.ValidateConfigResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(viam.module.v1.Module.ValidateConfigResponse other) {
-        if (other == viam.module.v1.Module.ValidateConfigResponse.getDefaultInstance()) return this;
-        if (!other.dependencies_.isEmpty()) {
-          if (dependencies_.isEmpty()) {
-            dependencies_ = other.dependencies_;
-            bitField0_ |= 0x00000001;
-          } else {
-            ensureDependenciesIsMutable();
-            dependencies_.addAll(other.dependencies_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureDependenciesIsMutable();
-                dependencies_.add(s);
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.LazyStringArrayList dependencies_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureDependenciesIsMutable() {
-        if (!dependencies_.isModifiable()) {
-          dependencies_ = new com.google.protobuf.LazyStringArrayList(dependencies_);
-        }
-        bitField0_ |= 0x00000001;
-      }
       /**
        * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
        * @return A list containing the dependencies.
        */
-      public com.google.protobuf.ProtocolStringList
+      @java.lang.Override
+      public java.util.List<java.lang.String>
           getDependenciesList() {
-        dependencies_.makeImmutable();
-        return dependencies_;
+        return java.util.Collections.unmodifiableList(
+            instance.getDependenciesList());
       }
       /**
        * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
        * @return The count of dependencies.
        */
+      @java.lang.Override
       public int getDependenciesCount() {
-        return dependencies_.size();
+        return instance.getDependenciesCount();
       }
       /**
        * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
        * @param index The index of the element to return.
        * @return The dependencies at the given index.
        */
+      @java.lang.Override
       public java.lang.String getDependencies(int index) {
-        return dependencies_.get(index);
+        return instance.getDependencies(index);
       }
       /**
        * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the dependencies at the given index.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getDependenciesBytes(int index) {
-        return dependencies_.getByteString(index);
+        return instance.getDependenciesBytes(index);
       }
       /**
        * <code>repeated string dependencies = 1 [json_name = "dependencies"];</code>
@@ -7656,11 +4192,8 @@ public final class Module {
        */
       public Builder setDependencies(
           int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureDependenciesIsMutable();
-        dependencies_.set(index, value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.setDependencies(index, value);
         return this;
       }
       /**
@@ -7670,11 +4203,8 @@ public final class Module {
        */
       public Builder addDependencies(
           java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureDependenciesIsMutable();
-        dependencies_.add(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addDependencies(value);
         return this;
       }
       /**
@@ -7684,11 +4214,8 @@ public final class Module {
        */
       public Builder addAllDependencies(
           java.lang.Iterable<java.lang.String> values) {
-        ensureDependenciesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, dependencies_);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addAllDependencies(values);
         return this;
       }
       /**
@@ -7696,10 +4223,8 @@ public final class Module {
        * @return This builder for chaining.
        */
       public Builder clearDependencies() {
-        dependencies_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);;
-        onChanged();
+        copyOnWrite();
+        instance.clearDependencies();
         return this;
       }
       /**
@@ -7709,266 +4234,87 @@ public final class Module {
        */
       public Builder addDependenciesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureDependenciesIsMutable();
-        dependencies_.add(value);
-        bitField0_ |= 0x00000001;
-        onChanged();
+        copyOnWrite();
+        instance.addDependenciesBytes(value);
         return this;
       }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
 
       // @@protoc_insertion_point(builder_scope:viam.module.v1.ValidateConfigResponse)
     }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new viam.module.v1.Module.ValidateConfigResponse();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "dependencies_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u021a";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<viam.module.v1.Module.ValidateConfigResponse> parser = PARSER;
+          if (parser == null) {
+            synchronized (viam.module.v1.Module.ValidateConfigResponse.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<viam.module.v1.Module.ValidateConfigResponse>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
 
     // @@protoc_insertion_point(class_scope:viam.module.v1.ValidateConfigResponse)
     private static final viam.module.v1.Module.ValidateConfigResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new viam.module.v1.Module.ValidateConfigResponse();
+      ValidateConfigResponse defaultInstance = new ValidateConfigResponse();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        ValidateConfigResponse.class, defaultInstance);
     }
 
     public static viam.module.v1.Module.ValidateConfigResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ValidateConfigResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ValidateConfigResponse>() {
-      @java.lang.Override
-      public ValidateConfigResponse parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
+    private static volatile com.google.protobuf.Parser<ValidateConfigResponse> PARSER;
 
     public static com.google.protobuf.Parser<ValidateConfigResponse> parser() {
-      return PARSER;
+      return DEFAULT_INSTANCE.getParserForType();
     }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ValidateConfigResponse> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public viam.module.v1.Module.ValidateConfigResponse getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_module_v1_AddResourceRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_module_v1_AddResourceRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_module_v1_AddResourceResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_module_v1_AddResourceResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_module_v1_ReconfigureResourceRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_module_v1_ReconfigureResourceRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_module_v1_ReconfigureResourceResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_module_v1_ReconfigureResourceResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_module_v1_RemoveResourceRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_module_v1_RemoveResourceRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_module_v1_RemoveResourceResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_module_v1_RemoveResourceResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_module_v1_HandlerDefinition_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_module_v1_HandlerDefinition_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_module_v1_HandlerMap_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_module_v1_HandlerMap_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_module_v1_ReadyRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_module_v1_ReadyRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_module_v1_ReadyResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_module_v1_ReadyResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_module_v1_ValidateConfigRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_module_v1_ValidateConfigRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_viam_module_v1_ValidateConfigResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_viam_module_v1_ValidateConfigResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
   static {
-    java.lang.String[] descriptorData = {
-      "\n\026module/v1/module.proto\022\016viam.module.v1" +
-      "\032\022app/v1/robot.proto\032\024robot/v1/robot.pro" +
-      "to\"n\n\022AddResourceRequest\0224\n\006config\030\001 \001(\013" +
-      "2\034.viam.app.v1.ComponentConfigR\006config\022\"" +
-      "\n\014dependencies\030\002 \003(\tR\014dependencies\"\025\n\023Ad" +
-      "dResourceResponse\"v\n\032ReconfigureResource" +
-      "Request\0224\n\006config\030\001 \001(\0132\034.viam.app.v1.Co" +
-      "mponentConfigR\006config\022\"\n\014dependencies\030\002 " +
-      "\003(\tR\014dependencies\"\035\n\033ReconfigureResource" +
-      "Response\"+\n\025RemoveResourceRequest\022\022\n\004nam" +
-      "e\030\001 \001(\tR\004name\"\030\n\026RemoveResourceResponse\"" +
-      "h\n\021HandlerDefinition\022;\n\007subtype\030\001 \001(\0132!." +
-      "viam.robot.v1.ResourceRPCSubtypeR\007subtyp" +
-      "e\022\026\n\006models\030\002 \003(\tR\006models\"K\n\nHandlerMap\022" +
-      "=\n\010handlers\030\001 \003(\0132!.viam.module.v1.Handl" +
-      "erDefinitionR\010handlers\"X\n\014ReadyRequest\022%" +
-      "\n\016parent_address\030\001 \001(\tR\rparentAddress\022!\n" +
-      "\014webrtc_offer\030\002 \001(\tR\013webrtcOffer\"\206\001\n\rRea" +
-      "dyResponse\022\024\n\005ready\030\001 \001(\010R\005ready\022:\n\nhand" +
-      "lermap\030\002 \001(\0132\032.viam.module.v1.HandlerMap" +
-      "R\nhandlermap\022#\n\rwebrtc_answer\030\003 \001(\tR\014web" +
-      "rtcAnswer\"M\n\025ValidateConfigRequest\0224\n\006co" +
-      "nfig\030\001 \001(\0132\034.viam.app.v1.ComponentConfig" +
-      "R\006config\"<\n\026ValidateConfigResponse\022\"\n\014de" +
-      "pendencies\030\001 \003(\tR\014dependencies2\337\003\n\rModul" +
-      "eService\022V\n\013AddResource\022\".viam.module.v1" +
-      ".AddResourceRequest\032#.viam.module.v1.Add" +
-      "ResourceResponse\022n\n\023ReconfigureResource\022" +
-      "*.viam.module.v1.ReconfigureResourceRequ" +
-      "est\032+.viam.module.v1.ReconfigureResource" +
-      "Response\022_\n\016RemoveResource\022%.viam.module" +
-      ".v1.RemoveResourceRequest\032&.viam.module." +
-      "v1.RemoveResourceResponse\022D\n\005Ready\022\034.via" +
-      "m.module.v1.ReadyRequest\032\035.viam.module.v" +
-      "1.ReadyResponse\022_\n\016ValidateConfig\022%.viam" +
-      ".module.v1.ValidateConfigRequest\032&.viam." +
-      "module.v1.ValidateConfigResponseB\033Z\031go.v" +
-      "iam.com/api/module/v1b\006proto3"
-    };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          viam.app.v1.Robot.getDescriptor(),
-          com.viam.robot.v1.Robot.getDescriptor(),
-        });
-    internal_static_viam_module_v1_AddResourceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_viam_module_v1_AddResourceRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_module_v1_AddResourceRequest_descriptor,
-        new java.lang.String[] { "Config", "Dependencies", });
-    internal_static_viam_module_v1_AddResourceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_viam_module_v1_AddResourceResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_module_v1_AddResourceResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_module_v1_ReconfigureResourceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_viam_module_v1_ReconfigureResourceRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_module_v1_ReconfigureResourceRequest_descriptor,
-        new java.lang.String[] { "Config", "Dependencies", });
-    internal_static_viam_module_v1_ReconfigureResourceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_viam_module_v1_ReconfigureResourceResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_module_v1_ReconfigureResourceResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_module_v1_RemoveResourceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_viam_module_v1_RemoveResourceRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_module_v1_RemoveResourceRequest_descriptor,
-        new java.lang.String[] { "Name", });
-    internal_static_viam_module_v1_RemoveResourceResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_viam_module_v1_RemoveResourceResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_module_v1_RemoveResourceResponse_descriptor,
-        new java.lang.String[] { });
-    internal_static_viam_module_v1_HandlerDefinition_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_viam_module_v1_HandlerDefinition_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_module_v1_HandlerDefinition_descriptor,
-        new java.lang.String[] { "Subtype", "Models", });
-    internal_static_viam_module_v1_HandlerMap_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_viam_module_v1_HandlerMap_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_module_v1_HandlerMap_descriptor,
-        new java.lang.String[] { "Handlers", });
-    internal_static_viam_module_v1_ReadyRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_viam_module_v1_ReadyRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_module_v1_ReadyRequest_descriptor,
-        new java.lang.String[] { "ParentAddress", "WebrtcOffer", });
-    internal_static_viam_module_v1_ReadyResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_viam_module_v1_ReadyResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_module_v1_ReadyResponse_descriptor,
-        new java.lang.String[] { "Ready", "Handlermap", "WebrtcAnswer", });
-    internal_static_viam_module_v1_ValidateConfigRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_viam_module_v1_ValidateConfigRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_module_v1_ValidateConfigRequest_descriptor,
-        new java.lang.String[] { "Config", });
-    internal_static_viam_module_v1_ValidateConfigResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_viam_module_v1_ValidateConfigResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_viam_module_v1_ValidateConfigResponse_descriptor,
-        new java.lang.String[] { "Dependencies", });
-    viam.app.v1.Robot.getDescriptor();
-    com.viam.robot.v1.Robot.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
