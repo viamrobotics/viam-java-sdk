@@ -286,11 +286,11 @@ public  final class Operation extends
    * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
    */
   @java.lang.Override
-  public com.viam.shaded.com.google.rpc.Status getError() {
+  public com.google.rpc.Status getError() {
     if (resultCase_ == 4) {
-       return (com.viam.shaded.com.google.rpc.Status) result_;
+       return (com.google.rpc.Status) result_;
     }
-    return com.viam.shaded.com.google.rpc.Status.getDefaultInstance();
+    return com.google.rpc.Status.getDefaultInstance();
   }
   /**
    * <pre>
@@ -299,7 +299,7 @@ public  final class Operation extends
    *
    * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
    */
-  private void setError(com.viam.shaded.com.google.rpc.Status value) {
+  private void setError(com.google.rpc.Status value) {
     value.getClass();
   result_ = value;
     resultCase_ = 4;
@@ -311,11 +311,11 @@ public  final class Operation extends
    *
    * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
    */
-  private void mergeError(com.viam.shaded.com.google.rpc.Status value) {
+  private void mergeError(com.google.rpc.Status value) {
     value.getClass();
   if (resultCase_ == 4 &&
-        result_ != com.viam.shaded.com.google.rpc.Status.getDefaultInstance()) {
-      result_ = com.viam.shaded.com.google.rpc.Status.newBuilder((com.viam.shaded.com.google.rpc.Status) result_)
+        result_ != com.google.rpc.Status.getDefaultInstance()) {
+      result_ = com.google.rpc.Status.newBuilder((com.google.rpc.Status) result_)
           .mergeFrom(value).buildPartial();
     } else {
       result_ = value;
@@ -788,7 +788,7 @@ public  final class Operation extends
      * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
      */
     @java.lang.Override
-    public com.viam.shaded.com.google.rpc.Status getError() {
+    public com.google.rpc.Status getError() {
       return instance.getError();
     }
     /**
@@ -798,7 +798,7 @@ public  final class Operation extends
      *
      * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
      */
-    public Builder setError(com.viam.shaded.com.google.rpc.Status value) {
+    public Builder setError(com.google.rpc.Status value) {
       copyOnWrite();
       instance.setError(value);
       return this;
@@ -811,7 +811,7 @@ public  final class Operation extends
      * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
      */
     public Builder setError(
-        com.viam.shaded.com.google.rpc.Status.Builder builderForValue) {
+        com.google.rpc.Status.Builder builderForValue) {
       copyOnWrite();
       instance.setError(builderForValue.build());
       return this;
@@ -823,7 +823,7 @@ public  final class Operation extends
      *
      * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
      */
-    public Builder mergeError(com.viam.shaded.com.google.rpc.Status value) {
+    public Builder mergeError(com.google.rpc.Status value) {
       copyOnWrite();
       instance.mergeError(value);
       return this;
@@ -977,7 +977,7 @@ public  final class Operation extends
             "name_",
             "metadata_",
             "done_",
-            com.viam.shaded.com.google.rpc.Status.class,
+            com.google.rpc.Status.class,
             com.google.protobuf.Any.class,
           };
           java.lang.String info =

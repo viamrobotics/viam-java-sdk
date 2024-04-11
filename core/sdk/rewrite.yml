@@ -1,8 +1,0 @@
----
-type: specs.openrewrite.org/v1beta/recipe
-name: com.viam.proto.thirdparty
-displayName: Rename third party protos
-recipeList:
-  - org.openrewrite.java.ChangePackage:
-      oldPackageName: com.google.rpc
-      newPackageName: com.viam.shaded.com.google.rpc

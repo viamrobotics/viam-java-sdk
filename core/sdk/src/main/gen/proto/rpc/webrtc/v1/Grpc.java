@@ -3504,7 +3504,7 @@ public final class Grpc {
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      * @return The status.
      */
-    com.viam.shaded.com.google.rpc.Status getStatus();
+    com.google.rpc.Status getStatus();
 
     /**
      * <code>.proto.rpc.webrtc.v1.Metadata metadata = 2 [json_name = "metadata"];</code>
@@ -3533,7 +3533,7 @@ public final class Grpc {
     }
     private int bitField0_;
     public static final int STATUS_FIELD_NUMBER = 1;
-    private com.viam.shaded.com.google.rpc.Status status_;
+    private com.google.rpc.Status status_;
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
@@ -3545,13 +3545,13 @@ public final class Grpc {
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
     @java.lang.Override
-    public com.viam.shaded.com.google.rpc.Status getStatus() {
-      return status_ == null ? com.viam.shaded.com.google.rpc.Status.getDefaultInstance() : status_;
+    public com.google.rpc.Status getStatus() {
+      return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
     }
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
-    private void setStatus(com.viam.shaded.com.google.rpc.Status value) {
+    private void setStatus(com.google.rpc.Status value) {
       value.getClass();
   status_ = value;
       bitField0_ |= 0x00000001;
@@ -3560,12 +3560,12 @@ public final class Grpc {
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeStatus(com.viam.shaded.com.google.rpc.Status value) {
+    private void mergeStatus(com.google.rpc.Status value) {
       value.getClass();
   if (status_ != null &&
-          status_ != com.viam.shaded.com.google.rpc.Status.getDefaultInstance()) {
+          status_ != com.google.rpc.Status.getDefaultInstance()) {
         status_ =
-          com.viam.shaded.com.google.rpc.Status.newBuilder(status_).mergeFrom(value).buildPartial();
+          com.google.rpc.Status.newBuilder(status_).mergeFrom(value).buildPartial();
       } else {
         status_ = value;
       }
@@ -3736,13 +3736,13 @@ public final class Grpc {
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
       @java.lang.Override
-      public com.viam.shaded.com.google.rpc.Status getStatus() {
+      public com.google.rpc.Status getStatus() {
         return instance.getStatus();
       }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
-      public Builder setStatus(com.viam.shaded.com.google.rpc.Status value) {
+      public Builder setStatus(com.google.rpc.Status value) {
         copyOnWrite();
         instance.setStatus(value);
         return this;
@@ -3751,7 +3751,7 @@ public final class Grpc {
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
       public Builder setStatus(
-          com.viam.shaded.com.google.rpc.Status.Builder builderForValue) {
+          com.google.rpc.Status.Builder builderForValue) {
         copyOnWrite();
         instance.setStatus(builderForValue.build());
         return this;
@@ -3759,7 +3759,7 @@ public final class Grpc {
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
-      public Builder mergeStatus(com.viam.shaded.com.google.rpc.Status value) {
+      public Builder mergeStatus(com.google.rpc.Status value) {
         copyOnWrite();
         instance.mergeStatus(value);
         return this;

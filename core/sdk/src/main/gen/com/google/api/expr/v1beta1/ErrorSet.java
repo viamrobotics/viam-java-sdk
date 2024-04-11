@@ -22,7 +22,7 @@ public  final class ErrorSet extends
     errors_ = emptyProtobufList();
   }
   public static final int ERRORS_FIELD_NUMBER = 1;
-  private com.google.protobuf.Internal.ProtobufList<com.viam.shaded.com.google.rpc.Status> errors_;
+  private com.google.protobuf.Internal.ProtobufList<com.google.rpc.Status> errors_;
   /**
    * <pre>
    * The errors in the set.
@@ -31,7 +31,7 @@ public  final class ErrorSet extends
    * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
    */
   @java.lang.Override
-  public java.util.List<com.viam.shaded.com.google.rpc.Status> getErrorsList() {
+  public java.util.List<com.google.rpc.Status> getErrorsList() {
     return errors_;
   }
   /**
@@ -41,7 +41,7 @@ public  final class ErrorSet extends
    *
    * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
    */
-  public java.util.List<? extends com.viam.shaded.com.google.rpc.StatusOrBuilder> 
+  public java.util.List<? extends com.google.rpc.StatusOrBuilder> 
       getErrorsOrBuilderList() {
     return errors_;
   }
@@ -64,7 +64,7 @@ public  final class ErrorSet extends
    * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
    */
   @java.lang.Override
-  public com.viam.shaded.com.google.rpc.Status getErrors(int index) {
+  public com.google.rpc.Status getErrors(int index) {
     return errors_.get(index);
   }
   /**
@@ -74,12 +74,12 @@ public  final class ErrorSet extends
    *
    * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
    */
-  public com.viam.shaded.com.google.rpc.StatusOrBuilder getErrorsOrBuilder(
+  public com.google.rpc.StatusOrBuilder getErrorsOrBuilder(
       int index) {
     return errors_.get(index);
   }
   private void ensureErrorsIsMutable() {
-    com.google.protobuf.Internal.ProtobufList<com.viam.shaded.com.google.rpc.Status> tmp = errors_;
+    com.google.protobuf.Internal.ProtobufList<com.google.rpc.Status> tmp = errors_;
     if (!tmp.isModifiable()) {
       errors_ =
           com.google.protobuf.GeneratedMessageLite.mutableCopy(tmp);
@@ -94,7 +94,7 @@ public  final class ErrorSet extends
    * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
    */
   private void setErrors(
-      int index, com.viam.shaded.com.google.rpc.Status value) {
+      int index, com.google.rpc.Status value) {
     value.getClass();
   ensureErrorsIsMutable();
     errors_.set(index, value);
@@ -106,7 +106,7 @@ public  final class ErrorSet extends
    *
    * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
    */
-  private void addErrors(com.viam.shaded.com.google.rpc.Status value) {
+  private void addErrors(com.google.rpc.Status value) {
     value.getClass();
   ensureErrorsIsMutable();
     errors_.add(value);
@@ -119,7 +119,7 @@ public  final class ErrorSet extends
    * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
    */
   private void addErrors(
-      int index, com.viam.shaded.com.google.rpc.Status value) {
+      int index, com.google.rpc.Status value) {
     value.getClass();
   ensureErrorsIsMutable();
     errors_.add(index, value);
@@ -132,7 +132,7 @@ public  final class ErrorSet extends
    * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
    */
   private void addAllErrors(
-      java.lang.Iterable<? extends com.viam.shaded.com.google.rpc.Status> values) {
+      java.lang.Iterable<? extends com.google.rpc.Status> values) {
     ensureErrorsIsMutable();
     com.google.protobuf.AbstractMessageLite.addAll(
         values, errors_);
@@ -270,7 +270,7 @@ public  final class ErrorSet extends
      * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
      */
     @java.lang.Override
-    public java.util.List<com.viam.shaded.com.google.rpc.Status> getErrorsList() {
+    public java.util.List<com.google.rpc.Status> getErrorsList() {
       return java.util.Collections.unmodifiableList(
           instance.getErrorsList());
     }
@@ -292,7 +292,7 @@ public  final class ErrorSet extends
      * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
      */
     @java.lang.Override
-    public com.viam.shaded.com.google.rpc.Status getErrors(int index) {
+    public com.google.rpc.Status getErrors(int index) {
       return instance.getErrors(index);
     }
     /**
@@ -303,7 +303,7 @@ public  final class ErrorSet extends
      * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
      */
     public Builder setErrors(
-        int index, com.viam.shaded.com.google.rpc.Status value) {
+        int index, com.google.rpc.Status value) {
       copyOnWrite();
       instance.setErrors(index, value);
       return this;
@@ -316,7 +316,7 @@ public  final class ErrorSet extends
      * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
      */
     public Builder setErrors(
-        int index, com.viam.shaded.com.google.rpc.Status.Builder builderForValue) {
+        int index, com.google.rpc.Status.Builder builderForValue) {
       copyOnWrite();
       instance.setErrors(index,
           builderForValue.build());
@@ -329,7 +329,7 @@ public  final class ErrorSet extends
      *
      * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
      */
-    public Builder addErrors(com.viam.shaded.com.google.rpc.Status value) {
+    public Builder addErrors(com.google.rpc.Status value) {
       copyOnWrite();
       instance.addErrors(value);
       return this;
@@ -342,7 +342,7 @@ public  final class ErrorSet extends
      * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
      */
     public Builder addErrors(
-        int index, com.viam.shaded.com.google.rpc.Status value) {
+        int index, com.google.rpc.Status value) {
       copyOnWrite();
       instance.addErrors(index, value);
       return this;
@@ -355,7 +355,7 @@ public  final class ErrorSet extends
      * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
      */
     public Builder addErrors(
-        com.viam.shaded.com.google.rpc.Status.Builder builderForValue) {
+        com.google.rpc.Status.Builder builderForValue) {
       copyOnWrite();
       instance.addErrors(builderForValue.build());
       return this;
@@ -368,7 +368,7 @@ public  final class ErrorSet extends
      * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
      */
     public Builder addErrors(
-        int index, com.viam.shaded.com.google.rpc.Status.Builder builderForValue) {
+        int index, com.google.rpc.Status.Builder builderForValue) {
       copyOnWrite();
       instance.addErrors(index,
           builderForValue.build());
@@ -382,7 +382,7 @@ public  final class ErrorSet extends
      * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
      */
     public Builder addAllErrors(
-        java.lang.Iterable<? extends com.viam.shaded.com.google.rpc.Status> values) {
+        java.lang.Iterable<? extends com.google.rpc.Status> values) {
       copyOnWrite();
       instance.addAllErrors(values);
       return this;
@@ -429,7 +429,7 @@ public  final class ErrorSet extends
       case BUILD_MESSAGE_INFO: {
           java.lang.Object[] objects = new java.lang.Object[] {
             "errors_",
-            com.viam.shaded.com.google.rpc.Status.class,
+            com.google.rpc.Status.class,
           };
           java.lang.String info =
               "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b";

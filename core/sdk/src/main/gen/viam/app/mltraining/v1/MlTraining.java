@@ -3080,7 +3080,7 @@ public final class MlTraining {
      * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
      * @return The errorStatus.
      */
-    com.viam.shaded.com.google.rpc.Status getErrorStatus();
+    com.google.rpc.Status getErrorStatus();
 
     /**
      * <code>.google.protobuf.Timestamp created_on = 3 [json_name = "createdOn", (.tagger.v1.tags) = "bson:&#92;"created_on&#92;" json:&#92;"created_on&#92;""];</code>
@@ -3547,7 +3547,7 @@ public final class MlTraining {
     }
 
     public static final int ERROR_STATUS_FIELD_NUMBER = 8;
-    private com.viam.shaded.com.google.rpc.Status errorStatus_;
+    private com.google.rpc.Status errorStatus_;
     /**
      * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
      */
@@ -3559,13 +3559,13 @@ public final class MlTraining {
      * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
      */
     @java.lang.Override
-    public com.viam.shaded.com.google.rpc.Status getErrorStatus() {
-      return errorStatus_ == null ? com.viam.shaded.com.google.rpc.Status.getDefaultInstance() : errorStatus_;
+    public com.google.rpc.Status getErrorStatus() {
+      return errorStatus_ == null ? com.google.rpc.Status.getDefaultInstance() : errorStatus_;
     }
     /**
      * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
      */
-    private void setErrorStatus(com.viam.shaded.com.google.rpc.Status value) {
+    private void setErrorStatus(com.google.rpc.Status value) {
       value.getClass();
   errorStatus_ = value;
       bitField0_ |= 0x00000002;
@@ -3574,12 +3574,12 @@ public final class MlTraining {
      * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeErrorStatus(com.viam.shaded.com.google.rpc.Status value) {
+    private void mergeErrorStatus(com.google.rpc.Status value) {
       value.getClass();
   if (errorStatus_ != null &&
-          errorStatus_ != com.viam.shaded.com.google.rpc.Status.getDefaultInstance()) {
+          errorStatus_ != com.google.rpc.Status.getDefaultInstance()) {
         errorStatus_ =
-          com.viam.shaded.com.google.rpc.Status.newBuilder(errorStatus_).mergeFrom(value).buildPartial();
+          com.google.rpc.Status.newBuilder(errorStatus_).mergeFrom(value).buildPartial();
       } else {
         errorStatus_ = value;
       }
@@ -4408,13 +4408,13 @@ public final class MlTraining {
        * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
        */
       @java.lang.Override
-      public com.viam.shaded.com.google.rpc.Status getErrorStatus() {
+      public com.google.rpc.Status getErrorStatus() {
         return instance.getErrorStatus();
       }
       /**
        * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
        */
-      public Builder setErrorStatus(com.viam.shaded.com.google.rpc.Status value) {
+      public Builder setErrorStatus(com.google.rpc.Status value) {
         copyOnWrite();
         instance.setErrorStatus(value);
         return this;
@@ -4423,7 +4423,7 @@ public final class MlTraining {
        * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
        */
       public Builder setErrorStatus(
-          com.viam.shaded.com.google.rpc.Status.Builder builderForValue) {
+          com.google.rpc.Status.Builder builderForValue) {
         copyOnWrite();
         instance.setErrorStatus(builderForValue.build());
         return this;
@@ -4431,7 +4431,7 @@ public final class MlTraining {
       /**
        * <code>.google.rpc.Status error_status = 8 [json_name = "errorStatus", (.tagger.v1.tags) = "bson:&#92;"error_status&#92;" json:&#92;"error_status&#92;""];</code>
        */
-      public Builder mergeErrorStatus(com.viam.shaded.com.google.rpc.Status value) {
+      public Builder mergeErrorStatus(com.google.rpc.Status value) {
         copyOnWrite();
         instance.mergeErrorStatus(value);
         return this;

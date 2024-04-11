@@ -1,6 +1,5 @@
 plugins {
     id "com.github.hierynomus.license-report" version "0.16.1"
-    id("org.openrewrite.rewrite") version("6.11.2")
 }
 
 apply plugin: 'java-library'
@@ -22,10 +21,6 @@ dependencies {
     implementation 'commons-io:commons-io:2.15.1'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-}
-
-rewrite {
-    activeRecipe("com.viam.proto.thirdparty")
 }
 
 test {

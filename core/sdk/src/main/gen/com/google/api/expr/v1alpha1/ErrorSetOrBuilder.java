@@ -15,7 +15,7 @@ public interface ErrorSetOrBuilder extends
    *
    * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
    */
-  java.util.List<com.viam.shaded.com.google.rpc.Status> 
+  java.util.List<com.google.rpc.Status> 
       getErrorsList();
   /**
    * <pre>
@@ -24,7 +24,7 @@ public interface ErrorSetOrBuilder extends
    *
    * <code>repeated .google.rpc.Status errors = 1 [json_name = "errors"];</code>
    */
-  com.viam.shaded.com.google.rpc.Status getErrors(int index);
+  com.google.rpc.Status getErrors(int index);
   /**
    * <pre>
    * The errors in the set.

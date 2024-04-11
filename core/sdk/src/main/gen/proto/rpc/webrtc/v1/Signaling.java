@@ -2300,7 +2300,7 @@ public final class Signaling {
      * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
      * @return The error.
      */
-    com.viam.shaded.com.google.rpc.Status getError();
+    com.google.rpc.Status getError();
 
     public proto.rpc.webrtc.v1.Signaling.CallUpdateRequest.UpdateCase getUpdateCase();
   }
@@ -2511,16 +2511,16 @@ public final class Signaling {
      * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
      */
     @java.lang.Override
-    public com.viam.shaded.com.google.rpc.Status getError() {
+    public com.google.rpc.Status getError() {
       if (updateCase_ == 4) {
-         return (com.viam.shaded.com.google.rpc.Status) update_;
+         return (com.google.rpc.Status) update_;
       }
-      return com.viam.shaded.com.google.rpc.Status.getDefaultInstance();
+      return com.google.rpc.Status.getDefaultInstance();
     }
     /**
      * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
      */
-    private void setError(com.viam.shaded.com.google.rpc.Status value) {
+    private void setError(com.google.rpc.Status value) {
       value.getClass();
   update_ = value;
       updateCase_ = 4;
@@ -2528,11 +2528,11 @@ public final class Signaling {
     /**
      * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
      */
-    private void mergeError(com.viam.shaded.com.google.rpc.Status value) {
+    private void mergeError(com.google.rpc.Status value) {
       value.getClass();
   if (updateCase_ == 4 &&
-          update_ != com.viam.shaded.com.google.rpc.Status.getDefaultInstance()) {
-        update_ = com.viam.shaded.com.google.rpc.Status.newBuilder((com.viam.shaded.com.google.rpc.Status) update_)
+          update_ != com.google.rpc.Status.getDefaultInstance()) {
+        update_ = com.google.rpc.Status.newBuilder((com.google.rpc.Status) update_)
             .mergeFrom(value).buildPartial();
       } else {
         update_ = value;
@@ -2806,13 +2806,13 @@ public final class Signaling {
        * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
        */
       @java.lang.Override
-      public com.viam.shaded.com.google.rpc.Status getError() {
+      public com.google.rpc.Status getError() {
         return instance.getError();
       }
       /**
        * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
        */
-      public Builder setError(com.viam.shaded.com.google.rpc.Status value) {
+      public Builder setError(com.google.rpc.Status value) {
         copyOnWrite();
         instance.setError(value);
         return this;
@@ -2821,7 +2821,7 @@ public final class Signaling {
        * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
        */
       public Builder setError(
-          com.viam.shaded.com.google.rpc.Status.Builder builderForValue) {
+          com.google.rpc.Status.Builder builderForValue) {
         copyOnWrite();
         instance.setError(builderForValue.build());
         return this;
@@ -2829,7 +2829,7 @@ public final class Signaling {
       /**
        * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
        */
-      public Builder mergeError(com.viam.shaded.com.google.rpc.Status value) {
+      public Builder mergeError(com.google.rpc.Status value) {
         copyOnWrite();
         instance.mergeError(value);
         return this;
@@ -2863,7 +2863,7 @@ public final class Signaling {
               "updateCase_",
               "uuid_",
               proto.rpc.webrtc.v1.Signaling.ICECandidate.class,
-              com.viam.shaded.com.google.rpc.Status.class,
+              com.google.rpc.Status.class,
             };
             java.lang.String info =
                 "\u0000\u0004\u0001\u0000\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u0208\u0002<\u0000" +
@@ -5260,7 +5260,7 @@ public final class Signaling {
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      * @return The status.
      */
-    com.viam.shaded.com.google.rpc.Status getStatus();
+    com.google.rpc.Status getStatus();
   }
   /**
    * <pre>
@@ -5278,7 +5278,7 @@ public final class Signaling {
     }
     private int bitField0_;
     public static final int STATUS_FIELD_NUMBER = 1;
-    private com.viam.shaded.com.google.rpc.Status status_;
+    private com.google.rpc.Status status_;
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
@@ -5290,13 +5290,13 @@ public final class Signaling {
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
     @java.lang.Override
-    public com.viam.shaded.com.google.rpc.Status getStatus() {
-      return status_ == null ? com.viam.shaded.com.google.rpc.Status.getDefaultInstance() : status_;
+    public com.google.rpc.Status getStatus() {
+      return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
     }
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
-    private void setStatus(com.viam.shaded.com.google.rpc.Status value) {
+    private void setStatus(com.google.rpc.Status value) {
       value.getClass();
   status_ = value;
       bitField0_ |= 0x00000001;
@@ -5305,12 +5305,12 @@ public final class Signaling {
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeStatus(com.viam.shaded.com.google.rpc.Status value) {
+    private void mergeStatus(com.google.rpc.Status value) {
       value.getClass();
   if (status_ != null &&
-          status_ != com.viam.shaded.com.google.rpc.Status.getDefaultInstance()) {
+          status_ != com.google.rpc.Status.getDefaultInstance()) {
         status_ =
-          com.viam.shaded.com.google.rpc.Status.newBuilder(status_).mergeFrom(value).buildPartial();
+          com.google.rpc.Status.newBuilder(status_).mergeFrom(value).buildPartial();
       } else {
         status_ = value;
       }
@@ -5435,13 +5435,13 @@ public final class Signaling {
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
       @java.lang.Override
-      public com.viam.shaded.com.google.rpc.Status getStatus() {
+      public com.google.rpc.Status getStatus() {
         return instance.getStatus();
       }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
-      public Builder setStatus(com.viam.shaded.com.google.rpc.Status value) {
+      public Builder setStatus(com.google.rpc.Status value) {
         copyOnWrite();
         instance.setStatus(value);
         return this;
@@ -5450,7 +5450,7 @@ public final class Signaling {
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
       public Builder setStatus(
-          com.viam.shaded.com.google.rpc.Status.Builder builderForValue) {
+          com.google.rpc.Status.Builder builderForValue) {
         copyOnWrite();
         instance.setStatus(builderForValue.build());
         return this;
@@ -5458,7 +5458,7 @@ public final class Signaling {
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
-      public Builder mergeStatus(com.viam.shaded.com.google.rpc.Status value) {
+      public Builder mergeStatus(com.google.rpc.Status value) {
         copyOnWrite();
         instance.mergeStatus(value);
         return this;
@@ -7266,7 +7266,7 @@ public final class Signaling {
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      * @return The status.
      */
-    com.viam.shaded.com.google.rpc.Status getStatus();
+    com.google.rpc.Status getStatus();
   }
   /**
    * <pre>
@@ -7284,7 +7284,7 @@ public final class Signaling {
     }
     private int bitField0_;
     public static final int STATUS_FIELD_NUMBER = 1;
-    private com.viam.shaded.com.google.rpc.Status status_;
+    private com.google.rpc.Status status_;
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
@@ -7296,13 +7296,13 @@ public final class Signaling {
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
     @java.lang.Override
-    public com.viam.shaded.com.google.rpc.Status getStatus() {
-      return status_ == null ? com.viam.shaded.com.google.rpc.Status.getDefaultInstance() : status_;
+    public com.google.rpc.Status getStatus() {
+      return status_ == null ? com.google.rpc.Status.getDefaultInstance() : status_;
     }
     /**
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
-    private void setStatus(com.viam.shaded.com.google.rpc.Status value) {
+    private void setStatus(com.google.rpc.Status value) {
       value.getClass();
   status_ = value;
       bitField0_ |= 0x00000001;
@@ -7311,12 +7311,12 @@ public final class Signaling {
      * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
      */
     @java.lang.SuppressWarnings({"ReferenceEquality"})
-    private void mergeStatus(com.viam.shaded.com.google.rpc.Status value) {
+    private void mergeStatus(com.google.rpc.Status value) {
       value.getClass();
   if (status_ != null &&
-          status_ != com.viam.shaded.com.google.rpc.Status.getDefaultInstance()) {
+          status_ != com.google.rpc.Status.getDefaultInstance()) {
         status_ =
-          com.viam.shaded.com.google.rpc.Status.newBuilder(status_).mergeFrom(value).buildPartial();
+          com.google.rpc.Status.newBuilder(status_).mergeFrom(value).buildPartial();
       } else {
         status_ = value;
       }
@@ -7441,13 +7441,13 @@ public final class Signaling {
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
       @java.lang.Override
-      public com.viam.shaded.com.google.rpc.Status getStatus() {
+      public com.google.rpc.Status getStatus() {
         return instance.getStatus();
       }
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
-      public Builder setStatus(com.viam.shaded.com.google.rpc.Status value) {
+      public Builder setStatus(com.google.rpc.Status value) {
         copyOnWrite();
         instance.setStatus(value);
         return this;
@@ -7456,7 +7456,7 @@ public final class Signaling {
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
       public Builder setStatus(
-          com.viam.shaded.com.google.rpc.Status.Builder builderForValue) {
+          com.google.rpc.Status.Builder builderForValue) {
         copyOnWrite();
         instance.setStatus(builderForValue.build());
         return this;
@@ -7464,7 +7464,7 @@ public final class Signaling {
       /**
        * <code>.google.rpc.Status status = 1 [json_name = "status"];</code>
        */
-      public Builder mergeStatus(com.viam.shaded.com.google.rpc.Status value) {
+      public Builder mergeStatus(com.google.rpc.Status value) {
         copyOnWrite();
         instance.mergeStatus(value);
         return this;

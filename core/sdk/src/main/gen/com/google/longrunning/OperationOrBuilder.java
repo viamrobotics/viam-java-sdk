@@ -86,7 +86,7 @@ public interface OperationOrBuilder extends
    * <code>.google.rpc.Status error = 4 [json_name = "error"];</code>
    * @return The error.
    */
-  com.viam.shaded.com.google.rpc.Status getError();
+  com.google.rpc.Status getError();
 
   /**
    * <pre>

@@ -2,15 +2,12 @@ package com.viam.sdk.core.component.camera;
 
 import com.google.protobuf.Struct;
 import com.viam.common.v1.Common;
-import com.viam.common.v1.Common.ResponseMetadata;
 import com.viam.component.camera.v1.Camera.Format;
 import com.viam.component.camera.v1.Camera.Image;
 import com.viam.sdk.core.component.Component;
 import com.viam.sdk.core.resource.Resource;
 import com.viam.sdk.core.resource.Subtype;
 import com.viam.sdk.core.robot.RobotClient;
-import java.util.AbstractMap.SimpleEntry;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Optional;
@@ -53,11 +50,7 @@ public abstract class Camera extends Component {
   public abstract Image getImage(final Format format,
       final Optional<Struct> extra);
 
-  public Entry<List<Image>, Common.ResponseMetadata> getImages() {
-    return new SimpleEntry<>(
-        Collections.singletonList(getImage(Format.FORMAT_UNSPECIFIED, Optional.empty())),
-        ResponseMetadata.newBuilder().build());
-  }
+  public abstract Entry<List<Image>, Common.ResponseMetadata> getImages();
 
   static Format mimeToFormat(final String mimeType) {
     switch (mimeType) {
