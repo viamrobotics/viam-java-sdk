@@ -18,6 +18,7 @@ com.viam.component.testecho.v1
 com.viam.component.v1
 com.viam.robot.v1
 com.viam.sdk.core.component
+com.viam.sdk.core.component.camera
 com.viam.sdk.core.component.generic
 com.viam.sdk.core.component.gripper
 com.viam.sdk.core.component.movementsensor
